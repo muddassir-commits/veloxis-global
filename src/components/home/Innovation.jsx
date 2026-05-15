@@ -1,6 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Shield, Zap, Globe, Users } from 'lucide-react';
+import { motion } from 'framer-motion';
 import { innovationCopy } from '../../constants/content';
 import './Innovation.css';
 
@@ -17,23 +18,36 @@ const Innovation = () => {
     <section className="innovation section-padding">
       <div className="container">
         <div className="innovation-grid">
-          <div className="innovation-info">
+          <motion.div 
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="innovation-info"
+          >
             <span className="section-badge">{innovationCopy.badge}</span>
             <h2 className="section-title">{innovationCopy.title}</h2>
             <p>
               {innovationCopy.body}
             </p>
             <button className="btn-outline" onClick={() => navigate('/about')}>{innovationCopy.cta}</button>
-          </div>
+          </motion.div>
           
           <div className="innovation-cards">
             {innovationCopy.cards.map((card, index) => (
-              <div key={index} className="innovation-card glass-card">
+              <motion.div 
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1, duration: 0.5 }}
+                key={index} 
+                className="innovation-card glass-card"
+              >
                 <span className="card-id">{card.id}</span>
                 <div className="card-icon">{iconMap[card.id]}</div>
                 <h3>{card.title}</h3>
                 <p>{card.desc}</p>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>

@@ -1,6 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Check, Shield, Globe, Users, Zap, Search, Settings } from 'lucide-react';
+import { motion } from 'framer-motion';
 import { pricingCopy } from '../../constants/content';
 import './Pricing.css';
 
@@ -19,7 +20,13 @@ const Pricing = () => {
     <section className="pricing section-padding">
       <div className="container">
         <div className="pricing-wrapper">
-          <div className="pricing-info">
+          <motion.div 
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="pricing-info"
+          >
             <span className="section-badge">{pricingCopy.badge}</span>
             <h2 className="section-title">{pricingCopy.title}</h2>
             <p className="section-subtitle">{pricingCopy.subtitle}</p>
@@ -29,11 +36,18 @@ const Pricing = () => {
               <p>{pricingCopy.enterprise.desc}</p>
               <button className="btn-outline" onClick={() => navigate('/contact')}>{pricingCopy.enterprise.cta}</button>
             </div>
-          </div>
+          </motion.div>
 
           <div className="pricing-grid">
             {pricingCopy.plans.map((plan, index) => (
-              <div key={index} className={`pricing-card glass-card ${plan.badge === 'Most Popular' ? 'highlighted' : ''}`}>
+              <motion.div 
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.2, duration: 0.5 }}
+                key={index} 
+                className={`pricing-card glass-card ${plan.badge === 'Most Popular' ? 'highlighted' : ''}`}
+              >
                 <div className="card-header">
                   {plan.badge && <span className="badge">{plan.badge}</span>}
                   <h3>{plan.title}</h3>
@@ -51,7 +65,7 @@ const Pricing = () => {
                 >
                   {plan.cta}
                 </button>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>

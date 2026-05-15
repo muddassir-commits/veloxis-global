@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Phone, Mail, MapPin, ArrowRight } from 'lucide-react';
 import FAQ from '../components/home/FAQ';
 import { contactCopy } from '../constants/content';
@@ -7,6 +8,11 @@ import './Contact.css';
 const Contact = () => {
   return (
     <div className="contact-page">
+      <Helmet>
+        <title>Contact Veloxis Global | AI Automation & Lead Generation Experts</title>
+        <meta name="description" content="Contact Veloxis Global to discuss AI automation, n8n workflows, lead generation systems, and AI-powered business growth solutions." />
+      </Helmet>
+
       <section className="contact-hero" style={{ position: 'relative', overflow: 'hidden' }}>
         <div className="page-glow" style={{ 
           position: 'absolute', top: '0', right: '-10%', 
@@ -15,9 +21,9 @@ const Contact = () => {
           filter: 'blur(100px)', zIndex: -1 
         }}></div>
         <div className="container">
-          <span className="section-badge">{contactCopy.heroBadge}</span>
-          <h1 className="hero-title">{contactCopy.heroTitle}</h1>
-          <p className="breadcrumb">{contactCopy.breadcrumb.split(' / ')[0]} <span>•</span> {contactCopy.breadcrumb.split(' / ')[1]}</p>
+          <span className="section-badge">Contact Veloxis Global</span>
+          <h1 className="hero-title">Let’s Build Smarter Systems for Your Business</h1>
+          <p className="breadcrumb">Automate Faster. Scale Smarter.</p>
         </div>
       </section>
 
@@ -32,8 +38,8 @@ const Contact = () => {
           <div className="contact-grid">
             <div className="contact-info-side">
               <span className="section-badge">{contactCopy.badge}</span>
-              <h2 className="section-title">{contactCopy.title}</h2>
-              <p>{contactCopy.body}</p>
+              <h2 className="section-title">Why Businesses Contact Veloxis Global</h2>
+              <p>Talk with Veloxis Global about AI automation, n8n workflows, lead generation systems, and scalable business infrastructure designed to help your business grow efficiently. Whether you need workflow automation, CRM systems, AI lead generation, or operational automation, we help businesses build systems that improve efficiency, reduce manual work, and support long-term growth.</p>
               
               <div className="contact-methods">
                 <div className="method-card">

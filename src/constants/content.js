@@ -2,13 +2,13 @@
 // Source: VELOXIS_GLOBAL_REACT_COPY_SNIPPETS.js
 
 export const heroCopy = {
-  badge: 'Lead Generation & AI Automation Agency',
-  titleLine1: 'We Build Growth Systems',
-  titleLine2: 'That Turn Traffic Into Qualified Sales',
+  badge: 'AI Automation Agency',
+  titleLine1: 'AI Automation Services That Generate Leads',
+  titleLine2: '& Scale Businesses',
   subtitle:
-    'Veloxis Global helps real estate, healthcare, B2B, education, and service businesses generate high-intent leads, route them instantly, and convert them through structured follow-up systems powered by AI, n8n, CRM, and WhatsApp automation.',
-  primaryCta: 'Book a Strategy Call',
-  secondaryCta: 'See Our Systems',
+    'Automate Your Business with AI, n8n Workflows & Smart Lead Generation. Veloxis Global helps businesses automate operations, streamline workflows, and generate more leads using advanced AI automation systems, n8n workflow automation, AI lead generation solutions, and AI-powered website development. We build scalable automation infrastructures that save time, improve efficiency, and accelerate business growth.',
+  primaryCta: 'Book Free Strategy Call',
+  secondaryCta: 'Get AI Automation Audit',
   trustTitle: 'Built for operators who need predictable growth, not random campaigns.',
   trustLabels: ['Meta Ads', 'n8n', 'HubSpot', 'WhatsApp', 'Google Sheets', 'AI Funnels']
 };
@@ -49,63 +49,67 @@ export const innovationCopy = {
 
 export const servicesCopy = {
   badge: 'Core Services',
-  title: 'Growth Systems Built for Modern Businesses',
+  title: 'AI Automation Services for Modern Businesses',
   subtitle:
-    'From traffic generation to CRM automation, Veloxis Global builds the complete backend that helps businesses generate, manage, and convert leads.',
+    'At Veloxis Global, we deliver AI automation services designed to help modern businesses reduce manual work, improve productivity, and scale efficiently. Our automation solutions combine AI systems, workflow automation, and smart integrations to create streamlined business operations.',
   services: [
     {
-      title: 'Lead Generation Systems',
+      title: 'AI Automation Systems',
       desc:
-        'We create structured lead generation campaigns using Meta Ads, landing pages, retargeting, and clear offer positioning.',
+        'We create intelligent AI automation systems that streamline repetitive tasks, automate operations, and improve workflow efficiency across your business. From customer onboarding and CRM automation to AI-driven communication systems, we help companies reduce operational bottlenecks and scale faster.',
       points: [
-        'Meta Ads campaign strategy for high-intent audiences',
-        'Landing pages designed for enquiry and appointment conversion',
-        'Retargeting funnels to recover warm prospects',
-        'Lead quality tracking across every campaign'
+        'Reduce repetitive manual work',
+        'Improve operational efficiency',
+        'Automate customer workflows',
+        'Scale business operations faster'
       ],
-      cta: 'Build My Lead Engine',
+      cta: 'Explore AI Automation',
+      link: '/ai-automation-services',
       image:
         'https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=800'
     },
     {
-      title: 'CRM & Pipeline Automation',
+      title: 'n8n Workflow Automation',
       desc:
-        'We organize your sales process with CRM stages, lead tags, follow-up logic, and dashboards so your team always knows what to do next.',
+        'Our n8n workflow automation services help businesses connect applications, automate data flow, and eliminate repetitive processes. We build scalable n8n workflows that integrate CRMs, websites, APIs, marketing platforms, and communication tools into one efficient automation ecosystem.',
       points: [
-        'HubSpot or custom CRM pipeline setup',
-        'Lead source tracking and qualification stages',
-        'Automated task creation for sales teams',
-        'Real-time reporting through sheets and dashboards'
+        'CRM automation & Lead routing',
+        'API integrations',
+        'Email and notification systems',
+        'Data synchronization'
       ],
-      cta: 'Fix My Pipeline',
+      cta: 'Explore n8n Workflows',
+      link: '/n8n-workflow-automation',
       image:
         'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800'
     },
     {
-      title: 'n8n & WhatsApp Automation',
+      title: 'AI Lead Generation',
       desc:
-        'We use n8n to connect your forms, ads, CRM, sheets, WhatsApp, email, and internal alerts into one reliable operating system.',
+        'We build AI lead generation systems that automate prospecting, qualification, follow-ups, and outreach to help businesses generate and convert more leads efficiently. Our AI-powered solutions combine automation and sales optimization strategies to create predictable lead pipelines.',
       points: [
-        'Lead-to-CRM routing workflows',
-        'WhatsApp alerts and follow-up sequences',
-        'Google Sheets and dashboard syncing',
-        'Automated reminders for missed or stale leads'
+        'Automated lead capture',
+        'AI-powered qualification systems',
+        'Smart follow-up automation',
+        'Sales pipeline automation'
       ],
-      cta: 'Automate My Follow-Up',
+      cta: 'Explore Lead Generation',
+      link: '/ai-lead-generation-services',
       image:
         'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=800'
     },
     {
-      title: 'AI Websites & Funnels',
+      title: 'AI Website Development',
       desc:
-        'We build high-converting websites and funnels that communicate your offer clearly and move visitors toward action.',
+        'We develop AI-powered websites optimized for lead generation, automation, and business growth. Our websites combine modern design with intelligent automation systems that improve conversions and user engagement. Every website is fast, scalable, and SEO-optimized.',
       points: [
-        'AI-assisted copywriting and funnel structure',
-        'Conversion-focused landing page design',
-        'Mobile-first, fast-loading web experiences',
-        'Offer, CTA, and form optimization'
+        'Lead generation optimization',
+        'Workflow automation integrations',
+        'AI chatbot integration',
+        'CRM connectivity'
       ],
-      cta: 'Launch My Funnel',
+      cta: 'Explore AI Websites',
+      link: '/ai-website-development',
       image:
         'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=800'
     }
@@ -245,37 +249,37 @@ export const faqCopy = {
   badge: 'Have Questions?',
   title: 'Frequently Asked Questions',
   subtitle:
-    "Quick answers about Veloxis Global's growth, automation, and lead generation systems.",
+    "Quick answers about Veloxis Global's AI automation, n8n workflows, and lead generation systems.",
   faqs: [
     {
-      question: 'What does Veloxis Global actually do?',
+      question: 'What is AI automation?',
       answer:
-        'Veloxis Global builds lead generation and automation systems for businesses. That includes landing pages, Meta Ads strategy, CRM pipelines, n8n workflows, WhatsApp follow-ups, dashboards, and AI-powered funnels.'
+        'AI automation uses artificial intelligence and workflow systems to automate repetitive business processes, improve operational efficiency, and reduce manual work.'
     },
     {
-      question: 'Which industries do you work with?',
+      question: 'What is n8n workflow automation?',
       answer:
-        'We focus on real estate, healthcare, education, B2B services, and high-ticket service businesses. These industries benefit most from fast lead response, clear qualification, and structured follow-up.'
+        'n8n is a workflow automation platform that connects applications, APIs, and AI tools to automate processes and streamline data flow between systems.'
     },
     {
-      question: 'Do you only run ads?',
+      question: 'How can AI automation help my business?',
       answer:
-        'No. Ads are only one part of the system. We also build the lead capture, CRM routing, follow-up automation, reporting, and conversion structure that turns traffic into sales opportunities.'
+        'AI automation can improve efficiency, reduce repetitive tasks, optimize lead management, automate communication, and help businesses scale faster.'
     },
     {
-      question: 'Can you automate my existing CRM?',
+      question: 'Do you build AI-powered websites?',
       answer:
-        'Yes. We can work with your current CRM or help you set up a new pipeline. The goal is to route every lead correctly, reduce manual work, and make follow-up easier for your team.'
+        'Yes. Veloxis Global develops AI-powered websites optimized for lead generation, workflow automation, SEO performance, and business growth.'
     },
     {
-      question: 'How long does implementation take?',
+      question: 'What industries benefit from workflow automation?',
       answer:
-        'Simple audits can be done quickly. Full implementation depends on the scope, but most focused growth systems can be planned and launched in a few weeks.'
+        'Almost every industry can benefit from workflow automation, including SaaS, ecommerce, healthcare, agencies, consultants, and real estate businesses.'
     },
     {
-      question: 'Do you also provide mentorship?',
+      question: 'How long does it take to build automation systems?',
       answer:
-        'Yes. Muddassir Ali also runs a mentorship program for students, freelancers, job holders, and operators who want to learn AI web development, Meta Ads, sales, and automation systems.'
+        'Project timelines depend on complexity, integrations, and business requirements. Most automation systems can be developed and deployed within a few weeks.'
     }
   ],
   contactTitle: 'Still not sure what your business needs?',

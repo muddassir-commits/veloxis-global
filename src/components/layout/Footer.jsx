@@ -33,8 +33,10 @@ const Footer = () => {
             <div className="footer-col">
               <h4>Resources</h4>
               <Link to="/contact">Growth Audit</Link>
-              <Link to="/services">AI Automation</Link>
-              <Link to="/services">Lead Generation</Link>
+              <Link to="/ai-automation-services">AI Automation</Link>
+              <Link to="/ai-lead-generation-services">Lead Generation</Link>
+              <Link to="/n8n-workflow-automation">n8n Workflows</Link>
+              <Link to="/ai-website-development">AI Websites</Link>
               <a href="https://mentorship.muddassirali.com" target="_blank" rel="noopener noreferrer">Mentorship</a>
             </div>
           </div>

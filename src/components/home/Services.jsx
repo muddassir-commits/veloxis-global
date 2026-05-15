@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Bot, LineChart, Cpu, Layout, Target, Settings, Zap, Globe } from 'lucide-react';
+import { motion } from 'framer-motion';
 import { servicesCopy } from '../../constants/content';
 import './Services.css';
 
@@ -18,11 +19,17 @@ const Services = () => {
   return (
     <section className="services section-padding">
       <div className="container">
-        <div className="section-header text-center">
+        <motion.div 
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="section-header text-center"
+        >
           <span className="section-badge">{servicesCopy.badge}</span>
           <h2 className="section-title">{servicesCopy.title}</h2>
           <p className="section-subtitle">{servicesCopy.subtitle}</p>
-        </div>
+        </motion.div>
 
         <div className="services-tabs">
           {servicesCopy.services.map((service, index) => (
@@ -36,7 +43,13 @@ const Services = () => {
           ))}
         </div>
 
-        <div className="service-display glass-card">
+        <motion.div 
+          initial={{ opacity: 0, scale: 0.95 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.2, duration: 0.5 }}
+          className="service-display glass-card"
+        >
           <div className="service-info">
             <div className="service-icon-box">
               {iconMap[activeTab]}
@@ -48,12 +61,12 @@ const Services = () => {
                 <li key={i}>{point}</li>
               ))}
             </ul>
-            <button className="btn-primary" onClick={() => navigate('/contact')}>{servicesCopy.services[activeTab].cta}</button>
+            <button className="btn-primary" onClick={() => navigate(servicesCopy.services[activeTab].link || '/contact')}>{servicesCopy.services[activeTab].cta}</button>
           </div>
           <div className="service-image">
             <img src={servicesCopy.services[activeTab].image} alt={servicesCopy.services[activeTab].title} />
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
