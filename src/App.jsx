@@ -4,19 +4,20 @@ import Navbar from './components/layout/Navbar';
 import Footer from './components/layout/Footer';
 import BackgroundDecor from './components/layout/BackgroundDecor';
 import ScrollToTop from './components/layout/ScrollToTop';
+import AnalyticsTracker from './components/seo/AnalyticsTracker';
+import { routesConfig } from './app/routes';
 import './styles/variables.css';
 
 // Lazy load pages for better performance
 const Home = lazy(() => import('./pages/Home'));
 const About = lazy(() => import('./pages/About'));
 const Services = lazy(() => import('./pages/Services'));
-const AIAutomation = lazy(() => import('./pages/services/AIAutomation'));
-const N8nWorkflows = lazy(() => import('./pages/services/N8nWorkflows'));
-const AILeadGeneration = lazy(() => import('./pages/services/AILeadGeneration'));
-const AIWebsites = lazy(() => import('./pages/services/AIWebsites'));
 const Projects = lazy(() => import('./pages/Projects'));
 const Contact = lazy(() => import('./pages/Contact'));
 const ProjectDetail = lazy(() => import('./pages/ProjectDetail'));
+
+// New dynamic templates
+import CMSController from './components/cms/CMSController';
 
 // Loading fallback component
 const PageLoader = () => (
@@ -28,6 +29,7 @@ const PageLoader = () => (
 function App() {
   return (
     <Router>
+      <AnalyticsTracker />
       <div className="app-container">
         <ScrollToTop />
         <BackgroundDecor />
@@ -35,16 +37,27 @@ function App() {
         <main>
           <Suspense fallback={<PageLoader />}>
             <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/services" element={<Services />} />
-              <Route path="/ai-automation-services" element={<AIAutomation />} />
-              <Route path="/n8n-workflow-automation" element={<N8nWorkflows />} />
-              <Route path="/ai-lead-generation-services" element={<AILeadGeneration />} />
-              <Route path="/ai-website-development" element={<AIWebsites />} />
-              <Route path="/projects" element={<Projects />} />
-              <Route path="/projects/:slug" element={<ProjectDetail />} />
-              <Route path="/contact" element={<Contact />} />
+              {/* Static Foundation Routes */}
+              <Route path={routesConfig.home.path} element={<Home />} />
+              <Route path={routesConfig.about.path} element={<About />} />
+              <Route path={routesConfig.services.path} element={<Services />} />
+              <Route path={routesConfig.projects.path} element={<Projects />} />
+              <Route path={routesConfig.projectDetail.path} element={<ProjectDetail />} />
+              <Route path={routesConfig.contact.path} element={<Contact />} />
+              
+              {/* 
+                Fully Dynamic CMS Routing Architecture 
+                Replaces all hardcoded markdown page routes. 
+                React Router gracefully prioritizes the explicit static routes above before falling through to these.
+              */}
+              <Route path="/:collection/:slug" element={<CMSController />} />
+              
+              {/* 
+                Root wildcard to catch legacy service URLs (e.g. /ai-automation-services).
+                If the slug doesn't exist in the CMS, CMSController will safely render the SEO-safe NotFound template.
+              */}
+              <Route path="/:slug" element={<CMSController />} />
+
             </Routes>
           </Suspense>
         </main>
@@ -55,3 +68,6 @@ function App() {
 }
 
 export default App;
+
+
+

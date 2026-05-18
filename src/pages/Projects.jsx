@@ -1,17 +1,37 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import ProjectsSection from '../components/home/Projects';
+import SeoHead from '../components/seo/SeoHead';
+import HeroSection from '../components/sections/HeroSection';
+import GridSection from '../components/sections/GridSection';
+import { projectsData } from '../data/projects';
 
 const ProjectsPage = () => {
+  // Map project data to grid items
+  const gridItems = projectsData.list.map(project => ({
+    id: project.id,
+    title: project.title,
+    desc: project.desc,
+  }));
+
   return (
     <div className="projects-page" style={{ paddingTop: '100px' }}>
-      <Helmet>
-        <title>Our Projects | AI Automation & Growth Systems | Veloxis Global</title>
-        <meta name="description" content="View our portfolio of successful AI automation, lead generation, and CRM implementation projects for real estate, healthcare, B2B, and service businesses." />
-      </Helmet>
-      <ProjectsSection />
+      <SeoHead 
+        title={projectsData.seo.title} 
+        description={projectsData.seo.description} 
+      />
+      
+      <HeroSection 
+        badge={projectsData.hero.badge}
+        title={projectsData.hero.title}
+        subtitle={projectsData.hero.subtitle}
+      />
+
+      <GridSection 
+        items={gridItems} 
+        columns={2}
+      />
     </div>
   );
 };
 
 export default ProjectsPage;
+
