@@ -3,41 +3,43 @@ import { motion } from 'framer-motion';
 import './Industries.css';
 
 const industries = [
-  'SaaS Companies',
-  'Marketing Agencies',
-  'Real Estate Businesses',
-  'Ecommerce Brands',
-  'Healthcare Providers',
-  'Coaches & Consultants',
-  'Service-Based Businesses',
-  'Startups & Growing Companies'
+  { name: 'SaaS Companies', desc: 'Automated onboarding and retention workflows' },
+  { name: 'Marketing Agencies', desc: 'Multi-client campaign and reporting automation' },
+  { name: 'Real Estate', desc: 'Lead routing and follow-up sequences' },
+  { name: 'Ecommerce Brands', desc: 'Order processing and inventory sync' },
+  { name: 'Healthcare Providers', desc: 'Patient intake and scheduling automation' },
+  { name: 'Coaches & Consultants', desc: 'Appointment booking and nurture systems' },
+  { name: 'Service-Based', desc: 'CRM automation and invoice workflows' },
+  { name: 'Startups', desc: 'Lean operational infrastructure from day one' },
 ];
 
 const Industries = () => {
   return (
-    <section className="industries-section">
-      <div className="container">
-        <motion.div 
-          initial={{ opacity: 0, y: 30 }}
+    <section className="industries">
+      <div className="industries__inner">
+        <motion.div
+          className="industries__header"
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="industries-header"
+          viewport={{ once: true, margin: '-80px' }}
+          transition={{ duration: 0.5 }}
         >
-          <h2>Industries We Help Automate</h2>
-          <p>Our workflow automation systems are customized to fit the operational needs of each industry.</p>
+          <span className="industries__label">Industries</span>
+          <h2 className="industries__title">Systems built for your sector</h2>
         </motion.div>
-        <div className="industries-grid">
+
+        <div className="industries__grid">
           {industries.map((industry, index) => (
-            <motion.div 
-              initial={{ opacity: 0, scale: 0.8 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.05, duration: 0.4 }}
-              className="industry-pill" 
+            <motion.div
               key={index}
+              className="industries__item"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true, margin: '-20px' }}
+              transition={{ duration: 0.3, delay: index * 0.04 }}
             >
-              {industry}
+              <h3 className="industries__item-name">{industry.name}</h3>
+              <p className="industries__item-desc">{industry.desc}</p>
             </motion.div>
           ))}
         </div>

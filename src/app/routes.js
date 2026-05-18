@@ -12,6 +12,7 @@ export const routesConfig = {
   services: { path: '/services', schemaType: 'CollectionPage' },
   projects: { path: '/projects', schemaType: 'CollectionPage' },
   projectDetail: { path: '/projects/:slug', schemaType: 'Article' },
+  blog: { path: '/blog', schemaType: 'CollectionPage' },
   contact: { path: '/contact', schemaType: 'ContactPage' },
   
   // Explicitly mapping legacy service routes to preserve SEO

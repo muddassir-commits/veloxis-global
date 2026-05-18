@@ -30,8 +30,8 @@ const ServiceDetail = ({ serviceId, markdownContent, cmsData }) => {
     );
   }
 
-  // Format points into generic grid items
-  const featureItems = service.points ? service.points.map((point, index) => ({
+  // Format points into generic grid items with defensive Array type checking
+  const featureItems = Array.isArray(service.points) ? service.points.map((point, index) => ({
     id: `point-${index}`,
     desc: point
   })) : [];

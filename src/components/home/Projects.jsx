@@ -1,54 +1,55 @@
 import React from 'react';
-import { ExternalLink } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+import { ArrowUpRight } from 'lucide-react';
 import { motion } from 'framer-motion';
-import { projectsCopy } from '../../constants/content';
 import './Projects.css';
 
+const projects = [
+  { title: 'Multi-Channel Lead Routing Engine', desc: 'Automated B2B lead capture from Meta Ads, website forms, and WhatsApp into a unified CRM pipeline.', tags: ['n8n', 'CRM', 'Lead Gen'] },
+  { title: 'AI-Powered Outreach Automation', desc: 'Conversational AI agent that qualifies prospects, books appointments, and syncs to sales pipelines automatically.', tags: ['AI Agent', 'Automation'] },
+  { title: 'Operational Dashboard Platform', desc: 'Real-time systems monitoring dashboard tracking webhook health, pipeline throughput, and conversion rates.', tags: ['Analytics', 'Monitoring'] },
+];
+
 const Projects = () => {
+  const navigate = useNavigate();
+
   return (
-    <section className="projects section-padding">
-      <div className="container">
-        <motion.div 
+    <section className="home-projects">
+      <div className="home-projects__inner">
+        <motion.div
+          className="home-projects__header"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="section-header text-center"
+          viewport={{ once: true, margin: '-80px' }}
+          transition={{ duration: 0.5 }}
         >
-          <span className="section-badge">{projectsCopy.badge}</span>
-          <h2 className="section-title">{projectsCopy.title}</h2>
-          <p className="section-subtitle">{projectsCopy.subtitle}</p>
+          <div>
+            <span className="home-projects__label">Case Studies</span>
+            <h2 className="home-projects__title">Systems we've built</h2>
+          </div>
+          <button className="home-projects__all" onClick={() => navigate('/projects')}>
+            View all <ArrowUpRight size={14} strokeWidth={1.5} />
+          </button>
         </motion.div>
-        
-        <div className="projects-list">
-          {projectsCopy.projects.map((project, index) => (
-            <motion.div 
-              initial={{ opacity: 0, y: 30 }}
+
+        <div className="home-projects__grid">
+          {projects.map((project, index) => (
+            <motion.div
+              key={index}
+              className="project-card"
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.1, duration: 0.5 }}
-              key={index} 
-              className="project-card glass-card"
+              viewport={{ once: true, margin: '-40px' }}
+              transition={{ duration: 0.4, delay: index * 0.08 }}
+              onClick={() => navigate('/projects')}
             >
-              <div className="project-image">
-                <img src={project.image} alt={project.title} />
-                <div className="project-category">{project.category}</div>
+              <div className="project-card__tags">
+                {project.tags.map((tag, i) => (
+                  <span key={i} className="project-card__tag">{tag}</span>
+                ))}
               </div>
-              <div className="project-content">
-                <h3>{project.title}</h3>
-                <p>{project.desc}</p>
-                <div className="project-tags">
-                  {project.tags.map((tag, i) => (
-                    <span key={i} className="tag">
-                      <span className="tag-dot"></span> {tag}
-                    </span>
-                  ))}
-                </div>
-                <Link to={`/projects/${project.slug}`} className="btn-text">
-                  {projectsCopy.cta} <ExternalLink size={16} />
-                </Link>
-              </div>
+              <h3 className="project-card__title">{project.title}</h3>
+              <p className="project-card__desc">{project.desc}</p>
             </motion.div>
           ))}
         </div>

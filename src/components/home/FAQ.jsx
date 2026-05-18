@@ -1,67 +1,58 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { motion, AnimatePresence } from 'framer-motion';
 import { Plus, Minus } from 'lucide-react';
-import { motion } from 'framer-motion';
-import { faqCopy } from '../../constants/content';
 import './FAQ.css';
 
+const faqs = [
+  { q: 'What types of businesses do you work with?', a: 'We work with agencies, SaaS companies, service-based businesses, and startups that need structured automation systems — not generic marketing campaigns. Our clients typically have existing operations that need systematization and scaling.' },
+  { q: 'How long does a typical automation project take?', a: 'Most implementations take 2-6 weeks depending on complexity. A simple CRM integration may take 1-2 weeks. A full outreach automation system with deduplication, multi-channel routing, and AI qualification typically takes 4-6 weeks.' },
+  { q: 'Do you use n8n or Zapier?', a: 'We primarily use self-hosted n8n for production systems because it provides full control, zero per-execution costs, and enterprise-grade reliability. We use Make.com or Zapier for lighter integrations where appropriate.' },
+  { q: 'What does a Strategy Call involve?', a: 'A 30-minute consultation where we audit your current workflows, identify automation opportunities, and outline a systems architecture roadmap. No sales pitch — just operational strategy.' },
+  { q: 'Can you integrate with our existing CRM?', a: 'Yes. We integrate with HubSpot, GoHighLevel, Salesforce, Pipedrive, and most CRM systems via API. We handle custom field mapping, deduplication logic, and real-time sync configurations.' },
+  { q: 'Do you offer ongoing support?', a: 'Yes. All projects include a handover period. We offer monthly retainer packages for ongoing monitoring, optimization, and expansion of your automation systems.' },
+];
+
 const FAQ = () => {
-  const navigate = useNavigate();
   const [openIndex, setOpenIndex] = useState(null);
 
-  const toggleFAQ = (index) => {
-    setOpenIndex(openIndex === index ? null : index);
-  };
-
   return (
-    <section className="faq section-padding">
-      <div className="container">
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="section-header text-center"
-        >
-          <span className="section-badge">{faqCopy.badge}</span>
-          <h2 className="section-title">{faqCopy.title}</h2>
-          <p className="section-subtitle">{faqCopy.subtitle}</p>
-        </motion.div>
-
-        <div className="faq-grid">
-          {faqCopy.faqs.map((faq, index) => (
-            <motion.div 
-              initial={{ opacity: 0, y: 10 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.05, duration: 0.4 }}
-              key={index} 
-              className={`faq-item glass-card ${openIndex === index ? 'open' : ''}`}
-            >
-              <button className="faq-question" onClick={() => toggleFAQ(index)}>
-                <span>{faq.question}</span>
-                {openIndex === index ? <Minus size={20} /> : <Plus size={20} />}
-              </button>
-              <div className="faq-answer">
-                <p>{faq.answer}</p>
-              </div>
-            </motion.div>
-          ))}
+    <section className="faq">
+      <div className="faq__inner">
+        <div className="faq__header">
+          <span className="faq__label">FAQ</span>
+          <h2 className="faq__title">Common questions</h2>
         </div>
 
-        <motion.div 
-          initial={{ opacity: 0, scale: 0.95 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.2, duration: 0.6 }}
-          className="faq-contact glass-card"
-        >
-          <div className="contact-info">
-            <h3>{faqCopy.contactTitle}</h3>
-            <p>{faqCopy.contactBody}</p>
-          </div>
-          <button className="btn-primary" onClick={() => navigate('/contact')}>{faqCopy.contactCta}</button>
-        </motion.div>
+        <div className="faq__list">
+          {faqs.map((faq, index) => (
+            <div
+              key={index}
+              className={`faq__item ${openIndex === index ? 'faq__item--open' : ''}`}
+              onClick={() => setOpenIndex(openIndex === index ? null : index)}
+            >
+              <div className="faq__question">
+                <h3>{faq.q}</h3>
+                {openIndex === index
+                  ? <Minus size={16} strokeWidth={1.5} />
+                  : <Plus size={16} strokeWidth={1.5} />
+                }
+              </div>
+              <AnimatePresence>
+                {openIndex === index && (
+                  <motion.div
+                    className="faq__answer"
+                    initial={{ height: 0, opacity: 0 }}
+                    animate={{ height: 'auto', opacity: 1 }}
+                    exit={{ height: 0, opacity: 0 }}
+                    transition={{ duration: 0.25, ease: [0.4, 0, 0.2, 1] }}
+                  >
+                    <p>{faq.a}</p>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );

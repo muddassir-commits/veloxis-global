@@ -10,71 +10,91 @@ const Navbar = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
-    };
+    const handleScroll = () => setScrolled(window.scrollY > 20);
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  // Close mobile menu on route change
+  useEffect(() => {
+    setIsOpen(false);
+  }, [location.pathname]);
+
+  // Lock body scroll when mobile menu is open
+  useEffect(() => {
+    document.body.style.overflow = isOpen ? 'hidden' : '';
+    return () => { document.body.style.overflow = ''; };
+  }, [isOpen]);
 
   const navLinks = [
     { name: 'Home', path: '/' },
     { name: 'About', path: '/about' },
     { name: 'Services', path: '/services' },
     { name: 'Projects', path: '/projects' },
+    { name: 'Blog', path: '/blog' },
     { name: 'Contact', path: '/contact' },
   ];
 
   return (
-    <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
-      <div className="container nav-content">
-        <Link to="/" className="logo">
-          VELOXIS<span>GLOBAL</span>
-        </Link>
+    <>
+      <nav className={`navbar ${scrolled ? 'navbar--scrolled' : ''}`}>
+        <div className="navbar__inner">
+          <Link to="/" className="navbar__logo">
+            Veloxis<span>Global</span>
+          </Link>
 
-        <div className="nav-links desktop">
-          {navLinks.map((link) => (
-            <Link 
-              key={link.path} 
-              to={link.path} 
-              className={`nav-link ${location.pathname === link.path ? 'active' : ''}`}
+          <div className="navbar__links">
+            {navLinks.map((link) => (
+              <Link
+                key={link.path}
+                to={link.path}
+                className={`navbar__link ${location.pathname === link.path ? 'navbar__link--active' : ''}`}
+              >
+                {link.name}
+              </Link>
+            ))}
+          </div>
+
+          <button
+            className="navbar__cta"
+            onClick={() => navigate('/contact')}
+          >
+            Book a Call <ArrowRight size={14} strokeWidth={2} />
+          </button>
+
+          <button
+            className="navbar__toggle"
+            onClick={() => setIsOpen(!isOpen)}
+            aria-label="Toggle menu"
+          >
+            {isOpen ? <X size={22} strokeWidth={1.5} /> : <Menu size={22} strokeWidth={1.5} />}
+          </button>
+        </div>
+      </nav>
+
+      {/* Mobile Menu — Full-screen overlay */}
+      <div className={`mobile-overlay ${isOpen ? 'mobile-overlay--open' : ''}`}>
+        <div className="mobile-overlay__content">
+          {navLinks.map((link, index) => (
+            <Link
+              key={link.path}
+              to={link.path}
+              className="mobile-overlay__link"
+              style={{ animationDelay: isOpen ? `${index * 60}ms` : '0ms' }}
+              onClick={() => setIsOpen(false)}
             >
               {link.name}
             </Link>
           ))}
-          <button className="cta-button" onClick={() => navigate('/contact')}>
-            Book a Strategy Call <ArrowRight size={16} />
+          <button
+            className="mobile-overlay__cta"
+            onClick={() => { setIsOpen(false); navigate('/contact'); }}
+          >
+            Book a Strategy Call <ArrowRight size={16} strokeWidth={1.5} />
           </button>
         </div>
-
-        <button className="mobile-toggle" onClick={() => setIsOpen(!isOpen)}>
-          {isOpen ? <X /> : <Menu />}
-        </button>
       </div>
-
-      {/* Mobile Menu */}
-      <div className={`mobile-menu ${isOpen ? 'open' : ''}`}>
-        {navLinks.map((link) => (
-          <Link 
-            key={link.path} 
-            to={link.path} 
-            className="mobile-link"
-            onClick={() => setIsOpen(false)}
-          >
-            {link.name}
-          </Link>
-        ))}
-        <button 
-          className="cta-button mobile" 
-          onClick={() => {
-            setIsOpen(false);
-            navigate('/contact');
-          }}
-        >
-          Book a Strategy Call
-        </button>
-      </div>
-    </nav>
+    </>
   );
 };
 

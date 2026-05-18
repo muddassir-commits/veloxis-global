@@ -15,7 +15,9 @@ export function parseFrontmatter(rawContent) {
   const data = {};
   let contentLines = [];
   let inFrontmatter = true;
+  
   let currentKey = null;
+  let listArray = null;
   let currentObject = null;
 
   for (let i = 1; i < lines.length; i++) {
@@ -28,10 +30,32 @@ export function parseFrontmatter(rawContent) {
         continue;
       }
 
-      if (line.startsWith(' ') || line.startsWith('\t')) {
-        if (currentKey && currentObject) {
-          const colonIdx = line.indexOf(':');
-          if (colonIdx !== -1) {
+      if (trimmed === '') continue;
+
+      // Handle multi-line YAML array items (starts with '-')
+      if (trimmed.startsWith('-')) {
+        if (currentKey) {
+          let val = trimmed.substring(1).trim();
+          if (val.startsWith('"') && val.endsWith('"')) {
+            val = val.substring(1, val.length - 1);
+          } else if (val.startsWith("'") && val.endsWith("'")) {
+            val = val.substring(1, val.length - 1);
+          }
+          
+          if (listArray) {
+            listArray.push(val);
+          } else {
+            listArray = [val];
+            data[currentKey] = listArray;
+          }
+        }
+        continue;
+      }
+
+      const colonIdx = line.indexOf(':');
+      if (colonIdx !== -1) {
+        if (line.startsWith(' ') || line.startsWith('\t')) {
+          if (currentKey && currentObject && !listArray) {
             const subKey = line.substring(0, colonIdx).trim();
             let subVal = line.substring(colonIdx + 1).trim();
             if (subVal.startsWith('"') && subVal.endsWith('"')) {
@@ -41,21 +65,18 @@ export function parseFrontmatter(rawContent) {
             }
             currentObject[subKey] = subVal;
           }
-        }
-      } else {
-        const colonIdx = line.indexOf(':');
-        if (colonIdx !== -1) {
+        } else {
           const key = line.substring(0, colonIdx).trim();
           let val = line.substring(colonIdx + 1).trim();
           
+          currentKey = key;
+          listArray = null;
+          
           if (val === '') {
-            currentKey = key;
             currentObject = {};
             data[key] = currentObject;
           } else {
-            currentKey = key;
             currentObject = null;
-            
             if (val.startsWith('[') && val.endsWith(']')) {
               data[key] = val.substring(1, val.length - 1).split(',').map(s => {
                 const clean = s.trim();
@@ -99,8 +120,20 @@ const rawContentFiles = import.meta.glob('../../content/**/*.md', { query: '?raw
 
 // Strict taxonomy to prevent infinite AI tag/category fragmentation
 const APPROVED_TAXONOMY = {
-  categories: ['AI Strategy', 'Automation', 'Web Development', 'Lead Generation', 'N8N Automation'],
-  tags: ['AI Automation', 'Workflow Systems', 'Business Growth', 'n8n', 'Vite', 'React', 'Lead Generation', 'Websites']
+  categories: [
+    'AI Strategy', 'Automation', 'Web Development', 'Lead Generation', 'N8N Automation',
+    'Operations', 'CRM Systems', 'Business Automation', 'Outreach Systems', 'Workflow Design',
+    'AI Employees', 'Appointment Automation', 'Agency Systems', 'AI Lead Routing', 'Sales Operations',
+    'Automation ROI', 'Client Acquisition', 'Process Automation', 'Revenue Operations', 'Conversational AI',
+    'WhatsApp Systems', 'Local Business Automation', 'Automation Stack', 'System Architecture'
+  ],
+  tags: [
+    'AI Automation', 'Workflow Systems', 'Business Growth', 'n8n', 'Vite', 'React', 'Lead Generation',
+    'Websites', 'Workflow Design', 'CRM Systems', 'Operations', 'AI Employees', 'Appointment Automation',
+    'Outreach Systems', 'Business Automation', 'Agency Systems', 'AI Lead Routing', 'Sales Operations',
+    'Automation ROI', 'Client Acquisition', 'Process Automation', 'Revenue Operations', 'Conversational AI',
+    'WhatsApp Systems', 'Local Business Automation', 'Automation Stack', 'System Architecture'
+  ]
 };
 
 /**

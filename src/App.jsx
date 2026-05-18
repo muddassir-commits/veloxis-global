@@ -15,6 +15,7 @@ const Services = lazy(() => import('./pages/Services'));
 const Projects = lazy(() => import('./pages/Projects'));
 const Contact = lazy(() => import('./pages/Contact'));
 const ProjectDetail = lazy(() => import('./pages/ProjectDetail'));
+const Blog = lazy(() => import('./pages/Blog'));
 
 // New dynamic templates
 import CMSController from './components/cms/CMSController';
@@ -43,6 +44,7 @@ function App() {
               <Route path={routesConfig.services.path} element={<Services />} />
               <Route path={routesConfig.projects.path} element={<Projects />} />
               <Route path={routesConfig.projectDetail.path} element={<ProjectDetail />} />
+              <Route path={routesConfig.blog.path} element={<Blog />} />
               <Route path={routesConfig.contact.path} element={<Contact />} />
               
               {/* 

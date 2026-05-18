@@ -92,6 +92,7 @@ const STATIC_ROUTES = [
   '/about',
   '/services',
   '/projects',
+  '/blog',
   '/contact'
 ];
 

@@ -2,78 +2,94 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import SeoHead from '../components/seo/SeoHead';
-import HeroSection from '../components/sections/HeroSection';
-import GridSection from '../components/sections/GridSection';
-import CTASection from '../components/sections/CTASection';
-import Section from '../components/ui/Section';
-import Container from '../components/ui/Container';
-import Button from '../components/ui/Button';
 import { aboutData } from '../data/about';
-import './About.css'; // Keeping old CSS temporarily to avoid visual regressions
+import './About.css';
 
 const About = () => {
   const navigate = useNavigate();
 
   return (
     <div className="about-page">
-      <SeoHead 
-        title={aboutData.seo.title} 
-        description={aboutData.seo.description} 
+      <SeoHead
+        title={aboutData.seo.title}
+        description={aboutData.seo.description}
       />
 
-      {/* Hero Section */}
-      <HeroSection 
-        badge={aboutData.hero.badge}
-        title={aboutData.hero.title}
-        subtitle={aboutData.hero.subtitle}
-      />
+      {/* Hero */}
+      <section className="about__hero">
+        <div className="about__hero-inner">
+          <span className="about__label">{aboutData.hero.badge}</span>
+          <h1 className="about__title">{aboutData.hero.title}</h1>
+          <p className="about__subtitle">{aboutData.hero.subtitle}</p>
+        </div>
+      </section>
 
-      {/* Founder Section - Custom layout still using Section primitive */}
-      <Section className="about-founder">
-        <Container>
-          <div className="founder-content glass-card" style={{ padding: '40px', borderRadius: '20px' }}>
-            <h2 style={{ fontSize: '2rem', marginBottom: '20px', color: '#fff' }}>{aboutData.founder.title}</h2>
-            <h3 style={{ fontSize: '1.2rem', color: 'var(--primary)', marginBottom: '20px' }}>{aboutData.founder.subtitle}</h3>
+      {/* Founder Section */}
+      <section className="about__founder">
+        <div className="about__founder-inner">
+          <div className="about__founder-content">
+            <h2>{aboutData.founder.title}</h2>
+            <h3>{aboutData.founder.subtitle}</h3>
             {aboutData.founder.paragraphs.map((p, idx) => (
-              <p key={idx} className="about-p">{p}</p>
+              <p key={idx}>{p}</p>
             ))}
           </div>
-        </Container>
-      </Section>
+        </div>
+      </section>
 
       {/* Why We Exist */}
-      <GridSection 
-        className="about-why"
-        title={aboutData.why.title}
-        subtitle={aboutData.why.subtitle}
-        items={aboutData.why.features}
-      />
+      <section className="about__why">
+        <div className="about__why-inner">
+          <div className="about__why-header">
+            <h2>{aboutData.why.title}</h2>
+            <p>{aboutData.why.subtitle}</p>
+          </div>
+          <div className="about__why-grid">
+            {aboutData.why.features.map((feature, idx) => (
+              <div key={idx} className="about__why-item">
+                <h3>{feature.title}</h3>
+                <p>{feature.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
-      {/* Execution Philosophy */}
-      <GridSection 
-        className="about-philosophy"
-        style={{ background: 'rgba(10, 10, 12, 0.4)' }}
-        title={aboutData.philosophy.title}
-        subtitle={aboutData.philosophy.subtitle}
-        items={aboutData.philosophy.features}
-      />
+      {/* Philosophy */}
+      <section className="about__philosophy">
+        <div className="about__philosophy-inner">
+          <div className="about__philosophy-header">
+            <h2>{aboutData.philosophy.title}</h2>
+            <p>{aboutData.philosophy.subtitle}</p>
+          </div>
+          <div className="about__philosophy-grid">
+            {aboutData.philosophy.features.map((feature, idx) => (
+              <div key={idx} className="about__philosophy-item">
+                <h3>{feature.title}</h3>
+                <p>{feature.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
-      {/* CTA Section */}
-      <CTASection 
-        className="about-cta"
-        title={aboutData.cta.title}
-        subtitle={aboutData.cta.subtitle}
-      >
-        <Button variant="primary" onClick={() => navigate('/contact')} style={{ display: 'flex', alignItems: 'center' }}>
-          Book Free Strategy Call <ArrowRight size={20} className="ml-2" />
-        </Button>
-        <Button variant="secondary" onClick={() => navigate('/services')}>
-          Get Workflow Audit
-        </Button>
-      </CTASection>
+      {/* CTA */}
+      <section className="about__cta">
+        <div className="about__cta-inner">
+          <h2>{aboutData.cta.title}</h2>
+          <p>{aboutData.cta.subtitle}</p>
+          <div className="about__cta-actions">
+            <button className="about__cta-primary" onClick={() => navigate('/contact')}>
+              Book Free Strategy Call <ArrowRight size={14} strokeWidth={1.5} />
+            </button>
+            <button className="about__cta-secondary" onClick={() => navigate('/services')}>
+              Get Workflow Audit
+            </button>
+          </div>
+        </div>
+      </section>
     </div>
   );
 };
 
 export default About;
-

@@ -1,145 +1,17 @@
-.innovation {
-  position: relative;
-  overflow: hidden;
-}
+.innovation { padding: var(--space-24) 0; }
+.innovation__inner { max-width: var(--page-width); margin: 0 auto; padding: 0 var(--space-6); display: grid; grid-template-columns: 1.3fr 1fr; gap: var(--space-16); align-items: start; }
+.innovation__label { display: inline-block; font-size: var(--text-xs); font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); margin-bottom: var(--space-4); }
+.innovation__title { font-size: var(--text-3xl); font-weight: 700; letter-spacing: -0.02em; color: var(--text-primary); margin-bottom: var(--space-5); line-height: 1.15; }
+.innovation__body { font-size: var(--text-base); color: var(--text-secondary); line-height: 1.7; margin-bottom: var(--space-8); max-width: 480px; }
+.innovation__link { display: inline-flex; align-items: center; gap: 6px; font-size: var(--text-sm); font-weight: 500; color: var(--accent); background: none; transition: gap var(--duration-fast) var(--ease-default); }
+.innovation__link:hover { gap: 10px; }
+.innovation__cards { display: flex; flex-direction: column; gap: 0; }
+.innovation__card { padding: var(--space-6) 0 var(--space-6) var(--space-5); border-left: 2px solid var(--border); transition: border-color var(--duration-base) var(--ease-default); }
+.innovation__card:hover { border-left-color: var(--accent); }
+.innovation__card-id { font-family: var(--font-mono); font-size: var(--text-xs); color: var(--text-tertiary); letter-spacing: 0.05em; display: block; margin-bottom: var(--space-2); }
+.innovation__card-title { font-size: var(--text-base); font-weight: 600; color: var(--text-primary); margin-bottom: var(--space-1); }
+.innovation__card-desc { font-size: var(--text-sm); color: var(--text-tertiary); line-height: 1.5; }
 
-.innovation::before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  right: -10%;
-  width: 600px;
-  height: 600px;
-  background: radial-gradient(circle, rgba(139, 92, 246, 0.25) 0%, transparent 70%);
-  z-index: -1;
-  filter: blur(100px);
-  animation: pulse 10s infinite alternate;
-}
-
-.innovation::after {
-  content: '';
-  position: absolute;
-  top: 10%;
-  left: -5%;
-  width: 400px;
-  height: 400px;
-  background: radial-gradient(circle, rgba(59, 130, 246, 0.2) 0%, transparent 70%);
-  z-index: -1;
-  filter: blur(80px);
-  animation: pulse 8s infinite alternate-reverse;
-}
-
-@keyframes pulse {
-  0% { opacity: 0.5; transform: scale(1); }
-  100% { opacity: 1; transform: scale(1.1); }
-}
-
-.section-padding {
-  padding: 120px 0;
-}
-
-.section-badge {
-  color: var(--accent-cyan);
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  font-size: 0.8rem;
-  margin-bottom: 16px;
-  display: block;
-}
-
-.section-title {
-  font-size: clamp(2rem, 4vw, 3rem);
-  margin-bottom: 24px;
-}
-
-.innovation-grid {
-  display: grid;
-  grid-template-columns: 1fr 1.2fr;
-  gap: 80px;
-  align-items: center;
-}
-
-.innovation-info p {
-  color: var(--text-secondary);
-  margin-bottom: 32px;
-  line-height: 1.8;
-}
-
-.btn-outline {
-  padding: 12px 28px;
-  border: 1px solid var(--text-primary);
-  border-radius: 6px;
-  font-weight: 600;
-  color: var(--text-primary);
-  transition: var(--transition-fast);
-}
-
-.btn-outline:hover {
-  background: white;
-  color: var(--bg-primary);
-}
-
-.innovation-cards {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 24px;
-}
-
-.innovation-card {
-  padding: 32px;
-  position: relative;
-  transition: var(--transition-slow);
-  border: 1px solid var(--glass-border);
-}
-
-.innovation-card:hover {
-  transform: translateY(-10px) scale(1.02);
-  border-color: var(--accent-blue);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3), 0 0 20px rgba(59, 130, 246, 0.1);
-}
-
-.card-id {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  font-size: 0.8rem;
-  font-weight: 700;
-  color: var(--text-muted);
-}
-
-.card-icon {
-  width: 50px;
-  height: 50px;
-  background: rgba(59, 130, 246, 0.1);
-  border-radius: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--accent-blue);
-  margin-bottom: 24px;
-}
-
-.innovation-card h3 {
-  font-size: 1.25rem;
-  margin-bottom: 12px;
-}
-
-.innovation-card p {
-  font-size: 0.9rem;
-  color: var(--text-secondary);
-  line-height: 1.6;
-}
-
-@media (max-width: 1024px) {
-  .innovation-grid {
-    grid-template-columns: 1fr;
-    gap: 60px;
-  }
-}
-
-@media (max-width: 640px) {
-  .innovation-cards {
-    grid-template-columns: 1fr;
-  }
+@media (max-width: 768px) {
+  .innovation__inner { grid-template-columns: 1fr; gap: var(--space-10); }
 }

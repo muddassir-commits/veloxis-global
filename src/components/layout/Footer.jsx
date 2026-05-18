@@ -1,66 +1,63 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Twitter, Linkedin, Github, Youtube, Instagram, ArrowRight } from 'lucide-react';
+import { Linkedin, Instagram, Youtube, ArrowRight } from 'lucide-react';
 import './Footer.css';
 
 const Footer = () => {
   return (
     <footer className="footer">
-      <div className="container">
-        <div className="footer-top">
-          <div className="footer-info">
-            <Link to="/" className="logo">
-              VELOXIS<span>GLOBAL</span>
-            </Link>
-            <p className="footer-desc">
-              Building lead generation, CRM automation, AI funnels, and conversion systems for businesses that want structured growth instead of random campaigns.
-            </p>
-            <div className="social-links">
-              <a href="#"><Linkedin size={20} /></a>
-              <a href="#"><Instagram size={20} /></a>
-              <a href="#"><Youtube size={20} /></a>
-            </div>
-          </div>
-
-          <div className="footer-nav">
-            <div className="footer-col">
-              <h4>Company</h4>
-              <Link to="/about">About Us</Link>
-              <Link to="/projects">Our Projects</Link>
-              <Link to="/services">Our Services</Link>
-              <Link to="/contact">Contact</Link>
-            </div>
-            <div className="footer-col">
-              <h4>Resources</h4>
-              <Link to="/contact">Growth Audit</Link>
-              <Link to="/ai-automation-services">AI Automation</Link>
-              <Link to="/ai-lead-generation-services">Lead Generation</Link>
-              <Link to="/n8n-workflow-automation">n8n Workflows</Link>
-              <Link to="/ai-website-development">AI Websites</Link>
-              <a href="https://mentorship.muddassirali.com" target="_blank" rel="noopener noreferrer">Mentorship</a>
-            </div>
-          </div>
-
-          <div className="footer-newsletter">
-            <h4>Stay Updated</h4>
-            <p>Get practical insights on lead generation, automation, AI tools, and conversion systems.</p>
-            <div className="newsletter-form">
-              <input type="email" placeholder="Email address" />
-              <button aria-label="Subscribe"><ArrowRight size={20} /></button>
-            </div>
+      <div className="footer__inner">
+        {/* Brand Column */}
+        <div className="footer__brand">
+          <Link to="/" className="footer__logo">
+            Veloxis<span>Global</span>
+          </Link>
+          <p className="footer__tagline">
+            Operational automation infrastructure for businesses that need systems, not campaigns.
+          </p>
+          <div className="footer__social">
+            <a href="#" aria-label="LinkedIn"><Linkedin size={18} strokeWidth={1.5} /></a>
+            <a href="#" aria-label="Instagram"><Instagram size={18} strokeWidth={1.5} /></a>
+            <a href="#" aria-label="YouTube"><Youtube size={18} strokeWidth={1.5} /></a>
           </div>
         </div>
 
-        <div className="footer-bottom">
-          <p>Copyright 2026 Veloxis Global. All Rights Reserved.</p>
-          <div className="footer-bottom-links">
-            <a href="#">Privacy Policy</a>
-            <a href="#">Terms of Service</a>
+        {/* Navigation Column */}
+        <div className="footer__col">
+          <h4 className="footer__heading">Company</h4>
+          <Link to="/about">About Us</Link>
+          <Link to="/projects">Projects</Link>
+          <Link to="/services">Services</Link>
+          <Link to="/blog">Blog</Link>
+          <Link to="/contact">Contact</Link>
+        </div>
+
+        {/* Services Column */}
+        <div className="footer__col">
+          <h4 className="footer__heading">Services</h4>
+          <Link to="/ai-automation-services">AI Automation</Link>
+          <Link to="/ai-lead-generation-services">Lead Generation</Link>
+          <Link to="/n8n-workflow-automation">n8n Workflows</Link>
+          <Link to="/ai-website-development">AI Websites</Link>
+          <Link to="/contact">Growth Audit</Link>
+        </div>
+
+        {/* Newsletter Column */}
+        <div className="footer__col footer__newsletter">
+          <h4 className="footer__heading">Stay Updated</h4>
+          <p>Operational blueprints, workflow architectures, and automation insights.</p>
+          <div className="footer__form">
+            <input type="email" placeholder="Email address" aria-label="Email address" />
+            <button aria-label="Subscribe"><ArrowRight size={16} strokeWidth={1.5} /></button>
           </div>
         </div>
-        
-        <div className="footer-branding">
-          <h1>VELOXIS GLOBAL</h1>
+      </div>
+
+      <div className="footer__bottom">
+        <p>© 2026 Veloxis Global. All rights reserved.</p>
+        <div className="footer__legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
         </div>
       </div>
     </footer>

@@ -1,45 +1,58 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import { ArrowUpRight } from 'lucide-react';
 import SeoHead from '../components/seo/SeoHead';
-import HeroSection from '../components/sections/HeroSection';
-import GridSection from '../components/sections/GridSection';
-import Button from '../components/ui/Button';
-import { serviceData, getTopLevelServices } from '../data/services';
+import { serviceData } from '../data/services';
+import './Services.css';
 
-const ServicesPage = () => {
-  const navigate = useNavigate();
-  const topLevelServices = getTopLevelServices();
-
-  // Map the registry data into the format expected by GridSection
-  const gridItems = topLevelServices.map(service => ({
-    id: service.id,
-    title: service.title,
-    desc: service.shortDesc,
-    // Provide a generic button in the description slot or extend GridSection
-    // In our new GridSection, we can render arbitrary children or just use desc
-    // For now, we'll map the description, but future revisions can add CTA support inside cards.
-  }));
+const Services = () => {
+  const services = Object.values(serviceData.registry);
 
   return (
-    <div className="services-page" style={{ paddingTop: '100px' }}>
-      <SeoHead 
-        title={serviceData.seo.title} 
-        description={serviceData.seo.description} 
-      />
-      
-      <HeroSection 
-        badge={serviceData.hero.badge}
-        title={serviceData.hero.title}
-        subtitle={serviceData.hero.subtitle}
+    <div className="services-page">
+      <SeoHead
+        title="AI Automation Services for Modern Businesses | Veloxis Global"
+        description="Enterprise-grade AI automation, n8n workflow engineering, CRM integrations, and smart lead generation systems."
       />
 
-      <GridSection 
-        items={gridItems} 
-        columns={2} // Use 2 columns for services to give them more room
-      />
+      {/* Hero */}
+      <section className="services-page__hero">
+        <div className="services-page__hero-inner">
+          <span className="services-page__label">Core Services</span>
+          <h1 className="services-page__title">AI Automation Services for Modern Businesses</h1>
+          <p className="services-page__subtitle">
+            At Veloxis Global, we deliver AI automation services designed to help modern businesses reduce manual work, improve productivity, and scale efficiently.
+          </p>
+        </div>
+      </section>
+
+      {/* Services Grid */}
+      <section className="services-page__grid-section">
+        <div className="services-page__grid-inner">
+          <div className="services-page__grid">
+            {services.map((service, index) => (
+              <Link
+                key={service.slug}
+                to={service.slug}
+                className="services-page__card"
+              >
+                <span className="services-page__card-number">
+                  {String(index + 1).padStart(2, '0')}
+                </span>
+                <h2 className="services-page__card-title">{service.title}</h2>
+                <p className="services-page__card-desc">
+                  {service.shortDesc}
+                </p>
+                <span className="services-page__card-link">
+                  View Service <ArrowUpRight size={14} strokeWidth={1.5} />
+                </span>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
     </div>
   );
 };
 
-export default ServicesPage;
-
+export default Services;
