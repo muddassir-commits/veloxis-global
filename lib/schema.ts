@@ -3,13 +3,14 @@ export const generateLocalBusinessSchema = (city?: string) => {
   const base = {
     "@context": "https://schema.org",
     "@type": "MarketingAgency",
-    "@id": `https://veloxisglobal.com/${city ? `digital-marketing-agency-${city.toLowerCase()}/` : ''}#localbusiness`,
+    "@id": `https://veloxisglobal.com/${city && city.toLowerCase() !== 'general' ? `digital-marketing-agency-${city.toLowerCase()}/` : ''}#localbusiness`,
     "name": "Veloxis Global",
     "telephone": "+918887620727",
     "email": "muddassir@veloxisglobal.com",
     "url": "https://veloxisglobal.com",
     "priceRange": "$$",
     "image": "https://veloxisglobal.com/images/logos/logo.png",
+    "description": "India's results-driven digital marketing agency. Expert SEO, Google Ads and Social Media marketing for businesses across India.",
     "aggregateRating": {
       "@type": "AggregateRating",
       "ratingValue": "4.9",
@@ -17,32 +18,36 @@ export const generateLocalBusinessSchema = (city?: string) => {
     }
   };
 
-  if (city && city.toLowerCase() === 'kanpur') {
-    return {
-      ...base,
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "12 Faithful Ganj, Cantt",
-        "addressLocality": "Kanpur",
-        "addressRegion": "Uttar Pradesh",
-        "postalCode": "208004",
-        "addressCountry": "IN"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": "26.4607",
-        "longitude": "80.3334"
-      },
-      "areaServed": ["Delhi", "Noida", "Lucknow", "Kanpur"]
-    };
-  } else if (city) {
-    return {
-      ...base,
-      "areaServed": {
-        "@type": "City",
-        "name": city
-      }
-    };
+  const isSpecificCity = city && ['delhi', 'noida', 'lucknow', 'kanpur'].includes(city.toLowerCase());
+
+  if (isSpecificCity) {
+    if (city.toLowerCase() === 'kanpur') {
+      return {
+        ...base,
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "12 Faithful Ganj, Cantt",
+          "addressLocality": "Kanpur",
+          "addressRegion": "Uttar Pradesh",
+          "postalCode": "208004",
+          "addressCountry": "IN"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "26.4607",
+          "longitude": "80.3334"
+        },
+        "areaServed": "India"
+      };
+    } else {
+      return {
+        ...base,
+        "areaServed": {
+          "@type": "City",
+          "name": city
+        }
+      };
+    }
   } else {
     // Default to Kanpur address
     return {
@@ -60,7 +65,7 @@ export const generateLocalBusinessSchema = (city?: string) => {
         "latitude": "26.4607",
         "longitude": "80.3334"
       },
-      "areaServed": ["Delhi", "Noida", "Lucknow", "Kanpur"]
+      "areaServed": "India"
     };
   }
 };

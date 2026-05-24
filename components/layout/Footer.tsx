@@ -75,8 +75,9 @@ export const Footer: React.FC = () => {
             />
           </Link>
           <p className="text-[16px] text-slate-400 leading-relaxed font-sans max-w-md">
-            North India's Most Results-Driven Digital Marketing Agency — delivering measurable 
-            digital growth for businesses in Delhi, Noida, Lucknow & Kanpur.
+            India's results-driven digital marketing agency — delivering
+            measurable growth for businesses across India. Headquartered
+            in Kanpur, serving clients pan-India.
           </p>
           
           {/* Social icons row */}

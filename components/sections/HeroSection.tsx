@@ -26,12 +26,12 @@ export const HeroSection: React.FC = () => {
         >
           {/* Badge */}
           <Badge color="teal" className="mb-6">
-            ⚡ CERTIFIED TEAM · 4+ YEARS IN DIGITAL MARKETING
+            ⚡ CERTIFIED TEAM · SERVING BUSINESSES ACROSS INDIA
           </Badge>
 
           {/* H1 Headline */}
           <h1 className="text-[32px] md:text-[72px] font-bold md:font-extrabold tracking-[-0.02em] leading-tight md:leading-[1.1] text-slate-900 mb-6 font-sans">
-            North India's Most{' '}
+            India's Most{' '}
             <span className="relative inline-block z-10 text-slate-900">
               Results-Driven
               <span className="absolute left-0 bottom-2 md:bottom-3 w-full h-[6px] md:h-[8px] bg-gradient-to-r from-royal-blue to-indigo-accent -z-10 rounded-full opacity-35"></span>
@@ -41,8 +41,9 @@ export const HeroSection: React.FC = () => {
 
           {/* Body Paragraph */}
           <p className="text-[18px] font-normal text-on-surface-variant leading-relaxed max-w-[560px] font-sans">
-            From SEO that ranks to Google Ads that converts — Veloxis Global delivers 
-            measurable digital growth for businesses in Delhi, Noida, Lucknow & Kanpur. 
+            From SEO that ranks to Google Ads that converts — Veloxis Global
+            delivers measurable digital growth for businesses across India.
+            Headquartered in Kanpur, serving clients pan-India.
             No fluff. Only results.
           </p>
 
@@ -108,10 +109,10 @@ export const HeroSection: React.FC = () => {
             {/* Cities Served */}
             <div className="flex flex-col gap-1 min-w-[100px] font-sans">
               <span className="text-[24px] md:text-[32px] font-bold tracking-tight text-slate-900 leading-none">
-                <AnimatedCounter value={4} />
+                Pan-India
               </span>
               <span className="text-[12px] font-bold tracking-[0.05em] uppercase text-slate-400 leading-none">
-                Cities Served
+                Reach
               </span>
             </div>
           </div>

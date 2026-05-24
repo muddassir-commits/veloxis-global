@@ -52,9 +52,13 @@ export const LocationsGrid: React.FC = () => {
         {/* Section Header */}
         <div className="text-center max-w-[700px] mx-auto mb-16">
           <SectionLabel className="text-center">WHERE WE OPERATE</SectionLabel>
-          <h2 className="text-headline-lg-mobile sm:text-headline-lg font-bold text-slate-900 tracking-tight leading-tight">
-            Local Expertise Across 4 Major North Indian Markets
+          <h2 className="text-headline-lg-mobile sm:text-headline-lg font-bold text-slate-900 tracking-tight leading-tight mb-4">
+            We Serve Businesses Across India
           </h2>
+          <p className="text-body-md text-on-surface-variant leading-relaxed">
+            Headquartered in Kanpur with deep expertise in Delhi, Noida,
+            Lucknow & Kanpur — and serving clients remotely across India.
+          </p>
         </div>
 
         {/* Locations Grid */}
