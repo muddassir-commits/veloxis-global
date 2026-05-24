@@ -6,11 +6,14 @@ import { AuditForm } from '../../components/forms/AuditForm';
 import { Check, ArrowRight, ClipboardCheck, Sparkles, PhoneCall } from 'lucide-react';
 import { constructMetadata, pageMeta } from '../../lib/seo-config';
 
-export const metadata: Metadata = constructMetadata({
-  title: pageMeta.audit.title,
-  description: pageMeta.audit.description,
-  path: pageMeta.audit.path
-});
+export const metadata: Metadata = {
+  ...constructMetadata({
+    title: "Free SEO Audit for Your Website India 2026 | Veloxis Global",
+    description: "Get a FREE personalised SEO audit — discover exactly why your website isn't ranking on Google. 48-hour turnaround. No obligation. Serving businesses across India. veloxisglobal.com",
+    path: "/free-seo-audit"
+  }),
+  keywords: "free SEO audit India 2026, free website audit India, free digital marketing audit, website SEO analysis free, Google ranking check free"
+};
 
 export default function FreeAuditPage() {
   const breadcrumbSchema = {
@@ -60,11 +63,11 @@ export default function FreeAuditPage() {
               </Badge>
               
               <h1 className="text-headline-lg-mobile md:text-5xl lg:text-[54px] font-extrabold tracking-tight leading-[1.1] text-slate-900">
-                Get Your FREE <br />Website SEO Audit
+                Get Your FREE Website SEO Audit
               </h1>
               
-              <p className="text-lg text-slate-500 leading-relaxed max-w-xl">
-                Discover exactly why your website isn't ranking on Google — with a personalised audit from Muddassir Ali, Veloxis Global.
+              <p className="text-lg text-slate-500 leading-relaxed max-w-xl font-sans">
+                Discover exactly why your website isn't ranking on Google — with a personalised audit from Muddassir Ali, Veloxis Global. We audit websites for businesses across India — from Kanpur and Lucknow to Delhi and beyond.
               </p>
 
               <div className="w-full border-t border-slate-200/80 my-2"></div>
@@ -86,9 +89,9 @@ export default function FreeAuditPage() {
               <div className="w-full border-t border-slate-200/80 my-2"></div>
 
               {/* Social Proof */}
-              <p className="text-xs font-bold text-slate-400 uppercase tracking-wider flex items-center gap-2">
+              <p className="text-xs font-bold text-slate-400 uppercase tracking-wider flex items-center gap-2 font-sans">
                 <Sparkles className="w-4 h-4 text-royal-blue shrink-0" />
-                <span>Join 20+ businesses who've already used this audit to rank higher</span>
+                <span>Join 20+ businesses across India who've used this audit</span>
               </p>
             </div>
 
