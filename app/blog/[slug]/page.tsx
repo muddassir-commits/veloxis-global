@@ -243,7 +243,11 @@ export default function SingleBlogPostPage({ params }: Params) {
     "author": {
       "@type": "Person",
       "name": post.author,
-      "url": "https://www.linkedin.com/in/muddassir-alii/"
+      "url": "https://www.linkedin.com/in/muddassir-alii/",
+      "sameAs": [
+        "https://www.linkedin.com/in/muddassir-alii/",
+        "https://muddassirali.com"
+      ]
     },
     "publisher": {
       "@type": "Organization",

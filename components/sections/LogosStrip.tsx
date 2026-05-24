@@ -33,7 +33,7 @@ export const LogosStrip: React.FC = () => {
     <section className="bg-white py-12 border-y border-slate-100 overflow-hidden relative select-none">
       <div className="max-w-[1280px] mx-auto px-6 text-center mb-8">
         <span className="font-sans text-[12px] font-bold tracking-[0.05em] uppercase text-slate-400 block">
-          TRUSTED BY 250+ BUSINESSES ACROSS NORTH INDIA
+          TRUSTED BY 250+ BUSINESSES ACROSS INDIA
         </span>
       </div>
 

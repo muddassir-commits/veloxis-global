@@ -329,7 +329,7 @@ export const Footer: React.FC = () => {
         </div>
         
         <span className="text-slate-500 font-normal">
-          Made with ❤️ for North Indian businesses
+          Made with ❤️ for Indian businesses
         </span>
       </div>
     </footer>

@@ -132,7 +132,7 @@ export default function BlogContent() {
           <div className="max-w-xl">
             <Badge color="indigo" className="mb-3">KNOWLEDGE HUB</Badge>
             <h1 className="text-3xl sm:text-4xl lg:text-[46px] font-extrabold tracking-tight text-slate-900 leading-tight">
-              Veloxis Digital Marketing & SEO Knowledge Base
+              Digital Marketing Knowledge Built for Indian Businesses
             </h1>
             <p className="text-slate-500 mt-2 text-sm sm:text-base leading-relaxed">
               Actionable SEO audits, B2B lead generation scripts, and local search hacks from Muddassir Ali.

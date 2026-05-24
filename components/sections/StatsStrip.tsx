@@ -17,7 +17,7 @@ export const StatsStrip: React.FC = () => {
     <section className="bg-white py-12 border-y border-slate-100 overflow-hidden">
       <div className="max-w-container-max mx-auto px-gutter text-center mb-8">
         <span className="text-xs font-bold text-slate-400 uppercase tracking-widest block">
-          TRUSTED BY GROWING BUSINESSES ACROSS NORTH INDIA
+          TRUSTED BY GROWING BUSINESSES ACROSS INDIA
         </span>
       </div>
 

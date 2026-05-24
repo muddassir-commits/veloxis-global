@@ -21,12 +21,14 @@ import {
 import { Linkedin } from '../../components/ui/BrandIcons';
 import { constructMetadata, pageMeta } from '../../lib/seo-config';
 
-// 1. Static Metadata with E-E-A-T optimization
-export const metadata: Metadata = constructMetadata({
-  title: pageMeta.about.title,
-  description: pageMeta.about.description,
-  path: pageMeta.about.path
-});
+// 1. Dynamic Metadata with E-E-A-T optimization
+export function generateMetadata(): Metadata {
+  return constructMetadata({
+    title: pageMeta.about.title,
+    description: pageMeta.about.description,
+    path: pageMeta.about.path
+  });
+}
 
 export default function AboutPage() {
   const breadcrumbItems = [{ name: 'About Us', href: '/about' }];
@@ -122,8 +124,8 @@ export default function AboutPage() {
     },
     {
       icon: <Globe className="w-5 h-5 text-royal-blue" />,
-      title: "Built for North India",
-      desc: "We understand how Delhi, Noida, Lucknow & Kanpur businesses think."
+      title: "🇮🇳 Built for Indian Businesses",
+      desc: "We understand Indian businesses — their culture, their customers, and what digital marketing actually takes to work in India."
     }
   ];
 
@@ -312,7 +314,7 @@ export default function AboutPage() {
                 Data-Driven & Honest growth
               </h3>
               <p className="text-slate-600 leading-relaxed text-sm sm:text-base">
-                "To help every business in North India unlock the power of digital marketing with honest, data-driven strategies and no fluff."
+                "To help every business in India unlock the power of digital marketing with honest, data-driven strategies and no fluff."
               </p>
             </div>
             <div className="bg-white border border-slate-100 rounded-2xl p-8 shadow-sm flex flex-col gap-4">
@@ -323,7 +325,7 @@ export default function AboutPage() {
                 Dominating Regional Digital Growth
               </h3>
               <p className="text-slate-600 leading-relaxed text-sm sm:text-base">
-                "To be the most trusted digital growth partner for businesses across Kanpur, Lucknow, Delhi & Noida by 2027."
+                "To be India's most trusted digital growth partner — starting from Kanpur and growing to serve businesses across the country by 2027."
               </p>
             </div>
           </div>

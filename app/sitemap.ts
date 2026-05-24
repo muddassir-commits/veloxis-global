@@ -1,72 +1,43 @@
 import { MetadataRoute } from 'next';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://veloxisglobal.com';
   const currentDate = new Date();
 
-  // 1. Homepage (1.0, daily)
-  const home = [
+  // 1. Core pages with specific priority order from ranking strategy
+  const corePages = [
+    { url: 'https://veloxisglobal.com', priority: 1.0, changeFrequency: 'daily' as const },
+    { url: 'https://veloxisglobal.com/digital-marketing-agency-kanpur', priority: 0.97, changeFrequency: 'weekly' as const },
+    { url: 'https://veloxisglobal.com/digital-marketing-agency-lucknow', priority: 0.96, changeFrequency: 'weekly' as const },
+    { url: 'https://veloxisglobal.com/digital-marketing-agency-noida', priority: 0.95, changeFrequency: 'weekly' as const },
+    { url: 'https://veloxisglobal.com/digital-marketing-agency-delhi', priority: 0.94, changeFrequency: 'weekly' as const },
+    { url: 'https://veloxisglobal.com/free-seo-audit', priority: 0.90, changeFrequency: 'monthly' as const },
+    { url: 'https://veloxisglobal.com/services/seo', priority: 0.85, changeFrequency: 'weekly' as const },
+    { url: 'https://veloxisglobal.com/services/google-ads-ppc', priority: 0.84, changeFrequency: 'weekly' as const },
+    { url: 'https://veloxisglobal.com/services/social-media-marketing', priority: 0.83, changeFrequency: 'weekly' as const },
+    { url: 'https://veloxisglobal.com/services/content-marketing', priority: 0.80, changeFrequency: 'weekly' as const },
+    { url: 'https://veloxisglobal.com/services/web-design-development', priority: 0.80, changeFrequency: 'weekly' as const },
+    { url: 'https://veloxisglobal.com/services/email-marketing', priority: 0.78, changeFrequency: 'weekly' as const },
+    { url: 'https://veloxisglobal.com/about', priority: 0.70, changeFrequency: 'monthly' as const },
+    { url: 'https://veloxisglobal.com/case-studies', priority: 0.75, changeFrequency: 'weekly' as const },
+    { url: 'https://veloxisglobal.com/pricing', priority: 0.72, changeFrequency: 'monthly' as const },
+    { url: 'https://veloxisglobal.com/blog', priority: 0.70, changeFrequency: 'daily' as const },
+    { url: 'https://veloxisglobal.com/contact', priority: 0.65, changeFrequency: 'monthly' as const },
+  ].map(page => ({
+    ...page,
+    lastModified: currentDate
+  }));
+
+  // 2. Services index (0.75, weekly)
+  const servicesIndex = [
     {
-      url: baseUrl,
-      lastModified: currentDate,
-      changeFrequency: 'daily' as const,
-      priority: 1.0,
-    },
+      url: 'https://veloxisglobal.com/services',
+      priority: 0.75,
+      changeFrequency: 'weekly' as const,
+      lastModified: currentDate
+    }
   ];
 
-  // 2. Location Pages (0.95, weekly)
-  const locations = [
-    '/digital-marketing-agency-delhi',
-    '/digital-marketing-agency-noida',
-    '/digital-marketing-agency-lucknow',
-    '/digital-marketing-agency-kanpur',
-  ].map(route => ({
-    url: `${baseUrl}${route}`,
-    lastModified: currentDate,
-    changeFrequency: 'weekly' as const,
-    priority: 0.95,
-  }));
-
-  // 3. Service Pages (0.85, weekly)
-  const services = [
-    '/services',
-    '/services/seo',
-    '/services/social-media-marketing',
-    '/services/google-ads-ppc',
-    '/services/content-marketing',
-    '/services/web-design-development',
-    '/services/email-marketing',
-  ].map(route => ({
-    url: `${baseUrl}${route}`,
-    lastModified: currentDate,
-    changeFrequency: 'weekly' as const,
-    priority: 0.85,
-  }));
-
-  // 4. Free SEO Audit (0.80, monthly)
-  const audit = [
-    {
-      url: `${baseUrl}/free-seo-audit`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly' as const,
-      priority: 0.80,
-    },
-  ];
-
-  // 5. Core Content Pages (0.75, weekly/monthly)
-  const core = [
-    '/about',
-    '/case-studies',
-    '/pricing',
-    '/blog',
-  ].map(route => ({
-    url: `${baseUrl}${route}`,
-    lastModified: currentDate,
-    changeFrequency: 'weekly' as const,
-    priority: 0.75,
-  }));
-
-  // 6. Industries & Dynamic Detail Pages (0.70, weekly)
+  // 3. Industries & Dynamic Detail Pages (0.70, weekly)
   const industriesAndDynamic = [
     '/industries',
     '/industries/ecommerce',
@@ -85,42 +56,38 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/case-studies/lucknow-healthcare-leads',
     '/case-studies/kanpur-fabrics-b2b',
   ].map(route => ({
-    url: `${baseUrl}${route}`,
+    url: `https://veloxisglobal.com${route}`,
     lastModified: currentDate,
     changeFrequency: 'weekly' as const,
     priority: 0.70,
   }));
 
-  // 7. Contact & Testimonials (0.65, monthly)
-  const utility = [
-    '/contact',
-    '/testimonials',
-  ].map(route => ({
-    url: `${baseUrl}${route}`,
-    lastModified: currentDate,
-    changeFrequency: 'monthly' as const,
-    priority: 0.65,
-  }));
+  // 4. Testimonials (0.60, monthly)
+  const testimonials = [
+    {
+      url: 'https://veloxisglobal.com/testimonials',
+      priority: 0.60,
+      changeFrequency: 'monthly' as const,
+      lastModified: currentDate
+    }
+  ];
 
-  // 8. Legal Pages (0.30, monthly)
+  // 5. Legal Pages (0.30, monthly)
   const legal = [
     '/privacy-policy',
     '/terms',
   ].map(route => ({
-    url: `${baseUrl}${route}`,
+    url: `https://veloxisglobal.com${route}`,
     lastModified: currentDate,
     changeFrequency: 'monthly' as const,
     priority: 0.30,
   }));
 
   return [
-    ...home,
-    ...locations,
-    ...services,
-    ...audit,
-    ...core,
+    ...corePages,
+    ...servicesIndex,
     ...industriesAndDynamic,
-    ...utility,
+    ...testimonials,
     ...legal,
   ];
 }

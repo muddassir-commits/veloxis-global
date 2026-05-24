@@ -179,7 +179,7 @@ export const getWebSiteSchema = () => {
     "@id": "https://veloxisglobal.com/#website",
     "url": "https://veloxisglobal.com",
     "name": "Veloxis Global",
-    "description": "North India's leading digital marketing agency.",
+    "description": "India's results-driven digital marketing agency.",
     "publisher": {
       "@id": "https://veloxisglobal.com/#organization"
     },

@@ -64,7 +64,7 @@ export function constructMetadata({
 
 export const pageMeta = {
   home: {
-    title: 'Top Digital Marketing Agency in India | Veloxis Global',
+    title: "Best Digital Marketing Agency in India | Veloxis Global",
     description: "Veloxis Global — India's trusted digital marketing agency delivering SEO, PPC, and social media campaigns. Contact us for a free site audit today.",
     path: '/'
   },
@@ -79,18 +79,18 @@ export const pageMeta = {
     path: '/digital-marketing-agency-noida'
   },
   lucknow: {
-    title: 'Best Digital Marketing Agency Lucknow 2026 | Veloxis Global',
+    title: 'Best Digital Marketing Agency in Lucknow 2026 | Veloxis Global',
     description: 'Award-winning digital marketing agency in Lucknow. We deliver proven SEO, Google Ads & social media campaigns for Lucknow brands. Get your free audit.',
     path: '/digital-marketing-agency-lucknow'
   },
   kanpur: {
-    title: 'Best Digital Marketing Agency Kanpur 2026 | Veloxis Global',
+    title: 'Best Digital Marketing Agency in Kanpur 2026 | Veloxis Global',
     description: 'Leading digital marketing agency in Kanpur for textile, manufacturing & MSME businesses. SEO, Google Ads, Social Media. Veloxis Global. Get free audit.',
     path: '/digital-marketing-agency-kanpur'
   },
   seo: {
     title: 'Professional SEO Services in India 2026 | Veloxis Global',
-    description: "Rank #1 on Google with Veloxis Global's expert SEO services. Local SEO, technical SEO, link building for businesses across North India. Free audit.",
+    description: "Rank #1 on Google with Veloxis Global's expert SEO services. Local SEO, technical SEO, link building for businesses across India. Free audit.",
     path: '/services/seo'
   },
   smm: {
@@ -124,8 +124,8 @@ export const pageMeta = {
     path: '/services'
   },
   about: {
-    title: 'About Veloxis Global | Trusted Digital Marketing Agency',
-    description: "Learn about India's leading digital marketing agency. Established in 2019, our certified team is dedicated to scaling your business. Contact us today.",
+    title: "About Veloxis Global — India's Digital Marketing Agency | Muddassir Ali",
+    description: "Veloxis Global — India's results-driven digital marketing agency founded by Muddassir Ali. 4 years in digital marketing, serving businesses across India from Kanpur. Learn our story.",
     path: '/about'
   },
   caseStudies: {
@@ -154,8 +154,8 @@ export const pageMeta = {
     path: '/contact'
   },
   blog: {
-    title: 'Digital Marketing Blog: Insights & Strategy | Veloxis Global',
-    description: 'Read our digital marketing blog for actionable insights, strategy guides, and tips on SEO, PPC, social media, and content. Read our articles today.',
+    title: "Digital Marketing Blog India 2026 — Insights & Strategies | Veloxis Global",
+    description: "Expert digital marketing insights for Indian businesses. SEO guides, Google Ads tips, Social Media strategies — all built for India's unique market. Updated regularly by Muddassir Ali.",
     path: '/blog'
   }
 };

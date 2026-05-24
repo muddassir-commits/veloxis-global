@@ -70,10 +70,13 @@ export default function DelhiLocationPage() {
     }
   ];
 
+  const faqSchema = getFAQPageSchema(delhiFaqs);
+
   return (
     <>
       <SchemaMarkup schema={localSchema} />
       <SchemaMarkup schema={breadcrumbSchema} />
+      <SchemaMarkup schema={faqSchema} />
 
       <section className="bg-slate-50 py-8 border-b border-slate-100">
         <div className="max-w-container-max mx-auto px-gutter">

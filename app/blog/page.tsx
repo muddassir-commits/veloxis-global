@@ -6,12 +6,14 @@ import { generateBreadcrumbSchema } from '../../lib/schema';
 import BlogContent from './BlogContent';
 import { constructMetadata, pageMeta } from '../../lib/seo-config';
 
-// 1. Static Metadata with canonical alternates
-export const metadata: Metadata = constructMetadata({
-  title: pageMeta.blog.title,
-  description: pageMeta.blog.description,
-  path: pageMeta.blog.path
-});
+// 1. Dynamic Metadata with canonical alternates
+export function generateMetadata(): Metadata {
+  return constructMetadata({
+    title: pageMeta.blog.title,
+    description: pageMeta.blog.description,
+    path: pageMeta.blog.path
+  });
+}
 
 export default function BlogPage() {
   const breadcrumbItems = [{ name: 'Blog', href: '/blog' }];
@@ -32,7 +34,11 @@ export default function BlogPage() {
     "author": {
       "@type": "Person",
       "name": "Muddassir Ali",
-      "url": "https://www.linkedin.com/in/muddassir-alii/"
+      "url": "https://www.linkedin.com/in/muddassir-alii/",
+      "sameAs": [
+        "https://www.linkedin.com/in/muddassir-alii/",
+        "https://muddassirali.com"
+      ]
     },
     "publisher": {
       "@type": "Organization",

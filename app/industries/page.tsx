@@ -47,7 +47,7 @@ export default function IndustriesIndexPage() {
     },
     {
       title: 'E-commerce & Shopify Growth',
-      desc: 'PMax campaign setups, negative keyword filters, and dynamic Instagram reels advertising delivering 5x+ ROAS for North Indian retail brands.',
+      desc: 'PMax campaign setups, negative keyword filters, and dynamic Instagram reels advertising delivering 5x+ ROAS for Indian retail brands.',
       icon: ShoppingBag,
       slug: 'ecommerce',
       badge: 'teal' as const
