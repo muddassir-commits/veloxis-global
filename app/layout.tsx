@@ -13,10 +13,10 @@ export const metadata: Metadata = {
   description: 'Veloxis Global — India\'s trusted digital marketing agency delivering SEO, Google Ads, Social Media & Content marketing for Delhi, Noida, Lucknow & Kanpur.',
   icons: {
     icon: [
-      { url: '/favicon.ico' },
-      { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
+      { url: '/favicon.ico?v=2' },
+      { url: '/favicon-32x32.png?v=2', sizes: '32x32', type: 'image/png' },
     ],
-    apple: { url: '/apple-touch-icon.png' },
+    apple: { url: '/apple-touch-icon.png?v=2' },
   },
 };
 
