@@ -12,12 +12,15 @@ import { Star, CheckCircle, MapPin } from 'lucide-react';
 import { CtaBanner } from '../../components/sections/CtaBanner';
 import { FaqAccordion } from '../../components/sections/FaqAccordion';
 
-export const metadata: Metadata = constructMetadata({
-  title: pageMeta.noida.title,
-  description: pageMeta.noida.description,
-  path: pageMeta.noida.path,
-  ogImage: '/images/og/noida-og.jpg'
-});
+export const metadata: Metadata = {
+  ...constructMetadata({
+    title: "Best Digital Marketing Agency in Noida 2026 | Veloxis Global",
+    description: "Top digital marketing agency in Noida for IT companies, startups & growing businesses. Expert SEO, Google Ads & Social Media. Serving Sector 62, Greater Noida & all of Noida. Free audit.",
+    path: "/digital-marketing-agency-noida",
+    ogImage: '/images/og/noida-og.jpg'
+  }),
+  keywords: "best digital marketing agency in Noida, digital marketing company Noida 2026, SEO services Noida, Google Ads agency Noida, startup marketing Noida, IT company digital marketing Noida, digital marketing Sector 62, social media marketing Noida"
+};
 
 export default function NoidaLocationPage() {
   const city = 'Noida';
@@ -36,36 +39,36 @@ export default function NoidaLocationPage() {
 
   const noidaFaqs = [
     {
-      question: "What digital marketing services does Veloxis Global offer to local IT and SaaS companies?",
-      answer: "We specialize in international SEO, high-ROAS Google Ads, LinkedIn account-based marketing (ABM), content marketing, and marketing automation integrations. We help regional technology firms build sustainable pipelines of qualified inbound leads."
+      question: "What digital marketing services does Veloxis Global offer to Noida IT and tech companies?",
+      answer: "We offer technical SEO, LinkedIn account-based marketing (ABM), search engine marketing (SEM), and marketing automation integration. We help Noida-based software and IT companies build scalable pipelines of domestic and international business leads."
     },
     {
-      question: "Which commercial areas do your local services cover?",
-      answer: "Our regional agency desk covers all key commercial hubs locally including Sector 62, Sector 18, Sector 137, Noida Expressway, Extension, Greater Noida, and Film City."
+      question: "How long does SEO take to produce results for Noida startups?",
+      answer: "Startups in Noida can expect initial visibility and organic search growth in 60 to 90 days. Because Noida is a highly competitive startup hub, focusing on long-tail, high-intent keywords can accelerate lead generation and customer acquisition."
     },
     {
-      question: "How does your local SEO strategy help real estate developers?",
-      answer: "The local property market is hyper-competitive. We use geotargeted Local SEO, Google Map Pack optimization, custom landing page creation, and lead nurturing CRM flows to help developers rank for high-intent queries and capture serious buyers."
+      question: "Do you specialize in B2B marketing for Noida businesses?",
+      answer: "Yes, B2B lead generation is our core strength. We optimize your Noida business for organic search keywords, run targeted LinkedIn and Google Ads campaigns, and configure marketing automation to nurture prospects from awareness to close."
     },
     {
-      question: "Do you offer marketing services tailored specifically for early-stage startups?",
-      answer: "Yes. We offer agile digital growth sprints tailored for local startups. This includes landing page optimization, rapid-fire Google and Meta Ads, conversion rate optimization (CRO), and setting up analytics dashboards to track key growth metrics."
+      question: "Can you help our Noida company rank for international search queries?",
+      answer: "Absolutely. We are experienced in global SEO strategies, multilingual structures, and building domain authority. We help IT exporters and SaaS firms based in Noida capture high-value clients across North America, Europe, and the Middle East."
     },
     {
-      question: "What makes Veloxis Global different from other digital marketing agencies in Sector 62?",
-      answer: "Unlike agencies that focus only on traffic and vanity metrics, we align our campaigns with revenue. We integrate lead-scoring and CRM reporting so local business owners know exactly which keywords and campaigns are driving real sales."
+      question: "Do you manage Google Ads and PPC campaigns for Noida startups?",
+      answer: "Yes. We set up, run, and optimize high-ROAS Google Search, Display, and Performance Max ad campaigns. We focus on daily keyword optimization, negative targeting, and page optimization to lower your startup's customer acquisition cost."
     },
     {
-      question: "Can you help our local B2B company rank for international search queries?",
-      answer: "Absolutely. Our technical SEO team is experienced in international search structures, hreflang tags, and building global domain authority. We help SaaS and IT service exporters capture high-value leads in the US, Europe, and Gulf regions."
+      question: "Which specific areas in Noida do you cover?",
+      answer: "Our marketing services cover all major Noida zones, including the IT corridor in Sector 62, Sector 18, Sector 137, Noida Expressway commercial hubs, Noida Extension, and Greater Noida."
     },
     {
-      question: "How quickly can we expect to see results from a Google Ads campaign managed by your team?",
-      answer: "Google Ads campaigns typically start generating traffic and initial leads within 48 to 72 hours of launch. However, we continuously optimize campaigns over the first 30 days to lower cost-per-lead (CPL) and improve lead quality."
+      question: "Do you offer free digital consultations for Noida startups?",
+      answer: "Yes. We provide a free 30-minute growth strategy session along with a manual website audit for Noida startups and IT companies. We review your site speed, keyword positions, and competitor tactics to give you actionable advice."
     },
     {
-      question: "What is your pricing structure for digital marketing contracts?",
-      answer: "We offer transparent, flexible retainer models tailored to your business goals. We do not lock our clients into rigid, long-term contracts. Contact us to receive a custom proposal and quote."
+      question: "What makes you different from typical digital agencies in Noida?",
+      answer: "Unlike many agencies in Noida that focus on traffic volume and basic impressions, Veloxis Global is completely results-oriented. We measure campaign success in real revenue metrics, SQLs, and closed-won deals."
     }
   ];
 
@@ -84,22 +87,22 @@ export default function NoidaLocationPage() {
       <section className="bg-white py-16 sm:py-24 text-left relative overflow-hidden">
         <div className="max-w-container-max mx-auto px-gutter grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           <div className="lg:col-span-7 flex flex-col items-start">
-            <Badge variant="teal" className="mb-4">LOCAL TECH & STARTUP HUBS Desk</Badge>
+            <Badge variant="indigo" className="mb-4">NOIDA REGIONAL OFFICE</Badge>
             <h1 className="text-headline-lg-mobile md:text-headline-lg font-extrabold text-slate-900 tracking-tight leading-tight mb-6">
               Best Digital Marketing Agency in Noida
             </h1>
-            <p className="text-base sm:text-body-lg text-on-surface-variant leading-relaxed mb-6">
-              Noida has quickly transformed into the premier tech and SaaS hub of North India, standing alongside Gurgaon as a key driver of the digital economy in the National Capital Region. From Sector 62's software clusters to the buzzing startup workspaces in Sector 18 and the major residential developments along the local Expressway and Extension, the city requires a highly specialized, tech-forward approach to digital acquisition.
+            <p className="text-base sm:text-body-lg text-on-surface-variant leading-relaxed mb-6 font-sans">
+              Veloxis Global helps Noida's IT companies, startups and growing businesses dominate digital. Whether you're in Sector 62, Sector 18, Sector 137, Greater Noida, Noida Extension or Film City — our performance-driven digital marketing strategies deliver real ROI.
             </p>
-            <p className="text-base sm:text-body-lg text-on-surface-variant leading-relaxed mb-8">
-              At Veloxis Global, we align our marketing operations with these unique local dynamics. We help regional startups and established enterprises design comprehensive search campaigns, engineer technical SEO funnels that rank for global buyer queries, and set up advanced Hubspot and CRM automation loops to qualify incoming leads.
+            <p className="text-base sm:text-body-lg text-on-surface-variant leading-relaxed mb-8 font-sans">
+              We understand Noida's tech-first business ecosystem and build campaigns that speak directly to its fast-moving, data-driven business culture.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
               <Button href="/free-seo-audit" variant="primary">
                 Get Free Agency Audit →
               </Button>
               <Button href="/contact" variant="outline">
-                Book Office Visit
+                Book Consult Call
               </Button>
             </div>
           </div>
@@ -113,7 +116,7 @@ export default function NoidaLocationPage() {
             <div className="flex flex-col gap-4 relative z-10 text-sm">
               <div className="flex items-center gap-2">
                 <MapPin className="w-4 h-4 text-royal-blue shrink-0" />
-                <span><strong>Coverage:</strong> Sector 62, 18, 137, Expressway, Extension, Film City</span>
+                <span><strong>Coverage:</strong> Sector 62, 18, 137, Expressway, Extension, Film City, Greater Noida</span>
               </div>
               <div className="flex items-center gap-2">
                 <CheckCircle className="w-4 h-4 text-teal-accent shrink-0" />
@@ -170,7 +173,7 @@ export default function NoidaLocationPage() {
                       <Star key={i} className="w-4 h-4 fill-current" />
                     ))}
                   </div>
-                  <p className="text-slate-900 italic font-medium mb-6">"{t.text}"</p>
+                  <p className="text-slate-900 italic font-medium mb-6">\"{t.text}\"</p>
                   <cite className="not-italic font-extrabold text-slate-900 text-sm block">{t.author}</cite>
                   <span className="text-xs font-semibold text-slate-500 uppercase tracking-widest mt-0.5">
                     {t.role}, {t.company}
