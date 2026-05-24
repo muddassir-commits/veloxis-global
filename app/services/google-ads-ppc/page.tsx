@@ -8,15 +8,14 @@ import {
   generateFAQSchema 
 } from '../../../lib/schema';
 import PpcServiceContent from './PpcServiceContent';
+import { constructMetadata, pageMeta } from '../../../lib/seo-config';
 
 // 1. Static Metadata with canonical alternates
-export const metadata: Metadata = {
-  title: "Professional Google Ads PPC Management Agency in India 2026 | Veloxis Global",
-  description: "Maximise your ROAS with our certified Google Ads management services in India 2026. Performance Max, search ads, display banners, retargeting. Request audit.",
-  alternates: {
-    canonical: "https://veloxisglobal.com/services/google-ads-ppc/",
-  }
-};
+export const metadata: Metadata = constructMetadata({
+  title: pageMeta.ppc.title,
+  description: pageMeta.ppc.description,
+  path: pageMeta.ppc.path
+});
 
 export default function PpcServicePage() {
   const breadcrumbItems = [

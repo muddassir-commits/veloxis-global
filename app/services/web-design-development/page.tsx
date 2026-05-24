@@ -8,15 +8,14 @@ import {
   generateFAQSchema 
 } from '../../../lib/schema';
 import DevServiceContent from './DevServiceContent';
+import { constructMetadata, pageMeta } from '../../../lib/seo-config';
 
 // 1. Static Metadata with canonical alternates
-export const metadata: Metadata = {
-  title: "Professional Web Design & Development Company in Delhi Noida 2026 | Veloxis Global",
-  description: "Get high-performance, mobile-first Next.js React websites that load instantly and convert traffic. Best website design company Delhi Noida 2026. Request audit.",
-  alternates: {
-    canonical: "https://veloxisglobal.com/services/web-design-development/",
-  }
-};
+export const metadata: Metadata = constructMetadata({
+  title: pageMeta.webDev.title,
+  description: pageMeta.webDev.description,
+  path: pageMeta.webDev.path
+});
 
 export default function WebDesignServicePage() {
   const breadcrumbItems = [

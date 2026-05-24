@@ -6,12 +6,18 @@ import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { Facebook, Instagram, Linkedin } from '../ui/BrandIcons';
 import { Button } from '../ui/Button';
+import { ChevronDown, ChevronUp } from 'lucide-react';
 
 export const Footer: React.FC = () => {
   const [email, setEmail] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [success, setSuccess] = useState<boolean | null>(null);
+  const [openSection, setOpenSection] = useState<string | null>(null);
   const pathname = usePathname();
+
+  const toggleSection = (section: string) => {
+    setOpenSection(openSection === section ? null : section);
+  };
 
   const handleSubscribe = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -101,9 +107,17 @@ export const Footer: React.FC = () => {
         </div>
 
         {/* Col 2 — Services */}
-        <div className="flex flex-col gap-6">
-          <h4 className="text-[12px] tracking-[0.05em] uppercase text-slate-400 font-bold font-sans">SERVICES</h4>
-          <ul className="flex flex-col gap-3 text-[14px] text-slate-300 font-medium">
+        <div className="flex flex-col md:gap-6 border-b border-white/10 md:border-b-0 pb-4 md:pb-0">
+          <button 
+            onClick={() => toggleSection('services')}
+            className="flex items-center justify-between w-full md:cursor-default text-left md:pointer-events-none focus:outline-none py-2 md:py-0"
+          >
+            <h4 className="text-[12px] tracking-[0.05em] uppercase text-slate-400 font-bold font-sans">SERVICES</h4>
+            <span className="md:hidden text-slate-400">
+              {openSection === 'services' ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
+            </span>
+          </button>
+          <ul className={`flex flex-col gap-3 text-[14px] text-slate-300 font-medium mt-3 md:mt-0 ${openSection === 'services' ? 'block' : 'hidden md:flex'}`}>
             <li>
               <Link href="/services/seo/" className="hover:text-white transition-colors duration-300">
                 SEO Services
@@ -138,9 +152,17 @@ export const Footer: React.FC = () => {
         </div>
 
         {/* Col 3 — Locations */}
-        <div className="flex flex-col gap-6">
-          <h4 className="text-[12px] tracking-[0.05em] uppercase text-slate-400 font-bold font-sans">LOCATIONS</h4>
-          <ul className="flex flex-col gap-3 text-[14px] text-slate-300 font-medium font-sans">
+        <div className="flex flex-col md:gap-6 border-b border-white/10 md:border-b-0 pb-4 md:pb-0">
+          <button 
+            onClick={() => toggleSection('locations')}
+            className="flex items-center justify-between w-full md:cursor-default text-left md:pointer-events-none focus:outline-none py-2 md:py-0"
+          >
+            <h4 className="text-[12px] tracking-[0.05em] uppercase text-slate-400 font-bold font-sans">LOCATIONS</h4>
+            <span className="md:hidden text-slate-400">
+              {openSection === 'locations' ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
+            </span>
+          </button>
+          <ul className={`flex flex-col gap-3 text-[14px] text-slate-300 font-medium font-sans mt-3 md:mt-0 ${openSection === 'locations' ? 'block' : 'hidden md:flex'}`}>
             <li>
               <Link href="/digital-marketing-agency-delhi/" className="hover:text-white transition-colors duration-300">
                 Digital Marketing Delhi
@@ -165,9 +187,17 @@ export const Footer: React.FC = () => {
         </div>
 
         {/* Col 4 — Company */}
-        <div className="flex flex-col gap-6">
-          <h4 className="text-[12px] tracking-[0.05em] uppercase text-slate-400 font-bold font-sans">COMPANY</h4>
-          <ul className="flex flex-col gap-3 text-[14px] text-slate-300 font-medium font-sans">
+        <div className="flex flex-col md:gap-6 border-b border-white/10 md:border-b-0 pb-4 md:pb-0">
+          <button 
+            onClick={() => toggleSection('company')}
+            className="flex items-center justify-between w-full md:cursor-default text-left md:pointer-events-none focus:outline-none py-2 md:py-0"
+          >
+            <h4 className="text-[12px] tracking-[0.05em] uppercase text-slate-400 font-bold font-sans">COMPANY</h4>
+            <span className="md:hidden text-slate-400">
+              {openSection === 'company' ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
+            </span>
+          </button>
+          <ul className={`flex flex-col gap-3 text-[14px] text-slate-300 font-medium font-sans mt-3 md:mt-0 ${openSection === 'company' ? 'block' : 'hidden md:flex'}`}>
             <li>
               <Link href="/about/" className="hover:text-white transition-colors duration-300">
                 About Us
@@ -202,10 +232,18 @@ export const Footer: React.FC = () => {
         </div>
 
         {/* Col 5 — Contact & Newsletter */}
-        <div className="flex flex-col gap-6">
-          <h4 className="text-[12px] tracking-[0.05em] uppercase text-slate-400 font-bold font-sans">CONTACT</h4>
+        <div className="flex flex-col md:gap-6 pb-4 md:pb-0">
+          <button 
+            onClick={() => toggleSection('contact')}
+            className="flex items-center justify-between w-full md:cursor-default text-left md:pointer-events-none focus:outline-none py-2 md:py-0"
+          >
+            <h4 className="text-[12px] tracking-[0.05em] uppercase text-slate-400 font-bold font-sans">CONTACT</h4>
+            <span className="md:hidden text-slate-400">
+              {openSection === 'contact' ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
+            </span>
+          </button>
           
-          <div className="flex flex-col gap-3 text-[14px] font-sans">
+          <div className={`flex flex-col gap-3 text-[14px] font-sans mt-3 md:mt-0 ${openSection === 'contact' ? 'block' : 'hidden md:flex'}`}>
             <a
               href="tel:+918887620727"
               className="text-royal-blue font-semibold hover:underline block"
@@ -233,7 +271,7 @@ export const Footer: React.FC = () => {
           </div>
 
           {/* Newsletter Form */}
-          <div className="pt-2 border-t border-slate-800">
+          <div className={`pt-4 border-t border-slate-800 mt-4 ${openSection === 'contact' ? 'block' : 'hidden md:block'}`}>
             <span className="text-[11px] tracking-[0.05em] uppercase text-slate-400 font-bold block mb-2 font-sans">
               SUBSCRIBE TO INSIGHTS
             </span>

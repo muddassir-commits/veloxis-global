@@ -2,14 +2,13 @@ import React from 'react';
 import { Metadata } from 'next';
 import { Breadcrumb } from '../../components/ui/Breadcrumb';
 import { Badge } from '../../components/ui/Badge';
+import { constructMetadata } from '../../lib/seo-config';
 
-export const metadata: Metadata = {
-  title: 'Terms of Service | Veloxis Global',
-  description: 'Read the terms of use for Veloxis Global website and performance marketing services.',
-  alternates: {
-    canonical: 'https://veloxisglobal.com/terms/',
-  }
-};
+export const metadata: Metadata = constructMetadata({
+  title: "Terms of Service | Veloxis Global Digital Marketing",
+  description: "Read the Terms of Service for Veloxis Global. Learn about our month-to-month service agreements and website usage terms. Contact us with questions.",
+  path: "/terms"
+});
 
 export default function TermsPage() {
   const breadcrumbItems = [{ name: 'Terms of Service', href: '/terms' }];

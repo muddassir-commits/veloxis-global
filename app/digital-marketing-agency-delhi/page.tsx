@@ -47,7 +47,7 @@ export default function DelhiLocationPage() {
         <div className="max-w-container-max mx-auto px-gutter grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           <div className="lg:col-span-7 flex flex-col items-start">
             <Badge variant="teal" className="mb-4">DELHI NCR REGIONAL OFFICE</Badge>
-            <h1 className="text-4xl sm:text-headline-lg font-extrabold text-slate-900 tracking-tight leading-tight mb-6">
+            <h1 className="text-headline-lg-mobile md:text-headline-lg font-extrabold text-slate-900 tracking-tight leading-tight mb-6">
               The Best Digital Marketing Agency in Delhi
             </h1>
             <p className="text-base sm:text-body-lg text-on-surface-variant leading-relaxed mb-6">

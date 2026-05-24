@@ -23,8 +23,8 @@ interface Post {
 const allPostsData: Post[] = [
   {
     slug: 'seo-in-2026-whats-changed-for-indian-businesses',
-    title: "SEO in 2026: What's Changed and What Indian Businesses Must Do Now",
-    excerpt: "Google's search landscape is evolving rapidly with AI overviews and E-E-A-T requirements. Discover how to keep your business ranking high on Google.",
+    title: "SEO in 2026: Guide for Indian Businesses | Veloxis Global",
+    excerpt: "Learn how to rank higher on Google in 2026. Get our expert SEO action plan tailored for Indian businesses and scale your organic website traffic.",
     category: 'SEO',
     badgeColor: 'teal',
     author: 'Muddassir Ali',
@@ -35,8 +35,8 @@ const allPostsData: Post[] = [
   },
   {
     slug: 'google-ads-vs-meta-ads-roi-india',
-    title: "Google Ads vs Meta Ads — Which Platform Gives Better ROI in India?",
-    excerpt: "Should you spend on search intent or social awareness? An in-depth comparison of ad platforms, cost per click, and conversion rates.",
+    title: "Google Ads vs Meta Ads: India ROI Guide | Veloxis Global",
+    excerpt: "Should you choose Google Ads or Meta Ads in India? Read our direct comparison of CPC, target intent, and conversion ROAS to scale your leads now.",
     category: 'Google Ads',
     badgeColor: 'orange',
     author: 'Muddassir Ali',
@@ -46,8 +46,8 @@ const allPostsData: Post[] = [
   },
   {
     slug: 'how-to-optimize-google-business-profile-2026',
-    title: "Google Business Profile Blueprint: Dominating Local Searches in 2026",
-    excerpt: "Step-by-step optimization strategy to claim the #1 spot in Google Maps 3-pack for Lucknow, Kanpur, Noida, and Delhi service businesses.",
+    title: "Local SEO: Google Business Profile 2026 Guide | Veloxis",
+    excerpt: "Master Google Maps pack positioning in 2026. Read our local GBP optimization checklist to get more phone calls and client visits for your clinic.",
     category: 'Local SEO',
     badgeColor: 'blue',
     author: 'Muddassir Ali',
@@ -57,8 +57,8 @@ const allPostsData: Post[] = [
   },
   {
     slug: 'content-marketing-eeat-framework',
-    title: "How to Build an E-E-A-T Compliant Content Funnel That Converts",
-    excerpt: "Google evaluates authors based on real-world trust. Learn how to write structured blogs and landing pages that pass search quality rater checks.",
+    title: "E-E-A-T Content Marketing Funnel Guide | Veloxis Global",
+    excerpt: "Learn how to build Google E-E-A-T compliant content funnels. Discover our writer verification blueprint to scale and convert organic web traffic.",
     category: 'Content',
     badgeColor: 'indigo',
     author: 'Muddassir Ali',
@@ -68,8 +68,8 @@ const allPostsData: Post[] = [
   },
   {
     slug: 'instagram-reels-funnel-local-brands',
-    title: "Instagram Reels Strategy: Turning Organic Views Into WhatsApp Inquiries",
-    excerpt: "Stop chasing vanity views. Build localized Instagram Reel loops and automated DM workflows that send viewers directly to your WhatsApp Business API.",
+    title: "Instagram Reels Strategy: Social Media Funnel | Veloxis",
+    excerpt: "Turn Instagram views into WhatsApp sales leads. Explore our video hooks and DM automation setup to capture and convert customer inquiries online now.",
     category: 'Social Media',
     badgeColor: 'teal',
     author: 'Muddassir Ali',
@@ -79,8 +79,8 @@ const allPostsData: Post[] = [
   },
   {
     slug: 'meta-performance-max-best-practices',
-    title: "Maximizing Leads with Google Performance Max (PMax) Campaigns in 2026",
-    excerpt: "A look into 2026's dominant ad format. How to group assets, build audience signals, and let Google's AI maximize conversions for every rupee spent.",
+    title: "Google Ads Performance Max PMax Campaign Guide | Veloxis",
+    excerpt: "Optimize Google Ads Performance Max (PMax) campaigns in 2026. Learn how to configure assets and audience signals to scale conversion leads today.",
     category: 'Google Ads',
     badgeColor: 'orange',
     author: 'Muddassir Ali',
@@ -132,7 +132,7 @@ export default function BlogContent() {
           <div className="max-w-xl">
             <Badge color="indigo" className="mb-3">KNOWLEDGE HUB</Badge>
             <h1 className="text-3xl sm:text-4xl lg:text-[46px] font-extrabold tracking-tight text-slate-900 leading-tight">
-              Veloxis Knowledge Base
+              Veloxis Digital Marketing & SEO Knowledge Base
             </h1>
             <p className="text-slate-500 mt-2 text-sm sm:text-base leading-relaxed">
               Actionable SEO audits, B2B lead generation scripts, and local search hacks from Muddassir Ali.

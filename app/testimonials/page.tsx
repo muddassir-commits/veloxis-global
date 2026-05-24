@@ -38,7 +38,7 @@ export default function TestimonialsPage() {
         <div className="max-w-container-max mx-auto px-gutter">
           <Badge variant="indigo" className="mb-4">CLIENT REVIEWS</Badge>
           <h1 className="text-4xl sm:text-headline-lg font-extrabold text-slate-900 tracking-tight mb-4">
-            Proven Growth Stories from Real Clients
+            Proven Digital Marketing Reviews & Client Testimonials
           </h1>
           <p className="text-base sm:text-body-md text-on-surface-variant max-w-xl mx-auto leading-relaxed">
             See how we partner with businesses across Delhi, Noida, Lucknow, and Kanpur to cut acquisition costs, double organic traffic, and accelerate revenue.

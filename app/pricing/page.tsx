@@ -4,15 +4,14 @@ import { SchemaMarkup } from '../../components/ui/SchemaMarkup';
 import { Breadcrumb } from '../../components/ui/Breadcrumb';
 import { generateBreadcrumbSchema, generateFAQSchema } from '../../lib/schema';
 import PricingContent from './PricingContent';
+import { constructMetadata, pageMeta } from '../../lib/seo-config';
 
 // 1. Static Metadata with canonical alternates
-export const metadata: Metadata = {
-  title: "Pricing Plans Built for Real Business Growth | Veloxis Global",
-  description: "Tailored digital marketing campaigns without lock-in contracts. Get a free website audit to discover recommended service structures and exact quotes.",
-  alternates: {
-    canonical: "https://veloxisglobal.com/pricing/",
-  }
-};
+export const metadata: Metadata = constructMetadata({
+  title: pageMeta.pricing.title,
+  description: pageMeta.pricing.description,
+  path: pageMeta.pricing.path
+});
 
 export default function PricingPage() {
   const breadcrumbItems = [{ name: 'Pricing', href: '/pricing' }];

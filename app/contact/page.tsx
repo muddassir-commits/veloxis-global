@@ -40,7 +40,7 @@ export default function ContactPage() {
             <Badge variant="teal">GET IN TOUCH</Badge>
             
             <h1 className="text-4xl sm:text-headline-lg font-extrabold text-slate-900 tracking-tight leading-tight">
-              Ready to Accelerate Your Business Growth?
+              Contact Our Digital Marketing Agency Today
             </h1>
             
             <p className="text-base sm:text-body-md text-on-surface-variant leading-relaxed">

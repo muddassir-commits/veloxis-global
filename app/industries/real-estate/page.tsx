@@ -11,7 +11,7 @@ import { CtaBanner } from '../../../components/sections/CtaBanner';
 
 export const metadata: Metadata = constructMetadata({
   title: 'Real Estate Developer Marketing Agency | Veloxis Global',
-  description: 'Scale qualified property leads and direct broker site visits in Delhi NCR, Noida, and Lucknow. View our real estate marketing framework.',
+  description: 'Scale qualified property leads and direct broker site visits in Delhi NCR, Noida, and Lucknow. View our real estate marketing framework online today.',
   path: '/industries/real-estate'
 });
 

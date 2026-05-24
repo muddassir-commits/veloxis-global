@@ -11,8 +11,8 @@ import { CtaBanner } from '../../components/sections/CtaBanner';
 import { Home as HouseIcon, HeartPulse, GraduationCap, ShoppingBag, Landmark } from 'lucide-react';
 
 export const metadata: Metadata = constructMetadata({
-  title: 'Industries We Serve | Veloxis Global',
-  description: 'Discover how we scale digital leads, patient bookings, enrollments, and sales for real estate, healthcare, education, e-commerce, and MSMEs.',
+  title: 'Digital Marketing for Industries We Serve | Veloxis Global',
+  description: 'Discover how we scale digital leads, patient bookings, enrollments, and sales for real estate, healthcare, education, e-commerce, and MSMEs today.',
   path: '/industries'
 });
 

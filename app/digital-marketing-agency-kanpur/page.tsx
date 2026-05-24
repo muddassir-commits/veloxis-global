@@ -36,27 +36,27 @@ export default function KanpurLocationPage() {
 
   const kanpurFaqs = [
     {
-      question: "How can digital marketing benefit Kanpur manufacturing companies and MSMEs?",
-      answer: "Digital marketing helps manufacturing brands bypass middlemen. By ranking for terms like 'bulk leather goods manufacturer' or 'custom textile exporter' on Google, Kanpur firms can capture corporate inquiries and wholesale buyers directly."
+      question: "How can digital marketing benefit local manufacturing companies and MSMEs?",
+      answer: "Digital marketing helps manufacturing brands bypass middlemen. By ranking for terms like 'bulk leather goods manufacturer' or 'custom textile exporter' on Google, industrial firms can capture corporate inquiries and wholesale buyers directly."
     },
     {
-      question: "Which commercial and industrial areas in Kanpur do you cover?",
-      answer: "We service industrial zones and neighborhoods across Kanpur, including GT Road, Civil Lines, Swaroop Nagar, Kidwai Nagar, Kalyanpur, and Kakadeo."
+      question: "Which commercial and industrial areas do you cover?",
+      answer: "We service industrial zones and neighborhoods locally, including GT Road, Civil Lines, Swaroop Nagar, Kidwai Nagar, Kalyanpur, and Kakadeo."
     },
     {
-      question: "What digital marketing channels are best for B2B industrial sales in Kanpur?",
+      question: "What digital marketing channels are best for B2B industrial sales?",
       answer: "B2B industrial marketing relies heavily on high-intent channels. Google Search Ads capture buyers actively searching for raw materials or manufacturing partners, while Technical SEO builds long-term organic authority and rankings."
     },
     {
-      question: "Can you help our Kanpur textile or leather business get export inquiries?",
+      question: "Can you help our local textile or leather business get export inquiries?",
       answer: "Yes. We set up international SEO targeting and run geotargeted Google and LinkedIn campaigns tailored to buyers in key export markets such as Europe, the Middle East, and North America."
     },
     {
-      question: "How do you help local Kanpur retail brands compete online?",
-      answer: "We help Kanpur retail storefronts build local authority by optimizing their Google Map profiles, setting up local store search campaigns, and utilizing targeted Instagram ads to drive local customer walk-ins."
+      question: "How do you help local retail brands compete online?",
+      answer: "We help retail storefronts build local authority by optimizing their Google Map profiles, setting up local store search campaigns, and utilizing targeted Instagram ads to drive local customer walk-ins."
     },
     {
-      question: "Do we need a massive marketing budget to start working with Veloxis Global in Kanpur?",
+      question: "Do we need a massive marketing budget to start working with Veloxis Global in the region?",
       answer: "No. We specialize in working with MSMEs. We build campaigns with focused budgets, target specific buyer personas, and scale spend only when we see positive conversion rates and qualified inquiries."
     },
     {
@@ -64,7 +64,7 @@ export default function KanpurLocationPage() {
       answer: "Yes. We build responsive, fast-loading B2B websites that showcase product catalogs, list technical specifications, and include direct call-to-actions like 'Request a Quote' or 'Download Brochure' to maximize lead capture."
     },
     {
-      question: "How can our Kanpur business get a free SEO and digital audit?",
+      question: "How can our business get a free SEO and digital audit?",
       answer: "Complete our simple audit form. Our team will review your website performance, map visibility, and local competitor strength, and send you a manual optimization plan in 48 hours."
     }
   ];
@@ -84,19 +84,19 @@ export default function KanpurLocationPage() {
       <section className="bg-white py-16 sm:py-24 text-left relative overflow-hidden">
         <div className="max-w-container-max mx-auto px-gutter grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           <div className="lg:col-span-7 flex flex-col items-start">
-            <Badge variant="orange" className="mb-4">KANPUR INDUSTRIAL DESK</Badge>
-            <h1 className="text-4xl sm:text-headline-lg font-extrabold text-slate-900 tracking-tight leading-tight mb-6">
+            <Badge variant="orange" className="mb-4">INDUSTRIAL REGIONAL DESK</Badge>
+            <h1 className="text-headline-lg-mobile md:text-headline-lg font-extrabold text-slate-900 tracking-tight leading-tight mb-6">
               Best Digital Marketing Agency in Kanpur
             </h1>
             <p className="text-base sm:text-body-lg text-on-surface-variant leading-relaxed mb-6">
               Kanpur, long recognized as the industrial heartland and Manchester of Uttar Pradesh, is home to a massive ecosystem of leather tanneries, textile mills, manufacturing plants, and fast-growing MSMEs. However, in 2026, traditional sales channels, bulk distributor directories, and local industry networks are no longer sufficient to secure nationwide or export orders.
             </p>
             <p className="text-base sm:text-body-lg text-on-surface-variant leading-relaxed mb-8">
-              At Veloxis Global, we specialize in helping Kanpur manufacturing companies transition to modern digital customer acquisition. We construct high-converting B2B search campaigns, run targeted SEO strategies to rank for commercial manufacturing keywords, and design optimized landing pages that convert cold traffic into trade inquiries and purchase orders.
+              At Veloxis Global, we specialize in helping regional manufacturing companies transition to modern digital customer acquisition. We construct high-converting B2B search campaigns, run targeted SEO strategies to rank for commercial manufacturing keywords, and design optimized landing pages that convert cold traffic into trade inquiries and purchase orders.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
               <Button href="/free-seo-audit" variant="primary">
-                Get Free Kanpur Audit →
+                Get Free Agency Audit →
               </Button>
               <Button href="/contact" variant="outline">
                 Book Office Visit
@@ -133,14 +133,14 @@ export default function KanpurLocationPage() {
         <div className="max-w-container-max mx-auto px-gutter text-center">
           <div className="max-w-[700px] mx-auto mb-16">
             <Badge variant="indigo" className="mb-4">MSME & INDUSTRIAL SOLUTIONS</Badge>
-            <h2 className="text-3xl sm:text-headline-lg font-bold text-slate-900">Kanpur-Focused Marketing Solutions</h2>
+            <h2 className="text-3xl sm:text-headline-lg font-bold text-slate-900">Kanpur-Based Marketing Solutions</h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
             <Card className="bg-white border border-slate-100 p-8">
               <h3 className="font-extrabold text-slate-900 text-lg mb-3">Enterprise B2B Lead Acquisition</h3>
               <p className="text-sm text-on-surface-variant leading-relaxed">
-                Connect directly with enterprise decision-makers. We audit search intent, implement account-based marketing (ABM) structures, write high-converting whitepapers, and build qualified funnels optimized for Kanpur industrial sectors.
+                Connect directly with enterprise decision-makers. We audit search intent, implement account-based marketing (ABM) structures, write high-converting whitepapers, and build qualified funnels optimized for regional industrial sectors.
               </p>
             </Card>
             <Card className="bg-white border border-slate-100 p-8">
@@ -159,7 +159,7 @@ export default function KanpurLocationPage() {
           <div className="max-w-container-max mx-auto px-gutter text-center">
             <div className="max-w-[700px] mx-auto mb-16">
               <Badge variant="orange" className="mb-4">VERIFIED RESULTS</Badge>
-              <h2 className="text-3xl sm:text-headline-lg font-bold text-slate-900">What Kanpur Brands Say</h2>
+              <h2 className="text-3xl sm:text-headline-lg font-bold text-slate-900">What Local Brands Say</h2>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto text-left">
@@ -185,7 +185,7 @@ export default function KanpurLocationPage() {
       {/* Localized FAQ Accordion */}
       <FaqAccordion 
         customFaqs={kanpurFaqs} 
-        title="Frequently Asked Questions in Kanpur" 
+        title="Frequently Asked Questions" 
         badgeText="KANPUR FAQ" 
       />
 

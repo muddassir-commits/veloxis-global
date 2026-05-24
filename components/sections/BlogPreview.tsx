@@ -14,8 +14,8 @@ export const BlogPreview: React.FC = () => {
   const posts = [
     {
       slug: 'seo-in-2026-whats-changed-for-indian-businesses',
-      title: "SEO in 2026: What's Changed and What Indian Businesses Must Do Now",
-      excerpt: "Google's search landscape is evolving rapidly. Discover how Core Web Vitals, E-E-A-T, and AI search impact your business rankings in India.",
+      title: "SEO in 2026: Guide for Indian Businesses | Veloxis Global",
+      excerpt: "Learn how to rank higher on Google in 2026. Get our expert SEO action plan tailored for Indian businesses and scale your organic website traffic.",
       category: 'SEO',
       badge: 'teal' as const,
       author: 'Muddassir Ali',
@@ -24,8 +24,8 @@ export const BlogPreview: React.FC = () => {
     },
     {
       slug: 'google-ads-vs-meta-ads-roi-india',
-      title: "Google Ads vs Meta Ads — Which Platform Gives Better ROI in India?",
-      excerpt: "Should you spend on search intents or social awareness? An in-depth comparison of campaign costs, conversion rates, and ROAS across platforms.",
+      title: "Google Ads vs Meta Ads: India ROI Guide | Veloxis Global",
+      excerpt: "Should you choose Google Ads or Meta Ads in India? Read our direct comparison of CPC, target intent, and conversion ROAS to scale your leads now.",
       category: 'Paid PPC',
       badge: 'orange' as const,
       author: 'Neha Sharma',
@@ -33,14 +33,14 @@ export const BlogPreview: React.FC = () => {
       readTime: '5 min read'
     },
     {
-      slug: 'how-we-generated-500-leads-lucknow-healthcare',
-      title: "How We Generated 500 Patient Leads in 90 Days for a Lucknow Clinic",
-      excerpt: "A step-by-step breakdown of how hyper-local SEO maps pack positioning and targeted social ads drove patient registrations on autopilot.",
-      category: 'Case Study',
+      slug: 'how-to-optimize-google-business-profile-2026',
+      title: "Local SEO: Google Business Profile 2026 Guide | Veloxis",
+      excerpt: "Master Google Maps pack positioning in 2026. Read our local GBP optimization checklist to get more phone calls and client visits for your clinic.",
+      category: 'Local SEO',
       badge: 'indigo' as const,
       author: 'Rohit Verma',
       date: 'May 10, 2026',
-      readTime: '8 min read'
+      readTime: '7 min read'
     }
   ];
 

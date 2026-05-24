@@ -8,15 +8,14 @@ import {
   generateFAQSchema 
 } from '../../../lib/schema';
 import ContentServiceContent from './ContentServiceContent';
+import { constructMetadata, pageMeta } from '../../../lib/seo-config';
 
 // 1. Static Metadata with canonical alternates
-export const metadata: Metadata = {
-  title: "Professional Content Marketing Agency in India 2026 | Veloxis Global",
-  description: "Rank high on Google and convert traffic with our expert content marketing services in India 2026. SEO blog posts, landing page copies, white papers. Request audit.",
-  alternates: {
-    canonical: "https://veloxisglobal.com/services/content-marketing/",
-  }
-};
+export const metadata: Metadata = constructMetadata({
+  title: pageMeta.content.title,
+  description: pageMeta.content.description,
+  path: pageMeta.content.path
+});
 
 export default function ContentServicePage() {
   const breadcrumbItems = [

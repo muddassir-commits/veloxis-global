@@ -84,7 +84,18 @@ export const TestimonialsSlider: React.FC = () => {
               animate="center"
               exit="exit"
               transition={{ duration: 0.4, ease: 'easeInOut' }}
-              className="w-full"
+              className="w-full cursor-grab active:cursor-grabbing touch-pan-y"
+              drag="x"
+              dragConstraints={{ left: 0, right: 0 }}
+              dragElastic={0.2}
+              onDragEnd={(e, info) => {
+                const threshold = 50;
+                if (info.offset.x < -threshold) {
+                  handleNext();
+                } else if (info.offset.x > threshold) {
+                  handlePrev();
+                }
+              }}
             >
               <Card hoverable={false} className="p-10 border border-slate-100 text-center bg-white rounded-xl shadow-sm">
                 {/* Star Row: 5 x Sunset Orange Stars */}
@@ -121,14 +132,14 @@ export const TestimonialsSlider: React.FC = () => {
           {/* Navigation Arrows */}
           <button
             onClick={handlePrev}
-            className="absolute -left-4 sm:-left-16 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full border border-slate-200 bg-white flex items-center justify-center text-slate-900 hover:bg-slate-50 shadow-md transition-colors"
+            className="absolute -left-4 sm:-left-16 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full border border-slate-200 bg-white flex items-center justify-center text-slate-900 hover:bg-slate-50 shadow-md transition-colors"
             aria-label="Previous Testimonial"
           >
             <ChevronLeft className="w-5 h-5" />
           </button>
           <button
             onClick={handleNext}
-            className="absolute -right-4 sm:-right-16 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full border border-slate-200 bg-white flex items-center justify-center text-slate-900 hover:bg-slate-50 shadow-md transition-colors"
+            className="absolute -right-4 sm:-right-16 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full border border-slate-200 bg-white flex items-center justify-center text-slate-900 hover:bg-slate-50 shadow-md transition-colors"
             aria-label="Next Testimonial"
           >
             <ChevronRight className="w-5 h-5" />
@@ -136,7 +147,7 @@ export const TestimonialsSlider: React.FC = () => {
         </div>
 
         {/* Dot Indicators: Royal Blue active dot, Slate-300 inactive */}
-        <div className="flex justify-center gap-2 mt-8">
+        <div className="flex justify-center gap-1 mt-8">
           {testimonials.map((_, idx) => (
             <button
               key={idx}
@@ -144,11 +155,13 @@ export const TestimonialsSlider: React.FC = () => {
                 setDirection(idx > index ? 1 : -1);
                 setIndex(idx);
               }}
-              className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${
-                idx === index ? 'bg-royal-blue w-6' : 'bg-slate-300 hover:bg-slate-400'
-              }`}
+              className="w-11 h-11 flex items-center justify-center focus:outline-none"
               aria-label={`Go to testimonial ${idx + 1}`}
-            />
+            >
+              <span className={`h-2.5 rounded-full transition-all duration-300 ${
+                idx === index ? 'bg-royal-blue w-6' : 'bg-slate-300 hover:bg-slate-400 w-2.5'
+              }`} />
+            </button>
           ))}
         </div>
 

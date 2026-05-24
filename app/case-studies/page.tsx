@@ -4,15 +4,14 @@ import { SchemaMarkup } from '../../components/ui/SchemaMarkup';
 import { Breadcrumb } from '../../components/ui/Breadcrumb';
 import { generateBreadcrumbSchema } from '../../lib/schema';
 import CaseStudiesContent from './CaseStudiesContent';
+import { constructMetadata, pageMeta } from '../../lib/seo-config';
 
 // 1. Static Metadata with canonical alternates
-export const metadata: Metadata = {
-  title: "Digital Marketing Case Studies & ROI Outcomes | Veloxis Global",
-  description: "Real growth stories from Delhi, Noida, Lucknow & Kanpur. Learn how we scale organic traffic, reduce cost per lead, and optimize campaign ROI.",
-  alternates: {
-    canonical: "https://veloxisglobal.com/case-studies/",
-  }
-};
+export const metadata: Metadata = constructMetadata({
+  title: pageMeta.caseStudies.title,
+  description: pageMeta.caseStudies.description,
+  path: pageMeta.caseStudies.path
+});
 
 export default function CaseStudiesPage() {
   const breadcrumbItems = [{ name: 'Case Studies', href: '/case-studies' }];

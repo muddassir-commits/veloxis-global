@@ -4,15 +4,14 @@ import { SchemaMarkup } from '../../components/ui/SchemaMarkup';
 import { Breadcrumb } from '../../components/ui/Breadcrumb';
 import { generateBreadcrumbSchema } from '../../lib/schema';
 import BlogContent from './BlogContent';
+import { constructMetadata, pageMeta } from '../../lib/seo-config';
 
 // 1. Static Metadata with canonical alternates
-export const metadata: Metadata = {
-  title: "Digital Marketing Blog & B2B Growth Strategy | Veloxis Global",
-  description: "Get actionable search insights, PPC ad audits, conversion rate checklists, and automation tutorials. Read our articles.",
-  alternates: {
-    canonical: "https://veloxisglobal.com/blog/",
-  }
-};
+export const metadata: Metadata = constructMetadata({
+  title: pageMeta.blog.title,
+  description: pageMeta.blog.description,
+  path: pageMeta.blog.path
+});
 
 export default function BlogPage() {
   const breadcrumbItems = [{ name: 'Blog', href: '/blog' }];

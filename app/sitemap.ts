@@ -76,7 +76,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/industries/real-estate',
     '/blog/seo-in-2026-whats-changed-for-indian-businesses',
     '/blog/google-ads-vs-meta-ads-roi-india',
-    '/blog/how-we-generated-500-leads-lucknow-healthcare',
+    '/blog/how-to-optimize-google-business-profile-2026',
+    '/blog/content-marketing-eeat-framework',
+    '/blog/instagram-reels-funnel-local-brands',
+    '/blog/meta-performance-max-best-practices',
     '/case-studies/delhi-real-estate-developer',
     '/case-studies/noida-ecommerce-skincare',
     '/case-studies/lucknow-healthcare-leads',
@@ -99,6 +102,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.65,
   }));
 
+  // 8. Legal Pages (0.30, monthly)
+  const legal = [
+    '/privacy-policy',
+    '/terms',
+  ].map(route => ({
+    url: `${baseUrl}${route}`,
+    lastModified: currentDate,
+    changeFrequency: 'monthly' as const,
+    priority: 0.30,
+  }));
+
   return [
     ...home,
     ...locations,
@@ -107,5 +121,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...core,
     ...industriesAndDynamic,
     ...utility,
+    ...legal,
   ];
 }

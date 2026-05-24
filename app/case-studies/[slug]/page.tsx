@@ -27,13 +27,11 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
   const study = caseStudies.find((s) => s.slug === params.slug);
   if (!study) return {};
 
-  return {
-    title: `${study.title} | Veloxis Global Case Study`,
-    description: study.challenge,
-    alternates: {
-      canonical: `https://veloxisglobal.com/case-studies/${study.slug}/`,
-    }
-  };
+  return constructMetadata({
+    title: study.metaTitle,
+    description: study.metaDescription,
+    path: `/case-studies/${study.slug}`
+  });
 }
 
 export default function SingleCaseStudyPage({ params }: Params) {

@@ -4,14 +4,13 @@ import { SchemaMarkup } from '../../components/ui/SchemaMarkup';
 import { Badge } from '../../components/ui/Badge';
 import { AuditForm } from '../../components/forms/AuditForm';
 import { Check, ArrowRight, ClipboardCheck, Sparkles, PhoneCall } from 'lucide-react';
+import { constructMetadata, pageMeta } from '../../lib/seo-config';
 
-export const metadata: Metadata = {
-  title: "Free SEO Audit for Your Website — Veloxis Global",
-  description: "Get a FREE personalised SEO audit for your website. Discover why you're not ranking. 48-hour turnaround. veloxisglobal.com",
-  alternates: {
-    canonical: "https://veloxisglobal.com/free-seo-audit/",
-  }
-};
+export const metadata: Metadata = constructMetadata({
+  title: pageMeta.audit.title,
+  description: pageMeta.audit.description,
+  path: pageMeta.audit.path
+});
 
 export default function FreeAuditPage() {
   const breadcrumbSchema = {
@@ -60,7 +59,7 @@ export default function FreeAuditPage() {
                 FREE · NO OBLIGATION · 48-HOUR TURNAROUND
               </Badge>
               
-              <h1 className="text-4xl sm:text-5xl lg:text-[54px] font-extrabold tracking-tight leading-[1.1] text-slate-900">
+              <h1 className="text-headline-lg-mobile md:text-5xl lg:text-[54px] font-extrabold tracking-tight leading-[1.1] text-slate-900">
                 Get Your FREE <br />Website SEO Audit
               </h1>
               

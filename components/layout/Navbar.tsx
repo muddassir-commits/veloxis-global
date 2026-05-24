@@ -120,12 +120,13 @@ export const Navbar: React.FC = () => {
   }
 
   return (
-    <header
-      className={`sticky top-0 z-50 w-full transition-all duration-300 ease-in-out h-16 md:h-[72px] flex items-center bg-[rgba(255,255,255,0.7)] backdrop-blur-[20px] border-b border-[rgba(255,255,255,0.4)] ${
-        scrolled ? 'shadow-[0_1px_20px_rgba(15,23,42,0.06)]' : 'shadow-none'
-      }`}
-    >
-      <div className="max-w-container-max mx-auto px-gutter w-full flex items-center justify-between">
+    <>
+      <header
+        className={`sticky top-0 z-50 w-full transition-all duration-300 ease-in-out h-16 md:h-[72px] flex items-center bg-[rgba(255,255,255,0.7)] backdrop-blur-[20px] border-b border-[rgba(255,255,255,0.4)] ${
+          scrolled ? 'shadow-[0_1px_20px_rgba(15,23,42,0.06)]' : 'shadow-none'
+        }`}
+      >
+        <div className="max-w-container-max mx-auto px-gutter w-full flex items-center justify-between">
         {/* Left: Brand Logo */}
         <Link href="/" className="flex items-center">
           <Image
@@ -301,18 +302,19 @@ export const Navbar: React.FC = () => {
         {/* Mobile: Hamburger Button */}
         <button
           onClick={() => setIsOpen(true)}
-          className="md:hidden p-2 text-royal-blue hover:bg-slate-50 rounded-md transition-colors"
+          className="md:hidden w-11 h-11 flex items-center justify-center text-royal-blue hover:bg-slate-50 rounded-md transition-colors"
           aria-label="Open Navigation Menu"
         >
           <Menu className="w-6 h-6" />
         </button>
       </div>
+    </header>
 
-      {/* Mobile Drawer Overlay */}
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            initial={{ opacity: 0, x: '100%' }}
+    {/* Mobile Drawer Overlay */}
+    <AnimatePresence>
+      {isOpen && (
+        <motion.div
+          initial={{ opacity: 0, x: '100%' }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: '100%' }}
             transition={{ type: 'spring', damping: 25, stiffness: 200 }}
@@ -326,12 +328,12 @@ export const Navbar: React.FC = () => {
                   alt="Veloxis Global"
                   width={160}
                   height={40}
-                  className="h-10 w-auto object-contain"
+                  className="h-8 md:h-10 w-auto max-w-[120px] md:max-w-none object-contain"
                 />
                 
                 <button
                   onClick={() => setIsOpen(false)}
-                  className="p-2 text-slate-900 hover:bg-slate-50 rounded-md transition-colors"
+                  className="w-11 h-11 flex items-center justify-center text-slate-900 hover:bg-slate-50 rounded-md transition-colors"
                   aria-label="Close Navigation Menu"
                 >
                   <X className="w-6 h-6" />
@@ -339,12 +341,12 @@ export const Navbar: React.FC = () => {
               </div>
 
               {/* Mobile Drawer Links Stack */}
-              <nav className="flex flex-col gap-4">
+              <nav className="flex flex-col gap-3">
                 {/* Services Accordion */}
                 <div className="flex flex-col">
                   <button
                     onClick={() => setMobileServicesOpen(!mobileServicesOpen)}
-                    className="flex items-center justify-between w-full font-semibold text-slate-900 text-[16px] py-2"
+                    className="flex items-center justify-between w-full font-semibold text-slate-900 text-[16px] py-3 focus:outline-none"
                   >
                     <span>Services</span>
                     <ChevronDown
@@ -361,13 +363,14 @@ export const Navbar: React.FC = () => {
                         animate={{ height: 'auto', opacity: 1 }}
                         exit={{ height: 0, opacity: 0 }}
                         transition={{ duration: 0.2 }}
-                        className="overflow-hidden flex flex-col pl-4 gap-2 mt-1 border-l-2 border-slate-100"
+                        className="overflow-hidden flex flex-col pl-4 gap-1 mt-1 border-l-2 border-slate-100"
                       >
                         {allServices.map((service, index) => (
                           <Link
                             key={index}
                             href={service.href}
-                            className={`flex items-center gap-2 py-2 text-[15px] ${
+                            onClick={() => setIsOpen(false)}
+                            className={`flex items-center gap-2 py-3 text-[15px] ${
                               isActive(service.href) ? 'text-royal-blue font-bold' : 'text-slate-600 hover:text-royal-blue'
                             }`}
                           >
@@ -384,7 +387,7 @@ export const Navbar: React.FC = () => {
                 <div className="flex flex-col">
                   <button
                     onClick={() => setMobileLocationsOpen(!mobileLocationsOpen)}
-                    className="flex items-center justify-between w-full font-semibold text-slate-900 text-[16px] py-2"
+                    className="flex items-center justify-between w-full font-semibold text-slate-900 text-[16px] py-3 focus:outline-none"
                   >
                     <span>Locations</span>
                     <ChevronDown
@@ -401,13 +404,14 @@ export const Navbar: React.FC = () => {
                         animate={{ height: 'auto', opacity: 1 }}
                         exit={{ height: 0, opacity: 0 }}
                         transition={{ duration: 0.2 }}
-                        className="overflow-hidden flex flex-col pl-4 gap-2 mt-1 border-l-2 border-slate-100"
+                        className="overflow-hidden flex flex-col pl-4 gap-1 mt-1 border-l-2 border-slate-100"
                       >
                         {locationLinks.map((loc, index) => (
                           <Link
                             key={index}
                             href={loc.href}
-                            className={`flex items-center gap-2 py-2 text-[15px] ${
+                            onClick={() => setIsOpen(false)}
+                            className={`flex items-center gap-2 py-3 text-[15px] ${
                               isActive(loc.href) ? 'text-royal-blue font-bold' : 'text-slate-600 hover:text-royal-blue'
                             }`}
                           >
@@ -423,7 +427,8 @@ export const Navbar: React.FC = () => {
                 {/* Core Stacked Links */}
                 <Link
                   href="/about"
-                  className={`font-semibold text-[16px] py-2 transition-colors duration-300 ${
+                  onClick={() => setIsOpen(false)}
+                  className={`font-semibold text-[16px] py-3 transition-colors duration-300 ${
                     isActive('/about') ? 'text-royal-blue font-bold' : 'text-slate-900 hover:text-royal-blue'
                   }`}
                 >
@@ -432,7 +437,8 @@ export const Navbar: React.FC = () => {
 
                 <Link
                   href="/case-studies"
-                  className={`font-semibold text-[16px] py-2 transition-colors duration-300 ${
+                  onClick={() => setIsOpen(false)}
+                  className={`font-semibold text-[16px] py-3 transition-colors duration-300 ${
                     isActive('/case-studies') ? 'text-royal-blue font-bold' : 'text-slate-900 hover:text-royal-blue'
                   }`}
                 >
@@ -441,7 +447,8 @@ export const Navbar: React.FC = () => {
 
                 <Link
                   href="/blog"
-                  className={`font-semibold text-[16px] py-2 transition-colors duration-300 ${
+                  onClick={() => setIsOpen(false)}
+                  className={`font-semibold text-[16px] py-3 transition-colors duration-300 ${
                     isActive('/blog') ? 'text-royal-blue font-bold' : 'text-slate-900 hover:text-royal-blue'
                   }`}
                 >
@@ -454,18 +461,19 @@ export const Navbar: React.FC = () => {
             <div className="flex flex-col gap-4 border-t border-slate-100 pt-6 mt-6">
               <a
                 href="tel:+918887620727"
-                className="flex items-center justify-center gap-2 font-sans text-[14px] text-slate-600 hover:text-royal-blue py-2"
+                onClick={() => setIsOpen(false)}
+                className="flex items-center justify-center gap-2 font-sans text-[14px] text-slate-600 hover:text-royal-blue py-3"
               >
                 <span>📞</span>
                 <span>+91-88876 20727</span>
               </a>
-              <Button href="/free-seo-audit" variant="primary" className="w-full text-center">
+              <Button href="/free-seo-audit" onClick={() => setIsOpen(false)} variant="primary" className="w-full text-center py-3">
                 Get Free Audit →
               </Button>
             </div>
           </motion.div>
         )}
       </AnimatePresence>
-    </header>
+    </>
   );
 };

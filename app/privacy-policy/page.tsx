@@ -2,14 +2,13 @@ import React from 'react';
 import { Metadata } from 'next';
 import { Breadcrumb } from '../../components/ui/Breadcrumb';
 import { Badge } from '../../components/ui/Badge';
+import { constructMetadata } from '../../lib/seo-config';
 
-export const metadata: Metadata = {
-  title: 'Privacy Policy | Veloxis Global',
-  description: 'Learn how Veloxis Global collects, uses, and protects client and website visitor data.',
-  alternates: {
-    canonical: 'https://veloxisglobal.com/privacy-policy/',
-  }
-};
+export const metadata: Metadata = constructMetadata({
+  title: "Privacy Policy | Veloxis Global Digital Marketing Agency",
+  description: "Read the Privacy Policy for Veloxis Global. Learn how we collect, protect, and securely use your personal data. Contact us today for any data requests.",
+  path: "/privacy-policy"
+});
 
 export default function PrivacyPolicyPage() {
   const breadcrumbItems = [{ name: 'Privacy Policy', href: '/privacy-policy' }];

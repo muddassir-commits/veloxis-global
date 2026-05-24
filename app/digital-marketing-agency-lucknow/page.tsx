@@ -36,35 +36,35 @@ export default function LucknowLocationPage() {
 
   const lucknowFaqs = [
     {
-      question: "How can a local SEO campaign help my Lucknow-based retail store or business?",
-      answer: "Our Local SEO campaigns optimize your digital footprint (specifically Google Map Pack and local directories) so when people search for your services in Lucknow, Hazratganj, or Gomti Nagar, your brand ranks first. This drives immediate store traffic and customer calls."
+      question: "How can a local SEO campaign help my retail store or business?",
+      answer: "Our Local SEO campaigns optimize your digital footprint (specifically Google Map Pack and local directories) so when people search for your services in the city, Hazratganj, or Gomti Nagar, your brand ranks first. This drives immediate store traffic and customer calls."
     },
     {
-      question: "Which commercial areas in Lucknow do your marketing services cover?",
-      answer: "We service clients across all major zones in Lucknow, including Gomti Nagar, Hazratganj, Indira Nagar, Alambagh, Aliganj, Mahanagar, and surrounding NCR."
+      question: "Which commercial areas do your marketing services cover?",
+      answer: "We service clients across all major zones, including Gomti Nagar, Hazratganj, Indira Nagar, Alambagh, Aliganj, Mahanagar, and surrounding NCR."
     },
     {
-      question: "Can you help our Lucknow hospital or clinic increase doctor appointment bookings?",
+      question: "Can you help our local hospital or clinic increase doctor appointment bookings?",
       answer: "Yes. Healthcare marketing is one of our key specialties. We launch compliant Google search ads targeting local healthcare queries, optimize your Google Maps profile for map searches, and create clear landing pages to double booking conversions."
     },
     {
-      question: "What social media platforms work best for advertising local Lucknow brands?",
-      answer: "For local consumer businesses, hotels, and schools in Lucknow, Meta platforms (Instagram and Facebook) are highly effective. We design localized visual creatives, target regional demographics, and add direct-to-WhatsApp messaging buttons for easy lead acquisition."
+      question: "What social media platforms work best for advertising local brands?",
+      answer: "For local consumer businesses, hotels, and schools in the region, Meta platforms (Instagram and Facebook) are highly effective. We design localized visual creatives, target regional demographics, and add direct-to-WhatsApp messaging buttons for easy lead acquisition."
     },
     {
-      question: "Do you build websites optimized for mobile users in Lucknow?",
-      answer: "Yes. Mobile responsiveness and speed are critical. We build websites using modern frameworks like Next.js that load in under 1.5 seconds, ensuring users with varying mobile connections across Lucknow can navigate your site smoothly."
+      question: "Do you build websites optimized for mobile users locally?",
+      answer: "Yes. Mobile responsiveness and speed are critical. We build websites using modern frameworks like Next.js that load in under 1.5 seconds, ensuring users with varying mobile connections across Uttar Pradesh can navigate your site smoothly."
     },
     {
-      question: "How does Veloxis Global support traditional family-owned businesses transitioning to digital in Lucknow?",
+      question: "How does Veloxis Global support traditional family-owned businesses transitioning to digital?",
       answer: "We make digital transition easy. We handle everything from setting up business emails and analytics to designing simple, clean websites and managing initial Google ads. We provide clear, plain-language monthly reports focused on phone calls and revenue."
     },
     {
-      question: "What budget should our Lucknow-based business allocate for digital advertising?",
-      answer: "We tailor budgets to your goals. Many Lucknow SMEs start with a modest daily ad spend on Google or Meta and scale up once we demonstrate a positive return on investment. Contact us to receive a custom budget recommendation."
+      question: "What budget should our business allocate for digital advertising?",
+      answer: "We tailor budgets to your goals. Many local SMEs start with a modest daily ad spend on Google or Meta and scale up once we demonstrate a positive return on investment. Contact us to receive a custom budget recommendation."
     },
     {
-      question: "How do we get started with a digital audit for our Lucknow business?",
+      question: "How do we get started with a digital audit for our business?",
       answer: "Simply complete our free audit request form. Our certified marketing directors will manually analyze your website speed, map rankings, and competitor positions, delivering a step-by-step roadmap within 48 hours."
     }
   ];
@@ -84,19 +84,19 @@ export default function LucknowLocationPage() {
       <section className="bg-white py-16 sm:py-24 text-left relative overflow-hidden">
         <div className="max-w-container-max mx-auto px-gutter grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           <div className="lg:col-span-7 flex flex-col items-start">
-            <Badge variant="indigo" className="mb-4">LUCKNOW REGIONAL DESK</Badge>
-            <h1 className="text-4xl sm:text-headline-lg font-extrabold text-slate-900 tracking-tight leading-tight mb-6">
+            <Badge variant="indigo" className="mb-4">REGIONAL DESK</Badge>
+            <h1 className="text-headline-lg-mobile md:text-headline-lg font-extrabold text-slate-900 tracking-tight leading-tight mb-6">
               Best Digital Marketing Agency in Lucknow
             </h1>
             <p className="text-base sm:text-body-lg text-on-surface-variant leading-relaxed mb-6">
               Lucknow, the historic city of Nawabs, is experiencing a major economic revival, transforming from a traditional trade city into a modern, digitizing commercial hub of Uttar Pradesh. From bustling heritage retail blocks in Hazratganj to upscale corporate offices and hospitals in Gomti Nagar and dense residential hubs in Indira Nagar, Aliganj, and Alambagh, local businesses are eager to expand online.
             </p>
             <p className="text-base sm:text-body-lg text-on-surface-variant leading-relaxed mb-8">
-              At Veloxis Global, we bridge this gap by bringing enterprise-level digital marketing strategies to local Lucknow enterprises. We specialize in optimizing Google Business Profiles to rank #1 in the Local 3-Pack, building lightning-fast websites that rank for high-intent regional search queries, and deploying Facebook and Instagram ad funnels that directly drive customer phone calls, store visits, and appointment inquiries.
+              At Veloxis Global, we bridge this gap by bringing enterprise-level digital marketing strategies to regional enterprises. We specialize in optimizing Google Business Profiles to rank #1 in the Local 3-Pack, building lightning-fast websites that rank for high-intent regional search queries, and deploying Facebook and Instagram ad funnels that directly drive customer phone calls, store visits, and appointment inquiries.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
               <Button href="/free-seo-audit" variant="primary">
-                Get Free Lucknow Audit →
+                Get Free Agency Audit →
               </Button>
               <Button href="/contact" variant="outline">
                 Book Office Visit
@@ -133,20 +133,20 @@ export default function LucknowLocationPage() {
         <div className="max-w-container-max mx-auto px-gutter text-center">
           <div className="max-w-[700px] mx-auto mb-16">
             <Badge variant="indigo" className="mb-4">REGIONAL GROWTH FUNNELS</Badge>
-            <h2 className="text-3xl sm:text-headline-lg font-bold text-slate-900">Lucknow-Focused Marketing Solutions</h2>
+            <h2 className="text-3xl sm:text-headline-lg font-bold text-slate-900">Lucknow-Based Marketing Solutions</h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
             <Card className="bg-white border border-slate-100 p-8">
               <h3 className="font-extrabold text-slate-900 text-lg mb-3">Google Map Pack Dominance</h3>
               <p className="text-sm text-on-surface-variant leading-relaxed">
-                Make sure you are the first choice when users search for services "near me" in Lucknow. We audit GBP setups, track local citation consistency, and implement review generation flows to boost map positioning.
+                Make sure you are the first choice when users search for services "near me" in the region. We audit GBP setups, track local citation consistency, and implement review generation flows to boost map positioning.
               </p>
             </Card>
             <Card className="bg-white border border-slate-100 p-8">
               <h3 className="font-extrabold text-slate-900 text-lg mb-3">Targeted Meta & Instagram Leads</h3>
               <p className="text-sm text-on-surface-variant leading-relaxed">
-                Connect with Lucknow's local buyers. We construct localized Instagram creatives, manage geo-targeted ad sets, and implement WhatsApp link buttons so customers can chat with your team directly.
+                Connect with local buyers. We construct localized Instagram creatives, manage geo-targeted ad sets, and implement WhatsApp link buttons so customers can chat with your team directly.
               </p>
             </Card>
           </div>
@@ -159,7 +159,7 @@ export default function LucknowLocationPage() {
           <div className="max-w-container-max mx-auto px-gutter text-center">
             <div className="max-w-[700px] mx-auto mb-16">
               <Badge variant="orange" className="mb-4">VERIFIED RESULTS</Badge>
-              <h2 className="text-3xl sm:text-headline-lg font-bold text-slate-900">What Lucknow Brands Say</h2>
+              <h2 className="text-3xl sm:text-headline-lg font-bold text-slate-900">What Local Brands Say</h2>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto text-left">
@@ -185,7 +185,7 @@ export default function LucknowLocationPage() {
       {/* Localized FAQ Accordion */}
       <FaqAccordion 
         customFaqs={lucknowFaqs} 
-        title="Frequently Asked Questions in Lucknow" 
+        title="Frequently Asked Questions" 
         badgeText="LUCKNOW FAQ" 
       />
 

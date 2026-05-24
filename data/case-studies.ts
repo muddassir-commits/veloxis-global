@@ -9,6 +9,8 @@ export interface CaseStudy {
   strategy: string;
   metrics: string[];
   image: string;
+  metaTitle: string;
+  metaDescription: string;
 }
 
 export const caseStudies: CaseStudy[] = [
@@ -26,12 +28,14 @@ export const caseStudies: CaseStudy[] = [
       "5.2x Return on Ad Spend (ROAS)",
       "#1 on Google for 18 High-Intent Keywords"
     ],
-    image: "/images/case-studies/real-estate-delhi.jpg"
+    image: "/images/case-studies/real-estate-delhi.jpg",
+    metaTitle: "Delhi Real Estate Developer SEO Case Study | Veloxis Global",
+    metaDescription: "Discover how we generated +340% organic traffic for a Delhi real estate developer. Read the full case study to scale your online property sales today."
   },
   {
     id: "noida-ecommerce",
     slug: "noida-ecommerce-skincare",
-    title: "How Priya Agarwal's SkillEdge Academy Noida Cut Cost-Per-Lead by 42%",
+    title: "How Noida SkillEdge Academy Cut PPC Cost-Per-Lead by 42%",
     industry: "EdTech",
     location: "Noida",
     duration: "2 Months",
@@ -42,7 +46,9 @@ export const caseStudies: CaseStudy[] = [
       "2x Lead Volume in 60 Days",
       "5.2x ROAS on Course Registrations"
     ],
-    image: "/images/case-studies/edtech-noida.jpg"
+    image: "/images/case-studies/edtech-noida.jpg",
+    metaTitle: "Noida EdTech PPC Lead Generation Case Study | Veloxis",
+    metaDescription: "How we cut EdTech cost-per-lead by 42% for a Noida academy. Explore our paid ads strategy and landing page A/B testing to scale your conversions."
   },
   {
     id: "lucknow-healthcare",
@@ -58,7 +64,9 @@ export const caseStudies: CaseStudy[] = [
       "60% Increase in Patient Footfall",
       "100% Correct Map Rankings for 3 Locations"
     ],
-    image: "/images/case-studies/healthcare-lucknow.jpg"
+    image: "/images/case-studies/healthcare-lucknow.jpg",
+    metaTitle: "Lucknow Healthcare Lead Generation | Veloxis Global",
+    metaDescription: "Learn how we generated 500 patient leads in 90 days for a Lucknow clinic. Read our local SEO map pack blueprint to drive your clinic bookings now."
   },
   {
     id: "kanpur-fabrics",
@@ -74,6 +82,8 @@ export const caseStudies: CaseStudy[] = [
       "220% Growth in B2B Enquiries",
       "#1 Google Rank for 'Textile Manufacturer Kanpur'"
     ],
-    image: "/images/case-studies/manufacturing-kanpur.jpg"
+    image: "/images/case-studies/manufacturing-kanpur.jpg",
+    metaTitle: "Kanpur B2B Manufacturing SEO Case Study | Veloxis Global",
+    metaDescription: "Discover how we scaled B2B lead generation by 220% for a Kanpur fabric manufacturer. Read the strategy guide to grow your wholesale sales online."
   }
 ];

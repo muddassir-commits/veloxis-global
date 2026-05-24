@@ -10,8 +10,8 @@ import { getBreadcrumbListSchema } from '../../../lib/schema';
 import { CtaBanner } from '../../../components/sections/CtaBanner';
 
 export const metadata: Metadata = constructMetadata({
-  title: 'Higher Education & Academy Marketing Agency | Veloxis Global',
-  description: 'Boost student enrollments, course applications, and inquiry conversion rates for academies, universities, and coaching institutes in Noida & Delhi.',
+  title: 'Higher Education & Academy Marketing Agency | Veloxis',
+  description: 'Boost student enrollments, course applications, and inquiry conversion rates for academies & universities in Noida & Delhi. Request a free audit today.',
   path: '/industries/education'
 });
 

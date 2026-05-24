@@ -8,15 +8,14 @@ import {
   generateFAQSchema 
 } from '../../../lib/schema';
 import EmailServiceContent from './EmailServiceContent';
+import { constructMetadata, pageMeta } from '../../../lib/seo-config';
 
 // 1. Static Metadata with canonical alternates
-export const metadata: Metadata = {
-  title: "Professional Email & WhatsApp Marketing Automation in India 2026 | Veloxis Global",
-  description: "Automate your sales pipeline with WhatsApp Business API and N8n workflow setups. Leading email marketing services India 2026. Request quote.",
-  alternates: {
-    canonical: "https://veloxisglobal.com/services/email-marketing/",
-  }
-};
+export const metadata: Metadata = constructMetadata({
+  title: pageMeta.email.title,
+  description: pageMeta.email.description,
+  path: pageMeta.email.path
+});
 
 export default function EmailMarketingServicePage() {
   const breadcrumbItems = [

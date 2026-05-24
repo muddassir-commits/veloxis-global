@@ -10,8 +10,8 @@ import { getBreadcrumbListSchema } from '../../../lib/schema';
 import { CtaBanner } from '../../../components/sections/CtaBanner';
 
 export const metadata: Metadata = constructMetadata({
-  title: 'E-commerce & Shopify Growth Marketing Agency | Veloxis Global',
-  description: 'Scale your online store sales and maximize Return on Ad Spend (ROAS) with certified Google Shopping, Facebook, and Instagram reels campaigns.',
+  title: 'E-commerce & Shopify Growth Marketing Agency | Veloxis',
+  description: 'Scale your online store sales and maximize Return on Ad Spend (ROAS) with certified Google Shopping, Facebook, and Instagram reels campaigns today.',
   path: '/industries/ecommerce'
 });
 

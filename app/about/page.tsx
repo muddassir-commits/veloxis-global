@@ -19,15 +19,14 @@ import {
   Globe 
 } from 'lucide-react';
 import { Linkedin } from '../../components/ui/BrandIcons';
+import { constructMetadata, pageMeta } from '../../lib/seo-config';
 
 // 1. Static Metadata with E-E-A-T optimization
-export const metadata: Metadata = {
-  title: "About Veloxis Global — Muddassir Ali, Digital Marketing Expert | Kanpur",
-  description: "Veloxis Global founded by Muddassir Ali — 4 years in digital marketing, serving Delhi, Noida, Lucknow & Kanpur. Learn our story.",
-  alternates: {
-    canonical: "https://veloxisglobal.com/about/",
-  }
-};
+export const metadata: Metadata = constructMetadata({
+  title: pageMeta.about.title,
+  description: pageMeta.about.description,
+  path: pageMeta.about.path
+});
 
 export default function AboutPage() {
   const breadcrumbItems = [{ name: 'About Us', href: '/about' }];
