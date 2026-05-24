@@ -1,0 +1,114 @@
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 200 800;
+  font-display: swap;
+  src: url('/fonts/PlusJakartaSans.woff2') format('woff2');
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-plus-jakarta-sans: 'Plus Jakarta Sans';
+  /* Design System Color Tokens */
+  --surface: #f7f9fb;
+  --surface-dim: #d8dadc;
+  --surface-bright: #f7f9fb;
+  --surface-container-lowest: #ffffff;
+  --surface-container-low: #f2f4f6;
+  --surface-container: #eceef0;
+  --surface-container-high: #e6e8ea;
+  --surface-container-highest: #e0e3e5;
+  --on-surface: #191c1e;
+  --on-surface-variant: #45464d;
+  --inverse-surface: #2d3133;
+  --inverse-on-surface: #eff1f3;
+  --outline: #76777d;
+  --outline-variant: #c6c6cd;
+  --surface-tint: #565e74;
+  --primary: #000000;
+  --on-primary: #ffffff;
+  --primary-container: #131b2e;
+  --on-primary-container: #7c839b;
+  --inverse-primary: #bec6e0;
+  --secondary: #0051d5;
+  --on-secondary: #ffffff;
+  --secondary-container: #316bf3;
+  --on-secondary-container: #fefcff;
+  --tertiary: #000000;
+  --on-tertiary: #ffffff;
+  --tertiary-container: #00201d;
+  --on-tertiary-container: #0c9488;
+  --error: #ba1a1a;
+  --on-error: #ffffff;
+  --error-container: #ffdad6;
+  --on-error-container: #93000a;
+  --primary-fixed: #dae2fd;
+  --primary-fixed-dim: #bec6e0;
+  --on-primary-fixed: #131b2e;
+  --on-primary-fixed-variant: #3f465c;
+  --secondary-fixed: #dbe1ff;
+  --secondary-fixed-dim: #b4c5ff;
+  --on-secondary-fixed: #00174b;
+  --on-secondary-fixed-variant: #003ea8;
+  --tertiary-fixed: #89f5e7;
+  --tertiary-fixed-dim: #6bd8cb;
+  --on-tertiary-fixed: #00201d;
+  --on-tertiary-fixed-variant: #005049;
+  --background: #f7f9fb;
+  --on-background: #191c1e;
+  --surface-variant: #e0e3e5;
+  --slate-50: #F8FAFC;
+  --slate-900: #0F172A;
+  --royal-blue: #2563EB;
+  --indigo-accent: #4F46E5;
+  --teal-accent: #0D9488;
+  --sunset-orange: #F59E0B;
+  --glass-stroke: rgba(255, 255, 255, 0.4);
+
+  /* Typography Scale Tokens */
+  --font-size-display-lg: 4.5rem;          /* 72px */
+  --font-size-headline-lg: 3rem;           /* 48px */
+  --font-size-headline-lg-mobile: 2rem;    /* 32px */
+  --font-size-headline-md: 1.875rem;       /* 30px */
+  --font-size-body-lg: 1.125rem;           /* 18px */
+  --font-size-body-md: 1rem;               /* 16px */
+  --font-size-label-caps: 0.75rem;         /* 12px */
+
+  /* Spacing Tokens */
+  --spacing-gutter: 24px;
+  --spacing-stack-lg: 32px;
+  --spacing-stack-md: 16px;
+  --spacing-stack-sm: 8px;
+  --spacing-section-gap: 120px;
+  --spacing-container-max: 1280px;
+  --spacing-margin-mobile: 16px;
+  --spacing-margin-desktop: 64px;
+
+  /* Border Radius Tokens */
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;                     /* 0.5rem as defined for md in shape defaults (Buttons & Inputs) */
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;                     /* 1.5rem for cards & large containers */
+  --radius-full: 9999px;
+}
+
+body {
+  color: var(--on-surface);
+  background: var(--slate-50);
+}
+
+/* Custom styles for utility components */
+.glassmorphism {
+  background: rgba(255, 255, 255, 0.70);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.glassmorphism-dark {
+  background: rgba(15, 23, 42, 0.70);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
