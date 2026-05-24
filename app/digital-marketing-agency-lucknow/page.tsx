@@ -6,22 +6,45 @@ import { Card } from '../../components/ui/Card';
 import { Button } from '../../components/ui/Button';
 import { Breadcrumb } from '../../components/ui/Breadcrumb';
 import { SchemaMarkup } from '../../components/ui/SchemaMarkup';
-import { getFAQPageSchema, getBreadcrumbListSchema, getLocalBusinessSchema } from '../../lib/schema';
+import { getFAQPageSchema, getBreadcrumbListSchema } from '../../lib/schema';
 import { testimonials } from '../../data/testimonials';
 import { Star, CheckCircle, MapPin } from 'lucide-react';
 import { CtaBanner } from '../../components/sections/CtaBanner';
 import { FaqAccordion } from '../../components/sections/FaqAccordion';
 
-export const metadata: Metadata = constructMetadata({
-  title: pageMeta.lucknow.title,
-  description: pageMeta.lucknow.description,
-  path: pageMeta.lucknow.path,
-  ogImage: '/images/og/lucknow-og.jpg'
-});
+export const metadata: Metadata = {
+  ...constructMetadata({
+    title: "Best Digital Marketing Agency in Lucknow 2026 | Veloxis Global",
+    description: "Top-rated digital marketing agency in Lucknow — proven SEO, Google Ads & Social Media for Lucknow businesses. Serving Gomti Nagar, Hazratganj, Indira Nagar & across Lucknow. Free audit available.",
+    path: "/digital-marketing-agency-lucknow",
+    ogImage: '/images/og/lucknow-og.jpg'
+  }),
+  keywords: "best digital marketing agency in Lucknow, digital marketing company Lucknow 2026, SEO services Lucknow, Google Ads Lucknow, social media marketing Lucknow, digital marketing Gomti Nagar, online marketing Hazratganj, marketing agency Indira Nagar Lucknow"
+};
 
 export default function LucknowLocationPage() {
   const city = 'Lucknow';
-  const localSchema = getLocalBusinessSchema({ city });
+
+  const localSchema = {
+    "@context": "https://schema.org",
+    "@type": "MarketingAgency",
+    "name": "Veloxis Global",
+    "description": "Best digital marketing agency in Lucknow — SEO, Google Ads & Social Media for Lucknow businesses.",
+    "telephone": "+918887620727",
+    "email": "muddassir@veloxisglobal.com",
+    "url": "https://veloxisglobal.com/digital-marketing-agency-lucknow/",
+    "areaServed": {
+      "@type": "City",
+      "name": "Lucknow"
+    },
+    "priceRange": "₹₹",
+    "image": "https://veloxisglobal.com/images/logos/logo.png",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "180"
+    }
+  };
 
   const breadcrumbItems = [{ name: 'Lucknow Agency', href: '/digital-marketing-agency-lucknow' }];
   const breadcrumbSchema = getBreadcrumbListSchema([
@@ -36,36 +59,36 @@ export default function LucknowLocationPage() {
 
   const lucknowFaqs = [
     {
-      question: "How can a local SEO campaign help my retail store or business?",
-      answer: "Our Local SEO campaigns optimize your digital footprint (specifically Google Map Pack and local directories) so when people search for your services in the city, Hazratganj, or Gomti Nagar, your brand ranks first. This drives immediate store traffic and customer calls."
+      question: "What is the cost of digital marketing in Lucknow in 2026?",
+      answer: "Digital marketing pricing in Lucknow varies depending on the scale and custom goals of your business. At Veloxis Global, we don't offer rigid templates — instead, we tailor our pricing to what will drive the highest ROI for your business. Start with our free digital audit for a direct custom quote."
     },
     {
-      question: "Which commercial areas do your marketing services cover?",
-      answer: "We service clients across all major zones, including Gomti Nagar, Hazratganj, Indira Nagar, Alambagh, Aliganj, Mahanagar, and surrounding NCR."
+      question: "How long does SEO take to show results in Lucknow?",
+      answer: "For most Lucknow businesses, initial SEO improvements start showing within 60 to 90 days. Local SEO rankings, such as appearing in Google Map Pack results for search terms in Gomti Nagar or Hazratganj, often see faster traction due to targeted geographic intent. We supply clear monthly reports so you can track progress."
     },
     {
-      question: "Can you help our local hospital or clinic increase doctor appointment bookings?",
-      answer: "Yes. Healthcare marketing is one of our key specialties. We launch compliant Google search ads targeting local healthcare queries, optimize your Google Maps profile for map searches, and create clear landing pages to double booking conversions."
+      question: "Do you work with traditional businesses in Lucknow?",
+      answer: "Yes. Helping traditional retail storefronts, heritage brands, and family-owned businesses in Lucknow transition online is one of our key areas. We create fast, mobile-friendly websites and run straightforward local search campaigns to transition offline reputation into online sales."
     },
     {
-      question: "What social media platforms work best for advertising local brands?",
-      answer: "For local consumer businesses, hotels, and schools in the region, Meta platforms (Instagram and Facebook) are highly effective. We design localized visual creatives, target regional demographics, and add direct-to-WhatsApp messaging buttons for easy lead acquisition."
+      question: "Can you rank my Lucknow business on Google Maps?",
+      answer: "Absolutely. We specialize in Local SEO and Google Business Profile optimization for Lucknow businesses. We handle citation building, map tracking, and local review collection, positioning your brand in the Local 3-Pack so clients finding services near them choose you."
     },
     {
-      question: "Do you build websites optimized for mobile users locally?",
-      answer: "Yes. Mobile responsiveness and speed are critical. We build websites using modern frameworks like Next.js that load in under 1.5 seconds, ensuring users with varying mobile connections across Uttar Pradesh can navigate your site smoothly."
+      question: "Do you offer Google Ads for Lucknow local businesses?",
+      answer: "Yes. We design and manage target-focused Google Ads campaigns (Search, Display, and Performance Max) specifically for Lucknow-focused audiences. We optimize keyword targeting and negative keywords daily to ensure you get actual leads rather than wasted clicks."
     },
     {
-      question: "How does Veloxis Global support traditional family-owned businesses transitioning to digital?",
-      answer: "We make digital transition easy. We handle everything from setting up business emails and analytics to designing simple, clean websites and managing initial Google ads. We provide clear, plain-language monthly reports focused on phone calls and revenue."
+      question: "Which Lucknow industries do you serve?",
+      answer: "We support a broad range of industries across Lucknow, including retail showrooms, local healthcare clinics and hospitals, schools and higher education institutes, real estate builders, hospitality services, and manufacturing businesses."
     },
     {
-      question: "What budget should our business allocate for digital advertising?",
-      answer: "We tailor budgets to your goals. Many local SMEs start with a modest daily ad spend on Google or Meta and scale up once we demonstrate a positive return on investment. Contact us to receive a custom budget recommendation."
+      question: "Do you offer free consultations for Lucknow businesses?",
+      answer: "Yes, we offer a free 30-minute digital strategy consultation along with a manual website audit for all Lucknow business owners. No obligations or strings attached — just clear insights into where your competitors stand and how you can outperform them."
     },
     {
-      question: "How do we get started with a digital audit for our business?",
-      answer: "Simply complete our free audit request form. Our certified marketing directors will manually analyze your website speed, map rankings, and competitor positions, delivering a step-by-step roadmap within 48 hours."
+      question: "What makes you different from other Lucknow agencies?",
+      answer: "Unlike typical Lucknow agencies that sell pre-packaged plans and report vanity metrics like impressions, Veloxis Global focuses on business results. We build custom campaigns, provide transparent dashboards, and measure performance in actual phone calls, leads, and sales."
     }
   ];
 
@@ -84,22 +107,22 @@ export default function LucknowLocationPage() {
       <section className="bg-white py-16 sm:py-24 text-left relative overflow-hidden">
         <div className="max-w-container-max mx-auto px-gutter grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           <div className="lg:col-span-7 flex flex-col items-start">
-            <Badge variant="indigo" className="mb-4">REGIONAL DESK</Badge>
+            <Badge variant="indigo" className="mb-4">LUCKNOW REGIONAL OFFICE</Badge>
             <h1 className="text-headline-lg-mobile md:text-headline-lg font-extrabold text-slate-900 tracking-tight leading-tight mb-6">
               Best Digital Marketing Agency in Lucknow
             </h1>
-            <p className="text-base sm:text-body-lg text-on-surface-variant leading-relaxed mb-6">
-              Lucknow, the historic city of Nawabs, is experiencing a major economic revival, transforming from a traditional trade city into a modern, digitizing commercial hub of Uttar Pradesh. From bustling heritage retail blocks in Hazratganj to upscale corporate offices and hospitals in Gomti Nagar and dense residential hubs in Indira Nagar, Aliganj, and Alambagh, local businesses are eager to expand online.
+            <p className="text-base sm:text-body-lg text-on-surface-variant leading-relaxed mb-6 font-sans">
+              Veloxis Global helps Lucknow businesses dominate Google search, social media and paid ads. Whether you're in Gomti Nagar, Hazratganj, Indira Nagar, Alambagh, Aliganj or Mahanagar — our data-driven digital marketing strategies are built for Lucknow's growing market.
             </p>
-            <p className="text-base sm:text-body-lg text-on-surface-variant leading-relaxed mb-8">
-              At Veloxis Global, we bridge this gap by bringing enterprise-level digital marketing strategies to regional enterprises. We specialize in optimizing Google Business Profiles to rank #1 in the Local 3-Pack, building lightning-fast websites that rank for high-intent regional search queries, and deploying Facebook and Instagram ad funnels that directly drive customer phone calls, store visits, and appointment inquiries.
+            <p className="text-base sm:text-body-lg text-on-surface-variant leading-relaxed mb-8 font-sans">
+              From heritage retail to modern healthcare and education, we understand how Lucknow's diverse business landscape works — and how to make digital marketing deliver real results for it.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
               <Button href="/free-seo-audit" variant="primary">
                 Get Free Agency Audit →
               </Button>
               <Button href="/contact" variant="outline">
-                Book Office Visit
+                Book Consult Call
               </Button>
             </div>
           </div>
