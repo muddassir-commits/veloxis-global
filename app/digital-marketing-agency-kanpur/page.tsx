@@ -6,22 +6,52 @@ import { Card } from '../../components/ui/Card';
 import { Button } from '../../components/ui/Button';
 import { Breadcrumb } from '../../components/ui/Breadcrumb';
 import { SchemaMarkup } from '../../components/ui/SchemaMarkup';
-import { getFAQPageSchema, getBreadcrumbListSchema, getLocalBusinessSchema } from '../../lib/schema';
+import { getFAQPageSchema, getBreadcrumbListSchema } from '../../lib/schema';
 import { testimonials } from '../../data/testimonials';
 import { Star, CheckCircle, MapPin } from 'lucide-react';
 import { CtaBanner } from '../../components/sections/CtaBanner';
 import { FaqAccordion } from '../../components/sections/FaqAccordion';
 
-export const metadata: Metadata = constructMetadata({
-  title: pageMeta.kanpur.title,
-  description: pageMeta.kanpur.description,
-  path: pageMeta.kanpur.path,
-  ogImage: '/images/og/kanpur-og.jpg'
-});
+export const metadata: Metadata = {
+  ...constructMetadata({
+    title: "Best Digital Marketing Agency in Kanpur 2026 | Veloxis Global",
+    description: "Looking for the best digital marketing agency in Kanpur? Veloxis Global delivers proven SEO, Google Ads & Social Media for Kanpur's textile, MSME & manufacturing businesses. Free audit — 48hr delivery.",
+    path: "/digital-marketing-agency-kanpur",
+    ogImage: '/images/og/kanpur-og.jpg'
+  }),
+  keywords: "best digital marketing agency in Kanpur, digital marketing company Kanpur 2026, SEO services Kanpur, Google Ads agency Kanpur, MSME digital marketing Kanpur, online marketing Kanpur, digital marketing Civil Lines Kanpur, textile business marketing Kanpur"
+};
 
 export default function KanpurLocationPage() {
   const city = 'Kanpur';
-  const localSchema = getLocalBusinessSchema({ city });
+
+  const localSchema = {
+    "@context": "https://schema.org",
+    "@type": "MarketingAgency",
+    "name": "Veloxis Global",
+    "description": "Best digital marketing agency in Kanpur — SEO, Google Ads and Social Media for Kanpur's textile, MSME and manufacturing businesses.",
+    "telephone": "+918887620727",
+    "email": "muddassir@veloxisglobal.com",
+    "url": "https://veloxisglobal.com/digital-marketing-agency-kanpur/",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "12 Faithful Ganj, Cantt",
+      "addressLocality": "Kanpur",
+      "addressRegion": "Uttar Pradesh",
+      "postalCode": "208004",
+      "addressCountry": "IN"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "26.4499",
+      "longitude": "80.3319"
+    },
+    "areaServed": {
+      "@type": "City",
+      "name": "Kanpur"
+    },
+    "priceRange": "₹₹"
+  };
 
   const breadcrumbItems = [{ name: 'Kanpur Agency', href: '/digital-marketing-agency-kanpur' }];
   const breadcrumbSchema = getBreadcrumbListSchema([
@@ -36,36 +66,36 @@ export default function KanpurLocationPage() {
 
   const kanpurFaqs = [
     {
-      question: "How can digital marketing benefit local manufacturing companies and MSMEs?",
-      answer: "Digital marketing helps manufacturing brands bypass middlemen. By ranking for terms like 'bulk leather goods manufacturer' or 'custom textile exporter' on Google, industrial firms can capture corporate inquiries and wholesale buyers directly."
+      question: "What is the cost of digital marketing in Kanpur in 2026?",
+      answer: "Digital marketing pricing in Kanpur varies by scope. At Veloxis Global, we offer custom pricing built around your goals — no fixed packages. Start with our free audit and we'll recommend exactly what you need and what it will cost. No surprises, no lock-in contracts."
     },
     {
-      question: "Which commercial and industrial areas do you cover?",
-      answer: "We service industrial zones and neighborhoods locally, including GT Road, Civil Lines, Swaroop Nagar, Kidwai Nagar, Kalyanpur, and Kakadeo."
+      question: "How long does SEO take to show results in Kanpur?",
+      answer: "For most Kanpur businesses, initial ranking improvements appear within 60-90 days. Hyperlocal keywords like \"digital marketing agency Kanpur\" or industry-specific terms can rank faster due to lower competition. We set realistic, honest timelines from day one."
     },
     {
-      question: "What digital marketing channels are best for B2B industrial sales?",
-      answer: "B2B industrial marketing relies heavily on high-intent channels. Google Search Ads capture buyers actively searching for raw materials or manufacturing partners, while Technical SEO builds long-term organic authority and rankings."
+      question: "Do you work with small businesses and MSMEs in Kanpur?",
+      answer: "Yes — in fact, Kanpur's MSME and manufacturing sector is one of our primary focus areas. We understand the unique challenges of Kanpur's industrial businesses and have built strategies specifically for them."
     },
     {
-      question: "Can you help our local textile or leather business get export inquiries?",
-      answer: "Yes. We set up international SEO targeting and run geotargeted Google and LinkedIn campaigns tailored to buyers in key export markets such as Europe, the Middle East, and North America."
+      question: "Can you help my Kanpur business rank on Google Maps?",
+      answer: "Absolutely. Local SEO and Google Business Profile optimisation is our strongest service for Kanpur businesses. We can get your business appearing in Google's Local Pack for Kanpur-specific searches."
     },
     {
-      question: "How do you help local retail brands compete online?",
-      answer: "We help retail storefronts build local authority by optimizing their Google Map profiles, setting up local store search campaigns, and utilizing targeted Instagram ads to drive local customer walk-ins."
+      question: "Do you offer Google Ads for Kanpur businesses?",
+      answer: "Yes. We manage Google Ads campaigns for Kanpur businesses across all campaign types — Search, Display, and Performance Max. Every rupee is tracked and optimised for your specific Kanpur market."
     },
     {
-      question: "Do we need a massive marketing budget to start working with Veloxis Global in the region?",
-      answer: "No. We specialize in working with MSMEs. We build campaigns with focused budgets, target specific buyer personas, and scale spend only when we see positive conversion rates and qualified inquiries."
+      question: "Which Kanpur industries do you specialise in?",
+      answer: "Textile and garment industry, leather goods and footwear, manufacturing and engineering, MSME retail, education institutes, healthcare clinics, and real estate. We have tailored strategies for each sector."
     },
     {
-      question: "Do you build custom websites for manufacturing companies?",
-      answer: "Yes. We build responsive, fast-loading B2B websites that showcase product catalogs, list technical specifications, and include direct call-to-actions like 'Request a Quote' or 'Download Brochure' to maximize lead capture."
+      question: "Do you offer free consultations for Kanpur businesses?",
+      answer: "Yes — we offer a free 30-minute strategy call plus a free website SEO audit for all Kanpur enquiries. No commitments. Just clarity on where you stand and what's possible."
     },
     {
-      question: "How can our business get a free SEO and digital audit?",
-      answer: "Complete our simple audit form. Our team will review your website performance, map visibility, and local competitor strength, and send you a manual optimization plan in 48 hours."
+      question: "How is Veloxis Global different from other Kanpur digital agencies?",
+      answer: "Most Kanpur agencies offer templated services at low prices with average results. Veloxis Global is built differently — custom strategy per client, transparent reporting, and results measured in business outcomes not just traffic numbers. We're also based here in Kanpur, so we genuinely understand your market."
     }
   ];
 
@@ -84,15 +114,15 @@ export default function KanpurLocationPage() {
       <section className="bg-white py-16 sm:py-24 text-left relative overflow-hidden">
         <div className="max-w-container-max mx-auto px-gutter grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           <div className="lg:col-span-7 flex flex-col items-start">
-            <Badge variant="orange" className="mb-4">INDUSTRIAL REGIONAL DESK</Badge>
+            <Badge variant="orange" className="mb-4">KANPUR INDUSTRIAL DESK</Badge>
             <h1 className="text-headline-lg-mobile md:text-headline-lg font-extrabold text-slate-900 tracking-tight leading-tight mb-6">
               Best Digital Marketing Agency in Kanpur
             </h1>
-            <p className="text-base sm:text-body-lg text-on-surface-variant leading-relaxed mb-6">
-              Kanpur, long recognized as the industrial heartland and Manchester of Uttar Pradesh, is home to a massive ecosystem of leather tanneries, textile mills, manufacturing plants, and fast-growing MSMEs. However, in 2026, traditional sales channels, bulk distributor directories, and local industry networks are no longer sufficient to secure nationwide or export orders.
+            <p className="text-base sm:text-body-lg text-on-surface-variant leading-relaxed mb-6 font-sans">
+              Veloxis Global is Kanpur's most results-driven digital marketing agency — headquartered right here in Kanpur at 12 Faithful Ganj, Cantt. We help Kanpur businesses in textile, leather, manufacturing, retail and MSME sectors grow online with proven SEO, Google Ads and Social Media strategies.
             </p>
-            <p className="text-base sm:text-body-lg text-on-surface-variant leading-relaxed mb-8">
-              At Veloxis Global, we specialize in helping regional manufacturing companies transition to modern digital customer acquisition. We construct high-converting B2B search campaigns, run targeted SEO strategies to rank for commercial manufacturing keywords, and design optimized landing pages that convert cold traffic into trade inquiries and purchase orders.
+            <p className="text-base sm:text-body-lg text-on-surface-variant leading-relaxed mb-8 font-sans">
+              Whether you're in Civil Lines, Swaroop Nagar, Kidwai Nagar, GT Road, Kalyanpur or Kakadeo — our digital marketing experts understand Kanpur's local market, buyer psychology and competitive landscape.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
               <Button href="/free-seo-audit" variant="primary">
@@ -153,9 +183,76 @@ export default function KanpurLocationPage() {
         </div>
       </section>
 
+      {/* Why Choose Us for Kanpur Section */}
+      <section className="bg-white py-section-gap border-t border-slate-100">
+        <div className="max-w-container-max mx-auto px-gutter text-center">
+          <div className="max-w-[700px] mx-auto mb-16">
+            <Badge variant="teal" className="mb-4">WHY PARTNER WITH US</Badge>
+            <h2 className="text-3xl sm:text-headline-lg font-bold text-slate-900">Why Choose Us for Kanpur</h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-left max-w-5xl mx-auto">
+            <Card className="bg-slate-50 border border-slate-100 p-8 flex gap-4">
+              <span className="text-emerald-500 text-xl font-bold shrink-0">✅</span>
+              <div>
+                <h3 className="font-extrabold text-slate-900 text-base mb-2">Physically based in Kanpur</h3>
+                <p className="text-sm text-slate-500 leading-relaxed">
+                  Physically based in Kanpur — 12 Faithful Ganj, Cantt
+                </p>
+              </div>
+            </Card>
+            <Card className="bg-slate-50 border border-slate-100 p-8 flex gap-4">
+              <span className="text-emerald-500 text-xl font-bold shrink-0">✅</span>
+              <div>
+                <h3 className="font-extrabold text-slate-900 text-base mb-2">Deep sector understanding</h3>
+                <p className="text-sm text-slate-500 leading-relaxed">
+                  Deep understanding of Kanpur's textile, leather & MSME sectors
+                </p>
+              </div>
+            </Card>
+            <Card className="bg-slate-50 border border-slate-100 p-8 flex gap-4">
+              <span className="text-emerald-500 text-xl font-bold shrink-0">✅</span>
+              <div>
+                <h3 className="font-extrabold text-slate-900 text-base mb-2">B2B & Manufacturing expertise</h3>
+                <p className="text-sm text-slate-500 leading-relaxed">
+                  Experience with Kanpur's B2B and manufacturing businesses
+                </p>
+              </div>
+            </Card>
+            <Card className="bg-slate-50 border border-slate-100 p-8 flex gap-4">
+              <span className="text-emerald-500 text-xl font-bold shrink-0">✅</span>
+              <div>
+                <h3 className="font-extrabold text-slate-900 text-base mb-2">Bilingual campaigns</h3>
+                <p className="text-sm text-slate-500 leading-relaxed">
+                  Bilingual campaigns — Hindi + English for Kanpur audiences
+                </p>
+              </div>
+            </Card>
+            <Card className="bg-slate-50 border border-slate-100 p-8 flex gap-4">
+              <span className="text-emerald-500 text-xl font-bold shrink-0">✅</span>
+              <div>
+                <h3 className="font-extrabold text-slate-900 text-base mb-2">In-person meetings</h3>
+                <p className="text-sm text-slate-500 leading-relaxed">
+                  In-person meetings available — no remote-only limitations
+                </p>
+              </div>
+            </Card>
+            <Card className="bg-slate-50 border border-slate-100 p-8 flex gap-4">
+              <span className="text-emerald-500 text-xl font-bold shrink-0">✅</span>
+              <div>
+                <h3 className="font-extrabold text-slate-900 text-base mb-2">Transparent reporting</h3>
+                <p className="text-sm text-slate-500 leading-relaxed">
+                  Transparent reporting — live dashboards, no vanity metrics
+                </p>
+              </div>
+            </Card>
+          </div>
+        </div>
+      </section>
+
       {/* Local Testimonials */}
       {localTestimonials.length > 0 && (
-        <section className="bg-white py-section-gap">
+        <section className="bg-slate-50 py-section-gap">
           <div className="max-w-container-max mx-auto px-gutter text-center">
             <div className="max-w-[700px] mx-auto mb-16">
               <Badge variant="orange" className="mb-4">VERIFIED RESULTS</Badge>
@@ -164,7 +261,7 @@ export default function KanpurLocationPage() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto text-left">
               {localTestimonials.map((t, idx) => (
-                <Card key={idx} hoverable={false} className="border border-slate-100 p-8 bg-slate-50">
+                <Card key={idx} hoverable={false} className="border border-slate-100 p-8 bg-white">
                   <div className="flex gap-0.5 text-[#F59E0B] mb-4">
                     {[...Array(t.rating)].map((_, i) => (
                       <Star key={i} className="w-4 h-4 fill-current" />
@@ -189,7 +286,10 @@ export default function KanpurLocationPage() {
         badgeText="KANPUR FAQ" 
       />
 
-      <CtaBanner />
+      <CtaBanner 
+        title="Ready to Dominate Kanpur's Digital Space in 2026?"
+        description="Join Kanpur businesses already growing with Veloxis Global. Get your free audit — delivered within 48 hours."
+      />
     </>
   );
 }

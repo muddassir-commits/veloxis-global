@@ -6,8 +6,16 @@ import { Button } from '../ui/Button';
 import { CheckCircle } from 'lucide-react';
 import { useInViewAnimation } from '../../lib/useInViewAnimation';
 
-export const CtaBanner: React.FC = () => {
+export interface CtaBannerProps {
+  title?: string;
+  description?: string;
+}
+
+export const CtaBanner: React.FC<CtaBannerProps> = ({ title, description }) => {
   const { getSectionAnimation, getGlowHover } = useInViewAnimation();
+
+  const displayTitle = title || "Ready to Grow Your Business in 2026?";
+  const displayDescription = description || "Get a FREE, no-obligation digital marketing audit. We will analyze your search visibility, competitor rankings, and speed profiles to show you exactly how to double your conversions.";
 
   return (
     <motion.section 
@@ -22,11 +30,11 @@ export const CtaBanner: React.FC = () => {
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_20%,#2563eb_90%)] -z-10"></div>
 
           <h2 className="text-headline-lg-mobile sm:text-headline-lg font-bold tracking-tight mb-4 max-w-2xl leading-tight">
-            Ready to Grow Your Business in 2026?
+            {displayTitle}
           </h2>
           
           <p className="text-body-lg text-white/80 max-w-xl leading-relaxed mb-8">
-            Get a FREE, no-obligation digital marketing audit. We will analyze your search visibility, competitor rankings, and speed profiles to show you exactly how to double your conversions.
+            {displayDescription}
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto">
