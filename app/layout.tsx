@@ -11,6 +11,13 @@ import './globals.css';
 export const metadata: Metadata = {
   title: 'Best Digital Marketing Agency in Delhi, Noida, Lucknow & Kanpur | Veloxis Global',
   description: 'Veloxis Global — India\'s trusted digital marketing agency delivering SEO, Google Ads, Social Media & Content marketing for Delhi, Noida, Lucknow & Kanpur.',
+  icons: {
+    icon: [
+      { url: '/favicon.ico' },
+      { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
+    ],
+    apple: { url: '/apple-touch-icon.png' },
+  },
 };
 
 export default function RootLayout({
