@@ -12,9 +12,9 @@ import { constructMetadata, pageMeta } from '../../../lib/seo-config';
 
 // 1. Static Metadata with canonical alternates
 export const metadata: Metadata = constructMetadata({
-  title: pageMeta.email.title,
-  description: pageMeta.email.description,
-  path: pageMeta.email.path
+  title: "Email & WhatsApp Marketing Services India 2026 | Veloxis Global",
+  description: "Automated email and WhatsApp marketing for businesses across India. N8n-powered sequences that nurture leads and close deals on autopilot.",
+  path: "/services/email-marketing"
 });
 
 export default function EmailMarketingServicePage() {

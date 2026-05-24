@@ -12,9 +12,9 @@ import { constructMetadata, pageMeta } from '../../../lib/seo-config';
 
 // 1. Static Metadata with canonical alternates
 export const metadata: Metadata = constructMetadata({
-  title: pageMeta.smm.title,
-  description: pageMeta.smm.description,
-  path: pageMeta.smm.path
+  title: "Social Media Marketing Agency India 2026 | Veloxis Global",
+  description: "India's results-driven social media marketing agency. Instagram, Facebook & LinkedIn management for businesses across India. Real followers, real engagement, real leads.",
+  path: "/services/social-media-marketing"
 });
 
 export default function SocialMediaServicePage() {

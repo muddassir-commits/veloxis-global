@@ -12,9 +12,9 @@ import { constructMetadata, pageMeta } from '../../../lib/seo-config';
 
 // 1. Static Metadata with canonical alternates
 export const metadata: Metadata = constructMetadata({
-  title: pageMeta.webDev.title,
-  description: pageMeta.webDev.description,
-  path: pageMeta.webDev.path
+  title: "Web Design & Development Company India 2026 | Veloxis Global",
+  description: "Fast, modern, conversion-optimised websites for businesses across India. Built with Next.js, mobile-first, Core Web Vitals compliant. Serving clients pan-India.",
+  path: "/services/web-design-development"
 });
 
 export default function WebDesignServicePage() {

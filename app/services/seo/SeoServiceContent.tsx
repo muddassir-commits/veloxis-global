@@ -188,7 +188,7 @@ export default function SeoServiceContent() {
               LOCAL SEO · TECHNICAL SEO · LINK BUILDING
             </span>
             <h1 className="text-4xl sm:text-5xl lg:text-[56px] font-extrabold tracking-tight leading-[1.1] text-white">
-              SEO Services That Get Your Business to Page 1 on Google in 2026
+              SEO Services That Get You to Page 1 on Google in 2026
             </h1>
             <p className="text-lg sm:text-xl text-slate-300 leading-relaxed max-w-2xl">
               Rank higher, drive qualified traffic, and grow revenue — with data-driven SEO built for Delhi, Noida, Lucknow & Kanpur.
