@@ -27,12 +27,12 @@ export default function KanpurLocationPage() {
 
   const localSchema = {
     "@context": "https://schema.org",
-    "@type": "MarketingAgency",
+    "@type": "LocalBusiness",
     "name": "Veloxis Global",
     "description": "Best digital marketing agency in Kanpur — SEO, Google Ads and Social Media for Kanpur's textile, MSME and manufacturing businesses.",
     "telephone": "+918887620727",
     "email": "muddassir@veloxisglobal.com",
-    "url": "https://veloxisglobal.com/digital-marketing-agency-kanpur/",
+    "url": "https://veloxisglobal.com/digital-marketing-agency-kanpur",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "12 Faithful Ganj, Cantt",

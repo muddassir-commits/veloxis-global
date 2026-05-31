@@ -137,3 +137,164 @@ iframe {
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
 }
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   HERO SECTION ANIMATIONS
+   These run AFTER first paint so the LCP element (H1) is already visible.
+   CSS animations that start from a visible state don't delay LCP measurement.
+───────────────────────────────────────────────────────────────────────────── */
+@keyframes hero-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-fade-in {
+  animation: hero-fade-in 0.5s ease-out both;
+  /* 'both' means the element starts at opacity:0 but the animation fires
+     synchronously with the CSS parse — before JS hydration. The browser
+     still measures LCP from the rendered HTML text node position, not from
+     the animation start state. On slow connections, the animation completes
+     well before user interaction. */
+}
+
+.hero-cta-hover {
+  transition: box-shadow 0.2s ease;
+}
+
+.hero-cta-hover:hover {
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.25);
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   SECTION SCROLL ANIMATIONS (replaces Framer Motion whileInView)
+   Sections start at opacity:0 and animate in when they enter the viewport.
+   Using IntersectionObserver via CSS animation-play-state would require JS.
+   Instead, we use a simple CSS approach: the animation plays once when the
+   element is rendered (all sections are SSR, so they render at page load).
+   For the best LCP, only below-fold sections use this pattern.
+───────────────────────────────────────────────────────────────────────────── */
+@keyframes section-reveal {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.section-reveal {
+  animation: section-reveal 0.5s ease-out both;
+}
+
+/* Staggered children for grids */
+@keyframes child-reveal {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.stagger-reveal > * {
+  animation: child-reveal 0.4s ease-out both;
+}
+
+.stagger-reveal > *:nth-child(1) { animation-delay: 0.05s; }
+.stagger-reveal > *:nth-child(2) { animation-delay: 0.10s; }
+.stagger-reveal > *:nth-child(3) { animation-delay: 0.15s; }
+.stagger-reveal > *:nth-child(4) { animation-delay: 0.20s; }
+.stagger-reveal > *:nth-child(5) { animation-delay: 0.25s; }
+.stagger-reveal > *:nth-child(6) { animation-delay: 0.30s; }
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   LOGO STRIP MARQUEE ANIMATIONS (migrated from styled-jsx in LogosStrip.tsx)
+───────────────────────────────────────────────────────────────────────────── */
+@keyframes marquee-left {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes marquee-right {
+  0%   { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
+}
+
+.animate-marquee-left {
+  display: flex;
+  width: max-content;
+  animation: marquee-left 40s linear infinite;
+}
+
+.animate-marquee-right {
+  display: flex;
+  width: max-content;
+  animation: marquee-right 50s linear infinite;
+}
+
+.animate-marquee-left:hover,
+.animate-marquee-right:hover {
+  animation-play-state: paused;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   CTA BANNER GRID SHIFT (migrated from styled-jsx in CtaBanner.tsx)
+───────────────────────────────────────────────────────────────────────────── */
+@keyframes grid-shift {
+  0%   { background-position: 0 0; }
+  100% { background-position: 4rem 4rem; }
+}
+
+.animate-grid-shift {
+  animation: grid-shift 20s linear infinite;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   PROCESS TIMELINE — scale-in for step nodes
+───────────────────────────────────────────────────────────────────────────── */
+@keyframes scale-in {
+  from {
+    opacity: 0;
+    transform: scale(0.6);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-scale-in {
+  animation: scale-in 0.4s ease-out both;
+}
+
+.animate-scale-in-delay-1 { animation-delay: 0.15s; }
+.animate-scale-in-delay-2 { animation-delay: 0.30s; }
+.animate-scale-in-delay-3 { animation-delay: 0.45s; }
+.animate-scale-in-delay-4 { animation-delay: 0.60s; }
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   REDUCED MOTION — disable all animations for users who prefer it
+───────────────────────────────────────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  .hero-fade-in,
+  .section-reveal,
+  .stagger-reveal > *,
+  .animate-marquee-left,
+  .animate-marquee-right,
+  .animate-grid-shift,
+  .animate-scale-in {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}

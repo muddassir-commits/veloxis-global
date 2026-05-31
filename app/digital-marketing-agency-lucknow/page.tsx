@@ -27,12 +27,12 @@ export default function LucknowLocationPage() {
 
   const localSchema = {
     "@context": "https://schema.org",
-    "@type": "MarketingAgency",
+    "@type": "LocalBusiness",
     "name": "Veloxis Global",
     "description": "Best digital marketing agency in Lucknow — SEO, Google Ads & Social Media for Lucknow businesses.",
     "telephone": "+918887620727",
     "email": "muddassir@veloxisglobal.com",
-    "url": "https://veloxisglobal.com/digital-marketing-agency-lucknow/",
+    "url": "https://veloxisglobal.com/digital-marketing-agency-lucknow",
     "areaServed": {
       "@type": "City",
       "name": "Lucknow"

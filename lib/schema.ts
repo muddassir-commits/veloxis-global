@@ -2,8 +2,8 @@
 export const generateLocalBusinessSchema = (city?: string) => {
   const base = {
     "@context": "https://schema.org",
-    "@type": "MarketingAgency",
-    "@id": `https://veloxisglobal.com/${city && city.toLowerCase() !== 'general' ? `digital-marketing-agency-${city.toLowerCase()}/` : ''}#localbusiness`,
+    "@type": "LocalBusiness",
+    "@id": `https://veloxisglobal.com/${city && city.toLowerCase() !== 'general' ? `digital-marketing-agency-${city.toLowerCase()}` : ''}#localbusiness`,
     "name": "Veloxis Global",
     "telephone": "+918887620727",
     "email": "muddassir@veloxisglobal.com",

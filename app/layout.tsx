@@ -44,10 +44,10 @@ export default function RootLayout({
         {/* Google Analytics 4 */}
         <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || "G-LC9XWNSGCF"} />
 
-        {/* Meta Pixel Base Code */}
+        {/* Meta Pixel Base Code — lazyOnload fires after page is idle */}
         <Script
           id="fb-pixel"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
           dangerouslySetInnerHTML={{
             __html: `
               !function(f,b,e,v,n,t,s)
@@ -64,10 +64,10 @@ export default function RootLayout({
           }}
         />
 
-        {/* Microsoft Clarity Code */}
+        {/* Microsoft Clarity — lazyOnload: session recording starts after page idle */}
         <Script
           id="microsoft-clarity"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
           dangerouslySetInnerHTML={{
             __html: `
               (function(c,l,a,r,i,t,y){

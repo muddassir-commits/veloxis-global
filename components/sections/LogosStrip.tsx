@@ -1,5 +1,7 @@
-'use client';
-
+/**
+ * LogosStrip — Server Component.
+ * CSS marquee keyframes defined in globals.css (no styled-jsx needed).
+ */
 import React from 'react';
 
 export const LogosStrip: React.FC = () => {
@@ -30,17 +32,17 @@ export const LogosStrip: React.FC = () => {
   ];
 
   return (
-    <section className="bg-white py-12 border-y border-slate-100 overflow-hidden relative select-none">
+    <section className="bg-white py-12 border-y border-slate-100 overflow-hidden relative select-none" aria-label="Trusted clients">
       <div className="max-w-[1280px] mx-auto px-6 text-center mb-8">
-        <span className="font-sans text-[12px] font-bold tracking-[0.05em] uppercase text-slate-400 block">
+        <span className="font-sans text-[12px] font-bold tracking-[0.05em] uppercase text-slate-500 block">
           TRUSTED BY 250+ BUSINESSES ACROSS INDIA
         </span>
       </div>
 
       {/* Row 1: Scrolling Left, 40s loop */}
-      <div className="flex overflow-hidden w-full relative mb-6">
+      <div className="flex overflow-hidden w-full relative mb-6" aria-hidden="true">
         <div className="animate-marquee-left flex gap-6 shrink-0 min-w-full">
-          {/* First set of logos */}
+          {/* First set */}
           {row1Logos.map((logo, idx) => (
             <div
               key={`r1-1-${idx}`}
@@ -51,7 +53,7 @@ export const LogosStrip: React.FC = () => {
               </span>
             </div>
           ))}
-          {/* Duplicated set of logos for seamless loop */}
+          {/* Duplicated set for seamless loop */}
           {row1Logos.map((logo, idx) => (
             <div
               key={`r1-2-${idx}`}
@@ -66,9 +68,9 @@ export const LogosStrip: React.FC = () => {
       </div>
 
       {/* Row 2: Scrolling Right, 50s loop */}
-      <div className="flex overflow-hidden w-full relative">
+      <div className="flex overflow-hidden w-full relative" aria-hidden="true">
         <div className="animate-marquee-right flex gap-6 shrink-0 min-w-full">
-          {/* First set of logos */}
+          {/* First set */}
           {row2Logos.map((logo, idx) => (
             <div
               key={`r2-1-${idx}`}
@@ -79,7 +81,7 @@ export const LogosStrip: React.FC = () => {
               </span>
             </div>
           ))}
-          {/* Duplicated set of logos for seamless loop */}
+          {/* Duplicated set for seamless loop */}
           {row2Logos.map((logo, idx) => (
             <div
               key={`r2-2-${idx}`}
@@ -92,40 +94,6 @@ export const LogosStrip: React.FC = () => {
           ))}
         </div>
       </div>
-
-      {/* CSS-only keyframes styled inject */}
-      <style jsx global>{`
-        @keyframes marquee-left {
-          0% {
-            transform: translateX(0);
-          }
-          100% {
-            transform: translateX(-50%);
-          }
-        }
-        @keyframes marquee-right {
-          0% {
-            transform: translateX(-50%);
-          }
-          100% {
-            transform: translateX(0);
-          }
-        }
-        .animate-marquee-left {
-          display: flex;
-          width: max-content;
-          animation: marquee-left 40s linear infinite;
-        }
-        .animate-marquee-right {
-          display: flex;
-          width: max-content;
-          animation: marquee-right 50s linear infinite;
-        }
-        .animate-marquee-left:hover,
-        .animate-marquee-right:hover {
-          animation-play-state: paused;
-        }
-      `}</style>
     </section>
   );
 };
