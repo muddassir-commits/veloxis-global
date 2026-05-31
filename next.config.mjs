@@ -25,21 +25,6 @@ const nextConfig = {
     optimizePackageImports: ['framer-motion', 'lucide-react'],
   },
 
-  // Enforce non-www canonical host — www → non-www permanent redirect.
-  // NOTE: On Vercel, domain-level redirects are configured in the Vercel dashboard
-  // (Domains → set non-www as primary, www as redirect). This config acts as a
-  // belt-and-suspenders fallback for non-Vercel environments.
-  async redirects() {
-    return [
-      {
-        source: '/:path*',
-        has: [{ type: 'host', value: 'www.veloxisglobal.com' }],
-        destination: 'https://veloxisglobal.com/:path*',
-        permanent: true,
-      },
-    ];
-  },
-
   // Cache long-lived immutable static assets produced by Next.js build hashing.
   // Vercel sets these automatically but explicit config ensures consistency
   // across any deployment target.
