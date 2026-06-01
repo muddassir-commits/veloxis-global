@@ -25,7 +25,7 @@ export default function TermsPage() {
         <div className="max-w-3xl mx-auto px-gutter">
           <Badge color="indigo" className="mb-4">LEGAL DETAILS</Badge>
           <h1 className="text-3xl sm:text-4xl font-extrabold text-slate-900 mb-2">Terms of Service</h1>
-          <p className="text-xs text-slate-400 font-bold mb-8 uppercase tracking-wider">Last Updated: May 24, 2026</p>
+          <p className="text-xs text-slate-500 font-bold mb-8 uppercase tracking-wider">Last Updated: May 24, 2026</p>
 
           <div className="flex flex-col gap-6 text-sm sm:text-body-md text-slate-600 leading-relaxed">
             <p>By accessing this website, you agree to comply with and be bound by the following Terms of Service. If you disagree with any part of these terms, please do not use our site or request audits.</p>

@@ -25,7 +25,7 @@ export default function PrivacyPolicyPage() {
         <div className="max-w-3xl mx-auto px-gutter">
           <Badge color="indigo" className="mb-4">LEGAL DETAILS</Badge>
           <h1 className="text-3xl sm:text-4xl font-extrabold text-slate-900 mb-2">Privacy Policy</h1>
-          <p className="text-xs text-slate-400 font-bold mb-8 uppercase tracking-wider">Last Updated: May 24, 2026</p>
+          <p className="text-xs text-slate-500 font-bold mb-8 uppercase tracking-wider">Last Updated: May 24, 2026</p>
 
           <div className="flex flex-col gap-6 text-sm sm:text-body-md text-slate-600 leading-relaxed">
             <p>At Veloxis Global, we respect your privacy and are committed to protecting it. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website, submit forms, or utilize our performance services.</p>

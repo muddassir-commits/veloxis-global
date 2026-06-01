@@ -82,7 +82,7 @@ export default function ServicesPage() {
                     </p>
 
                     <div className="bg-slate-50 rounded-md p-4 mb-6 border border-slate-100/50">
-                      <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider block mb-2">Key Deliverables</span>
+                      <span className="text-[10px] font-bold text-slate-500 uppercase tracking-wider block mb-2">Key Deliverables</span>
                       <ul className="flex flex-col gap-1.5 text-xs text-slate-700 font-semibold">
                         {service.benefits.slice(0, 3).map((b, idx) => (
                           <li key={idx} className="flex items-center gap-1.5">
@@ -96,7 +96,7 @@ export default function ServicesPage() {
 
                   <div className="w-full flex items-center justify-between mt-auto pt-4 border-t border-slate-50">
                     <div>
-                      <span className="text-[10px] font-bold text-slate-400 block uppercase tracking-wider">Packages Start At</span>
+                      <span className="text-[10px] font-bold text-slate-500 block uppercase tracking-wider">Packages Start At</span>
                       <span className="font-extrabold text-slate-900 text-sm">{service.pricing.starter}</span>
                     </div>
 

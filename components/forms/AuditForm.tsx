@@ -186,7 +186,7 @@ export const AuditForm: React.FC = () => {
             )}
           </Button>
 
-          <span className="text-xs text-center text-slate-400 font-medium block">
+          <span className="text-xs text-center text-slate-500 font-medium block">
             🔒 We respect your privacy. No spam. Unsubscribe anytime.
           </span>
         </form>

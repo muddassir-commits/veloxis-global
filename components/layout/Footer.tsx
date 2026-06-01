@@ -223,7 +223,6 @@ export const Footer: React.FC = () => {
               href="https://wa.me/918887620727?text=Hi%20Veloxis%20Global%2C%20I%27d%20like%20a%20free%20marketing%20audit"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="Chat with Veloxis Global on WhatsApp"
               className="bg-[#25D366] hover:bg-[#20ba5a] text-white py-2.5 px-4 rounded-md font-bold text-sm inline-flex items-center justify-center gap-2 transition-colors duration-300 w-full text-center"
             >
               <span aria-hidden="true">💬</span>
@@ -279,10 +278,10 @@ export const Footer: React.FC = () => {
         <span>© {new Date().getFullYear()} Veloxis Global. All Rights Reserved.</span>
 
         <div className="flex items-center gap-6">
-          <Link href="/privacy-policy/" className="hover:text-white transition-colors duration-300">
+          <Link href="/privacy-policy" className="hover:text-white transition-colors duration-300">
             Privacy Policy
           </Link>
-          <Link href="/terms/" className="hover:text-white transition-colors duration-300">
+          <Link href="/terms" className="hover:text-white transition-colors duration-300">
             Terms of Service
           </Link>
           <Link href="/sitemap.xml" className="hover:text-white transition-colors duration-300">

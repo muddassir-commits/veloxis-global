@@ -48,7 +48,7 @@ export const LogosStrip: React.FC = () => {
               key={`r1-1-${idx}`}
               className="group flex items-center justify-center w-[120px] h-[40px] bg-slate-50 border border-slate-100 rounded-md transition-all duration-300 hover:border-royal-blue/30 hover:bg-slate-50/50 cursor-pointer shrink-0"
             >
-              <span className="text-[11px] font-bold text-slate-400 group-hover:text-royal-blue transition-colors duration-300">
+              <span className="text-[11px] font-bold text-slate-500 group-hover:text-royal-blue transition-colors duration-300">
                 {logo}
               </span>
             </div>
@@ -59,7 +59,7 @@ export const LogosStrip: React.FC = () => {
               key={`r1-2-${idx}`}
               className="group flex items-center justify-center w-[120px] h-[40px] bg-slate-50 border border-slate-100 rounded-md transition-all duration-300 hover:border-royal-blue/30 hover:bg-slate-50/50 cursor-pointer shrink-0"
             >
-              <span className="text-[11px] font-bold text-slate-400 group-hover:text-royal-blue transition-colors duration-300">
+              <span className="text-[11px] font-bold text-slate-500 group-hover:text-royal-blue transition-colors duration-300">
                 {logo}
               </span>
             </div>
@@ -76,7 +76,7 @@ export const LogosStrip: React.FC = () => {
               key={`r2-1-${idx}`}
               className="group flex items-center justify-center w-[120px] h-[40px] bg-slate-50 border border-slate-100 rounded-md transition-all duration-300 hover:border-indigo-accent/30 hover:bg-slate-50/50 cursor-pointer shrink-0"
             >
-              <span className="text-[11px] font-bold text-slate-400 group-hover:text-indigo-accent transition-colors duration-300">
+              <span className="text-[11px] font-bold text-slate-500 group-hover:text-indigo-accent transition-colors duration-300">
                 {logo}
               </span>
             </div>
@@ -87,7 +87,7 @@ export const LogosStrip: React.FC = () => {
               key={`r2-2-${idx}`}
               className="group flex items-center justify-center w-[120px] h-[40px] bg-slate-50 border border-slate-100 rounded-md transition-all duration-300 hover:border-indigo-accent/30 hover:bg-slate-50/50 cursor-pointer shrink-0"
             >
-              <span className="text-[11px] font-bold text-slate-400 group-hover:text-indigo-accent transition-colors duration-300">
+              <span className="text-[11px] font-bold text-slate-500 group-hover:text-indigo-accent transition-colors duration-300">
                 {logo}
               </span>
             </div>

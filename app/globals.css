@@ -163,6 +163,14 @@ iframe {
      well before user interaction. */
 }
 
+@media (max-width: 767px) {
+  .hero-fade-in {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
 .hero-cta-hover {
   transition: box-shadow 0.2s ease;
 }

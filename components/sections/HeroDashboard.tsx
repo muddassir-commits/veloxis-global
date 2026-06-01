@@ -22,11 +22,11 @@ export default function HeroDashboard() {
         {/* Metric summary */}
         <div className="flex items-center gap-6 mt-2 font-sans">
           <div>
-            <span className="text-[10px] uppercase font-bold tracking-wider text-slate-400 block">Avg CTR</span>
+            <span className="text-[10px] uppercase font-bold tracking-wider text-slate-500 block">Avg CTR</span>
             <span className="text-lg font-extrabold text-teal-accent">4.82%</span>
           </div>
           <div className="border-l border-slate-100/80 pl-6">
-            <span className="text-[10px] uppercase font-bold tracking-wider text-slate-400 block">CPA Status</span>
+            <span className="text-[10px] uppercase font-bold tracking-wider text-slate-500 block">CPA Status</span>
             <span className="text-lg font-extrabold text-sunset-orange">₹182.50</span>
           </div>
         </div>
@@ -63,7 +63,7 @@ export default function HeroDashboard() {
         </span>
         <div className="leading-tight font-sans text-left">
           <span className="text-[11px] font-bold text-slate-800 block">↑ 280% Organic Traffic</span>
-          <span className="text-[9px] font-semibold text-slate-400 block uppercase tracking-wider">Client, Delhi</span>
+          <span className="text-[9px] font-semibold text-slate-500 block uppercase tracking-wider">Client, Delhi</span>
         </div>
       </motion.div>
 
@@ -79,7 +79,7 @@ export default function HeroDashboard() {
         </span>
         <div className="leading-tight font-sans text-left">
           <span className="text-[11px] font-bold text-slate-800 block">4.8x ROAS</span>
-          <span className="text-[9px] font-semibold text-slate-400 block uppercase tracking-wider">E-Commerce Client, Noida</span>
+          <span className="text-[9px] font-semibold text-slate-500 block uppercase tracking-wider">E-Commerce Client, Noida</span>
         </div>
       </motion.div>
     </div>

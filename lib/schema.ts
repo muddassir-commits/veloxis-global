@@ -7,15 +7,10 @@ export const generateLocalBusinessSchema = (city?: string) => {
     "name": "Veloxis Global",
     "telephone": "+918887620727",
     "email": "muddassir@veloxisglobal.com",
-    "url": "https://veloxisglobal.com",
+    "url": `https://veloxisglobal.com/${city && city.toLowerCase() !== 'general' ? `digital-marketing-agency-${city.toLowerCase()}` : ''}`,
     "priceRange": "$$",
     "image": "https://veloxisglobal.com/images/logos/logo.png",
-    "description": "India's results-driven digital marketing agency. Expert SEO, Google Ads and Social Media marketing for businesses across India.",
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "4.9",
-      "reviewCount": "180"
-    }
+    "description": "India's results-driven digital marketing agency. Expert SEO, Google Ads and Social Media marketing for businesses across India."
   };
 
   const isSpecificCity = city && ['delhi', 'noida', 'lucknow', 'kanpur'].includes(city.toLowerCase());
