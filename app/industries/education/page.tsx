@@ -1,5 +1,6 @@
 import React from 'react';
 import { Metadata } from 'next';
+import Link from 'next/link';
 import { constructMetadata } from '../../../lib/seo-config';
 import { Badge } from '../../../components/ui/Badge';
 import { Card } from '../../../components/ui/Card';
@@ -69,6 +70,10 @@ export default function EducationIndustryPage() {
               <span><strong>Outcome:</strong> 2.8x increase in qualified application forms</span>
               <span className="text-xs font-bold text-royal-blue mt-2">Ranked for 80+ high-intent course keyword phrases</span>
             </div>
+            <hr className="border-slate-200 my-1" />
+            <Link href="/case-studies/noida-edtech-lead-generation" className="text-xs font-bold text-royal-blue hover:underline flex items-center gap-1" id="education-case-link">
+              Read Noida EdTech PPC Case Study →
+            </Link>
           </div>
         </div>
       </section>

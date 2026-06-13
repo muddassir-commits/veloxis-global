@@ -1,5 +1,6 @@
 import React from 'react';
 import { Metadata } from 'next';
+import Link from 'next/link';
 import { constructMetadata } from '../../../lib/seo-config';
 import { Badge } from '../../../components/ui/Badge';
 import { Card } from '../../../components/ui/Card';
@@ -69,6 +70,10 @@ export default function EcommerceIndustryPage() {
               <span><strong>Outcome:</strong> 5.2x Return on Ad Spend (ROAS) average</span>
               <span className="text-xs font-bold text-royal-blue mt-2">Decreased Customer Acquisition Cost (CAC) by 28%</span>
             </div>
+            <hr className="border-slate-200 my-1" />
+            <Link href="/case-studies" className="text-xs font-bold text-royal-blue hover:underline flex items-center gap-1" id="ecommerce-case-link">
+              Explore Our Case Studies →
+            </Link>
           </div>
         </div>
       </section>

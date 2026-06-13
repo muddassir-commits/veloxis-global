@@ -1,5 +1,6 @@
 import React from 'react';
 import { Metadata } from 'next';
+import Link from 'next/link';
 import { constructMetadata } from '../../../lib/seo-config';
 import { Badge } from '../../../components/ui/Badge';
 import { Card } from '../../../components/ui/Card';
@@ -69,6 +70,10 @@ export default function HealthcareIndustryPage() {
               <span><strong>Outcome:</strong> 500+ patient bookings generated</span>
               <span className="text-xs font-bold text-royal-blue mt-2">Achieved #1 local map pack placement for 12 key search terms</span>
             </div>
+            <hr className="border-slate-200 my-1" />
+            <Link href="/case-studies/lucknow-healthcare-leads" className="text-xs font-bold text-royal-blue hover:underline flex items-center gap-1" id="healthcare-case-link">
+              Read Lucknow Healthcare Case Study →
+            </Link>
           </div>
         </div>
       </section>

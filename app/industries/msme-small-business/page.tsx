@@ -1,5 +1,6 @@
 import React from 'react';
 import { Metadata } from 'next';
+import Link from 'next/link';
 import { constructMetadata } from '../../../lib/seo-config';
 import { Badge } from '../../../components/ui/Badge';
 import { Card } from '../../../components/ui/Card';
@@ -69,6 +70,10 @@ export default function MsmeIndustryPage() {
               <span><strong>Outcome:</strong> 180% growth in global buyer catalog views</span>
               <span className="text-xs font-bold text-royal-blue mt-2">Ranked #1 for 15+ international export keywords</span>
             </div>
+            <hr className="border-slate-200 my-1" />
+            <Link href="/case-studies/kanpur-fabrics-b2b" className="text-xs font-bold text-royal-blue hover:underline flex items-center gap-1" id="msme-case-link">
+              Read Kanpur B2B Case Study →
+            </Link>
           </div>
         </div>
       </section>

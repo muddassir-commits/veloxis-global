@@ -1,5 +1,6 @@
 import React from 'react';
 import { Metadata } from 'next';
+import Link from 'next/link';
 import { constructMetadata } from '../../../lib/seo-config';
 import { Badge } from '../../../components/ui/Badge';
 import { Card } from '../../../components/ui/Card';
@@ -69,6 +70,10 @@ export default function RealEstateIndustryPage() {
               <span><strong>Outcome:</strong> 35,000+ organic visitors monthly, 3.1x lead volume boost</span>
               <span className="text-xs font-bold text-royal-blue mt-2">Verified 5.2x ROAS on Google Search campaigns</span>
             </div>
+            <hr className="border-slate-200 my-1" />
+            <Link href="/case-studies/delhi-real-estate-developer" className="text-xs font-bold text-royal-blue hover:underline flex items-center gap-1" id="real-estate-case-link">
+              Read Detailed Delhi Case Study →
+            </Link>
           </div>
         </div>
       </section>
