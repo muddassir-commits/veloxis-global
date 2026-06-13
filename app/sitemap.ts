@@ -54,7 +54,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/blog/instagram-reels-funnel-local-brands',
     '/blog/meta-performance-max-best-practices',
     '/case-studies/delhi-real-estate-developer',
-    '/case-studies/noida-ecommerce-skincare',
+    '/case-studies/noida-edtech-lead-generation',
     '/case-studies/lucknow-healthcare-leads',
     '/case-studies/kanpur-fabrics-b2b',
   ].map(route => ({

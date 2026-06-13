@@ -1,5 +1,6 @@
 import React from 'react';
 import { Metadata } from 'next';
+import Link from 'next/link';
 import { constructMetadata, pageMeta } from '../../lib/seo-config';
 import { Badge } from '../../components/ui/Badge';
 import { Card } from '../../components/ui/Card';
@@ -160,9 +161,12 @@ export default function LucknowLocationPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
             <Card className="bg-white border border-slate-100 p-8">
               <h3 className="font-extrabold text-slate-900 text-lg mb-3">Google Map Pack Dominance</h3>
-              <p className="text-sm text-on-surface-variant leading-relaxed">
+              <p className="text-sm text-on-surface-variant leading-relaxed mb-4">
                 Make sure you are the first choice when users search for services "near me" in the region. We audit GBP setups, track local citation consistency, and implement review generation flows to boost map positioning.
               </p>
+              <Link href="/case-studies/lucknow-healthcare-leads" className="text-royal-blue hover:underline text-sm font-bold inline-flex items-center gap-1" id="lucknow-case-study-link">
+                Read Lucknow Healthcare Case Study →
+              </Link>
             </Card>
             <Card className="bg-white border border-slate-100 p-8">
               <h3 className="font-extrabold text-slate-900 text-lg mb-3">Targeted Meta & Instagram Leads</h3>

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Metadata } from 'next';
+import Link from 'next/link';
 import { constructMetadata, pageMeta } from '../../lib/seo-config';
 import { Badge } from '../../components/ui/Badge';
 import { Card } from '../../components/ui/Card';
@@ -172,9 +173,12 @@ export default function KanpurLocationPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
             <Card className="bg-white border border-slate-100 p-8">
               <h3 className="font-extrabold text-slate-900 text-lg mb-3">Enterprise B2B Lead Acquisition</h3>
-              <p className="text-sm text-on-surface-variant leading-relaxed">
+              <p className="text-sm text-on-surface-variant leading-relaxed mb-4">
                 Connect directly with enterprise decision-makers. We audit search intent, implement account-based marketing (ABM) structures, write high-converting whitepapers, and build qualified funnels optimized for regional industrial sectors.
               </p>
+              <Link href="/case-studies/kanpur-fabrics-b2b" className="text-royal-blue hover:underline text-sm font-bold inline-flex items-center gap-1" id="kanpur-case-study-link">
+                Read Kanpur Fabrics B2B Case Study →
+              </Link>
             </Card>
             <Card className="bg-white border border-slate-100 p-8">
               <h3 className="font-extrabold text-slate-900 text-lg mb-3">Hyper-Targeted Google & LinkedIn Ads</h3>

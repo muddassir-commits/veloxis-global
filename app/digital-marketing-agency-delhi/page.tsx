@@ -1,5 +1,6 @@
 import React from 'react';
 import { Metadata } from 'next';
+import Link from 'next/link';
 import { constructMetadata, pageMeta } from '../../lib/seo-config';
 import { Badge } from '../../components/ui/Badge';
 import { Card } from '../../components/ui/Card';
@@ -143,9 +144,12 @@ export default function DelhiLocationPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
             <Card className="bg-white border border-slate-100 p-8">
               <h3 className="font-extrabold text-slate-900 text-lg mb-3">Geotargeted Delhi Local SEO</h3>
-              <p className="text-sm text-on-surface-variant leading-relaxed">
+              <p className="text-sm text-on-surface-variant leading-relaxed mb-4">
                 Rank #1 in Google Maps for localized searches (e.g. \"real estate projects in Dwarka\", \"best IVF clinic in CP\"). We set up schema tags, clean directory citations, and build domain authority to ensure constant lead volume.
               </p>
+              <Link href="/case-studies/delhi-real-estate-developer" className="text-royal-blue hover:underline text-sm font-bold inline-flex items-center gap-1" id="delhi-case-study-link">
+                Read Delhi Real Estate Case Study →
+              </Link>
             </Card>
             <Card className="bg-white border border-slate-100 p-8">
               <h3 className="font-extrabold text-slate-900 text-lg mb-3">High-ROAS Google Search & Display Ads</h3>

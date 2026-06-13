@@ -41,8 +41,8 @@ const caseStudiesData: CaseStudy[] = [
   },
   {
     id: "noida-ecommerce",
-    slug: "noida-ecommerce-skincare",
-    title: "How Priya Agarwal's SkillEdge Academy Noida Cut Cost-Per-Lead by 42%",
+    slug: "noida-edtech-lead-generation",
+    title: "How Noida SkillEdge Academy Cut PPC Cost-Per-Lead by 42%",
     industry: "EdTech",
     location: "Noida",
     duration: "2 Months",

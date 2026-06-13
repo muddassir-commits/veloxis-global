@@ -88,34 +88,71 @@ export default function SingleCaseStudyPage({ params }: Params) {
 
             <hr className="border-slate-100 w-full my-2" />
 
-            {/* Challenge */}
-            <div className="flex flex-col gap-3">
-              <h2 className="text-xl sm:text-2xl font-bold text-slate-900">The Business Challenge</h2>
-              <p className="text-sm sm:text-body-md text-on-surface-variant leading-relaxed">
-                {study.challenge}
-              </p>
+            {/* Rich Content Sections */}
+            <div className="flex flex-col gap-8 w-full mt-6">
+              {study.sections && study.sections.map((section, idx) => (
+                <div key={idx} className="flex flex-col gap-3">
+                  <h2 className="text-xl sm:text-2xl font-extrabold text-slate-900 tracking-tight">
+                    {section.heading}
+                  </h2>
+                  {section.subheading && (
+                    <span className="text-xs sm:text-sm font-bold text-royal-blue uppercase tracking-wider block">
+                      {section.subheading}
+                    </span>
+                  )}
+                  {section.paragraphs.map((p, pIdx) => (
+                    <p key={pIdx} className="text-sm sm:text-body-md text-on-surface-variant leading-relaxed font-sans">
+                      {p}
+                    </p>
+                  ))}
+                  {section.bulletPoints && section.bulletPoints.length > 0 && (
+                    <ul className="flex flex-col gap-2 pl-0 w-full mt-2">
+                      {section.bulletPoints.map((bp, bpIdx) => (
+                        <li key={bpIdx} className="flex gap-2.5 text-sm sm:text-body-md text-on-surface-variant leading-relaxed items-start">
+                          <span className="text-royal-blue font-bold shrink-0 mt-0.5">▪</span>
+                          <span className="font-semibold text-slate-800">{bp}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
+              ))}
             </div>
 
-            {/* Strategy */}
-            <div className="flex flex-col gap-3 mt-4">
-              <h2 className="text-xl sm:text-2xl font-bold text-slate-900">Our Strategic Execution</h2>
-              <p className="text-sm sm:text-body-md text-on-surface-variant leading-relaxed">
-                {study.strategy}
-              </p>
-            </div>
-
-            {/* Results */}
-            <div className="flex flex-col gap-3 mt-4">
-              <h2 className="text-xl sm:text-2xl font-bold text-slate-900">Key Outcomes & Results</h2>
-              <ul className="flex flex-col gap-3 pl-0 w-full">
-                {study.metrics.map((metric, idx) => (
-                  <li key={idx} className="flex gap-3 text-sm sm:text-body-md text-on-surface-variant leading-relaxed items-center">
-                    <span className="text-teal-accent font-bold text-lg shrink-0">✓</span>
-                    <span className="font-semibold text-slate-900">{metric}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
+            {/* Comparison Table */}
+            {study.dataComparison && study.dataComparison.length > 0 && (
+              <div className="w-full mt-8 border border-slate-100 rounded-xl overflow-hidden shadow-sm">
+                <div className="bg-slate-50 p-4 border-b border-slate-100">
+                  <h3 className="font-bold text-slate-900 text-sm sm:text-base">Campaign Metric Comparison</h3>
+                </div>
+                <div className="overflow-x-auto">
+                  <table className="w-full text-left border-collapse text-xs sm:text-sm">
+                    <thead>
+                      <tr className="border-b border-slate-100 text-slate-400 font-bold uppercase tracking-wider bg-slate-50/50">
+                        <th className="p-4">Key Diagnostic Metric</th>
+                        <th className="p-4">Pre-Campaign</th>
+                        <th className="p-4">Post-Campaign</th>
+                        <th className="p-4 text-right">Growth / Reduction</th>
+                      </tr>
+                    </thead>
+                    <tbody className="divide-y divide-slate-50 font-semibold text-slate-700">
+                      {study.dataComparison.map((row, rIdx) => (
+                        <tr key={rIdx} className="hover:bg-slate-50/30 transition-colors">
+                          <td className="p-4 text-slate-900 font-bold">{row.metricName}</td>
+                          <td className="p-4 text-red-500">{row.beforeValue}</td>
+                          <td className="p-4 text-teal-accent">{row.afterValue}</td>
+                          <td className="p-4 text-right">
+                            <span className="inline-block text-[11px] font-bold px-2 py-0.5 rounded-full bg-teal-accent/10 text-teal-accent">
+                              {row.improvementPercentage}
+                            </span>
+                          </td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            )}
           </div>
 
           {/* Sidebar Metrics Summary */}

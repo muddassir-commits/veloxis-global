@@ -1,5 +1,6 @@
 import React from 'react';
 import { Metadata } from 'next';
+import Link from 'next/link';
 import { constructMetadata, pageMeta } from '../../lib/seo-config';
 import { Badge } from '../../components/ui/Badge';
 import { Card } from '../../components/ui/Card';
@@ -151,9 +152,12 @@ export default function NoidaLocationPage() {
             </Card>
             <Card className="bg-white border border-slate-100 p-8">
               <h3 className="font-extrabold text-slate-900 text-lg mb-3">Hyper-Targeted Google & LinkedIn Ads</h3>
-              <p className="text-sm text-on-surface-variant leading-relaxed">
+              <p className="text-sm text-on-surface-variant leading-relaxed mb-4">
                 Maximize ad budgets in high-competition niches. We setup exact-match search query targets, map precise demographic and job title exclusions, and construct custom landing pages designed to drive higher inquiries at lower CPL.
               </p>
+              <Link href="/case-studies/noida-edtech-lead-generation" className="text-royal-blue hover:underline text-sm font-bold inline-flex items-center gap-1" id="noida-case-study-link">
+                Read Noida EdTech PPC Case Study →
+              </Link>
             </Card>
           </div>
         </div>
