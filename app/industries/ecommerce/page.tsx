@@ -52,10 +52,10 @@ export default function EcommerceIndustryPage() {
               Helping fashion, beauty, home decor, and consumer electronics brands scale their sales across India.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
-              <Button href="/free-seo-audit" variant="primary">
+              <Button id="ecommerce-hero-audit-btn" href="/free-seo-audit" variant="primary">
                 Get E-com Audit →
               </Button>
-              <Button href="/contact" variant="outline">
+              <Button id="ecommerce-hero-contact-btn" href="/contact" variant="outline">
                 Talk to E-com Strategist
               </Button>
             </div>

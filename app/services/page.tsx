@@ -100,7 +100,7 @@ export default function ServicesPage() {
                       <span className="font-extrabold text-slate-900 text-sm">{service.pricing.starter}</span>
                     </div>
 
-                    <Button href={`/services/${service.slug}`} variant="outline" className="py-2 px-4 text-xs font-bold">
+                    <Button href={`/services/${service.slug}`} variant="outline" className="py-2 px-4 text-xs font-bold" id={`services-card-btn-${service.slug}`}>
                       Explore Details →
                     </Button>
                   </div>

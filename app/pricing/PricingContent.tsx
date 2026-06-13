@@ -97,7 +97,7 @@ export default function PricingContent() {
               Every business is different. Our pricing reflects that. Start with a free audit — we'll recommend exactly what you need and what it'll cost. No surprises, no lock-ins.
             </p>
             <div className="mt-2">
-              <Button href="/free-seo-audit" variant="primary" size="lg">
+              <Button id="pricing-hero-audit-btn" href="/free-seo-audit" variant="primary" size="lg">
                 Request Free SEO Audit →
               </Button>
             </div>
@@ -154,6 +154,7 @@ export default function PricingContent() {
 
                 <div className="mt-8 pt-4 border-t border-slate-100">
                   <Button 
+                    id={`pricing-plan-btn-${plan.title.toLowerCase()}`}
                     href="/free-seo-audit" 
                     variant={plan.popular ? 'primary' : 'outline'} 
                     className="w-full text-center"
@@ -189,6 +190,7 @@ export default function PricingContent() {
                 className="bg-slate-50 border border-slate-100 rounded-xl overflow-hidden"
               >
                 <button
+                  id={`pricing-faq-btn-${idx}`}
                   onClick={() => toggleFaq(idx)}
                   className="w-full px-6 py-4 flex items-center justify-between text-left font-bold text-slate-900 hover:text-royal-blue transition-colors text-sm sm:text-base gap-4"
                 >

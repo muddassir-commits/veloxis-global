@@ -127,8 +127,8 @@ export const pageMeta = {
     path: '/services'
   },
   about: {
-    title: "About Veloxis Global — India's Digital Marketing Agency | Muddassir Ali",
-    description: "Veloxis Global — India's results-driven digital marketing agency founded by Muddassir Ali. 4 years in digital marketing, serving businesses across India from Kanpur. Learn our story.",
+    title: "About Veloxis Global | Digital Marketing Agency India",
+    description: "Veloxis Global is a results-driven digital marketing agency founded by Muddassir Ali. We deliver expert SEO, Google Ads & social campaigns. Learn our story.",
     path: '/about'
   },
   caseStudies: {
@@ -157,8 +157,8 @@ export const pageMeta = {
     path: '/contact'
   },
   blog: {
-    title: "Digital Marketing Blog India 2026 — Insights & Strategies | Veloxis Global",
-    description: "Expert digital marketing insights for Indian businesses. SEO guides, Google Ads tips, Social Media strategies — all built for India's unique market. Updated regularly by Muddassir Ali.",
+    title: "Digital Marketing Blog India | Insights & Strategies | Veloxis",
+    description: "Expert digital marketing insights for Indian businesses. SEO guides, Google Ads tutorials, and social media growth strategies written by Muddassir Ali.",
     path: '/blog'
   }
 };

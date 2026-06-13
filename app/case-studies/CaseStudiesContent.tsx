@@ -106,6 +106,7 @@ export default function CaseStudiesContent() {
             {filters.map((filter) => (
               <button
                 key={filter}
+                id={`case-studies-filter-${filter.toLowerCase().replace(/\s+/g, '-')}`}
                 onClick={() => setActiveFilter(filter)}
                 className={`px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider transition-colors shrink-0 ${
                   activeFilter === filter
@@ -170,6 +171,7 @@ export default function CaseStudiesContent() {
                 </div>
 
                 <Button 
+                  id={`case-study-card-btn-${study.id}`}
                   href={`/case-studies/${study.slug}`} 
                   variant="outline" 
                   className="w-full text-center"

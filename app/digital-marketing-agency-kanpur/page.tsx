@@ -15,7 +15,7 @@ import { FaqAccordion } from '../../components/sections/FaqAccordion';
 export const metadata: Metadata = {
   ...constructMetadata({
     title: "Best Digital Marketing Agency in Kanpur 2026 | Veloxis Global",
-    description: "Looking for the best digital marketing agency in Kanpur? Veloxis Global delivers proven SEO, Google Ads & Social Media for Kanpur's textile, MSME & manufacturing businesses. Free audit — 48hr delivery.",
+    description: "Looking for the best digital marketing agency in Kanpur? Veloxis Global delivers proven SEO, Google Ads & social media results for Kanpur businesses. Free audit.",
     path: "/digital-marketing-agency-kanpur",
     ogImage: '/images/og/kanpur-og.jpg'
   }),

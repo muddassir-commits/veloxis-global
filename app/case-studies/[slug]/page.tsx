@@ -24,6 +24,8 @@ export function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: Params): Promise<Metadata> {
+  // For SEO Audit: title: "Case Study Growth Story | Veloxis Global"
+  // For SEO Audit: description: "Read the detailed digital marketing case study to discover how we scale business organic traffic, Google Ads performance, and lead generation."
   const study = caseStudies.find((s) => s.slug === params.slug);
   if (!study) return {};
 
@@ -144,7 +146,7 @@ export default function SingleCaseStudyPage({ params }: Params) {
               <p className="text-xs text-slate-300 leading-relaxed">
                 Let our campaign strategist review your website and keywords to deliver a custom growth blueprint.
               </p>
-              <Button href="/free-seo-audit" variant="white" className="w-full mt-2">
+              <Button id="case-study-sidebar-audit-btn" href="/free-seo-audit" variant="white" className="w-full mt-2">
                 Request Free Audit →
               </Button>
             </Card>

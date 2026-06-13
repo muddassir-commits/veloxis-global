@@ -52,10 +52,10 @@ export default function MsmeIndustryPage() {
               Supporting Kanpur industrial mills, leather exporters, B2B manufacturers, and regional MSMEs across Lucknow and Delhi NCR.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
-              <Button href="/free-seo-audit" variant="primary">
+              <Button id="msme-hero-audit-btn" href="/free-seo-audit" variant="primary">
                 Get B2B SEO Audit →
               </Button>
-              <Button href="/contact" variant="outline">
+              <Button id="msme-hero-contact-btn" href="/contact" variant="outline">
                 Talk to B2B Director
               </Button>
             </div>

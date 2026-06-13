@@ -2,6 +2,8 @@ import React from 'react';
 import { Metadata } from 'next';
 import { Breadcrumb } from '../../components/ui/Breadcrumb';
 import { Badge } from '../../components/ui/Badge';
+import { SchemaMarkup } from '../../components/ui/SchemaMarkup';
+import { FaqAccordion } from '../../components/sections/FaqAccordion';
 import { constructMetadata } from '../../lib/seo-config';
 
 export const metadata: Metadata = constructMetadata({
@@ -13,8 +15,42 @@ export const metadata: Metadata = constructMetadata({
 export default function PrivacyPolicyPage() {
   const breadcrumbItems = [{ name: 'Privacy Policy', href: '/privacy-policy' }];
 
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://veloxisglobal.com"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Privacy Policy",
+        "item": "https://veloxisglobal.com/privacy-policy"
+      }
+    ]
+  };
+
+  const webPageSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://veloxisglobal.com/privacy-policy#webpage",
+    "url": "https://veloxisglobal.com/privacy-policy",
+    "name": "Privacy Policy | Veloxis Global",
+    "description": "Read the Privacy Policy for Veloxis Global to learn how we protect and process your data.",
+    "publisher": {
+      "@id": "https://veloxisglobal.com/#organization"
+    }
+  };
+
   return (
     <>
+      <SchemaMarkup schema={breadcrumbSchema} />
+      <SchemaMarkup schema={webPageSchema} />
+
       <section className="bg-slate-50 py-8 border-b border-slate-100">
         <div className="max-w-container-max mx-auto px-gutter text-left">
           <Breadcrumb items={breadcrumbItems} />
@@ -31,19 +67,50 @@ export default function PrivacyPolicyPage() {
             <p>At Veloxis Global, we respect your privacy and are committed to protecting it. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website, submit forms, or utilize our performance services.</p>
             
             <h2 className="text-lg font-extrabold text-slate-900 mt-4">1. Information We Collect</h2>
-            <p>We collect information you provide directly through our Contact forms, Free SEO Audit forms, and newsletter signups. This includes names, company details, website URLs, emails, phone numbers, and cities of operation.</p>
+            <p>We collect information you provide directly through our digital channels. Key data points include:</p>
+            <ul className="list-disc pl-5 flex flex-col gap-2">
+              <li><strong>Personal details:</strong> Names, email addresses, and phone numbers.</li>
+              <li><strong>Business statistics:</strong> Company name, target website URLs, and marketing spends.</li>
+              <li><strong>Geographic data:</strong> Operational cities like Kanpur, Lucknow, Noida, and Delhi.</li>
+            </ul>
 
             <h2 className="text-lg font-extrabold text-slate-900 mt-4">2. Cookies & Analytics</h2>
-            <p>We use cookies, Google Analytics, and mapping cookies to track visitor traffic, identify page speeds, and optimize user experience. You can configure your browser to reject cookies, though some features might not function correctly.</p>
+            <p>We utilize browser cookies and analytics packages to monitor site patterns:</p>
+            <ul className="list-disc pl-5 flex flex-col gap-2">
+              <li><strong>Tracking:</strong> Google Analytics checks session behavior and conversion paths.</li>
+              <li><strong>Performance:</strong> Tracking page loading speeds and rendering performance.</li>
+              <li><strong>Customization:</strong> Storing user layout preferences dynamically.</li>
+            </ul>
 
             <h2 className="text-lg font-extrabold text-slate-900 mt-4">3. Direct Data Use</h2>
-            <p>We use contact details exclusively to respond to your strategy inquiries, deliver website PDF reports, and send transactional email/WhatsApp templates. We never sell or rent your personal details to third parties.</p>
+            <p>We use contact details exclusively to optimize user communications and strategy:</p>
+            <ul className="list-disc pl-5 flex flex-col gap-2">
+              <li>Responding directly to consultation bookings or audits.</li>
+              <li>Compiling manual PDF SEO audit report metrics.</li>
+              <li>Sharing occasional technical marketing updates.</li>
+            </ul>
 
             <h2 className="text-lg font-extrabold text-slate-900 mt-4">4. Compliance & Contact</h2>
             <p>For questions or requests regarding data removal, please contact us directly at <a href="mailto:muddassir@veloxisglobal.com" className="text-royal-blue hover:underline font-bold">muddassir@veloxisglobal.com</a>.</p>
           </div>
         </div>
       </section>
+
+      {/* Privacy Policy FAQ Accordion */}
+      <FaqAccordion
+        title="Privacy & Data FAQ"
+        badgeText="PRIVACY POLICY FAQ"
+        customFaqs={[
+          {
+            question: "What information does Veloxis Global collect?",
+            answer: "We collect names, emails, company domains, and contact numbers provided voluntarily through our audit and contact forms."
+          },
+          {
+            question: "How can I request my personal data to be deleted?",
+            answer: "Simply contact us at muddassir@veloxisglobal.com. We will remove all your data records from our server pipelines within 24 hours."
+          }
+        ]}
+      />
     </>
   );
 }

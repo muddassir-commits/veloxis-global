@@ -93,6 +93,7 @@ export const AuditForm: React.FC = () => {
           {/* Honeypot field - visually hidden */}
           <div className="hidden" aria-hidden="true">
             <input
+              id="honeypot-input"
               type="text"
               tabIndex={-1}
               autoComplete="off"
@@ -168,6 +169,7 @@ export const AuditForm: React.FC = () => {
           )}
 
           <Button
+            id="audit-submit-btn"
             type="submit"
             variant="primary"
             disabled={isSubmitting}

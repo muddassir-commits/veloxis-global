@@ -39,13 +39,14 @@ export const CtaBanner: React.FC<CtaBannerProps> = ({ title, description }) => {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto">
             {/* White bg / Blue text button */}
             <div className="w-full sm:w-auto rounded-full hero-cta-hover">
-              <Button href="/free-seo-audit" variant="white" className="w-full sm:w-auto text-center shadow-lg">
+              <Button id="cta-banner-free-audit-btn" href="/free-seo-audit" variant="white" className="w-full sm:w-auto text-center shadow-lg">
                 Get Your Free Audit →
               </Button>
             </div>
             {/* Ghost white border button */}
             <div className="w-full sm:w-auto rounded-full hero-cta-hover">
               <Button
+                id="cta-banner-talk-director-btn"
                 href="/contact"
                 variant="outline"
                 className="w-full sm:w-auto text-center border-white text-white hover:bg-white/10 hover:text-white"

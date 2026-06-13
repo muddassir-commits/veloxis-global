@@ -1,6 +1,7 @@
 import React from 'react';
 import { Metadata } from 'next';
 import { SchemaMarkup } from '../../components/ui/SchemaMarkup';
+import { FaqAccordion } from '../../components/sections/FaqAccordion';
 import { Badge } from '../../components/ui/Badge';
 import { AuditForm } from '../../components/forms/AuditForm';
 import { Check, ArrowRight, ClipboardCheck, Sparkles, PhoneCall } from 'lucide-react';
@@ -9,7 +10,7 @@ import { constructMetadata, pageMeta } from '../../lib/seo-config';
 export const metadata: Metadata = {
   ...constructMetadata({
     title: "Free SEO Audit for Your Website India 2026 | Veloxis Global",
-    description: "Get a FREE personalised SEO audit — discover exactly why your website isn't ranking on Google. 48-hour turnaround. No obligation. Serving businesses across India. veloxisglobal.com",
+    description: "Get a FREE personalised SEO audit — discover exactly why your website isn't ranking on Google. 48-hour turnaround. No obligation. Serving businesses across India.",
     path: "/free-seo-audit"
   }),
   keywords: "free SEO audit India 2026, free website audit India, free digital marketing audit, website SEO analysis free, Google ranking check free"
@@ -268,6 +269,26 @@ export default function FreeAuditPage() {
           </div>
         </div>
       </section>
+
+      {/* Free SEO Audit FAQs */}
+      <FaqAccordion
+        title="SEO Audit FAQs"
+        badgeText="QUESTIONS ABOUT AUDIT?"
+        customFaqs={[
+          {
+            question: "Is this website SEO audit really free?",
+            answer: "Yes, it is 100% free with absolutely no obligation. We manually inspect your website's search performance parameters to show you exactly how to capture more traffic and customers."
+          },
+          {
+            question: "How long does it take to get my SEO report?",
+            answer: "Because our digital marketing experts manually inspect and review your site metrics, we deliver the custom PDF report directly to your email inbox within 48 hours."
+          },
+          {
+            question: "What items are analyzed in the audit?",
+            answer: "We analyze technical SEO issues, domain authority, organic keyword positioning, mobile speeds, user accessibility parameters, and Google Business Profile mapping configurations."
+          }
+        ]}
+      />
     </>
   );
 }

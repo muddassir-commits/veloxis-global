@@ -62,6 +62,7 @@ export const FaqAccordion: React.FC<FaqAccordionProps> = ({
                 className="border border-slate-100 rounded-xl overflow-hidden bg-slate-50 transition-all duration-300"
               >
                 <button
+                  id={`faq-btn-${index}`}
                   onClick={() => toggle(index)}
                   className="w-full flex items-center justify-between p-6 text-left font-bold text-slate-900 hover:text-royal-blue transition-colors focus:outline-none"
                 >

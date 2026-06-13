@@ -15,7 +15,7 @@ import { FaqAccordion } from '../../components/sections/FaqAccordion';
 export const metadata: Metadata = {
   ...constructMetadata({
     title: "Best Digital Marketing Agency in Noida 2026 | Veloxis Global",
-    description: "Top digital marketing agency in Noida for IT companies, startups & growing businesses. Expert SEO, Google Ads & Social Media. Serving Sector 62, Greater Noida & all of Noida. Free audit.",
+    description: "Top digital marketing agency in Noida for IT companies, startups & businesses. Expert SEO, Google Ads & Social Media. Sector 62, Greater Noida. Free audit.",
     path: "/digital-marketing-agency-noida",
     ogImage: '/images/og/noida-og.jpg'
   }),

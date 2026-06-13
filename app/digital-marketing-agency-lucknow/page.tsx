@@ -15,7 +15,7 @@ import { FaqAccordion } from '../../components/sections/FaqAccordion';
 export const metadata: Metadata = {
   ...constructMetadata({
     title: "Best Digital Marketing Agency in Lucknow 2026 | Veloxis Global",
-    description: "Top-rated digital marketing agency in Lucknow — proven SEO, Google Ads & Social Media for Lucknow businesses. Serving Gomti Nagar, Hazratganj, Indira Nagar & across Lucknow. Free audit available.",
+    description: "Top-rated digital marketing agency in Lucknow. Proven SEO, Google Ads & Social Media campaigns. Gomti Nagar, Hazratganj & across Lucknow. Free audit.",
     path: "/digital-marketing-agency-lucknow",
     ogImage: '/images/og/lucknow-og.jpg'
   }),

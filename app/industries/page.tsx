@@ -100,7 +100,7 @@ export default function IndustriesIndexPage() {
                     <h3 className="text-lg sm:text-xl font-bold text-slate-900 mb-3">{ind.title}</h3>
                     <p className="text-sm text-on-surface-variant leading-relaxed mb-6">{ind.desc}</p>
                   </div>
-                  <Button href={`/industries/${ind.slug}`} variant="outline" className="w-full sm:w-auto mt-auto">
+                  <Button href={`/industries/${ind.slug}`} variant="outline" className="w-full sm:w-auto mt-auto" id={`industries-card-btn-${ind.slug}`}>
                     View Solutions →
                   </Button>
                 </Card>

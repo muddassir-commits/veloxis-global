@@ -15,7 +15,7 @@ import { FaqAccordion } from '../../components/sections/FaqAccordion';
 export const metadata: Metadata = {
   ...constructMetadata({
     title: "Best Digital Marketing Agency in Delhi 2026 | Veloxis Global",
-    description: "Looking for the best digital marketing agency in Delhi? Veloxis Global delivers proven SEO, Google Ads & Social Media results for Delhi businesses. Serving South Delhi, NCR & all of Delhi. Free audit.",
+    description: "Looking for the best digital marketing agency in Delhi? Veloxis Global delivers proven SEO, Google Ads & social campaigns for Delhi and NCR businesses. Free audit.",
     path: "/digital-marketing-agency-delhi",
     ogImage: '/images/og/delhi-og.jpg'
   }),

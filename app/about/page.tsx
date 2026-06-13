@@ -20,6 +20,7 @@ import {
 } from 'lucide-react';
 import { Linkedin } from '../../components/ui/BrandIcons';
 import { constructMetadata, pageMeta } from '../../lib/seo-config';
+import { FaqAccordion } from '../../components/sections/FaqAccordion';
 
 // 1. Dynamic Metadata with E-E-A-T optimization
 export function generateMetadata(): Metadata {
@@ -430,6 +431,26 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
+
+      {/* About FAQs */}
+      <FaqAccordion
+        title="About Veloxis Global FAQs"
+        badgeText="FAQ"
+        customFaqs={[
+          {
+            question: "Who is the founder of Veloxis Global?",
+            answer: "Veloxis Global was founded by Muddassir Ali, a digital marketing consultant with over 6 years of experience in lead generation, search engine optimization (SEO), Meta ads campaigns, and marketing CRM integrations."
+          },
+          {
+            question: "Where is Veloxis Global based?",
+            answer: "Veloxis Global is based in Kanpur, Uttar Pradesh, India. However, we operate on a remote-first collaborative model, servicing clients across Delhi NCR, Noida, Lucknow, and international markets."
+          },
+          {
+            question: "What makes Veloxis Global different from traditional agencies?",
+            answer: "We don't sell vanity metrics like impressions or clicks. We build complete sales pipelines, linking paid traffic directly with custom-built landing pages, lead routing mechanisms, WhatsApp automations, and CRM integrations for clear business growth."
+          }
+        ]}
+      />
 
       {/* CTA Section */}
       <section className="py-20 bg-slate-900 text-white relative overflow-hidden text-center">

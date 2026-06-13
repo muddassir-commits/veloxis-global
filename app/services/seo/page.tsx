@@ -13,7 +13,7 @@ import { constructMetadata, pageMeta } from '../../../lib/seo-config';
 // 1. Static Metadata with canonical alternates
 export const metadata: Metadata = constructMetadata({
   title: "Expert SEO Services in India 2026 — Rank #1 on Google | Veloxis Global",
-  description: "India's results-driven SEO agency. Technical SEO, local SEO, link building for businesses across India. Serving Delhi, Noida, Lucknow & Kanpur. Get your free SEO audit today.",
+  description: "India's results-driven SEO agency. Technical SEO, local SEO, and link building. Serving Delhi, Noida, Lucknow & Kanpur. Get your free SEO audit today.",
   path: "/services/seo"
 });
 

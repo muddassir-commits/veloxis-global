@@ -52,10 +52,10 @@ export default function EducationIndustryPage() {
               Serving private universities, professional coaching institutes, and skill development academies across Noida, Delhi NCR, and Lucknow.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
-              <Button href="/free-seo-audit" variant="primary">
+              <Button id="education-hero-audit-btn" href="/free-seo-audit" variant="primary">
                 Get Academy Audit →
               </Button>
-              <Button href="/contact" variant="outline">
+              <Button id="education-hero-contact-btn" href="/contact" variant="outline">
                 Book Academy Call
               </Button>
             </div>

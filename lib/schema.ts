@@ -107,7 +107,11 @@ export const generateArticleSchema = (title: string, author: string = "Muddassir
     "author": {
       "@type": "Person",
       "name": author || "Muddassir Ali",
-      "url": "https://veloxisglobal.com/about"
+      "url": "https://veloxisglobal.com/about",
+      "sameAs": [
+        "https://www.linkedin.com/in/muddassir-alii/",
+        "https://x.com/muddassir_alii"
+      ]
     },
     "publisher": {
       "@type": "Organization",
@@ -145,7 +149,12 @@ export const generateOrganizationSchema = () => {
     "founders": [
       {
         "@type": "Person",
-        "name": "Muddassir Ali"
+        "name": "Muddassir Ali",
+        "url": "https://veloxisglobal.com/about",
+        "sameAs": [
+          "https://www.linkedin.com/in/muddassir-alii/",
+          "https://x.com/muddassir_alii"
+        ]
       }
     ],
     "sameAs": [

@@ -52,10 +52,10 @@ export default function RealEstateIndustryPage() {
               We have helped Delhi NCR, Noida, and Lucknow developers generate qualified inquiries for residential apartments, luxury villas, and commercial properties.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
-              <Button href="/free-seo-audit" variant="primary">
+              <Button id="realestate-hero-audit-btn" href="/free-seo-audit" variant="primary">
                 Get Real Estate Audit →
               </Button>
-              <Button href="/contact" variant="outline">
+              <Button id="realestate-hero-contact-btn" href="/contact" variant="outline">
                 Talk to Strategy Lead
               </Button>
             </div>

@@ -2,6 +2,8 @@ import React from 'react';
 import { Metadata } from 'next';
 import { Breadcrumb } from '../../components/ui/Breadcrumb';
 import { Badge } from '../../components/ui/Badge';
+import { SchemaMarkup } from '../../components/ui/SchemaMarkup';
+import { FaqAccordion } from '../../components/sections/FaqAccordion';
 import { constructMetadata } from '../../lib/seo-config';
 
 export const metadata: Metadata = constructMetadata({
@@ -13,8 +15,42 @@ export const metadata: Metadata = constructMetadata({
 export default function TermsPage() {
   const breadcrumbItems = [{ name: 'Terms of Service', href: '/terms' }];
 
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://veloxisglobal.com"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Terms of Service",
+        "item": "https://veloxisglobal.com/terms"
+      }
+    ]
+  };
+
+  const webPageSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://veloxisglobal.com/terms#webpage",
+    "url": "https://veloxisglobal.com/terms",
+    "name": "Terms of Service | Veloxis Global",
+    "description": "Read the Terms of Service for Veloxis Global to learn about our digital agency agreements.",
+    "publisher": {
+      "@id": "https://veloxisglobal.com/#organization"
+    }
+  };
+
   return (
     <>
+      <SchemaMarkup schema={breadcrumbSchema} />
+      <SchemaMarkup schema={webPageSchema} />
+
       <section className="bg-slate-50 py-8 border-b border-slate-100">
         <div className="max-w-container-max mx-auto px-gutter text-left">
           <Breadcrumb items={breadcrumbItems} />
@@ -31,16 +67,46 @@ export default function TermsPage() {
             <p>By accessing this website, you agree to comply with and be bound by the following Terms of Service. If you disagree with any part of these terms, please do not use our site or request audits.</p>
             
             <h2 className="text-lg font-extrabold text-slate-900 mt-4">1. Strategy Audits</h2>
-            <p>Our Free SEO Audits are delivered in good faith as manual reviews of your public web presence. We make no guarantees regarding rank improvements or lead conversions from implementing our recommended checklists.</p>
+            <p>Our Free SEO Audits are delivered in good faith. Key provisions include:</p>
+            <ul className="list-disc pl-5 flex flex-col gap-2">
+              <li>Audits are manual assessments of public web visibility.</li>
+              <li>We make no guarantees regarding rankings from implementing fixes.</li>
+              <li>All recommendations are action roadmaps, not contracts.</li>
+            </ul>
 
-            <h2 className="text-lg font-extrabold text-slate-900 mt-4">2. Month-to-Month Service Agreement</h2>
-            <p>Our digital marketing packages are billed on a month-to-month basis, unless specified otherwise in a signed contract. Clients can cancel recurring campaigns by giving a 30-day written notice.</p>
+            <h2 className="text-lg font-extrabold text-slate-900 mt-4">2. Month-to-Month Agreements</h2>
+            <p>Our performance services operate on flexible, transparent frameworks:</p>
+            <ul className="list-disc pl-5 flex flex-col gap-2">
+              <li>Marketing retainer packages run on a month-to-month basis.</li>
+              <li>Clients can pause or terminate campaigns with a 30-day notice.</li>
+              <li>No lock-in contracts or hidden cancellation penalties.</li>
+            </ul>
 
             <h2 className="text-lg font-extrabold text-slate-900 mt-4">3. Governing Law</h2>
-            <p>Any claims relating to Veloxis Global services shall be governed by the laws of India and subject to Kanpur jurisdiction.</p>
+            <p>These terms and conditions are governed by regional Indian laws:</p>
+            <ul className="list-disc pl-5 flex flex-col gap-2">
+              <li>Governing body is the Government of India.</li>
+              <li>Any claims are subject strictly to Kanpur, Uttar Pradesh jurisdiction.</li>
+            </ul>
           </div>
         </div>
       </section>
+
+      {/* Terms of Service FAQ Accordion */}
+      <FaqAccordion
+        title="Terms & Contracts FAQ"
+        badgeText="TERMS FAQ"
+        customFaqs={[
+          {
+            question: "Do you require long-term contract lock-ins?",
+            answer: "No. Our digital marketing retainer packages are built on flexible month-to-month terms. You can pause or cancel at any time with a 30-day notice."
+          },
+          {
+            question: "What jurisdiction governs these service terms?",
+            answer: "All agreements and terms of service are governed by the laws of India, subject to courts in Kanpur, Uttar Pradesh."
+          }
+        ]}
+      />
     </>
   );
 }

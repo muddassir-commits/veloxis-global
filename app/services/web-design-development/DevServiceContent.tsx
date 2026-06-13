@@ -187,10 +187,10 @@ export default function DevServiceContent() {
               Partner with a leading website design company Delhi Noida 2026. We build premium, high-performance Next.js React websites optimized for lightning speed, SEO crawl paths, and client conversion.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 mt-2 w-full sm:w-auto">
-              <Button href="/contact" variant="primary" size="lg" className="w-full sm:w-auto text-center">
+              <Button id="dev-hero-quote-btn" href="/contact" variant="primary" size="lg" className="w-full sm:w-auto text-center">
                 Get Custom Quote →
               </Button>
-              <Button href="/free-seo-audit" variant="ghost" size="lg" className="w-full sm:w-auto text-white border-white/20 hover:bg-white/10 text-center">
+              <Button id="dev-hero-audit-btn" href="/free-seo-audit" variant="ghost" size="lg" className="w-full sm:w-auto text-white border-white/20 hover:bg-white/10 text-center">
                 Request Free Audit
               </Button>
             </div>
@@ -250,6 +250,7 @@ export default function DevServiceContent() {
             {(['nextjs', 'mobile', 'cro'] as const).map((tab) => (
               <button
                 key={tab}
+                id={`dev-tab-btn-${tab}`}
                 onClick={() => setActiveTab(tab)}
                 className={`py-4 px-4 sm:px-6 text-sm font-extrabold uppercase tracking-wider relative transition-colors ${
                   activeTab === tab ? 'text-royal-blue' : 'text-slate-400 hover:text-slate-600'
@@ -388,7 +389,7 @@ export default function DevServiceContent() {
                 Pricing is tailored to your goals and market. Contact us for a free quote — we'll recommend exactly what you need.
               </p>
             </div>
-            <Button href="/contact" variant="primary" size="lg" className="shrink-0 w-full md:w-auto text-center">
+            <Button id="dev-pricing-quote-btn" href="/contact" variant="primary" size="lg" className="shrink-0 w-full md:w-auto text-center">
               Get Custom Quote →
             </Button>
           </div>
@@ -417,6 +418,7 @@ export default function DevServiceContent() {
                 className="bg-white border border-slate-100 rounded-xl overflow-hidden shadow-sm"
               >
                 <button
+                  id={`dev-faq-btn-${idx}`}
                   onClick={() => toggleFaq(idx)}
                   className="w-full px-6 py-4 flex items-center justify-between text-left font-bold text-slate-900 hover:text-royal-blue transition-colors text-sm sm:text-base gap-4"
                 >

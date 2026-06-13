@@ -135,7 +135,7 @@ export default function ContactPage() {
               <p className="text-xs sm:text-sm text-slate-300 leading-relaxed max-w-xs">
                  Pick a 30-minute slot on our calendar to discuss your digital audit results directly with our strategy director.
               </p>
-              <Button href="https://calendly.com/veloxisglobal/30min" target="_blank" variant="white" className="w-full mt-2">
+              <Button id="contact-calendly-btn" href="https://calendly.com/veloxisglobal/30min" target="_blank" variant="white" className="w-full mt-2">
                 Book a Strategy Call →
               </Button>
             </Card>
