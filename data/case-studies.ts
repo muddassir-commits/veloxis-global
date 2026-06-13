@@ -27,6 +27,7 @@ export interface CaseStudy {
   metaDescription: string;
   sections: CaseStudySection[];
   dataComparison: CaseStudyMetricTable[];
+  serviceCategory: 'SEO' | 'Google Ads' | 'Social Media';
 }
 
 export const caseStudies: CaseStudy[] = [
@@ -47,6 +48,7 @@ export const caseStudies: CaseStudy[] = [
     image: "/images/case-studies/real-estate-delhi.jpg",
     metaTitle: "Delhi Real Estate Developer SEO Case Study | Veloxis Global",
     metaDescription: "Discover how we generated +340% organic traffic for a Delhi real estate developer. Read the full case study to scale your online property sales today.",
+    serviceCategory: "SEO",
     dataComparison: [
       { metricName: "Monthly Organic Visitors", beforeValue: "150", afterValue: "35,200", improvementPercentage: "+23,366%" },
       { metricName: "Google Map Citations / Month", beforeValue: "12", afterValue: "420", improvementPercentage: "+3,400%" },
@@ -123,6 +125,7 @@ export const caseStudies: CaseStudy[] = [
     image: "/images/case-studies/edtech-noida.jpg",
     metaTitle: "Noida EdTech PPC Lead Generation Case Study | Veloxis",
     metaDescription: "How we cut EdTech cost-per-lead by 42% for a Noida academy. Explore our paid ads strategy and landing page A/B testing to scale your conversions.",
+    serviceCategory: "Google Ads",
     dataComparison: [
       { metricName: "Average Cost-Per-Lead (CPL)", beforeValue: "₹450", afterValue: "₹260", improvementPercentage: "-42.2%" },
       { metricName: "Monthly Course Enquiries", beforeValue: "180", afterValue: "390", improvementPercentage: "+116%" },
@@ -199,6 +202,7 @@ export const caseStudies: CaseStudy[] = [
     image: "/images/case-studies/healthcare-lucknow.jpg",
     metaTitle: "Lucknow Healthcare Lead Generation | Veloxis Global",
     metaDescription: "Learn how we generated 500 patient leads in 90 days for a Lucknow clinic. Read our local SEO map pack blueprint to drive your clinic bookings now.",
+    serviceCategory: "Social Media",
     dataComparison: [
       { metricName: "Monthly Patient Inquiries", beforeValue: "45", afterValue: "185", improvementPercentage: "+311%" },
       { metricName: "Hazratganj Map Pack Position", beforeValue: "#14", afterValue: "#2", improvementPercentage: "+85%" },
@@ -275,6 +279,7 @@ export const caseStudies: CaseStudy[] = [
     image: "/images/case-studies/manufacturing-kanpur.jpg",
     metaTitle: "Kanpur B2B Manufacturing SEO Case Study | Veloxis Global",
     metaDescription: "Discover how we scaled B2B lead generation by 220% for a Kanpur fabric manufacturer. Read the strategy guide to grow your wholesale sales online.",
+    serviceCategory: "SEO",
     dataComparison: [
       { metricName: "Monthly B2B Wholesale Leads", beforeValue: "18", afterValue: "58", improvementPercentage: "+222%" },
       { metricName: "Average Organic Rankings (B2B terms)", beforeValue: "Page 4", afterValue: "#3 on Page 1", improvementPercentage: "+91%" },

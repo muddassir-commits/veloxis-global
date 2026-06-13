@@ -1,5 +1,6 @@
 import React from 'react';
 import { Metadata } from 'next';
+import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { caseStudies } from '../../../data/case-studies';
 import { constructMetadata } from '../../../lib/seo-config';
@@ -187,6 +188,46 @@ export default function SingleCaseStudyPage({ params }: Params) {
                 Request Free Audit →
               </Button>
             </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Related Case Studies Section */}
+      <section className="bg-slate-50 py-16 border-t border-b border-slate-100 text-left">
+        <div className="max-w-container-max mx-auto px-gutter">
+          <h2 className="text-2xl font-extrabold text-slate-900 mb-8 tracking-tight">
+            Read Other Case Studies
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {caseStudies
+              .filter((s) => s.slug !== study.slug)
+              .slice(0, 3)
+              .map((other) => (
+                <Card 
+                  key={other.id} 
+                  hoverable={true} 
+                  className="bg-white border border-slate-100 p-6 flex flex-col justify-between h-full"
+                >
+                  <div className="flex flex-col gap-3">
+                    <div className="flex gap-2">
+                      <Badge variant="teal">{other.industry}</Badge>
+                      <Badge variant="indigo">{other.location}</Badge>
+                    </div>
+                    <h3 className="font-bold text-slate-900 text-base hover:text-royal-blue transition-colors">
+                      <Link href={`/case-studies/${other.slug}`} id={`related-study-link-${other.id}`}>
+                        {other.title}
+                      </Link>
+                    </h3>
+                    <p className="text-xs text-on-surface-variant line-clamp-3 leading-relaxed">
+                      {other.challenge}
+                    </p>
+                  </div>
+                  <div className="mt-4 pt-4 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-royal-blue">
+                    <span>Read Success Story</span>
+                    <span>→</span>
+                  </div>
+                </Card>
+              ))}
           </div>
         </div>
       </section>

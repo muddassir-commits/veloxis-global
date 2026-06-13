@@ -34,42 +34,42 @@ export const CasestudyFeature: React.FC = () => {
             {/* Left Column */}
             <div className="lg:col-span-7 flex flex-col items-start gap-5">
               <Badge variant="teal" className="px-3 py-1 font-bold text-xs uppercase tracking-wider bg-teal-accent/10 border border-teal-accent/20 text-teal-accent">
-                E-Commerce · Delhi · 5 Months
+                Real Estate · Delhi · 6 Months
               </Badge>
 
               <h3 className="text-2xl sm:text-headline-md font-extrabold text-white leading-tight">
-                How We Helped a Delhi E-Commerce Brand Grow 280% Organically
+                How We Took a Delhi Real Estate Developer from 0 to 35,000 Monthly Visitors
               </h3>
 
               <div className="text-body-md text-white/70 space-y-3">
                 <p>
-                  <strong>Challenge:</strong> Zero Google visibility, no digital strategy.
+                  <strong>Challenge:</strong> Zero online presence, relying completely on traditional print media and local agents, losing leads to digital-first competitors.
                 </p>
                 <p>
-                  <strong>Strategy:</strong> Technical SEO + Content + Google Ads targeting high-intent buyers.
+                  <strong>Strategy:</strong> Implemented geo-targeted Local SEO campaigns, optimized Google Business Profiles, and ran high-performance landing pages and search campaigns.
                 </p>
               </div>
 
               {/* Metric Chips — CSS stagger */}
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 w-full my-4 stagger-reveal">
                 <div className="bg-teal-accent/20 border border-teal-accent/30 rounded-lg px-4 py-3 flex flex-col items-start">
-                  <span className="text-xl font-bold text-teal-accent">↑ 280%</span>
+                  <span className="text-xl font-bold text-teal-accent">↑ 340%</span>
                   <span className="text-[10px] font-bold text-teal-accent uppercase tracking-wider mt-0.5">Organic Traffic</span>
                 </div>
 
                 <div className="bg-sunset-orange/20 border border-sunset-orange/30 rounded-lg px-4 py-3 flex flex-col items-start">
-                  <span className="text-xl font-bold text-sunset-orange">4.8x</span>
+                  <span className="text-xl font-bold text-sunset-orange">5.2x</span>
                   <span className="text-[10px] font-bold text-sunset-orange uppercase tracking-wider mt-0.5">Return on Ad Spend</span>
                 </div>
 
                 <div className="bg-indigo-accent/20 border border-indigo-accent/30 rounded-lg px-4 py-3 flex flex-col items-start">
-                  <span className="text-xl font-bold text-indigo-accent">#1 for 12</span>
+                  <span className="text-xl font-bold text-indigo-accent">#1 for 18</span>
                   <span className="text-[10px] font-bold text-indigo-accent uppercase tracking-wider mt-0.5">Keywords</span>
                 </div>
               </div>
 
               <Button
-                href="/case-studies/delhi-ecommerce-brand"
+                href="/case-studies/delhi-real-estate-developer"
                 variant="outline"
                 className="border-white text-white hover:bg-white/10 hover:text-white"
               >
@@ -84,7 +84,7 @@ export const CasestudyFeature: React.FC = () => {
                   <span className="font-semibold">Performance (Last 6 Months)</span>
                   <span className="text-teal-accent flex items-center gap-1">
                     <TrendingUp className="w-3.5 h-3.5" aria-hidden="true" />
-                    +342.1%
+                    +340%
                   </span>
                 </div>
 
@@ -134,18 +134,18 @@ export const CasestudyFeature: React.FC = () => {
                   <tbody>
                     <tr className="border-b border-white/5">
                       <td className="py-1 text-slate-300">Visits/mo</td>
-                      <td className="py-1 text-right text-slate-500">1.2k</td>
-                      <td className="py-1 text-right font-bold text-teal-accent">35.4k</td>
+                      <td className="py-1 text-right text-slate-500">150</td>
+                      <td className="py-1 text-right font-bold text-teal-accent">35.2k</td>
                     </tr>
                     <tr className="border-b border-white/5">
-                      <td className="py-1 text-slate-300">Leads/mo</td>
-                      <td className="py-1 text-right text-slate-500">18</td>
-                      <td className="py-1 text-right font-bold text-teal-accent">142</td>
+                      <td className="py-1 text-slate-300">Citations</td>
+                      <td className="py-1 text-right text-slate-500">12</td>
+                      <td className="py-1 text-right font-bold text-teal-accent">420</td>
                     </tr>
                     <tr>
                       <td className="py-1 text-slate-300">CPL</td>
-                      <td className="py-1 text-right text-slate-500">₹850</td>
-                      <td className="py-1 text-right font-bold text-teal-accent">₹210</td>
+                      <td className="py-1 text-right text-slate-500">₹3,400</td>
+                      <td className="py-1 text-right font-bold text-teal-accent">₹650</td>
                     </tr>
                   </tbody>
                 </table>

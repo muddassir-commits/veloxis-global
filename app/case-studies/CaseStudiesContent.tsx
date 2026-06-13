@@ -7,79 +7,13 @@ import { Card } from '../../components/ui/Card';
 import { Button } from '../../components/ui/Button';
 import { ArrowRight, Calendar, MapPin, TrendingUp } from 'lucide-react';
 
-interface CaseStudy {
-  id: string;
-  slug: string;
-  title: string;
-  industry: string;
-  location: string;
-  duration: string;
-  challenge: string;
-  strategy: string;
-  metrics: string[];
-  image: string;
-  serviceCategory: 'SEO' | 'Google Ads' | 'Social Media';
-}
-
-const caseStudiesData: CaseStudy[] = [
-  {
-    id: "delhi-real-estate",
-    slug: "delhi-real-estate-developer",
-    title: "How We Took a Delhi Real Estate Developer from 0 to 35,000 Monthly Visitors",
-    industry: "Real Estate",
-    location: "Delhi",
-    duration: "6 Months",
-    challenge: "Zero online presence, relying completely on traditional print media and local agents, losing leads to digital-first competitors.",
-    strategy: "Implemented geo-targeted Local SEO campaigns, set up and optimized Google Business Profiles for high-priority projects, designed high-performance landing pages, and ran targeted Google Search campaigns.",
-    metrics: [
-      "+340% Organic Traffic",
-      "5.2x Return on Ad Spend (ROAS)",
-      "#1 on Google for 18 High-Intent Keywords"
-    ],
-    image: "/images/case-studies/real-estate-delhi.jpg",
-    serviceCategory: "SEO"
-  },
-  {
-    id: "noida-ecommerce",
-    slug: "noida-edtech-lead-generation",
-    title: "How Noida SkillEdge Academy Cut PPC Cost-Per-Lead by 42%",
-    industry: "EdTech",
-    location: "Noida",
-    duration: "2 Months",
-    challenge: "High cost-per-lead (CPL) on Meta Ads, flatlining organic reach, and unoptimized landing pages that bounced traffic.",
-    strategy: "Restructured Google Search Campaigns, built negative keyword lists, implemented A/B testing on landing page headlines and forms, and set up clear CRM conversion tracking pipelines.",
-    metrics: [
-      "42% Reduction in Cost-Per-Lead",
-      "2x Lead Volume in 60 Days",
-      "5.2x ROAS on Course Registrations"
-    ],
-    image: "/images/case-studies/edtech-noida.jpg",
-    serviceCategory: "Google Ads"
-  },
-  {
-    id: "lucknow-healthcare",
-    slug: "lucknow-healthcare-leads",
-    title: "Generating 500 Qualified Patient Leads in 90 Days for a Lucknow Healthcare Brand",
-    industry: "Healthcare",
-    location: "Lucknow",
-    duration: "3 Months",
-    challenge: "Low patient walk-ins across multiple local multi-specialty clinics. Low local maps visibility.",
-    strategy: "Optimized Google Business Profiles for local search packs, ran targeted hyper-local Facebook Ads, and set up a streamlined booking funnel on a mobile-responsive landing page.",
-    metrics: [
-      "500+ Qualified Patient Leads",
-      "60% Increase in Patient Footfall",
-      "100% Correct Map Rankings for 3 Locations"
-    ],
-    image: "/images/case-studies/healthcare-lucknow.jpg",
-    serviceCategory: "Social Media"
-  }
-];
+import { caseStudies } from '../../data/case-studies';
 
 export default function CaseStudiesContent() {
   const [activeFilter, setActiveFilter] = useState<string>('All');
   const filters = ['All', 'SEO', 'Google Ads', 'Social Media'];
 
-  const filteredStudies = caseStudiesData.filter(
+  const filteredStudies = caseStudies.filter(
     (study) => activeFilter === 'All' || study.serviceCategory === activeFilter
   );
 
