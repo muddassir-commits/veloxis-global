@@ -6,11 +6,15 @@ import { Footer } from '../components/layout/Footer';
 import { WhatsAppWidget } from '../components/layout/WhatsAppWidget';
 import { CookieBanner } from '../components/layout/CookieBanner';
 import AnalyticsTracker from '../components/analytics/AnalyticsTracker';
+import { constructMetadata } from '../lib/seo-config';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'Best Digital Marketing Agency in Delhi, Noida, Lucknow & Kanpur | Veloxis Global',
-  description: 'Veloxis Global — India\'s trusted digital marketing agency delivering SEO, Google Ads, Social Media & Content marketing for Delhi, Noida, Lucknow & Kanpur.',
+  ...constructMetadata({
+    title: 'Best Digital Marketing Agency in Delhi, Noida, Lucknow & Kanpur | Veloxis Global',
+    description: 'Veloxis Global — India\'s trusted digital marketing agency delivering SEO, Google Ads, Social Media & Content marketing for Delhi, Noida, Lucknow & Kanpur.',
+    path: '/'
+  }),
   icons: {
     icon: [
       { url: '/favicon.ico?v=2' },

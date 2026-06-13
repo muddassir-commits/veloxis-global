@@ -6,6 +6,7 @@ import Image from 'next/image';
 import { Calendar, User, Clock, ChevronLeft, ChevronRight, Search } from 'lucide-react';
 import { Badge } from '../../components/ui/Badge';
 import { Button } from '../../components/ui/Button';
+import { Card } from '../../components/ui/Card';
 
 interface Post {
   slug: string;
@@ -17,6 +18,7 @@ interface Post {
   authorPhoto: string;
   date: string;
   readTime: string;
+  image: string;
   featured?: boolean;
 }
 
@@ -31,6 +33,7 @@ const allPostsData: Post[] = [
     authorPhoto: '/images/profiles/Muddassir_Ali.webp',
     date: 'May 20, 2026',
     readTime: '6 min read',
+    image: '/images/blog/seo-2026-guide.png',
     featured: true
   },
   {
@@ -42,7 +45,8 @@ const allPostsData: Post[] = [
     author: 'Muddassir Ali',
     authorPhoto: '/images/profiles/Muddassir_Ali.webp',
     date: 'May 15, 2026',
-    readTime: '5 min read'
+    readTime: '5 min read',
+    image: '/images/blog/google-meta-roi.png'
   },
   {
     slug: 'how-to-optimize-google-business-profile-2026',
@@ -53,7 +57,8 @@ const allPostsData: Post[] = [
     author: 'Muddassir Ali',
     authorPhoto: '/images/profiles/Muddassir_Ali.webp',
     date: 'May 10, 2026',
-    readTime: '7 min read'
+    readTime: '7 min read',
+    image: '/images/blog/gbp-local-seo.png'
   },
   {
     slug: 'content-marketing-eeat-framework',
@@ -64,7 +69,8 @@ const allPostsData: Post[] = [
     author: 'Muddassir Ali',
     authorPhoto: '/images/profiles/Muddassir_Ali.webp',
     date: 'May 05, 2026',
-    readTime: '6 min read'
+    readTime: '6 min read',
+    image: '/images/blog/eeat-content-blueprint.png'
   },
   {
     slug: 'instagram-reels-funnel-local-brands',
@@ -75,7 +81,8 @@ const allPostsData: Post[] = [
     author: 'Muddassir Ali',
     authorPhoto: '/images/profiles/Muddassir_Ali.webp',
     date: 'April 28, 2026',
-    readTime: '6 min read'
+    readTime: '6 min read',
+    image: '/images/blog/instagram-reels-funnel.png'
   },
   {
     slug: 'meta-performance-max-best-practices',
@@ -86,7 +93,8 @@ const allPostsData: Post[] = [
     author: 'Muddassir Ali',
     authorPhoto: '/images/profiles/Muddassir_Ali.webp',
     date: 'April 20, 2026',
-    readTime: '5 min read'
+    readTime: '5 min read',
+    image: '/images/blog/pmax-performance.png'
   }
 ];
 
@@ -143,6 +151,7 @@ export default function BlogContent() {
           <div className="relative w-full max-w-sm">
             <Search className="w-4 h-4 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2" />
             <input
+              id="blog-search-input"
               type="text"
               placeholder="Search guides..."
               value={searchQuery}
@@ -160,6 +169,7 @@ export default function BlogContent() {
             {categories.map((cat) => (
               <button
                 key={cat}
+                id={`blog-category-btn-${cat.toLowerCase().replace(/\s+/g, '-')}`}
                 onClick={() => handleCategoryChange(cat)}
                 className={`px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider shrink-0 transition-colors ${
                   selectedCategory === cat 
@@ -177,17 +187,18 @@ export default function BlogContent() {
       <div className="max-w-container-max mx-auto px-gutter mt-12">
         {/* 1. Featured Post Hero */}
         {featuredPost && currentPage === 1 && searchQuery === '' && (
-          <div className="bg-white border border-slate-100 rounded-2xl overflow-hidden shadow-sm grid grid-cols-1 lg:grid-cols-12 gap-0 mb-12 hover:shadow-md transition-shadow">
+          <Card hover className="bg-white border border-slate-100 rounded-2xl overflow-hidden grid grid-cols-1 lg:grid-cols-12 gap-0 mb-12 h-full p-0 group">
             
             {/* Visual Block (Left 5 cols) */}
-            <div className="lg:col-span-5 bg-slate-100 relative min-h-[260px] lg:min-h-full">
-              <div className="absolute inset-0 bg-[radial-gradient(#cbd5e1_1px,transparent_1px)] bg-[size:16px_16px] opacity-25"></div>
-              <div className="absolute inset-0 flex items-center justify-center">
-                <span className="text-5xl font-extrabold text-slate-300 uppercase tracking-widest select-none">
-                  {featuredPost.category}
-                </span>
-              </div>
-              <div className="absolute top-6 left-6">
+            <div className="lg:col-span-5 bg-slate-100 relative min-h-[260px] lg:min-h-full overflow-hidden">
+              <Image 
+                src={featuredPost.image} 
+                alt={featuredPost.title} 
+                fill 
+                className="object-cover transition-transform duration-500 group-hover:scale-105"
+                priority
+              />
+              <div className="absolute top-6 left-6 z-10">
                 <Badge color={featuredPost.badgeColor}>{featuredPost.category}</Badge>
               </div>
             </div>
@@ -238,7 +249,7 @@ export default function BlogContent() {
               </div>
             </div>
 
-          </div>
+          </Card>
         )}
 
         {/* 2. Grid Posts (3-column) */}
@@ -250,17 +261,20 @@ export default function BlogContent() {
           <div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {currentGridPosts.map((post) => (
-                <div 
+                <Card 
                   key={post.slug} 
-                  className="bg-white border border-slate-100 rounded-xl overflow-hidden shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow h-full"
+                  hover
+                  className="bg-white border border-slate-100 rounded-xl overflow-hidden flex flex-col justify-between h-full p-0 group"
                 >
                   {/* Card Visual Header */}
-                  <div className="h-44 bg-slate-100 relative border-b border-slate-50 flex items-center justify-center">
-                    <div className="absolute inset-0 bg-[radial-gradient(#cbd5e1_1px,transparent_1px)] bg-[size:12px_12px] opacity-35"></div>
-                    <span className="text-3xl font-extrabold text-slate-300 uppercase tracking-widest select-none">
-                      {post.category}
-                    </span>
-                    <div className="absolute top-4 left-4">
+                  <div className="h-44 bg-slate-100 relative border-b border-slate-50 flex items-center justify-center overflow-hidden">
+                    <Image 
+                      src={post.image} 
+                      alt={post.title} 
+                      fill 
+                      className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                    <div className="absolute top-4 left-4 z-10">
                       <Badge color={post.badgeColor}>{post.category}</Badge>
                     </div>
                   </div>
@@ -295,7 +309,7 @@ export default function BlogContent() {
                       </div>
                     </div>
                   </div>
-                </div>
+                </Card>
               ))}
             </div>
 
@@ -303,6 +317,7 @@ export default function BlogContent() {
             {totalPages > 1 && (
               <div className="flex items-center justify-center gap-2 mt-12 pt-6 border-t border-slate-200">
                 <button
+                  id="blog-prev-page-btn"
                   onClick={() => setCurrentPage(prev => Math.max(prev - 1, 1))}
                   disabled={currentPage === 1}
                   className="w-10 h-10 rounded-lg bg-white border border-slate-200 flex items-center justify-center hover:bg-slate-50 transition-colors disabled:opacity-50"
@@ -313,6 +328,7 @@ export default function BlogContent() {
                   Page {currentPage} of {totalPages}
                 </span>
                 <button
+                  id="blog-next-page-btn"
                   onClick={() => setCurrentPage(prev => Math.min(prev + 1, totalPages))}
                   disabled={currentPage === totalPages}
                   className="w-10 h-10 rounded-lg bg-white border border-slate-200 flex items-center justify-center hover:bg-slate-50 transition-colors disabled:opacity-50"

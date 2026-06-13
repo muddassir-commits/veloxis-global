@@ -194,12 +194,57 @@ export default function SeoServiceContent() {
               Rank higher, drive qualified traffic, and grow revenue — with data-driven SEO built for Delhi, Noida, Lucknow & Kanpur.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 mt-2 w-full sm:w-auto">
-              <Button href="/free-seo-audit" variant="primary" size="lg" className="w-full sm:w-auto text-center">
+              <Button id="seo-hero-free-audit-btn" href="/free-seo-audit" variant="primary" size="lg" className="w-full sm:w-auto text-center">
                 Get Free SEO Audit →
               </Button>
-              <Button href="/contact" variant="ghost" size="lg" className="w-full sm:w-auto text-white border-white/20 hover:bg-white/10 text-center">
+              <Button id="seo-hero-talk-director-btn" href="/contact" variant="ghost" size="lg" className="w-full sm:w-auto text-white border-white/20 hover:bg-white/10 text-center">
                 Talk to SEO Director
               </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* AEO Summary Box Overlay */}
+      <section className="relative z-20 max-w-container-max mx-auto px-gutter mt-[-30px] lg:mt-[-40px]">
+        <div className="bg-white border border-slate-200 rounded-2xl p-6 sm:p-8 shadow-lg max-w-4xl mx-auto text-left relative overflow-hidden">
+          <div className="absolute top-0 right-0 w-32 h-32 bg-royal-blue/5 rounded-full blur-2xl"></div>
+          
+          <div className="flex flex-col gap-4">
+            <div className="flex items-center gap-2">
+              <span className="w-2.5 h-2.5 rounded-full bg-teal-accent animate-pulse" />
+              <span className="text-xs font-bold text-slate-500 uppercase tracking-widest">
+                AEO & GEO DIRECT ANSWER SUITE (2026 UPDATE)
+              </span>
+            </div>
+            
+            <h2 className="text-xl sm:text-2xl font-extrabold text-slate-900 leading-tight">
+              What are Professional SEO Services?
+            </h2>
+            
+            <p className="text-sm sm:text-base text-on-surface-variant leading-relaxed font-medium">
+              <strong>Definition:</strong> Professional SEO services are data-driven strategies designed to optimize a website's visibility in search engine results. Under the modern 2026 search framework, this transitions beyond traditional keyword ranks into <strong>Generative Engine Optimization (GEO)</strong>—ensuring a brand is cited directly by AI search engines like Gemini, ChatGPT, and Perplexity, while maintaining strict adherence to Google's E-E-A-T credentials.
+            </p>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 border-t border-slate-100 pt-4 mt-2">
+              <div>
+                <span className="text-xs font-bold text-royal-blue block uppercase tracking-wider mb-1">1. Generative Engine Optimization</span>
+                <p className="text-xs text-slate-500 leading-relaxed">
+                  Structuring content with FAQs, definitions, and clear data tables so LLMs can easily parse, extract, and cite your pages.
+                </p>
+              </div>
+              <div>
+                <span className="text-xs font-bold text-royal-blue block uppercase tracking-wider mb-1">2. Semantic Subject Authority</span>
+                <p className="text-xs text-slate-500 leading-relaxed">
+                  Mapping user search intent into semantic clusters rather than exact keywords, matching conversational query structures.
+                </p>
+              </div>
+              <div>
+                <span className="text-xs font-bold text-royal-blue block uppercase tracking-wider mb-1">3. E-E-A-T Credentials</span>
+                <p className="text-xs text-slate-500 leading-relaxed">
+                  Linking content to certified expert authors (e.g. founder Muddassir Ali) to verify experience, authority, and trust signals.
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -258,6 +303,7 @@ export default function SeoServiceContent() {
             {(['local', 'national', 'ecommerce'] as const).map((tab) => (
               <button
                 key={tab}
+                id={`seo-tab-btn-${tab}`}
                 onClick={() => setActiveTab(tab)}
                 className={`py-4 px-4 sm:px-6 text-sm font-extrabold uppercase tracking-wider relative transition-colors ${
                   activeTab === tab ? 'text-royal-blue' : 'text-slate-400 hover:text-slate-600'
@@ -402,7 +448,7 @@ export default function SeoServiceContent() {
                 Pricing is tailored to your goals and market. Get a free audit — we'll recommend exactly what you need.
               </p>
             </div>
-            <Button href="/free-seo-audit" variant="primary" size="lg" className="shrink-0 w-full md:w-auto text-center">
+            <Button id="seo-pricing-quote-btn" href="/free-seo-audit" variant="primary" size="lg" className="shrink-0 w-full md:w-auto text-center">
               Get Custom Quote →
             </Button>
           </div>
@@ -431,6 +477,7 @@ export default function SeoServiceContent() {
                 className="bg-white border border-slate-100 rounded-xl overflow-hidden shadow-sm"
               >
                 <button
+                  id={`seo-faq-toggle-btn-${idx}`}
                   onClick={() => toggleFaq(idx)}
                   className="w-full px-6 py-4 flex items-center justify-between text-left font-bold text-slate-900 hover:text-royal-blue transition-colors text-sm sm:text-base gap-4"
                 >

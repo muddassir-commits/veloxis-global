@@ -29,6 +29,7 @@ interface PostContent {
   readTime: string;
   headings: { id: string; text: string }[];
   htmlContent: string;
+  image?: string;
 }
 
 export default function BlogPostContent({ post, relatedPosts }: { post: PostContent; relatedPosts: any[] }) {
@@ -133,6 +134,20 @@ export default function BlogPostContent({ post, relatedPosts }: { post: PostCont
               </div>
             </div>
 
+            {/* Featured Image */}
+            {post.image && (
+              <div className="w-full aspect-[21/9] sm:aspect-[16/9] relative rounded-2xl overflow-hidden mb-8 border border-slate-100 shadow-sm bg-slate-50">
+                <Image 
+                  src={post.image} 
+                  alt={post.title} 
+                  fill 
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 66vw, 800px"
+                  priority 
+                  className="object-cover" 
+                />
+              </div>
+            )}
+
             {/* Rendered markdown HTML */}
             <div 
               className="prose prose-slate max-w-none text-sm sm:text-body-md text-on-surface-variant leading-relaxed flex flex-col gap-6 w-full
@@ -231,7 +246,7 @@ export default function BlogPostContent({ post, relatedPosts }: { post: PostCont
                 Get a custom audit explaining technical issues, sitemap configuration status, and search visibility errors.
               </p>
               
-              <Button href="/free-seo-audit" variant="primary" className="w-full text-center py-3 text-xs mt-2 relative z-10">
+              <Button id="blog-sidebar-free-audit-btn" href="/free-seo-audit" variant="primary" className="w-full text-center py-3 text-xs mt-2 relative z-10">
                 Claim Free SEO Audit →
               </Button>
             </div>

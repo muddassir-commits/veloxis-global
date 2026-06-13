@@ -116,10 +116,10 @@ export default function LucknowLocationPage() {
               From heritage retail to modern healthcare and education, we understand how Lucknow's diverse business landscape works — and how to make digital marketing deliver real results for it.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
-              <Button href="/free-seo-audit" variant="primary">
+              <Button id="lucknow-hero-free-audit-btn" href="/free-seo-audit" variant="primary">
                 Get Free Agency Audit →
               </Button>
-              <Button href="/contact" variant="outline">
+              <Button id="lucknow-hero-book-consult-btn" href="/contact" variant="outline">
                 Book Consult Call
               </Button>
             </div>

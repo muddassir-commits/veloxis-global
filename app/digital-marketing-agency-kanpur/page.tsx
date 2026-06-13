@@ -128,10 +128,10 @@ export default function KanpurLocationPage() {
               Whether you're in Civil Lines, Swaroop Nagar, Kidwai Nagar, GT Road, Kalyanpur or Kakadeo — our digital marketing experts understand Kanpur's local market, buyer psychology and competitive landscape.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
-              <Button href="/free-seo-audit" variant="primary">
+              <Button id="kanpur-hero-free-audit-btn" href="/free-seo-audit" variant="primary">
                 Get Free Agency Audit →
               </Button>
-              <Button href="/contact" variant="outline">
+              <Button id="kanpur-hero-book-visit-btn" href="/contact" variant="outline">
                 Book Office Visit
               </Button>
             </div>

@@ -23,6 +23,9 @@ export function constructMetadata({
     title,
     description,
     metadataBase: new URL(SITE_URL),
+    authors: [{ name: 'Muddassir Ali', url: 'https://muddassirali.com' }],
+    creator: 'Muddassir Ali',
+    publisher: 'Veloxis Global',
     alternates: {
       canonical: url,
       languages: {

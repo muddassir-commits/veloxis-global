@@ -1,9 +1,6 @@
-/**
- * BlogPreview — Server Component.
- * Framer Motion removed; CSS stagger-reveal handles card animations.
- */
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Card } from '../ui/Card';
 import { Badge } from '../ui/Badge';
 import { Calendar, User, Clock, ArrowRight } from 'lucide-react';
@@ -18,7 +15,8 @@ export const BlogPreview: React.FC = () => {
       badge: 'teal' as const,
       author: 'Muddassir Ali',
       date: 'May 20, 2026',
-      readTime: '6 min read'
+      readTime: '6 min read',
+      image: '/images/blog/seo-2026-guide.png'
     },
     {
       slug: 'google-ads-vs-meta-ads-roi-india',
@@ -26,9 +24,10 @@ export const BlogPreview: React.FC = () => {
       excerpt: "Should you choose Google Ads or Meta Ads in India? Read our direct comparison of CPC, target intent, and conversion ROAS to scale your leads now.",
       category: 'Paid PPC',
       badge: 'orange' as const,
-      author: 'Neha Sharma',
+      author: 'Muddassir Ali',
       date: 'May 15, 2026',
-      readTime: '5 min read'
+      readTime: '5 min read',
+      image: '/images/blog/google-meta-roi.png'
     },
     {
       slug: 'how-to-optimize-google-business-profile-2026',
@@ -36,9 +35,10 @@ export const BlogPreview: React.FC = () => {
       excerpt: "Master Google Maps pack positioning in 2026. Read our local GBP optimization checklist to get more phone calls and client visits for your clinic.",
       category: 'Local SEO',
       badge: 'indigo' as const,
-      author: 'Rohit Verma',
+      author: 'Muddassir Ali',
       date: 'May 10, 2026',
-      readTime: '7 min read'
+      readTime: '7 min read',
+      image: '/images/blog/gbp-local-seo.png'
     }
   ];
 
@@ -68,14 +68,17 @@ export const BlogPreview: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 stagger-reveal">
           {posts.map((post, idx) => (
             <div key={idx} className="h-full">
-              <Card className="flex flex-col h-full overflow-hidden p-0 border border-slate-100 bg-white">
-                {/* Card Header image placeholder */}
-                <div className="w-full h-48 bg-slate-100 flex items-center justify-center relative border-b border-slate-50">
-                  <div className="absolute inset-0 bg-[radial-gradient(#cbd5e1_1px,transparent_1px)] bg-[size:12px_12px] opacity-35" aria-hidden="true" />
-                  <span className="text-4xl font-extrabold text-slate-300 select-none" aria-hidden="true">
-                    {post.category}
-                  </span>
-                  <div className="absolute top-4 left-4">
+              <Card hover className="flex flex-col h-full overflow-hidden p-0 border border-slate-100 bg-white group">
+                {/* Card Header image */}
+                <div className="w-full h-48 bg-slate-100 relative overflow-hidden border-b border-slate-50">
+                  <Image
+                    src={post.image}
+                    alt={post.title}
+                    fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 400px"
+                    className="object-cover transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-105"
+                  />
+                  <div className="absolute top-4 left-4 z-10">
                     <Badge variant={post.badge}>{post.category}</Badge>
                   </div>
                 </div>

@@ -2,8 +2,10 @@
 
 import React from 'react';
 import Link from 'next/link';
+import { motion } from 'framer-motion';
 import { events } from '../../lib/analytics';
 
+const MotionLink = motion(Link);
 
 export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: 'primary' | 'secondary' | 'ghost' | 'outline' | 'white';
@@ -46,28 +48,36 @@ export const Button = React.forwardRef<HTMLButtonElement | HTMLAnchorElement, Bu
 
     const combinedClassName = `${baseStyles} ${variants[variant]} ${sizes[size]} ${className}`;
 
+    const motionProps = {
+      whileHover: { scale: 1.03, y: -2 },
+      whileTap: { scale: 0.97 },
+      transition: { type: 'spring', stiffness: 400, damping: 15 }
+    };
+
     if (href) {
       return (
-        <Link
+        <MotionLink
           href={href}
           className={combinedClassName}
           onClick={handleClick}
+          {...motionProps}
           {...(props as any)}
         >
           {children}
-        </Link>
+        </MotionLink>
       );
     }
 
     return (
-      <button
+      <motion.button
         ref={ref as React.Ref<HTMLButtonElement>}
         className={combinedClassName}
         onClick={handleClick}
+        {...motionProps}
         {...props}
       >
         {children}
-      </button>
+      </motion.button>
     );
   }
 );

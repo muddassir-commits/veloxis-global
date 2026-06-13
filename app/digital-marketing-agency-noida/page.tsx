@@ -101,10 +101,10 @@ export default function NoidaLocationPage() {
               We understand Noida's tech-first business ecosystem and build campaigns that speak directly to its fast-moving, data-driven business culture.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
-              <Button href="/free-seo-audit" variant="primary">
+              <Button id="noida-hero-free-audit-btn" href="/free-seo-audit" variant="primary">
                 Get Free Agency Audit →
               </Button>
-              <Button href="/contact" variant="outline">
+              <Button id="noida-hero-book-consult-btn" href="/contact" variant="outline">
                 Book Consult Call
               </Button>
             </div>

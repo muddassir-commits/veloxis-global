@@ -25,6 +25,7 @@ interface Post {
   readTime: string;
   headings: { id: string; text: string }[];
   htmlContent: string;
+  image: string;
 }
 
 const blogPosts: Post[] = [
@@ -56,7 +57,8 @@ const blogPosts: Post[] = [
 
       <h2 id="action-steps">3. Action Plan for Indian Businesses</h2>
       <p>Clean your sitemaps, verify authors with proper bio structures, write depth-first subject matter content, and ensure page response speeds are under 1.5 seconds. Start with a comprehensive technical audit checklist.</p>
-    `
+    `,
+    image: '/images/blog/seo-2026-guide.png'
   },
   {
     slug: 'google-ads-vs-meta-ads-roi-india',
@@ -84,7 +86,8 @@ const blogPosts: Post[] = [
 
       <h2 id="roi-verdict">The ROI Verdict</h2>
       <p>For instant lead-to-conversion outcomes in industries like real estate and medical clinics, prioritize Google Search. For D2C, education courses, or brand launches, Meta Ads will deliver a higher overall ROAS.</p>
-    `
+    `,
+    image: '/images/blog/google-meta-roi.png'
   },
   {
     slug: 'how-to-optimize-google-business-profile-2026',
@@ -112,7 +115,8 @@ const blogPosts: Post[] = [
 
       <h2 id="reviews-generation">3. Automated WhatsApp Review Flow</h2>
       <p>Integrate automated WhatsApp Business messages to request reviews right after client purchases, helping rank your profile in maps pack algorithms.</p>
-    `
+    `,
+    image: '/images/blog/gbp-local-seo.png'
   },
   {
     slug: 'content-marketing-eeat-framework',
@@ -140,7 +144,8 @@ const blogPosts: Post[] = [
 
       <h2 id="measuring-trust">Measuring Trust Signals</h2>
       <p>Ensure phone numbers, business registry citations, and privacy pages are correctly configured. Clear legal indicators prove authority directly to crawler bots.</p>
-    `
+    `,
+    image: '/images/blog/eeat-content-blueprint.png'
   },
   {
     slug: 'instagram-reels-funnel-local-brands',
@@ -168,7 +173,8 @@ const blogPosts: Post[] = [
 
       <h2 id="whatsapp-handover">3. WhatsApp Business Handovers</h2>
       <p>Route the direct link to open a WhatsApp dialogue containing pre-filled inquiries, starting sales discussions instantly.</p>
-    `
+    `,
+    image: '/images/blog/instagram-reels-funnel.png'
   },
   {
     slug: 'meta-performance-max-best-practices',
@@ -196,7 +202,8 @@ const blogPosts: Post[] = [
 
       <h2 id="audience-signals">Configuring Audience Signals</h2>
       <p>Upload clean custom lists of past client conversion data to tell the algorithm exactly who is most likely to click and inquire.</p>
-    `
+    `,
+    image: '/images/blog/pmax-performance.png'
   }
 ];
 

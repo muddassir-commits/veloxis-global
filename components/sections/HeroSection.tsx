@@ -73,6 +73,7 @@ export const HeroSection: React.FC = () => {
           <div className="flex flex-wrap items-center gap-[16px] mt-10 w-full sm:w-auto">
             <div className="w-full sm:w-auto rounded-md hero-cta-hover">
               <Button
+                id="hero-free-audit-btn"
                 variant="primary"
                 size="lg"
                 href="/free-seo-audit"
@@ -83,6 +84,7 @@ export const HeroSection: React.FC = () => {
             </div>
             <div className="w-full sm:w-auto rounded-md hero-cta-hover">
               <Button
+                id="hero-see-results-btn"
                 variant="secondary"
                 size="lg"
                 href="#case-studies"

@@ -99,10 +99,10 @@ export default function DelhiLocationPage() {
               We serve Delhi businesses remotely with the same efficiency as a local agency — in-person meetings available on request across NCR.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
-              <Button href="/free-seo-audit" variant="primary">
+              <Button id="delhi-hero-free-audit-btn" href="/free-seo-audit" variant="primary">
                 Get Free Delhi Audit →
               </Button>
-              <Button href="/contact" variant="outline">
+              <Button id="delhi-hero-book-consult-btn" href="/contact" variant="outline">
                 Book Consult Call
               </Button>
             </div>

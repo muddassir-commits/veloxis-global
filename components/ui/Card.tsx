@@ -27,8 +27,8 @@ export const Card: React.FC<CardProps> = ({
 
   return (
     <div
-      className={`${bgStyle} ${borderStyle} ${paddingStyle} rounded-xl transition-all duration-300 ${
-        isHoverEnabled ? 'hover:-translate-y-1 shadow-sm' : ''
+      className={`${bgStyle} ${borderStyle} ${paddingStyle} rounded-xl transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] ${
+        isHoverEnabled ? 'hover:-translate-y-2 hover:shadow-lg hover:border-slate-200/80' : ''
       } ${className}`}
       {...props}
     >
