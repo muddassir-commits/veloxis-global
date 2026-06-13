@@ -60,7 +60,7 @@ export default function AboutPage() {
     "contactPoint": {
       "@type": "ContactPoint",
       "telephone": "+918887620727",
-      "email": "muddassir@veloxisglobal.com",
+      "email": "info@veloxisglobal.com",
       "contactType": "sales",
       "areaServed": "IN",
       "availableLanguage": ["en", "hi"]

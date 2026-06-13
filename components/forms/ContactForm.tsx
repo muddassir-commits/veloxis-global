@@ -197,7 +197,7 @@ export const ContactForm: React.FC = () => {
 
           {submitSuccess === false && (
             <div className="bg-red-50 text-red-600 text-sm font-semibold p-4 rounded-md border border-red-100">
-              ❌ Something went wrong. Please try again or email muddassir@veloxisglobal.com directly.
+              ❌ Something went wrong. Please try again or email info@veloxisglobal.com directly.
             </div>
           )}
 

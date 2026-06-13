@@ -31,7 +31,7 @@ export default function KanpurLocationPage() {
     "name": "Veloxis Global",
     "description": "Best digital marketing agency in Kanpur — SEO, Google Ads and Social Media for Kanpur's textile, MSME and manufacturing businesses.",
     "telephone": "+918887620727",
-    "email": "muddassir@veloxisglobal.com",
+    "email": "info@veloxisglobal.com",
     "url": "https://veloxisglobal.com/digital-marketing-agency-kanpur",
     "address": {
       "@type": "PostalAddress",

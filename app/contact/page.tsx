@@ -76,7 +76,7 @@ export default function ContactPage() {
 
                 {/* Email */}
                 <a
-                  href="mailto:muddassir@veloxisglobal.com"
+                  href="mailto:info@veloxisglobal.com"
                   className="flex items-start gap-4 p-3 hover:bg-slate-50 rounded-lg transition-colors group"
                 >
                   <div className="w-10 h-10 rounded-lg bg-royal-blue/10 text-royal-blue flex items-center justify-center shrink-0">
@@ -85,7 +85,7 @@ export default function ContactPage() {
                   <div>
                     <span className="text-xs font-bold text-slate-400 uppercase tracking-wider block">Email Inquiries</span>
                     <span className="font-extrabold text-slate-900 text-base sm:text-lg block mt-0.5 group-hover:text-royal-blue transition-colors">
-                      muddassir@veloxisglobal.com
+                      info@veloxisglobal.com
                     </span>
                   </div>
                 </a>

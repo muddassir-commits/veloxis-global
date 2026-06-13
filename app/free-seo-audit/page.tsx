@@ -113,8 +113,8 @@ export default function FreeAuditPage() {
                 <div className="mt-6 pt-4 border-t border-slate-100 text-center">
                   <p className="text-xs text-slate-400 font-semibold">
                     We respect your privacy. Questions? Reach out to{" "}
-                    <a href="mailto:muddassir@veloxisglobal.com" className="text-royal-blue hover:underline">
-                      muddassir@veloxisglobal.com
+                    <a href="mailto:info@veloxisglobal.com" className="text-royal-blue hover:underline">
+                      info@veloxisglobal.com
                     </a>
                   </p>
                 </div>

@@ -91,7 +91,7 @@ export default function PrivacyPolicyPage() {
             </ul>
 
             <h2 className="text-lg font-extrabold text-slate-900 mt-4">4. Compliance & Contact</h2>
-            <p>For questions or requests regarding data removal, please contact us directly at <a href="mailto:muddassir@veloxisglobal.com" className="text-royal-blue hover:underline font-bold">muddassir@veloxisglobal.com</a>.</p>
+            <p>For questions or requests regarding data removal, please contact us directly at <a href="mailto:info@veloxisglobal.com" className="text-royal-blue hover:underline font-bold">info@veloxisglobal.com</a>.</p>
           </div>
         </div>
       </section>
@@ -107,7 +107,7 @@ export default function PrivacyPolicyPage() {
           },
           {
             question: "How can I request my personal data to be deleted?",
-            answer: "Simply contact us at muddassir@veloxisglobal.com. We will remove all your data records from our server pipelines within 24 hours."
+            answer: "Simply contact us at info@veloxisglobal.com. We will remove all your data records from our server pipelines within 24 hours."
           }
         ]}
       />

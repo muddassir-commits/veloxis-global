@@ -31,7 +31,7 @@ export default function LucknowLocationPage() {
     "name": "Veloxis Global",
     "description": "Best digital marketing agency in Lucknow — SEO, Google Ads & Social Media for Lucknow businesses.",
     "telephone": "+918887620727",
-    "email": "muddassir@veloxisglobal.com",
+    "email": "info@veloxisglobal.com",
     "url": "https://veloxisglobal.com/digital-marketing-agency-lucknow",
     "areaServed": {
       "@type": "City",

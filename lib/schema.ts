@@ -6,7 +6,7 @@ export const generateLocalBusinessSchema = (city?: string) => {
     "@id": `https://veloxisglobal.com/${city && city.toLowerCase() !== 'general' ? `digital-marketing-agency-${city.toLowerCase()}` : ''}#localbusiness`,
     "name": "Veloxis Global",
     "telephone": "+918887620727",
-    "email": "muddassir@veloxisglobal.com",
+    "email": "info@veloxisglobal.com",
     "url": `https://veloxisglobal.com/${city && city.toLowerCase() !== 'general' ? `digital-marketing-agency-${city.toLowerCase()}` : ''}`,
     "priceRange": "$$",
     "image": "https://veloxisglobal.com/images/logos/logo.png",
@@ -76,7 +76,7 @@ export const generateServiceSchema = (name: string, description: string) => {
       "name": "Veloxis Global",
       "image": "https://veloxisglobal.com/images/logos/logo.png",
       "telephone": "+918887620727",
-      "email": "muddassir@veloxisglobal.com",
+      "email": "info@veloxisglobal.com",
       "url": "https://veloxisglobal.com"
     }
   };
@@ -165,7 +165,7 @@ export const generateOrganizationSchema = () => {
     "contactPoint": {
       "@type": "ContactPoint",
       "telephone": "+918887620727",
-      "email": "muddassir@veloxisglobal.com",
+      "email": "info@veloxisglobal.com",
       "contactType": "sales",
       "areaServed": "IN",
       "availableLanguage": ["en", "hi"]

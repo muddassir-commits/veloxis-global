@@ -212,10 +212,10 @@ export const Footer: React.FC = () => {
             </a>
 
             <a
-              href="mailto:muddassir@veloxisglobal.com"
+              href="mailto:info@veloxisglobal.com"
               className="text-slate-300 hover:text-white block break-all"
             >
-              📧 muddassir@veloxisglobal.com
+              📧 info@veloxisglobal.com
             </a>
 
             {/* WhatsApp Chat Button */}
