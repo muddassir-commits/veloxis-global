@@ -165,6 +165,7 @@ export const ServicePageTemplate: React.FC<ServicePageTemplateProps> = ({ servic
                   return (
                     <button
                       key={idx}
+                      id={`subservice-toggle-${service.id}-${idx}`}
                       onClick={() => setOpenSubserviceIndex(idx)}
                       className={`w-full text-left p-5 rounded-2xl border transition-all duration-300 flex justify-between items-center ${
                         isActive 

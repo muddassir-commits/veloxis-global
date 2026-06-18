@@ -13,7 +13,7 @@ import { constructMetadata } from '../../../lib/seo-config';
 import { notFound } from 'next/navigation';
 
 export const metadata: Metadata = constructMetadata({
-  title: "Paid Advertising & Performance Marketing | Veloxis Global — Results-Driven Marketing",
+  title: "Paid Advertising & Performance Marketing | Veloxis Global",
   description: "Maximize your ad spend with certified, data-driven paid advertising campaigns across Meta, Google, LinkedIn, and YouTube.",
   path: "/services/paid-advertising-performance-marketing"
 });

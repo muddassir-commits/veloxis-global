@@ -1,14 +1,14 @@
 # SEO Audit and Analysis Report
 
-Generated on: 2026-06-13
+Generated on: 2026-06-18
 Workspace: Veloxis Global
 
 ## Executive Summary
 
 | Metrics | Value |
 | :--- | :--- |
-| **Total Checked Pages** | 29 |
-| **Fully Passed Pages** | 29 |
+| **Total Checked Pages** | 45 |
+| **Fully Passed Pages** | 45 |
 | **Pages with Warnings** | 0 |
 | **Pages with Errors** | 0 |
 
@@ -247,18 +247,39 @@ Workspace: Veloxis Global
 
 ---
 
-### app/industries/ecommerce/page.tsx (✅ PASSED)
+### app/industries/coaching-consulting/page.tsx (✅ PASSED)
 
-- **Meta Title**: `E-commerce & Shopify Growth Marketing Agency | Veloxis` (54 characters)
-- **Meta Description**: `Scale your online store sales and maximize Return on Ad Spend (ROAS) with certif...` (147 characters)
+- **Meta Title**: `Marketing Agency for Coaches & Consultants | Veloxis Global` (59 characters)
+- **Meta Description**: `Get more high-ticket clients with automated VSL sales funnels, paid social campa...` (135 characters)
 - **Canonical Link**: ✅ Configured
 - **JSON-LD Schema**: ✅ Configured
 - **Heading H1 Count**: 1 heading(s)
 - **Total Images Audited**: 0 image(s)
 
 #### ✅ Passed Checks
-- Optimal title length (54 chars): "E-commerce & Shopify Growth Marketing Agency | Veloxis"
-- Optimal description length (147 chars)
+- Optimal title length (59 chars): "Marketing Agency for Coaches & Consultants | Veloxis Global"
+- Optimal description length (135 chars)
+- Canonical URL alternate tag configured.
+- Found JSON-LD schema integration.
+- Exactly one H1 element present.
+- Highly GEO-friendly structure (uses bulleted lists and FAQ sections).
+- Strong E-E-A-T Signals (references verified author and certs/citations).
+- All parsed interactive elements have unique IDs.
+
+---
+
+### app/industries/ecommerce/page.tsx (✅ PASSED)
+
+- **Meta Title**: `D2C E-commerce Growth & Marketing Agency | Veloxis Global` (57 characters)
+- **Meta Description**: `Scale Shopify and WooCommerce online store sales. We optimize Meta catalog ads, ...` (138 characters)
+- **Canonical Link**: ✅ Configured
+- **JSON-LD Schema**: ✅ Configured
+- **Heading H1 Count**: 1 heading(s)
+- **Total Images Audited**: 0 image(s)
+
+#### ✅ Passed Checks
+- Optimal title length (57 chars): "D2C E-commerce Growth & Marketing Agency | Veloxis Global"
+- Optimal description length (138 chars)
 - Canonical URL alternate tag configured.
 - Found JSON-LD schema integration.
 - Exactly one H1 element present.
@@ -270,16 +291,37 @@ Workspace: Veloxis Global
 
 ### app/industries/education/page.tsx (✅ PASSED)
 
-- **Meta Title**: `Higher Education & Academy Marketing Agency | Veloxis` (53 characters)
-- **Meta Description**: `Boost student enrollments, course applications, and inquiry conversion rates for...` (151 characters)
+- **Meta Title**: `EdTech & Education Student Enrollment Agency | Veloxis Global` (61 characters)
+- **Meta Description**: `Boost student admissions for schools, colleges, and EdTech training platforms wi...` (135 characters)
 - **Canonical Link**: ✅ Configured
 - **JSON-LD Schema**: ✅ Configured
 - **Heading H1 Count**: 1 heading(s)
 - **Total Images Audited**: 0 image(s)
 
 #### ✅ Passed Checks
-- Optimal title length (53 chars): "Higher Education & Academy Marketing Agency | Veloxis"
-- Optimal description length (151 chars)
+- Optimal title length (61 chars): "EdTech & Education Student Enrollment Agency | Veloxis Global"
+- Optimal description length (135 chars)
+- Canonical URL alternate tag configured.
+- Found JSON-LD schema integration.
+- Exactly one H1 element present.
+- Highly GEO-friendly structure (uses bulleted lists and FAQ sections).
+- Strong E-E-A-T Signals (references verified author and certs/citations).
+- All parsed interactive elements have unique IDs.
+
+---
+
+### app/industries/fitness-wellness/page.tsx (✅ PASSED)
+
+- **Meta Title**: `Gym & Fitness Studio Marketing Agency | Veloxis Global` (54 characters)
+- **Meta Description**: `Grow gym memberships, yoga studio sign-ups, and personal trainer inquiries. Hype...` (130 characters)
+- **Canonical Link**: ✅ Configured
+- **JSON-LD Schema**: ✅ Configured
+- **Heading H1 Count**: 1 heading(s)
+- **Total Images Audited**: 0 image(s)
+
+#### ✅ Passed Checks
+- Optimal title length (54 chars): "Gym & Fitness Studio Marketing Agency | Veloxis Global"
+- Optimal description length (130 chars)
 - Canonical URL alternate tag configured.
 - Found JSON-LD schema integration.
 - Exactly one H1 element present.
@@ -291,16 +333,37 @@ Workspace: Veloxis Global
 
 ### app/industries/healthcare/page.tsx (✅ PASSED)
 
-- **Meta Title**: `Healthcare & Clinic Marketing Agency | Veloxis Global` (53 characters)
-- **Meta Description**: `Boost patient bookings and Google Map pack rankings for hospitals, dental clinic...` (148 characters)
+- **Meta Title**: `Healthcare & Clinic Patient Acquisition Agency | Veloxis Global` (63 characters)
+- **Meta Description**: `Grow doctor appointments and clinic visits with local maps SEO, Google Search ca...` (133 characters)
 - **Canonical Link**: ✅ Configured
 - **JSON-LD Schema**: ✅ Configured
 - **Heading H1 Count**: 1 heading(s)
 - **Total Images Audited**: 0 image(s)
 
 #### ✅ Passed Checks
-- Optimal title length (53 chars): "Healthcare & Clinic Marketing Agency | Veloxis Global"
-- Optimal description length (148 chars)
+- Optimal title length (63 chars): "Healthcare & Clinic Patient Acquisition Agency | Veloxis Global"
+- Optimal description length (133 chars)
+- Canonical URL alternate tag configured.
+- Found JSON-LD schema integration.
+- Exactly one H1 element present.
+- Highly GEO-friendly structure (uses bulleted lists and FAQ sections).
+- Strong E-E-A-T Signals (references verified author and certs/citations).
+- All parsed interactive elements have unique IDs.
+
+---
+
+### app/industries/legal-professional/page.tsx (✅ PASSED)
+
+- **Meta Title**: `Law Firm & Professional Practice Marketing | Veloxis Global` (59 characters)
+- **Meta Description**: `Generate qualified consultations for lawyers, accountants, and consultants. We b...` (128 characters)
+- **Canonical Link**: ✅ Configured
+- **JSON-LD Schema**: ✅ Configured
+- **Heading H1 Count**: 1 heading(s)
+- **Total Images Audited**: 0 image(s)
+
+#### ✅ Passed Checks
+- Optimal title length (59 chars): "Law Firm & Professional Practice Marketing | Veloxis Global"
+- Optimal description length (128 chars)
 - Canonical URL alternate tag configured.
 - Found JSON-LD schema integration.
 - Exactly one H1 element present.
@@ -312,16 +375,37 @@ Workspace: Veloxis Global
 
 ### app/industries/msme-small-business/page.tsx (✅ PASSED)
 
-- **Meta Title**: `MSME & B2B Manufacturing Marketing Agency | Veloxis Global` (58 characters)
-- **Meta Description**: `Scale domestic inquiries and global export leads for textile mills, leather expo...` (145 characters)
+- **Meta Title**: `MSME & Local Business Marketing Agency | Veloxis Global` (55 characters)
+- **Meta Description**: `Scale local customer inquiries, Google Maps phone calls, and inbound website lea...` (121 characters)
 - **Canonical Link**: ✅ Configured
 - **JSON-LD Schema**: ✅ Configured
 - **Heading H1 Count**: 1 heading(s)
 - **Total Images Audited**: 0 image(s)
 
 #### ✅ Passed Checks
-- Optimal title length (58 chars): "MSME & B2B Manufacturing Marketing Agency | Veloxis Global"
-- Optimal description length (145 chars)
+- Optimal title length (55 chars): "MSME & Local Business Marketing Agency | Veloxis Global"
+- Optimal description length (121 chars)
+- Canonical URL alternate tag configured.
+- Found JSON-LD schema integration.
+- Exactly one H1 element present.
+- Highly GEO-friendly structure (uses bulleted lists and FAQ sections).
+- Strong E-E-A-T Signals (references verified author and certs/citations).
+- All parsed interactive elements have unique IDs.
+
+---
+
+### app/industries/non-profit/page.tsx (✅ PASSED)
+
+- **Meta Title**: `NGO & Non-Profit Marketing Agency | Veloxis Global` (50 characters)
+- **Meta Description**: `Apply for the $10,000/month free Google Ad Grant and optimize online donor acqui...` (117 characters)
+- **Canonical Link**: ✅ Configured
+- **JSON-LD Schema**: ✅ Configured
+- **Heading H1 Count**: 1 heading(s)
+- **Total Images Audited**: 0 image(s)
+
+#### ✅ Passed Checks
+- Optimal title length (50 chars): "NGO & Non-Profit Marketing Agency | Veloxis Global"
+- Optimal description length (117 chars)
 - Canonical URL alternate tag configured.
 - Found JSON-LD schema integration.
 - Exactly one H1 element present.
@@ -333,16 +417,16 @@ Workspace: Veloxis Global
 
 ### app/industries/page.tsx (✅ PASSED)
 
-- **Meta Title**: `Digital Marketing for Industries We Serve | Veloxis Global` (58 characters)
-- **Meta Description**: `Discover how we scale digital leads, patient bookings, enrollments, and sales fo...` (146 characters)
+- **Meta Title**: `Digital Marketing Services for Industries We Serve | Veloxis Global` (67 characters)
+- **Meta Description**: `Customized B2B and B2C marketing pipelines for Real Estate, SaaS, Healthcare, Co...` (160 characters)
 - **Canonical Link**: ✅ Configured
 - **JSON-LD Schema**: ✅ Configured
 - **Heading H1 Count**: 1 heading(s)
 - **Total Images Audited**: 0 image(s)
 
 #### ✅ Passed Checks
-- Optimal title length (58 chars): "Digital Marketing for Industries We Serve | Veloxis Global"
-- Optimal description length (146 chars)
+- Optimal title length (67 chars): "Digital Marketing Services for Industries We Serve | Veloxis Global"
+- Optimal description length (160 chars)
 - Canonical URL alternate tag configured.
 - Found JSON-LD schema integration.
 - Exactly one H1 element present.
@@ -364,6 +448,69 @@ Workspace: Veloxis Global
 #### ✅ Passed Checks
 - Optimal title length (55 chars): "Real Estate Developer Marketing Agency | Veloxis Global"
 - Optimal description length (149 chars)
+- Canonical URL alternate tag configured.
+- Found JSON-LD schema integration.
+- Exactly one H1 element present.
+- Highly GEO-friendly structure (uses bulleted lists and FAQ sections).
+- Strong E-E-A-T Signals (references verified author and certs/citations).
+- All parsed interactive elements have unique IDs.
+
+---
+
+### app/industries/restaurant-food/page.tsx (✅ PASSED)
+
+- **Meta Title**: `Restaurant & Cloud Kitchen Marketing Agency | Veloxis Global` (60 characters)
+- **Meta Description**: `Lower third-party app commissions and grow direct-to-consumer food orders. We op...` (134 characters)
+- **Canonical Link**: ✅ Configured
+- **JSON-LD Schema**: ✅ Configured
+- **Heading H1 Count**: 1 heading(s)
+- **Total Images Audited**: 0 image(s)
+
+#### ✅ Passed Checks
+- Optimal title length (60 chars): "Restaurant & Cloud Kitchen Marketing Agency | Veloxis Global"
+- Optimal description length (134 chars)
+- Canonical URL alternate tag configured.
+- Found JSON-LD schema integration.
+- Exactly one H1 element present.
+- Highly GEO-friendly structure (uses bulleted lists and FAQ sections).
+- Strong E-E-A-T Signals (references verified author and certs/citations).
+- All parsed interactive elements have unique IDs.
+
+---
+
+### app/industries/saas/page.tsx (✅ PASSED)
+
+- **Meta Title**: `B2B SaaS Growth & Marketing Agency | Veloxis Global` (51 characters)
+- **Meta Description**: `Accelerate your B2B SaaS trial signups and enterprise demo pipelines. We lower C...` (144 characters)
+- **Canonical Link**: ✅ Configured
+- **JSON-LD Schema**: ✅ Configured
+- **Heading H1 Count**: 1 heading(s)
+- **Total Images Audited**: 0 image(s)
+
+#### ✅ Passed Checks
+- Optimal title length (51 chars): "B2B SaaS Growth & Marketing Agency | Veloxis Global"
+- Optimal description length (144 chars)
+- Canonical URL alternate tag configured.
+- Found JSON-LD schema integration.
+- Exactly one H1 element present.
+- Highly GEO-friendly structure (uses bulleted lists and FAQ sections).
+- Strong E-E-A-T Signals (references verified author and certs/citations).
+- All parsed interactive elements have unique IDs.
+
+---
+
+### app/industries/travel-tourism/page.tsx (✅ PASSED)
+
+- **Meta Title**: `Travel & Tourism Marketing Agency | Veloxis Global` (50 characters)
+- **Meta Description**: `Grow direct resort bookings and tour package inquiries. We scale travel brands w...` (126 characters)
+- **Canonical Link**: ✅ Configured
+- **JSON-LD Schema**: ✅ Configured
+- **Heading H1 Count**: 1 heading(s)
+- **Total Images Audited**: 0 image(s)
+
+#### ✅ Passed Checks
+- Optimal title length (50 chars): "Travel & Tourism Marketing Agency | Veloxis Global"
+- Optimal description length (126 chars)
 - Canonical URL alternate tag configured.
 - Found JSON-LD schema integration.
 - Exactly one H1 element present.
@@ -436,18 +583,144 @@ Workspace: Veloxis Global
 
 ---
 
-### app/services/content-marketing/page.tsx (✅ PASSED)
+### app/services/ai-automation-systems/page.tsx (✅ PASSED)
 
-- **Meta Title**: `Content Marketing Agency India | SEO Content That Ranks | Veloxis` (65 characters)
-- **Meta Description**: `Expert content marketing for businesses across India. SEO blogs, landing pages a...` (154 characters)
+- **Meta Title**: `AI & Marketing Automation Systems Agency India | Veloxis Global` (63 characters)
+- **Meta Description**: `Automate your sales pipelines and customer service workflows. Deploy custom Reac...` (148 characters)
 - **Canonical Link**: ✅ Configured
 - **JSON-LD Schema**: ✅ Configured
 - **Heading H1 Count**: 1 heading(s)
 - **Total Images Audited**: 0 image(s)
 
 #### ✅ Passed Checks
-- Optimal title length (65 chars): "Content Marketing Agency India | SEO Content That Ranks | Veloxis"
-- Optimal description length (154 chars)
+- Optimal title length (63 chars): "AI & Marketing Automation Systems Agency India | Veloxis Global"
+- Optimal description length (148 chars)
+- Canonical URL alternate tag configured.
+- Found JSON-LD schema integration.
+- Exactly one H1 element present.
+- Highly GEO-friendly structure (uses bulleted lists and FAQ sections).
+- Strong E-E-A-T Signals (references verified author and certs/citations).
+- All parsed interactive elements have unique IDs.
+
+---
+
+### app/services/analytics-tracking-attribution/page.tsx (✅ PASSED)
+
+- **Meta Title**: `Analytics, Tracking & Attribution Setup Agency | Veloxis Global` (63 characters)
+- **Meta Description**: `Gain complete conversion visibility. Setup Google Analytics 4 (GA4), GTM contain...` (149 characters)
+- **Canonical Link**: ✅ Configured
+- **JSON-LD Schema**: ✅ Configured
+- **Heading H1 Count**: 1 heading(s)
+- **Total Images Audited**: 0 image(s)
+
+#### ✅ Passed Checks
+- Optimal title length (63 chars): "Analytics, Tracking & Attribution Setup Agency | Veloxis Global"
+- Optimal description length (149 chars)
+- Canonical URL alternate tag configured.
+- Found JSON-LD schema integration.
+- Exactly one H1 element present.
+- Highly GEO-friendly structure (uses bulleted lists and FAQ sections).
+- Strong E-E-A-T Signals (references verified author and certs/citations).
+- All parsed interactive elements have unique IDs.
+
+---
+
+### app/services/audits-consulting-strategy/page.tsx (✅ PASSED)
+
+- **Meta Title**: `SEO Audits & Digital Marketing Consulting | Veloxis Global` (58 characters)
+- **Meta Description**: `Identify search indexing errors, ad budget leaks, and landing page friction. Get...` (143 characters)
+- **Canonical Link**: ✅ Configured
+- **JSON-LD Schema**: ✅ Configured
+- **Heading H1 Count**: 1 heading(s)
+- **Total Images Audited**: 0 image(s)
+
+#### ✅ Passed Checks
+- Optimal title length (58 chars): "SEO Audits & Digital Marketing Consulting | Veloxis Global"
+- Optimal description length (143 chars)
+- Canonical URL alternate tag configured.
+- Found JSON-LD schema integration.
+- Exactly one H1 element present.
+- Highly GEO-friendly structure (uses bulleted lists and FAQ sections).
+- Strong E-E-A-T Signals (references verified author and certs/citations).
+- All parsed interactive elements have unique IDs.
+
+---
+
+### app/services/b2b-lead-generation-sales/page.tsx (✅ PASSED)
+
+- **Meta Title**: `B2B Lead Generation & Outbound Sales Agency | Veloxis Global` (60 characters)
+- **Meta Description**: `Acquire verified email and LinkedIn lead databases. Scale cold email outreach pi...` (140 characters)
+- **Canonical Link**: ✅ Configured
+- **JSON-LD Schema**: ✅ Configured
+- **Heading H1 Count**: 1 heading(s)
+- **Total Images Audited**: 0 image(s)
+
+#### ✅ Passed Checks
+- Optimal title length (60 chars): "B2B Lead Generation & Outbound Sales Agency | Veloxis Global"
+- Optimal description length (140 chars)
+- Canonical URL alternate tag configured.
+- Found JSON-LD schema integration.
+- Exactly one H1 element present.
+- Highly GEO-friendly structure (uses bulleted lists and FAQ sections).
+- Strong E-E-A-T Signals (references verified author and certs/citations).
+- All parsed interactive elements have unique IDs.
+
+---
+
+### app/services/brand-strategy-positioning/page.tsx (✅ PASSED)
+
+- **Meta Title**: `Brand Strategy, Positioning & Identity Agency | Veloxis Global` (62 characters)
+- **Meta Description**: `Differentiate your business from competitors. Establish a unique market position...` (155 characters)
+- **Canonical Link**: ✅ Configured
+- **JSON-LD Schema**: ✅ Configured
+- **Heading H1 Count**: 1 heading(s)
+- **Total Images Audited**: 0 image(s)
+
+#### ✅ Passed Checks
+- Optimal title length (62 chars): "Brand Strategy, Positioning & Identity Agency | Veloxis Global"
+- Optimal description length (155 chars)
+- Canonical URL alternate tag configured.
+- Found JSON-LD schema integration.
+- Exactly one H1 element present.
+- Highly GEO-friendly structure (uses bulleted lists and FAQ sections).
+- Strong E-E-A-T Signals (references verified author and certs/citations).
+- All parsed interactive elements have unique IDs.
+
+---
+
+### app/services/content-marketing/page.tsx (✅ PASSED)
+
+- **Meta Title**: `SEO Content Writing & Copywriting Services | Veloxis Global` (59 characters)
+- **Meta Description**: `Create content that ranks, educates, and converts. Custom blog posts, landing pa...` (120 characters)
+- **Canonical Link**: ✅ Configured
+- **JSON-LD Schema**: ✅ Configured
+- **Heading H1 Count**: 1 heading(s)
+- **Total Images Audited**: 0 image(s)
+
+#### ✅ Passed Checks
+- Optimal title length (59 chars): "SEO Content Writing & Copywriting Services | Veloxis Global"
+- Optimal description length (120 chars)
+- Canonical URL alternate tag configured.
+- Found JSON-LD schema integration.
+- Exactly one H1 element present.
+- Highly GEO-friendly structure (uses bulleted lists and FAQ sections).
+- Strong E-E-A-T Signals (references verified author and certs/citations).
+- All parsed interactive elements have unique IDs.
+
+---
+
+### app/services/ecommerce-catalog-services/page.tsx (✅ PASSED)
+
+- **Meta Title**: `Shopify Development & E-commerce Catalog Services | Veloxis Global` (66 characters)
+- **Meta Description**: `Optimize your e-commerce channels. Design clean Shopify storefronts, build catal...` (148 characters)
+- **Canonical Link**: ✅ Configured
+- **JSON-LD Schema**: ✅ Configured
+- **Heading H1 Count**: 1 heading(s)
+- **Total Images Audited**: 0 image(s)
+
+#### ✅ Passed Checks
+- Optimal title length (66 chars): "Shopify Development & E-commerce Catalog Services | Veloxis Global"
+- Optimal description length (148 chars)
 - Canonical URL alternate tag configured.
 - Found JSON-LD schema integration.
 - Exactly one H1 element present.
@@ -459,16 +732,16 @@ Workspace: Veloxis Global
 
 ### app/services/email-marketing/page.tsx (✅ PASSED)
 
-- **Meta Title**: `Email & WhatsApp Marketing Services India 2026 | Veloxis Global` (63 characters)
-- **Meta Description**: `Automated email and WhatsApp marketing for businesses across India. N8n-powered ...` (138 characters)
+- **Meta Title**: `Email & WhatsApp Marketing Automation Services | Veloxis Global` (63 characters)
+- **Meta Description**: `Scale customer retention and lifetime value. Klaviyo setups, email flow designs,...` (127 characters)
 - **Canonical Link**: ✅ Configured
 - **JSON-LD Schema**: ✅ Configured
 - **Heading H1 Count**: 1 heading(s)
 - **Total Images Audited**: 0 image(s)
 
 #### ✅ Passed Checks
-- Optimal title length (63 chars): "Email & WhatsApp Marketing Services India 2026 | Veloxis Global"
-- Optimal description length (138 chars)
+- Optimal title length (63 chars): "Email & WhatsApp Marketing Automation Services | Veloxis Global"
+- Optimal description length (127 chars)
 - Canonical URL alternate tag configured.
 - Found JSON-LD schema integration.
 - Exactly one H1 element present.
@@ -480,16 +753,37 @@ Workspace: Veloxis Global
 
 ### app/services/google-ads-ppc/page.tsx (✅ PASSED)
 
-- **Meta Title**: `Google Ads Management Agency India 2026 | Veloxis Global` (56 characters)
-- **Meta Description**: `Certified Google Ads management in India. Performance Max, Search & Display camp...` (144 characters)
+- **Meta Title**: `Google Ads & PPC Management Agency India | Veloxis Global` (57 characters)
+- **Meta Description**: `Certified Google Ads management services in India. Search marketing, Display ads...` (131 characters)
 - **Canonical Link**: ✅ Configured
 - **JSON-LD Schema**: ✅ Configured
 - **Heading H1 Count**: 1 heading(s)
 - **Total Images Audited**: 0 image(s)
 
 #### ✅ Passed Checks
-- Optimal title length (56 chars): "Google Ads Management Agency India 2026 | Veloxis Global"
-- Optimal description length (144 chars)
+- Optimal title length (57 chars): "Google Ads & PPC Management Agency India | Veloxis Global"
+- Optimal description length (131 chars)
+- Canonical URL alternate tag configured.
+- Found JSON-LD schema integration.
+- Exactly one H1 element present.
+- Highly GEO-friendly structure (uses bulleted lists and FAQ sections).
+- Strong E-E-A-T Signals (references verified author and certs/citations).
+- All parsed interactive elements have unique IDs.
+
+---
+
+### app/services/industry-specific-marketing/page.tsx (✅ PASSED)
+
+- **Meta Title**: `Industry-Specific Custom Marketing Packages | Veloxis Global` (60 characters)
+- **Meta Description**: `Niche-specific marketing systems. Custom marketing frameworks for Real Estate de...` (143 characters)
+- **Canonical Link**: ✅ Configured
+- **JSON-LD Schema**: ✅ Configured
+- **Heading H1 Count**: 1 heading(s)
+- **Total Images Audited**: 0 image(s)
+
+#### ✅ Passed Checks
+- Optimal title length (60 chars): "Industry-Specific Custom Marketing Packages | Veloxis Global"
+- Optimal description length (143 chars)
 - Canonical URL alternate tag configured.
 - Found JSON-LD schema integration.
 - Exactly one H1 element present.
@@ -501,16 +795,37 @@ Workspace: Veloxis Global
 
 ### app/services/page.tsx (✅ PASSED)
 
-- **Meta Title**: `Digital Marketing Services in India 2026 | Veloxis Global` (57 characters)
-- **Meta Description**: `Discover our six results-driven marketing services: SEO, Google Ads PPC, Social ...` (150 characters)
+- **Meta Title**: `B2B Performance & Digital Marketing Services | Veloxis Global` (61 characters)
+- **Meta Description**: `Accelerate your revenue with 14 performance digital marketing services: Local SE...` (160 characters)
 - **Canonical Link**: ✅ Configured
 - **JSON-LD Schema**: ✅ Configured
 - **Heading H1 Count**: 1 heading(s)
 - **Total Images Audited**: 0 image(s)
 
 #### ✅ Passed Checks
-- Optimal title length (57 chars): "Digital Marketing Services in India 2026 | Veloxis Global"
-- Optimal description length (150 chars)
+- Optimal title length (61 chars): "B2B Performance & Digital Marketing Services | Veloxis Global"
+- Optimal description length (160 chars)
+- Canonical URL alternate tag configured.
+- Found JSON-LD schema integration.
+- Exactly one H1 element present.
+- Highly GEO-friendly structure (uses bulleted lists and FAQ sections).
+- Strong E-E-A-T Signals (references verified author and certs/citations).
+- All parsed interactive elements have unique IDs.
+
+---
+
+### app/services/paid-advertising-performance-marketing/page.tsx (✅ PASSED)
+
+- **Meta Title**: `Paid Advertising & Performance Marketing | Veloxis Global` (57 characters)
+- **Meta Description**: `Maximize your ad spend with certified, data-driven paid advertising campaigns ac...` (121 characters)
+- **Canonical Link**: ✅ Configured
+- **JSON-LD Schema**: ✅ Configured
+- **Heading H1 Count**: 1 heading(s)
+- **Total Images Audited**: 0 image(s)
+
+#### ✅ Passed Checks
+- Optimal title length (57 chars): "Paid Advertising & Performance Marketing | Veloxis Global"
+- Optimal description length (121 chars)
 - Canonical URL alternate tag configured.
 - Found JSON-LD schema integration.
 - Exactly one H1 element present.
@@ -522,16 +837,16 @@ Workspace: Veloxis Global
 
 ### app/services/seo/page.tsx (✅ PASSED)
 
-- **Meta Title**: `Expert SEO Services in India 2026 — Rank #1 on Google | Veloxis Global` (70 characters)
-- **Meta Description**: `India's results-driven SEO agency. Technical SEO, local SEO, and link building. ...` (150 characters)
+- **Meta Title**: `Professional SEO Services Agency India | Veloxis Global` (55 characters)
+- **Meta Description**: `Rank #1 on Google. Clean technical SEO, authority building, on-page optimization...` (122 characters)
 - **Canonical Link**: ✅ Configured
 - **JSON-LD Schema**: ✅ Configured
 - **Heading H1 Count**: 1 heading(s)
 - **Total Images Audited**: 0 image(s)
 
 #### ✅ Passed Checks
-- Optimal title length (70 chars): "Expert SEO Services in India 2026 — Rank #1 on Google | Veloxis Global"
-- Optimal description length (150 chars)
+- Optimal title length (55 chars): "Professional SEO Services Agency India | Veloxis Global"
+- Optimal description length (122 chars)
 - Canonical URL alternate tag configured.
 - Found JSON-LD schema integration.
 - Exactly one H1 element present.
@@ -543,16 +858,37 @@ Workspace: Veloxis Global
 
 ### app/services/social-media-marketing/page.tsx (✅ PASSED)
 
-- **Meta Title**: `Social Media Marketing Agency India 2026 | Veloxis Global` (57 characters)
-- **Meta Description**: `India's results-driven social media marketing agency. Instagram, Facebook & Link...` (169 characters)
+- **Meta Title**: `Organic Social Media Marketing & Management | Veloxis Global` (60 characters)
+- **Meta Description**: `Scale your organic social presence. Strategy calendars, Instagram Reel guides, L...` (129 characters)
 - **Canonical Link**: ✅ Configured
 - **JSON-LD Schema**: ✅ Configured
 - **Heading H1 Count**: 1 heading(s)
 - **Total Images Audited**: 0 image(s)
 
 #### ✅ Passed Checks
-- Optimal title length (57 chars): "Social Media Marketing Agency India 2026 | Veloxis Global"
-- Optimal description length (169 chars)
+- Optimal title length (60 chars): "Organic Social Media Marketing & Management | Veloxis Global"
+- Optimal description length (129 chars)
+- Canonical URL alternate tag configured.
+- Found JSON-LD schema integration.
+- Exactly one H1 element present.
+- Highly GEO-friendly structure (uses bulleted lists and FAQ sections).
+- Strong E-E-A-T Signals (references verified author and certs/citations).
+- All parsed interactive elements have unique IDs.
+
+---
+
+### app/services/training-education/page.tsx (✅ PASSED)
+
+- **Meta Title**: `Corporate Digital Marketing Training Workshops | Veloxis Global` (63 characters)
+- **Meta Description**: `Upskill your internal marketing team. Get targeted corporate training sessions o...` (141 characters)
+- **Canonical Link**: ✅ Configured
+- **JSON-LD Schema**: ✅ Configured
+- **Heading H1 Count**: 1 heading(s)
+- **Total Images Audited**: 0 image(s)
+
+#### ✅ Passed Checks
+- Optimal title length (63 chars): "Corporate Digital Marketing Training Workshops | Veloxis Global"
+- Optimal description length (141 chars)
 - Canonical URL alternate tag configured.
 - Found JSON-LD schema integration.
 - Exactly one H1 element present.
@@ -564,16 +900,16 @@ Workspace: Veloxis Global
 
 ### app/services/web-design-development/page.tsx (✅ PASSED)
 
-- **Meta Title**: `Web Design & Development Company India 2026 | Veloxis Global` (60 characters)
-- **Meta Description**: `Fast, modern, conversion-optimised websites for businesses across India. Built w...` (160 characters)
+- **Meta Title**: `Website Design & Development Services Agency | Veloxis Global` (61 characters)
+- **Meta Description**: `Get lightning-fast, secure, and CRO-optimized websites. Custom Next.js, React ap...` (123 characters)
 - **Canonical Link**: ✅ Configured
 - **JSON-LD Schema**: ✅ Configured
 - **Heading H1 Count**: 1 heading(s)
 - **Total Images Audited**: 0 image(s)
 
 #### ✅ Passed Checks
-- Optimal title length (60 chars): "Web Design & Development Company India 2026 | Veloxis Global"
-- Optimal description length (160 chars)
+- Optimal title length (61 chars): "Website Design & Development Services Agency | Veloxis Global"
+- Optimal description length (123 chars)
 - Canonical URL alternate tag configured.
 - Found JSON-LD schema integration.
 - Exactly one H1 element present.
