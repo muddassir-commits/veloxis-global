@@ -137,11 +137,13 @@ export const Navbar: React.FC = () => {
   if (isAuditPage) {
     return (
       <header
-        className={`sticky top-0 z-50 w-full transition-all duration-300 ease-in-out h-16 md:h-[72px] flex items-center bg-[rgba(255,255,255,0.7)] backdrop-blur-[20px] border-b border-[rgba(255,255,255,0.4)] ${
-          scrolled ? 'shadow-[0_1px_20px_rgba(15,23,42,0.06)]' : 'shadow-none'
+        className={`fixed left-1/2 -translate-x-1/2 z-50 transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] ${
+          scrolled 
+            ? 'top-4 w-[calc(100%-2rem)] max-w-[1120px] h-14 md:h-16 bg-white/80 backdrop-blur-[24px] border border-white/50 shadow-[0_12px_40px_rgba(15,23,42,0.08)] rounded-full px-6' 
+            : 'top-0 w-full h-16 md:h-[72px] bg-white/80 backdrop-blur-[20px] border-b border-slate-100 px-0'
         }`}
       >
-        <div className="max-w-container-max mx-auto px-gutter w-full flex items-center justify-between">
+        <div className={`w-full flex items-center justify-between h-full transition-all duration-500 ${scrolled ? 'px-2' : 'max-w-container-max mx-auto px-gutter'}`}>
           <Link href="/" className="flex items-center">
             <Image
               src="/images/logos/logo.webp"
@@ -167,11 +169,13 @@ export const Navbar: React.FC = () => {
   return (
     <>
       <header
-        className={`sticky top-0 z-50 w-full transition-all duration-300 ease-in-out h-16 md:h-[72px] flex items-center bg-[rgba(255,255,255,0.7)] backdrop-blur-[20px] border-b border-[rgba(255,255,255,0.4)] ${
-          scrolled ? 'shadow-[0_1px_20px_rgba(15,23,42,0.06)]' : 'shadow-none'
+        className={`fixed left-1/2 -translate-x-1/2 z-50 transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] ${
+          scrolled 
+            ? 'top-4 w-[calc(100%-2rem)] max-w-[1120px] h-14 md:h-16 bg-white/80 backdrop-blur-[24px] border border-white/50 shadow-[0_12px_40px_rgba(15,23,42,0.08)] rounded-full px-6' 
+            : 'top-0 w-full h-16 md:h-[72px] bg-white/80 backdrop-blur-[20px] border-b border-slate-100 px-0'
         }`}
       >
-        <div className="max-w-container-max mx-auto px-gutter w-full flex items-center justify-between h-full">
+        <div className={`w-full flex items-center justify-between h-full transition-all duration-500 ${scrolled ? 'px-2' : 'max-w-container-max mx-auto px-gutter'}`}>
           {/* Left: Brand Logo */}
           <Link href="/" className="flex items-center">
             <Image
@@ -185,7 +189,7 @@ export const Navbar: React.FC = () => {
           </Link>
 
           {/* Center: Desktop Nav Links */}
-          <nav className="hidden md:flex items-center gap-6 lg:gap-8 h-full" aria-label="Main navigation">
+          <nav className="hidden md:flex items-center gap-4 lg:gap-5 h-full" aria-label="Main navigation">
             
             {/* 1. Services dropdown (Mega Menu) */}
             <div
@@ -215,7 +219,6 @@ export const Navbar: React.FC = () => {
                     setIndustriesOpen(false);
                     setLocationsOpen(false);
                   } else {
-                    // On desktop, keep it open on click to prevent the toggle-off issue
                     clearAllHoverTimeouts();
                     setServicesOpen(true);
                     setIndustriesOpen(false);
@@ -225,8 +228,10 @@ export const Navbar: React.FC = () => {
                 aria-expanded={servicesOpen}
                 aria-controls="services-dropdown"
                 aria-haspopup="true"
-                className={`flex items-center gap-1 font-sans text-[15px] font-semibold transition-colors duration-300 py-2 ${
-                  isActive('/services') ? 'text-royal-blue underline decoration-royal-blue decoration-2 underline-offset-4' : 'text-slate-900 hover:text-royal-blue'
+                className={`flex items-center gap-1 font-sans text-[14px] font-semibold transition-all duration-300 px-3.5 py-1.5 rounded-full ${
+                  isActive('/services') || servicesOpen
+                    ? 'bg-royal-blue text-white shadow-sm shadow-royal-blue/15'
+                    : 'text-slate-700 hover:bg-slate-100/80 hover:text-royal-blue'
                 }`}
               >
                 Services
@@ -238,10 +243,10 @@ export const Navbar: React.FC = () => {
                 id="services-dropdown"
                 role="region"
                 aria-label="Services menu"
-                className={`absolute top-full left-1/2 -translate-x-1/2 w-[920px] bg-white rounded-2xl shadow-xl border border-slate-100 p-8 z-[60] transition-all duration-200 ease-out origin-top ${
+                className={`absolute top-full left-1/2 -translate-x-1/2 w-[920px] bg-white/95 backdrop-blur-[20px] rounded-3xl shadow-2xl border border-slate-100/80 p-8 z-[60] mt-2.5 transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] origin-top before:absolute before:-top-2.5 before:left-0 before:w-full before:h-2.5 before:bg-transparent ${
                   servicesOpen
                     ? 'opacity-100 scale-100 translate-y-0 pointer-events-auto'
-                    : 'opacity-0 scale-95 -translate-y-2 pointer-events-none'
+                    : 'opacity-0 scale-95 -translate-y-4 pointer-events-none'
                 }`}
               >
                 {/* 3-Column main layout */}
@@ -249,7 +254,7 @@ export const Navbar: React.FC = () => {
                   
                   {/* Column 1 — Paid Advertising & Leads */}
                   <div className="flex flex-col gap-5 border-r border-slate-100 pr-6">
-                    <span className="text-xs font-black tracking-wider uppercase text-slate-400">
+                    <span className="text-[11px] font-black tracking-widest uppercase bg-gradient-to-r from-royal-blue to-indigo-accent bg-clip-text text-transparent">
                       {servicesGroups[0].title}
                     </span>
                     <div className="flex flex-col gap-4">
@@ -275,7 +280,7 @@ export const Navbar: React.FC = () => {
 
                   {/* Column 2 — Organic Growth */}
                   <div className="flex flex-col gap-5 border-r border-slate-100 pr-6">
-                    <span className="text-xs font-black tracking-wider uppercase text-slate-400">
+                    <span className="text-[11px] font-black tracking-widest uppercase bg-gradient-to-r from-royal-blue to-indigo-accent bg-clip-text text-transparent">
                       {servicesGroups[1].title}
                     </span>
                     <div className="flex flex-col gap-3.5">
@@ -303,7 +308,7 @@ export const Navbar: React.FC = () => {
                   <div className="flex flex-col gap-6">
                     {/* Sub-Group 1: Conversion & Automation */}
                     <div className="flex flex-col gap-4">
-                      <span className="text-xs font-black tracking-wider uppercase text-slate-400">
+                      <span className="text-[11px] font-black tracking-widest uppercase bg-gradient-to-r from-royal-blue to-indigo-accent bg-clip-text text-transparent">
                         {servicesGroups[2].title}
                       </span>
                       <div className="flex flex-col gap-3">
@@ -329,7 +334,7 @@ export const Navbar: React.FC = () => {
 
                     {/* Sub-Group 2: Strategy & Audits */}
                     <div className="flex flex-col gap-4 border-t border-slate-100 pt-4">
-                      <span className="text-xs font-black tracking-wider uppercase text-slate-400">
+                      <span className="text-[11px] font-black tracking-widest uppercase bg-gradient-to-r from-royal-blue to-indigo-accent bg-clip-text text-transparent">
                         {servicesGroups[3].title}
                       </span>
                       <div className="flex flex-col gap-3">
@@ -398,7 +403,7 @@ export const Navbar: React.FC = () => {
                 if (hasHover) {
                   industriesTimeoutRef.current = setTimeout(() => {
                     setIndustriesOpen(false);
-                  }, 250); // 250ms grace period to allow diagonal mouse movement
+                  }, 250);
                 }
               }}
             >
@@ -410,7 +415,6 @@ export const Navbar: React.FC = () => {
                     setServicesOpen(false);
                     setLocationsOpen(false);
                   } else {
-                    // On desktop, keep it open on click to prevent the toggle-off issue
                     clearAllHoverTimeouts();
                     setIndustriesOpen(true);
                     setServicesOpen(false);
@@ -420,8 +424,10 @@ export const Navbar: React.FC = () => {
                 aria-expanded={industriesOpen}
                 aria-controls="industries-dropdown"
                 aria-haspopup="true"
-                className={`flex items-center gap-1 font-sans text-[15px] font-semibold transition-colors duration-300 py-2 ${
-                  isActive('/industries') ? 'text-royal-blue underline decoration-royal-blue decoration-2 underline-offset-4' : 'text-slate-900 hover:text-royal-blue'
+                className={`flex items-center gap-1 font-sans text-[14px] font-semibold transition-all duration-300 px-3.5 py-1.5 rounded-full ${
+                  isActive('/industries') || industriesOpen
+                    ? 'bg-royal-blue text-white shadow-sm shadow-royal-blue/15'
+                    : 'text-slate-700 hover:bg-slate-100/80 hover:text-royal-blue'
                 }`}
               >
                 Industries
@@ -433,10 +439,10 @@ export const Navbar: React.FC = () => {
                 id="industries-dropdown"
                 role="region"
                 aria-label="Industries menu"
-                className={`absolute top-full left-1/2 -translate-x-1/2 w-[620px] bg-white rounded-2xl shadow-xl border border-slate-100 p-6 z-[60] transition-all duration-200 ease-out origin-top ${
+                className={`absolute top-full left-1/2 -translate-x-1/2 w-[620px] bg-white/95 backdrop-blur-[20px] rounded-3xl shadow-2xl border border-slate-100/80 p-6 z-[60] mt-2.5 transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] origin-top before:absolute before:-top-2.5 before:left-0 before:w-full before:h-2.5 before:bg-transparent ${
                   industriesOpen
                     ? 'opacity-100 scale-100 translate-y-0 pointer-events-auto'
-                    : 'opacity-0 scale-95 -translate-y-2 pointer-events-none'
+                    : 'opacity-0 scale-95 -translate-y-4 pointer-events-none'
                 }`}
               >
                 {/* 2-Column Grid */}
@@ -488,7 +494,7 @@ export const Navbar: React.FC = () => {
                 if (hasHover) {
                   locationsTimeoutRef.current = setTimeout(() => {
                     setLocationsOpen(false);
-                  }, 250); // 250ms grace period to allow diagonal mouse movement
+                  }, 250);
                 }
               }}
             >
@@ -500,7 +506,6 @@ export const Navbar: React.FC = () => {
                     setServicesOpen(false);
                     setIndustriesOpen(false);
                   } else {
-                    // On desktop, keep it open on click to prevent the toggle-off issue
                     clearAllHoverTimeouts();
                     setLocationsOpen(true);
                     setServicesOpen(false);
@@ -510,8 +515,10 @@ export const Navbar: React.FC = () => {
                 aria-expanded={locationsOpen}
                 aria-controls="locations-dropdown"
                 aria-haspopup="true"
-                className={`flex items-center gap-1 font-sans text-[15px] font-semibold transition-colors duration-300 py-2 ${
-                  isActive('/digital-marketing-agency') ? 'text-royal-blue underline decoration-royal-blue decoration-2 underline-offset-4' : 'text-slate-900 hover:text-royal-blue'
+                className={`flex items-center gap-1 font-sans text-[14px] font-semibold transition-all duration-300 px-3.5 py-1.5 rounded-full ${
+                  isActive('/digital-marketing-agency') || locationsOpen
+                    ? 'bg-royal-blue text-white shadow-sm shadow-royal-blue/15'
+                    : 'text-slate-700 hover:bg-slate-100/80 hover:text-royal-blue'
                 }`}
               >
                 Locations
@@ -523,10 +530,10 @@ export const Navbar: React.FC = () => {
                 id="locations-dropdown"
                 role="region"
                 aria-label="Locations menu"
-                className={`absolute top-full left-0 w-[280px] bg-white rounded-xl shadow-lg border border-slate-100 p-4 z-[60] flex flex-col gap-2 transition-all duration-200 ease-out origin-top ${
+                className={`absolute top-full left-0 w-[280px] bg-white/95 backdrop-blur-[20px] rounded-2xl shadow-2xl border border-slate-100/80 p-4 z-[60] mt-2.5 transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] origin-top before:absolute before:-top-2.5 before:left-0 before:w-full before:h-2.5 before:bg-transparent ${
                   locationsOpen
                     ? 'opacity-100 scale-100 translate-y-0 pointer-events-auto'
-                    : 'opacity-0 scale-95 -translate-y-2 pointer-events-none'
+                    : 'opacity-0 scale-95 -translate-y-4 pointer-events-none'
                 }`}
               >
                 {locationLinks.map((loc, index) => (
@@ -546,8 +553,8 @@ export const Navbar: React.FC = () => {
 
             <Link
               href="/about"
-              className={`font-sans text-[15px] font-semibold transition-colors duration-300 ${
-                isActive('/about') ? 'text-royal-blue underline decoration-royal-blue decoration-2 underline-offset-4' : 'text-slate-900 hover:text-royal-blue'
+              className={`font-sans text-[14px] font-semibold transition-all duration-300 px-3.5 py-1.5 rounded-full ${
+                isActive('/about') ? 'bg-royal-blue text-white shadow-sm shadow-royal-blue/15' : 'text-slate-700 hover:bg-slate-100/80 hover:text-royal-blue'
               }`}
             >
               About
@@ -555,8 +562,8 @@ export const Navbar: React.FC = () => {
 
             <Link
               href="/case-studies"
-              className={`font-sans text-[15px] font-semibold transition-colors duration-300 ${
-                isActive('/case-studies') ? 'text-royal-blue underline decoration-royal-blue decoration-2 underline-offset-4' : 'text-slate-900 hover:text-royal-blue'
+              className={`font-sans text-[14px] font-semibold transition-all duration-300 px-3.5 py-1.5 rounded-full ${
+                isActive('/case-studies') ? 'bg-royal-blue text-white shadow-sm shadow-royal-blue/15' : 'text-slate-700 hover:bg-slate-100/80 hover:text-royal-blue'
               }`}
             >
               Case Studies
@@ -564,8 +571,8 @@ export const Navbar: React.FC = () => {
 
             <Link
               href="/blog"
-              className={`font-sans text-[15px] font-semibold transition-colors duration-300 ${
-                isActive('/blog') ? 'text-royal-blue underline decoration-royal-blue decoration-2 underline-offset-4' : 'text-slate-900 hover:text-royal-blue'
+              className={`font-sans text-[14px] font-semibold transition-all duration-300 px-3.5 py-1.5 rounded-full ${
+                isActive('/blog') ? 'bg-royal-blue text-white shadow-sm shadow-royal-blue/15' : 'text-slate-700 hover:bg-slate-100/80 hover:text-royal-blue'
               }`}
             >
               Blog
@@ -573,16 +580,16 @@ export const Navbar: React.FC = () => {
           </nav>
 
           {/* Right: Desktop CTA & Phone */}
-          <div className="hidden md:flex items-center gap-6">
+          <div className="hidden md:flex items-center gap-5">
             <a
               href="tel:+918887620727"
-              className="flex items-center gap-1.5 font-sans text-[14px] font-bold text-slate-600 hover:text-royal-blue transition-colors duration-300"
+              className="flex items-center gap-1 font-sans text-[13px] lg:text-[14px] font-bold text-slate-600 hover:text-royal-blue transition-colors duration-300"
             >
               <span aria-hidden="true">📞</span>
               <span>+91-88876 20727</span>
             </a>
             <div className="hero-cta-hover rounded-md">
-              <Button href="/free-seo-audit" variant="primary" size="sm">
+              <Button href="/free-seo-audit" variant="primary" size="sm" className="px-4 py-2 text-xs">
                 Get Free Audit →
               </Button>
             </div>
@@ -605,7 +612,7 @@ export const Navbar: React.FC = () => {
       {/* Backdrop */}
       <div
         onClick={() => setIsOpen(false)}
-        className={`fixed inset-0 z-[99] bg-black/20 transition-opacity duration-300 ${
+        className={`fixed inset-0 z-[99] bg-slate-900/10 backdrop-blur-sm transition-opacity duration-300 ${
           isOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
         }`}
         aria-hidden="true"
@@ -618,8 +625,8 @@ export const Navbar: React.FC = () => {
         role="dialog"
         aria-modal="true"
         aria-label="Navigation menu"
-        className={`fixed inset-0 z-[100] bg-white flex flex-col justify-between overflow-y-auto p-6 transition-transform duration-300 ease-out ${
-          isOpen ? 'translate-x-0 pointer-events-auto' : 'translate-x-full pointer-events-none'
+        className={`fixed top-4 right-4 bottom-4 w-[calc(100%-2rem)] max-w-sm z-[100] bg-white/95 backdrop-blur-[24px] rounded-3xl flex flex-col justify-between overflow-y-auto p-6 shadow-2xl border border-slate-100 transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] ${
+          isOpen ? 'translate-x-0 opacity-100 scale-100' : 'translate-x-8 opacity-0 scale-95 pointer-events-none'
         }`}
       >
         {/* Header area in Drawer */}
@@ -630,7 +637,7 @@ export const Navbar: React.FC = () => {
               alt="Veloxis Global"
               width={160}
               height={40}
-              className="h-8 md:h-10 w-auto max-w-[120px] md:max-w-none object-contain"
+              className="h-8 w-auto max-w-[120px] object-contain"
             />
 
             <button
@@ -714,7 +721,7 @@ export const Navbar: React.FC = () => {
                 aria-controls="mobile-industries-list"
                 className="flex items-center justify-between w-full font-bold text-slate-900 text-[16px] py-3 focus:outline-none"
               >
-                <span>Industries</span>
+                <span>Focus Industries</span>
                 <ChevronDown
                   className={`w-5 h-5 transition-transform duration-200 text-slate-500 ${mobileIndustriesOpen ? 'rotate-180' : ''}`}
                   aria-hidden="true"
