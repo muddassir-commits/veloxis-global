@@ -143,7 +143,7 @@ export const Navbar: React.FC = () => {
             : 'top-0 w-full h-16 lg:h-[72px] bg-white/80 backdrop-blur-[20px] border-b border-slate-100 px-0'
         }`}
       >
-        <div className={`w-full flex items-center justify-between h-full transition-all duration-500 ${scrolled ? 'px-2' : 'max-w-container-max mx-auto px-gutter'}`}>
+        <div className={`w-full flex items-center justify-between h-full transition-all duration-500 ${scrolled ? 'px-3 lg:px-4' : 'max-w-container-max mx-auto px-gutter'}`}>
           <Link href="/" className="flex items-center shrink-0">
             <Image
               src="/images/logos/logo.webp"
@@ -175,7 +175,7 @@ export const Navbar: React.FC = () => {
             : 'top-0 w-full h-16 lg:h-[72px] bg-white/80 backdrop-blur-[20px] border-b border-slate-100 px-0'
         }`}
       >
-        <div className={`w-full flex items-center justify-between h-full transition-all duration-500 ${scrolled ? 'px-2' : 'max-w-container-max mx-auto px-gutter'}`}>
+        <div className={`w-full flex items-center justify-between h-full transition-all duration-500 ${scrolled ? 'px-3 lg:px-4' : 'max-w-container-max mx-auto px-gutter'}`}>
           {/* Left: Brand Logo */}
           <Link href="/" className="flex items-center shrink-0">
             <Image
@@ -604,28 +604,28 @@ export const Navbar: React.FC = () => {
           </nav>
  
           {/* Right: Desktop CTA & Phone */}
-          <div className={`hidden lg:flex items-center shrink-0 transition-all duration-300 ${scrolled ? 'gap-2.5 xl:gap-4 lg:gap-3' : 'gap-4 lg:gap-5'}`}>
-            <a
-              href="tel:+918887620727"
-              className="flex items-center gap-1 font-sans font-bold text-slate-600 hover:text-royal-blue transition-all duration-300 whitespace-nowrap shrink-0"
-            >
-              <span className="text-base leading-none shrink-0" aria-hidden="true">📞</span>
-              <span className={`whitespace-nowrap shrink-0 ${
-                scrolled 
-                  ? 'hidden' 
-                  : 'hidden xl:inline text-[13px] xl:text-[14px]'
-              }`}>+91-88876 20727</span>
-            </a>
-            <div className="hero-cta-hover rounded-md shrink-0">
+          <div className={`hidden lg:flex items-center shrink-0 transition-all duration-300 ${scrolled ? 'gap-2.5 xl:gap-3.5 lg:gap-3' : 'gap-4 lg:gap-5'}`}>
+            <div className="hero-cta-hover !rounded-full shrink-0">
               <Button 
                 href="/free-seo-audit" 
                 variant="primary" 
                 size="sm" 
-                className={`transition-all duration-300 shrink-0 ${scrolled ? 'px-3 py-1.5 text-[11px]' : 'px-4 py-2 text-xs'}`}
+                className={`!rounded-full transition-all duration-300 shrink-0 ${scrolled ? 'px-3.5 py-1.5 text-[11px]' : 'px-4 py-2 text-xs'}`}
               >
                 Get Free Audit →
               </Button>
             </div>
+            <a
+              href="tel:+918887620727"
+              title="Call +91-88876 20727"
+              className={`flex items-center justify-center rounded-full bg-royal-blue/10 text-royal-blue hover:bg-royal-blue hover:text-white transition-all duration-300 shrink-0 ${
+                scrolled 
+                  ? 'w-8 h-8' 
+                  : 'w-10 h-10'
+              }`}
+            >
+              <Phone className={`shrink-0 ${scrolled ? 'w-4 h-4' : 'w-4.5 h-4.5'}`} aria-hidden="true" />
+            </a>
           </div>
  
           {/* Mobile: Hamburger Button */}
@@ -872,7 +872,7 @@ export const Navbar: React.FC = () => {
             <span aria-hidden="true">📞</span>
             <span>+91-88876 20727</span>
           </a>
-          <Button href="/free-seo-audit" onClick={() => setIsOpen(false)} variant="primary" className="w-full text-center py-3">
+          <Button href="/free-seo-audit" onClick={() => setIsOpen(false)} variant="primary" className="w-full text-center py-3 !rounded-full">
             Get Free Audit →
           </Button>
         </div>

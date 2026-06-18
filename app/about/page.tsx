@@ -16,7 +16,12 @@ import {
   BookOpen, 
   CheckCircle, 
   Briefcase, 
-  Globe 
+  Globe,
+  Search,
+  Layers,
+  Zap,
+  MessageSquare,
+  TrendingUp
 } from 'lucide-react';
 import { Linkedin } from '../../components/ui/BrandIcons';
 import { constructMetadata, pageMeta } from '../../lib/seo-config';
@@ -152,16 +157,16 @@ export default function AboutPage() {
               GROWTH PARTNER
             </span>
             <h1 className="text-4xl sm:text-5xl lg:text-[56px] font-extrabold tracking-tight leading-[1.1] text-white">
-              We're Not Just an Agency — We're Your Growth Partner
+              We Are the Best Digital Marketing Agency & Lead Generation Partner
             </h1>
             <p className="text-lg sm:text-xl text-slate-300 leading-relaxed max-w-2xl">
-              At Veloxis Global, we engineer structured client acquisition engines combining performance advertising, search optimization, and custom AI automations.
+              Veloxis Global is a top digital marketing agency in India. We help businesses grow by building automated lead generation services, paid advertising campaigns, and search engine optimization services.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Founding Story Section */}
+      {/* Our Story Section */}
       <section className="py-20 bg-white text-left">
         <div className="max-w-container-max mx-auto px-gutter">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
@@ -169,69 +174,65 @@ export default function AboutPage() {
             {/* Story copy (Left) */}
             <div className="lg:col-span-7 flex flex-col gap-6 text-slate-700 text-sm sm:text-base leading-relaxed">
               <span className="text-xs font-bold text-royal-blue uppercase tracking-wider">
-                FOUNDING STORY
+                OUR STORY
               </span>
               <h2 className="text-3xl font-extrabold text-slate-900 tracking-tight">
-                Our Genesis & Philosophy
+                How Veloxis Global Helps Businesses Grow
               </h2>
               
               <p>
-                Veloxis Global was founded with one simple, unwavering belief — digital marketing should drive real, tangible business growth, not just vanity metrics like impressions, clicks, or empty promises.
+                Veloxis Global was started with one main goal: to make digital marketing simple, clear, and highly profitable. We believe that every marketing campaign should bring real business sales, not just views, likes, or empty promises.
               </p>
               
               <p>
-                As a performance-focused digital marketing agency, Veloxis Global helps modern businesses build scalable customer acquisition channels. We specialize in designing systems that combine paid advertising, organic search engine optimization (SEO), conversion-focused design, and custom API integrations to deliver predictable leads and sales.
+                As a leading **digital marketing agency in India**, we focus on building predictable client acquisition engines. This means we design systems that combine high-performing paid ads, organic search engine optimization, and custom CRM automation to help you get more customers consistently.
               </p>
               
               <p>
-                Our journey began by observing a critical mismatch in the industry. Many businesses were spending heavily on advertising campaigns, but they lacked the necessary backend systems to capture, organize, and nurture their leads. Veloxis Global was established to build these complete marketing frameworks, linking post-click funnels directly with automated customer relation platforms.
+                We noticed that many businesses spend a lot of money on a **paid advertising company** or social media ads, but they do not have a good system to convert those leads into paying customers. Veloxis Global was created to solve this exact problem by building end-to-end marketing funnels.
               </p>
               
               <div className="border-l-4 border-royal-blue pl-4 py-2 my-2 italic text-slate-900 font-semibold bg-slate-50">
-                We don't just run ads — we build complete customer acquisition pipelines.
+                We do not just run ads. We set up complete lead generation systems for your business.
               </div>
               
               <p>
-                Instead of focusing on isolated campaigns, we structure unified marketing systems. By integrating high-quality traffic generation with custom WhatsApp API automation, lead routing CRM software, landing page optimization, and comprehensive attribution dashboards, we ensure that every marketing dollar spent is trackable and optimized.
+                Instead of running single Facebook or Google ads, we build a complete customer journey. We combine targeted traffic from Facebook ads marketing and Google Ads PPC services with automated WhatsApp follow-ups, CRM lead tracking, and conversion-optimized landing pages. This keeps your sales pipeline full and makes sure no lead is wasted.
               </p>
               
               <p>
-                Today, Veloxis Global serves as a trusted growth partner for e-commerce companies, real estate developers, educational institutes, local services, and B2B startups. We work directly with client stakeholders to streamline their customer journeys, automate repetitive outreach, and drive sustainable growth.
-              </p>
-              
-              <p>
-                We believe modern brands need more than standard marketing retainers. They require data-driven decisions, clear attribution, and consistent lead generation engines that work 24/7. Veloxis Global is built to deliver smart marketing, powerful sales automation, and honest strategies — eliminating guesswork and focusing entirely on business outcomes.
+                Today, Veloxis Global serves as a trusted growth partner for companies in real estate, e-commerce, coaching, legal, and software industries. We help brands automate their daily sales tasks, optimize their websites, and scale their customer growth using real data and honest strategies.
               </p>
             </div>
 
             {/* Agency Approach (Right) */}
             <div className="lg:col-span-5 flex flex-col gap-6 w-full">
               <div className="bg-slate-50 border border-slate-100 rounded-2xl p-6">
-                <span className="text-xs font-extrabold text-royal-blue uppercase tracking-wider block mb-4">OUR CORE CAPABILITIES</span>
+                <span className="text-xs font-extrabold text-royal-blue uppercase tracking-wider block mb-4">OUR SERVICES</span>
                 <div className="flex flex-col gap-3.5 text-sm font-semibold text-slate-700">
                   <div className="flex items-center gap-2.5">
                     <CheckCircle className="w-5 h-5 text-royal-blue shrink-0" />
-                    <span>Multi-Channel Performance Advertising</span>
+                    <span>Facebook Ads Marketing & Google PPC</span>
                   </div>
                   <div className="flex items-center gap-2.5">
                     <CheckCircle className="w-5 h-5 text-royal-blue shrink-0" />
-                    <span>Data-Driven Search Engine Optimization (SEO)</span>
+                    <span>Search Engine Optimization Services (SEO)</span>
                   </div>
                   <div className="flex items-center gap-2.5">
                     <CheckCircle className="w-5 h-5 text-royal-blue shrink-0" />
-                    <span>WhatsApp API & Funnel Automations</span>
+                    <span>WhatsApp Automation for Business</span>
                   </div>
                   <div className="flex items-center gap-2.5">
                     <CheckCircle className="w-5 h-5 text-royal-blue shrink-0" />
-                    <span>CRM Integrations & Lead Management Systems</span>
+                    <span>CRM Lead Management & Sales Pipelines</span>
                   </div>
                   <div className="flex items-center gap-2.5">
                     <CheckCircle className="w-5 h-5 text-royal-blue shrink-0" />
-                    <span>High-Converting Landing Pages & Copywriting</span>
+                    <span>High-Converting Landing Page Design</span>
                   </div>
                   <div className="flex items-center gap-2.5">
                     <CheckCircle className="w-5 h-5 text-royal-blue shrink-0" />
-                    <span>Comprehensive Campaign Audits & Strategy</span>
+                    <span>Full Website Optimization & SEO Audits</span>
                   </div>
                 </div>
               </div>
@@ -241,7 +242,7 @@ export default function AboutPage() {
                 <div className="bg-slate-900 text-white p-5 rounded-2xl border border-white/5 relative overflow-hidden text-left">
                   <div className="absolute top-0 right-0 w-16 h-16 bg-royal-blue/10 rounded-full blur-xl"></div>
                   <span className="text-2xl sm:text-3xl font-black text-royal-blue block">62+</span>
-                  <span className="text-[11px] text-slate-400 font-bold uppercase tracking-wider block mt-1">SEO Audits Conducted</span>
+                  <span className="text-[11px] text-slate-400 font-bold uppercase tracking-wider block mt-1">SEO Audits Done</span>
                 </div>
                 <div className="bg-slate-900 text-white p-5 rounded-2xl border border-white/5 relative overflow-hidden text-left">
                   <div className="absolute top-0 right-0 w-16 h-16 bg-teal-accent/10 rounded-full blur-xl"></div>
@@ -255,8 +256,117 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Mission & Vision */}
+      {/* Our Digital Marketing Process */}
       <section className="py-20 bg-slate-50 border-y border-slate-100 text-left">
+        <div className="max-w-container-max mx-auto px-gutter">
+          <div className="text-center max-w-2xl mx-auto mb-16">
+            <span className="text-xs font-bold text-royal-blue uppercase tracking-widest block mb-3">
+              OUR WORKFLOW
+            </span>
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+              Our 5-Step Digital Marketing Process
+            </h2>
+            <p className="text-slate-600 mt-3 text-sm sm:text-base leading-relaxed">
+              We do not believe in guessing. We use a clear, step-by-step method to audit, build, and scale your customer acquisition.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
+            {/* Step 1 */}
+            <div className="bg-white border border-slate-100 rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow relative flex flex-col justify-between">
+              <div>
+                <div className="flex justify-between items-start mb-6">
+                  <div className="w-10 h-10 rounded-lg bg-royal-blue/10 flex items-center justify-center text-royal-blue">
+                    <Search className="w-5 h-5" />
+                  </div>
+                  <span className="text-3xl font-black text-slate-200">01</span>
+                </div>
+                <h3 className="font-extrabold text-slate-900 text-lg mb-2">
+                  Detailed Audit
+                </h3>
+                <p className="text-xs sm:text-sm text-slate-500 leading-relaxed">
+                  We look at your website speed, SEO keywords, and current ads as a **website optimization company** and **best SEO agency** to find issues.
+                </p>
+              </div>
+            </div>
+
+            {/* Step 2 */}
+            <div className="bg-white border border-slate-100 rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow relative flex flex-col justify-between">
+              <div>
+                <div className="flex justify-between items-start mb-6">
+                  <div className="w-10 h-10 rounded-lg bg-royal-blue/10 flex items-center justify-center text-royal-blue">
+                    <Layers className="w-5 h-5" />
+                  </div>
+                  <span className="text-3xl font-black text-slate-200">02</span>
+                </div>
+                <h3 className="font-extrabold text-slate-900 text-lg mb-2">
+                  Funnel Design
+                </h3>
+                <p className="text-xs sm:text-sm text-slate-500 leading-relaxed">
+                  We design high-converting landing pages and map out a customer journey focused on **sales funnel optimization**.
+                </p>
+              </div>
+            </div>
+
+            {/* Step 3 */}
+            <div className="bg-white border border-slate-100 rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow relative flex flex-col justify-between">
+              <div>
+                <div className="flex justify-between items-start mb-6">
+                  <div className="w-10 h-10 rounded-lg bg-royal-blue/10 flex items-center justify-center text-royal-blue">
+                    <Zap className="w-5 h-5" />
+                  </div>
+                  <span className="text-3xl font-black text-slate-200">03</span>
+                </div>
+                <h3 className="font-extrabold text-slate-900 text-lg mb-2">
+                  High-Performance Traffic
+                </h3>
+                <p className="text-xs sm:text-sm text-slate-500 leading-relaxed">
+                  We launch custom campaigns as a **Meta Ads performance agency** and manage your **Google Ads PPC services** to drive real buyers.
+                </p>
+              </div>
+            </div>
+
+            {/* Step 4 */}
+            <div className="bg-white border border-slate-100 rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow relative flex flex-col justify-between">
+              <div>
+                <div className="flex justify-between items-start mb-6">
+                  <div className="w-10 h-10 rounded-lg bg-royal-blue/10 flex items-center justify-center text-royal-blue">
+                    <MessageSquare className="w-5 h-5" />
+                  </div>
+                  <span className="text-3xl font-black text-slate-200">04</span>
+                </div>
+                <h3 className="font-extrabold text-slate-900 text-lg mb-2">
+                  Sales Automation
+                </h3>
+                <p className="text-xs sm:text-sm text-slate-500 leading-relaxed">
+                  We set up **WhatsApp automation for business** and **sales pipeline automation** to contact and close leads instantly.
+                </p>
+              </div>
+            </div>
+
+            {/* Step 5 */}
+            <div className="bg-white border border-slate-100 rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow relative flex flex-col justify-between">
+              <div>
+                <div className="flex justify-between items-start mb-6">
+                  <div className="w-10 h-10 rounded-lg bg-royal-blue/10 flex items-center justify-center text-royal-blue">
+                    <TrendingUp className="w-5 h-5" />
+                  </div>
+                  <span className="text-3xl font-black text-slate-200">05</span>
+                </div>
+                <h3 className="font-extrabold text-slate-900 text-lg mb-2">
+                  Scale & Optimize
+                </h3>
+                <p className="text-xs sm:text-sm text-slate-500 leading-relaxed">
+                  As a performance-focused **lead generation agency**, we analyze data weekly to scale campaigns and get you **ROI-focused digital marketing**.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Mission & Vision */}
+      <section className="py-20 bg-white text-left">
         <div className="max-w-container-max mx-auto px-gutter">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="bg-white border border-slate-100 rounded-2xl p-8 shadow-sm flex flex-col gap-4">
@@ -286,7 +396,7 @@ export default function AboutPage() {
       </section>
 
       {/* How We Work */}
-      <section className="py-20 bg-white text-left">
+      <section className="py-20 bg-slate-50 border-y border-slate-100 text-left">
         <div className="max-w-container-max mx-auto px-gutter">
           <div className="max-w-3xl mx-auto flex flex-col items-start gap-4">
             <span className="text-xs font-bold text-royal-blue uppercase tracking-wider">
@@ -303,7 +413,7 @@ export default function AboutPage() {
       </section>
 
       {/* Certifications */}
-      <section className="py-20 bg-slate-50 border-y border-slate-100 text-left">
+      <section className="py-20 bg-white text-left">
         <div className="max-w-container-max mx-auto px-gutter">
           <div className="text-center max-w-2xl mx-auto mb-16">
             <span className="text-xs font-bold text-royal-blue uppercase tracking-widest block mb-3">
@@ -355,7 +465,7 @@ export default function AboutPage() {
       </section>
 
       {/* Core Values */}
-      <section className="py-20 bg-white text-left">
+      <section className="py-20 bg-slate-50 border-y border-slate-100 text-left">
         <div className="max-w-container-max mx-auto px-gutter">
           <div className="text-center max-w-2xl mx-auto mb-16">
             <span className="text-xs font-bold text-royal-blue uppercase tracking-widest block mb-3">
@@ -411,19 +521,19 @@ export default function AboutPage() {
                 Muddassir Ali
               </h2>
               <span className="text-sm font-bold text-slate-500 -mt-4 uppercase tracking-widest block">
-                Founder, Digital Marketing Consultant & Systems Architect
+                Founder, Digital Marketing Consultant & Lead Generation Specialist
               </span>
               
               <p>
-                Muddassir Ali is the founder of Veloxis Global. With over 6 years of hands-on experience in the digital marketing ecosystem, he specializes in creating high-ROI client acquisition engines by linking paid advertising with advanced CRM automations and organic SEO growth playbooks.
+                Muddassir Ali is the founder of Veloxis Global. He is a professional **digital marketing consultant** with more than 6 years of experience helping businesses get more customers. He specializes in setting up **B2B lead generation systems** and client acquisition engines that run on autopilot.
               </p>
               
               <p>
-                His professional journey began with a focus on conversion optimization and lead generation. Having worked closely with regional businesses, coaching institutes, real estate agencies, and startups in India, Muddassir noticed that companies often lacked unified post-click conversion funnels. He established Veloxis Global to address this precise challenge—providing businesses with end-to-end automated pipelines.
+                After working with many local businesses, training institutes, and real estate brands, Muddassir realized that most companies waste money on ads because they do not have a good follow-up system. To solve this, he started Veloxis Global, which is now recognized as a trusted provider of **digital marketing services in Kanpur** and across India. He helped build this **marketing automation agency** to ensure businesses can turn cold traffic into loyal clients.
               </p>
               
               <p>
-                As a Google and HubSpot certified professional, Muddassir has managed performance marketing budgets, orchestrated search marketing campaigns, and built automated workflows that nurture leads and improve conversions. In addition to consulting, he has trained hundreds of students and business owners in lead acquisition and digital automation strategies.
+                Muddassir is certified by Google and HubSpot. He manages ad campaigns, optimizes websites for search engines, and builds automation flows that nurture leads. He keeps things simple, honest, and focused on helping your business make more money.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 mt-2 w-full sm:w-auto">
@@ -457,11 +567,11 @@ export default function AboutPage() {
         customFaqs={[
           {
             question: "Who is the founder of Veloxis Global?",
-            answer: "Veloxis Global was founded by Muddassir Ali, a digital marketing consultant with over 6 years of experience in lead generation, search engine optimization (SEO), Meta ads campaigns, and marketing CRM integrations."
+            answer: "Veloxis Global was founded by Muddassir Ali, a digital marketing consultant with over 6 years of experience in lead generation services, search engine optimization (SEO), Meta ads, and sales automation."
           },
           {
             question: "Where is Veloxis Global based?",
-            answer: "Veloxis Global is based in Kanpur, Uttar Pradesh, India. However, we operate on a remote-first collaborative model, servicing clients across Delhi NCR, Noida, Lucknow, and international markets."
+            answer: "Veloxis Global is based in Kanpur, Uttar Pradesh, India. If you are looking for the best digital marketing services in Kanpur, we are here to help you. We also work with businesses in Noida, Delhi NCR, Lucknow, and other countries."
           },
           {
             question: "What makes Veloxis Global different from traditional agencies?",
