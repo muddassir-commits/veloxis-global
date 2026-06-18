@@ -121,9 +121,74 @@ export const pageMeta = {
     description: 'Automate your sales pipeline with automated newsletters, WhatsApp flows, and CRM integrations to nurture leads and scale sales. Get a free quote.',
     path: '/services/email-marketing'
   },
+  paidAds: {
+    title: 'Performance Marketing & Paid Advertising Agency | Veloxis Global',
+    description: 'Meta, Google, and LinkedIn ads engineered for maximum ROI. Data-driven campaign scaling and budget optimization. Get a free ad audit.',
+    path: '/services/paid-ads-performance-marketing'
+  },
+  b2bLeadGen: {
+    title: 'B2B Lead Generation & Sales Pipeline Agency | Veloxis Global',
+    description: 'Cold email outreach automation, LinkedIn lead generation, and sales pipeline setup to secure high-quality B2B meetings. Free consultation.',
+    path: '/services/b2b-lead-generation'
+  },
+  aiAutomation: {
+    title: 'AI & Marketing Automation Workflows Systems | Veloxis Global',
+    description: 'Streamline your business operations. Custom n8n workflows, lead routing automation, AI content copy generators, and smart chatbots. Free audit.',
+    path: '/services/ai-marketing-automation'
+  },
+  brandStrategy: {
+    title: 'Brand Strategy, Positioning & Sales Funnels | Veloxis Global',
+    description: 'Define your unique positioning, customer buyer personas, customer journey maps, and high-converting sales funnels to stand out. Get details.',
+    path: '/services/brand-strategy'
+  },
+  analyticsTracking: {
+    title: 'Google Analytics 4, Tagging & Attribution Tracking | Veloxis Global',
+    description: 'GA4 setup, custom conversion tagging, server-side tagging, and multi-channel attribution tracking for precise marketing measurement.',
+    path: '/services/analytics-tracking'
+  },
+  auditsConsulting: {
+    title: 'Digital Marketing Audits & Strategy Consulting | Veloxis Global',
+    description: 'Comprehensive 48-hour website performance, SEO, and ad account audits. Actionable roadmaps to scale your brand. Book a strategy session.',
+    path: '/services/audits-consulting'
+  },
+  ecommerceServices: {
+    title: 'E-commerce Marketing & Shopify Catalog Services | Veloxis Global',
+    description: 'Shopify setups, feed optimization, Google Shopping ads, and dynamic Meta catalog campaigns built to scale online store revenue.',
+    path: '/services/ecommerce-services'
+  },
+  trainingEducation: {
+    title: 'Corporate Marketing Training & Mentorship | Veloxis Global',
+    description: 'Group training, corporate marketing workshops, and 1-on-1 digital marketing mentorship to upskill your in-house marketing team.',
+    path: '/services/training-education'
+  },
+  saas: {
+    title: 'SaaS & Software Product Marketing Agency | Veloxis Global',
+    description: 'Product-led growth, organic search loops, paid ads performance marketing, and GA4 attribution tracking for scaling software brands.',
+    path: '/industries/saas'
+  },
+  coachingConsulting: {
+    title: 'Digital Marketing for Coaches, Consultants & Experts | Veloxis',
+    description: 'Personal brand positioning, high-ticket automated webinar funnels, paid ads, and student onboarding automation for coaches.',
+    path: '/industries/coaching-consulting'
+  },
+  restaurantFood: {
+    title: 'Restaurant & Food Brand Marketing Agency | Veloxis Global',
+    description: 'Hyper-local map optimization, Instagram reels production, local SEO, and delivery channel marketing to fill tables and orders.',
+    path: '/industries/restaurant-food'
+  },
+  fitnessWellness: {
+    title: 'Fitness Centers, Gyms & Wellness Marketing | Veloxis Global',
+    description: 'Lead-to-member conversion systems, local gym brand visibility, social media stories, and CRM retention workflows for wellness hubs.',
+    path: '/industries/fitness-wellness'
+  },
+  nonProfit: {
+    title: 'Non-Profit & NGO Marketing: Google Ad Grants | Veloxis Global',
+    description: 'Google Ad Grants setup, storytelling strategies, donor acquisition workflows, and event engagement systems for non-profits.',
+    path: '/industries/non-profit'
+  },
   services: {
     title: 'Digital Marketing Services in India 2026 | Veloxis Global',
-    description: 'Discover our six results-driven marketing services: SEO, Google Ads PPC, Social Media, Content, Web Dev, and Email automation. Contact us for a quote.',
+    description: 'Discover our fourteen results-driven marketing services grouped by optimization tier. Contact us for a custom quote today.',
     path: '/services'
   },
   about: {

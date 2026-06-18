@@ -41,7 +41,7 @@ export default function AboutPage() {
     "@id": "https://veloxisglobal.com/#organization",
     "name": "Veloxis Global",
     "url": "https://veloxisglobal.com",
-    "logo": "https://veloxisglobal.com/images/logos/logo.png",
+    "logo": "https://veloxisglobal.com/images/logos/logo.webp",
     "foundingDate": "2025",
     "founder": {
       "@type": "Person",

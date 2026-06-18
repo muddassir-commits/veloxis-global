@@ -246,7 +246,7 @@ export default function SingleBlogPostPage({ params }: Params) {
     "description": post.excerpt,
     "datePublished": post.date,
     "dateModified": post.date,
-    "image": "https://veloxisglobal.com/images/logos/logo.png",
+    "image": "https://veloxisglobal.com/images/logos/logo.webp",
     "author": {
       "@type": "Person",
       "name": post.author,
@@ -261,7 +261,7 @@ export default function SingleBlogPostPage({ params }: Params) {
       "name": "Veloxis Global",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://veloxisglobal.com/images/logos/logo.png"
+        "url": "https://veloxisglobal.com/images/logos/logo.webp"
       }
     }
   };

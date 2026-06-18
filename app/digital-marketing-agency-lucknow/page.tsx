@@ -39,7 +39,7 @@ export default function LucknowLocationPage() {
       "name": "Lucknow"
     },
     "priceRange": "₹₹",
-    "image": "https://veloxisglobal.com/images/logos/logo.png"
+    "image": "https://veloxisglobal.com/images/logos/logo.webp"
   };
 
   const breadcrumbItems = [{ name: 'Lucknow Agency', href: '/digital-marketing-agency-lucknow' }];

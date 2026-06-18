@@ -9,22 +9,34 @@ import { Button } from '../ui/Button';
 
 /**
  * Navbar — 'use client' for scroll, pathname, and menu state.
- * Framer Motion removed: dropdowns use CSS opacity/transform transitions.
+ * Dropdowns use CSS opacity/transform transitions.
  * Mobile drawer uses CSS translateX transition for smooth slide-in.
  * ARIA: aria-expanded on accordion buttons, aria-label on hamburger/close.
  */
 export const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
+  const [industriesOpen, setIndustriesOpen] = useState(false);
   const [locationsOpen, setLocationsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
   // Mobile accordion states
   const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
+  const [mobileIndustriesOpen, setMobileIndustriesOpen] = useState(false);
   const [mobileLocationsOpen, setMobileLocationsOpen] = useState(false);
 
   const pathname = usePathname();
   const drawerRef = useRef<HTMLDivElement>(null);
+
+  // Refs for click outside detection
+  const servicesRef = useRef<HTMLDivElement>(null);
+  const industriesRef = useRef<HTMLDivElement>(null);
+  const locationsRef = useRef<HTMLDivElement>(null);
+
+  // Timestamps to detect touch vs hover-mouse interactions
+  const lastServicesMouseEnter = useRef<number>(0);
+  const lastIndustriesMouseEnter = useRef<number>(0);
+  const lastLocationsMouseEnter = useRef<number>(0);
 
   // Scroll handler for box shadow on scroll
   useEffect(() => {
@@ -39,8 +51,10 @@ export const Navbar: React.FC = () => {
   useEffect(() => {
     setIsOpen(false);
     setServicesOpen(false);
+    setIndustriesOpen(false);
     setLocationsOpen(false);
     setMobileServicesOpen(false);
+    setMobileIndustriesOpen(false);
     setMobileLocationsOpen(false);
   }, [pathname]);
 
@@ -50,6 +64,35 @@ export const Navbar: React.FC = () => {
     return () => { document.body.style.overflow = 'unset'; };
   }, [isOpen]);
 
+  // Close desktop dropdowns on click outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        servicesRef.current &&
+        !servicesRef.current.contains(event.target as Node)
+      ) {
+        setServicesOpen(false);
+      }
+      if (
+        industriesRef.current &&
+        !industriesRef.current.contains(event.target as Node)
+      ) {
+        setIndustriesOpen(false);
+      }
+      if (
+        locationsRef.current &&
+        !locationsRef.current.contains(event.target as Node)
+      ) {
+        setLocationsOpen(false);
+      }
+    };
+
+    document.addEventListener('click', handleClickOutside);
+    return () => {
+      document.removeEventListener('click', handleClickOutside);
+    };
+  }, []);
+
   const isActive = (href: string) => {
     if (!pathname) return false;
     const normPath = pathname.replace(/\/$/, '') || '/';
@@ -58,25 +101,90 @@ export const Navbar: React.FC = () => {
     return normPath === normHref || normPath.startsWith(normHref + '/');
   };
 
-  const col1Services = [
-    { emoji: '🔍', title: 'SEO Services', href: '/services/seo' },
-    { emoji: '📱', title: 'Social Media Marketing', href: '/services/social-media-marketing' },
+  const servicesGroupsCol1 = [
+    {
+      title: 'Paid Advertising & Leads',
+      services: [
+        { emoji: '🎯', title: 'Paid Ads & Perf Marketing', href: '/services/paid-ads-performance-marketing' },
+        { emoji: '💰', title: 'Google Ads & PPC', href: '/services/google-ads-ppc' },
+        { emoji: '🎯', title: 'B2B Lead Generation', href: '/services/b2b-lead-generation' }
+      ]
+    },
+    {
+      title: 'Technology & Training',
+      services: [
+        { emoji: '🛍️', title: 'E-commerce Services', href: '/services/ecommerce-services' },
+        { emoji: '🎓', title: 'Training & Education', href: '/services/training-education' }
+      ]
+    }
+  ];
+
+  const servicesGroupsCol2 = [
+    {
+      title: 'Organic Growth',
+      services: [
+        { emoji: '🔍', title: 'SEO Services', href: '/services/seo' },
+        { emoji: '✍️', title: 'Content Marketing', href: '/services/content-marketing' },
+        { emoji: '📱', title: 'Social Media Marketing', href: '/services/social-media-marketing' },
+        { emoji: '💻', title: 'Web Design & Dev', href: '/services/web-design-development' }
+      ]
+    }
+  ];
+
+  const servicesGroupsCol3 = [
+    {
+      title: 'Conversion & Automation',
+      services: [
+        { emoji: '📧', title: 'Email & WhatsApp Mktg', href: '/services/email-marketing' },
+        { emoji: '🤖', title: 'AI & Marketing Auto', href: '/services/ai-marketing-automation' }
+      ]
+    },
+    {
+      title: 'Strategy & Audits',
+      services: [
+        { emoji: '🎨', title: 'Brand Strategy & Funnels', href: '/services/brand-strategy' },
+        { emoji: '📊', title: 'Analytics & Tracking', href: '/services/analytics-tracking' },
+        { emoji: '🔍', title: 'Audits & Consulting', href: '/services/audits-consulting' }
+      ]
+    }
+  ];
+
+  // Flat list for mobile menu iteration
+  const allServicesMobile = [
+    { emoji: '🎯', title: 'Paid Ads & Performance', href: '/services/paid-ads-performance-marketing' },
     { emoji: '💰', title: 'Google Ads & PPC', href: '/services/google-ads-ppc' },
-  ];
-
-  const col2Services = [
+    { emoji: '🎯', title: 'B2B Lead Generation', href: '/services/b2b-lead-generation' },
+    { emoji: '🔍', title: 'SEO Services', href: '/services/seo' },
     { emoji: '✍️', title: 'Content Marketing', href: '/services/content-marketing' },
+    { emoji: '📱', title: 'Social Media Marketing', href: '/services/social-media-marketing' },
     { emoji: '💻', title: 'Web Design & Dev', href: '/services/web-design-development' },
-    { emoji: '📧', title: 'Email Marketing', href: '/services/email-marketing' },
+    { emoji: '📧', title: 'Email & WhatsApp Mktg', href: '/services/email-marketing' },
+    { emoji: '🤖', title: 'AI & Marketing Auto', href: '/services/ai-marketing-automation' },
+    { emoji: '🎨', title: 'Brand Strategy & Funnels', href: '/services/brand-strategy' },
+    { emoji: '📊', title: 'Analytics & Tracking', href: '/services/analytics-tracking' },
+    { emoji: '🔍', title: 'Audits & Consulting', href: '/services/audits-consulting' },
+    { emoji: '🛍️', title: 'E-commerce Services', href: '/services/ecommerce-services' },
+    { emoji: '🎓', title: 'Training & Education', href: '/services/training-education' }
   ];
 
-  const allServices = [...col1Services, ...col2Services];
+  const industryLinks = [
+    { emoji: '🏠', name: 'Real Estate', href: '/industries/real-estate' },
+    { emoji: '🏥', name: 'Healthcare', href: '/industries/healthcare' },
+    { emoji: '📚', name: 'Education/EdTech', href: '/industries/education' },
+    { emoji: '🛒', name: 'E-commerce', href: '/industries/ecommerce' },
+    { emoji: '🏢', name: 'MSME/B2B', href: '/industries/msme-small-business' },
+    { emoji: '💻', name: 'SaaS Marketing', href: '/industries/saas' },
+    { emoji: '🎓', name: 'Coaching & Consulting', href: '/industries/coaching-consulting' },
+    { emoji: '🍕', name: 'Restaurant & Food', href: '/industries/restaurant-food' },
+    { emoji: '💪', name: 'Fitness & Wellness', href: '/industries/fitness-wellness' },
+    { emoji: '🤝', name: 'Non-Profit/NGO', href: '/industries/non-profit' }
+  ];
 
   const locationLinks = [
     { name: 'Digital Marketing Agency Delhi', href: '/digital-marketing-agency-delhi' },
     { name: 'Digital Marketing Agency Noida', href: '/digital-marketing-agency-noida' },
     { name: 'Digital Marketing Agency Lucknow', href: '/digital-marketing-agency-lucknow' },
-    { name: 'Digital Marketing Agency Kanpur', href: '/digital-marketing-agency-kanpur' },
+    { name: 'Digital Marketing Agency Kanpur', href: '/digital-marketing-agency-kanpur' }
   ];
 
   const isAuditPage = pathname?.includes('free-seo-audit');
@@ -91,7 +199,7 @@ export const Navbar: React.FC = () => {
         <div className="max-w-container-max mx-auto px-gutter w-full flex items-center justify-between">
           <Link href="/" className="flex items-center">
             <Image
-              src="/images/logos/logo.png"
+              src="/images/logos/logo.webp"
               alt="Veloxis Global"
               width={160}
               height={40}
@@ -122,7 +230,7 @@ export const Navbar: React.FC = () => {
           {/* Left: Brand Logo */}
           <Link href="/" className="flex items-center">
             <Image
-              src="/images/logos/logo.png"
+              src="/images/logos/logo.webp"
               alt="Veloxis Global"
               width={160}
               height={40}
@@ -135,11 +243,29 @@ export const Navbar: React.FC = () => {
           <nav className="hidden md:flex items-center gap-8 h-full" aria-label="Main navigation">
             {/* Services dropdown */}
             <div
+              ref={servicesRef}
               className="relative h-full py-4"
-              onMouseEnter={() => setServicesOpen(true)}
+              onMouseEnter={() => {
+                lastServicesMouseEnter.current = Date.now();
+                setServicesOpen(true);
+                setIndustriesOpen(false);
+                setLocationsOpen(false);
+              }}
               onMouseLeave={() => setServicesOpen(false)}
             >
               <button
+                onClick={(e) => {
+                  e.preventDefault();
+                  e.stopPropagation();
+                  const timeSinceMouseEnter = Date.now() - lastServicesMouseEnter.current;
+                  if (timeSinceMouseEnter > 300) {
+                    setServicesOpen(!servicesOpen);
+                  } else {
+                    setServicesOpen(true);
+                  }
+                  setIndustriesOpen(false);
+                  setLocationsOpen(false);
+                }}
                 aria-expanded={servicesOpen}
                 aria-controls="services-dropdown"
                 aria-haspopup="true"
@@ -151,44 +277,175 @@ export const Navbar: React.FC = () => {
                 <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${servicesOpen ? 'rotate-180' : ''}`} aria-hidden="true" />
               </button>
 
-              {/* Mega Menu — CSS transition, no Framer Motion */}
+              {/* Mega Menu — CSS transition, 3-column layout */}
               <div
                 id="services-dropdown"
                 role="region"
                 aria-label="Services menu"
-                className={`absolute top-full left-1/2 -translate-x-1/2 w-[600px] bg-white rounded-xl shadow-lg border border-slate-100 p-8 z-[60] mt-1 transition-all duration-200 ease-out origin-top ${
+                className={`absolute top-full left-1/2 -translate-x-1/2 w-[850px] bg-white rounded-xl shadow-lg border border-slate-100 p-8 z-[60] mt-1 transition-all duration-200 ease-out origin-top ${
                   servicesOpen
                     ? 'opacity-100 scale-100 translate-y-0 pointer-events-auto'
                     : 'opacity-0 scale-95 -translate-y-2 pointer-events-none'
                 }`}
               >
-                <div className="grid grid-cols-2 gap-x-8 gap-y-4">
+                <div className="grid grid-cols-3 gap-8 text-left">
                   {/* Column 1 */}
-                  <div className="flex flex-col gap-3">
-                    {col1Services.map((service, index) => (
+                  <div className="flex flex-col gap-6">
+                    {servicesGroupsCol1.map((group, gIdx) => (
+                      <div key={gIdx}>
+                        <h4 className="text-[11px] font-bold text-slate-400 uppercase tracking-wider mb-3">{group.title}</h4>
+                        <div className="flex flex-col gap-2">
+                          {group.services.map((service, sIdx) => (
+                            <Link
+                              key={sIdx}
+                              href={service.href}
+                              className="flex items-center gap-2.5 p-1.5 rounded-lg hover:bg-slate-50 transition-colors duration-300 group"
+                            >
+                              <span className="text-base" aria-hidden="true">{service.emoji}</span>
+                              <span className="text-[13.5px] font-semibold text-slate-900 group-hover:text-royal-blue transition-colors duration-300">
+                                {service.title}
+                              </span>
+                            </Link>
+                          ))}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+
+                  {/* Column 2 */}
+                  <div className="flex flex-col gap-6">
+                    {servicesGroupsCol2.map((group, gIdx) => (
+                      <div key={gIdx}>
+                        <h4 className="text-[11px] font-bold text-slate-400 uppercase tracking-wider mb-3">{group.title}</h4>
+                        <div className="flex flex-col gap-2">
+                          {group.services.map((service, sIdx) => (
+                            <Link
+                              key={sIdx}
+                              href={service.href}
+                              className="flex items-center gap-2.5 p-1.5 rounded-lg hover:bg-slate-50 transition-colors duration-300 group"
+                            >
+                              <span className="text-base" aria-hidden="true">{service.emoji}</span>
+                              <span className="text-[13.5px] font-semibold text-slate-900 group-hover:text-royal-blue transition-colors duration-300">
+                                {service.title}
+                              </span>
+                            </Link>
+                          ))}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+
+                  {/* Column 3 */}
+                  <div className="flex flex-col gap-6">
+                    {servicesGroupsCol3.map((group, gIdx) => (
+                      <div key={gIdx}>
+                        <h4 className="text-[11px] font-bold text-slate-400 uppercase tracking-wider mb-3">{group.title}</h4>
+                        <div className="flex flex-col gap-2">
+                          {group.services.map((service, sIdx) => (
+                            <Link
+                              key={sIdx}
+                              href={service.href}
+                              className="flex items-center gap-2.5 p-1.5 rounded-lg hover:bg-slate-50 transition-colors duration-300 group"
+                            >
+                              <span className="text-base" aria-hidden="true">{service.emoji}</span>
+                              <span className="text-[13.5px] font-semibold text-slate-900 group-hover:text-royal-blue transition-colors duration-300">
+                                {service.title}
+                              </span>
+                            </Link>
+                          ))}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Mega Menu Footer */}
+                <div className="border-t border-slate-100 mt-6 pt-4 text-center">
+                  <Link
+                    href="/services"
+                    className="inline-block text-[14px] font-bold text-royal-blue hover:underline"
+                  >
+                    View All Services →
+                  </Link>
+                </div>
+              </div>
+            </div>
+
+            {/* Industries dropdown */}
+            <div
+              ref={industriesRef}
+              className="relative h-full py-4"
+              onMouseEnter={() => {
+                lastIndustriesMouseEnter.current = Date.now();
+                setIndustriesOpen(true);
+                setServicesOpen(false);
+                setLocationsOpen(false);
+              }}
+              onMouseLeave={() => setIndustriesOpen(false)}
+            >
+              <button
+                onClick={(e) => {
+                  e.preventDefault();
+                  e.stopPropagation();
+                  const timeSinceMouseEnter = Date.now() - lastIndustriesMouseEnter.current;
+                  if (timeSinceMouseEnter > 300) {
+                    setIndustriesOpen(!industriesOpen);
+                  } else {
+                    setIndustriesOpen(true);
+                  }
+                  setServicesOpen(false);
+                  setLocationsOpen(false);
+                }}
+                aria-expanded={industriesOpen}
+                aria-controls="industries-dropdown"
+                aria-haspopup="true"
+                className={`flex items-center gap-1 font-sans text-[15px] font-semibold transition-colors duration-300 py-2 ${
+                  isActive('/industries') ? 'text-royal-blue underline decoration-royal-blue decoration-2 underline-offset-4' : 'text-slate-900 hover:text-royal-blue'
+                }`}
+              >
+                Industries
+                <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${industriesOpen ? 'rotate-180' : ''}`} aria-hidden="true" />
+              </button>
+
+              {/* Industries Dropdown — CSS transition, 2 columns */}
+              <div
+                id="industries-dropdown"
+                role="region"
+                aria-label="Industries menu"
+                className={`absolute top-full left-1/2 -translate-x-1/2 w-[600px] bg-white rounded-xl shadow-lg border border-slate-100 p-8 z-[60] mt-1 transition-all duration-200 ease-out origin-top ${
+                  industriesOpen
+                    ? 'opacity-100 scale-100 translate-y-0 pointer-events-auto'
+                    : 'opacity-0 scale-95 -translate-y-2 pointer-events-none'
+                }`}
+              >
+                <div className="grid grid-cols-2 gap-x-8 gap-y-4 text-left">
+                  {/* Column 1 */}
+                  <div className="flex flex-col gap-2">
+                    {industryLinks.slice(0, 5).map((ind, index) => (
                       <Link
                         key={index}
-                        href={service.href}
+                        href={ind.href}
                         className="flex items-center gap-3 p-2 rounded-lg hover:bg-slate-50 transition-colors duration-300 group"
                       >
-                        <span className="text-xl" aria-hidden="true">{service.emoji}</span>
-                        <span className="text-[15px] font-semibold text-slate-900 group-hover:text-royal-blue transition-colors duration-300">
-                          {service.title}
+                        <span className="text-lg" aria-hidden="true">{ind.emoji}</span>
+                        <span className="text-[13.5px] font-semibold text-slate-900 group-hover:text-royal-blue transition-colors duration-300">
+                          {ind.name}
                         </span>
                       </Link>
                     ))}
                   </div>
+
                   {/* Column 2 */}
-                  <div className="flex flex-col gap-3">
-                    {col2Services.map((service, index) => (
+                  <div className="flex flex-col gap-2">
+                    {industryLinks.slice(5).map((ind, index) => (
                       <Link
                         key={index}
-                        href={service.href}
+                        href={ind.href}
                         className="flex items-center gap-3 p-2 rounded-lg hover:bg-slate-50 transition-colors duration-300 group"
                       >
-                        <span className="text-xl" aria-hidden="true">{service.emoji}</span>
-                        <span className="text-[15px] font-semibold text-slate-900 group-hover:text-royal-blue transition-colors duration-300">
-                          {service.title}
+                        <span className="text-lg" aria-hidden="true">{ind.emoji}</span>
+                        <span className="text-[13.5px] font-semibold text-slate-900 group-hover:text-royal-blue transition-colors duration-300">
+                          {ind.name}
                         </span>
                       </Link>
                     ))}
@@ -198,10 +455,10 @@ export const Navbar: React.FC = () => {
                 {/* Mega Menu Footer */}
                 <div className="border-t border-slate-100 mt-6 pt-4 text-center">
                   <Link
-                    href="/services"
-                    className="inline-block text-[15px] font-bold text-royal-blue hover:underline"
+                    href="/industries"
+                    className="inline-block text-[14px] font-bold text-royal-blue hover:underline"
                   >
-                    View All Services →
+                    View All Industries →
                   </Link>
                 </div>
               </div>
@@ -209,11 +466,29 @@ export const Navbar: React.FC = () => {
 
             {/* Locations dropdown */}
             <div
+              ref={locationsRef}
               className="relative h-full py-4"
-              onMouseEnter={() => setLocationsOpen(true)}
+              onMouseEnter={() => {
+                lastLocationsMouseEnter.current = Date.now();
+                setLocationsOpen(true);
+                setServicesOpen(false);
+                setIndustriesOpen(false);
+              }}
               onMouseLeave={() => setLocationsOpen(false)}
             >
               <button
+                onClick={(e) => {
+                  e.preventDefault();
+                  e.stopPropagation();
+                  const timeSinceMouseEnter = Date.now() - lastLocationsMouseEnter.current;
+                  if (timeSinceMouseEnter > 300) {
+                    setLocationsOpen(!locationsOpen);
+                  } else {
+                    setLocationsOpen(true);
+                  }
+                  setServicesOpen(false);
+                  setIndustriesOpen(false);
+                }}
                 aria-expanded={locationsOpen}
                 aria-controls="locations-dropdown"
                 aria-haspopup="true"
@@ -333,7 +608,7 @@ export const Navbar: React.FC = () => {
         <div>
           <div className="flex items-center justify-between pb-6 border-b border-slate-100 mb-6">
             <Image
-              src="/images/logos/logo.png"
+              src="/images/logos/logo.webp"
               alt="Veloxis Global"
               width={160}
               height={40}
@@ -369,20 +644,57 @@ export const Navbar: React.FC = () => {
               <div
                 id="mobile-services-list"
                 className={`overflow-hidden flex flex-col pl-4 gap-1 mt-1 border-l-2 border-slate-100 transition-all duration-200 ${
-                  mobileServicesOpen ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'
+                  mobileServicesOpen ? 'max-h-[700px] opacity-100 overflow-y-auto' : 'max-h-0 opacity-0'
                 }`}
               >
-                {allServices.map((service, index) => (
+                {allServicesMobile.map((service, index) => (
                   <Link
                     key={index}
                     href={service.href}
                     onClick={() => setIsOpen(false)}
-                    className={`flex items-center gap-2 py-3 text-[15px] ${
+                    className={`flex items-center gap-2 py-2.5 text-[14px] ${
                       isActive(service.href) ? 'text-royal-blue font-bold' : 'text-slate-600 hover:text-royal-blue'
                     }`}
                   >
                     <span aria-hidden="true">{service.emoji}</span>
                     <span>{service.title}</span>
+                  </Link>
+                ))}
+              </div>
+            </div>
+
+            {/* Industries Accordion */}
+            <div className="flex flex-col">
+              <button
+                onClick={() => setMobileIndustriesOpen(!mobileIndustriesOpen)}
+                aria-expanded={mobileIndustriesOpen}
+                aria-controls="mobile-industries-list"
+                className="flex items-center justify-between w-full font-semibold text-slate-900 text-[16px] py-3 focus:outline-none"
+              >
+                <span>Industries</span>
+                <ChevronDown
+                  className={`w-5 h-5 transition-transform duration-200 text-slate-500 ${mobileIndustriesOpen ? 'rotate-180' : ''}`}
+                  aria-hidden="true"
+                />
+              </button>
+
+              <div
+                id="mobile-industries-list"
+                className={`overflow-hidden flex flex-col pl-4 gap-1 mt-1 border-l-2 border-slate-100 transition-all duration-200 ${
+                  mobileIndustriesOpen ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'
+                }`}
+              >
+                {industryLinks.map((ind, index) => (
+                  <Link
+                    key={index}
+                    href={ind.href}
+                    onClick={() => setIsOpen(false)}
+                    className={`flex items-center gap-2 py-2.5 text-[14px] ${
+                      isActive(ind.href) ? 'text-royal-blue font-bold' : 'text-slate-600 hover:text-royal-blue'
+                    }`}
+                  >
+                    <span aria-hidden="true">{ind.emoji}</span>
+                    <span>{ind.name}</span>
                   </Link>
                 ))}
               </div>
@@ -414,7 +726,7 @@ export const Navbar: React.FC = () => {
                     key={index}
                     href={loc.href}
                     onClick={() => setIsOpen(false)}
-                    className={`flex items-center gap-2 py-3 text-[15px] ${
+                    className={`flex items-center gap-2 py-3 text-[14px] ${
                       isActive(loc.href) ? 'text-royal-blue font-bold' : 'text-slate-600 hover:text-royal-blue'
                     }`}
                   >

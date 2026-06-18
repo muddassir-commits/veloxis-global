@@ -9,7 +9,7 @@ export const generateLocalBusinessSchema = (city?: string) => {
     "email": "info@veloxisglobal.com",
     "url": `https://veloxisglobal.com/${city && city.toLowerCase() !== 'general' ? `digital-marketing-agency-${city.toLowerCase()}` : ''}`,
     "priceRange": "$$",
-    "image": "https://veloxisglobal.com/images/logos/logo.png",
+    "image": "https://veloxisglobal.com/images/logos/logo.webp",
     "description": "India's results-driven digital marketing agency. Expert SEO, Google Ads and Social Media marketing for businesses across India."
   };
 
@@ -74,7 +74,7 @@ export const generateServiceSchema = (name: string, description: string) => {
     "provider": {
       "@type": "LocalBusiness",
       "name": "Veloxis Global",
-      "image": "https://veloxisglobal.com/images/logos/logo.png",
+      "image": "https://veloxisglobal.com/images/logos/logo.webp",
       "telephone": "+918887620727",
       "email": "info@veloxisglobal.com",
       "url": "https://veloxisglobal.com"
@@ -118,7 +118,7 @@ export const generateArticleSchema = (title: string, author: string = "Muddassir
       "name": "Veloxis Global",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://veloxisglobal.com/images/logos/logo.png"
+        "url": "https://veloxisglobal.com/images/logos/logo.webp"
       }
     }
   };
@@ -144,7 +144,7 @@ export const generateOrganizationSchema = () => {
     "@id": "https://veloxisglobal.com/#organization",
     "name": "Veloxis Global",
     "url": "https://veloxisglobal.com",
-    "logo": "https://veloxisglobal.com/images/logos/logo.png",
+    "logo": "https://veloxisglobal.com/images/logos/logo.webp",
     "foundingDate": "2025",
     "founders": [
       {

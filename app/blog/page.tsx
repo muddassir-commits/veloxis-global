@@ -30,7 +30,7 @@ export default function BlogPage() {
     "headline": "SEO in 2026: What's Changed and What Indian Businesses Must Do Now",
     "datePublished": "2026-05-20",
     "dateModified": "2026-05-20",
-    "image": "https://veloxisglobal.com/images/logos/logo.png",
+    "image": "https://veloxisglobal.com/images/logos/logo.webp",
     "author": {
       "@type": "Person",
       "name": "Muddassir Ali",
@@ -45,7 +45,7 @@ export default function BlogPage() {
       "name": "Veloxis Global",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://veloxisglobal.com/images/logos/logo.png"
+        "url": "https://veloxisglobal.com/images/logos/logo.webp"
       }
     }
   };
