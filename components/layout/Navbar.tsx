@@ -230,7 +230,7 @@ export const Navbar: React.FC = () => {
                 aria-haspopup="true"
                 className={`flex items-center gap-1 font-sans font-semibold transition-all duration-300 rounded-full whitespace-nowrap shrink-0 ${
                   scrolled 
-                    ? 'px-2.5 xl:px-3.5 py-1 text-[13px] xl:text-[14px]' 
+                    ? 'px-2.5 py-1 text-[13px]' 
                     : 'px-3.5 py-1.5 text-[14px]'
                 } ${
                   isActive('/services') || servicesOpen
@@ -430,7 +430,7 @@ export const Navbar: React.FC = () => {
                 aria-haspopup="true"
                 className={`flex items-center gap-1 font-sans font-semibold transition-all duration-300 rounded-full whitespace-nowrap shrink-0 ${
                   scrolled 
-                    ? 'px-2.5 xl:px-3.5 py-1 text-[13px] xl:text-[14px]' 
+                    ? 'px-2.5 py-1 text-[13px]' 
                     : 'px-3.5 py-1.5 text-[14px]'
                 } ${
                   isActive('/industries') || industriesOpen
@@ -525,7 +525,7 @@ export const Navbar: React.FC = () => {
                 aria-haspopup="true"
                 className={`flex items-center gap-1 font-sans font-semibold transition-all duration-300 rounded-full whitespace-nowrap shrink-0 ${
                   scrolled 
-                    ? 'px-2.5 xl:px-3.5 py-1 text-[13px] xl:text-[14px]' 
+                    ? 'px-2.5 py-1 text-[13px]' 
                     : 'px-3.5 py-1.5 text-[14px]'
                 } ${
                   isActive('/digital-marketing-agency') || locationsOpen
@@ -567,7 +567,7 @@ export const Navbar: React.FC = () => {
               href="/about"
               className={`font-sans font-semibold transition-all duration-300 rounded-full whitespace-nowrap shrink-0 ${
                 scrolled 
-                  ? 'px-2.5 xl:px-3.5 py-1 text-[13px] xl:text-[14px]' 
+                  ? 'px-2.5 py-1 text-[13px]' 
                   : 'px-3.5 py-1.5 text-[14px]'
               } ${
                 isActive('/about') ? 'bg-royal-blue text-white shadow-sm shadow-royal-blue/15' : 'text-slate-700 hover:bg-slate-100/80 hover:text-royal-blue'
@@ -580,7 +580,7 @@ export const Navbar: React.FC = () => {
               href="/case-studies"
               className={`font-sans font-semibold transition-all duration-300 rounded-full whitespace-nowrap shrink-0 ${
                 scrolled 
-                  ? 'px-2.5 xl:px-3.5 py-1 text-[13px] xl:text-[14px]' 
+                  ? 'px-2.5 py-1 text-[13px]' 
                   : 'px-3.5 py-1.5 text-[14px]'
               } ${
                 isActive('/case-studies') ? 'bg-royal-blue text-white shadow-sm shadow-royal-blue/15' : 'text-slate-700 hover:bg-slate-100/80 hover:text-royal-blue'
@@ -593,7 +593,7 @@ export const Navbar: React.FC = () => {
               href="/blog"
               className={`font-sans font-semibold transition-all duration-300 rounded-full whitespace-nowrap shrink-0 ${
                 scrolled 
-                  ? 'px-2.5 xl:px-3.5 py-1 text-[13px] xl:text-[14px]' 
+                  ? 'px-2.5 py-1 text-[13px]' 
                   : 'px-3.5 py-1.5 text-[14px]'
               } ${
                 isActive('/blog') ? 'bg-royal-blue text-white shadow-sm shadow-royal-blue/15' : 'text-slate-700 hover:bg-slate-100/80 hover:text-royal-blue'
@@ -610,10 +610,10 @@ export const Navbar: React.FC = () => {
               className="flex items-center gap-1 font-sans font-bold text-slate-600 hover:text-royal-blue transition-all duration-300 whitespace-nowrap shrink-0"
             >
               <span className="text-base leading-none shrink-0" aria-hidden="true">📞</span>
-              <span className={`hidden xl:inline whitespace-nowrap shrink-0 ${
+              <span className={`whitespace-nowrap shrink-0 ${
                 scrolled 
-                  ? 'text-[12px] xl:text-[14px]' 
-                  : 'text-[13px] xl:text-[14px]'
+                  ? 'hidden' 
+                  : 'hidden xl:inline text-[13px] xl:text-[14px]'
               }`}>+91-88876 20727</span>
             </a>
             <div className="hero-cta-hover rounded-md shrink-0">
