@@ -228,7 +228,7 @@ export const Navbar: React.FC = () => {
                 aria-expanded={servicesOpen}
                 aria-controls="services-dropdown"
                 aria-haspopup="true"
-                className={`flex items-center gap-1 font-sans font-semibold transition-all duration-300 rounded-full ${
+                className={`flex items-center gap-1 font-sans font-semibold transition-all duration-300 rounded-full whitespace-nowrap shrink-0 ${
                   scrolled 
                     ? 'px-2.5 xl:px-3.5 py-1 text-[13px] xl:text-[14px]' 
                     : 'px-3.5 py-1.5 text-[14px]'
@@ -428,7 +428,7 @@ export const Navbar: React.FC = () => {
                 aria-expanded={industriesOpen}
                 aria-controls="industries-dropdown"
                 aria-haspopup="true"
-                className={`flex items-center gap-1 font-sans font-semibold transition-all duration-300 rounded-full ${
+                className={`flex items-center gap-1 font-sans font-semibold transition-all duration-300 rounded-full whitespace-nowrap shrink-0 ${
                   scrolled 
                     ? 'px-2.5 xl:px-3.5 py-1 text-[13px] xl:text-[14px]' 
                     : 'px-3.5 py-1.5 text-[14px]'
@@ -523,7 +523,7 @@ export const Navbar: React.FC = () => {
                 aria-expanded={locationsOpen}
                 aria-controls="locations-dropdown"
                 aria-haspopup="true"
-                className={`flex items-center gap-1 font-sans font-semibold transition-all duration-300 rounded-full ${
+                className={`flex items-center gap-1 font-sans font-semibold transition-all duration-300 rounded-full whitespace-nowrap shrink-0 ${
                   scrolled 
                     ? 'px-2.5 xl:px-3.5 py-1 text-[13px] xl:text-[14px]' 
                     : 'px-3.5 py-1.5 text-[14px]'
@@ -565,7 +565,7 @@ export const Navbar: React.FC = () => {
 
             <Link
               href="/about"
-              className={`font-sans font-semibold transition-all duration-300 rounded-full ${
+              className={`font-sans font-semibold transition-all duration-300 rounded-full whitespace-nowrap shrink-0 ${
                 scrolled 
                   ? 'px-2.5 xl:px-3.5 py-1 text-[13px] xl:text-[14px]' 
                   : 'px-3.5 py-1.5 text-[14px]'
@@ -578,7 +578,7 @@ export const Navbar: React.FC = () => {
 
             <Link
               href="/case-studies"
-              className={`font-sans font-semibold transition-all duration-300 rounded-full ${
+              className={`font-sans font-semibold transition-all duration-300 rounded-full whitespace-nowrap shrink-0 ${
                 scrolled 
                   ? 'px-2.5 xl:px-3.5 py-1 text-[13px] xl:text-[14px]' 
                   : 'px-3.5 py-1.5 text-[14px]'
@@ -591,7 +591,7 @@ export const Navbar: React.FC = () => {
 
             <Link
               href="/blog"
-              className={`font-sans font-semibold transition-all duration-300 rounded-full ${
+              className={`font-sans font-semibold transition-all duration-300 rounded-full whitespace-nowrap shrink-0 ${
                 scrolled 
                   ? 'px-2.5 xl:px-3.5 py-1 text-[13px] xl:text-[14px]' 
                   : 'px-3.5 py-1.5 text-[14px]'
@@ -607,14 +607,14 @@ export const Navbar: React.FC = () => {
           <div className={`hidden lg:flex items-center shrink-0 transition-all duration-300 ${scrolled ? 'gap-2.5 xl:gap-4 lg:gap-3' : 'gap-4 lg:gap-5'}`}>
             <a
               href="tel:+918887620727"
-              className={`flex items-center gap-1 font-sans font-bold text-slate-600 hover:text-royal-blue transition-all duration-300 whitespace-nowrap shrink-0 ${
-                scrolled 
-                  ? 'text-[12px] xl:text-[14px] lg:text-[13px]' 
-                  : 'text-[13px] lg:text-[14px]'
-              }`}
+              className="flex items-center gap-1 font-sans font-bold text-slate-600 hover:text-royal-blue transition-all duration-300 whitespace-nowrap shrink-0"
             >
-              <span aria-hidden="true">📞</span>
-              <span className="whitespace-nowrap shrink-0">+91-88876 20727</span>
+              <span className="text-base leading-none shrink-0" aria-hidden="true">📞</span>
+              <span className={`hidden xl:inline whitespace-nowrap shrink-0 ${
+                scrolled 
+                  ? 'text-[12px] xl:text-[14px]' 
+                  : 'text-[13px] xl:text-[14px]'
+              }`}>+91-88876 20727</span>
             </a>
             <div className="hero-cta-hover rounded-md shrink-0">
               <Button 
