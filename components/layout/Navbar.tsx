@@ -37,6 +37,18 @@ export const Navbar: React.FC = () => {
   const industriesRef = useRef<HTMLDivElement>(null);
   const locationsRef = useRef<HTMLDivElement>(null);
 
+  // Timeout refs to handle diagonal hover (grace period)
+  const servicesTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const industriesTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const locationsTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+
+  // Helper to clear all timeouts
+  const clearAllHoverTimeouts = () => {
+    if (servicesTimeoutRef.current) clearTimeout(servicesTimeoutRef.current);
+    if (industriesTimeoutRef.current) clearTimeout(industriesTimeoutRef.current);
+    if (locationsTimeoutRef.current) clearTimeout(locationsTimeoutRef.current);
+  };
+
   // Scroll handler for box shadow on scroll
   useEffect(() => {
     const handleScroll = () => {
@@ -76,17 +88,29 @@ export const Navbar: React.FC = () => {
     return () => { document.body.style.overflow = 'unset'; };
   }, [isOpen]);
 
+  // Clean up timeouts on unmount
+  useEffect(() => {
+    return () => clearAllHoverTimeouts();
+  }, []);
+
   // Click outside to close desktop dropdowns
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
+      let closed = false;
       if (servicesRef.current && !servicesRef.current.contains(event.target as Node)) {
         setServicesOpen(false);
+        closed = true;
       }
       if (industriesRef.current && !industriesRef.current.contains(event.target as Node)) {
         setIndustriesOpen(false);
+        closed = true;
       }
       if (locationsRef.current && !locationsRef.current.contains(event.target as Node)) {
         setLocationsOpen(false);
+        closed = true;
+      }
+      if (closed) {
+        clearAllHoverTimeouts();
       }
     };
     document.addEventListener('mousedown', handleClickOutside);
@@ -169,6 +193,7 @@ export const Navbar: React.FC = () => {
               className="relative h-full py-4 flex items-center"
               onMouseEnter={() => {
                 if (hasHover) {
+                  clearAllHoverTimeouts();
                   setServicesOpen(true);
                   setIndustriesOpen(false);
                   setLocationsOpen(false);
@@ -176,7 +201,9 @@ export const Navbar: React.FC = () => {
               }}
               onMouseLeave={() => {
                 if (hasHover) {
-                  setServicesOpen(false);
+                  servicesTimeoutRef.current = setTimeout(() => {
+                    setServicesOpen(false);
+                  }, 250); // 250ms grace period to allow diagonal mouse movement
                 }
               }}
             >
@@ -189,6 +216,7 @@ export const Navbar: React.FC = () => {
                     setLocationsOpen(false);
                   } else {
                     // On desktop, keep it open on click to prevent the toggle-off issue
+                    clearAllHoverTimeouts();
                     setServicesOpen(true);
                     setIndustriesOpen(false);
                     setLocationsOpen(false);
@@ -360,6 +388,7 @@ export const Navbar: React.FC = () => {
               className="relative h-full py-4 flex items-center"
               onMouseEnter={() => {
                 if (hasHover) {
+                  clearAllHoverTimeouts();
                   setIndustriesOpen(true);
                   setServicesOpen(false);
                   setLocationsOpen(false);
@@ -367,7 +396,9 @@ export const Navbar: React.FC = () => {
               }}
               onMouseLeave={() => {
                 if (hasHover) {
-                  setIndustriesOpen(false);
+                  industriesTimeoutRef.current = setTimeout(() => {
+                    setIndustriesOpen(false);
+                  }, 250); // 250ms grace period to allow diagonal mouse movement
                 }
               }}
             >
@@ -380,6 +411,7 @@ export const Navbar: React.FC = () => {
                     setLocationsOpen(false);
                   } else {
                     // On desktop, keep it open on click to prevent the toggle-off issue
+                    clearAllHoverTimeouts();
                     setIndustriesOpen(true);
                     setServicesOpen(false);
                     setLocationsOpen(false);
@@ -446,6 +478,7 @@ export const Navbar: React.FC = () => {
               className="relative h-full py-4 flex items-center"
               onMouseEnter={() => {
                 if (hasHover) {
+                  clearAllHoverTimeouts();
                   setLocationsOpen(true);
                   setServicesOpen(false);
                   setIndustriesOpen(false);
@@ -453,7 +486,9 @@ export const Navbar: React.FC = () => {
               }}
               onMouseLeave={() => {
                 if (hasHover) {
-                  setLocationsOpen(false);
+                  locationsTimeoutRef.current = setTimeout(() => {
+                    setLocationsOpen(false);
+                  }, 250); // 250ms grace period to allow diagonal mouse movement
                 }
               }}
             >
@@ -466,6 +501,7 @@ export const Navbar: React.FC = () => {
                     setIndustriesOpen(false);
                   } else {
                     // On desktop, keep it open on click to prevent the toggle-off issue
+                    clearAllHoverTimeouts();
                     setLocationsOpen(true);
                     setServicesOpen(false);
                     setIndustriesOpen(false);
