@@ -176,125 +176,77 @@ export default function AboutPage() {
               </h2>
               
               <p>
-                I started this agency with one simple belief — digital marketing should bring real business growth, not just likes, views, or empty promises.
+                Veloxis Global was founded with one simple, unwavering belief — digital marketing should drive real, tangible business growth, not just vanity metrics like impressions, clicks, or empty promises.
               </p>
               
               <p>
-                My name is <strong>Muddassir Ali</strong>, founder of Veloxis Global, a digital marketing agency focused on helping businesses generate leads, increase sales, and build strong online systems using digital marketing, paid advertising, SEO, and AI automation.
+                As a performance-focused digital marketing agency, Veloxis Global helps modern businesses build scalable customer acquisition channels. We specialize in designing systems that combine paid advertising, organic search engine optimization (SEO), conversion-focused design, and custom API integrations to deliver predictable leads and sales.
               </p>
               
               <p>
-                My journey started with a deep interest in social media marketing and online business growth. Over the years, I worked with educational institutes, local businesses, e-commerce brands, real estate companies, and startups. While working with different clients, I noticed a common problem — many businesses were spending money on ads and marketing, but they didn’t have the right systems to convert those leads into customers.
+                Our journey began by observing a critical mismatch in the industry. Many businesses were spending heavily on advertising campaigns, but they lacked the necessary backend systems to capture, organize, and nurture their leads. Veloxis Global was established to build these complete marketing frameworks, linking post-click funnels directly with automated customer relation platforms.
               </p>
               
               <div className="border-l-4 border-royal-blue pl-4 py-2 my-2 italic text-slate-900 font-semibold bg-slate-50">
-                That is where my approach became different.
+                We don't just run ads — we build complete customer acquisition pipelines.
               </div>
               
               <p>
-                Instead of only running Facebook Ads or Instagram campaigns, I started building complete marketing systems. These systems included lead generation, WhatsApp automation, CRM integration, AI-powered follow-ups, landing pages, SEO optimization, and performance tracking. The goal was simple: help businesses grow faster with smarter digital marketing.
+                Instead of focusing on isolated campaigns, we structure unified marketing systems. By integrating high-quality traffic generation with custom WhatsApp API automation, lead routing CRM software, landing page optimization, and comprehensive attribution dashboards, we ensure that every marketing dollar spent is trackable and optimized.
               </p>
               
               <p>
-                With more than 6 years of experience in digital marketing, I have worked on Meta Ads campaigns, SEO projects, social media management, website optimization, and AI automation workflows. I have also trained hundreds of students in digital marketing and helped businesses improve their online visibility and customer acquisition process.
+                Today, Veloxis Global serves as a trusted growth partner for e-commerce companies, real estate developers, educational institutes, local services, and B2B startups. We work directly with client stakeholders to streamline their customer journeys, automate repetitive outreach, and drive sustainable growth.
               </p>
               
               <p>
-                Today, Veloxis Global works as a growth partner for businesses that want more than basic marketing services. We help brands create scalable systems that attract the right audience, automate repetitive tasks, improve customer communication, and increase conversions.
-              </p>
-
-              <div className="bg-slate-50 border border-slate-100 rounded-xl p-6 mt-4">
-                <span className="font-extrabold text-slate-900 block mb-3">Our Core Core Pillars:</span>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm font-semibold text-slate-700">
-                  <div className="flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-royal-blue shrink-0" />
-                    <span>Digital Marketing Strategy</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-royal-blue shrink-0" />
-                    <span>Facebook & Instagram Ads</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-royal-blue shrink-0" />
-                    <span>SEO Services</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-royal-blue shrink-0" />
-                    <span>Lead Generation</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-royal-blue shrink-0" />
-                    <span>WhatsApp Automation</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-royal-blue shrink-0" />
-                    <span>AI-Powered Systems</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-royal-blue shrink-0" />
-                    <span>CRM & Funnel Automation</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-royal-blue shrink-0" />
-                    <span>Website Optimization</span>
-                  </div>
-                </div>
-              </div>
-
-              <p className="mt-4">
-                We believe modern businesses need more than traditional marketing. They need automation, data-driven decisions, and consistent lead generation systems that work 24/7. At Veloxis Global, every project is built with a long-term growth mindset. This agency was built to help businesses grow with smart marketing, powerful automation, and real strategy — not guesswork.
+                We believe modern brands need more than standard marketing retainers. They require data-driven decisions, clear attribution, and consistent lead generation engines that work 24/7. Veloxis Global is built to deliver smart marketing, powerful sales automation, and honest strategies — eliminating guesswork and focusing entirely on business outcomes.
               </p>
             </div>
 
-            {/* Founder Card (Right) */}
-            <div className="lg:col-span-5 flex flex-col items-center">
-              <div className="w-full relative rounded-2xl overflow-hidden shadow-lg border border-slate-100 max-w-[380px] mx-auto bg-slate-100 aspect-[4/5]">
-                <Image 
-                  src="/images/profiles/Muddassir_Ali.webp" 
-                  alt="Muddassir Ali" 
-                  fill
-                  className="object-cover"
-                  priority
-                />
-              </div>
-
-              {/* Info Box */}
-              <div className="bg-slate-900 text-white rounded-2xl p-6 mt-6 w-full max-w-[380px] mx-auto text-left relative overflow-hidden border border-white/10">
-                <div className="absolute top-0 right-0 w-32 h-32 bg-royal-blue/20 rounded-full blur-2xl"></div>
-                
-                <h3 className="text-xl font-extrabold mb-1">Muddassir Ali</h3>
-                <span className="text-xs font-bold text-royal-blue uppercase tracking-wider block mb-4">
-                  Founder & CEO
-                </span>
-
-                <div className="flex flex-col gap-3 text-sm text-slate-300 font-semibold mb-6">
+            {/* Agency Approach (Right) */}
+            <div className="lg:col-span-5 flex flex-col gap-6 w-full">
+              <div className="bg-slate-50 border border-slate-100 rounded-2xl p-6">
+                <span className="text-xs font-extrabold text-royal-blue uppercase tracking-wider block mb-4">OUR CORE CAPABILITIES</span>
+                <div className="flex flex-col gap-3.5 text-sm font-semibold text-slate-700">
                   <div className="flex items-center gap-2.5">
-                    <Briefcase className="w-4 h-4 text-royal-blue shrink-0" />
-                    <span>4 Years in Digital Marketing</span>
+                    <CheckCircle className="w-5 h-5 text-royal-blue shrink-0" />
+                    <span>Multi-Channel Performance Advertising</span>
                   </div>
                   <div className="flex items-center gap-2.5">
-                    <CheckCircle className="w-4 h-4 text-teal-accent shrink-0" />
-                    <span>Google & HubSpot Certified</span>
+                    <CheckCircle className="w-5 h-5 text-royal-blue shrink-0" />
+                    <span>Data-Driven Search Engine Optimization (SEO)</span>
+                  </div>
+                  <div className="flex items-center gap-2.5">
+                    <CheckCircle className="w-5 h-5 text-royal-blue shrink-0" />
+                    <span>WhatsApp API & Funnel Automations</span>
+                  </div>
+                  <div className="flex items-center gap-2.5">
+                    <CheckCircle className="w-5 h-5 text-royal-blue shrink-0" />
+                    <span>CRM Integrations & Lead Management Systems</span>
+                  </div>
+                  <div className="flex items-center gap-2.5">
+                    <CheckCircle className="w-5 h-5 text-royal-blue shrink-0" />
+                    <span>High-Converting Landing Pages & Copywriting</span>
+                  </div>
+                  <div className="flex items-center gap-2.5">
+                    <CheckCircle className="w-5 h-5 text-royal-blue shrink-0" />
+                    <span>Comprehensive Campaign Audits & Strategy</span>
                   </div>
                 </div>
+              </div>
 
-                <div className="flex flex-col gap-2.5 pt-4 border-t border-white/10">
-                  <Link 
-                    href="https://www.linkedin.com/in/muddassir-alii/" 
-                    target="_blank"
-                    className="flex items-center justify-between bg-white/5 hover:bg-white/10 transition-colors p-3 rounded-lg text-xs font-bold text-white"
-                  >
-                    <span>Connect on LinkedIn</span>
-                    <Linkedin className="w-4 h-4 text-royal-blue" />
-                  </Link>
-                  <Link 
-                    href="https://muddassirali.com" 
-                    target="_blank"
-                    className="flex items-center justify-between bg-white/5 hover:bg-white/10 transition-colors p-3 rounded-lg text-xs font-bold text-white"
-                  >
-                    <span>Founder Portfolio</span>
-                    <ExternalLink className="w-4 h-4 text-royal-blue" />
-                  </Link>
+              {/* Statistics Grid */}
+              <div className="grid grid-cols-2 gap-4">
+                <div className="bg-slate-900 text-white p-5 rounded-2xl border border-white/5 relative overflow-hidden text-left">
+                  <div className="absolute top-0 right-0 w-16 h-16 bg-royal-blue/10 rounded-full blur-xl"></div>
+                  <span className="text-2xl sm:text-3xl font-black text-royal-blue block">62+</span>
+                  <span className="text-[11px] text-slate-400 font-bold uppercase tracking-wider block mt-1">SEO Audits Conducted</span>
+                </div>
+                <div className="bg-slate-900 text-white p-5 rounded-2xl border border-white/5 relative overflow-hidden text-left">
+                  <div className="absolute top-0 right-0 w-16 h-16 bg-teal-accent/10 rounded-full blur-xl"></div>
+                  <span className="text-2xl sm:text-3xl font-black text-teal-accent block">100%</span>
+                  <span className="text-[11px] text-slate-400 font-bold uppercase tracking-wider block mt-1">ROI Focus</span>
                 </div>
               </div>
             </div>
@@ -428,6 +380,72 @@ export default function AboutPage() {
                 </p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Founder Profile Section */}
+      <section className="py-20 bg-white border-t border-slate-100 text-left">
+        <div className="max-w-container-max mx-auto px-gutter">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            
+            {/* Left side: Photo */}
+            <div className="lg:col-span-5 flex flex-col items-center">
+              <div className="w-full relative rounded-3xl overflow-hidden shadow-2xl border border-slate-100 max-w-[380px] mx-auto bg-slate-100 aspect-[4/5]">
+                <Image 
+                  src="/images/profiles/Muddassir_Ali.webp" 
+                  alt="Muddassir Ali" 
+                  fill
+                  className="object-cover transition-transform duration-500 hover:scale-105"
+                  priority
+                />
+              </div>
+            </div>
+
+            {/* Right side: Bio & Info */}
+            <div className="lg:col-span-7 flex flex-col gap-6 text-slate-700 text-sm sm:text-base leading-relaxed">
+              <span className="text-xs font-bold text-royal-blue uppercase tracking-wider">
+                MEET THE FOUNDER
+              </span>
+              <h2 className="text-3xl font-extrabold text-slate-900 tracking-tight">
+                Muddassir Ali
+              </h2>
+              <span className="text-sm font-bold text-slate-500 -mt-4 uppercase tracking-widest block">
+                Founder, Digital Marketing Consultant & Systems Architect
+              </span>
+              
+              <p>
+                Muddassir Ali is the founder of Veloxis Global. With over 6 years of hands-on experience in the digital marketing ecosystem, he specializes in creating high-ROI client acquisition engines by linking paid advertising with advanced CRM automations and organic SEO growth playbooks.
+              </p>
+              
+              <p>
+                His professional journey began with a focus on conversion optimization and lead generation. Having worked closely with regional businesses, coaching institutes, real estate agencies, and startups in India, Muddassir noticed that companies often lacked unified post-click conversion funnels. He established Veloxis Global to address this precise challenge—providing businesses with end-to-end automated pipelines.
+              </p>
+              
+              <p>
+                As a Google and HubSpot certified professional, Muddassir has managed performance marketing budgets, orchestrated search marketing campaigns, and built automated workflows that nurture leads and improve conversions. In addition to consulting, he has trained hundreds of students and business owners in lead acquisition and digital automation strategies.
+              </p>
+
+              <div className="flex flex-col sm:flex-row gap-4 mt-2 w-full sm:w-auto">
+                <Link 
+                  href="https://www.linkedin.com/in/muddassir-alii/" 
+                  target="_blank"
+                  className="flex items-center justify-center gap-2 bg-royal-blue hover:bg-royal-blue/90 transition-colors px-6 py-3 rounded-xl text-xs font-bold text-white shadow-sm shadow-royal-blue/20 animate-fade-in"
+                >
+                  <span>Connect on LinkedIn ↗</span>
+                  <Linkedin className="w-4 h-4 text-white" />
+                </Link>
+                <Link 
+                  href="https://muddassirali.com" 
+                  target="_blank"
+                  className="flex items-center justify-center gap-2 border border-slate-200 hover:bg-slate-50 transition-colors px-6 py-3 rounded-xl text-xs font-bold text-slate-700"
+                >
+                  <span>Founder Portfolio ↗</span>
+                  <ExternalLink className="w-4 h-4 text-slate-500" />
+                </Link>
+              </div>
+            </div>
+
           </div>
         </div>
       </section>
