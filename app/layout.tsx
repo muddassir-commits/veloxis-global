@@ -33,6 +33,11 @@ export default function RootLayout({
     <html lang="en" className="scroll-smooth">
       <head>
         <meta name="google-site-verification" content={process.env.NEXT_PUBLIC_GSC_TOKEN || "CVRVYJuDB29ung6LskjcSWvfZwi1q4L4b21cJxpbcX8"} />
+        {/* Geo-Targeting & Local SEO Meta Tags */}
+        <meta name="geo.region" content="IN-UP" />
+        <meta name="geo.placename" content="Kanpur" />
+        <meta name="geo.position" content="26.4607;80.3334" />
+        <meta name="ICBM" content="26.4607, 80.3334" />
         <link rel="preload" href="/fonts/PlusJakartaSans.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
       </head>
       <body className="font-sans bg-slate-50 text-on-surface antialiased">
