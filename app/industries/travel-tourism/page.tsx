@@ -9,13 +9,13 @@ import { getBreadcrumbListSchema } from '../../../lib/schema';
 import { constructMetadata } from '../../../lib/seo-config';
 
 export const metadata: Metadata = constructMetadata({
-  title: "B2B SaaS Growth & Marketing Agency | Veloxis Global",
-  description: "Accelerate your B2B SaaS trial signups and enterprise demo pipelines. We lower CAC and scale MRR with targeted SEO and outbound LinkedIn models.",
-  path: "/industries/saas"
+  title: "Travel & Tourism Marketing Agency | Veloxis Global",
+  description: "Grow direct resort bookings and tour package inquiries. We scale travel brands with Google Ads, local SEO, and Meta campaigns.",
+  path: "/industries/travel-tourism"
 });
 
-export default function SaasIndustryPage() {
-  const industry = getIndustryBySlug('saas');
+export default function TravelTourismIndustryPage() {
+  const industry = getIndustryBySlug('travel-tourism');
   if (!industry) {
     notFound();
   }

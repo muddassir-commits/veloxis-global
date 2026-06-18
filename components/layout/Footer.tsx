@@ -61,7 +61,7 @@ export const Footer: React.FC = () => {
 
   return (
     <footer className="bg-slate-900 text-white pt-20 pb-8 border-t border-slate-800">
-      <div className="max-w-container-max mx-auto px-gutter grid grid-cols-1 md:grid-cols-2 lg:grid-cols-7 gap-12 lg:gap-8 pb-16">
+      <div className="max-w-container-max mx-auto px-gutter grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-12 lg:gap-8 pb-16">
 
         {/* Col 1 — Brand (span 2 on desktop) */}
         <div className="lg:col-span-2 flex flex-col gap-6">
@@ -74,7 +74,7 @@ export const Footer: React.FC = () => {
               className="h-10 w-auto object-contain"
             />
           </Link>
-          <p className="text-[15px] text-slate-400 leading-relaxed font-sans max-w-md">
+          <p className="text-[16px] text-slate-400 leading-relaxed font-sans max-w-md">
             India&apos;s results-driven digital marketing agency — delivering
             measurable growth for businesses across India. Headquartered
             in Kanpur, serving clients pan-India.
@@ -117,6 +117,7 @@ export const Footer: React.FC = () => {
             aria-controls="footer-services-list"
             className="flex items-center justify-between w-full md:cursor-default text-left md:pointer-events-none focus:outline-none py-2 md:py-0"
           >
+            {/* p used instead of h4 — these are decorative column labels, not semantic headings */}
             <p className="text-[12px] tracking-[0.05em] uppercase text-slate-400 font-bold font-sans">SERVICES</p>
             <span className="md:hidden text-slate-400" aria-hidden="true">
               {openSection === 'services' ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
@@ -124,49 +125,18 @@ export const Footer: React.FC = () => {
           </button>
           <ul
             id="footer-services-list"
-            className={`flex flex-col gap-2.5 text-[13.5px] text-slate-300 font-medium mt-3 md:mt-0 ${openSection === 'services' ? 'block' : 'hidden md:flex'}`}
+            className={`flex flex-col gap-3 text-[14px] text-slate-300 font-medium mt-3 md:mt-0 ${openSection === 'services' ? 'block' : 'hidden md:flex'}`}
           >
-            <li><Link href="/services/paid-ads-performance-marketing" className="hover:text-white transition-colors duration-300">Paid Advertising</Link></li>
-            <li><Link href="/services/b2b-lead-generation" className="hover:text-white transition-colors duration-300">B2B Lead Gen</Link></li>
             <li><Link href="/services/seo" className="hover:text-white transition-colors duration-300">SEO Services</Link></li>
+            <li><Link href="/services/social-media-marketing" className="hover:text-white transition-colors duration-300">Social Media Marketing</Link></li>
             <li><Link href="/services/google-ads-ppc" className="hover:text-white transition-colors duration-300">Google Ads &amp; PPC</Link></li>
-            <li><Link href="/services/social-media-marketing" className="hover:text-white transition-colors duration-300">Social Media Mktg</Link></li>
             <li><Link href="/services/content-marketing" className="hover:text-white transition-colors duration-300">Content Marketing</Link></li>
             <li><Link href="/services/web-design-development" className="hover:text-white transition-colors duration-300">Web Design &amp; Dev</Link></li>
-            <li><Link href="/services/ai-marketing-automation" className="hover:text-white transition-colors duration-300">AI Automation</Link></li>
-            <li><Link href="/services" className="text-royal-blue hover:underline font-bold mt-1 inline-block">View All Services →</Link></li>
+            <li><Link href="/services/email-marketing" className="hover:text-white transition-colors duration-300">Email Marketing</Link></li>
           </ul>
         </div>
 
-        {/* Col 3 — Industries */}
-        <div className="flex flex-col md:gap-6 border-b border-white/10 md:border-b-0 pb-4 md:pb-0">
-          <button
-            onClick={() => toggleSection('industries')}
-            aria-expanded={openSection === 'industries'}
-            aria-controls="footer-industries-list"
-            className="flex items-center justify-between w-full md:cursor-default text-left md:pointer-events-none focus:outline-none py-2 md:py-0"
-          >
-            <p className="text-[12px] tracking-[0.05em] uppercase text-slate-400 font-bold font-sans">INDUSTRIES</p>
-            <span className="md:hidden text-slate-400" aria-hidden="true">
-              {openSection === 'industries' ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
-            </span>
-          </button>
-          <ul
-            id="footer-industries-list"
-            className={`flex flex-col gap-2.5 text-[13.5px] text-slate-300 font-medium font-sans mt-3 md:mt-0 ${openSection === 'industries' ? 'block' : 'hidden md:flex'}`}
-          >
-            <li><Link href="/industries/real-estate" className="hover:text-white transition-colors duration-300">Real Estate</Link></li>
-            <li><Link href="/industries/healthcare" className="hover:text-white transition-colors duration-300">Healthcare</Link></li>
-            <li><Link href="/industries/education" className="hover:text-white transition-colors duration-300">Education</Link></li>
-            <li><Link href="/industries/ecommerce" className="hover:text-white transition-colors duration-300">E-commerce</Link></li>
-            <li><Link href="/industries/msme-small-business" className="hover:text-white transition-colors duration-300">MSME/B2B</Link></li>
-            <li><Link href="/industries/saas" className="hover:text-white transition-colors duration-300">SaaS Marketing</Link></li>
-            <li><Link href="/industries/coaching-consulting" className="hover:text-white transition-colors duration-300">Coaching &amp; Consult</Link></li>
-            <li><Link href="/industries" className="text-royal-blue hover:underline font-bold mt-1 inline-block">View All Markets →</Link></li>
-          </ul>
-        </div>
-
-        {/* Col 4 — Locations */}
+        {/* Col 3 — Locations */}
         <div className="flex flex-col md:gap-6 border-b border-white/10 md:border-b-0 pb-4 md:pb-0">
           <button
             onClick={() => toggleSection('locations')}
@@ -181,16 +151,16 @@ export const Footer: React.FC = () => {
           </button>
           <ul
             id="footer-locations-list"
-            className={`flex flex-col gap-2.5 text-[13.5px] text-slate-300 font-medium font-sans mt-3 md:mt-0 ${openSection === 'locations' ? 'block' : 'hidden md:flex'}`}
+            className={`flex flex-col gap-3 text-[14px] text-slate-300 font-medium font-sans mt-3 md:mt-0 ${openSection === 'locations' ? 'block' : 'hidden md:flex'}`}
           >
-            <li><Link href="/digital-marketing-agency-delhi" className="hover:text-white transition-colors duration-300">Delhi Agency</Link></li>
-            <li><Link href="/digital-marketing-agency-noida" className="hover:text-white transition-colors duration-300">Noida Agency</Link></li>
-            <li><Link href="/digital-marketing-agency-lucknow" className="hover:text-white transition-colors duration-300">Lucknow Agency</Link></li>
-            <li><Link href="/digital-marketing-agency-kanpur" className="hover:text-white transition-colors duration-300">Kanpur Agency</Link></li>
+            <li><Link href="/digital-marketing-agency-delhi" className="hover:text-white transition-colors duration-300">Digital Marketing Delhi</Link></li>
+            <li><Link href="/digital-marketing-agency-noida" className="hover:text-white transition-colors duration-300">Digital Marketing Noida</Link></li>
+            <li><Link href="/digital-marketing-agency-lucknow" className="hover:text-white transition-colors duration-300">Digital Marketing Lucknow</Link></li>
+            <li><Link href="/digital-marketing-agency-kanpur" className="hover:text-white transition-colors duration-300">Digital Marketing Kanpur</Link></li>
           </ul>
         </div>
 
-        {/* Col 5 — Company */}
+        {/* Col 4 — Company */}
         <div className="flex flex-col md:gap-6 border-b border-white/10 md:border-b-0 pb-4 md:pb-0">
           <button
             onClick={() => toggleSection('company')}
@@ -205,7 +175,7 @@ export const Footer: React.FC = () => {
           </button>
           <ul
             id="footer-company-list"
-            className={`flex flex-col gap-2.5 text-[13.5px] text-slate-300 font-medium font-sans mt-3 md:mt-0 ${openSection === 'company' ? 'block' : 'hidden md:flex'}`}
+            className={`flex flex-col gap-3 text-[14px] text-slate-300 font-medium font-sans mt-3 md:mt-0 ${openSection === 'company' ? 'block' : 'hidden md:flex'}`}
           >
             <li><Link href="/about" className="hover:text-white transition-colors duration-300">About Us</Link></li>
             <li><Link href="/case-studies" className="hover:text-white transition-colors duration-300">Case Studies</Link></li>
@@ -216,7 +186,7 @@ export const Footer: React.FC = () => {
           </ul>
         </div>
 
-        {/* Col 6 — Contact & Newsletter */}
+        {/* Col 5 — Contact & Newsletter */}
         <div className="flex flex-col md:gap-6 pb-4 md:pb-0">
           <button
             onClick={() => toggleSection('contact')}
@@ -232,7 +202,7 @@ export const Footer: React.FC = () => {
 
           <div
             id="footer-contact-info"
-            className={`flex flex-col gap-3 text-[13.5px] font-sans mt-3 md:mt-0 ${openSection === 'contact' ? 'block' : 'hidden md:flex'}`}
+            className={`flex flex-col gap-3 text-[14px] font-sans mt-3 md:mt-0 ${openSection === 'contact' ? 'block' : 'hidden md:flex'}`}
           >
             <a
               href="tel:+918887620727"
@@ -243,7 +213,7 @@ export const Footer: React.FC = () => {
 
             <a
               href="mailto:info@veloxisglobal.com"
-              className="text-slate-300 hover:text-white block break-all text-xs"
+              className="text-slate-300 hover:text-white block break-all"
             >
               📧 info@veloxisglobal.com
             </a>
@@ -253,7 +223,7 @@ export const Footer: React.FC = () => {
               href="https://wa.me/918887620727?text=Hi%20Veloxis%20Global%2C%20I%27d%20like%20a%20free%20marketing%20audit"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-[#25D366] hover:bg-[#20ba5a] text-white py-2 px-3 rounded-md font-bold text-xs inline-flex items-center justify-center gap-1.5 transition-colors duration-300 w-full text-center"
+              className="bg-[#25D366] hover:bg-[#20ba5a] text-white py-2.5 px-4 rounded-md font-bold text-sm inline-flex items-center justify-center gap-2 transition-colors duration-300 w-full text-center"
             >
               <span aria-hidden="true">💬</span>
               <span>Chat on WhatsApp</span>
@@ -268,7 +238,7 @@ export const Footer: React.FC = () => {
 
             {success === true ? (
               <p className="text-royal-blue text-[13px] font-bold mt-1">
-                🎉 Subscribed!
+                🎉 Subscribed successfully!
               </p>
             ) : (
               <form onSubmit={handleSubscribe} className="flex flex-col gap-2">
@@ -276,10 +246,10 @@ export const Footer: React.FC = () => {
                 <input
                   id="footer-email-input"
                   type="email"
-                  placeholder="Business email"
+                  placeholder="Your business email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="bg-white/10 border border-white/20 rounded-md px-3 py-1.5 text-white placeholder-slate-400 focus:outline-none focus:ring-1 focus:ring-royal-blue w-full text-xs font-sans"
+                  className="bg-white/10 border border-white/20 rounded-md px-3 py-2 text-white placeholder-slate-400 focus:outline-none focus:ring-1 focus:ring-royal-blue w-full text-sm font-sans"
                   required
                 />
                 <Button
@@ -287,13 +257,13 @@ export const Footer: React.FC = () => {
                   variant="primary"
                   size="sm"
                   disabled={isSubmitting}
-                  className="w-full text-xs py-1.5"
+                  className="w-full text-sm"
                 >
                   {isSubmitting ? 'Subscribing...' : 'Subscribe →'}
                 </Button>
                 {success === false && (
                   <p className="text-red-400 text-xs font-semibold">
-                    Error subscribing.
+                    Error subscribing. Please try again.
                   </p>
                 )}
               </form>

@@ -13,26 +13,26 @@ import { constructMetadata } from '../../../lib/seo-config';
 import { notFound } from 'next/navigation';
 
 export const metadata: Metadata = constructMetadata({
-  title: "Professional SEO Services Agency India | Veloxis Global",
-  description: "Rank #1 on Google. Clean technical SEO, authority building, on-page optimization, and local SEO Google Maps growth setups.",
-  path: "/services/seo"
+  title: "Analytics, Tracking & Attribution Setup Agency | Veloxis Global",
+  description: "Gain complete conversion visibility. Setup Google Analytics 4 (GA4), GTM containers, server-side Facebook Conversions API (CAPI), and clean tracking.",
+  path: "/services/analytics-tracking-attribution"
 });
 
-export default function SeoServicePage() {
-  const service = getServiceBySlug('organic-growth-seo-mastery');
+export default function AnalyticsTrackingAttributionPage() {
+  const service = getServiceBySlug('analytics-tracking-attribution');
   if (!service) {
     notFound();
   }
 
   const breadcrumbItems = [
     { name: 'Services', href: '/services' },
-    { name: 'SEO Services', href: '/services/seo' }
+    { name: service.title, href: `/services/${service.slug}` }
   ];
 
   const breadcrumbSchema = generateBreadcrumbSchema([
     { name: 'Home', url: 'https://veloxisglobal.com' },
     { name: 'Services', url: 'https://veloxisglobal.com/services' },
-    { name: 'SEO Services', url: 'https://veloxisglobal.com/services/seo' }
+    { name: service.title, url: `https://veloxisglobal.com/services/${service.slug}` }
   ]);
 
   const serviceSchema = generateServiceSchema(

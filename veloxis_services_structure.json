@@ -1,0 +1,1127 @@
+{
+  "implemented_routes": {
+    "real-estate": "/industries/real-estate",
+    "saas": "/industries/saas",
+    "healthcare": "/industries/healthcare",
+    "coaching-consulting": "/industries/coaching-consulting",
+    "education": "/industries/education",
+    "restaurant-food": "/industries/restaurant-food",
+    "ecommerce": "/industries/ecommerce",
+    "fitness-wellness": "/industries/fitness-wellness",
+    "msme-small-business": "/industries/msme-small-business",
+    "non-profit": "/industries/non-profit",
+    "travel-tourism": "/industries/travel-tourism",
+    "legal-professional": "/industries/legal-professional"
+  },
+  "services": [
+    {
+      "id": "paid-advertising",
+      "slug": "paid-advertising-performance-marketing",
+      "title": "🎯 Paid Advertising & Performance Marketing",
+      "subtitle": "Expert paid campaign management across all platforms — Google, Meta, LinkedIn, YouTube",
+      "description": "Maximize your ad spend with certified, data-driven paid advertising campaigns across Meta, Google, LinkedIn, and YouTube.",
+      "icon": "🎯",
+      "pricing": "₹22,000–₹150,000/month",
+      "subservices": [
+        {
+          "name": "Meta Ads (Facebook & Instagram)",
+          "items": [
+            "Full-funnel campaign architecture",
+            "Lead Ads setup & optimization",
+            "Advantage+ Campaigns",
+            "Dynamic Creative Optimization (DCO)",
+            "Retargeting & lookalike audiences",
+            "A/B & multivariate testing",
+            "ROAS optimization & scaling",
+            "Creative strategy & copywriting",
+            "Budget allocation & cost cap strategies"
+          ]
+        },
+        {
+          "name": "Google Ads & Search Marketing",
+          "items": [
+            "Google Search Ads (keyword targeting)",
+            "Google Display Network (brand awareness)",
+            "Shopping Ads & Product Feed Management",
+            "YouTube Ads (In-stream & Discovery)",
+            "Performance Max Campaigns",
+            "Conversion tracking & CAPI setup",
+            "Bid strategy optimization",
+            "Landing page A/B testing",
+            "Google-certified campaign management"
+          ]
+        },
+        {
+          "name": "LinkedIn Ads & B2B Marketing",
+          "items": [
+            "Account-based marketing (ABM)",
+            "Lead generation campaigns",
+            "Sponsored content & InMail",
+            "Retargeting decision makers",
+            "B2B audience targeting",
+            "LinkedIn conversion tracking"
+          ]
+        },
+        {
+          "name": "Advanced Targeting & Audience Building",
+          "items": [
+            "Custom audience creation",
+            "Lookalike audience modeling",
+            "Behavioral targeting",
+            "Intent-based segmentation",
+            "First-party data strategy"
+          ]
+        },
+        {
+          "name": "Ad Account Health & Audits",
+          "items": [
+            "Account structure review",
+            "Pixel diagnostics",
+            "Conversion event validation",
+            "Budget waste elimination",
+            "Campaign performance audit"
+          ]
+        }
+      ],
+      "bestFor": ["E-commerce", "Lead Generation", "Brand Awareness", "Conversion Scaling"],
+      "cta": "Get Your Free Ad Audit"
+    },
+    {
+      "id": "seo-organic-growth",
+      "slug": "organic-growth-seo-mastery",
+      "title": "🔍 Organic Growth & SEO Mastery",
+      "subtitle": "Rank #1 on Google with white-hat, sustainable SEO strategies",
+      "description": "Dominate Google search results with comprehensive technical SEO, content optimization, and local SEO strategies.",
+      "icon": "🔍",
+      "pricing": "₹18,000–₹120,000/month",
+      "subservices": [
+        {
+          "name": "Technical SEO",
+          "items": [
+            "Core Web Vitals optimization",
+            "Site crawl analysis & error fixes",
+            "XML sitemap & robots.txt setup",
+            "Internal linking architecture",
+            "Page speed optimization",
+            "Mobile-first indexing",
+            "Schema markup implementation",
+            "Structured data validation"
+          ]
+        },
+        {
+          "name": "On-Page SEO & Keyword Strategy",
+          "items": [
+            "Comprehensive keyword research (100+ keywords)",
+            "Keyword mapping & intent analysis",
+            "Title tags & meta description optimization",
+            "Header tag structure (H1-H3)",
+            "Content optimization for search intent",
+            "Image alt text & optimization",
+            "Entity optimization & knowledge graph"
+          ]
+        },
+        {
+          "name": "Local SEO & Google Business Profile",
+          "items": [
+            "Google Business Profile optimization",
+            "Local citation building (420+ citations)",
+            "Review management & response",
+            "Local keyword targeting",
+            "Service area setup & mapping",
+            "Google Maps pack positioning",
+            "Location-specific landing pages"
+          ]
+        },
+        {
+          "name": "Content SEO & Topical Authority",
+          "items": [
+            "Topic cluster architecture",
+            "Pillar page creation",
+            "Topic cluster content mapping",
+            "Keyword gap analysis",
+            "Content gap identification",
+            "Internal cross-linking strategy"
+          ]
+        },
+        {
+          "name": "Backlink & Authority Building",
+          "items": [
+            "Competitor backlink analysis",
+            "High-authority link prospecting",
+            "Guest posting outreach",
+            "Broken link building",
+            "Resource page link acquisition",
+            "HARO (Help A Reporter Out) outreach",
+            "Authority & topical relevance"
+          ]
+        },
+        {
+          "name": "SEO Audits & Analysis",
+          "items": [
+            "Full-site technical audit",
+            "Competitor analysis (top 10 rankings)",
+            "Ranking opportunity identification",
+            "Content performance analysis",
+            "Search visibility tracking"
+          ]
+        }
+      ],
+      "achievements": ["340% traffic increase", "20+ keywords ranked top 20", "₹650 cost-per-lead"],
+      "bestFor": ["Local Businesses", "B2B SaaS", "Content-Heavy Sites", "Long-term Growth"],
+      "cta": "Get Your Free SEO Audit"
+    },
+    {
+      "id": "content-creative",
+      "slug": "content-creative-services",
+      "title": "✍️ Content & Creative Services",
+      "subtitle": "SEO-optimized content that ranks, educates, and converts",
+      "description": "Create compelling, SEO-friendly content that attracts organic traffic and converts readers into customers.",
+      "icon": "✍️",
+      "pricing": "₹15,000–₹80,000/month",
+      "subservices": [
+        {
+          "name": "Blog Writing & Content Strategy",
+          "items": [
+            "Content strategy & calendar planning",
+            "SEO-optimized blog writing (500–3,000 words)",
+            "Topic research & briefing",
+            "Internal linking recommendations",
+            "Content clusters & pillar pages",
+            "500+ blog articles managed"
+          ]
+        },
+        {
+          "name": "Landing Page & Sales Copy",
+          "items": [
+            "High-converting landing pages",
+            "Sales funnel copy",
+            "Email sequences & follow-ups",
+            "Lead magnet copy",
+            "Product page descriptions",
+            "Case study writing"
+          ]
+        },
+        {
+          "name": "Video Content Production",
+          "items": [
+            "YouTube video scripting",
+            "Short-form video (Reels, Shorts, TikTok)",
+            "Voiceover & audio production (ElevenLabs)",
+            "Video editing (Adobe Premiere, DaVinci Resolve)",
+            "Thumbnail design",
+            "Video SEO optimization"
+          ]
+        },
+        {
+          "name": "Graphic Design & Creative Assets",
+          "items": [
+            "Social media graphics (Canva)",
+            "Brand collateral design",
+            "Ad creative design",
+            "Infographic creation",
+            "Cover images & thumbnails",
+            "Banner design"
+          ]
+        },
+        {
+          "name": "User-Generated Content (UGC) Direction",
+          "items": [
+            "UGC strategy & briefing",
+            "Creator collaboration",
+            "UGC video direction",
+            "Content repurposing guidance"
+          ]
+        }
+      ],
+      "bestFor": ["Authority Building", "Thought Leadership", "Educational Content", "Conversion Optimization"],
+      "cta": "Let's Plan Your Content Strategy"
+    },
+    {
+      "id": "social-media",
+      "slug": "social-media-community-building",
+      "title": "📱 Social Media & Community Building",
+      "subtitle": "Build engaged communities and scale your brand organically",
+      "description": "Grow your social presence with strategic content, community engagement, and data-driven optimization.",
+      "icon": "📱",
+      "pricing": "₹20,000–₹100,000/month",
+      "subservices": [
+        {
+          "name": "Instagram Management & Growth",
+          "items": [
+            "Content calendar & ideation",
+            "Daily post scheduling & optimization",
+            "Reels creation & strategy",
+            "Hashtag research & strategy",
+            "Story & highlight management",
+            "Community engagement & DM management",
+            "Follower growth & analytics tracking",
+            "27,700+ monthly views managed"
+          ]
+        },
+        {
+          "name": "Facebook Page Management",
+          "items": [
+            "Community building & moderation",
+            "Content strategy & posting",
+            "Group management (private communities)",
+            "Event promotion & management",
+            "Audience insights & reporting"
+          ]
+        },
+        {
+          "name": "LinkedIn B2B Strategy",
+          "items": [
+            "LinkedIn company page optimization",
+            "Content strategy & posting",
+            "Employee advocacy program",
+            "LinkedIn Ads integration",
+            "B2B community building",
+            "Thought leadership positioning"
+          ]
+        },
+        {
+          "name": "TikTok & Short-Form Video",
+          "items": [
+            "TikTok account setup & strategy",
+            "Trending audio & hashtag research",
+            "Short-form video production",
+            "Creator collaboration",
+            "Viral content strategy"
+          ]
+        },
+        {
+          "name": "YouTube Channel Management",
+          "items": [
+            "Channel branding & optimization",
+            "Playlist creation & organization",
+            "Video description optimization",
+            "Subscriber growth strategy",
+            "YouTube SEO"
+          ]
+        },
+        {
+          "name": "Community Management",
+          "items": [
+            "Daily comment & message responses",
+            "Crisis management & reputation monitoring",
+            "Influencer outreach & partnership",
+            "Community member engagement",
+            "Retention & churn prevention"
+          ]
+        }
+      ],
+      "achievements": ["27,700+ monthly views", "1,933 Instagram followers", "8,000+ monthly views (secondary account)"],
+      "bestFor": ["Brand Building", "Community Growth", "Lead Generation", "Engagement"],
+      "cta": "Let's Grow Your Social Presence"
+    },
+    {
+      "id": "web-development",
+      "slug": "web-development-technology",
+      "title": "💻 Web Development & Technology",
+      "subtitle": "Fast, modern, high-converting websites built for growth",
+      "description": "Custom-built websites optimized for performance, conversions, and user experience.",
+      "icon": "💻",
+      "pricing": "₹45,000–₹500,000 (project-based)",
+      "subservices": [
+        {
+          "name": "Website Design & Development",
+          "items": [
+            "Custom UI/UX design (Figma)",
+            "Responsive mobile-first design",
+            "Next.js 15 development",
+            "Tailwind CSS styling",
+            "Animation & micro-interactions",
+            "Core Web Vitals optimization",
+            "8 live client websites delivered"
+          ]
+        },
+        {
+          "name": "E-commerce Development",
+          "items": [
+            "Shopify store setup & customization",
+            "WooCommerce development",
+            "Product catalog setup",
+            "Payment gateway integration (Razorpay, Stripe)",
+            "Inventory management system",
+            "Cart optimization & checkout flow"
+          ]
+        },
+        {
+          "name": "Custom Web Applications",
+          "items": [
+            "SaaS platform development",
+            "Membership & subscription sites",
+            "Multi-tenant applications",
+            "Progressive Web Apps (PWA)",
+            "Real-time data dashboards"
+          ]
+        },
+        {
+          "name": "CRM & Business Tools Development",
+          "items": [
+            "Custom CRM systems (30+ table databases)",
+            "Client portal development",
+            "Employee task management portal",
+            "Automated invoice generation",
+            "Project management tools"
+          ]
+        },
+        {
+          "name": "API Integration & Webhooks",
+          "items": [
+            "REST API integration",
+            "GraphQL implementation",
+            "Webhook architecture",
+            "Third-party tool integration",
+            "Meta Marketing API integration",
+            "Google Analytics API setup",
+            "Google Search Console API connection"
+          ]
+        },
+        {
+          "name": "Database Design & Optimization",
+          "items": [
+            "PostgreSQL database design",
+            "Data modeling & relationships",
+            "Query optimization",
+            "Backup & disaster recovery"
+          ]
+        }
+      ],
+      "bestFor": ["Startups", "SaaS", "E-commerce", "Enterprise"],
+      "cta": "Discuss Your Project Requirements"
+    },
+    {
+      "id": "email-marketing",
+      "slug": "email-marketing-automation",
+      "title": "📧 Email & Marketing Automation",
+      "subtitle": "Nurture leads and re-engage customers with automated sequences",
+      "description": "Build automated email and WhatsApp sequences that convert leads into paying customers.",
+      "icon": "📧",
+      "pricing": "₹12,000–₹60,000/month",
+      "subservices": [
+        {
+          "name": "Email Marketing Setup",
+          "items": [
+            "Email list segmentation",
+            "Subscriber management",
+            "Double opt-in setup",
+            "List cleaning & validation",
+            "Compliance (CAN-SPAM, GDPR)"
+          ]
+        },
+        {
+          "name": "Email Sequence Automation",
+          "items": [
+            "Welcome sequences (5-7 emails)",
+            "Lead nurture workflows",
+            "Re-engagement campaigns",
+            "Win-back sequences",
+            "Post-purchase follow-up",
+            "Sales enablement sequences"
+          ]
+        },
+        {
+          "name": "WhatsApp Business Automation",
+          "items": [
+            "WhatsApp Business API setup",
+            "Template message creation",
+            "Automated broadcasts",
+            "Group messaging",
+            "WhatsApp chatbot integration",
+            "Meta Lead Ads → WhatsApp → CRM integration"
+          ]
+        },
+        {
+          "name": "Email Design & Copywriting",
+          "items": [
+            "Responsive email templates",
+            "Email copy optimization",
+            "CTA button optimization",
+            "A/B testing (subject lines, content)",
+            "Personalization & dynamic content"
+          ]
+        },
+        {
+          "name": "Integration & CRM Connectivity",
+          "items": [
+            "HubSpot integration",
+            "Zapier automation",
+            "Make.com workflows",
+            "Custom webhook connections",
+            "Lead scoring automation"
+          ]
+        }
+      ],
+      "bestFor": ["Lead Nurturing", "Customer Retention", "Upselling", "Conversion"],
+      "cta": "Start Your Automation Journey"
+    },
+    {
+      "id": "ai-automation",
+      "slug": "ai-automation-systems",
+      "title": "🤖 AI & Marketing Automation Systems",
+      "subtitle": "Build intelligent systems that work while you sleep",
+      "description": "Custom n8n automation workflows that capture leads, sync data, and handle repetitive tasks automatically.",
+      "icon": "🤖",
+      "pricing": "₹15,000–₹100,000/month",
+      "subservices": [
+        {
+          "name": "n8n Automation Workflows",
+          "items": [
+            "Lead capture automation (Meta Ads → CRM)",
+            "Daily data sync (GSC + GA4 + Meta)",
+            "Monthly invoice generation (auto)",
+            "Overdue invoice detection alerts",
+            "Weekly digest reports",
+            "WhatsApp broadcast automation",
+            "18+ production workflows built"
+          ]
+        },
+        {
+          "name": "Lead Capture & Routing",
+          "items": [
+            "Meta Lead Ads form setup",
+            "Website form optimization",
+            "Lead qualification automation",
+            "Automatic lead assignment (to sales team)",
+            "Lead scoring & prioritization",
+            "CRM auto-population"
+          ]
+        },
+        {
+          "name": "AI-Powered Content Generation",
+          "items": [
+            "Claude AI prompt engineering",
+            "ChatGPT integration for content",
+            "Email subject line generation",
+            "Ad copy suggestions",
+            "Blog outline generation",
+            "Content repurposing automation"
+          ]
+        },
+        {
+          "name": "Chatbot & Voicebot Development",
+          "items": [
+            "Voiceflow chatbot builder",
+            "Landbot integration",
+            "Vapi voice bot development",
+            "Customer support automation",
+            "Lead qualification bots",
+            "FAQ bots & knowledge base"
+          ]
+        },
+        {
+          "name": "Data Integration & API Automation",
+          "items": [
+            "Google Search Console data sync",
+            "Google Analytics data integration",
+            "Meta API data pulling",
+            "Scheduled API calls",
+            "Data transformation & cleaning",
+            "Database synchronization"
+          ]
+        }
+      ],
+      "achievements": ["Meta Lead Ads → n8n → WhatsApp pipeline", "80% manual work reduction", "18+ production workflows"],
+      "bestFor": ["Scale Operations", "Data-Driven Teams", "Lead Generation", "Efficiency"],
+      "cta": "Automate Your Workflows"
+    },
+    {
+      "id": "brand-strategy",
+      "slug": "brand-strategy-positioning",
+      "title": "🎨 Brand Strategy & Positioning",
+      "subtitle": "Build a memorable brand that stands out in crowded markets",
+      "description": "Develop a clear brand identity and strategy that resonates with your target audience.",
+      "icon": "🎨",
+      "pricing": "₹25,000–₹150,000 (project-based)",
+      "subservices": [
+        {
+          "name": "Brand Positioning & Identity",
+          "items": [
+            "Brand positioning statement",
+            "Unique value proposition (UVP)",
+            "Brand messaging framework",
+            "Brand voice & tone guidelines",
+            "Logo design & refinement",
+            "Color palette & typography",
+            "Brand guidelines document"
+          ]
+        },
+        {
+          "name": "Buyer Persona Development",
+          "items": [
+            "Audience research & interviews",
+            "Persona creation (3-5 personas)",
+            "Pain point identification",
+            "Buying journey mapping",
+            "Objection handling strategy"
+          ]
+        },
+        {
+          "name": "Customer Journey Mapping",
+          "items": [
+            "Awareness stage content",
+            "Consideration stage touchpoints",
+            "Decision stage optimization",
+            "Retention & advocacy strategies",
+            "Churn prediction & prevention"
+          ]
+        },
+        {
+          "name": "Sales Funnel Architecture",
+          "items": [
+            "Lead magnet creation",
+            "Landing page optimization",
+            "Sales email sequences",
+            "Upsell & cross-sell strategies",
+            "Funnel metric tracking"
+          ]
+        },
+        {
+          "name": "Competitive Analysis",
+          "items": [
+            "Competitor positioning",
+            "Feature comparison analysis",
+            "Pricing strategy research",
+            "Marketing message benchmarking",
+            "SWOT analysis"
+          ]
+        }
+      ],
+      "bestFor": ["Startups", "Rebranding", "Market Entry", "Positioning"],
+      "cta": "Build Your Brand Strategy"
+    },
+    {
+      "id": "analytics-tracking",
+      "slug": "analytics-tracking-attribution",
+      "title": "📊 Analytics, Tracking & Attribution",
+      "subtitle": "Know exactly where your revenue comes from",
+      "description": "Implement comprehensive tracking and analytics to measure what matters.",
+      "icon": "📊",
+      "pricing": "₹8,000–₹50,000/month",
+      "subservices": [
+        {
+          "name": "Google Analytics 4 Setup",
+          "items": [
+            "GA4 account creation & setup",
+            "Property configuration",
+            "Data stream configuration",
+            "GTM (Google Tag Manager) implementation",
+            "Event tracking setup",
+            "Conversion goals definition",
+            "Custom reports & dashboards"
+          ]
+        },
+        {
+          "name": "Conversion Tracking & Measurement",
+          "items": [
+            "Purchase event tracking",
+            "Lead tracking & attribution",
+            "Form submission tracking",
+            "Phone call tracking (CallRail, Twilio)",
+            "Offline conversion import",
+            "Cross-domain tracking"
+          ]
+        },
+        {
+          "name": "Attribution Modeling",
+          "items": [
+            "First-click attribution analysis",
+            "Last-click attribution comparison",
+            "Multi-touch attribution",
+            "Data-driven attribution (DDA)",
+            "Revenue attribution by channel"
+          ]
+        },
+        {
+          "name": "Custom Dashboards & Reporting",
+          "items": [
+            "Looker Studio setup & design",
+            "Real-time performance dashboards",
+            "Automated report generation",
+            "KPI tracking & monitoring",
+            "Executive summary reports",
+            "Monthly performance reviews"
+          ]
+        },
+        {
+          "name": "Cross-Platform Analytics",
+          "items": [
+            "Multi-channel data integration",
+            "Data reconciliation",
+            "Channel performance comparison",
+            "ROI by channel calculation"
+          ]
+        }
+      ],
+      "bestFor": ["Data-Driven Teams", "Growth Tracking", "Decision Making", "Optimization"],
+      "cta": "Set Up Your Analytics Dashboard"
+    },
+    {
+      "id": "training-education",
+      "slug": "training-education",
+      "title": "🎓 Training & Education",
+      "subtitle": "Train your team or build a digital marketing business",
+      "description": "Get hands-on training from experts or scale your team's marketing skills.",
+      "icon": "🎓",
+      "pricing": "₹499–₹100,000 (varies by format)",
+      "subservices": [
+        {
+          "name": "Group Training & Courses",
+          "items": [
+            "3-month digital marketing certification",
+            "17+ batches trained (300+ learners)",
+            "Live project-based curriculum",
+            "SEO, Meta Ads, Google Ads, SMM modules",
+            "AI tools & automation training",
+            "Freelancing & agency setup training"
+          ]
+        },
+        {
+          "name": "1-on-1 Coaching & Mentorship",
+          "items": [
+            "Personal branding strategy",
+            "LinkedIn optimization coaching",
+            "Career guidance (freelance → agency)",
+            "Business scaling strategy",
+            "Weekly calls & action planning",
+            "42-day outcome-based framework"
+          ]
+        },
+        {
+          "name": "Team Training Programs",
+          "items": [
+            "Internal agency team training",
+            "Client team upskilling",
+            "Tool-specific training (n8n, Meta Ads, GA4)",
+            "Best practices workshops",
+            "Knowledge transfer sessions"
+          ]
+        },
+        {
+          "name": "Corporate Training",
+          "items": [
+            "B2B company digital marketing training",
+            "Sales team enablement",
+            "Marketing team upskilling",
+            "₹50,000–₹100,000 per company"
+          ]
+        },
+        {
+          "name": "Workshops & Webinars",
+          "items": [
+            "Free webinars (lead generation)",
+            "Paid workshops (2-4 hours)",
+            "Interactive training sessions",
+            "Certification programs",
+            "Live Q&A sessions"
+          ]
+        },
+        {
+          "name": "Online Courses (Self-Paced)",
+          "items": [
+            "YouTube course creation (Gemini, AI tools)",
+            "Teachable/Udemy course hosting",
+            "Digital product creation",
+            "Lead magnet courses (free + upsell)",
+            "Gumroad course creation"
+          ]
+        }
+      ],
+      "achievements": ["300+ marketers trained", "17+ batches delivered", "300+ learners impacted"],
+      "bestFor": ["Team Development", "Skill Building", "Career Growth", "Knowledge Transfer"],
+      "cta": "Enroll in a Training Program"
+    },
+    {
+      "id": "ecommerce-catalog",
+      "slug": "ecommerce-catalog-services",
+      "title": "🛍️ E-Commerce & Catalog Services",
+      "subtitle": "Scale online product sales with optimized stores and ads",
+      "description": "Complete e-commerce solutions from store setup to automated sales optimization.",
+      "icon": "🛍️",
+      "pricing": "₹30,000–₹200,000/month",
+      "subservices": [
+        {
+          "name": "E-commerce Store Setup",
+          "items": [
+            "Shopify store setup & customization",
+            "Product listing & descriptions",
+            "Category architecture",
+            "Payment gateway setup (Razorpay, Stripe)",
+            "Shipping & tax configuration",
+            "Cart optimization"
+          ]
+        },
+        {
+          "name": "Product Feed Management",
+          "items": [
+            "Google Merchant Center setup",
+            "Product feed creation & optimization",
+            "Inventory sync automation",
+            "Price & availability updates",
+            "Product data quality enhancement"
+          ]
+        },
+        {
+          "name": "Shopping Ads Management",
+          "items": [
+            "Google Shopping Ads setup",
+            "Bid strategy optimization",
+            "Product-level bidding",
+            "Negative keyword management",
+            "ROAS optimization"
+          ]
+        },
+        {
+          "name": "E-commerce Analytics",
+          "items": [
+            "Revenue by product tracking",
+            "Cart abandonment analysis",
+            "Customer lifetime value (CLV)",
+            "Repeat purchase tracking",
+            "Inventory performance"
+          ]
+        },
+        {
+          "name": "E-commerce Optimization",
+          "items": [
+            "Landing page A/B testing",
+            "Checkout flow optimization",
+            "Product page conversion optimization",
+            "Cross-sell & upsell strategy",
+            "Post-purchase email sequences"
+          ]
+        }
+      ],
+      "bestFor": ["E-commerce Businesses", "Product Sales", "Inventory Management", "Growth Scaling"],
+      "cta": "Optimize Your E-commerce Store"
+    },
+    {
+      "id": "audits-consulting",
+      "slug": "audits-consulting-strategy",
+      "title": "🔍 Audits, Consulting & Strategy",
+      "subtitle": "Expert analysis and strategic recommendations",
+      "description": "Get comprehensive audits and strategic guidance to identify growth opportunities.",
+      "icon": "🔍",
+      "pricing": "₹5,000–₹50,000 (per audit/consultation)",
+      "subservices": [
+        {
+          "name": "Digital Marketing Audits",
+          "items": [
+            "Full funnel audit (Meta + Google + Email)",
+            "Website performance audit",
+            "Competitor benchmarking",
+            "SEO audit & opportunity identification",
+            "Ad account health check",
+            "48-hour delivery guarantee"
+          ]
+        },
+        {
+          "name": "Website Performance Audit",
+          "items": [
+            "Core Web Vitals analysis",
+            "Page speed optimization",
+            "Mobile usability check",
+            "Accessibility audit",
+            "Security scan"
+          ]
+        },
+        {
+          "name": "Ad Account Audits",
+          "items": [
+            "Campaign structure review",
+            "Conversion tracking validation",
+            "Audience segmentation analysis",
+            "Creative performance review",
+            "Budget allocation optimization"
+          ]
+        },
+        {
+          "name": "Strategy Consultation",
+          "items": [
+            "90-day marketing roadmap",
+            "Channel selection strategy",
+            "Budget allocation planning",
+            "Competitive positioning",
+            "Growth opportunity identification",
+            "Free 20-minute consultation"
+          ]
+        },
+        {
+          "name": "Competitor Analysis",
+          "items": [
+            "Top 10 competitor analysis",
+            "Ad creative benchmarking",
+            "Keyword strategy comparison",
+            "Pricing & positioning analysis",
+            "Market opportunity gap"
+          ]
+        }
+      ],
+      "bestFor": ["Strategic Planning", "Audit & Assessment", "Growth Identification", "Optimization"],
+      "cta": "Get Your Free Audit"
+    },
+    {
+      "id": "b2b-lead-generation",
+      "slug": "b2b-lead-generation-sales",
+      "title": "🎯 B2B Lead Generation & Sales",
+      "subtitle": "Generate high-quality B2B leads at scale",
+      "description": "Build and manage B2B lead generation systems that deliver qualified prospects.",
+      "icon": "🎯",
+      "pricing": "₹20,000–₹150,000/month",
+      "subservices": [
+        {
+          "name": "Cold Outreach Automation",
+          "items": [
+            "Apollo.io lead sourcing",
+            "Personalized WhatsApp sequences",
+            "Email cold outreach",
+            "LinkedIn connection strategy",
+            "47 B2B leads in 27 days (proven)"
+          ]
+        },
+        {
+          "name": "Sales Pipeline Management",
+          "items": [
+            "Pipeline setup in Airtable/HubSpot",
+            "Lead tracking & follow-up",
+            "Deal stage management",
+            "Sales forecasting",
+            "Win/loss analysis"
+          ]
+        },
+        {
+          "name": "LinkedIn Lead Generation",
+          "items": [
+            "LinkedIn Ads for B2B",
+            "Connection outreach strategy",
+            "LinkedIn Sales Navigator strategy",
+            "Account-based marketing (ABM)",
+            "LinkedIn content strategy for leads"
+          ]
+        },
+        {
+          "name": "Account-Based Marketing (ABM)",
+          "items": [
+            "Target account identification",
+            "Personalized campaign creation",
+            "Multi-touch attribution",
+            "Account engagement tracking",
+            "Decision-maker targeting"
+          ]
+        },
+        {
+          "name": "Lead Scoring & Qualification",
+          "items": [
+            "Automated lead scoring",
+            "Lead qualification criteria",
+            "Sales-ready lead identification",
+            "Nurture vs. disqualified segmentation",
+            "Lead handoff to sales"
+          ]
+        }
+      ],
+      "achievements": ["47 B2B leads in 27 days", "Automated lead pipelines", "Sales-ready qualification"],
+      "bestFor": ["B2B SaaS", "Enterprise Sales", "Service Companies", "Scaling Sales"],
+      "cta": "Build Your Lead Generation System"
+    },
+    {
+      "id": "industry-specific",
+      "slug": "industry-specific-marketing",
+      "title": "🏢 Industry-Specific Marketing Services",
+      "subtitle": "Specialized strategies for unique business verticals",
+      "description": "Vertical-specific marketing expertise built from real client experience.",
+      "icon": "🏢",
+      "pricing": "₹25,000–₹200,000/month",
+      "subservices": [
+        {
+          "name": "Real Estate Marketing",
+          "items": [
+            "Property listing optimization",
+            "Virtual tour video creation",
+            "Locality-specific SEO",
+            "Real estate-specific ad templates",
+            "Lead management for agents",
+            "Open house promotion"
+          ]
+        },
+        {
+          "name": "Healthcare & Medical Practice Marketing",
+          "items": [
+            "HIPAA-compliant landing pages",
+            "Patient review management",
+            "Local SEO for clinics/hospitals",
+            "Medical content writing (E-E-A-T)",
+            "Appointment booking optimization",
+            "Patient education content"
+          ]
+        },
+        {
+          "name": "E-Learning & EdTech Marketing",
+          "items": [
+            "Course landing pages",
+            "Student testimonial videos",
+            "Enrollment funnel optimization",
+            "Parent-focused ad targeting",
+            "University partnership outreach",
+            "Student review management"
+          ]
+        },
+        {
+          "name": "SaaS Product Marketing",
+          "items": [
+            "Product-market fit validation",
+            "Free trial optimization",
+            "Freemium funnel design",
+            "API documentation",
+            "Integration marketplace listings",
+            "Enterprise sales enablement"
+          ]
+        },
+        {
+          "name": "Coaching & Consulting",
+          "items": [
+            "Personal brand building",
+            "High-ticket offer creation",
+            "Application funnel setup",
+            "Webinar marketing",
+            "Client case study production",
+            "Membership site creation"
+          ]
+        },
+        {
+          "name": "Restaurant & Food Business",
+          "items": [
+            "Google Business Profile optimization",
+            "Food photography & reels",
+            "Online ordering integration (Swiggy, Zomato)",
+            "Local influencer partnerships",
+            "Customer review management",
+            "Loyalty program setup"
+          ]
+        },
+        {
+          "name": "B2B Manufacturing & Industrial",
+          "items": [
+            "Industry publication outreach",
+            "Trade show marketing",
+            "Technical content creation",
+            "Supplier relationship marketing",
+            "B2B directory listings",
+            "Government bid marketing"
+          ]
+        },
+        {
+          "name": "Fitness & Wellness",
+          "items": [
+            "Membership funnel optimization",
+            "Trainer profile optimization",
+            "Before/after transformation content",
+            "Class scheduling marketing",
+            "Customer retention automation",
+            "Community building (Facebook Group)"
+          ]
+        },
+        {
+          "name": "Non-Profit & NGO Marketing",
+          "items": [
+            "Donor engagement campaigns",
+            "Fundraising funnel optimization",
+            "Impact story creation",
+            "Volunteer recruitment",
+            "Grant opportunity research",
+            "Monthly donor automation"
+          ]
+        },
+        {
+          "name": "Travel & Tourism",
+          "items": [
+            "Destination SEO & content",
+            "User-generated travel content",
+            "Seasonal campaign planning",
+            "Booking funnel optimization",
+            "Travel influencer partnerships",
+            "Review management (TripAdvisor, Google)"
+          ]
+        }
+      ],
+      "bestFor": ["Niche Markets", "Vertical Expertise", "Industry-Specific Challenges"],
+      "cta": "Discuss Your Industry"
+    }
+  ],
+  "premiumPackages": [
+    {
+      "name": "90-Day Growth Sprint",
+      "scope": "Full audit + strategy + implementation + optimization",
+      "price": "₹150,000–₹300,000",
+      "bestFor": "Businesses ready to scale"
+    },
+    {
+      "name": "Agency Scaling Package",
+      "scope": "Systems + hiring + training + process documentation",
+      "price": "₹200,000–₹500,000",
+      "bestFor": "Growing agencies"
+    },
+    {
+      "name": "Brand Launch (Full Stack)",
+      "scope": "Brand positioning + website + ads + automation + launch",
+      "price": "₹200,000–₹400,000",
+      "bestFor": "New business launches"
+    },
+    {
+      "name": "E-commerce Growth Program",
+      "scope": "Store setup + product feed + ads + optimization + support",
+      "price": "₹150,000–₹250,000",
+      "bestFor": "E-commerce scaling"
+    },
+    {
+      "name": "Group Coaching (4 weeks)",
+      "scope": "Daily accountability + group calls + custom strategy",
+      "price": "₹25,000–₹50,000 per person",
+      "bestFor": "Team skill building"
+    },
+    {
+      "name": "Done-With-You Program",
+      "scope": "12-week intensive with weekly 1-on-1s + implementation",
+      "price": "₹200,000–₹500,000",
+      "bestFor": "High-commitment growth"
+    }
+  ],
+  "clientTiers": [
+    {
+      "tier": 1,
+      "name": "Self-Service / DIY",
+      "price": "₹0–₹5,000",
+      "includes": ["Free audit + consultation", "DIY templates & guides", "YouTube tutorials", "Free webinars", "Email courses"],
+      "bestFor": "Bootstrapped startups"
+    },
+    {
+      "tier": 2,
+      "name": "Light Support",
+      "price": "₹5,000–₹20,000/month",
+      "includes": ["Monthly strategy calls", "Email & WhatsApp support", "Template-based work", "Limited revisions"],
+      "bestFor": "Small businesses"
+    },
+    {
+      "tier": 3,
+      "name": "Standard Retainer",
+      "price": "₹20,000–₹50,000/month",
+      "includes": ["Full-service management", "Weekly check-ins", "Dedicated account manager", "Unlimited revisions", "Reporting & optimization"],
+      "bestFor": "Small to mid-size businesses"
+    },
+    {
+      "tier": 4,
+      "name": "Premium Retainer",
+      "price": "₹50,000–₹150,000/month",
+      "includes": ["Dedicated team", "24-hour turnaround", "Weekly strategy calls", "Custom integrations", "Full automation setup"],
+      "bestFor": "Growing companies & agencies"
+    },
+    {
+      "tier": 5,
+      "name": "Enterprise",
+      "price": "₹150,000+/month",
+      "includes": ["Dedicated account team", "Real-time support (Slack)", "Custom development", "API integrations", "Monthly reviews"],
+      "bestFor": "Scaling enterprises"
+    }
+  ]
+}
