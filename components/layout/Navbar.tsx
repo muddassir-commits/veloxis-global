@@ -139,27 +139,27 @@ export const Navbar: React.FC = () => {
       <header
         className={`fixed left-1/2 -translate-x-1/2 z-50 transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] ${
           scrolled 
-            ? 'top-4 w-[calc(100%-2rem)] max-w-[1120px] h-14 md:h-16 bg-white/80 backdrop-blur-[24px] border border-white/50 shadow-[0_12px_40px_rgba(15,23,42,0.08)] rounded-full px-6' 
-            : 'top-0 w-full h-16 md:h-[72px] bg-white/80 backdrop-blur-[20px] border-b border-slate-100 px-0'
+            ? 'top-4 w-[calc(100%-2rem)] max-w-[1120px] h-14 lg:h-16 bg-white/80 backdrop-blur-[24px] border border-white/50 shadow-[0_12px_40px_rgba(15,23,42,0.08)] rounded-full px-4 md:px-6' 
+            : 'top-0 w-full h-16 lg:h-[72px] bg-white/80 backdrop-blur-[20px] border-b border-slate-100 px-0'
         }`}
       >
         <div className={`w-full flex items-center justify-between h-full transition-all duration-500 ${scrolled ? 'px-2' : 'max-w-container-max mx-auto px-gutter'}`}>
-          <Link href="/" className="flex items-center">
+          <Link href="/" className="flex items-center shrink-0">
             <Image
               src="/images/logos/logo.webp"
               alt="Veloxis Global"
               width={160}
               height={40}
               priority
-              className="h-10 w-auto object-contain"
+              className={`w-auto object-contain transition-all duration-500 ${scrolled ? 'h-8 lg:h-9' : 'h-9 lg:h-10'}`}
             />
           </Link>
           <a
             href="tel:+918887620727"
-            className="flex items-center gap-2 font-sans text-sm md:text-base font-extrabold text-royal-blue hover:text-[#1D4ED8] transition-colors"
+            className="flex items-center gap-2 font-sans text-sm lg:text-base font-extrabold text-royal-blue hover:text-[#1D4ED8] transition-colors whitespace-nowrap shrink-0"
           >
-            <Phone className="w-4 h-4" aria-hidden="true" />
-            <span>+91-88876 20727</span>
+            <Phone className="w-4 h-4 shrink-0" aria-hidden="true" />
+            <span className="whitespace-nowrap shrink-0">+91-88876 20727</span>
           </a>
         </div>
       </header>
@@ -171,25 +171,25 @@ export const Navbar: React.FC = () => {
       <header
         className={`fixed left-1/2 -translate-x-1/2 z-50 transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] ${
           scrolled 
-            ? 'top-4 w-[calc(100%-2rem)] max-w-[1120px] h-14 md:h-16 bg-white/80 backdrop-blur-[24px] border border-white/50 shadow-[0_12px_40px_rgba(15,23,42,0.08)] rounded-full px-6' 
-            : 'top-0 w-full h-16 md:h-[72px] bg-white/80 backdrop-blur-[20px] border-b border-slate-100 px-0'
+            ? 'top-4 w-[calc(100%-2rem)] max-w-[1120px] h-14 lg:h-16 bg-white/80 backdrop-blur-[24px] border border-white/50 shadow-[0_12px_40px_rgba(15,23,42,0.08)] rounded-full px-4 md:px-6' 
+            : 'top-0 w-full h-16 lg:h-[72px] bg-white/80 backdrop-blur-[20px] border-b border-slate-100 px-0'
         }`}
       >
         <div className={`w-full flex items-center justify-between h-full transition-all duration-500 ${scrolled ? 'px-2' : 'max-w-container-max mx-auto px-gutter'}`}>
           {/* Left: Brand Logo */}
-          <Link href="/" className="flex items-center">
+          <Link href="/" className="flex items-center shrink-0">
             <Image
               src="/images/logos/logo.webp"
               alt="Veloxis Global"
               width={160}
               height={40}
               priority
-              className="h-10 w-auto object-contain"
+              className={`w-auto object-contain transition-all duration-500 ${scrolled ? 'h-8 lg:h-9' : 'h-9 lg:h-10'}`}
             />
           </Link>
 
           {/* Center: Desktop Nav Links */}
-          <nav className="hidden md:flex items-center gap-4 lg:gap-5 h-full" aria-label="Main navigation">
+          <nav className={`hidden lg:flex items-center h-full transition-all duration-300 ${scrolled ? 'gap-1.5 xl:gap-3.5 lg:gap-2' : 'gap-3 xl:gap-5 lg:gap-4'}`} aria-label="Main navigation">
             
             {/* 1. Services dropdown (Mega Menu) */}
             <div
@@ -228,7 +228,11 @@ export const Navbar: React.FC = () => {
                 aria-expanded={servicesOpen}
                 aria-controls="services-dropdown"
                 aria-haspopup="true"
-                className={`flex items-center gap-1 font-sans text-[14px] font-semibold transition-all duration-300 px-3.5 py-1.5 rounded-full ${
+                className={`flex items-center gap-1 font-sans font-semibold transition-all duration-300 rounded-full ${
+                  scrolled 
+                    ? 'px-2.5 xl:px-3.5 py-1 text-[13px] xl:text-[14px]' 
+                    : 'px-3.5 py-1.5 text-[14px]'
+                } ${
                   isActive('/services') || servicesOpen
                     ? 'bg-royal-blue text-white shadow-sm shadow-royal-blue/15'
                     : 'text-slate-700 hover:bg-slate-100/80 hover:text-royal-blue'
@@ -424,7 +428,11 @@ export const Navbar: React.FC = () => {
                 aria-expanded={industriesOpen}
                 aria-controls="industries-dropdown"
                 aria-haspopup="true"
-                className={`flex items-center gap-1 font-sans text-[14px] font-semibold transition-all duration-300 px-3.5 py-1.5 rounded-full ${
+                className={`flex items-center gap-1 font-sans font-semibold transition-all duration-300 rounded-full ${
+                  scrolled 
+                    ? 'px-2.5 xl:px-3.5 py-1 text-[13px] xl:text-[14px]' 
+                    : 'px-3.5 py-1.5 text-[14px]'
+                } ${
                   isActive('/industries') || industriesOpen
                     ? 'bg-royal-blue text-white shadow-sm shadow-royal-blue/15'
                     : 'text-slate-700 hover:bg-slate-100/80 hover:text-royal-blue'
@@ -515,7 +523,11 @@ export const Navbar: React.FC = () => {
                 aria-expanded={locationsOpen}
                 aria-controls="locations-dropdown"
                 aria-haspopup="true"
-                className={`flex items-center gap-1 font-sans text-[14px] font-semibold transition-all duration-300 px-3.5 py-1.5 rounded-full ${
+                className={`flex items-center gap-1 font-sans font-semibold transition-all duration-300 rounded-full ${
+                  scrolled 
+                    ? 'px-2.5 xl:px-3.5 py-1 text-[13px] xl:text-[14px]' 
+                    : 'px-3.5 py-1.5 text-[14px]'
+                } ${
                   isActive('/digital-marketing-agency') || locationsOpen
                     ? 'bg-royal-blue text-white shadow-sm shadow-royal-blue/15'
                     : 'text-slate-700 hover:bg-slate-100/80 hover:text-royal-blue'
@@ -553,7 +565,11 @@ export const Navbar: React.FC = () => {
 
             <Link
               href="/about"
-              className={`font-sans text-[14px] font-semibold transition-all duration-300 px-3.5 py-1.5 rounded-full ${
+              className={`font-sans font-semibold transition-all duration-300 rounded-full ${
+                scrolled 
+                  ? 'px-2.5 xl:px-3.5 py-1 text-[13px] xl:text-[14px]' 
+                  : 'px-3.5 py-1.5 text-[14px]'
+              } ${
                 isActive('/about') ? 'bg-royal-blue text-white shadow-sm shadow-royal-blue/15' : 'text-slate-700 hover:bg-slate-100/80 hover:text-royal-blue'
               }`}
             >
@@ -562,7 +578,11 @@ export const Navbar: React.FC = () => {
 
             <Link
               href="/case-studies"
-              className={`font-sans text-[14px] font-semibold transition-all duration-300 px-3.5 py-1.5 rounded-full ${
+              className={`font-sans font-semibold transition-all duration-300 rounded-full ${
+                scrolled 
+                  ? 'px-2.5 xl:px-3.5 py-1 text-[13px] xl:text-[14px]' 
+                  : 'px-3.5 py-1.5 text-[14px]'
+              } ${
                 isActive('/case-studies') ? 'bg-royal-blue text-white shadow-sm shadow-royal-blue/15' : 'text-slate-700 hover:bg-slate-100/80 hover:text-royal-blue'
               }`}
             >
@@ -571,34 +591,47 @@ export const Navbar: React.FC = () => {
 
             <Link
               href="/blog"
-              className={`font-sans text-[14px] font-semibold transition-all duration-300 px-3.5 py-1.5 rounded-full ${
+              className={`font-sans font-semibold transition-all duration-300 rounded-full ${
+                scrolled 
+                  ? 'px-2.5 xl:px-3.5 py-1 text-[13px] xl:text-[14px]' 
+                  : 'px-3.5 py-1.5 text-[14px]'
+              } ${
                 isActive('/blog') ? 'bg-royal-blue text-white shadow-sm shadow-royal-blue/15' : 'text-slate-700 hover:bg-slate-100/80 hover:text-royal-blue'
               }`}
             >
               Blog
             </Link>
           </nav>
-
+ 
           {/* Right: Desktop CTA & Phone */}
-          <div className="hidden md:flex items-center gap-5">
+          <div className={`hidden lg:flex items-center shrink-0 transition-all duration-300 ${scrolled ? 'gap-2.5 xl:gap-4 lg:gap-3' : 'gap-4 lg:gap-5'}`}>
             <a
               href="tel:+918887620727"
-              className="flex items-center gap-1 font-sans text-[13px] lg:text-[14px] font-bold text-slate-600 hover:text-royal-blue transition-colors duration-300"
+              className={`flex items-center gap-1 font-sans font-bold text-slate-600 hover:text-royal-blue transition-all duration-300 whitespace-nowrap shrink-0 ${
+                scrolled 
+                  ? 'text-[12px] xl:text-[14px] lg:text-[13px]' 
+                  : 'text-[13px] lg:text-[14px]'
+              }`}
             >
               <span aria-hidden="true">📞</span>
-              <span>+91-88876 20727</span>
+              <span className="whitespace-nowrap shrink-0">+91-88876 20727</span>
             </a>
-            <div className="hero-cta-hover rounded-md">
-              <Button href="/free-seo-audit" variant="primary" size="sm" className="px-4 py-2 text-xs">
+            <div className="hero-cta-hover rounded-md shrink-0">
+              <Button 
+                href="/free-seo-audit" 
+                variant="primary" 
+                size="sm" 
+                className={`transition-all duration-300 shrink-0 ${scrolled ? 'px-3 py-1.5 text-[11px]' : 'px-4 py-2 text-xs'}`}
+              >
                 Get Free Audit →
               </Button>
             </div>
           </div>
-
+ 
           {/* Mobile: Hamburger Button */}
           <button
             onClick={() => setIsOpen(true)}
-            className="md:hidden w-11 h-11 flex items-center justify-center text-royal-blue hover:bg-slate-50 rounded-md transition-colors"
+            className="lg:hidden w-11 h-11 flex items-center justify-center text-royal-blue hover:bg-slate-50 rounded-md transition-colors"
             aria-label="Open navigation menu"
             aria-expanded={isOpen}
             aria-controls="mobile-drawer"
