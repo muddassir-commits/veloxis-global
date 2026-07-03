@@ -19,7 +19,7 @@ export const metadata: Metadata = constructMetadata({
 });
 
 export default function WebDesignDevelopmentPage() {
-  const service = getServiceBySlug('web-development-technology');
+  const service = getServiceBySlug('web-design-development');
   if (!service) {
     notFound();
   }

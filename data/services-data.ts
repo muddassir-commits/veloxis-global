@@ -148,7 +148,7 @@ export const servicesData: ServiceData[] = [
     "relatedServices": [
       "analytics-tracking-attribution",
       "brand-strategy-positioning",
-      "web-development-technology"
+      "web-design-development"
     ],
     "faqs": [
       {
@@ -401,7 +401,7 @@ export const servicesData: ServiceData[] = [
     "achievements": [],
     "relatedServices": [
       "organic-growth-seo-mastery",
-      "email-marketing-automation",
+      "email-marketing",
       "social-media-community-building"
     ],
     "faqs": [
@@ -533,7 +533,7 @@ export const servicesData: ServiceData[] = [
     ],
     "relatedServices": [
       "content-creative-services",
-      "email-marketing-automation",
+      "email-marketing",
       "paid-advertising-performance-marketing"
     ],
     "faqs": [
@@ -561,7 +561,7 @@ export const servicesData: ServiceData[] = [
   },
   {
     "id": "web-development",
-    "slug": "web-development-technology",
+    "slug": "web-design-development",
     "title": "Web Development & Technology",
     "emoji": "💻",
     "subtitle": "Fast, modern, high-converting websites built for growth",
@@ -689,7 +689,7 @@ export const servicesData: ServiceData[] = [
   },
   {
     "id": "email-marketing",
-    "slug": "email-marketing-automation",
+    "slug": "email-marketing",
     "title": "Email & Marketing Automation",
     "emoji": "📧",
     "subtitle": "Nurture leads and re-engage customers with automated sequences",
@@ -898,8 +898,8 @@ export const servicesData: ServiceData[] = [
       "18+ production workflows"
     ],
     "relatedServices": [
-      "email-marketing-automation",
-      "web-development-technology",
+      "email-marketing",
+      "web-design-development",
       "analytics-tracking-attribution"
     ],
     "faqs": [
@@ -1374,7 +1374,7 @@ export const servicesData: ServiceData[] = [
     "relatedServices": [
       "paid-advertising-performance-marketing",
       "analytics-tracking-attribution",
-      "web-development-technology"
+      "web-design-development"
     ],
     "faqs": [
       {
@@ -1605,7 +1605,7 @@ export const servicesData: ServiceData[] = [
     ],
     "relatedServices": [
       "paid-advertising-performance-marketing",
-      "email-marketing-automation",
+      "email-marketing",
       "ai-automation-systems"
     ],
     "faqs": [

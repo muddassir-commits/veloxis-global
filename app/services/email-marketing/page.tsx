@@ -19,7 +19,7 @@ export const metadata: Metadata = constructMetadata({
 });
 
 export default function EmailMarketingPage() {
-  const service = getServiceBySlug('email-marketing-automation');
+  const service = getServiceBySlug('email-marketing');
   if (!service) {
     notFound();
   }

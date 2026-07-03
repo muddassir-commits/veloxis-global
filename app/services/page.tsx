@@ -51,8 +51,8 @@ export default function ServicesPage() {
       'organic-growth-seo-mastery': '/services/seo',
       'content-creative-services': '/services/content-marketing',
       'social-media-community-building': '/services/social-media-marketing',
-      'web-development-technology': '/services/web-design-development',
-      'email-marketing-automation': '/services/email-marketing',
+      'web-design-development': '/services/web-design-development',
+      'email-marketing': '/services/email-marketing',
     };
     return mapping[slug] || `/services/${slug}`;
   };
