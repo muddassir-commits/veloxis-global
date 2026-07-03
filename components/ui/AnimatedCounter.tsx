@@ -44,9 +44,10 @@ export const AnimatedCounter: React.FC<AnimatedCounterProps> = ({ value, suffix 
       return;
     }
 
+    const isDecimal = !Number.isInteger(value);
     return springValue.on('change', (latest) => {
       if (ref.current) {
-        ref.current.textContent = Math.floor(latest).toString() + suffix;
+        ref.current.textContent = (isDecimal ? latest.toFixed(1) : Math.floor(latest).toString()) + suffix;
       }
     });
   }, [springValue, suffix, value, prefersReducedMotion]);

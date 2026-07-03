@@ -5,7 +5,7 @@ import Image from 'next/image';
 import { SchemaMarkup } from '../../../components/ui/SchemaMarkup';
 import { Breadcrumb } from '../../../components/ui/Breadcrumb';
 import { generateBreadcrumbSchema } from '../../../lib/schema';
-import { constructMetadata } from '../../../lib/seo-config';
+import { constructMetadata, FOUNDER_YEARS } from '../../../lib/seo-config';
 import { Card } from '../../../components/ui/Card';
 import { Badge } from '../../../components/ui/Badge';
 import { Button } from '../../../components/ui/Button';
@@ -129,7 +129,7 @@ export default function AuthorPage() {
                   </p>
                   
                   <p className="text-xs sm:text-sm text-slate-500 leading-relaxed">
-                    Based in Kanpur, serving clients across Delhi NCR, Lucknow, and globally. Over 4 years of proven expertise building ROI-focused acquisition channels, local SEO networks, and n8n sales funnels.
+                    Based in Kanpur, serving clients across Delhi NCR, Lucknow, and globally. Over {FOUNDER_YEARS} years of proven expertise building ROI-focused acquisition channels, local SEO networks, and n8n sales funnels.
                   </p>
                   
                   <div className="flex flex-wrap gap-3 mt-2">

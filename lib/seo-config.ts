@@ -25,6 +25,7 @@ export function constructMetadata({
 }: MetaProps): Metadata {
   const url = `${SITE_URL}${path}`;
   const cleanTitle = title.replace(' | Veloxis Global', '');
+  const titleObj = title.includes(' | Veloxis Global') ? { absolute: title } : cleanTitle;
 
   const otherMeta: Record<string, string> = {};
   if (geoRegion) otherMeta["geo.region"] = geoRegion;
@@ -35,7 +36,7 @@ export function constructMetadata({
   }
 
   return {
-    title: cleanTitle,
+    title: titleObj,
     description,
     metadataBase: new URL(SITE_URL),
     authors: [{ name: 'Muddassir Ali', url: 'https://muddassirali.com' }],

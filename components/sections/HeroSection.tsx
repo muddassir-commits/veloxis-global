@@ -127,7 +127,7 @@ export const HeroSection: React.FC = () => {
               <div className="flex items-center gap-1.5">
                 <span className="text-yellow-500 text-lg leading-none" aria-hidden="true">⭐</span>
                 <span className="text-[24px] md:text-[32px] font-bold tracking-tight text-slate-900 leading-none">
-                  <AnimatedCounter value={5} suffix="★" />
+                  <AnimatedCounter value={4.9} suffix="★" />
                 </span>
               </div>
               <span className="text-[12px] font-bold tracking-[0.05em] uppercase text-slate-500 leading-none">

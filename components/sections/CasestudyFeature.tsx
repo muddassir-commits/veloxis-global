@@ -160,7 +160,7 @@ export const CasestudyFeature: React.FC = () => {
             href="/case-studies"
             className="inline-flex items-center gap-1.5 font-bold text-base text-royal-blue hover:text-indigo-accent transition-colors group"
           >
-            <span>View All 25+ Case Studies</span>
+            <span>View All Case Studies</span>
             <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" aria-hidden="true" />
           </Link>
         </div>
