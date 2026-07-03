@@ -19,7 +19,7 @@ export const metadata: Metadata = constructMetadata({
 });
 
 export default function SeoServicePage() {
-  const service = getServiceBySlug('organic-growth-seo-mastery');
+  const service = getServiceBySlug('seo');
   if (!service) {
     notFound();
   }

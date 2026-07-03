@@ -19,7 +19,7 @@ export const metadata: Metadata = constructMetadata({
 });
 
 export default function SocialMediaMarketingPage() {
-  const service = getServiceBySlug('social-media-community-building');
+  const service = getServiceBySlug('social-media-marketing');
   if (!service) {
     notFound();
   }

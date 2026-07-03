@@ -48,9 +48,9 @@ export default function ServicesPage() {
   // Map database slugs to SEO routes
   const getServiceHref = (slug: string) => {
     const mapping: Record<string, string> = {
-      'organic-growth-seo-mastery': '/services/seo',
-      'content-creative-services': '/services/content-marketing',
-      'social-media-community-building': '/services/social-media-marketing',
+      'seo': '/services/seo',
+      'content-marketing': '/services/content-marketing',
+      'social-media-marketing': '/services/social-media-marketing',
       'web-design-development': '/services/web-design-development',
       'email-marketing': '/services/email-marketing',
     };

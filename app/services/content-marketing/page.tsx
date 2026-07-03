@@ -19,7 +19,7 @@ export const metadata: Metadata = constructMetadata({
 });
 
 export default function ContentMarketingPage() {
-  const service = getServiceBySlug('content-creative-services');
+  const service = getServiceBySlug('content-marketing');
   if (!service) {
     notFound();
   }

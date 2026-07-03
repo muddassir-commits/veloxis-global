@@ -175,7 +175,7 @@ export const servicesData: ServiceData[] = [
   },
   {
     "id": "seo-organic-growth",
-    "slug": "organic-growth-seo-mastery",
+    "slug": "seo",
     "title": "Organic Growth & SEO Mastery",
     "emoji": "🔍",
     "subtitle": "Rank #1 on Google with white-hat, sustainable SEO strategies",
@@ -284,7 +284,7 @@ export const servicesData: ServiceData[] = [
       "₹650 cost-per-lead"
     ],
     "relatedServices": [
-      "content-creative-services",
+      "content-marketing",
       "analytics-tracking-attribution",
       "brand-strategy-positioning"
     ],
@@ -313,7 +313,7 @@ export const servicesData: ServiceData[] = [
   },
   {
     "id": "content-creative",
-    "slug": "content-creative-services",
+    "slug": "content-marketing",
     "title": "️ Content & Creative Services",
     "emoji": "✍️",
     "subtitle": "SEO-optimized content that ranks, educates, and converts",
@@ -400,9 +400,9 @@ export const servicesData: ServiceData[] = [
     "cta": "Let's Plan Your Content Strategy",
     "achievements": [],
     "relatedServices": [
-      "organic-growth-seo-mastery",
+      "seo",
       "email-marketing",
-      "social-media-community-building"
+      "social-media-marketing"
     ],
     "faqs": [
       {
@@ -429,7 +429,7 @@ export const servicesData: ServiceData[] = [
   },
   {
     "id": "social-media",
-    "slug": "social-media-community-building",
+    "slug": "social-media-marketing",
     "title": "Social Media & Community Building",
     "emoji": "📱",
     "subtitle": "Build engaged communities and scale your brand organically",
@@ -532,7 +532,7 @@ export const servicesData: ServiceData[] = [
       "8,000+ monthly views (secondary account)"
     ],
     "relatedServices": [
-      "content-creative-services",
+      "content-marketing",
       "email-marketing",
       "paid-advertising-performance-marketing"
     ],
@@ -660,7 +660,7 @@ export const servicesData: ServiceData[] = [
     "cta": "Discuss Your Project Requirements",
     "achievements": [],
     "relatedServices": [
-      "organic-growth-seo-mastery",
+      "seo",
       "analytics-tracking-attribution",
       "ecommerce-catalog-services"
     ],
@@ -1013,9 +1013,9 @@ export const servicesData: ServiceData[] = [
     "cta": "Build Your Brand Strategy",
     "achievements": [],
     "relatedServices": [
-      "organic-growth-seo-mastery",
+      "seo",
       "paid-advertising-performance-marketing",
-      "content-creative-services"
+      "content-marketing"
     ],
     "faqs": [
       {
@@ -1130,7 +1130,7 @@ export const servicesData: ServiceData[] = [
     "achievements": [],
     "relatedServices": [
       "paid-advertising-performance-marketing",
-      "organic-growth-seo-mastery",
+      "seo",
       "ai-automation-systems"
     ],
     "faqs": [
@@ -1488,7 +1488,7 @@ export const servicesData: ServiceData[] = [
     "achievements": [],
     "relatedServices": [
       "brand-strategy-positioning",
-      "organic-growth-seo-mastery",
+      "seo",
       "paid-advertising-performance-marketing"
     ],
     "faqs": [
@@ -1781,7 +1781,7 @@ export const servicesData: ServiceData[] = [
     "cta": "Discuss Your Industry",
     "achievements": [],
     "relatedServices": [
-      "organic-growth-seo-mastery",
+      "seo",
       "paid-advertising-performance-marketing",
       "brand-strategy-positioning"
     ],
