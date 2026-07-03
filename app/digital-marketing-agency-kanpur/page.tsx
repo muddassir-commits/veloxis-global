@@ -7,7 +7,7 @@ import { Card } from '../../components/ui/Card';
 import { Button } from '../../components/ui/Button';
 import { Breadcrumb } from '../../components/ui/Breadcrumb';
 import { SchemaMarkup } from '../../components/ui/SchemaMarkup';
-import { getFAQPageSchema, getBreadcrumbListSchema } from '../../lib/schema';
+import { getFAQPageSchema, getBreadcrumbListSchema, getLocalBusinessSchema } from '../../lib/schema';
 import { testimonials } from '../../data/testimonials';
 import { Star, CheckCircle, MapPin } from 'lucide-react';
 import { CtaBanner } from '../../components/sections/CtaBanner';
@@ -18,41 +18,17 @@ export const metadata: Metadata = {
     title: "Best Digital Marketing Agency in Kanpur 2026 | Veloxis Global",
     description: "Looking for the best digital marketing agency in Kanpur? Veloxis Global delivers proven SEO, Google Ads & social media results for Kanpur businesses. Free audit.",
     path: "/digital-marketing-agency-kanpur",
-    ogImage: '/images/og/kanpur-og.jpg'
-  }),
-  keywords: "best digital marketing agency in Kanpur, digital marketing company Kanpur 2026, SEO services Kanpur, Google Ads agency Kanpur, MSME digital marketing Kanpur, online marketing Kanpur, digital marketing Civil Lines Kanpur, textile business marketing Kanpur"
+    ogImage: '/images/og/kanpur-og.jpg',
+    geoRegion: 'IN-UP',
+    geoPlacename: 'Kanpur',
+    geoPosition: '26.4499;80.3319'
+  })
 };
 
 export default function KanpurLocationPage() {
   const city = 'Kanpur';
 
-  const localSchema = {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "Veloxis Global",
-    "description": "Best digital marketing agency in Kanpur — SEO, Google Ads and Social Media for Kanpur's textile, MSME and manufacturing businesses.",
-    "telephone": "+918887620727",
-    "email": "info@veloxisglobal.com",
-    "url": "https://veloxisglobal.com/digital-marketing-agency-kanpur",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "12 Faithful Ganj, Cantt",
-      "addressLocality": "Kanpur",
-      "addressRegion": "Uttar Pradesh",
-      "postalCode": "208004",
-      "addressCountry": "IN"
-    },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": "26.4499",
-      "longitude": "80.3319"
-    },
-    "areaServed": {
-      "@type": "City",
-      "name": "Kanpur"
-    },
-    "priceRange": "₹₹"
-  };
+  const localSchema = getLocalBusinessSchema({ city });
 
   const breadcrumbItems = [{ name: 'Kanpur Agency', href: '/digital-marketing-agency-kanpur' }];
   const breadcrumbSchema = getBreadcrumbListSchema([
@@ -68,7 +44,7 @@ export default function KanpurLocationPage() {
   const kanpurFaqs = [
     {
       question: "What is the cost of digital marketing in Kanpur in 2026?",
-      answer: "Digital marketing pricing in Kanpur varies by scope. At Veloxis Global, we offer custom pricing built around your goals — no fixed packages. Start with our free audit and we'll recommend exactly what you need and what it will cost. No surprises, no lock-in contracts."
+      answer: "Digital marketing pricing in Kanpur typically ranges from ₹15,000 to ₹75,000/month depending on channels and scope. Veloxis Global offers custom, goal-based pricing models instead of fixed packages.\n\nStart with our free website audit — we'll recommend exactly what you need with no lock-in contracts."
     },
     {
       question: "How long does SEO take to show results in Kanpur?",

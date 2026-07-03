@@ -6,7 +6,7 @@ import { Card } from '../../components/ui/Card';
 import { Button } from '../../components/ui/Button';
 import { Breadcrumb } from '../../components/ui/Breadcrumb';
 import { SchemaMarkup } from '../../components/ui/SchemaMarkup';
-import { getBreadcrumbListSchema } from '../../lib/schema';
+import { getBreadcrumbListSchema, generateTestimonialsSchema } from '../../lib/schema';
 import { testimonials } from '../../data/testimonials';
 import { Star } from 'lucide-react';
 
@@ -22,10 +22,12 @@ export default function TestimonialsPage() {
     { name: 'Home', item: 'https://veloxisglobal.com' },
     { name: 'Testimonials', item: 'https://veloxisglobal.com/testimonials' }
   ]);
+  const testimonialsSchema = generateTestimonialsSchema(testimonials);
 
   return (
     <>
       <SchemaMarkup schema={breadcrumbSchema} />
+      <SchemaMarkup schema={testimonialsSchema} />
 
       <section className="bg-slate-50 py-8 border-b border-slate-100">
         <div className="max-w-container-max mx-auto px-gutter">
@@ -65,7 +67,16 @@ export default function TestimonialsPage() {
                 <div className="border-t border-slate-50 pt-4 mt-2">
                   <span className="font-extrabold text-slate-900 text-sm block">{test.author}</span>
                   <span className="text-xs font-bold text-slate-500 uppercase tracking-widest block mt-0.5">
-                    {test.role}, {test.company} · {test.location}
+                    {test.role}, {test.website ? (
+                      <a 
+                        href={test.website} 
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                        className="text-royal-blue hover:underline inline"
+                      >
+                        {test.company}
+                      </a>
+                    ) : test.company} · {test.location}
                   </span>
                 </div>
               </Card>

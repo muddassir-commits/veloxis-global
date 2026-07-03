@@ -15,6 +15,7 @@ import dynamic from 'next/dynamic';
 import { Button } from '../ui/Button';
 import { Badge } from '../ui/Badge';
 import { AnimatedCounter } from '../ui/AnimatedCounter';
+import { FOUNDER_YEARS } from '../../lib/seo-config';
 
 // Dynamically import the animated dashboard panel — client-only, non-blocking.
 // A static placeholder prevents layout shift while the component loads.
@@ -104,7 +105,7 @@ export const HeroSection: React.FC = () => {
             {/* Experience */}
             <div className="flex flex-col gap-1 min-w-[100px] font-sans">
               <span className="text-[24px] md:text-[32px] font-bold tracking-tight text-slate-900 leading-none">
-                <AnimatedCounter value={4} suffix="+" />
+                <AnimatedCounter value={FOUNDER_YEARS} suffix="+" />
               </span>
               <span className="text-[12px] font-bold tracking-[0.05em] uppercase text-slate-500 leading-none">
                 Years Experience

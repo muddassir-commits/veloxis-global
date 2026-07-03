@@ -18,9 +18,11 @@ export const metadata: Metadata = {
     title: "Best Digital Marketing Agency in Noida 2026 | Veloxis Global",
     description: "Top digital marketing agency in Noida for IT companies, startups & businesses. Expert SEO, Google Ads & Social Media. Sector 62, Greater Noida. Free audit.",
     path: "/digital-marketing-agency-noida",
-    ogImage: '/images/og/noida-og.jpg'
-  }),
-  keywords: "best digital marketing agency in Noida, digital marketing company Noida 2026, SEO services Noida, Google Ads agency Noida, startup marketing Noida, IT company digital marketing Noida, digital marketing Sector 62, social media marketing Noida"
+    ogImage: '/images/og/noida-og.jpg',
+    geoRegion: 'IN-UP',
+    geoPlacename: 'Noida',
+    geoPosition: '28.5355;77.3910'
+  })
 };
 
 export default function NoidaLocationPage() {

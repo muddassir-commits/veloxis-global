@@ -1,6 +1,4 @@
-'use client';
-
-import React, { useState } from 'react';
+import React from 'react';
 import Link from 'next/link';
 import { 
   Target, Search, PenTool, MessageSquare, Code, Mail, Cpu, 
@@ -13,6 +11,7 @@ import { Button } from '../ui/Button';
 import { Card } from '../ui/Card';
 import { FaqAccordion } from '../sections/FaqAccordion';
 import { CtaBanner } from '../sections/CtaBanner';
+import { SubservicesDetailSection } from './SubservicesDetailSection';
 
 const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
   Target,
@@ -36,8 +35,6 @@ interface ServicePageTemplateProps {
 }
 
 export const ServicePageTemplate: React.FC<ServicePageTemplateProps> = ({ service }) => {
-  const [openSubserviceIndex, setOpenSubserviceIndex] = useState<number>(0);
-
   const ServiceIcon = iconMap[service.icon] || Target;
 
   // Find related services full data
@@ -78,9 +75,24 @@ export const ServicePageTemplate: React.FC<ServicePageTemplateProps> = ({ servic
               {service.title.toUpperCase()}
             </Badge>
             <h1 className="text-4xl sm:text-headline-lg font-extrabold text-slate-900 tracking-tight leading-tight mb-6">
-              {service.title}
+              {service.title.toLowerCase().endsWith('services') ? `${service.title} in India` : `${service.title} Services in India`}
             </h1>
-            <p className="text-lg text-slate-600 leading-relaxed mb-8 max-w-2xl">
+            {service.definition && (
+              <p className="text-base sm:text-lg text-slate-900 leading-relaxed mb-6 max-w-2xl">
+                {(() => {
+                  const parts = service.definition.split(' is ');
+                  if (parts.length > 1) {
+                    return (
+                      <>
+                        <strong>{parts[0]}</strong> is {parts.slice(1).join(' is ')}
+                      </>
+                    );
+                  }
+                  return service.definition;
+                })()}
+              </p>
+            )}
+            <p className="text-sm sm:text-body-md text-slate-600 leading-relaxed mb-8 max-w-2xl">
               {service.subtitle}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
@@ -157,48 +169,11 @@ export const ServicePageTemplate: React.FC<ServicePageTemplateProps> = ({ servic
               </p>
             </div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-              {/* Menu Column */}
-              <div className="lg:col-span-5 flex flex-col gap-3">
-                {service.subservices.map((sub, idx) => {
-                  const isActive = openSubserviceIndex === idx;
-                  return (
-                    <button
-                      key={idx}
-                      id={`subservice-toggle-${service.id}-${idx}`}
-                      onClick={() => setOpenSubserviceIndex(idx)}
-                      className={`w-full text-left p-5 rounded-2xl border transition-all duration-300 flex justify-between items-center ${
-                        isActive 
-                          ? `bg-white ${currentAccent.border} shadow-md border-l-4 border-l-royal-blue` 
-                          : 'bg-white/50 border-slate-200/60 hover:bg-white hover:shadow-sm'
-                      }`}
-                    >
-                      <span className="font-bold text-slate-900 text-sm sm:text-base pr-4">
-                        {sub.name}
-                      </span>
-                      <ArrowRight className={`w-4 h-4 shrink-0 transition-transform ${isActive ? 'translate-x-1 text-royal-blue' : 'text-slate-400'}`} />
-                    </button>
-                  );
-                })}
-              </div>
-
-              {/* Items Column */}
-              <div className="lg:col-span-7 bg-white rounded-3xl border border-slate-200 p-8 shadow-sm min-h-[300px]">
-                <h3 className="font-extrabold text-xl text-slate-900 border-b border-slate-100 pb-4 mb-6">
-                  {service.subservices[openSubserviceIndex]?.name}
-                </h3>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  {service.subservices[openSubserviceIndex]?.items.map((item, idx) => (
-                    <div key={idx} className="flex items-start gap-3 bg-slate-50/50 p-3.5 rounded-xl border border-slate-100">
-                      <div className="mt-1 shrink-0 p-0.5 rounded-full bg-teal-50">
-                        <Check className="w-3 h-3 text-teal-600" />
-                      </div>
-                      <span className="text-xs sm:text-sm text-slate-700 font-medium leading-normal">{item}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
+            <SubservicesDetailSection 
+              subservices={service.subservices}
+              accentColor={service.accentColor}
+              serviceId={service.id}
+            />
           </div>
         </section>
       )}

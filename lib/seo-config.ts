@@ -8,6 +8,9 @@ export interface MetaProps {
   path: string;
   ogImage?: string;
   noIndex?: boolean;
+  geoRegion?: string;
+  geoPlacename?: string;
+  geoPosition?: string;
 }
 
 export function constructMetadata({
@@ -15,12 +18,24 @@ export function constructMetadata({
   description,
   path,
   ogImage = '/images/og/homepage-og.jpg',
-  noIndex = false
+  noIndex = false,
+  geoRegion,
+  geoPlacename,
+  geoPosition
 }: MetaProps): Metadata {
   const url = `${SITE_URL}${path}`;
+  const cleanTitle = title.replace(' | Veloxis Global', '');
+
+  const otherMeta: Record<string, string> = {};
+  if (geoRegion) otherMeta["geo.region"] = geoRegion;
+  if (geoPlacename) otherMeta["geo.placename"] = geoPlacename;
+  if (geoPosition) {
+    otherMeta["geo.position"] = geoPosition;
+    otherMeta["ICBM"] = geoPosition.replace(';', ', ');
+  }
 
   return {
-    title,
+    title: cleanTitle,
     description,
     metadataBase: new URL(SITE_URL),
     authors: [{ name: 'Muddassir Ali', url: 'https://muddassirali.com' }],
@@ -30,6 +45,7 @@ export function constructMetadata({
       canonical: url,
       languages: {
         'en-IN': url,
+        'x-default': url,
       },
     },
     robots: {
@@ -62,6 +78,7 @@ export function constructMetadata({
       description,
       images: [ogImage],
     },
+    other: otherMeta
   };
 }
 
@@ -162,3 +179,5 @@ export const pageMeta = {
     path: '/blog'
   }
 };
+
+export const FOUNDER_YEARS = 4;

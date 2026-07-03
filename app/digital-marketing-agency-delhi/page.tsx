@@ -18,9 +18,11 @@ export const metadata: Metadata = {
     title: "Best Digital Marketing Agency in Delhi 2026 | Veloxis Global",
     description: "Looking for the best digital marketing agency in Delhi? Veloxis Global delivers proven SEO, Google Ads & social campaigns for Delhi and NCR businesses. Free audit.",
     path: "/digital-marketing-agency-delhi",
-    ogImage: '/images/og/delhi-og.jpg'
-  }),
-  keywords: "best digital marketing agency in Delhi, digital marketing company Delhi 2026, SEO agency Delhi, Google Ads agency Delhi NCR, performance marketing Delhi, social media marketing Delhi, digital marketing South Delhi, online marketing Connaught Place"
+    ogImage: '/images/og/delhi-og.jpg',
+    geoRegion: 'IN-DL',
+    geoPlacename: 'Delhi',
+    geoPosition: '28.6139;77.2090'
+  })
 };
 
 export default function DelhiLocationPage() {
@@ -39,7 +41,7 @@ export default function DelhiLocationPage() {
   const delhiFaqs = [
     {
       question: "What is the cost of digital marketing in Delhi in 2026?",
-      answer: "Digital marketing cost in Delhi varies according to the scale, goals, and customized marketing channels your business requires. Rather than rigid pre-made templates, Veloxis Global offers performance-driven pricing structures tailored for Delhi businesses. Start with our free digital audit to receive a clear budget estimate."
+      answer: "Digital marketing costs in Delhi typically range from ₹25,000 to ₹1,20,000/month depending on channels and scope. Veloxis Global offers customized, performance-driven pricing built around your goals rather than rigid templates.\n\nStart with our free website audit to receive a transparent budget estimate."
     },
     {
       question: "How long does SEO take to show results for Delhi businesses?",

@@ -19,6 +19,13 @@ export const AnimatedCounter: React.FC<AnimatedCounterProps> = ({ value, suffix 
     stiffness: 90,
   });
 
+  // On client mount, set starting value to 0 if not in view yet
+  useEffect(() => {
+    if (ref.current && !inView && !prefersReducedMotion) {
+      ref.current.textContent = `0${suffix}`;
+    }
+  }, [suffix, inView, prefersReducedMotion]);
+
   useEffect(() => {
     if (prefersReducedMotion) {
       motionValue.set(value);
@@ -46,7 +53,7 @@ export const AnimatedCounter: React.FC<AnimatedCounterProps> = ({ value, suffix 
 
   return (
     <span ref={ref} className="tabular-nums">
-      {prefersReducedMotion ? `${value}${suffix}` : `0${suffix}`}
+      {value}{suffix}
     </span>
   );
 };

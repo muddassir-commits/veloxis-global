@@ -9,7 +9,7 @@ import {
   ArrowRight, 
   ChevronDown, 
   ChevronUp, 
-  Image,
+  Image as ImageIcon,
   Search,
   MessageSquare,
   Video,
@@ -89,7 +89,7 @@ export default function SmmServiceContent() {
       step: "02",
       title: "Content Persona Alignment",
       desc: "Setting brand colors, visual aesthetics, content tones, and creating templates for visual harmony.",
-      icon: <Image className="w-5 h-5 text-royal-blue" />
+      icon: <ImageIcon className="w-5 h-5 text-royal-blue" />
     },
     {
       step: "03",

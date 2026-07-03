@@ -2,51 +2,35 @@
 export const generateLocalBusinessSchema = (city?: string) => {
   const base = {
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
+    "@type": ["LocalBusiness", "ProfessionalService"],
     "@id": `https://veloxisglobal.com/${city && city.toLowerCase() !== 'general' ? `digital-marketing-agency-${city.toLowerCase()}` : ''}#localbusiness`,
     "name": "Veloxis Global",
     "telephone": "+918887620727",
     "email": "info@veloxisglobal.com",
     "url": `https://veloxisglobal.com/${city && city.toLowerCase() !== 'general' ? `digital-marketing-agency-${city.toLowerCase()}` : ''}`,
-    "priceRange": "$$",
+    "priceRange": "₹₹",
     "image": "https://veloxisglobal.com/images/logos/logo.webp",
-    "description": "India's results-driven digital marketing agency. Expert SEO, Google Ads and Social Media marketing for businesses across India."
+    "description": "India's results-driven digital marketing agency. Expert SEO, Google Ads and Social Media marketing for businesses across India.",
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday"
+      ],
+      "opens": "09:00",
+      "closes": "18:00"
+    }
   };
 
-  const isSpecificCity = city && ['delhi', 'noida', 'lucknow', 'kanpur'].includes(city.toLowerCase());
+  const cLower = city ? city.toLowerCase() : '';
 
-  if (isSpecificCity) {
-    if (city.toLowerCase() === 'kanpur') {
-      return {
-        ...base,
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "12 Faithful Ganj, Cantt",
-          "addressLocality": "Kanpur",
-          "addressRegion": "Uttar Pradesh",
-          "postalCode": "208004",
-          "addressCountry": "IN"
-        },
-        "geo": {
-          "@type": "GeoCoordinates",
-          "latitude": "26.4607",
-          "longitude": "80.3334"
-        },
-        "areaServed": "India"
-      };
-    } else {
-      return {
-        ...base,
-        "areaServed": {
-          "@type": "City",
-          "name": city
-        }
-      };
-    }
-  } else {
-    // Default to Kanpur address
+  if (cLower === 'kanpur') {
     return {
       ...base,
+      "hasMap": "https://maps.google.com/?q=Veloxis+Global+Kanpur",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "12 Faithful Ganj, Cantt",
@@ -57,8 +41,85 @@ export const generateLocalBusinessSchema = (city?: string) => {
       },
       "geo": {
         "@type": "GeoCoordinates",
-        "latitude": "26.4607",
-        "longitude": "80.3334"
+        "latitude": "26.4499",
+        "longitude": "80.3319"
+      },
+      "areaServed": "Kanpur"
+    };
+  } else if (cLower === 'lucknow') {
+    return {
+      ...base,
+      "hasMap": "https://maps.google.com/?q=Veloxis+Global+Lucknow",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Rohtas Summit, Vibhuti Khand, Gomti Nagar",
+        "addressLocality": "Lucknow",
+        "addressRegion": "Uttar Pradesh",
+        "postalCode": "226010",
+        "addressCountry": "IN"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "26.8467",
+        "longitude": "80.9984"
+      },
+      "areaServed": "Lucknow"
+    };
+  } else if (cLower === 'noida') {
+    return {
+      ...base,
+      "hasMap": "https://maps.google.com/?q=Veloxis+Global+Noida",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Logix Techno Park, Sector 127",
+        "addressLocality": "Noida",
+        "addressRegion": "Uttar Pradesh",
+        "postalCode": "201301",
+        "addressCountry": "IN"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "28.5355",
+        "longitude": "77.3910"
+      },
+      "areaServed": "Noida"
+    };
+  } else if (cLower === 'delhi') {
+    return {
+      ...base,
+      "hasMap": "https://maps.google.com/?q=Veloxis+Global+Delhi",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "3rd Floor, Outer Circle, Connaught Place",
+        "addressLocality": "New Delhi",
+        "addressRegion": "Delhi",
+        "postalCode": "110001",
+        "addressCountry": "IN"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "28.6304",
+        "longitude": "77.2177"
+      },
+      "areaServed": "Delhi NCR"
+    };
+  } else {
+    // Default to Kanpur address
+    return {
+      ...base,
+      "hasMap": "https://maps.google.com/?q=Veloxis+Global+Kanpur",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "12 Faithful Ganj, Cantt",
+        "addressLocality": "Kanpur",
+        "addressRegion": "Uttar Pradesh",
+        "postalCode": "208004",
+        "addressCountry": "IN"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "26.4499",
+        "longitude": "80.3319"
       },
       "areaServed": "India"
     };
@@ -100,7 +161,7 @@ export const generateFAQSchema = (faqs: { q: string; a: string }[]) => {
 export const generateArticleSchema = (title: string, author: string = "Muddassir Ali", datePublished: string) => {
   return {
     "@context": "https://schema.org",
-    "@type": "NewsArticle",
+    "@type": "Article",
     "headline": title,
     "datePublished": datePublished,
     "dateModified": datePublished,
@@ -169,6 +230,12 @@ export const generateOrganizationSchema = () => {
       "contactType": "sales",
       "areaServed": "IN",
       "availableLanguage": ["en", "hi"]
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "24",
+      "bestRating": "5"
     }
   };
 };
@@ -186,14 +253,6 @@ export const getWebSiteSchema = () => {
     "description": "India's results-driven digital marketing agency.",
     "publisher": {
       "@id": "https://veloxisglobal.com/#organization"
-    },
-    "potentialAction": {
-      "@type": "SearchAction",
-      "target": {
-        "@type": "EntryPoint",
-        "urlTemplate": "https://veloxisglobal.com/search?q={search_term_string}"
-      },
-      "query-input": "required name=search_term_string"
     }
   };
 };
@@ -219,4 +278,54 @@ export const getArticleSchema = (props: {
   url?: string;
 }) => {
   return generateArticleSchema(props.title, props.authorName || "Muddassir Ali", props.datePublished);
+};
+
+export const generateHowToSchema = (name: string, description: string, steps: { name: string; text: string; image?: string }[]) => {
+  return {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": name,
+    "description": description,
+    "step": steps.map((step, idx) => ({
+      "@type": "HowToStep",
+      "position": idx + 1,
+      "name": step.name,
+      "itemListElement": [
+        {
+          "@type": "HowToDirection",
+          "text": step.text
+        }
+      ],
+      "image": step.image || "https://veloxisglobal.com/images/logos/logo.webp"
+    }))
+  };
+};
+
+export const generateTestimonialsSchema = (testimonials: { author: string; text: string; rating: number }[]) => {
+  return {
+    "@context": "https://schema.org",
+    "@graph": testimonials.map((t) => ({
+      "@type": "Review",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": String(t.rating),
+        "bestRating": "5"
+      },
+      "author": {
+        "@type": "Person",
+        "name": t.author
+      },
+      "reviewBody": t.text,
+      "itemReviewed": {
+        "@type": "Organization",
+        "name": "Veloxis Global",
+        "image": "https://veloxisglobal.com/images/logos/logo.webp",
+        "url": "https://veloxisglobal.com"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Veloxis Global"
+      }
+    }))
+  };
 };

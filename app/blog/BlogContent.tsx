@@ -8,95 +8,12 @@ import { Badge } from '../../components/ui/Badge';
 import { Button } from '../../components/ui/Button';
 import { Card } from '../../components/ui/Card';
 
-interface Post {
-  slug: string;
-  title: string;
-  excerpt: string;
-  category: 'SEO' | 'Google Ads' | 'Social Media' | 'Content' | 'Local SEO';
-  badgeColor: 'teal' | 'orange' | 'indigo' | 'blue';
-  author: string;
-  authorPhoto: string;
-  date: string;
-  readTime: string;
-  image: string;
-  featured?: boolean;
-}
+import { Post, blogPosts } from '../../data/blog-posts';
 
-const allPostsData: Post[] = [
-  {
-    slug: 'seo-in-2026-whats-changed-for-indian-businesses',
-    title: "SEO in 2026: Guide for Indian Businesses | Veloxis Global",
-    excerpt: "Learn how to rank higher on Google in 2026. Get our expert SEO action plan tailored for Indian businesses and scale your organic website traffic.",
-    category: 'SEO',
-    badgeColor: 'teal',
-    author: 'Muddassir Ali',
-    authorPhoto: '/images/profiles/Muddassir_Ali.webp',
-    date: 'May 20, 2026',
-    readTime: '6 min read',
-    image: '/images/blog/seo-2026-guide.png',
-    featured: true
-  },
-  {
-    slug: 'google-ads-vs-meta-ads-roi-india',
-    title: "Google Ads vs Meta Ads: India ROI Guide | Veloxis Global",
-    excerpt: "Should you choose Google Ads or Meta Ads in India? Read our direct comparison of CPC, target intent, and conversion ROAS to scale your leads now.",
-    category: 'Google Ads',
-    badgeColor: 'orange',
-    author: 'Muddassir Ali',
-    authorPhoto: '/images/profiles/Muddassir_Ali.webp',
-    date: 'May 15, 2026',
-    readTime: '5 min read',
-    image: '/images/blog/google-meta-roi.png'
-  },
-  {
-    slug: 'how-to-optimize-google-business-profile-2026',
-    title: "Local SEO: Google Business Profile 2026 Guide | Veloxis",
-    excerpt: "Master Google Maps pack positioning in 2026. Read our local GBP optimization checklist to get more phone calls and client visits for your clinic.",
-    category: 'Local SEO',
-    badgeColor: 'blue',
-    author: 'Muddassir Ali',
-    authorPhoto: '/images/profiles/Muddassir_Ali.webp',
-    date: 'May 10, 2026',
-    readTime: '7 min read',
-    image: '/images/blog/gbp-local-seo.png'
-  },
-  {
-    slug: 'content-marketing-eeat-framework',
-    title: "E-E-A-T Content Marketing Funnel Guide | Veloxis Global",
-    excerpt: "Learn how to build Google E-E-A-T compliant content funnels. Discover our writer verification blueprint to scale and convert organic web traffic.",
-    category: 'Content',
-    badgeColor: 'indigo',
-    author: 'Muddassir Ali',
-    authorPhoto: '/images/profiles/Muddassir_Ali.webp',
-    date: 'May 05, 2026',
-    readTime: '6 min read',
-    image: '/images/blog/eeat-content-blueprint.png'
-  },
-  {
-    slug: 'instagram-reels-funnel-local-brands',
-    title: "Instagram Reels Strategy: Social Media Funnel | Veloxis",
-    excerpt: "Turn Instagram views into WhatsApp sales leads. Explore our video hooks and DM automation setup to capture and convert customer inquiries online now.",
-    category: 'Social Media',
-    badgeColor: 'teal',
-    author: 'Muddassir Ali',
-    authorPhoto: '/images/profiles/Muddassir_Ali.webp',
-    date: 'April 28, 2026',
-    readTime: '6 min read',
-    image: '/images/blog/instagram-reels-funnel.png'
-  },
-  {
-    slug: 'meta-performance-max-best-practices',
-    title: "Google Ads Performance Max PMax Campaign Guide | Veloxis",
-    excerpt: "Optimize Google Ads Performance Max (PMax) campaigns in 2026. Learn how to configure assets and audience signals to scale conversion leads today.",
-    category: 'Google Ads',
-    badgeColor: 'orange',
-    author: 'Muddassir Ali',
-    authorPhoto: '/images/profiles/Muddassir_Ali.webp',
-    date: 'April 20, 2026',
-    readTime: '5 min read',
-    image: '/images/blog/pmax-performance.png'
-  }
-];
+const allPostsData: (Post & { featured?: boolean })[] = blogPosts.map((post, idx) => ({
+  ...post,
+  featured: idx === 0
+}));
 
 export default function BlogContent() {
   const [selectedCategory, setSelectedCategory] = useState<string>('All');

@@ -6,6 +6,7 @@ export interface Testimonial {
   role: string;
   company: string;
   location: string;
+  website?: string;
 }
 
 export const testimonials: Testimonial[] = [
@@ -16,7 +17,8 @@ export const testimonials: Testimonial[] = [
     author: "Rohit Malhotra",
     role: "Director",
     company: "Malhotra Properties",
-    location: "Delhi"
+    location: "Delhi",
+    website: "https://malhotraproperties.com"
   },
   {
     id: "skilledge",
@@ -25,7 +27,8 @@ export const testimonials: Testimonial[] = [
     author: "Priya Agarwal",
     role: "Founder",
     company: "SkillEdge Academy",
-    location: "Noida"
+    location: "Noida",
+    website: "https://skilledgeacademy.in"
   },
   {
     id: "verma",
@@ -34,7 +37,8 @@ export const testimonials: Testimonial[] = [
     author: "Dr. Ashish Verma",
     role: "Director",
     company: "Verma Health Group",
-    location: "Lucknow"
+    location: "Lucknow",
+    website: "https://vermahealth.com"
   },
   {
     id: "gupta",
@@ -43,7 +47,8 @@ export const testimonials: Testimonial[] = [
     author: "Suresh Gupta",
     role: "MD",
     company: "Gupta Fabrics Ltd.",
-    location: "Kanpur"
+    location: "Kanpur",
+    website: "https://guptafabrics.com"
   },
   {
     id: "bloom",
@@ -52,6 +57,7 @@ export const testimonials: Testimonial[] = [
     author: "Neha Singh",
     role: "Founder",
     company: "Bloom Skincare",
-    location: "Delhi"
+    location: "Delhi",
+    website: "https://bloomskincare.co.in"
   }
 ];

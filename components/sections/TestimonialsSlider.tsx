@@ -121,7 +121,16 @@ export const TestimonialsSlider: React.FC = () => {
                       {current.author}
                     </cite>
                     <span className="text-xs text-slate-500 block mt-0.5">
-                      {current.role}, {current.company} · {current.location}
+                      {current.role}, {current.website ? (
+                        <a 
+                          href={current.website} 
+                          target="_blank" 
+                          rel="noopener noreferrer" 
+                          className="text-royal-blue hover:underline inline"
+                        >
+                          {current.company}
+                        </a>
+                      ) : current.company} · {current.location}
                     </span>
                   </div>
                 </div>

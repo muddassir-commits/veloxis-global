@@ -16,6 +16,7 @@ import {
 import { Badge } from '../../../components/ui/Badge';
 import { Button } from '../../../components/ui/Button';
 import { Instagram, Facebook, Linkedin } from '../../../components/ui/BrandIcons';
+import { FOUNDER_YEARS } from '../../../lib/seo-config';
 
 interface PostContent {
   slug: string;
@@ -26,6 +27,7 @@ interface PostContent {
   author: string;
   authorPhoto: string;
   date: string;
+  isoDate: string;
   readTime: string;
   headings: { id: string; text: string }[];
   htmlContent: string;
@@ -97,15 +99,18 @@ export default function BlogPostContent({ post, relatedPosts }: { post: PostCont
 
             {/* Author Meta Strip */}
             <div className="flex flex-wrap items-center gap-4 text-xs font-semibold text-slate-400 mb-8 border-y border-slate-100 py-3.5 w-full">
-              <span className="flex items-center gap-1.5">
+              <Link
+                href={`/author/${post.author.toLowerCase().replace(/\s+/g, '-')}`}
+                className="flex items-center gap-1.5 hover:text-royal-blue transition-colors"
+              >
                 <div className="w-6 h-6 rounded-full overflow-hidden bg-slate-100 relative">
                   <Image src={post.authorPhoto} alt={post.author} fill className="object-cover" />
                 </div>
                 <span>{post.author}</span>
-              </span>
+              </Link>
               <span className="flex items-center gap-1.5">
                 <Calendar className="w-3.5 h-3.5" />
-                <span>{post.date}</span>
+                <time dateTime={post.isoDate}>{post.date}</time>
               </span>
               <span className="flex items-center gap-1.5">
                 <Clock className="w-3.5 h-3.5" />
@@ -158,14 +163,18 @@ export default function BlogPostContent({ post, relatedPosts }: { post: PostCont
             {/* Author Bio Box */}
             <div className="bg-slate-50 border border-slate-100 rounded-2xl p-6 sm:p-8 mt-12 w-full grid grid-cols-1 sm:grid-cols-12 gap-6 items-center">
               <div className="sm:col-span-3 flex justify-center">
-                <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-full overflow-hidden bg-slate-100 relative shadow-sm border border-slate-200">
-                  <Image src={post.authorPhoto} alt={post.author} fill className="object-cover" />
-                </div>
+                <Link href={`/author/${post.author.toLowerCase().replace(/\s+/g, '-')}`}>
+                  <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-full overflow-hidden bg-slate-100 relative shadow-sm border border-slate-200 hover:opacity-90 transition-opacity">
+                    <Image src={post.authorPhoto} alt={post.author} fill className="object-cover" />
+                  </div>
+                </Link>
               </div>
               <div className="sm:col-span-9 flex flex-col items-start gap-2">
-                <h4 className="text-lg font-extrabold text-slate-900">{post.author}</h4>
+                <Link href={`/author/${post.author.toLowerCase().replace(/\s+/g, '-')}`} className="hover:text-royal-blue transition-colors">
+                  <h4 className="text-lg font-extrabold text-slate-900">{post.author}</h4>
+                </Link>
                 <p className="text-xs sm:text-sm text-slate-500 leading-relaxed">
-                  Muddassir Ali — Founder of Veloxis Global, 4 years in digital marketing. Based in Kanpur, serving Delhi, Noida, Lucknow & Kanpur.
+                  Muddassir Ali — Founder of Veloxis Global, {FOUNDER_YEARS} years in digital marketing. Based in Kanpur, serving Delhi, Noida, Lucknow & Kanpur.
                 </p>
                 <div className="flex gap-3 mt-2">
                   <Link href="https://www.linkedin.com/in/muddassir-alii/" target="_blank" className="text-xs font-bold text-royal-blue flex items-center gap-1">
@@ -197,7 +206,7 @@ export default function BlogPostContent({ post, relatedPosts }: { post: PostCont
                       {rel.title}
                     </h4>
                     <span className="text-[11px] font-semibold text-slate-400 block mt-3">
-                      {rel.date} · {rel.readTime}
+                      <time dateTime={rel.isoDate}>{rel.date}</time> · {rel.readTime}
                     </span>
                   </Link>
                 ))}

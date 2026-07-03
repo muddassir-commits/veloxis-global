@@ -359,7 +359,7 @@ ACROSS ALL SERVICES:
    • Month-to-month flexibility
 
 🎓 Expertise:
-   • 6+ years digital marketing
+   • 4 years digital marketing
    • Google & Meta certified
    • 17+ training batches delivered
    • Full-stack capability (strategy to development)

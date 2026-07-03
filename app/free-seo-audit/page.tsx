@@ -12,8 +12,7 @@ export const metadata: Metadata = {
     title: "Free SEO Audit for Your Website India 2026 | Veloxis Global",
     description: "Get a FREE personalised SEO audit — discover exactly why your website isn't ranking on Google. 48-hour turnaround. No obligation. Serving businesses across India.",
     path: "/free-seo-audit"
-  }),
-  keywords: "free SEO audit India 2026, free website audit India, free digital marketing audit, website SEO analysis free, Google ranking check free"
+  })
 };
 
 export default function FreeAuditPage() {

@@ -1,0 +1,170 @@
+# Veloxis Global — Full Context & Service Catalog
+
+Veloxis Global is an India-based, performance-first digital marketing agency and growth engineering firm. We specialize in building predictable customer acquisition pipelines by combining technical search engine optimization (SEO), high-ROAS paid advertising, and automated CRM workflows.
+
+---
+
+## 1. Company Information & HQ
+
+*   **Legal Name**: Veloxis Global
+*   **Founder & CEO**: Muddassir Ali (4+ years of digital marketing and sales automation experience)
+*   **Headquarters**: 12 Faithful Ganj, Cantt, Kanpur, Uttar Pradesh, 208004, India
+*   **Email**: info@veloxisglobal.com
+*   **Phone**: +91 88876 20727
+*   **Primary URL**: https://veloxisglobal.com
+*   **LinkedIn**: https://www.linkedin.com/company/111872222/
+
+---
+
+## 2. Core Methodology & Workflow
+
+We execute a structured, 5-step growth workflow for all client campaigns:
+
+1.  **Detailed Audit**: We perform deep audits of page speed, keyword mapping, analytics tracking accuracy, and past ad performance.
+2.  **Funnel Design**: We build conversion-optimized landing pages and design lead-capture paths.
+3.  **High-Performance Traffic**: We deploy targeted Google Search, PMax, and Meta ad campaigns to capture active buyer intent.
+4.  **Sales Automation**: We connect n8n/Make automation to CRM portals and setup WhatsApp auto-replies for lead speed-to-lead response.
+5.  **Scale & Optimize**: We monitor campaign data weekly and optimize creatives, bid strategies, and page speed parameters to maximize ROI.
+
+---
+
+## 3. Client Case Studies & Metrics
+
+### Delhi Real Estate Developer
+*   **Goal**: Scale organic lead generation for a luxury property developer.
+*   **Results**:
+    *   Scaled organic website traffic from 0 to 35,000+ monthly visits.
+    *   Achieved a 5.2x return on ad spend (ROAS) on accompanying paid search campaigns.
+    *   Dominating high-intent property keywords in Delhi NCR.
+*   **Case Study URL**: https://veloxisglobal.com/case-studies/delhi-real-estate-developer
+
+### Noida SkillEdge Academy
+*   **Goal**: Reduce cost-per-lead (CPL) for professional training courses.
+*   **Results**:
+    *   Slashed PPC Cost-Per-Lead (CPL) by 42% within 60 days.
+    *   Increased overall lead volume by 2.4x.
+    *   Rebuilt Meta dynamic creative funnels and configured Google Search ads.
+*   **Case Study URL**: https://veloxisglobal.com/case-studies/noida-edtech-lead-generation
+
+### Lucknow Healthcare Brand
+*   **Goal**: Drive local patient bookings for a multi-specialty clinic chain.
+*   **Results**:
+    *   Generated 500+ qualified patient leads within 90 days.
+    *   Placed profile in the Google Maps top 3 local pack.
+    *   Established automated WhatsApp Business review flows.
+*   **Case Study URL**: https://veloxisglobal.com/case-studies/lucknow-healthcare-leads
+
+### Kanpur Fabrics B2B
+*   **Goal**: Drive export and domestic B2B inquiries for a textile manufacturer.
+*   **Results**:
+    *   B2B online inquiries scaled to account for 40% of all new business revenue.
+    *   Ranked #1 for core national textile exporting keywords.
+    *   Automated lead routing to sales representatives via CRM.
+*   **Case Study URL**: https://veloxisglobal.com/case-studies/kanpur-fabrics-b2b
+
+---
+
+## 4. Full Services Catalog
+
+### 1. Organic Growth & SEO Mastery
+*   **Description**: Technical SEO, content silo architecture, and keyword optimization to rank on Google's first page.
+*   **Pricing**: ₹15,000/month (Starter) | ₹15,000–₹60,000/month (Growth)
+*   **Key Deliverables**: Speed optimizations, keyword gap mapping, link-building audits, sitemap setup.
+*   **URL**: https://veloxisglobal.com/services/seo
+
+### 2. Paid Advertising & Performance Marketing
+*   **Description**: High-conversion campaigns across Meta, Google, LinkedIn, and YouTube.
+*   **Pricing**: ₹22,000/month (Starter) | ₹22,000–₹150,000/month (Growth)
+*   **Key Deliverables**: Advantage+ Meta setups, Google Search/Display ads, copywriting, creative design.
+*   **URL**: https://veloxisglobal.com/services/paid-advertising-performance-marketing
+
+### 3. Google Ads & PPC
+*   **Description**: Certified PPC strategies focused on capturing high-intent buyer searches.
+*   **Pricing**: ₹18,000/month (Starter) | ₹18,000–₹80,000/month (Growth)
+*   **Key Deliverables**: Keyword bidding configuration, negative match cleaning, PMax campaigns setup.
+*   **URL**: https://veloxisglobal.com/services/google-ads-ppc
+
+### 4. Social Media Marketing (SMM)
+*   **Description**: Paid Meta campaigns combined with brand building on Instagram and Facebook.
+*   **Pricing**: ₹16,000/month (Starter) | ₹16,000–₹65,000/month (Growth)
+*   **Key Deliverables**: reels scripting, lookalike audience builds, dynamic creatives.
+*   **URL**: https://veloxisglobal.com/services/social-media-marketing
+
+### 5. Web Design & Development
+*   **Description**: Fast, secure, and SEO-optimized custom Next.js and React websites.
+*   **Pricing**: ₹45,000 (One-time Starter) | ₹45,000–₹250,000 (Growth/Enterprise)
+*   **Key Deliverables**: Speed scores of 90+, custom UI design, responsive grids, Next.js metadata API.
+*   **URL**: https://veloxisglobal.com/services/web-design-development
+
+### 6. Email & WhatsApp Marketing
+*   **Description**: Nurturing workflows that turn cold traffic into pipeline opportunities.
+*   **Pricing**: ₹12,000/month (Starter) | ₹12,000–₹50,050/month (Growth)
+*   **Key Deliverables**: WhatsApp Business API connection, custom email templates, sequence scripting.
+*   **URL**: https://veloxisglobal.com/services/email-marketing
+
+### 7. AI & Automation Systems
+*   **Description**: Custom workflow integration via n8n and Make to eliminate manual sales steps.
+*   **Pricing**: ₹25,000 (Setup Starter) | ₹25,000–₹120,000 (Growth systems)
+*   **Key Deliverables**: Lead routing automations, database connections, instant WhatsApp notifications.
+*   **URL**: https://veloxisglobal.com/services/ai-automation-systems
+
+### 8. Analytics & Tracking Attribution
+*   **Description**: Google Analytics 4 (GA4) configuration and server-side tracking (CAPI).
+*   **Pricing**: ₹15,000 (Setup) | ₹15,000–₹60,000 (Attribution audit)
+*   **Key Deliverables**: GA4 events tracking, Meta conversions API, custom dashboard building.
+*   **URL**: https://veloxisglobal.com/services/analytics-tracking-attribution
+
+### 9. Audits, Consulting & Strategy
+*   **Description**: Comprehensive manual digital marketing gap audits.
+*   **Pricing**: ₹10,000 (Starter Audit) | ₹10,000–₹45,000 (Roadmap)
+*   **Key Deliverables**: Competitor backlink sheets, speed audit report, actionable 90-day checklist.
+*   **URL**: https://veloxisglobal.com/services/audits-consulting-strategy
+
+### 10. B2B Lead Generation & Sales Automation
+*   **Description**: Cold outreach strategies using LinkedIn and automated email networks.
+*   **Pricing**: ₹20,000/month (Starter) | ₹20,000–₹90,000/month (Growth)
+*   **Key Deliverables**: B2B list building, message sequence testing, CRM sync setup.
+*   **URL**: https://veloxisglobal.com/services/b2b-lead-generation-sales
+
+### 11. Brand Strategy & Positioning
+*   **Description**: Building visual identity systems and brand assets.
+*   **Pricing**: ₹30,000 (Starter) | ₹30,000–₹150,000 (Growth)
+*   **Key Deliverables**: Brand positioning statement, color palettes, visual style guides.
+*   **URL**: https://veloxisglobal.com/services/brand-strategy-positioning
+
+### 12. E-commerce Catalog Services
+*   **Description**: Product page optimization on Shopify, Amazon, and Flipkart.
+*   **Pricing**: ₹15,000 (Starter) | ₹15,000–₹75,000 (Growth)
+*   **Key Deliverables**: A+ content creation, keywords insertion, search listing cleanup.
+*   **URL**: https://veloxisglobal.com/services/ecommerce-catalog-services
+
+### 13. Corporate Training & Education
+*   **Description**: Practical growth marketing team training and workshops.
+*   **Pricing**: ₹25,000 (Half-day) | ₹25,000–₹100,000 (Full Bootcamp)
+*   **Key Deliverables**: Interactive SEO session, PPC worksheets, workflow automation manuals.
+*   **URL**: https://veloxisglobal.com/services/training-education
+
+### 14. Content Marketing
+*   **Description**: High-E-E-A-T guides, landing page copywriting, and ebooks.
+*   **Pricing**: ₹12,000/month (Starter) | ₹12,000–₹55,000/month (Growth)
+*   **Key Deliverables**: Authority blog content, guest posts, newsletter management.
+*   **URL**: https://veloxisglobal.com/services/content-marketing
+
+### 15. Industry-Specific Custom Marketing
+*   **Description**: Niche acquisition blueprints for real estate, healthcare, SaaS, and EdTech.
+*   **Pricing**: ₹30,000/month (Starter) | ₹30,000–₹180,000/month (Growth)
+*   **Key Deliverables**: Custom campaign setups, niche audience builder sheets, ROI dashboard.
+*   **URL**: https://veloxisglobal.com/services/industry-specific-marketing
+
+---
+
+## 5. Regional Location Landing Pages
+
+*   **Delhi NCR**: Focuses on luxury property leads, local search pack optimization, and paid ad funnels.
+    *   URL: https://veloxisglobal.com/digital-marketing-agency-delhi
+*   **Noida**: Focuses on student inquiry scaling, PPC optimization, and WhatsApp automation for academies.
+    *   URL: https://veloxisglobal.com/digital-marketing-agency-noida
+*   **Lucknow**: Focuses on patient booking acquisition, local map rankings, and doctor clinic campaigns.
+    *   URL: https://veloxisglobal.com/digital-marketing-agency-lucknow
+*   **Kanpur**: Focuses on global B2B buyer lead lists, exporter sitemaps, and factory inquiry tracking.
+    *   URL: https://veloxisglobal.com/digital-marketing-agency-kanpur

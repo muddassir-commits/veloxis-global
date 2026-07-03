@@ -15,12 +15,17 @@ export const metadata: Metadata = {
     description: 'Veloxis Global — India\'s trusted digital marketing agency delivering SEO, Google Ads, Social Media & Content marketing for Delhi, Noida, Lucknow & Kanpur.',
     path: '/'
   }),
+  title: {
+    default: 'Best Digital Marketing Agency in Delhi, Noida, Lucknow & Kanpur | Veloxis Global',
+    template: '%s | Veloxis Global',
+  },
   icons: {
     icon: [
-      { url: '/favicon.ico?v=2' },
-      { url: '/favicon-32x32.png?v=2', sizes: '32x32', type: 'image/png' },
+      { url: '/favicon.ico' },
+      { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
+      { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
     ],
-    apple: { url: '/apple-touch-icon.png?v=2' },
+    apple: { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
   },
 };
 
@@ -30,14 +35,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang="en-IN" className="scroll-smooth">
       <head>
         <meta name="google-site-verification" content={process.env.NEXT_PUBLIC_GSC_TOKEN || "CVRVYJuDB29ung6LskjcSWvfZwi1q4L4b21cJxpbcX8"} />
-        {/* Geo-Targeting & Local SEO Meta Tags */}
-        <meta name="geo.region" content="IN-UP" />
-        <meta name="geo.placename" content="Kanpur" />
-        <meta name="geo.position" content="26.4607;80.3334" />
-        <meta name="ICBM" content="26.4607, 80.3334" />
         <link rel="preload" href="/fonts/PlusJakartaSans.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
       </head>
       <body className="font-sans bg-slate-50 text-on-surface antialiased">

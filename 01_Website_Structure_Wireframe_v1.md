@@ -306,8 +306,8 @@ LEFT COLUMN (60%):
   [Secondary CTA — Royal Blue border 1.5px, Royal Blue text, transparent bg]:
   "See Our Results ↓"  → smooth scroll to case study section
 
-  TRUST METRICS ROW (label-caps + large number):
-  ⭐ 4.9/5 Google Rating  |  250+ Clients  |  6+ Years  |  ₹75Cr+ Revenue Generated
+  Trust metrics row:
+  ⭐ 4.9/5 Google Rating  |  250+ Clients  |  4+ Years  |  ₹75Cr+ Revenue Generated
 
 RIGHT COLUMN (40%):
   [Lottie animation or high-quality graphic — analytics dashboard mockup]
@@ -693,7 +693,7 @@ Body: 200-word paragraph using keywords naturally:
 developer in Dwarka, a healthcare clinic in Saket, an educational institute in Lajpat Nagar, 
 or a retail brand in Connaught Place — the digital competition is fierce and growing every month.
 
-At Veloxis Global, our Delhi digital marketing team has spent 6+ years studying exactly 
+At Veloxis Global, our Delhi digital marketing team has spent 4+ years studying exactly 
 how Delhi consumers search, compare, and buy. We know that a South Delhi real estate buyer 
 behaves differently from a Rohini-based SME owner. Our campaigns reflect that nuance.
 

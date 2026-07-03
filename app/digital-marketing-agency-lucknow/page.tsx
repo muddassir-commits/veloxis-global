@@ -7,7 +7,7 @@ import { Card } from '../../components/ui/Card';
 import { Button } from '../../components/ui/Button';
 import { Breadcrumb } from '../../components/ui/Breadcrumb';
 import { SchemaMarkup } from '../../components/ui/SchemaMarkup';
-import { getFAQPageSchema, getBreadcrumbListSchema } from '../../lib/schema';
+import { getFAQPageSchema, getBreadcrumbListSchema, getLocalBusinessSchema } from '../../lib/schema';
 import { testimonials } from '../../data/testimonials';
 import { Star, CheckCircle, MapPin } from 'lucide-react';
 import { CtaBanner } from '../../components/sections/CtaBanner';
@@ -18,29 +18,17 @@ export const metadata: Metadata = {
     title: "Best Digital Marketing Agency in Lucknow 2026 | Veloxis Global",
     description: "Top-rated digital marketing agency in Lucknow. Proven SEO, Google Ads & Social Media campaigns. Gomti Nagar, Hazratganj & across Lucknow. Free audit.",
     path: "/digital-marketing-agency-lucknow",
-    ogImage: '/images/og/lucknow-og.jpg'
-  }),
-  keywords: "best digital marketing agency in Lucknow, digital marketing company Lucknow 2026, SEO services Lucknow, Google Ads Lucknow, social media marketing Lucknow, digital marketing Gomti Nagar, online marketing Hazratganj, marketing agency Indira Nagar Lucknow"
+    ogImage: '/images/og/lucknow-og.jpg',
+    geoRegion: 'IN-UP',
+    geoPlacename: 'Lucknow',
+    geoPosition: '26.8467;80.9462'
+  })
 };
 
 export default function LucknowLocationPage() {
   const city = 'Lucknow';
 
-  const localSchema = {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "Veloxis Global",
-    "description": "Best digital marketing agency in Lucknow — SEO, Google Ads & Social Media for Lucknow businesses.",
-    "telephone": "+918887620727",
-    "email": "info@veloxisglobal.com",
-    "url": "https://veloxisglobal.com/digital-marketing-agency-lucknow",
-    "areaServed": {
-      "@type": "City",
-      "name": "Lucknow"
-    },
-    "priceRange": "₹₹",
-    "image": "https://veloxisglobal.com/images/logos/logo.webp"
-  };
+  const localSchema = getLocalBusinessSchema({ city });
 
   const breadcrumbItems = [{ name: 'Lucknow Agency', href: '/digital-marketing-agency-lucknow' }];
   const breadcrumbSchema = getBreadcrumbListSchema([
@@ -56,7 +44,7 @@ export default function LucknowLocationPage() {
   const lucknowFaqs = [
     {
       question: "What is the cost of digital marketing in Lucknow in 2026?",
-      answer: "Digital marketing pricing in Lucknow varies depending on the scale and custom goals of your business. At Veloxis Global, we don't offer rigid templates — instead, we tailor our pricing to what will drive the highest ROI for your business. Start with our free digital audit for a direct custom quote."
+      answer: "Digital marketing pricing in Lucknow typically ranges from ₹15,000 to ₹70,000/month depending on channels and scope. Veloxis Global offers custom, goal-based pricing models instead of rigid packages.\n\nStart with our free digital audit to receive an actionable custom quote."
     },
     {
       question: "How long does SEO take to show results in Lucknow?",

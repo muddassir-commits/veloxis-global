@@ -10,6 +10,15 @@
 - [Web Design & Development](https://veloxisglobal.com/services/web-design-development): Fast, mobile-responsive, conversion-optimized Next.js React websites.
 - [Email & WhatsApp Marketing](https://veloxisglobal.com/services/email-marketing): N8n-powered custom databases, automated follow-ups, and lead routing.
 - [Content Marketing](https://veloxisglobal.com/services/content-marketing): Authority SEO blogs, copywriting, and lead magnet collateral.
+- [Paid Advertising & Performance Marketing](https://veloxisglobal.com/services/paid-advertising-performance-marketing): Multi-channel paid media buying, tracking, and ad account audits.
+- [AI & Automation Systems](https://veloxisglobal.com/services/ai-automation-systems): n8n/Make automation, CRM setups, and custom database connectors.
+- [Analytics & Tracking Attribution](https://veloxisglobal.com/services/analytics-tracking-attribution): GA4, Meta Conversions API (CAPI), and multi-touch attribution reports.
+- [Audits, Consulting & Strategy](https://veloxisglobal.com/services/audits-consulting-strategy): Manual competitor analysis, SEO gap audits, and digital roadmap consulting.
+- [B2B Lead Generation & Sales Automation](https://veloxisglobal.com/services/b2b-lead-generation-sales): Cold email, LinkedIn outreach, and CRM pipeline automation.
+- [Brand Strategy & Positioning](https://veloxisglobal.com/services/brand-strategy-positioning): Company naming, visual styleguides, and target market positioning.
+- [E-commerce Catalog Services](https://veloxisglobal.com/services/ecommerce-catalog-services): Amazon, Flipkart, and Shopify product list optimization.
+- [Corporate Training & Education](https://veloxisglobal.com/services/training-education): Practical digital marketing and SEO team workshops.
+- [Industry-Specific Custom Marketing](https://veloxisglobal.com/services/industry-specific-marketing): Tailored scale campaigns for real estate, SaaS, and healthcare.
 
 ## Location Frameworks
 
@@ -27,7 +36,7 @@
 
 ## Founder & E-E-A-T Credentials
 
-- **Founder & CEO**: Muddassir Ali (digital marketing specialist with over 6 years of expertise in paid media, local SEO, and workflow automation).
+- **Founder & CEO**: Muddassir Ali (digital marketing specialist with over 4 years of expertise in paid media, local SEO, and workflow automation).
 - **Credentials**: Google Ads Search Certified, Google Analytics 4 (GA4) Individual Qualification, HubSpot Academy.
 - **Founder Profiles**: [LinkedIn](https://www.linkedin.com/in/muddassir-alii/), [X/Twitter](https://x.com/muddassir_alii), [Founder Portfolio](https://muddassirali.com)
 - **Company LinkedIn**: [Veloxis Global LinkedIn](https://www.linkedin.com/company/111872222/)

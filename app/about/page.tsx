@@ -24,8 +24,9 @@ import {
   TrendingUp
 } from 'lucide-react';
 import { Linkedin } from '../../components/ui/BrandIcons';
-import { constructMetadata, pageMeta } from '../../lib/seo-config';
+import { constructMetadata, pageMeta, FOUNDER_YEARS } from '../../lib/seo-config';
 import { FaqAccordion } from '../../components/sections/FaqAccordion';
+import { generateHowToSchema, generateOrganizationSchema } from '../../lib/schema';
 
 // 1. Dynamic Metadata with E-E-A-T optimization
 export function generateMetadata(): Metadata {
@@ -40,37 +41,7 @@ export default function AboutPage() {
   const breadcrumbItems = [{ name: 'About Us', href: '/about' }];
 
   // 2. Organization + Person Schema
-  const organizationSchema = {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "@id": "https://veloxisglobal.com/#organization",
-    "name": "Veloxis Global",
-    "url": "https://veloxisglobal.com",
-    "logo": "https://veloxisglobal.com/images/logos/logo.webp",
-    "foundingDate": "2025",
-    "founder": {
-      "@type": "Person",
-      "name": "Muddassir Ali",
-      "url": "https://www.linkedin.com/in/muddassir-alii/",
-      "sameAs": [
-        "https://www.linkedin.com/in/muddassir-alii/",
-        "https://muddassirali.com"
-      ]
-    },
-    "sameAs": [
-      "https://www.instagram.com/veloxisglobal/",
-      "https://www.linkedin.com/company/111872222/",
-      "https://www.facebook.com/veloxisglobal/"
-    ],
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "telephone": "+918887620727",
-      "email": "info@veloxisglobal.com",
-      "contactType": "sales",
-      "areaServed": "IN",
-      "availableLanguage": ["en", "hi"]
-    }
-  };
+  const organizationSchema = generateOrganizationSchema();
 
   const breadcrumbSchema = {
     "@context": "https://schema.org",
@@ -135,10 +106,38 @@ export default function AboutPage() {
     }
   ];
 
+  const howToSchema = generateHowToSchema(
+    "Our 5-Step Digital Marketing Process",
+    "We do not believe in guessing. We use a clear, step-by-step method to audit, build, and scale your customer acquisition.",
+    [
+      {
+        name: "Detailed Audit",
+        text: "We look at your website speed, SEO keywords, and current ads as a website optimization company and best SEO agency to find issues."
+      },
+      {
+        name: "Funnel Design",
+        text: "We design high-converting landing pages and map out a customer journey focused on sales funnel optimization."
+      },
+      {
+        name: "High-Performance Traffic",
+        text: "We launch custom campaigns as a Meta Ads performance agency and manage your Google Ads PPC services to drive real buyers."
+      },
+      {
+        name: "Sales Automation",
+        text: "We set up WhatsApp automation for business and sales pipeline automation to contact and close leads instantly."
+      },
+      {
+        name: "Scale & Optimize",
+        text: "As a performance-focused lead generation agency, we analyze data weekly to scale campaigns and get you ROI-focused digital marketing."
+      }
+    ]
+  );
+
   return (
     <>
       <SchemaMarkup schema={breadcrumbSchema} />
       <SchemaMarkup schema={organizationSchema} />
+      <SchemaMarkup schema={howToSchema} />
 
       <section className="bg-slate-50 py-8 border-b border-slate-100">
         <div className="max-w-container-max mx-auto px-gutter">
@@ -185,11 +184,11 @@ export default function AboutPage() {
               </p>
               
               <p>
-                As a leading **digital marketing agency in India**, we focus on building predictable client acquisition engines. This means we design systems that combine high-performing paid ads, organic search engine optimization, and custom CRM automation to help you get more customers consistently.
+                As a leading <strong>digital marketing agency in India</strong>, we focus on building predictable client acquisition engines. This means we design systems that combine high-performing paid ads, organic search engine optimization, and custom CRM automation to help you get more customers consistently.
               </p>
               
               <p>
-                We noticed that many businesses spend a lot of money on a **paid advertising company** or social media ads, but they do not have a good system to convert those leads into paying customers. Veloxis Global was created to solve this exact problem by building end-to-end marketing funnels.
+                We noticed that many businesses spend a lot of money on a <strong>paid advertising company</strong> or social media ads, but they do not have a good system to convert those leads into paying customers. Veloxis Global was created to solve this exact problem by building end-to-end marketing funnels.
               </p>
               
               <div className="border-l-4 border-royal-blue pl-4 py-2 my-2 italic text-slate-900 font-semibold bg-slate-50">
@@ -285,7 +284,7 @@ export default function AboutPage() {
                   Detailed Audit
                 </h3>
                 <p className="text-xs sm:text-sm text-slate-500 leading-relaxed">
-                  We look at your website speed, SEO keywords, and current ads as a **website optimization company** and **best SEO agency** to find issues.
+                  We look at your website speed, SEO keywords, and current ads as a <strong>website optimization company</strong> and <strong>best SEO agency</strong> to find issues.
                 </p>
               </div>
             </div>
@@ -303,7 +302,7 @@ export default function AboutPage() {
                   Funnel Design
                 </h3>
                 <p className="text-xs sm:text-sm text-slate-500 leading-relaxed">
-                  We design high-converting landing pages and map out a customer journey focused on **sales funnel optimization**.
+                  We design high-converting landing pages and map out a customer journey focused on <strong>sales funnel optimization</strong>.
                 </p>
               </div>
             </div>
@@ -321,7 +320,7 @@ export default function AboutPage() {
                   High-Performance Traffic
                 </h3>
                 <p className="text-xs sm:text-sm text-slate-500 leading-relaxed">
-                  We launch custom campaigns as a **Meta Ads performance agency** and manage your **Google Ads PPC services** to drive real buyers.
+                  We launch custom campaigns as a <strong>Meta Ads performance agency</strong> and manage your <strong>Google Ads PPC services</strong> to drive real buyers.
                 </p>
               </div>
             </div>
@@ -339,7 +338,7 @@ export default function AboutPage() {
                   Sales Automation
                 </h3>
                 <p className="text-xs sm:text-sm text-slate-500 leading-relaxed">
-                  We set up **WhatsApp automation for business** and **sales pipeline automation** to contact and close leads instantly.
+                  We set up <strong>WhatsApp automation for business</strong> and <strong>sales pipeline automation</strong> to contact and close leads instantly.
                 </p>
               </div>
             </div>
@@ -357,7 +356,7 @@ export default function AboutPage() {
                   Scale & Optimize
                 </h3>
                 <p className="text-xs sm:text-sm text-slate-500 leading-relaxed">
-                  As a performance-focused **lead generation agency**, we analyze data weekly to scale campaigns and get you **ROI-focused digital marketing**.
+                  As a performance-focused <strong>lead generation agency</strong>, we analyze data weekly to scale campaigns and get you <strong>ROI-focused digital marketing</strong>.
                 </p>
               </div>
             </div>
@@ -525,11 +524,11 @@ export default function AboutPage() {
               </span>
               
               <p>
-                Muddassir Ali is the founder of Veloxis Global. He is a professional **digital marketing consultant** with more than 6 years of experience helping businesses get more customers. He specializes in setting up **B2B lead generation systems** and client acquisition engines that run on autopilot.
+                Muddassir Ali is the founder of Veloxis Global. He is a professional <strong>digital marketing consultant</strong> with more than {FOUNDER_YEARS} years of experience helping businesses get more customers. He specializes in setting up <strong>B2B lead generation systems</strong> and client acquisition engines that run on autopilot.
               </p>
               
               <p>
-                After working with many local businesses, training institutes, and real estate brands, Muddassir realized that most companies waste money on ads because they do not have a good follow-up system. To solve this, he started Veloxis Global, which is now recognized as a trusted provider of **digital marketing services in Kanpur** and across India. He helped build this **marketing automation agency** to ensure businesses can turn cold traffic into loyal clients.
+                After working with many local businesses, training institutes, and real estate brands, Muddassir realized that most companies waste money on ads because they do not have a good follow-up system. To solve this, he started Veloxis Global, which is now recognized as a trusted provider of <strong>digital marketing services in Kanpur</strong> and across India. He helped build this <strong>marketing automation agency</strong> to ensure businesses can turn cold traffic into loyal clients.
               </p>
               
               <p>
@@ -567,7 +566,7 @@ export default function AboutPage() {
         customFaqs={[
           {
             question: "Who is the founder of Veloxis Global?",
-            answer: "Veloxis Global was founded by Muddassir Ali, a digital marketing consultant with over 6 years of experience in lead generation services, search engine optimization (SEO), Meta ads, and sales automation."
+            answer: `Veloxis Global was founded by Muddassir Ali, a digital marketing consultant with over ${FOUNDER_YEARS} years of experience in lead generation services, search engine optimization (SEO), Meta ads, and sales automation.`
           },
           {
             question: "Where is Veloxis Global based?",

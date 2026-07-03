@@ -26,7 +26,7 @@ export default function BlogPage() {
 
   const featuredArticleSchema = {
     "@context": "https://schema.org",
-    "@type": "NewsArticle",
+    "@type": "BlogPosting",
     "headline": "SEO in 2026: What's Changed and What Indian Businesses Must Do Now",
     "datePublished": "2026-05-20",
     "dateModified": "2026-05-20",
