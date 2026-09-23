@@ -1,45 +1,27 @@
 import React from 'react';
 import { Metadata } from 'next';
-import { notFound } from 'next/navigation';
-import { getIndustryBySlug } from '../../../data/industries-data';
-import { IndustryPageTemplate } from '../../../components/services/IndustryPageTemplate';
+import { AudiencePageTemplate } from '../../../components/services/AudiencePageTemplate';
 import { SchemaMarkup } from '../../../components/ui/SchemaMarkup';
-import { Breadcrumb } from '../../../components/ui/Breadcrumb';
-import { getBreadcrumbListSchema } from '../../../lib/schema';
-import { constructMetadata } from '../../../lib/seo-config';
+import { audiences } from '../../../data/audiences';
+import { getServiceSchema } from '../../../lib/schema';
+import { constructMetadata, pageMeta } from '../../../lib/seo-config';
 
-export const metadata: Metadata = constructMetadata({
-  title: 'Real Estate Developer Marketing Agency | Veloxis Global',
-  description: 'Scale qualified property leads and direct broker site visits in Delhi NCR, Noida, and Lucknow. View our real estate marketing framework online today.',
-  path: '/industries/real-estate'
-});
+export const metadata: Metadata = constructMetadata(pageMeta.developers);
 
-export default function RealEstateIndustryPage() {
-  const industry = getIndustryBySlug('real-estate');
-  if (!industry) {
-    notFound();
-  }
-
-  const breadcrumbItems = [
-    { name: industry.title, href: `/industries/${industry.slug}` }
-  ];
-
-  const breadcrumbSchema = getBreadcrumbListSchema([
-    { name: 'Home', item: 'https://www.veloxisglobal.com' },
-    { name: industry.title, item: `https://www.veloxisglobal.com/industries/${industry.slug}` }
-  ]);
-
+export default function DevelopersPage() {
+  const audience = audiences.developers;
   return (
     <>
-      <SchemaMarkup schema={breadcrumbSchema} />
-
-      <section className="bg-slate-50 py-8 border-b border-slate-100">
-        <div className="max-w-container-max mx-auto px-gutter">
-          <Breadcrumb items={breadcrumbItems} />
-        </div>
-      </section>
-
-      <IndustryPageTemplate industry={industry} />
+      <SchemaMarkup
+        schema={getServiceSchema({
+          name: audience.h1,
+          description: pageMeta.developers.description,
+          path: audience.path,
+          serviceType: 'Real estate developer marketing',
+          audience: 'Real estate developers and builders',
+        })}
+      />
+      <AudiencePageTemplate audience={audience} />
     </>
   );
 }

@@ -20,8 +20,8 @@ export default function BlogContent() {
   const [searchQuery, setSearchQuery] = useState<string>('');
   const [currentPage, setCurrentPage] = useState<number>(1);
 
-  const categories = ['All', 'Landing Pages', 'Paid Ads', 'AI Automation', 'Growth Tips'];
-  const POSTS_PER_PAGE = 3;
+  const categories = ['All', 'Guides', 'Landing Pages', 'Paid Ads', 'AI Automation', 'Growth Tips'];
+  const POSTS_PER_PAGE = 9; // keep every article linked in the server-rendered HTML
 
   // Filter posts by category and search query
   const filteredPosts = allPostsData.filter((post) => {
@@ -57,10 +57,10 @@ export default function BlogContent() {
           <div className="max-w-xl">
             <Badge color="indigo" className="mb-3">KNOWLEDGE HUB</Badge>
             <h1 className="text-3xl sm:text-4xl lg:text-[46px] font-extrabold tracking-tight text-slate-900 leading-tight">
-              Real Estate Marketing Playbooks for Delhi NCR
+              Real estate marketing blog for builders, brokers and CPs
             </h1>
             <p className="text-slate-500 mt-2 text-sm sm:text-base leading-relaxed">
-              Landing page teardowns, Google &amp; Meta Ads breakdowns, and WhatsApp automation guides from Muddassir Ali.
+              Practical guides on Meta and Google ads for property, project landing pages, WhatsApp follow-up, EOI and channel partner programmes — written by Muddassir Ali.
             </p>
           </div>
 
@@ -69,7 +69,8 @@ export default function BlogContent() {
             <Search className="w-4 h-4 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2" />
             <input
               id="blog-search-input"
-              type="text"
+              type="search"
+              aria-label="Search blog articles"
               placeholder="Search guides..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
@@ -111,7 +112,7 @@ export default function BlogContent() {
               <Link href={`/blog/${featuredPost.slug}`} className="block w-full h-full relative min-h-[260px] lg:min-h-full">
                 <Image
                   src={featuredPost.image}
-                  alt={featuredPost.title}
+                  alt={featuredPost.imageAlt}
                   fill
                   sizes="(max-width: 1024px) 100vw, 42vw"
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
@@ -189,7 +190,7 @@ export default function BlogContent() {
                     <Link href={`/blog/${post.slug}`} className="block w-full h-full">
                       <Image
                         src={post.image}
-                        alt={post.title}
+                        alt={post.imageAlt}
                         fill
                         sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                         className="object-cover transition-transform duration-500 group-hover:scale-105"

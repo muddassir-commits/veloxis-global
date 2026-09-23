@@ -1,0 +1,72 @@
+// FAQs shown (answers visible) at the end of each blog post, keyed by post slug.
+// Answers summarise what the article itself says.
+import type { PageFaq } from './page-faqs';
+
+export const blogFaqs: Record<string, PageFaq[]> = {
+  'what-is-eoi-in-real-estate': [
+    { question: 'What is EOI in real estate?', answer: 'EOI stands for Expression of Interest: a written request, usually with a payment, telling a developer you want to buy in a project about to launch. It gives you priority to choose a unit, not a specific flat.' },
+    { question: 'Is EOI the same as booking a flat?', answer: 'No. With an EOI you haven’t been allotted a unit and there is no agreement for sale. Booking comes later, when you select and confirm a unit.' },
+    { question: 'What is the difference between EOI, token amount and booking amount?', answer: 'EOI is paid before or at launch for priority. A token holds a selected unit for a short time while paperwork is done. The booking amount confirms the purchase and leads to allotment and the agreement for sale.' },
+    { question: 'Is EOI refundable?', answer: 'Often, but only on the conditions written in the EOI terms. A common pattern is a full refund if you don’t get a suitable unit, and a deduction if you withdraw after selecting one. Get the terms in writing.' },
+    { question: 'How much is a typical EOI amount?', answer: 'There is no standard figure. It varies widely by project and city, so compare it with the project’s pricing and the written terms.' },
+    { question: 'Can a developer collect EOI before RERA registration?', answer: 'Section 3 of the RERA Act bars promoters from advertising, marketing, booking or selling units in a project that must be registered before it is registered, so collecting money for an unregistered project is risky for both sides.' },
+    { question: 'How much advance can a developer take without an agreement for sale?', answer: 'Section 13 of the RERA Act says a promoter cannot take more than 10% of the unit cost as an advance or application fee without first entering into a written, registered agreement for sale.' },
+    { question: 'What should I check before paying an EOI?', answer: 'The project’s RERA number on the state RERA website, written refund terms, payment by cheque or bank transfer (never cash), a receipt naming the project and amount, and how allotment will work.' },
+  ],
+  'channel-partner-in-real-estate': [
+    { question: 'What is a channel partner in real estate?', answer: 'A real estate agent or agency formally empanelled by a developer to sell its projects. The CP brings buyers, arranges site visits and helps close bookings, and is paid commission by the developer.' },
+    { question: 'What is the difference between a channel partner and a broker?', answer: 'A CP works for a developer on specific new projects and is paid by the developer. A broker usually handles resale or rentals and is paid brokerage by the buyer and/or seller. Many firms do both.' },
+    { question: 'How much commission does a channel partner get?', answer: 'There is no fixed industry rate. Each developer sets it, usually as a percentage of the agreement value, sometimes with volume or launch incentives. Check when it becomes payable and how long payouts take.' },
+    { question: 'Does a channel partner need RERA registration?', answer: 'Section 9 of the RERA Act requires real estate agents facilitating sales in registered projects to register with the state RERA authority, and Section 10 requires them to quote their registration number.' },
+    { question: 'Is TDS deducted on CP commission?', answer: 'Yes. Commission payments are subject to TDS under Section 194H of the Income Tax Act. Check the current rate with your accountant.' },
+    { question: 'How are lead ownership disputes settled?', answer: 'Developers usually look at registration time and whether the CP accompanied the site visit. Registering every lead the same day and logging first contact and visits protects the CP.' },
+    { question: 'How do channel partners get leads?', answer: 'Through developer-shared leads, property portals and referrals — and increasingly through their own project pages, Meta and Google ads, instant WhatsApp replies and a Google Business Profile.' },
+    { question: 'Can a channel partner run ads for a developer’s project?', answer: 'Usually yes, if the developer allows it and the ads follow the developer’s rules on names, pricing and offers, with the project’s RERA number and the CP’s agent registration number.' },
+  ],
+  'real-estate-ad-examples': [
+    { question: 'What makes a good real estate ad?', answer: 'It answers the buyer’s real questions — where, how much, how far and can I trust this builder — and ends with one clear action, like getting the price sheet on WhatsApp.' },
+    { question: 'Do real estate ads need a RERA number?', answer: 'Ads for registered projects should carry the project’s RERA registration number, and the QR code where the state requires it. CPs should also add their RERA agent number.' },
+    { question: 'Which video ads work best for property?', answer: 'A 30-second sample-flat walkthrough, a commute video from the nearest metro or expressway, monthly construction progress, and a salesperson inviting viewers for a site visit.' },
+    { question: 'Should property ads show the price?', answer: 'Yes, at least a starting price or band. It filters out buyers outside your budget before they enquire.' },
+    { question: 'What should a Google search ad for a project say?', answer: 'Match the search: the project name with configurations, price and “RERA registered”; the locality with nearby landmarks and possession year; or “ready to move” for inventory with OC.' },
+    { question: 'Where should real estate ads send people?', answer: 'To a project landing page that repeats the ad’s promise, not to the homepage or a generic page.' },
+    { question: 'What are common real estate ad mistakes?', answer: 'Renders only with no real site photos, “price on request”, ten amenities and nothing about location, one generic page for every ad, and judging ads on clicks instead of site visits.' },
+    { question: 'How does Meta’s housing ad category affect creatives?', answer: 'If the Special Ad Category for housing applies, age, gender and precise location targeting are limited, so the creative has to do more of the work of reaching the right buyers.' },
+  ],
+  'google-ads-vs-meta-ads-real-estate-india': [
+    { question: 'Is Google Ads or Meta better for real estate?', answer: 'They do different jobs. Google Search reaches people already searching for a project, locality or configuration; Meta reaches people before they search. Most projects need both in different proportions.' },
+    { question: 'Why do Meta leads look cheaper than Google leads?', answer: 'Instant forms make enquiring very easy, so you get more leads, including curious scrollers. Fewer of them visit, which is why cost per lead is a misleading comparison.' },
+    { question: 'When should a project lead with Google Ads?', answer: 'When there is existing search demand: an established locality, a known project name, or ready-to-move inventory.' },
+    { question: 'When should a project lead with Meta?', answer: 'For new launches, EOI drives and awareness, and to build a retargeting audience of people who already saw the project.' },
+    { question: 'What should a channel partner with a small budget run?', answer: 'Google on the specific projects they are mandated on, plus Meta retargeting of their own page visitors.' },
+    { question: 'How do I improve Meta lead quality?', answer: 'Qualifying questions on the form, faster follow-up, and sending site-visit data back to Meta so it learns what a good lead looks like.' },
+    { question: 'How should I compare the two channels?', answer: 'On cost per site visit from your CRM, not on cost per lead from the ad dashboards, and move budget weekly towards the cheaper source of visits.' },
+  ],
+  'real-estate-landing-page-conversion-hacks': [
+    { question: 'Why do real estate ads get clicks but few enquiries?', answer: 'Usually the page: ads land on a corporate site or generic page, price and RERA details are hidden, the form is long, or the page is slow on a phone.' },
+    { question: 'Should each project have its own landing page?', answer: 'Yes. One page per project, tower or phase, with each ad sent to the page that matches it.' },
+    { question: 'What should a buyer see first on the page?', answer: 'Where the project is, the configurations, the starting price, whether it is RERA registered, and a button to get the price sheet on WhatsApp.' },
+    { question: 'Should a landing page say “price on request”?', answer: 'No. A starting price or band brings more serious enquiries; the full cost sheet can be sent after the buyer shares their number.' },
+    { question: 'How short should the form be?', answer: 'Name, mobile number, configuration and budget — plus a sticky WhatsApp button on mobile for buyers who prefer to chat.' },
+    { question: 'How fast should a real estate landing page load?', answer: 'Aim for Google’s “good” Core Web Vitals: main content visible within 2.5 seconds and no layout jumping. Test on a mid-range Android phone over 4G.' },
+    { question: 'How do I know which ad produced a site visit?', answer: 'Track form submits, WhatsApp clicks and calls as conversions, give each campaign and CP a tagged link, and feed site-visit outcomes from the CRM back to Google and Meta.' },
+  ],
+  'whatsapp-automation-for-real-estate-leads': [
+    { question: 'Why do real estate leads go cold?', answer: 'Late replies after office hours, a single call attempt, leads scattered across portals, forms and phones, and buyers ignoring calls from unknown numbers.' },
+    { question: 'Can I automate WhatsApp with the free WhatsApp Business app?', answer: 'No. Automation, chatbots and CRM connections need the WhatsApp Business API, set up through an official Business Solution Provider.' },
+    { question: 'Do I need approved templates for WhatsApp messages?', answer: 'Yes. WhatsApp requires approved templates for messages sent outside a 24-hour conversation window, such as the first message, reminders and follow-ups.' },
+    { question: 'What should an automated real estate WhatsApp flow do?', answer: 'Reply instantly with the brochure, ask budget and timeline, hand qualified buyers to a salesperson, book the site visit, send reminders, and follow up with leads who go quiet.' },
+    { question: 'How should leads be routed to sales and channel partners?', answer: 'By project, location or rotation, agreed before automating, with the time each lead arrived and was assigned recorded.' },
+    { question: 'Can I message leads who didn’t ask to be contacted?', answer: 'No. Only message people who shared their number with you, and let them opt out.' },
+    { question: 'What should I measure after automating?', answer: 'Time to first reply, share of leads answering the first question, site visits booked and completed, and leads with no human contact after 24 hours — which should be zero.' },
+  ],
+  'real-estate-local-seo-ncr': [
+    { question: 'Why does a Google Business Profile matter for real estate agents?', answer: 'Local searches like “property dealer near me” show map results first. A well-kept profile is one of the cheapest sources of local enquiries.' },
+    { question: 'How does Google rank local results?', answer: 'Mainly on relevance, distance and prominence — how well the profile matches the search, how close you are, and how well known and reviewed you are.' },
+    { question: 'Can I add keywords to my business name?', answer: 'No. Use your real business name exactly as on your signboard and documents. Keyword stuffing breaks Google’s guidelines and can get the profile suspended.' },
+    { question: 'Which category should a real estate agent choose?', answer: '“Real estate agency” or “Real estate agent” as the primary category, and “Real estate consultant” as an additional one if it fits.' },
+    { question: 'Should I show my office address?', answer: 'Show it if clients visit your office. If you meet clients at sites, set up as a service-area business, hide the address and list the areas you cover.' },
+    { question: 'How should I ask clients for reviews?', answer: 'Ask every client for an honest review with a direct link sent on WhatsApp. Don’t offer incentives, write reviews yourself, or ask only happy clients — Google prohibits fake and selectively solicited reviews.' },
+    { question: 'What should the profile link to?', answer: 'A page explaining what you do and the projects you handle, with WhatsApp and call buttons — and for project posts, the project’s landing page.' },
+  ],
+};

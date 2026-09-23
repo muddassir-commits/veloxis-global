@@ -3,41 +3,26 @@
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { 
-  ArrowLeft, 
-  Calendar, 
-  User, 
-  Clock, 
-  Share2, 
-  ChevronRight, 
-  FileText,
-  ChevronUp
-} from 'lucide-react';
+import { ArrowLeft, Calendar, Clock, Share2, ChevronRight, FileText } from 'lucide-react';
 import { Badge } from '../../../components/ui/Badge';
 import { Button } from '../../../components/ui/Button';
-import { Instagram, Facebook, Linkedin } from '../../../components/ui/BrandIcons';
+import { Linkedin } from '../../../components/ui/BrandIcons';
 import { FOUNDER_YEARS } from '../../../lib/seo-config';
 
-interface PostContent {
-  slug: string;
-  title: string;
-  excerpt: string;
-  category: 'Landing Pages' | 'Paid Ads' | 'AI Automation' | 'Growth Tips';
-  badgeColor: 'teal' | 'orange' | 'indigo' | 'blue';
-  author: string;
-  authorPhoto: string;
-  date: string;
-  isoDate: string;
-  readTime: string;
-  headings: { id: string; text: string }[];
-  htmlContent: string;
-  image?: string;
+import type { Post } from '../../../data/blog-posts';
+
+const formatDate = (iso: string) =>
+  new Date(iso).toLocaleDateString('en-IN', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'Asia/Kolkata' });
+
+interface Props {
+  post: Post;
+  relatedPosts: Post[];
+  service?: { slug: string; title: string; shortDesc: string };
 }
 
-export default function BlogPostContent({ post, relatedPosts }: { post: PostContent; relatedPosts: any[] }) {
+export default function BlogPostContent({ post, relatedPosts, service }: Props) {
   const [scrollProgress, setScrollProgress] = useState(0);
   const [activeHeading, setActiveHeading] = useState('');
-  const [shareOpen, setShareOpen] = useState(false);
 
   // Update progress bar & active heading on scroll
   useEffect(() => {
@@ -71,16 +56,16 @@ export default function BlogPostContent({ post, relatedPosts }: { post: PostCont
 
   return (
     <div className="bg-white font-sans text-left relative">
-      
+
       {/* 1. Scroll Progress Bar (royal-blue) */}
-      <div 
+      <div
         className="fixed top-0 left-0 h-1 bg-royal-blue z-[60] transition-all duration-100"
         style={{ width: `${scrollProgress}%` }}
       ></div>
 
       <div className="max-w-container-max mx-auto px-gutter py-12">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-          
+
           {/* Main Article Content (8 cols) */}
           <article className="lg:col-span-8 flex flex-col items-start">
             <Link
@@ -92,7 +77,7 @@ export default function BlogPostContent({ post, relatedPosts }: { post: PostCont
             </Link>
 
             <Badge color={post.badgeColor as any} className="mb-4">{post.category}</Badge>
-            
+
             <h1 className="text-3xl sm:text-5xl font-extrabold text-slate-900 tracking-tight leading-[1.1] mb-6">
               {post.title}
             </h1>
@@ -104,30 +89,38 @@ export default function BlogPostContent({ post, relatedPosts }: { post: PostCont
                 className="flex items-center gap-1.5 hover:text-royal-blue transition-colors"
               >
                 <div className="w-6 h-6 rounded-full overflow-hidden bg-slate-100 relative">
-                  <Image src={post.authorPhoto} alt={post.author} fill className="object-cover" />
+                  <Image src={post.authorPhoto} alt="" fill sizes="24px" className="object-cover" />
                 </div>
                 <span>{post.author}</span>
               </Link>
               <span className="flex items-center gap-1.5">
-                <Clock className="w-3.5 h-3.5" />
+                <Calendar className="w-3.5 h-3.5" aria-hidden="true" />
+                <time dateTime={post.modifiedIso}>
+                  {post.modifiedIso !== post.isoDate ? 'Updated ' : ''}{formatDate(post.modifiedIso)}
+                </time>
+              </span>
+              <span className="flex items-center gap-1.5">
+                <Clock className="w-3.5 h-3.5" aria-hidden="true" />
                 <span>{post.readTime}</span>
               </span>
 
               {/* Share actions */}
               <div className="ml-auto relative flex items-center gap-2">
                 <span className="text-[11px] uppercase tracking-wider text-slate-400">Share:</span>
-                <a 
-                  href={shareUrls.linkedin} 
-                  target="_blank" 
+                <a
+                  href={shareUrls.linkedin}
+                  target="_blank"
                   rel="noopener noreferrer"
+                  aria-label="Share on LinkedIn"
                   className="w-7 h-7 bg-slate-50 hover:bg-royal-blue hover:text-white transition-colors rounded-full flex items-center justify-center text-slate-500"
                 >
                   <Linkedin className="w-3.5 h-3.5" />
                 </a>
-                <a 
-                  href={shareUrls.whatsapp} 
-                  target="_blank" 
+                <a
+                  href={shareUrls.whatsapp}
+                  target="_blank"
                   rel="noopener noreferrer"
+                  aria-label="Share on WhatsApp"
                   className="w-7 h-7 bg-slate-50 hover:bg-teal-600 hover:text-white transition-colors rounded-full flex items-center justify-center text-slate-500"
                 >
                   <Share2 className="w-3.5 h-3.5" />
@@ -140,7 +133,7 @@ export default function BlogPostContent({ post, relatedPosts }: { post: PostCont
               <div className="w-full aspect-[21/9] sm:aspect-[16/9] relative rounded-2xl overflow-hidden mb-8 border border-slate-100 shadow-sm bg-slate-50">
                 <Image
                   src={post.image}
-                  alt={post.title}
+                  alt={post.imageAlt}
                   fill
                   sizes="(max-width: 1024px) 100vw, 900px"
                   priority
@@ -150,34 +143,30 @@ export default function BlogPostContent({ post, relatedPosts }: { post: PostCont
             )}
 
             {/* Rendered markdown HTML */}
-            <div 
-              className="prose prose-slate max-w-none text-sm sm:text-body-md text-on-surface-variant leading-relaxed flex flex-col gap-6 w-full
-              prose-headings:font-extrabold prose-headings:text-slate-900 prose-h2:text-2xl prose-h2:mt-8 prose-h3:text-lg prose-strong:text-slate-900 prose-a:text-royal-blue prose-a:font-bold hover:prose-a:underline"
-              dangerouslySetInnerHTML={{ __html: post.htmlContent }}
-            />
+            <div className="article-body w-full" dangerouslySetInnerHTML={{ __html: post.htmlContent }} />
 
             {/* Author Bio Box */}
             <div className="bg-slate-50 border border-slate-100 rounded-2xl p-6 sm:p-8 mt-12 w-full grid grid-cols-1 sm:grid-cols-12 gap-6 items-center">
               <div className="sm:col-span-3 flex justify-center">
                 <Link href="/about">
                   <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-full overflow-hidden bg-slate-100 relative shadow-sm border border-slate-200 hover:opacity-90 transition-opacity">
-                    <Image src={post.authorPhoto} alt={post.author} fill className="object-cover" />
+                    <Image src={post.authorPhoto} alt={post.author} fill sizes="112px" className="object-cover" />
                   </div>
                 </Link>
               </div>
               <div className="sm:col-span-9 flex flex-col items-start gap-2">
                 <Link href="/about" className="hover:text-royal-blue transition-colors">
-                  <h4 className="text-lg font-extrabold text-slate-900">{post.author}</h4>
+                  <p className="text-lg font-extrabold text-slate-900">{post.author}</p>
                 </Link>
                 <p className="text-xs sm:text-sm text-slate-500 leading-relaxed">
-                  Muddassir Ali — Founder of Veloxis Global, {FOUNDER_YEARS} years in digital marketing. Based in Kanpur, serving Delhi, Noida, Lucknow & Kanpur.
+                  Founder of Veloxis Global, with {FOUNDER_YEARS}+ years in digital marketing. Works with builders, brokers and channel partners across Kanpur, Lucknow, Noida and Delhi NCR.
                 </p>
                 <div className="flex gap-3 mt-2">
-                  <Link href="https://www.linkedin.com/in/muddassir-alii/" target="_blank" className="text-xs font-bold text-royal-blue flex items-center gap-1">
+                  <Link href="https://www.linkedin.com/in/muddassir-alii/" target="_blank" rel="noopener noreferrer" className="text-xs font-bold text-royal-blue flex items-center gap-1">
                     <span>LinkedIn Profile</span>
                     <ChevronRight className="w-3 h-3" />
                   </Link>
-                  <Link href="https://muddassirali.com" target="_blank" className="text-xs font-bold text-royal-blue flex items-center gap-1">
+                  <Link href="https://muddassirali.com" target="_blank" rel="noopener noreferrer" className="text-xs font-bold text-royal-blue flex items-center gap-1">
                     <span>Founder Portfolio</span>
                     <ChevronRight className="w-3 h-3" />
                   </Link>
@@ -187,20 +176,20 @@ export default function BlogPostContent({ post, relatedPosts }: { post: PostCont
 
             {/* Related Posts */}
             <div className="w-full mt-16">
-              <h3 className="text-xl font-extrabold text-slate-900 mb-6 border-b border-slate-100 pb-3">
-                Related Articles
-              </h3>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <h2 className="text-xl font-extrabold text-slate-900 mb-6 border-b border-slate-100 pb-3">
+                Related articles
+              </h2>
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
                 {relatedPosts.map((rel) => (
-                  <Link 
-                    key={rel.slug} 
+                  <Link
+                    key={rel.slug}
                     href={`/blog/${rel.slug}`}
                     className="group bg-slate-50 border border-slate-100 p-5 rounded-xl block hover:bg-slate-100/50 hover:shadow-sm transition-all"
                   >
                     <Badge color={rel.badgeColor as any} className="mb-2.5">{rel.category}</Badge>
-                    <h4 className="font-extrabold text-slate-900 text-sm sm:text-base leading-snug group-hover:text-royal-blue transition-colors">
+                    <h3 className="font-extrabold text-slate-900 text-sm sm:text-base leading-snug group-hover:text-royal-blue transition-colors">
                       {rel.title}
-                    </h4>
+                    </h3>
                     <span className="text-[11px] font-semibold text-slate-400 block mt-3">
                       {rel.readTime}
                     </span>
@@ -212,14 +201,14 @@ export default function BlogPostContent({ post, relatedPosts }: { post: PostCont
 
           {/* Sticky TOC Sidebar (4 cols) */}
           <aside className="lg:col-span-4 sticky top-24 hidden lg:flex flex-col gap-8 text-left">
-            
+
             {/* Table of Contents */}
             <div className="bg-slate-50 border border-slate-100 rounded-xl p-6">
-              <h4 className="text-xs font-bold text-royal-blue uppercase tracking-widest mb-4 flex items-center gap-2">
-                <FileText className="w-4 h-4" />
-                <span>Table of Contents</span>
-              </h4>
-              <nav className="flex flex-col gap-3 text-xs font-semibold text-slate-500">
+              <p className="text-xs font-bold text-royal-blue uppercase tracking-widest mb-4 flex items-center gap-2">
+                <FileText className="w-4 h-4" aria-hidden="true" />
+                <span>On this page</span>
+              </p>
+              <nav aria-label="Table of contents" className="flex flex-col gap-3 text-xs font-semibold text-slate-500">
                 {post.headings.map((heading) => (
                   <a
                     key={heading.id}
@@ -229,8 +218,8 @@ export default function BlogPostContent({ post, relatedPosts }: { post: PostCont
                       document.getElementById(heading.id)?.scrollIntoView({ behavior: 'smooth' });
                     }}
                     className={`block hover:text-royal-blue transition-colors leading-tight ${
-                      activeHeading === heading.id 
-                        ? 'text-royal-blue font-bold border-l-2 border-royal-blue pl-2.5' 
+                      activeHeading === heading.id
+                        ? 'text-royal-blue font-bold border-l-2 border-royal-blue pl-2.5'
                         : 'border-l-2 border-transparent pl-2.5'
                     }`}
                   >
@@ -243,13 +232,18 @@ export default function BlogPostContent({ post, relatedPosts }: { post: PostCont
             {/* Contextual CTA Box */}
             <div className="bg-slate-900 text-white rounded-xl p-6 relative overflow-hidden border border-white/10 flex flex-col gap-4">
               <div className="absolute top-0 right-0 w-24 h-24 bg-royal-blue/30 rounded-full blur-xl"></div>
-              
-              <h4 className="text-lg font-extrabold relative z-10 leading-tight">
-                Ready to fill your site-visit pipeline?
-              </h4>
-              <p className="text-xs text-slate-400 leading-relaxed relative z-10">
-                Get a free growth audit covering your landing page, ad spend, and lead response time — with a plan to fix what's leaking.
+
+              <p className="text-lg font-extrabold relative z-10 leading-tight">
+                {service ? `Need help with ${service.title.toLowerCase()}?` : 'Want more site visits from your marketing?'}
               </p>
+              <p className="text-xs text-slate-400 leading-relaxed relative z-10">
+                {service ? service.shortDesc : 'Get a free review of your landing page, ads and lead response time, with a plan to fix what is leaking.'}
+              </p>
+              {service && (
+                <Link href={`/services/${service.slug}`} className="text-xs font-bold text-teal-300 hover:text-white relative z-10">
+                  See how it works →
+                </Link>
+              )}
 
               <Button id="blog-sidebar-free-audit-btn" href="/contact" variant="primary" className="w-full text-center py-3 text-xs mt-2 relative z-10">
                 Get My Free Audit →

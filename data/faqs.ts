@@ -1,3 +1,4 @@
+// Homepage FAQs — answer the questions a builder, broker or CP asks before the first call.
 export interface FAQItem {
   question: string;
   answer: string;
@@ -5,27 +6,38 @@ export interface FAQItem {
 
 export const faqs: FAQItem[] = [
   {
-    question: "What does your real estate marketing service include?",
-    answer: "We provide a full-stack approach: high-converting landing pages, Meta & Google Ads management, and WhatsApp automation. Everything is designed to generate qualified property leads, reduce your CPL, and increase site visits for developers and channel partners in Delhi NCR."
+    question: 'What does Veloxis Global do?',
+    answer:
+      'We are a real estate marketing agency. We build project landing pages, run Meta and Google ads for property leads, and set up WhatsApp chatbots and CRM automation so every enquiry gets a reply within seconds. We work only with real estate developers, builders, brokers and channel partners.',
   },
   {
-    question: "How long does it take to start generating leads?",
-    answer: "Paid ad campaigns (Google & Meta) typically start generating leads within 3-5 days of launch. Landing page builds take 3-7 days. WhatsApp automation goes live the same day your campaigns do, so every lead gets an instant response from day one."
+    question: 'Who do you work with?',
+    answer:
+      'Residential developers and builders, channel partners mandated on projects, and brokers or property consultants. Most clients are in Kanpur, Lucknow, Noida, Greater Noida and the wider Delhi NCR, and we can run campaigns for projects elsewhere in India.',
   },
   {
-    question: "Which is better for real estate: Google Ads or Meta Ads?",
-    answer: "Google Ads capture high-intent buyers actively searching for properties (e.g., 'buy 3BHK in Noida Sector 150'). Meta Ads generate high lead volume at lower CPL, ideal for new project launches and brand awareness. We often recommend a hybrid strategy for maximum coverage."
+    question: 'How soon can campaigns start producing leads?',
+    answer:
+      'A project landing page usually goes live in 3 to 7 working days once we have the price sheet, RERA details and creatives. Meta and Google campaigns typically start producing enquiries in their first week, and WhatsApp automation goes live with them.',
   },
   {
-    question: "Do you offer free consultations or audits?",
-    answer: "Yes, we offer a completely free, no-obligation 30-minute real estate marketing strategy audit for developers and brokers in Delhi, Noida, and Greater Noida. We will analyze your current lead flow, landing pages, and ad performance, and provide 3 immediate improvement areas."
+    question: 'Which is better for real estate: Google Ads or Meta ads?',
+    answer:
+      'Google Search reaches buyers already searching for a project, locality or configuration. Meta reaches people before they search, which suits launches and retargeting. Most projects use both, with the split decided by stage and budget, and both are measured on cost per site visit.',
   },
   {
-    question: "How do you ensure lead quality for real estate?",
-    answer: "We use hyper-local geo-targeting, negative keyword strategies to filter out brokers, mandatory budget-range dropdowns in lead forms, and WhatsApp verification flows. This ensures you only receive genuine, qualified buyer inquiries."
+    question: 'How do you deal with fake or low-quality leads?',
+    answer:
+      'Qualifying questions on every form, negative keywords and audience exclusions, sending site-visit outcomes back to Google and Meta so they learn what a good lead looks like, and replying to every lead instantly — many “fake” leads are real buyers who were called too late.',
   },
   {
-    question: "Do you work with individual brokers or only large developers?",
-    answer: "We work with both. Our Starter plans are designed for individual channel partners and small brokers, while our Enterprise plans serve large developers with multi-project portfolios. Every plan is ROI-focused with no forced lock-in contracts."
-  }
+    question: 'Is there a contract or lock-in?',
+    answer:
+      'No. We work month-to-month with 30 days’ notice. Ad spend is paid directly to Google and Meta from your own ad accounts, so you keep control of the budget and the data.',
+  },
+  {
+    question: 'Do you offer a free audit?',
+    answer:
+      'Yes. We review your current project pages, ads and lead follow-up and share what we would change first. There is no obligation to work with us afterwards.',
+  },
 ];

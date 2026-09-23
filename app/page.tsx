@@ -2,54 +2,32 @@ import React from 'react';
 import { Metadata } from 'next';
 import dynamic from 'next/dynamic';
 import { constructMetadata, pageMeta } from '../lib/seo-config';
-import { getOrganizationSchema, getWebSiteSchema, getLocalBusinessSchema } from '../lib/schema';
-import { SchemaMarkup } from '../components/ui/SchemaMarkup';
 import { HeroSection } from '../components/sections/HeroSection';
-// Dynamic imports for below-fold sections — keeps initial JS bundle lean.
-// SSR is kept on (default) for SEO-critical content sections so their text
-// remains in server-rendered HTML. TestimonialsSlider uses ssr:false because
-// it has client-only drag state and auto-interval that breaks on SSR.
-const ServicesGrid = dynamic(() => import('../components/sections/ServicesGrid').then(m => ({ default: m.ServicesGrid })));
-const CasestudyFeature = dynamic(() => import('../components/sections/CasestudyFeature').then(m => ({ default: m.CasestudyFeature })));
-const ProcessTimeline = dynamic(() => import('../components/sections/ProcessTimeline').then(m => ({ default: m.ProcessTimeline })));
-const TestimonialsSlider = dynamic(
-  () => import('../components/sections/TestimonialsSlider').then(m => ({ default: m.TestimonialsSlider })),
-  { ssr: false }
-);
-const LocationsGrid = dynamic(() => import('../components/sections/LocationsGrid').then(m => ({ default: m.LocationsGrid })));
-const BlogPreview = dynamic(() => import('../components/sections/BlogPreview').then(m => ({ default: m.BlogPreview })));
-const CtaBanner = dynamic(() => import('../components/sections/CtaBanner').then(m => ({ default: m.CtaBanner })));
+// Below-fold sections are dynamically imported to keep the initial JS bundle lean.
+// SSR stays on so their text is in the server-rendered HTML.
+// Organization / WebSite schema is emitted once in app/layout.tsx.
+const ServicesGrid = dynamic(() => import('../components/sections/ServicesGrid').then((m) => ({ default: m.ServicesGrid })));
+const AudienceSplit = dynamic(() => import('../components/sections/AudienceSplit').then((m) => ({ default: m.AudienceSplit })));
+const ProcessTimeline = dynamic(() => import('../components/sections/ProcessTimeline').then((m) => ({ default: m.ProcessTimeline })));
+const PlaybooksPreview = dynamic(() => import('../components/sections/PlaybooksPreview').then((m) => ({ default: m.PlaybooksPreview })));
+const LocationsGrid = dynamic(() => import('../components/sections/LocationsGrid').then((m) => ({ default: m.LocationsGrid })));
+const BlogPreview = dynamic(() => import('../components/sections/BlogPreview').then((m) => ({ default: m.BlogPreview })));
+const FaqAccordion = dynamic(() => import('../components/sections/FaqAccordion').then((m) => ({ default: m.FaqAccordion })));
+const CtaBanner = dynamic(() => import('../components/sections/CtaBanner').then((m) => ({ default: m.CtaBanner })));
 
-export const metadata: Metadata = {
-  ...constructMetadata({
-    title: pageMeta.home.title,
-    description: pageMeta.home.description,
-    path: pageMeta.home.path
-  })
-};
+export const metadata: Metadata = constructMetadata(pageMeta.home);
 
 export default function Home() {
-  const orgSchema = getOrganizationSchema();
-  const websiteSchema = getWebSiteSchema();
-  const businessSchema = getLocalBusinessSchema({ city: 'General' });
-
   return (
     <>
-      {/* SEO Structured Data */}
-      <SchemaMarkup schema={orgSchema} />
-      <SchemaMarkup schema={websiteSchema} />
-      <SchemaMarkup schema={businessSchema} />
-
-      {/* Above-fold sections — static imports, render immediately */}
       <HeroSection />
-
-      {/* Below-fold sections — dynamic imports, loaded after critical path */}
       <ServicesGrid />
-      <CasestudyFeature />
+      <AudienceSplit />
       <ProcessTimeline />
-      <TestimonialsSlider />
+      <PlaybooksPreview />
       <LocationsGrid />
       <BlogPreview />
+      <FaqAccordion title="Questions builders and brokers ask us" badgeText="FAQ" />
       <CtaBanner />
     </>
   );

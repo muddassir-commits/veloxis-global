@@ -306,3 +306,19 @@ iframe {
     transform: none !important;
   }
 }
+
+/* Long-form article HTML (blog posts). Tailwind's preflight strips heading, list and table
+   styles, and the typography plugin isn't installed, so these are styled explicitly. */
+.article-body { color: #334155; font-size: 1rem; line-height: 1.75; }
+.article-body > * + * { margin-top: 1.1rem; }
+.article-body h2 { color: #0f172a; font-size: 1.5rem; line-height: 1.3; font-weight: 800; margin-top: 2.5rem; scroll-margin-top: 7rem; }
+.article-body h3 { color: #0f172a; font-size: 1.15rem; font-weight: 700; margin-top: 1.75rem; }
+.article-body strong { color: #0f172a; font-weight: 700; }
+.article-body a { color: var(--royal-blue); font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
+.article-body ul { list-style: disc; padding-left: 1.4rem; }
+.article-body ol { list-style: decimal; padding-left: 1.4rem; }
+.article-body li + li { margin-top: 0.45rem; }
+.article-body table { width: 100%; border-collapse: collapse; font-size: 0.9rem; display: block; overflow-x: auto; }
+.article-body th, .article-body td { border: 1px solid #e2e8f0; padding: 0.6rem 0.8rem; text-align: left; vertical-align: top; }
+.article-body th { background: #f8fafc; color: #0f172a; font-weight: 700; }
+.article-body em { color: #64748b; }

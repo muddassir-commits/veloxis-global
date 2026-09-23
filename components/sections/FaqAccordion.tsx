@@ -1,9 +1,6 @@
-'use client';
-
-import React, { useState } from 'react';
+import React from 'react';
 import { faqs as defaultFaqs } from '../../data/faqs';
 import { Badge } from '../ui/Badge';
-import { ChevronDown } from 'lucide-react';
 import { SchemaMarkup } from '../ui/SchemaMarkup';
 import { getFAQPageSchema } from '../../lib/schema';
 
@@ -16,75 +13,47 @@ interface FaqAccordionProps {
   customFaqs?: FAQItem[];
   title?: string;
   badgeText?: string;
+  description?: string;
+  /** Emit FAQPage JSON-LD. Turn off if the page already outputs FAQ schema. */
+  withSchema?: boolean;
 }
 
+// FAQ list with every question and answer visible — no collapsed panels — so readers,
+// search engines and AI crawlers all see the full text. (Name kept for existing imports.)
 export const FaqAccordion: React.FC<FaqAccordionProps> = ({
   customFaqs,
   title = 'Frequently Asked Questions',
-  badgeText = 'QUESTIONS?'
+  badgeText = 'QUESTIONS?',
+  description = 'Straight answers about how we run real estate landing pages, ads and WhatsApp automation.',
+  withSchema = true,
 }) => {
-  const [openIndex, setOpenIndex] = useState<number | null>(null);
-
   const activeFaqs = customFaqs || defaultFaqs;
-
-  const toggle = (index: number) => {
-    setOpenIndex(openIndex === index ? null : index);
-  };
-
-  const schema = getFAQPageSchema(activeFaqs);
 
   return (
     <section className="bg-white py-section-gap" id="faq">
-      {/* Inject FAQ Schema */}
-      <SchemaMarkup schema={schema} />
+      {withSchema && <SchemaMarkup schema={getFAQPageSchema(activeFaqs)} />}
 
       <div className="max-w-3xl mx-auto px-gutter">
-        {/* Section Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-12">
           <Badge variant="orange" className="mb-4">
             {badgeText}
           </Badge>
           <h2 className="text-3xl sm:text-headline-lg font-bold text-slate-900 tracking-tight leading-tight mb-4">
             {title}
           </h2>
-          <p className="text-base sm:text-body-md text-on-surface-variant leading-relaxed">
-            Get answers to common queries about our digital marketing and optimization services.
-          </p>
+          <p className="text-base sm:text-body-md text-on-surface-variant leading-relaxed">{description}</p>
         </div>
 
-        {/* Accordion list */}
-        <div className="flex flex-col gap-4">
-          {activeFaqs.map((faq, index) => {
-            const isOpen = openIndex === index;
-            return (
-              <div
-                key={index}
-                className="border border-slate-100 rounded-xl overflow-hidden bg-slate-50 transition-all duration-300"
-              >
-                <h3 className="m-0">
-                  <button
-                    id={`faq-btn-${index}`}
-                    onClick={() => toggle(index)}
-                    className="w-full flex items-center justify-between p-6 text-left font-bold text-slate-900 hover:text-royal-blue transition-colors focus:outline-none"
-                  >
-                    <span className="text-sm sm:text-base pr-4">{faq.question}</span>
-                    <ChevronDown className={`w-5 h-5 shrink-0 transition-transform duration-300 ${isOpen ? 'rotate-180 text-royal-blue' : 'text-slate-400'}`} />
-                  </button>
-                </h3>
-                
-                <div
-                  className={`transition-all duration-300 overflow-hidden ${
-                    isOpen ? 'max-h-[300px] border-t border-slate-100/50' : 'max-h-0'
-                  }`}
-                >
-                  <p className="p-6 text-sm sm:text-body-md text-on-surface-variant leading-relaxed">
-                    {faq.answer}
-                  </p>
-                </div>
-              </div>
-            );
-          })}
-        </div>
+        <dl className="flex flex-col gap-4">
+          {activeFaqs.map((faq) => (
+            <div key={faq.question} className="border border-slate-100 rounded-xl bg-slate-50 p-6">
+              <dt>
+                <h3 className="font-bold text-slate-900 text-base sm:text-lg leading-snug">{faq.question}</h3>
+              </dt>
+              <dd className="mt-3 text-sm sm:text-body-md text-on-surface-variant leading-relaxed">{faq.answer}</dd>
+            </div>
+          ))}
+        </dl>
       </div>
     </section>
   );

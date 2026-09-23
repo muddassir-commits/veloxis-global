@@ -28,10 +28,15 @@ export default function AnalyticsTracker() {
       const href = anchor.getAttribute('href');
       if (!href) return;
 
+      const page = window.location.pathname;
       if (href.startsWith('tel:')) {
-        events.phoneClick();
-      } else if (href.includes('wa.me') || href.includes('whatsapp.com') || href.includes('api.whatsapp.com')) {
-        events.whatsappClick();
+        events.phoneClick(page);
+      } else if (href.includes('wa.me') || href.includes('api.whatsapp.com/send?phone')) {
+        events.whatsappClick(page);
+      } else if (href.includes('calendly.com')) {
+        events.bookingClick(page);
+      } else if (href === '/contact' || href.startsWith('/contact?')) {
+        events.ctaClick(page, (anchor.textContent || '').trim().slice(0, 60));
       }
     };
 

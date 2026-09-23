@@ -7,7 +7,13 @@ import { Phone, ArrowRight, Home } from 'lucide-react';
 
 export default function NotFound() {
   const serviceLinks = [
-    { name: 'Go Home', href: '/' }
+    { name: 'Landing pages & microsites', href: '/services/high-converting-landing-pages' },
+    { name: 'Meta & Google ads', href: '/services/paid-ads' },
+    { name: 'WhatsApp chatbot & automation', href: '/services/ai-automation' },
+    { name: 'Marketing for developers', href: '/industries/real-estate' },
+    { name: 'Marketing for channel partners', href: '/channel-partners' },
+    { name: 'Example playbooks', href: '/playbooks' },
+    { name: 'Blog & guides', href: '/blog' },
   ];
 
   return (

@@ -105,11 +105,14 @@ const nextConfig = {
       '/free-seo-audit': '/contact',
       '/author/muddassir-ali': '/about',
 
-      // Case studies
-      '/case-studies/noida-ecommerce-skincare': '/case-studies',
-      '/case-studies/noida-edtech-lead-generation': '/case-studies',
-      '/case-studies/lucknow-healthcare-leads': '/case-studies',
-      '/case-studies/kanpur-fabrics-b2b': '/case-studies',
+      // Case studies and testimonials were replaced by example playbooks (Sept 2026)
+      '/case-studies': '/playbooks',
+      '/case-studies/delhi-real-estate-developer': '/playbooks/new-launch-meta-google-ads-plan',
+      '/case-studies/noida-ecommerce-skincare': '/playbooks',
+      '/case-studies/noida-edtech-lead-generation': '/playbooks',
+      '/case-studies/lucknow-healthcare-leads': '/playbooks',
+      '/case-studies/kanpur-fabrics-b2b': '/playbooks',
+      '/testimonials': '/playbooks',
 
       // Blog
       '/blog/google-ads-vs-meta-ads-roi-india': '/blog/google-ads-vs-meta-ads-real-estate-india',

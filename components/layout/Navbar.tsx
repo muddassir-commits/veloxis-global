@@ -4,8 +4,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
-import { Menu, X, ChevronDown, Phone, MapPin, Zap, Target, Bot, ArrowRight, ShieldCheck } from 'lucide-react';
-import { companyStats } from '../../data/stats';
+import { Menu, X, ChevronDown, Phone, Zap, Target, Bot, ArrowRight, ShieldCheck } from 'lucide-react';
 import { Button } from '../ui/Button';
 import { servicesGroups } from '../../data/navbar-data';
 import { siteData } from '../../data/site';
@@ -35,7 +34,7 @@ export const Navbar: React.FC = () => {
 
   // Mobile accordion states
   const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
-  const [mobileLocationsOpen, setMobileLocationsOpen] = useState(false);
+
 
   // Track expanded mobile service groups
   const [mobileActiveServiceGroup, setMobileActiveServiceGroup] = useState<number | null>(null);
@@ -67,7 +66,7 @@ export const Navbar: React.FC = () => {
   useEffect(() => {
     const mediaQuery = window.matchMedia('(hover: hover)');
     setHasHover(mediaQuery.matches);
-    
+
     const listener = (e: MediaQueryListEvent) => {
       setHasHover(e.matches);
     };
@@ -80,7 +79,6 @@ export const Navbar: React.FC = () => {
     setIsOpen(false);
     setServicesOpen(false);
     setMobileServicesOpen(false);
-    setMobileLocationsOpen(false);
     setMobileActiveServiceGroup(null);
   }, [pathname]);
 
@@ -115,18 +113,12 @@ export const Navbar: React.FC = () => {
     return normPath === normHref || normPath.startsWith(normHref + '/');
   };
 
-  const locationLinks = [
-    { name: 'Delhi', href: '/contact' },
-    { name: 'Noida', href: '/contact' },
-    { name: 'Greater Noida', href: '/contact' },
-  ];
-
   return (
     <>
       <header
         className={`fixed left-1/2 -translate-x-1/2 z-50 transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] ${
-          scrolled 
-            ? 'top-4 w-[calc(100%-2rem)] max-w-[1120px] h-14 lg:h-16 bg-white/80 backdrop-blur-[24px] border border-white/50 shadow-[0_12px_40px_rgba(15,23,42,0.08)] rounded-full px-4 md:px-6' 
+          scrolled
+            ? 'top-4 w-[calc(100%-2rem)] max-w-[1120px] h-14 lg:h-16 bg-white/80 backdrop-blur-[24px] border border-white/50 shadow-[0_12px_40px_rgba(15,23,42,0.08)] rounded-full px-4 md:px-6'
             : 'top-0 w-full h-16 lg:h-[72px] bg-white/80 backdrop-blur-[20px] border-b border-slate-100 px-0'
         }`}
       >
@@ -145,7 +137,7 @@ export const Navbar: React.FC = () => {
 
           {/* Center: Desktop Nav Links */}
           <nav className={`hidden lg:flex items-center h-full transition-all duration-300 ${scrolled ? 'gap-1.5 xl:gap-3.5 lg:gap-2' : 'gap-3 xl:gap-5 lg:gap-4'}`} aria-label="Main navigation">
-            
+
             {/* 1. Services dropdown (Mega Menu) */}
             <div
               ref={servicesRef}
@@ -178,8 +170,8 @@ export const Navbar: React.FC = () => {
                 aria-controls="services-dropdown"
                 aria-haspopup="true"
                 className={`flex items-center gap-1 font-sans font-semibold transition-all duration-300 rounded-full whitespace-nowrap shrink-0 ${
-                  scrolled 
-                    ? 'px-2.5 py-1 text-[13px]' 
+                  scrolled
+                    ? 'px-2.5 py-1 text-[13px]'
                     : 'px-3.5 py-1.5 text-[14px]'
                 } ${
                   isActive('/services') || servicesOpen
@@ -245,7 +237,7 @@ export const Navbar: React.FC = () => {
                 <div className="bg-slate-50 border-t border-slate-100 px-7 py-4 flex items-center justify-between">
                   <span className="inline-flex items-center gap-1.5 text-[12px] font-semibold text-slate-500">
                     <ShieldCheck className="w-3.5 h-3.5 text-teal-accent shrink-0" />
-                    {companyStats.clientRating}★ rated · {companyStats.projectsDelivered} projects delivered
+                    Real estate only · Month-to-month, no lock-in
                   </span>
                   <Link
                     href="/services"
@@ -258,7 +250,7 @@ export const Navbar: React.FC = () => {
               </div>
             </div>
 
-            {/* 2. Real Estate link */}
+            {/* 2. Audience links */}
             <Link
               href="/industries/real-estate"
               className={`font-sans font-semibold transition-all duration-300 rounded-full whitespace-nowrap shrink-0 ${
@@ -269,14 +261,27 @@ export const Navbar: React.FC = () => {
                 isActive('/industries/real-estate') ? 'bg-royal-blue text-white shadow-sm shadow-royal-blue/15' : 'text-slate-700 hover:bg-slate-100/80 hover:text-royal-blue'
               }`}
             >
-              Real Estate
+              Developers
+            </Link>
+
+            <Link
+              href="/channel-partners"
+              className={`font-sans font-semibold transition-all duration-300 rounded-full whitespace-nowrap shrink-0 hidden xl:inline-block ${
+                scrolled
+                  ? 'px-2.5 py-1 text-[13px]'
+                  : 'px-3.5 py-1.5 text-[14px]'
+              } ${
+                isActive('/channel-partners') ? 'bg-royal-blue text-white shadow-sm shadow-royal-blue/15' : 'text-slate-700 hover:bg-slate-100/80 hover:text-royal-blue'
+              }`}
+            >
+              Channel Partners
             </Link>
 
             <Link
               href="/about"
               className={`font-sans font-semibold transition-all duration-300 rounded-full whitespace-nowrap shrink-0 ${
-                scrolled 
-                  ? 'px-2.5 py-1 text-[13px]' 
+                scrolled
+                  ? 'px-2.5 py-1 text-[13px]'
                   : 'px-3.5 py-1.5 text-[14px]'
               } ${
                 isActive('/about') ? 'bg-royal-blue text-white shadow-sm shadow-royal-blue/15' : 'text-slate-700 hover:bg-slate-100/80 hover:text-royal-blue'
@@ -286,16 +291,16 @@ export const Navbar: React.FC = () => {
             </Link>
 
             <Link
-              href="/case-studies"
+              href="/playbooks"
               className={`font-sans font-semibold transition-all duration-300 rounded-full whitespace-nowrap shrink-0 ${
-                scrolled 
-                  ? 'px-2.5 py-1 text-[13px]' 
+                scrolled
+                  ? 'px-2.5 py-1 text-[13px]'
                   : 'px-3.5 py-1.5 text-[14px]'
               } ${
-                isActive('/case-studies') ? 'bg-royal-blue text-white shadow-sm shadow-royal-blue/15' : 'text-slate-700 hover:bg-slate-100/80 hover:text-royal-blue'
+                isActive('/playbooks') ? 'bg-royal-blue text-white shadow-sm shadow-royal-blue/15' : 'text-slate-700 hover:bg-slate-100/80 hover:text-royal-blue'
               }`}
             >
-              Case Studies
+              Playbooks
             </Link>
 
             <Link
@@ -314,8 +319,8 @@ export const Navbar: React.FC = () => {
             <Link
               href="/blog"
               className={`font-sans font-semibold transition-all duration-300 rounded-full whitespace-nowrap shrink-0 ${
-                scrolled 
-                  ? 'px-2.5 py-1 text-[13px]' 
+                scrolled
+                  ? 'px-2.5 py-1 text-[13px]'
                   : 'px-3.5 py-1.5 text-[14px]'
               } ${
                 isActive('/blog') ? 'bg-royal-blue text-white shadow-sm shadow-royal-blue/15' : 'text-slate-700 hover:bg-slate-100/80 hover:text-royal-blue'
@@ -324,14 +329,14 @@ export const Navbar: React.FC = () => {
               Blog
             </Link>
           </nav>
- 
+
           {/* Right: Desktop CTA & Phone */}
           <div className={`hidden lg:flex items-center shrink-0 transition-all duration-300 ${scrolled ? 'gap-2.5 xl:gap-3.5 lg:gap-3' : 'gap-4 lg:gap-5'}`}>
             <div className="hero-cta-hover !rounded-full shrink-0">
-              <Button 
-                href="/contact" 
-                variant="primary" 
-                size="sm" 
+              <Button
+                href="/contact"
+                variant="primary"
+                size="sm"
                 className={`!rounded-full transition-all duration-300 shrink-0 ${scrolled ? 'px-3.5 py-1.5 text-[11px]' : 'px-4 py-2 text-xs'}`}
               >
                 Get Free Audit →
@@ -341,15 +346,15 @@ export const Navbar: React.FC = () => {
               href={`tel:${siteData.phoneRaw}`}
               title={`Call ${siteData.phone}`}
               className={`flex items-center justify-center rounded-full bg-royal-blue/10 text-royal-blue hover:bg-royal-blue hover:text-white transition-all duration-300 shrink-0 ${
-                scrolled 
-                  ? 'w-8 h-8' 
+                scrolled
+                  ? 'w-8 h-8'
                   : 'w-10 h-10'
               }`}
             >
               <Phone className={`shrink-0 ${scrolled ? 'w-4 h-4' : 'w-4.5 h-4.5'}`} aria-hidden="true" />
             </a>
           </div>
- 
+
           {/* Mobile: Hamburger Button */}
           <button
             onClick={() => setIsOpen(true)}
@@ -406,7 +411,7 @@ export const Navbar: React.FC = () => {
 
           {/* Mobile Drawer Links Stack */}
           <nav className="flex flex-col gap-2" aria-label="Mobile navigation">
-            
+
             {/* 1. Services Accordion */}
             <div className="flex flex-col border-b border-slate-100 pb-2">
               <button
@@ -471,7 +476,7 @@ export const Navbar: React.FC = () => {
               </div>
             </div>
 
-            {/* 2. Real Estate link */}
+            {/* 2. Audience links */}
             <Link
               href="/industries/real-estate"
               onClick={() => setIsOpen(false)}
@@ -479,45 +484,18 @@ export const Navbar: React.FC = () => {
                 isActive('/industries/real-estate') ? 'text-royal-blue font-bold' : 'text-slate-900 hover:text-royal-blue'
               }`}
             >
-              Real Estate
+              For Developers
             </Link>
 
-            {/* 3. Locations Accordion */}
-            <div className="flex flex-col border-b border-slate-100 pb-2">
-              <button
-                onClick={() => setMobileLocationsOpen(!mobileLocationsOpen)}
-                aria-expanded={mobileLocationsOpen}
-                aria-controls="mobile-locations-list"
-                className="flex items-center justify-between w-full font-bold text-slate-900 text-[16px] py-3 focus:outline-none"
-              >
-                <span>Locations</span>
-                <ChevronDown
-                  className={`w-5 h-5 transition-transform duration-200 text-slate-500 ${mobileLocationsOpen ? 'rotate-180' : ''}`}
-                  aria-hidden="true"
-                />
-              </button>
-
-              <div
-                id="mobile-locations-list"
-                className={`overflow-hidden flex flex-col pl-4 gap-1 mt-1 border-l-2 border-slate-100 transition-all duration-200 ${
-                  mobileLocationsOpen ? 'max-h-[300px] opacity-100' : 'max-h-0 opacity-0 pointer-events-none'
-                }`}
-              >
-                {locationLinks.map((loc, index) => (
-                  <Link
-                    key={index}
-                    href={loc.href}
-                    onClick={() => setIsOpen(false)}
-                    className={`flex items-center gap-2 py-2.5 text-[14px] ${
-                      isActive(loc.href) ? 'text-royal-blue font-bold' : 'text-slate-600 hover:text-royal-blue'
-                    }`}
-                  >
-                    <MapPin className="w-3.5 h-3.5 shrink-0" aria-hidden="true" />
-                    <span>{loc.name}</span>
-                  </Link>
-                ))}
-              </div>
-            </div>
+            <Link
+              href="/channel-partners"
+              onClick={() => setIsOpen(false)}
+              className={`font-bold text-[16px] py-3 border-b border-slate-100 transition-colors duration-300 ${
+                isActive('/channel-partners') ? 'text-royal-blue font-bold' : 'text-slate-900 hover:text-royal-blue'
+              }`}
+            >
+              For Channel Partners
+            </Link>
 
             {/* Core Stacked Links */}
             <Link
@@ -531,13 +509,13 @@ export const Navbar: React.FC = () => {
             </Link>
 
             <Link
-              href="/case-studies"
+              href="/playbooks"
               onClick={() => setIsOpen(false)}
               className={`font-bold text-[16px] py-3 border-b border-slate-100 transition-colors duration-300 ${
-                isActive('/case-studies') ? 'text-royal-blue font-bold' : 'text-slate-900 hover:text-royal-blue'
+                isActive('/playbooks') ? 'text-royal-blue font-bold' : 'text-slate-900 hover:text-royal-blue'
               }`}
             >
-              Case Studies
+              Playbooks
             </Link>
 
             <Link

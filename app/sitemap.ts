@@ -1,95 +1,42 @@
 import { MetadataRoute } from 'next';
 import { blogPosts } from '../data/blog-posts';
-import { caseStudies } from '../data/case-studies';
-import { industriesData } from '../data/industries-data';
 import { servicesData } from '../data/services-data';
+import { playbooks } from '../data/playbooks';
+import { SITE_URL } from '../lib/seo-config';
 
-const BASE = 'https://www.veloxisglobal.com';
+// Only canonical, indexable URLs. Google ignores priority/changefreq, so lastModified
+// is the only hint that matters — bump SITE_CONTENT_UPDATED when static pages change.
+const SITE_CONTENT_UPDATED = new Date('2026-09-23T00:00:00+05:30');
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  // Define realistic static lastModified dates based on content history
-  const defaultDate = new Date('2026-07-03T12:00:00Z');
-
-  // 1. Core pages with specific priority order from ranking strategy
-  const corePages = [
-    { url: `${BASE}`, priority: 1.0, changeFrequency: 'daily' as const, lastModified: defaultDate },
-    { url: `${BASE}/contact`, priority: 0.90, changeFrequency: 'monthly' as const, lastModified: defaultDate },
-    { url: `${BASE}/about`, priority: 0.70, changeFrequency: 'monthly' as const, lastModified: defaultDate },
-    { url: `${BASE}/case-studies`, priority: 0.75, changeFrequency: 'weekly' as const, lastModified: defaultDate },
-    { url: `${BASE}/pricing`, priority: 0.72, changeFrequency: 'monthly' as const, lastModified: defaultDate },
-    { url: `${BASE}/blog`, priority: 0.70, changeFrequency: 'daily' as const, lastModified: defaultDate },
-  ];
-
-  // 2. Services index & Dynamic Service Pages
-  const servicesIndex = [
-    {
-      url: `${BASE}/services`,
-      priority: 0.75,
-      changeFrequency: 'weekly' as const,
-      lastModified: defaultDate
-    },
-    ...servicesData.map(service => ({
-      url: `${BASE}/services/${service.slug}`,
-      priority: 0.80,
-      changeFrequency: 'weekly' as const,
-      lastModified: defaultDate
-    }))
-  ];
-
-  // 3. Industry Detail Pages
-  const industriesAndDynamic = [
-    ...industriesData.map(industry => ({
-      url: `${BASE}/industries/${industry.slug}`,
-      priority: 0.78,
-      changeFrequency: 'weekly' as const,
-      lastModified: defaultDate
-    }))
-  ];
-
-  // 4. Case Studies
-  const dynamicCaseStudies = caseStudies.map(cs => ({
-    url: `${BASE}/case-studies/${cs.slug}`,
-    priority: 0.70,
-    changeFrequency: 'weekly' as const,
-    lastModified: defaultDate
-  }));
-
-  // 5. Blog Posts
-  const dynamicBlogPosts = blogPosts.map(post => ({
-    url: `${BASE}/blog/${post.slug}`,
-    priority: 0.70,
-    changeFrequency: 'weekly' as const,
-    lastModified: new Date(post.isoDate)
-  }));
-
-  // 6. Testimonials
-  const testimonials = [
-    {
-      url: `${BASE}/testimonials`,
-      priority: 0.60,
-      changeFrequency: 'monthly' as const,
-      lastModified: defaultDate
-    }
-  ];
-
-  // 7. Legal Pages
-  const legal = [
+  const staticRoutes = [
+    '',
+    '/services',
+    '/industries/real-estate',
+    '/channel-partners',
+    '/playbooks',
+    '/pricing',
+    '/about',
+    '/contact',
+    '/blog',
     '/privacy-policy',
     '/terms',
-  ].map(route => ({
-    url: `${BASE}${route}`,
-    lastModified: defaultDate,
-    changeFrequency: 'monthly' as const,
-    priority: 0.30,
+  ].map((route) => ({ url: `${SITE_URL}${route}`, lastModified: SITE_CONTENT_UPDATED }));
+
+  const services = servicesData.map((s) => ({
+    url: `${SITE_URL}/services/${s.slug}`,
+    lastModified: SITE_CONTENT_UPDATED,
   }));
 
-  return [
-    ...corePages,
-    ...servicesIndex,
-    ...industriesAndDynamic,
-    ...dynamicCaseStudies,
-    ...dynamicBlogPosts,
-    ...testimonials,
-    ...legal,
-  ];
+  const playbookPages = playbooks.map((p) => ({
+    url: `${SITE_URL}/playbooks/${p.slug}`,
+    lastModified: new Date(p.updated),
+  }));
+
+  const posts = blogPosts.map((post) => ({
+    url: `${SITE_URL}/blog/${post.slug}`,
+    lastModified: new Date(post.modifiedIso),
+  }));
+
+  return [...staticRoutes, ...services, ...playbookPages, ...posts];
 }
