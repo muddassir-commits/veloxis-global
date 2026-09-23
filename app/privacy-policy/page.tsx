@@ -10,7 +10,7 @@ import { privacyFaqs } from '../../data/page-faqs';
 export const metadata: Metadata = constructMetadata(pageMeta.privacy);
 
 const LAST_UPDATED = '23 September 2026';
-const PRIVACY_EMAIL = 'support@veloxisglobal.com';
+const PRIVACY_EMAIL = siteData.email;
 
 // Services that receive data from this site. Keep in sync with app/layout.tsx and lib/.
 const providers = [
