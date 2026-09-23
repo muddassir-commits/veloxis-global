@@ -5,6 +5,7 @@ import { Badge } from '../../components/ui/Badge';
 import { FaqAccordion } from '../../components/sections/FaqAccordion';
 import { constructMetadata, pageMeta } from '../../lib/seo-config';
 import { siteData } from '../../data/site';
+import { privacyFaqs } from '../../data/page-faqs';
 
 export const metadata: Metadata = constructMetadata(pageMeta.privacy);
 
@@ -63,16 +64,8 @@ export default function PrivacyPolicyPage() {
         withSchema={false}
         title="Privacy & Data FAQ"
         badgeText="PRIVACY POLICY FAQ"
-        customFaqs={[
-          {
-            question: "What information does Veloxis Global collect?",
-            answer: "We collect names, emails, company domains, and contact numbers provided voluntarily through our audit and contact forms."
-          },
-          {
-            question: "How can I request my personal data to be deleted?",
-            answer: `Simply contact us at ${siteData.email}. We will remove all your data records from our server pipelines within 24 hours.`
-          }
-        ]}
+        customFaqs={privacyFaqs}
+        description="Short answers based on the policy above."
       />
     </>
   );

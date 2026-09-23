@@ -58,6 +58,14 @@ export const pricingFaqs = [
     answer: 'Landing pages usually go live in 3 to 7 working days. Meta and Google campaigns typically start producing enquiries in their first week, and WhatsApp automation goes live alongside them.',
   },
   {
+    question: 'Which package is right for a channel partner?',
+    answer: 'Starter suits a CP with one or two mandates. Growth suits CPs running campaigns for several projects at once.',
+  },
+  {
+    question: 'Do you charge for the free audit?',
+    answer: 'No. The audit is free and there is no obligation to work with us afterwards.',
+  },
+  {
     question: 'Can we change or pause the package?',
     answer: 'Yes. With 30 days’ notice you can change your package or pause services, and we hand over your pages, audiences and automation settings.',
   },

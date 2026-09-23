@@ -8,6 +8,10 @@ import { blogPosts } from '../data/blog-posts';
 import { faqs } from '../data/faqs';
 import { pricingFaqs } from '../data/pricing';
 import { SITE_URL, FOUNDER_YEARS } from './seo-config';
+import { blogFaqs } from '../data/blog-faqs';
+import { playbookFaqs } from '../data/playbook-faqs';
+
+const qa = (list: { question: string; answer: string }[] = []) => list.flatMap((f) => [`Q: ${f.question}`, `A: ${f.answer}`, '']);
 
 const intro = `> Veloxis Global is a real estate marketing agency for developers, builders, brokers and channel partners in India. It builds project landing pages, runs Meta and Google ads for property leads, and sets up WhatsApp chatbots and CRM automation that reply to every enquiry within seconds. It works only in real estate and reports on site visits and cost per site visit.`;
 
@@ -100,10 +104,11 @@ export function buildLlmsFullTxt(): string {
       if (sec.table) out.push(`| ${sec.table.headers.join(' | ')} |`, ...sec.table.rows.map((r) => `| ${r.join(' | ')} |`));
       out.push('');
     }
+    out.push('### FAQ', ...qa(playbookFaqs[p.slug]));
   }
 
   for (const post of blogPosts) {
-    out.push(`## Guide: ${post.title}`, '', `URL: ${SITE_URL}/blog/${post.slug}`, '', stripHtml(post.htmlContent), '');
+    out.push(`## Guide: ${post.title}`, '', `URL: ${SITE_URL}/blog/${post.slug}`, '', stripHtml(post.htmlContent), '', '### FAQ', ...qa(blogFaqs[post.slug]));
   }
 
   out.push(contact, '');

@@ -167,6 +167,11 @@ export const servicesData: ServiceData[] = [
           'Yes. We can give each CP a tagged link that records them as the lead source, or a separate copy of the page under their brand, depending on how your CP programme is set up.',
       },
       {
+        question: 'Will the page load fast on mobile?',
+        answer:
+          'Yes. Pages are built in Next.js with compressed images and no page-builder bloat, and tested on a mid-range Android phone over 4G, aiming for Google’s “good” Core Web Vitals thresholds.',
+      },
+      {
         question: 'Do you write the content, or do we?',
         answer:
           'We write it, using your brochure, price sheet and sales team’s input, and send it to you for fact-checking before launch. You approve every price, date and claim on the page.',
@@ -423,6 +428,11 @@ export const servicesData: ServiceData[] = [
         question: 'How do you handle consent?',
         answer:
           'Automated WhatsApp messages only go to people who shared their number with you and agreed to be contacted, and every message template is approved by WhatsApp before use. Buyers can opt out at any time.',
+      },
+      {
+        question: 'Who pays for WhatsApp messages?',
+        answer:
+          'WhatsApp message charges are set by Meta and billed through your WhatsApp Business Solution Provider, separately from our fee.',
       },
       {
         question: 'Does this help with channel partner lead disputes?',

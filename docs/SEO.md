@@ -39,7 +39,7 @@ Deliberately **not** targeted:
 | Metadata builder (canonical, Open Graph, Twitter, robots) | `lib/seo-config.ts` → `constructMetadata()` |
 | Structured data (JSON-LD) | `lib/schema.ts` — site-wide graph emitted once in `app/layout.tsx` |
 | Breadcrumb schema | Automatic — rendered by `components/ui/Breadcrumb.tsx` |
-| FAQ schema | Automatic — rendered by `components/sections/FaqAccordion.tsx` (`withSchema={false}` to turn off) |
+| FAQs + FAQ schema | Automatic — rendered by `components/sections/FaqAccordion.tsx` (`withSchema={false}` to turn off) |
 | Service pages | `data/services-data.ts` |
 | Developer and channel partner pages | `data/audiences.ts` |
 | Playbooks (example plans) | `data/playbooks.ts` |
@@ -57,6 +57,7 @@ Deliberately **not** targeted:
 6. **Removing a URL?** Add a single-hop 301/308 in `next.config.mjs` to the closest live page, and update internal links.
 7. **New blog post?** Add it to `data/blog-posts.ts` with `seoTitle`, a 140–160 character `excerpt`, `isoDate`, `modifiedIso`, `service` and a descriptive `imageAlt`. It appears in the sitemap, blog index, related posts and llms.txt automatically. Link to at least one service page from the article body.
 8. When static page content changes, bump `SITE_CONTENT_UPDATED` in `app/sitemap.ts`.
+9. **Every page shows 7–9 FAQs with answers visible** (no collapsed panels), using `components/sections/FaqAccordion.tsx`. FAQ text lives in the page’s data file, or in `data/page-faqs.ts`, `data/blog-faqs.ts` and `data/playbook-faqs.ts`. Answers may only state facts the page already supports. `scripts/seo/crawl.js` fails any page with fewer than 7.
 
 ## Checks
 

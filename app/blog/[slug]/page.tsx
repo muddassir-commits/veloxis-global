@@ -6,6 +6,8 @@ import { Breadcrumb } from '../../../components/ui/Breadcrumb';
 import { getArticleSchema } from '../../../lib/schema';
 import { CtaBanner } from '../../../components/sections/CtaBanner';
 import BlogPostContent from './BlogPostContent';
+import { FaqAccordion } from '../../../components/sections/FaqAccordion';
+import { blogFaqs } from '../../../data/blog-faqs';
 import { constructMetadata } from '../../../lib/seo-config';
 import { blogPosts, getPostBySlug } from '../../../data/blog-posts';
 import { getServiceBySlug } from '../../../data/services-data';
@@ -76,6 +78,10 @@ export default function SingleBlogPostPage({ params }: Params) {
         relatedPosts={relatedPosts}
         service={service ? { slug: service.slug, title: service.title, shortDesc: service.shortDesc } : undefined}
       />
+
+      {blogFaqs[post.slug] && (
+        <FaqAccordion customFaqs={blogFaqs[post.slug]} title="Frequently asked questions" badgeText="FAQ" description="Quick answers from this guide." />
+      )}
 
       <CtaBanner />
     </>

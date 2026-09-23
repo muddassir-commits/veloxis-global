@@ -10,6 +10,8 @@ import { SchemaMarkup } from '../../components/ui/SchemaMarkup';
 import { getWebPageSchema } from '../../lib/schema';
 import { ContactForm } from '../../components/forms/ContactForm';
 import { siteData } from '@/data/site';
+import { FaqAccordion } from '../../components/sections/FaqAccordion';
+import { contactFaqs } from '../../data/page-faqs';
 import { Phone, Mail, MessageCircle, Clock, Calendar, MapPin } from 'lucide-react';
 
 export const metadata: Metadata = constructMetadata(pageMeta.contact);
@@ -123,6 +125,8 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
+
+      <FaqAccordion customFaqs={contactFaqs} title="Before you get in touch" badgeText="FAQ" description="What happens when you contact us, and what the free audit includes." />
     </>
   );
 }

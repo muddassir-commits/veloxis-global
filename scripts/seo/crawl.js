@@ -47,8 +47,18 @@ const decode = (s = '') => s.replace(/&amp;/g, '&').replace(/&#x27;|&#39;/g, "'"
     if (dupes.length) problems.push(`${path}: duplicate JSON-LD ${dupes.join(',')}`);
     if (imgsNoAlt) problems.push(`${path}: ${imgsNoAlt} <img> without alt`);
 
+    // FAQs: every page shows 7–9 questions with answers visible in the HTML.
+    const faqQs = (body.match(/<dt>/g) || []).length;
+    const faqAs = (body.match(/<dd[ >]/g) || []).length;
+    if (faqQs < 7) problems.push(`${path}: only ${faqQs} visible FAQs`);
+    if (faqQs !== faqAs) problems.push(`${path}: ${faqQs} FAQ questions but ${faqAs} answers`);
+    const faqSchema = [...h.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)]
+      .map((m) => { try { return JSON.parse(m[1]); } catch { return {}; } })
+      .find((j) => j['@type'] === 'FAQPage');
+    if (faqSchema && faqSchema.mainEntity.length !== faqQs) problems.push(`${path}: FAQPage has ${faqSchema.mainEntity.length} items, page shows ${faqQs}`);
+
     for (const m of body.matchAll(/href="(\/[^"#?]*)/g)) if (!m[1].startsWith('/_next')) links.add(m[1]);
-    console.log(`${path.padEnd(58)} ${String(words).padStart(5)}w  ${ld.join(',')}\n   ${title}\n   H1: ${h1s[0] || '-'}`);
+    console.log(`${path.padEnd(58)} ${String(words).padStart(5)}w  ${String(faqQs).padStart(2)} FAQs  ${ld.join(',')}`);
   }
 
   console.log(`\nchecking ${links.size} internal link targets…`);

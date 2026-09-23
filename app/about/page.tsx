@@ -12,6 +12,7 @@ import { FaqAccordion } from '../../components/sections/FaqAccordion';
 import { getWebPageSchema } from '../../lib/schema';
 import { servicesData } from '../../data/services-data';
 import { siteData } from '../../data/site';
+import { aboutFaqs } from '../../data/page-faqs';
 
 export const metadata: Metadata = constructMetadata(pageMeta.about);
 
@@ -262,22 +263,7 @@ export default function AboutPage() {
         title="About Veloxis Global"
         badgeText="FAQ"
         description="Quick answers about who we are and how we work."
-        customFaqs={[
-          {
-            question: 'Who founded Veloxis Global?',
-            answer: `Veloxis Global was founded by Muddassir Ali, who has over ${FOUNDER_YEARS} years of experience in lead generation, landing page design, Meta and Google Ads, and sales automation.`,
-          },
-          {
-            question: 'Where does Veloxis Global work?',
-            answer:
-              'We work with real estate developers, brokers and channel partners in Kanpur, Lucknow, Noida, Greater Noida and the wider Delhi NCR, and run campaigns for projects elsewhere in India. We work remotely and do not have a walk-in office.',
-          },
-          {
-            question: 'What makes Veloxis Global different from a general digital marketing agency?',
-            answer:
-              'We work only in real estate, offer only three connected services — landing pages, Meta and Google ads, and WhatsApp automation — and report on site visits and cost per site visit rather than clicks and impressions.',
-          },
-        ]}
+        customFaqs={aboutFaqs(FOUNDER_YEARS)}
       />
 
       {/* CTA */}

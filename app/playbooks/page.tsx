@@ -10,6 +10,8 @@ import { Badge } from '../../components/ui/Badge';
 import { SchemaMarkup } from '../../components/ui/SchemaMarkup';
 import { getWebPageSchema } from '../../lib/schema';
 import { CtaBanner } from '../../components/sections/CtaBanner';
+import { FaqAccordion } from '../../components/sections/FaqAccordion';
+import { playbooksHubFaqs } from '../../data/page-faqs';
 import { ArrowRight, Info } from 'lucide-react';
 
 export const metadata: Metadata = constructMetadata(pageMeta.playbooks);
@@ -77,6 +79,8 @@ export default function PlaybooksPage() {
           })}
         </div>
       </section>
+
+      <FaqAccordion customFaqs={playbooksHubFaqs} title="About these playbooks" badgeText="FAQ" description="What the playbooks are, where the numbers come from, and how to use them." />
 
       <CtaBanner
         title="Want a plan like this for your project?"

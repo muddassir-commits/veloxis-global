@@ -5,6 +5,7 @@ import { Badge } from '../../components/ui/Badge';
 import { FaqAccordion } from '../../components/sections/FaqAccordion';
 import { constructMetadata, pageMeta } from '../../lib/seo-config';
 import { siteData } from '../../data/site';
+import { termsFaqs } from '../../data/page-faqs';
 
 export const metadata: Metadata = constructMetadata(pageMeta.terms);
 
@@ -59,16 +60,8 @@ export default function TermsPage() {
         withSchema={false}
         title="Terms & Contracts FAQ"
         badgeText="TERMS FAQ"
-        customFaqs={[
-          {
-            question: "Do you require long-term contract lock-ins?",
-            answer: "No. Our digital marketing retainer packages are built on flexible month-to-month terms. You can pause or cancel at any time with a 30-day notice."
-          },
-          {
-            question: "What jurisdiction governs these service terms?",
-            answer: `All agreements and terms of service are governed by the laws of India, subject to courts in ${siteData.jurisdiction}.`
-          }
-        ]}
+        customFaqs={termsFaqs}
+        description="Short answers based on the policy above."
       />
     </>
   );

@@ -9,6 +9,8 @@ import { Breadcrumb } from '../../../components/ui/Breadcrumb';
 import { SchemaMarkup } from '../../../components/ui/SchemaMarkup';
 import { getArticleSchema } from '../../../lib/schema';
 import { CtaBanner } from '../../../components/sections/CtaBanner';
+import { FaqAccordion } from '../../../components/sections/FaqAccordion';
+import { playbookFaqs } from '../../../data/playbook-faqs';
 import { Info, ArrowRight } from 'lucide-react';
 
 interface PageProps {
@@ -144,6 +146,10 @@ export default function PlaybookPage({ params }: PageProps) {
           </div>
         </div>
       </article>
+
+      {playbookFaqs[pb.slug] && (
+        <FaqAccordion customFaqs={playbookFaqs[pb.slug]} title="Questions about this plan" badgeText="FAQ" description="Short answers to the questions this playbook raises most often." />
+      )}
 
       <CtaBanner
         title="Get a plan for your own project"
