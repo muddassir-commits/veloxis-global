@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
-import { GoogleAnalytics, GoogleTagManager } from '@next/third-parties/google';
 import Script from 'next/script';
+import ConsentScripts from '../components/analytics/ConsentScripts';
 import { Navbar } from '../components/layout/Navbar';
 import { Footer } from '../components/layout/Footer';
 import { WhatsAppWidget } from '../components/layout/WhatsAppWidget';
@@ -36,7 +36,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en-IN" className="scroll-smooth">
-      <GoogleTagManager gtmId="GTM-5LS7XH76" />
       <head>
         <meta name="google-site-verification" content={process.env.NEXT_PUBLIC_GSC_TOKEN || "CVRVYJuDB29ung6LskjcSWvfZwi1q4L4b21cJxpbcX8"} />
         <link rel="preload" href="/fonts/PlusJakartaSans.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
@@ -53,40 +52,20 @@ export default function RootLayout({
         {/* Client-side trackers (scroll depth, PageView, click interception) */}
         <AnalyticsTracker />
 
-        {/* Google Analytics 4 */}
-        <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || "G-LC9XWNSGCF"} />
+        {/* GTM, GA4, Clarity and Meta Pixel load only after cookie consent */}
+        <ConsentScripts />
 
-        {/* Meta Pixel Base Code — lazyOnload fires after page is idle */}
+        {/* Google Consent Mode defaults: everything denied until the visitor chooses */}
         <Script
-          id="fb-pixel"
-          strategy="lazyOnload"
+          id="consent-default"
+          strategy="beforeInteractive"
           dangerouslySetInnerHTML={{
             __html: `
-              !function(f,b,e,v,n,t,s)
-              {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-              n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-              if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-              n.queue=[];t=b.createElement(e);t.async=!0;
-              t.src=v;s=b.getElementsByTagName(e)[0];
-              s.parentNode.insertBefore(t,s)}(window, document,'script',
-              'https://connect.facebook.net/en_US/fbevents.js');
-              fbq('init', '${process.env.NEXT_PUBLIC_META_PIXEL_ID || "1484475786790290"}');
-              fbq('track', 'PageView');
-            `,
-          }}
-        />
-
-        {/* Microsoft Clarity — lazyOnload: session recording starts after page idle */}
-        <Script
-          id="microsoft-clarity"
-          strategy="lazyOnload"
-          dangerouslySetInnerHTML={{
-            __html: `
-              (function(c,l,a,r,i,t,y){
-                  c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-                  t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-                  y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-              })(window,document,"clarity","script","${process.env.NEXT_PUBLIC_CLARITY_ID || "wvclr1xtkt"}");
+              window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}window.gtag=gtag;
+              gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:'denied'});
+              try{var c=JSON.parse(localStorage.getItem('cookie-consent-v2')||'null');
+              if(!c&&localStorage.getItem('cookie-consent')==='accepted'){c={analytics:true,marketing:true};}
+              if(c){var m=c.marketing?'granted':'denied';gtag('consent','update',{analytics_storage:c.analytics?'granted':'denied',ad_storage:m,ad_user_data:m,ad_personalization:m});}}catch(e){}
             `,
           }}
         />

@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { openCookieSettings } from '../../lib/consent';
 import { Facebook, Instagram, Linkedin } from '../ui/BrandIcons';
 import { Button } from '../ui/Button';
 import { WhatsAppIcon } from '../ui/WhatsAppIcon';
@@ -360,6 +361,9 @@ export const Footer: React.FC = () => {
             <Link href="/terms" className="hover:text-white transition-colors duration-300">
               Terms of Service
             </Link>
+            <button type="button" onClick={openCookieSettings} className="hover:text-white transition-colors duration-300">
+              Cookie settings
+            </button>
             <Link href="/sitemap.xml" className="hover:text-white transition-colors duration-300">
               Sitemap
             </Link>
