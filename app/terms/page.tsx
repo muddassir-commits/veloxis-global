@@ -5,9 +5,10 @@ import { Badge } from '../../components/ui/Badge';
 import { SchemaMarkup } from '../../components/ui/SchemaMarkup';
 import { FaqAccordion } from '../../components/sections/FaqAccordion';
 import { constructMetadata } from '../../lib/seo-config';
+import { siteData } from '../../data/site';
 
 export const metadata: Metadata = constructMetadata({
-  title: "Terms of Service | Veloxis Global Digital Marketing",
+  title: "Terms of Service | Veloxis Global Real Estate Marketing",
   description: "Read the Terms of Service for Veloxis Global. Learn about our month-to-month service agreements and website usage terms. Contact us with questions.",
   path: "/terms"
 });
@@ -67,10 +68,10 @@ export default function TermsPage() {
             <p>By accessing this website, you agree to comply with and be bound by the following Terms of Service. If you disagree with any part of these terms, please do not use our site or request audits.</p>
             
             <h2 className="text-lg font-extrabold text-slate-900 mt-4">1. Strategy Audits</h2>
-            <p>Our Free SEO Audits are delivered in good faith. Key provisions include:</p>
+            <p>Our Free Growth Audits are delivered in good faith. Key provisions include:</p>
             <ul className="list-disc pl-5 flex flex-col gap-2">
-              <li>Audits are manual assessments of public web visibility.</li>
-              <li>We make no guarantees regarding rankings from implementing fixes.</li>
+              <li>Audits are manual assessments of your landing page, ad accounts, and lead response setup.</li>
+              <li>We make no guarantees regarding results from implementing recommendations.</li>
               <li>All recommendations are action roadmaps, not contracts.</li>
             </ul>
 
@@ -86,7 +87,7 @@ export default function TermsPage() {
             <p>These terms and conditions are governed by regional Indian laws:</p>
             <ul className="list-disc pl-5 flex flex-col gap-2">
               <li>Governing body is the Government of India.</li>
-              <li>Any claims are subject strictly to Kanpur, Uttar Pradesh jurisdiction.</li>
+              <li>Any claims are subject strictly to {siteData.address} jurisdiction.</li>
             </ul>
           </div>
         </div>
@@ -103,7 +104,7 @@ export default function TermsPage() {
           },
           {
             question: "What jurisdiction governs these service terms?",
-            answer: "All agreements and terms of service are governed by the laws of India, subject to courts in Kanpur, Uttar Pradesh."
+            answer: `All agreements and terms of service are governed by the laws of India, subject to courts in ${siteData.address}.`
           }
         ]}
       />

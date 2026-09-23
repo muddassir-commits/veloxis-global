@@ -5,18 +5,21 @@ import { Navbar } from '../components/layout/Navbar';
 import { Footer } from '../components/layout/Footer';
 import { WhatsAppWidget } from '../components/layout/WhatsAppWidget';
 import { CookieBanner } from '../components/layout/CookieBanner';
+import { StickyMobileBar } from '../components/ui/StickyMobileBar';
 import AnalyticsTracker from '../components/analytics/AnalyticsTracker';
 import { constructMetadata } from '../lib/seo-config';
+import { SchemaMarkup } from '../components/ui/SchemaMarkup';
+import { getOrganizationSchema, getWebSiteSchema } from '../lib/schema';
 import './globals.css';
 
 export const metadata: Metadata = {
   ...constructMetadata({
-    title: 'Best Digital Marketing Agency in Delhi, Noida, Lucknow & Kanpur | Veloxis Global',
-    description: 'Veloxis Global — India\'s trusted digital marketing agency delivering SEO, Google Ads, Social Media & Content marketing for Delhi, Noida, Lucknow & Kanpur.',
+    title: 'Best Real Estate Marketing Agency in Delhi NCR | Veloxis Global',
+    description: 'Veloxis Global — Delhi NCR\'s trusted real estate marketing agency delivering high-converting landing pages, Google Ads, Meta Ads & WhatsApp automation for property developers.',
     path: '/'
   }),
   title: {
-    default: 'Best Digital Marketing Agency in Delhi, Noida, Lucknow & Kanpur | Veloxis Global',
+    default: 'Best Real Estate Marketing Agency in Delhi NCR | Veloxis Global',
     template: '%s | Veloxis Global',
   },
   icons: {
@@ -39,6 +42,8 @@ export default function RootLayout({
       <head>
         <meta name="google-site-verification" content={process.env.NEXT_PUBLIC_GSC_TOKEN || "CVRVYJuDB29ung6LskjcSWvfZwi1q4L4b21cJxpbcX8"} />
         <link rel="preload" href="/fonts/PlusJakartaSans.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
+        <SchemaMarkup schema={getOrganizationSchema()} />
+        <SchemaMarkup schema={getWebSiteSchema()} />
       </head>
       <body className="font-sans bg-slate-50 text-on-surface antialiased">
         <Navbar />
@@ -46,6 +51,7 @@ export default function RootLayout({
         <Footer />
         <WhatsAppWidget />
         <CookieBanner />
+        <StickyMobileBar />
 
         {/* Client-side trackers (scroll depth, PageView, click interception) */}
         <AnalyticsTracker />

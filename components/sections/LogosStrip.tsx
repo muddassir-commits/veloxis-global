@@ -1,98 +1,22 @@
-/**
- * LogosStrip — Server Component.
- * CSS marquee keyframes defined in globals.css (no styled-jsx needed).
- */
 import React from 'react';
+import Link from 'next/link';
 
 export const LogosStrip: React.FC = () => {
-  const row1Logos = [
-    'Malhotra Prop',
-    'SkillEdge',
-    'Verma Health',
-    'Gupta Fabrics',
-    'Bloom Skin',
-    'Vikas Tech',
-    'Noida Labs',
-    'Delhi Retail',
-    'Apex Diag',
-    'Kanpur Leather',
-  ];
-
-  const row2Logos = [
-    'Hindustan Bld',
-    'Lucknow Hotel',
-    'CP Retailers',
-    'Saket Dental',
-    'NCR Cowork',
-    'Indira Edutech',
-    'Gomti Medical',
-    'Ganga Exports',
-    'Taj Logistics',
-    'Awadh Energy',
-  ];
-
   return (
-    <section className="bg-white py-12 border-y border-slate-100 overflow-hidden relative select-none" aria-label="Trusted clients">
-      <div className="max-w-[1280px] mx-auto px-6 text-center mb-8">
-        <span className="font-sans text-[12px] font-bold tracking-[0.05em] uppercase text-slate-500 block">
-          TRUSTED BY 250+ BUSINESSES ACROSS INDIA
+    <section className="bg-slate-50 py-12 border-y border-slate-100 relative select-none" aria-label="Trusted clients">
+      <div className="max-w-[1280px] mx-auto px-6 text-center">
+        <span className="font-sans text-[12px] font-bold tracking-[0.05em] uppercase text-slate-500 block mb-4">
+          NOW ONBOARDING FOUNDING CLIENTS ACROSS INDIA
         </span>
-      </div>
-
-      {/* Row 1: Scrolling Left, 40s loop */}
-      <div className="flex overflow-hidden w-full relative mb-6" aria-hidden="true">
-        <div className="animate-marquee-left flex gap-6 shrink-0 min-w-full">
-          {/* First set */}
-          {row1Logos.map((logo, idx) => (
-            <div
-              key={`r1-1-${idx}`}
-              className="group flex items-center justify-center w-[120px] h-[40px] bg-slate-50 border border-slate-100 rounded-md transition-all duration-300 hover:border-royal-blue/30 hover:bg-slate-50/50 cursor-pointer shrink-0"
-            >
-              <span className="text-[11px] font-bold text-slate-500 group-hover:text-royal-blue transition-colors duration-300">
-                {logo}
-              </span>
-            </div>
-          ))}
-          {/* Duplicated set for seamless loop */}
-          {row1Logos.map((logo, idx) => (
-            <div
-              key={`r1-2-${idx}`}
-              className="group flex items-center justify-center w-[120px] h-[40px] bg-slate-50 border border-slate-100 rounded-md transition-all duration-300 hover:border-royal-blue/30 hover:bg-slate-50/50 cursor-pointer shrink-0"
-            >
-              <span className="text-[11px] font-bold text-slate-500 group-hover:text-royal-blue transition-colors duration-300">
-                {logo}
-              </span>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      {/* Row 2: Scrolling Right, 50s loop */}
-      <div className="flex overflow-hidden w-full relative" aria-hidden="true">
-        <div className="animate-marquee-right flex gap-6 shrink-0 min-w-full">
-          {/* First set */}
-          {row2Logos.map((logo, idx) => (
-            <div
-              key={`r2-1-${idx}`}
-              className="group flex items-center justify-center w-[120px] h-[40px] bg-slate-50 border border-slate-100 rounded-md transition-all duration-300 hover:border-indigo-accent/30 hover:bg-slate-50/50 cursor-pointer shrink-0"
-            >
-              <span className="text-[11px] font-bold text-slate-500 group-hover:text-indigo-accent transition-colors duration-300">
-                {logo}
-              </span>
-            </div>
-          ))}
-          {/* Duplicated set for seamless loop */}
-          {row2Logos.map((logo, idx) => (
-            <div
-              key={`r2-2-${idx}`}
-              className="group flex items-center justify-center w-[120px] h-[40px] bg-slate-50 border border-slate-100 rounded-md transition-all duration-300 hover:border-indigo-accent/30 hover:bg-slate-50/50 cursor-pointer shrink-0"
-            >
-              <span className="text-[11px] font-bold text-slate-500 group-hover:text-indigo-accent transition-colors duration-300">
-                {logo}
-              </span>
-            </div>
-          ))}
-        </div>
+        <p className="text-sm text-slate-600 max-w-2xl mx-auto mb-6">
+          We are partnering with select businesses in Delhi, Noida, Lucknow, and Kanpur to build predictable client-acquisition engines.
+        </p>
+        <Link 
+          href="/contact"
+          className="text-sm font-bold text-royal-blue hover:text-royal-blue/80 transition-colors inline-flex items-center"
+        >
+          Become one of our first 10 founding clients &rarr;
+        </Link>
       </div>
     </section>
   );

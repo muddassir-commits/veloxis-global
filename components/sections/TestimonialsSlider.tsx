@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { testimonials } from '../../data/testimonials';
+import { companyStats } from '../../data/stats';
 import { SectionLabel } from '../ui/SectionLabel';
 import { Card } from '../ui/Card';
 import { Star, ChevronLeft, ChevronRight } from 'lucide-react';
@@ -182,10 +183,10 @@ export const TestimonialsSlider: React.FC = () => {
             <span className="text-xs font-bold text-slate-600">Client Rating:</span>
             <div className="flex items-center gap-0.5">
               <Star className="w-3.5 h-3.5 fill-sunset-orange text-sunset-orange" />
-              <span className="text-xs font-bold text-slate-900">4.9/5</span>
+              <span className="text-xs font-bold text-slate-900">{companyStats.clientRating}/5</span>
             </div>
             <span className="text-slate-300">|</span>
-            <span className="text-xs font-bold text-slate-500">250+ Verified Client Projects</span>
+            <span className="text-xs font-bold text-slate-500">{companyStats.projectsDelivered} Verified Client Projects</span>
           </div>
         </div>
       </div>

@@ -8,15 +8,13 @@ import { Input, Textarea } from '../ui/Input';
 import { Button } from '../ui/Button';
 import { CheckCircle } from 'lucide-react';
 import { events } from '../../lib/analytics';
+import { siteData } from '../../data/site';
 
 const contactSchema = z.object({
   name: z.string().min(2, { message: 'Name must be at least 2 characters.' }),
-  company: z.string().optional(),
-  email: z.string().email({ message: 'Please enter a valid email address.' }),
   phone: z.string().regex(/^[6-9]\d{9}$/, { message: 'Please enter a valid 10-digit Indian mobile number.' }),
   service: z.string().min(1, { message: 'Please select a service.' }),
-  city: z.string().min(1, { message: 'Please select your city.' }),
-  message: z.string().min(10, { message: 'Message must be at least 10 characters.' }),
+  message: z.string().optional(),
   _honey: z.string().optional(),
 });
 
@@ -35,11 +33,8 @@ export const ContactForm: React.FC = () => {
     resolver: zodResolver(contactSchema),
     defaultValues: {
       name: '',
-      company: '',
-      email: '',
       phone: '',
       service: '',
-      city: '',
       message: '',
       _honey: '',
     }
@@ -79,8 +74,8 @@ export const ContactForm: React.FC = () => {
             <CheckCircle className="w-6 h-6 text-teal-600" />
           </div>
           <h3 className="text-xl font-bold text-slate-900 mb-2">Message Sent Successfully!</h3>
-          <p className="text-slate-600 mb-6 text-sm">
-            Thank you for reaching out. A marketing specialist from our team will contact you within the next 24 hours.
+          <p className="text-slate-600 mt-2 text-sm sm:text-base">
+            Thank you for reaching out. I will review your request and get back to you within the next 24 hours.
           </p>
           <div className="text-left bg-white rounded-md p-4 border border-slate-100 max-w-sm w-full text-sm flex flex-col gap-2 shadow-sm">
             <span className="font-bold text-slate-900">What Happens Next:</span>
@@ -107,30 +102,10 @@ export const ContactForm: React.FC = () => {
             <Input
               id="name"
               label="Full Name*"
-              placeholder="e.g., Rohit Malhotra"
+              placeholder="e.g., Rahul Sharma"
               error={errors.name?.message}
               disabled={isSubmitting}
               {...register('name')}
-            />
-            <Input
-              id="company"
-              label="Company Name"
-              placeholder="e.g., Malhotra Properties"
-              error={errors.company?.message}
-              disabled={isSubmitting}
-              {...register('company')}
-            />
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
-            <Input
-              id="email"
-              label="Email Address*"
-              placeholder="e.g., rohit@company.com"
-              type="email"
-              error={errors.email?.message}
-              disabled={isSubmitting}
-              {...register('email')}
             />
             <Input
               id="phone"
@@ -143,52 +118,29 @@ export const ContactForm: React.FC = () => {
             />
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
-            <div className="w-full flex flex-col gap-1 sm:gap-2">
-              <label htmlFor="service" className="text-xs font-bold text-slate-900 uppercase tracking-wider">
-                Service Interested In*
-              </label>
-              <select
-                id="service"
-                disabled={isSubmitting}
-                className="bg-slate-50 border border-outline-variant rounded-md px-4 py-3 text-slate-900 focus:outline-none focus:ring-2 focus:ring-royal-blue focus:border-transparent transition-all duration-300 w-full disabled:opacity-50"
-                {...register('service')}
-              >
-                <option value="">Select a service</option>
-                <option value="SEO Services">SEO Services</option>
-                <option value="Social Media Marketing">Social Media Marketing</option>
-                <option value="Google Ads & PPC">Google Ads & PPC</option>
-                <option value="Content Marketing">Content Marketing</option>
-                <option value="Web Design & Dev">Web Design & Development</option>
-                <option value="Email & WhatsApp Marketing">Email & WhatsApp Marketing</option>
-              </select>
-              {errors.service && <span className="text-[14px] text-red-500 font-medium">{errors.service.message}</span>}
-            </div>
-
-            <div className="w-full flex flex-col gap-1 sm:gap-2">
-              <label htmlFor="city" className="text-xs font-bold text-slate-900 uppercase tracking-wider">
-                Your City*
-              </label>
-              <select
-                id="city"
-                disabled={isSubmitting}
-                className="bg-slate-50 border border-outline-variant rounded-md px-4 py-3 text-slate-900 focus:outline-none focus:ring-2 focus:ring-royal-blue focus:border-transparent transition-all duration-300 w-full disabled:opacity-50"
-                {...register('city')}
-              >
-                <option value="">Select your city</option>
-                <option value="Delhi">Delhi NCR</option>
-                <option value="Noida">Noida</option>
-                <option value="Lucknow">Lucknow</option>
-                <option value="Kanpur">Kanpur</option>
-                <option value="Other">Other</option>
-              </select>
-              {errors.city && <span className="text-[14px] text-red-500 font-medium">{errors.city.message}</span>}
-            </div>
+          <div className="w-full flex flex-col gap-1 sm:gap-2">
+            <label htmlFor="service" className="text-xs font-bold text-slate-900 uppercase tracking-wider">
+              Service Interested In*
+            </label>
+            <select
+              id="service"
+              disabled={isSubmitting}
+              className="bg-slate-50 border border-outline-variant rounded-md px-4 py-3 text-slate-900 focus:outline-none focus:ring-2 focus:ring-royal-blue focus:border-transparent transition-all duration-300 w-full disabled:opacity-50"
+              {...register('service')}
+            >
+              <option value="">Select a service</option>
+              <option value="High-Converting Landing Pages">High-Converting Landing Pages</option>
+              <option value="Meta & Google Ads">Meta & Google Ads</option>
+              <option value="AI & WhatsApp Automation">AI & WhatsApp Automation</option>
+              <option value="Full Pipeline Setup (All)">Full Pipeline Setup (All)</option>
+              <option value="Other">Other</option>
+            </select>
+            {errors.service && <span className="text-[14px] text-red-500 font-medium">{errors.service.message}</span>}
           </div>
 
           <Textarea
             id="message"
-            label="Message*"
+            label="Message (Optional)"
             placeholder="Tell us about your business goals and marketing challenges..."
             error={errors.message?.message}
             disabled={isSubmitting}
@@ -197,7 +149,7 @@ export const ContactForm: React.FC = () => {
 
           {submitSuccess === false && (
             <div className="bg-red-50 text-red-600 text-sm font-semibold p-4 rounded-md border border-red-100">
-              ❌ Something went wrong. Please try again or email info@veloxisglobal.com directly.
+              ❌ Something went wrong. Please try again or email {siteData.email} directly.
             </div>
           )}
 

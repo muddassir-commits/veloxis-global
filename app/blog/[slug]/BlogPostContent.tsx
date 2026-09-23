@@ -22,7 +22,7 @@ interface PostContent {
   slug: string;
   title: string;
   excerpt: string;
-  category: 'SEO' | 'Google Ads' | 'Social Media' | 'Content' | 'Local SEO';
+  category: 'Landing Pages' | 'Paid Ads' | 'AI Automation' | 'Growth Tips';
   badgeColor: 'teal' | 'orange' | 'indigo' | 'blue';
   author: string;
   authorPhoto: string;
@@ -91,7 +91,7 @@ export default function BlogPostContent({ post, relatedPosts }: { post: PostCont
               Back to Articles
             </Link>
 
-            <Badge color={post.badgeColor} className="mb-4">{post.category}</Badge>
+            <Badge color={post.badgeColor as any} className="mb-4">{post.category}</Badge>
             
             <h1 className="text-3xl sm:text-5xl font-extrabold text-slate-900 tracking-tight leading-[1.1] mb-6">
               {post.title}
@@ -100,7 +100,7 @@ export default function BlogPostContent({ post, relatedPosts }: { post: PostCont
             {/* Author Meta Strip */}
             <div className="flex flex-wrap items-center gap-4 text-xs font-semibold text-slate-400 mb-8 border-y border-slate-100 py-3.5 w-full">
               <Link
-                href={`/author/${post.author.toLowerCase().replace(/\s+/g, '-')}`}
+                href="/about"
                 className="flex items-center gap-1.5 hover:text-royal-blue transition-colors"
               >
                 <div className="w-6 h-6 rounded-full overflow-hidden bg-slate-100 relative">
@@ -108,10 +108,6 @@ export default function BlogPostContent({ post, relatedPosts }: { post: PostCont
                 </div>
                 <span>{post.author}</span>
               </Link>
-              <span className="flex items-center gap-1.5">
-                <Calendar className="w-3.5 h-3.5" />
-                <time dateTime={post.isoDate}>{post.date}</time>
-              </span>
               <span className="flex items-center gap-1.5">
                 <Clock className="w-3.5 h-3.5" />
                 <span>{post.readTime}</span>
@@ -142,13 +138,13 @@ export default function BlogPostContent({ post, relatedPosts }: { post: PostCont
             {/* Featured Image */}
             {post.image && (
               <div className="w-full aspect-[21/9] sm:aspect-[16/9] relative rounded-2xl overflow-hidden mb-8 border border-slate-100 shadow-sm bg-slate-50">
-                <Image 
-                  src={post.image} 
-                  alt={post.title} 
-                  fill 
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 66vw, 800px"
-                  priority 
-                  className="object-cover" 
+                <Image
+                  src={post.image}
+                  alt={post.title}
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 900px"
+                  priority
+                  className="object-cover"
                 />
               </div>
             )}
@@ -163,14 +159,14 @@ export default function BlogPostContent({ post, relatedPosts }: { post: PostCont
             {/* Author Bio Box */}
             <div className="bg-slate-50 border border-slate-100 rounded-2xl p-6 sm:p-8 mt-12 w-full grid grid-cols-1 sm:grid-cols-12 gap-6 items-center">
               <div className="sm:col-span-3 flex justify-center">
-                <Link href={`/author/${post.author.toLowerCase().replace(/\s+/g, '-')}`}>
+                <Link href="/about">
                   <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-full overflow-hidden bg-slate-100 relative shadow-sm border border-slate-200 hover:opacity-90 transition-opacity">
                     <Image src={post.authorPhoto} alt={post.author} fill className="object-cover" />
                   </div>
                 </Link>
               </div>
               <div className="sm:col-span-9 flex flex-col items-start gap-2">
-                <Link href={`/author/${post.author.toLowerCase().replace(/\s+/g, '-')}`} className="hover:text-royal-blue transition-colors">
+                <Link href="/about" className="hover:text-royal-blue transition-colors">
                   <h4 className="text-lg font-extrabold text-slate-900">{post.author}</h4>
                 </Link>
                 <p className="text-xs sm:text-sm text-slate-500 leading-relaxed">
@@ -201,12 +197,12 @@ export default function BlogPostContent({ post, relatedPosts }: { post: PostCont
                     href={`/blog/${rel.slug}`}
                     className="group bg-slate-50 border border-slate-100 p-5 rounded-xl block hover:bg-slate-100/50 hover:shadow-sm transition-all"
                   >
-                    <Badge color={rel.badgeColor} className="mb-2.5">{rel.category}</Badge>
+                    <Badge color={rel.badgeColor as any} className="mb-2.5">{rel.category}</Badge>
                     <h4 className="font-extrabold text-slate-900 text-sm sm:text-base leading-snug group-hover:text-royal-blue transition-colors">
                       {rel.title}
                     </h4>
                     <span className="text-[11px] font-semibold text-slate-400 block mt-3">
-                      <time dateTime={rel.isoDate}>{rel.date}</time> · {rel.readTime}
+                      {rel.readTime}
                     </span>
                   </Link>
                 ))}
@@ -249,14 +245,14 @@ export default function BlogPostContent({ post, relatedPosts }: { post: PostCont
               <div className="absolute top-0 right-0 w-24 h-24 bg-royal-blue/30 rounded-full blur-xl"></div>
               
               <h4 className="text-lg font-extrabold relative z-10 leading-tight">
-                Want to rank your site on Google's page 1?
+                Ready to fill your site-visit pipeline?
               </h4>
               <p className="text-xs text-slate-400 leading-relaxed relative z-10">
-                Get a custom audit explaining technical issues, sitemap configuration status, and search visibility errors.
+                Get a free growth audit covering your landing page, ad spend, and lead response time — with a plan to fix what's leaking.
               </p>
-              
-              <Button id="blog-sidebar-free-audit-btn" href="/free-seo-audit" variant="primary" className="w-full text-center py-3 text-xs mt-2 relative z-10">
-                Claim Free SEO Audit →
+
+              <Button id="blog-sidebar-free-audit-btn" href="/contact" variant="primary" className="w-full text-center py-3 text-xs mt-2 relative z-10">
+                Get My Free Audit →
               </Button>
             </div>
 

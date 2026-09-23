@@ -5,6 +5,7 @@ import { Breadcrumb } from '../../components/ui/Breadcrumb';
 import { generateBreadcrumbSchema } from '../../lib/schema';
 import BlogContent from './BlogContent';
 import { constructMetadata, pageMeta } from '../../lib/seo-config';
+import { blogPosts } from '../../data/blog-posts';
 
 // 1. Dynamic Metadata with canonical alternates
 export function generateMetadata(): Metadata {
@@ -24,13 +25,14 @@ export default function BlogPage() {
     { name: 'Blog', url: 'https://veloxisglobal.com/blog' }
   ]);
 
+  const featuredPost = blogPosts[0];
   const featuredArticleSchema = {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    "headline": "SEO in 2026: What's Changed and What Indian Businesses Must Do Now",
-    "datePublished": "2026-05-20",
-    "dateModified": "2026-05-20",
-    "image": "https://veloxisglobal.com/images/logos/logo.webp",
+    "headline": featuredPost.title,
+    "datePublished": featuredPost.isoDate,
+    "dateModified": featuredPost.isoDate,
+    "image": `https://veloxisglobal.com${featuredPost.image}`,
     "author": {
       "@type": "Person",
       "name": "Muddassir Ali",

@@ -2,7 +2,7 @@ export interface Post {
   slug: string;
   title: string;
   excerpt: string;
-  category: 'SEO' | 'Google Ads' | 'Social Media' | 'Content' | 'Local SEO';
+  category: 'Landing Pages' | 'Paid Ads' | 'AI Automation' | 'Growth Tips';
   badgeColor: 'teal' | 'orange' | 'indigo' | 'blue';
   author: string;
   authorPhoto: string;
@@ -18,76 +18,36 @@ export interface Post {
 
 export const blogPosts: Post[] = [
   {
-    slug: 'seo-in-2026-whats-changed-for-indian-businesses',
-    title: "SEO in 2026: Guide for Indian Businesses",
-    excerpt: "Learn how to rank higher on Google in 2026. Get our expert SEO action plan tailored for Indian businesses and scale your organic website traffic.",
-    category: 'SEO',
-    badgeColor: 'teal',
-    author: 'Muddassir Ali',
-    authorPhoto: '/images/profiles/Muddassir_Ali.webp',
-    date: 'May 20, 2026',
-    isoDate: '2026-05-20T00:00:00+05:30',
-    readTime: '6 min read',
-    headings: [
-      { id: 'introduction', text: 'Introduction: The AI Search Shift' },
-      { id: 'eeat-importance', text: '1. Why E-E-A-T is Now Mandatory' },
-      { id: 'core-web-vitals', text: '2. Speed & Core Web Vitals Weighting' },
-      { id: 'action-steps', text: '3. Action Plan for Indian Businesses' }
-    ],
-    htmlContent: `
-      <h2 id="introduction">Introduction: The AI Search Shift</h2>
-      <p>The search engine optimization landscape in 2026 is radically different than it was even two years ago. With Google integrating AI-generated summaries directly into search queries, businesses in <a href="/digital-marketing-agency-delhi">Delhi</a>, <a href="/digital-marketing-agency-noida">Noida</a>, <a href="/digital-marketing-agency-lucknow">Lucknow</a>, and <a href="/digital-marketing-agency-kanpur">Kanpur</a> must adapt their SEO frameworks to stay visible.</p>
-      
-      <h2 id="eeat-importance">1. Why E-E-A-T is Now Mandatory</h2>
-      <p>Google evaluates content based on who wrote it. If your blog post is not written or reviewed by a verified industry professional, it will not rank. Experience, Expertise, Authoritativeness, and Trustworthiness are key indicators of rank health.</p>
-
-      <h2 id="core-web-vitals">2. Speed & Core Web Vitals Weighting</h2>
-      <p>A website that takes more than 2 seconds to load on a mobile connection loses 40% of its visitors before they even see the logo. Google penalizes slow websites. Building with fast frameworks like Next.js is no longer optional — it is a primary ranking weight factor.</p>
-
-      <h2 id="action-steps">3. Action Plan for Indian Businesses</h2>
-      <p>Clean your sitemaps, verify authors with proper bio structures, write depth-first subject matter content, and ensure page response speeds are under 1.5 seconds. Start with a comprehensive technical audit checklist.</p>
-    `,
-    image: '/images/blog/seo-2026-guide.png',
-    about: [
-      { name: "Search Engine Optimization", sameAs: "https://en.wikipedia.org/wiki/Search_engine_optimization" }
-    ],
-    mentions: [
-      { name: "Google Search", sameAs: "https://en.wikipedia.org/wiki/Google_Search" },
-      { name: "Core Web Vitals", sameAs: "https://en.wikipedia.org/wiki/Web_Vitals" },
-      { name: "Next.js", sameAs: "https://en.wikipedia.org/wiki/Next.js" }
-    ]
-  },
-  {
-    slug: 'google-ads-vs-meta-ads-roi-india',
-    title: "Google Ads vs Meta Ads: India ROI Guide",
-    excerpt: "Should you choose Google Ads or Meta Ads in India? Read our direct comparison of CPC, target intent, and conversion ROAS to scale your leads now.",
-    category: 'Google Ads',
+    slug: 'google-ads-vs-meta-ads-real-estate-india',
+    title: "Google Ads vs Meta Ads for Real Estate Leads",
+    excerpt: "Should you use Google Search or Meta Ads to sell property in Delhi NCR? We break down cost-per-lead, buyer intent, and ROI for developers and brokers.",
+    category: 'Paid Ads',
     badgeColor: 'orange',
     author: 'Muddassir Ali',
-    authorPhoto: '/images/profiles/Muddassir_Ali.webp',
+    authorPhoto: '/images/profiles/muddassir.jpg',
     date: 'May 15, 2026',
     isoDate: '2026-05-15T00:00:00+05:30',
     readTime: '5 min read',
     headings: [
-      { id: 'direct-demand', text: 'Google Ads: Capturing Direct Demand' },
-      { id: 'demand-generation', text: 'Meta Ads: Generating New Demand' },
-      { id: 'roi-verdict', text: 'The ROI Verdict' }
+      { id: 'google-ads', text: 'Google Ads: Capturing High-Intent Buyers' },
+      { id: 'meta-ads', text: 'Meta Ads: Generating Volume & Awareness' },
+      { id: 'roi-verdict', text: 'The ROI Verdict for Brokers' }
     ],
     htmlContent: `
-      <p>One of the most common questions we hear from business owners in <a href="/digital-marketing-agency-delhi">Delhi NCR</a> is: <em>"Where should I invest my paid ad budget — Google Ads or Facebook/Instagram?"</em> The answer depends entirely on your product lifecycle and search intent.</p>
+      <p>The biggest question we get from real estate brokers in Noida and Delhi is: <em>"Where should I put my budget? Google or Meta?"</em> The answer depends on your project type and sales cycle.</p>
 
-      <h2 id="direct-demand">Google Ads: Capturing Direct Demand</h2>
-      <p>When someone searches for "best real estate projects in Noida Sector 150," they have high transactional intent. They are ready to talk to a sales agent. Google Ads lets you capture this demand directly. While the Cost Per Click (CPC) is higher, the lead-to-sale conversion rate is unparalleled.</p>
+      <h2 id="google-ads">Google Ads: Capturing High-Intent Buyers</h2>
+      <p>When a user searches "buy 3BHK in Noida Sector 150," they are actively looking to purchase. Google Search Ads let you capture this exact moment. While the Cost Per Lead (CPL) is higher than Facebook, the lead-to-site-visit ratio is unmatched.</p>
 
-      <h2 id="demand-generation">Meta Ads: Generating New Demand</h2>
-      <p>Most Instagram users are not looking to buy an apartment or book a dental checkup. However, visually appealing creatives, video walkthroughs, and targeted demographic filters can generate interest. Meta is excellent for brand awareness and generating high-volume, lower-cost inquiries.</p>
+      <h2 id="meta-ads">Meta Ads: Generating Volume & Awareness</h2>
+      <p>Facebook and Instagram users aren't actively searching for property. But with high-quality video walkthroughs and hyper-local targeting, you can generate massive lead volume at a lower CPL. It is perfect for new project launches and building your initial lead pipeline.</p>
 
-      <h2 id="roi-verdict">The ROI Verdict</h2>
-      <p>For instant lead-to-conversion outcomes in industries like real estate and medical clinics, prioritize Google Search. For D2C, education courses, or brand launches, Meta Ads will deliver a higher overall ROAS.</p>
+      <h2 id="roi-verdict">The ROI Verdict for Brokers</h2>
+      <p>If you want fast site visits for luxury or ready-to-move properties, start with Google Ads. If you have a newly launched project and need hundreds of inquiries to filter through, rely on Meta Lead Gen forms.</p>
     `,
-    image: '/images/blog/google-meta-roi.png',
+    image: '/images/blog/blog-google-meta-ads.jpg',
     about: [
-      { name: "Return on investment", sameAs: "https://en.wikipedia.org/wiki/Return_on_investment" }
+      { name: "Real estate", sameAs: "https://en.wikipedia.org/wiki/Real_estate" }
     ],
     mentions: [
       { name: "Google Ads", sameAs: "https://en.wikipedia.org/wiki/Google_Ads" },
@@ -95,149 +55,112 @@ export const blogPosts: Post[] = [
     ]
   },
   {
-    slug: 'how-to-optimize-google-business-profile-2026',
-    title: "Local SEO: Google Business Profile 2026 Guide",
-    excerpt: "Master Google Maps pack positioning in 2026. Read our local GBP optimization checklist to get more phone calls and client visits for your clinic.",
-    category: 'Local SEO',
-    badgeColor: 'blue',
+    slug: 'real-estate-landing-page-conversion-hacks',
+    title: "5 Landing Page Hacks to Double Site Visits",
+    excerpt: "Stop sending expensive ad traffic to slow websites. Learn how to build real estate landing pages that convert clicks into instant WhatsApp inquiries.",
+    category: 'Landing Pages',
+    badgeColor: 'teal',
     author: 'Muddassir Ali',
-    authorPhoto: '/images/profiles/Muddassir_Ali.webp',
+    authorPhoto: '/images/profiles/muddassir.jpg',
     date: 'May 10, 2026',
     isoDate: '2026-05-10T00:00:00+05:30',
     readTime: '7 min read',
     headings: [
-      { id: 'gbp-setup', text: '1. Standard Profile Configuration' },
-      { id: 'local-citations', text: '2. Cleaning Local Citations' },
-      { id: 'reviews-generation', text: '3. Automated WhatsApp Review Flow' }
+      { id: 'load-speed', text: '1. The 2-Second Rule' },
+      { id: 'clear-usps', text: '2. Sell the Location, Not Just the Flat' },
+      { id: 'whatsapp-cta', text: '3. Sticky WhatsApp CTAs' }
     ],
     htmlContent: `
-      <p>Local businesses live and die by geographic search map pack placement. This case study details how we scale patient inquiries for a medical clinic based in <a href="/digital-marketing-agency-lucknow">Lucknow</a> using a combination of local GBP optimization and Meta local lead ads.</p>
+      <p>Most real estate channel partners in Delhi NCR waste thousands of rupees daily sending Google and Facebook ad traffic to generic, slow-loading corporate websites. To get site visits, you need a dedicated landing page.</p>
 
-      <h2 id="gbp-setup">1. Standard Profile Configuration</h2>
-      <p>Check that your business address matches utility records exactly. Optimize descriptions with local keyword indicators and set exact operating hours.</p>
+      <h2 id="load-speed">1. The 2-Second Rule</h2>
+      <p>If your landing page takes longer than 2 seconds to load on a 4G mobile network, 50% of your buyers will bounce. We build our pages using Next.js to ensure sub-second load times.</p>
 
-      <h2 id="local-citations">2. Cleaning Local Citations</h2>
-      <p>Ensure name, address, and phone numbers (NAP data) are clean across directory platforms. Search algorithms penalize accounts with conflicting listings.</p>
+      <h2 id="clear-usps">2. Sell the Location, Not Just the Flat</h2>
+      <p>Don't just list amenities. Highlight the distance to the nearest Metro station, upcoming expressways, and prominent schools. Location drives the purchase.</p>
 
-      <h2 id="reviews-generation">3. Automated WhatsApp Review Flow</h2>
-      <p>Integrate automated WhatsApp Business messages to request reviews right after client purchases, helping rank your profile in maps pack algorithms.</p>
+      <h2 id="whatsapp-cta">3. Sticky WhatsApp CTAs</h2>
+      <p>Forms add friction. By implementing a sticky "Chat on WhatsApp" button at the bottom of the mobile screen, we routinely see lead conversion rates jump by 35%.</p>
     `,
-    image: '/images/blog/gbp-local-seo.png',
+    image: '/images/blog/blog-landing-pages.jpg',
     about: [
-      { name: "Local search (Internet)", sameAs: "https://en.wikipedia.org/wiki/Local_search_(Internet)" }
+      { name: "Landing page", sameAs: "https://en.wikipedia.org/wiki/Landing_page" }
     ],
     mentions: [
-      { name: "Google Business Profile", sameAs: "https://en.wikipedia.org/wiki/Google_Maps" },
+      { name: "Conversion rate optimization", sameAs: "https://en.wikipedia.org/wiki/Conversion_rate_optimization" },
       { name: "WhatsApp", sameAs: "https://en.wikipedia.org/wiki/WhatsApp" }
     ]
   },
   {
-    slug: 'content-marketing-eeat-framework',
-    title: "E-E-A-T Content Marketing Funnel Guide",
-    excerpt: "Learn how to build Google E-E-A-T compliant content funnels. Discover our writer verification blueprint to scale and convert organic web traffic.",
-    category: 'Content',
-    badgeColor: 'indigo',
+    slug: 'whatsapp-automation-for-real-estate-leads',
+    title: "How to Automate Real Estate Lead Follow-ups",
+    excerpt: "Speed to lead is everything. Discover how to use WhatsApp automation and CRM integrations to contact every property buyer within 5 minutes.",
+    category: 'AI Automation',
+    badgeColor: 'blue',
     author: 'Muddassir Ali',
-    authorPhoto: '/images/profiles/Muddassir_Ali.webp',
-    date: 'May 05, 2026',
-    isoDate: '2026-05-05T00:00:00+05:30',
-    readTime: '6 min read',
-    headings: [
-      { id: 'eeat-explained', text: 'What is E-E-A-T?' },
-      { id: 'funnel-mapping', text: 'Mapping Your Content Silos' },
-      { id: 'measuring-trust', text: 'Measuring Trust Signals' }
-    ],
-    htmlContent: `
-      <p>Google content quality guidelines evaluate the credibility of the publisher. To rank in 2026, content must be linked to professional authors with external portfolios.</p>
-      
-      <h2 id="eeat-explained">What is E-E-A-T?</h2>
-      <p>Experience, Expertise, Authoritativeness, and Trustworthiness represent Google's quality framework. Direct author profiles with links back to certified pages confirm this detail.</p>
-
-      <h2 id="funnel-mapping">Mapping Your Content Silos</h2>
-      <p>Structure your articles under central parent resource hubs to establish domain credibility in your target niche category.</p>
-
-      <h2 id="measuring-trust">Measuring Trust Signals</h2>
-      <p>Ensure phone numbers, business registry citations, and privacy pages are correctly configured. Clear legal indicators prove authority directly to crawler bots.</p>
-    `,
-    image: '/images/blog/eeat-content-blueprint.png',
-    about: [
-      { name: "Content marketing", sameAs: "https://en.wikipedia.org/wiki/Content_marketing" }
-    ],
-    mentions: [
-      { name: "Google Search", sameAs: "https://en.wikipedia.org/wiki/Google_Search" }
-    ]
-  },
-  {
-    slug: 'instagram-reels-funnel-local-brands',
-    title: "Instagram Reels Strategy: Social Media Funnel",
-    excerpt: "Turn Instagram views into WhatsApp sales leads. Explore our video hooks and DM automation setup to capture and convert customer inquiries online now.",
-    category: 'Social Media',
-    badgeColor: 'teal',
-    author: 'Muddassir Ali',
-    authorPhoto: '/images/profiles/Muddassir_Ali.webp',
+    authorPhoto: '/images/profiles/muddassir.jpg',
     date: 'April 28, 2026',
     isoDate: '2026-04-28T00:00:00+05:30',
     readTime: '6 min read',
     headings: [
-      { id: 'reels-scripting', text: '1. Localized Reel Hooks' },
-      { id: 'chat-triggers', text: '2. Comment Triggers and DMs' },
-      { id: 'whatsapp-handover', text: '3. WhatsApp Business Handovers' }
+      { id: 'speed-to-lead', text: 'The Importance of Speed to Lead' },
+      { id: 'crm-webhooks', text: 'Capturing Leads via Webhooks' },
+      { id: 'automated-drip', text: 'Setting up WhatsApp Drip Campaigns' }
     ],
     htmlContent: `
-      <p>Many brands fail on Instagram because they focus on global virality. For localized businesses, the goal should be regional visibility that generates direct conversation leads.</p>
+      <p>In the highly competitive Delhi NCR real estate market, the first broker to contact a lead usually wins the site visit. If you wait an hour to call a Meta Lead, they've already moved on.</p>
 
-      <h2 id="reels-scripting">1. Localized Reel Hooks</h2>
-      <p>Reference target geographic markers in the first 3 seconds to hook viewers located in <a href="/digital-marketing-agency-noida">Noida</a>, <a href="/digital-marketing-agency-delhi">Delhi</a>, <a href="/digital-marketing-agency-lucknow">Lucknow</a>, or <a href="/digital-marketing-agency-kanpur">Kanpur</a>.</p>
+      <h2 id="speed-to-lead">The Importance of Speed to Lead</h2>
+      <p>Research shows that contacting a lead within 5 minutes increases the odds of qualification by 21 times. Manual follow-ups simply cannot scale when you are generating 50+ leads a day.</p>
 
-      <h2 id="chat-triggers">2. Comment Triggers and DMs</h2>
-      <p>Invite comments with key phrase markers (e.g., 'send audit') and deploy automation bots to immediately DM target links.</p>
+      <h2 id="crm-webhooks">Capturing Leads via Webhooks</h2>
+      <p>Using tools like Make.com or n8n, we capture Meta Lead Forms instantly and push them directly into your CRM (like Salesforce or Hubspot) so your sales team gets an instant push notification.</p>
 
-      <h2 id="whatsapp-handover">3. WhatsApp Business Handovers</h2>
-      <p>Route the direct link to open a WhatsApp dialogue containing pre-filled inquiries, starting sales discussions instantly.</p>
+      <h2 id="automated-drip">Setting up WhatsApp Drip Campaigns</h2>
+      <p>Simultaneously, the automation triggers an instant WhatsApp template message from your business number: <em>"Hi [Name], thanks for your interest in [Project]. Here is the e-brochure you requested!"</em> This initiates the conversation immediately.</p>
     `,
-    image: '/images/blog/instagram-reels-funnel.png',
+    image: '/images/blog/blog-whatsapp-automation.jpg',
     about: [
-      { name: "Instagram", sameAs: "https://en.wikipedia.org/wiki/Instagram" }
+      { name: "Marketing automation", sameAs: "https://en.wikipedia.org/wiki/Marketing_automation" }
     ],
     mentions: [
       { name: "WhatsApp", sameAs: "https://en.wikipedia.org/wiki/WhatsApp" },
-      { name: "Social media marketing", sameAs: "https://en.wikipedia.org/wiki/Social_media_marketing" }
+      { name: "Customer relationship management", sameAs: "https://en.wikipedia.org/wiki/Customer_relationship_management" }
     ]
   },
   {
-    slug: 'meta-performance-max-best-practices',
-    title: "Google Ads Performance Max PMax Campaign Guide",
-    excerpt: "Optimize Google Ads Performance Max (PMax) campaigns in 2026. Learn how to configure assets and audience signals to scale conversion leads today.",
-    category: 'Google Ads',
-    badgeColor: 'orange',
+    slug: 'real-estate-local-seo-ncr',
+    title: "Local SEO for Channel Partners in Delhi NCR",
+    excerpt: "Stop fighting over expensive ad clicks. Learn how to rank your real estate agency on Google Maps to generate free, inbound property inquiries.",
+    category: 'Growth Tips',
+    badgeColor: 'indigo',
     author: 'Muddassir Ali',
-    authorPhoto: '/images/profiles/Muddassir_Ali.webp',
+    authorPhoto: '/images/profiles/muddassir.jpg',
     date: 'April 20, 2026',
     isoDate: '2026-04-20T00:00:00+05:30',
     readTime: '5 min read',
     headings: [
-      { id: 'pmax-overview', text: 'Performance Max in 2026' },
-      { id: 'asset-groups', text: 'Optimizing Asset Groups' },
-      { id: 'audience-signals', text: 'Configuring Audience Signals' }
+      { id: 'google-business', text: 'Optimizing Your Google Business Profile' },
+      { id: 'local-keywords', text: 'Targeting Hyper-Local Keywords' },
+      { id: 'review-strategy', text: 'The Review Generation Engine' }
     ],
     htmlContent: `
-      <p>Performance Max uses AI model parameters to bid and place ads across Search, YouTube, Maps, and Display networks dynamically.</p>
+      <p>While paid ads are essential for new project launches, Local SEO is the long-term asset that generates inbound calls without ad spend. Here's how real estate brokers in Noida and Delhi can dominate the map pack.</p>
 
-      <h2 id="pmax-overview">Performance Max in 2026</h2>
-      <p>PMax is now the dominant campaign format in Google Ads. Our Google Ads Certified team configures signals to prevent ad spend bleed.</p>
+      <h2 id="google-business">Optimizing Your Google Business Profile</h2>
+      <p>Ensure your agency's name, address, and phone number (NAP) are exact. Add your specific service areas (e.g., Noida Sector 150, Greater Noida West) to signal your relevance to Google.</p>
 
-      <h2 id="asset-groups">Optimizing Asset Groups</h2>
-      <p>Provide high-quality graphic assets, clean title formats, and high-conversion target landing pages to allow PMax templates to optimize properly.</p>
+      <h2 id="local-keywords">Targeting Hyper-Local Keywords</h2>
+      <p>Instead of trying to rank for "Real Estate India", build landing pages specifically optimized for "Best property broker in Greater Noida West" or "Commercial shops in Noida Sector 18."</p>
 
-      <h2 id="audience-signals">Configuring Audience Signals</h2>
-      <p>Upload clean custom lists of past client conversion data to tell the algorithm exactly who is most likely to click and inquire.</p>
+      <h2 id="review-strategy">The Review Generation Engine</h2>
+      <p>Reviews are the #1 ranking factor for local maps. Implement a system where every client who completes a registry or site visit receives an automated WhatsApp link asking for a 5-star Google review.</p>
     `,
-    image: '/images/blog/pmax-performance.png',
+    image: '/images/blog/blog-local-seo.jpg',
     about: [
-      { name: "Google Ads", sameAs: "https://en.wikipedia.org/wiki/Google_Ads" }
+      { name: "Local search (Internet)", sameAs: "https://en.wikipedia.org/wiki/Local_search_(Internet)" }
     ],
     mentions: [
-      { name: "YouTube", sameAs: "https://en.wikipedia.org/wiki/YouTube" },
       { name: "Google Maps", sameAs: "https://en.wikipedia.org/wiki/Google_Maps" }
     ]
   }

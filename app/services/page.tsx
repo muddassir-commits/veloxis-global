@@ -1,5 +1,6 @@
 import React from 'react';
 import { Metadata } from 'next';
+import Image from 'next/image';
 import { constructMetadata } from '../../lib/seo-config';
 import { Badge } from '../../components/ui/Badge';
 import { Card } from '../../components/ui/Card';
@@ -16,10 +17,16 @@ import {
 import { CtaBanner } from '../../components/sections/CtaBanner';
 
 export const metadata: Metadata = constructMetadata({
-  title: "B2B Performance & Digital Marketing Services | Veloxis Global",
-  description: "Accelerate your revenue with 14 performance digital marketing services: Local SEO, Meta Ads, B2B lead list development, CRM tools, Shopify catalogs & workshops.",
+  title: "Real Estate Marketing Services | Veloxis Global",
+  description: "Three services built for real estate: high-converting landing pages, Meta & Google Ads, and AI-powered WhatsApp automation — everything you need to fill your site visits.",
   path: "/services"
 });
+
+const serviceImages: Record<string, string> = {
+  'high-converting-landing-pages': '/images/sections/service-landing-pages.jpg',
+  'paid-ads': '/images/sections/service-paid-ads.jpg',
+  'ai-automation': '/images/sections/service-ai-automation.jpg',
+};
 
 const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
   Target,
@@ -45,18 +52,6 @@ export default function ServicesPage() {
     { name: 'Services', item: 'https://veloxisglobal.com/services' }
   ]);
 
-  // Map database slugs to SEO routes
-  const getServiceHref = (slug: string) => {
-    const mapping: Record<string, string> = {
-      'seo': '/services/seo',
-      'content-marketing': '/services/content-marketing',
-      'social-media-marketing': '/services/social-media-marketing',
-      'web-design-development': '/services/web-design-development',
-      'email-marketing': '/services/email-marketing',
-    };
-    return mapping[slug] || `/services/${slug}`;
-  };
-
   return (
     <>
       <SchemaMarkup schema={breadcrumbSchema} />
@@ -73,10 +68,10 @@ export default function ServicesPage() {
         <div className="max-w-container-max mx-auto px-gutter">
           <Badge variant="teal" className="mb-4">WHAT WE DO</Badge>
           <h1 className="text-4xl sm:text-headline-lg font-extrabold text-slate-900 tracking-tight mb-4">
-            Everything Your Business Needs to Dominate Digital in 2026
+            The Only Three Services That Move Real Estate
           </h1>
           <p className="text-base sm:text-body-md text-on-surface-variant max-w-2xl mx-auto leading-relaxed">
-            Fourteen specialized marketing and engineering services engineered to capture leads, rank search terms, automate workflows, and drive direct ROI.
+            Landing pages that convert, ads that fill your pipeline, and AI that answers every enquiry in under a minute — nothing else, nothing generic.
           </p>
         </div>
       </section>
@@ -87,8 +82,8 @@ export default function ServicesPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {servicesData.map((service) => {
               const IconComponent = iconMap[service.icon] || Target;
-              const serviceHref = getServiceHref(service.slug);
-              
+              const serviceHref = `/services/${service.slug}`;
+
               // Colors configuration
               const accentColors: Record<string, string> = {
                 teal: 'bg-teal-500/10 text-teal-600 border-teal-200/50',
@@ -106,8 +101,17 @@ export default function ServicesPage() {
               const activeColorClass = accentColors[service.accentColor] || accentColors.teal;
 
               return (
-                <Card key={service.id} className="flex flex-col justify-between items-start text-left h-full bg-white p-8 border border-slate-200 rounded-3xl hover:shadow-md transition-shadow relative overflow-hidden">
-                  <div className="w-full">
+                <Card key={service.id} className="flex flex-col justify-between items-start text-left h-full bg-white p-0 border border-slate-200 rounded-3xl hover:shadow-md transition-shadow relative overflow-hidden">
+                  <div className="w-full h-40 relative overflow-hidden">
+                    <Image
+                      src={serviceImages[service.slug] || '/images/sections/service-landing-pages.jpg'}
+                      alt={service.title}
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                      className="object-cover"
+                    />
+                  </div>
+                  <div className="w-full p-8">
                     <div className={`w-12 h-12 rounded-2xl flex items-center justify-center mb-6 border ${activeColorClass}`}>
                       <IconComponent className="w-6 h-6" />
                     </div>
@@ -134,16 +138,16 @@ export default function ServicesPage() {
                     </div>
                   </div>
 
-                  <div className="w-full flex items-center justify-between mt-auto pt-4 border-t border-slate-100">
+                  <div className="w-full flex items-center justify-between mt-auto px-8 pb-8 pt-4 border-t border-slate-100">
                     <div>
                       <span className="text-[10px] font-black text-slate-400 block uppercase tracking-wider">Starting Price</span>
                       <span className="font-extrabold text-slate-950 text-xs sm:text-sm">{service.pricing.starter}</span>
                     </div>
 
-                    <Button 
-                      href={serviceHref} 
-                      variant="outline" 
-                      className="py-2 px-4 text-xs font-bold" 
+                    <Button
+                      href={serviceHref}
+                      variant="outline"
+                      className="py-2 px-4 text-xs font-bold"
                       id={`services-card-btn-${service.id}`}
                     >
                       Explore Details →

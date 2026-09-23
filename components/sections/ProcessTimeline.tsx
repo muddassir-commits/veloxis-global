@@ -16,12 +16,12 @@ export const ProcessTimeline: React.FC = () => {
     {
       step: '2',
       title: 'Strategy Building',
-      desc: 'We construct a customized 90-day marketing roadmap mapping out channels, campaigns, budget allocations, and key deliverables.'
+      desc: 'We construct a customized 90-day site-visit roadmap mapping out channels, campaigns, budget allocations, and key deliverables.'
     },
     {
       step: '3',
       title: 'Execution',
-      desc: 'Our specialists go live. SEO optimizations, certified paid ads setup, content creation, and tracking tags are rolled out simultaneously.'
+      desc: 'Our specialists go live. Landing page optimizations, certified paid ads setup, CRM integration, and tracking tags are rolled out simultaneously.'
     },
     {
       step: '4',
@@ -42,10 +42,10 @@ export const ProcessTimeline: React.FC = () => {
         <div className="text-center max-w-[700px] mx-auto mb-20 section-reveal">
           <SectionLabel className="text-center">OUR PROCESS</SectionLabel>
           <h2 className="text-headline-lg-mobile sm:text-headline-lg font-bold text-slate-900 tracking-tight leading-tight mb-4">
-            From Day 1 to Results — Our 5-Step Growth Framework
+            From Day 1 to Site Visits — Our 5-Step Growth Framework
           </h2>
           <p className="text-body-lg text-slate-500 max-w-[600px] mx-auto text-center mt-4">
-            A systematic, transparent approach to scaling your brand&apos;s digital footprints.
+            A systematic, transparent approach to scaling your real estate project&apos;s digital footprint.
           </p>
         </div>
 

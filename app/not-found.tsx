@@ -7,12 +7,7 @@ import { Phone, ArrowRight, Home } from 'lucide-react';
 
 export default function NotFound() {
   const serviceLinks = [
-    { name: 'Search Engine Optimization (SEO)', href: '/services/seo' },
-    { name: 'Google Ads & PPC Management', href: '/services/google-ads-ppc' },
-    { name: 'Social Media Marketing (SMM)', href: '/services/social-media-marketing' },
-    { name: 'Web Design & Development', href: '/services/web-design-development' },
-    { name: 'Content Marketing Services', href: '/services/content-marketing' },
-    { name: 'Email & WhatsApp Automation', href: '/services/email-marketing' },
+    { name: 'Go Home', href: '/' }
   ];
 
   return (
@@ -75,7 +70,7 @@ export default function NotFound() {
             Back to Homepage
           </Button>
           <Button href="/contact" variant="secondary" size="lg" className="w-full sm:w-auto">
-            Speak to a Consultant
+            Book a Free Audit
           </Button>
         </div>
       </div>

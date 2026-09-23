@@ -2,20 +2,17 @@ import React from 'react';
 import { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Badge } from '../../components/ui/Badge';
-import { Button } from '../../components/ui/Button';
+
 import { Breadcrumb } from '../../components/ui/Breadcrumb';
 import { SchemaMarkup } from '../../components/ui/SchemaMarkup';
 import { 
   Target, 
   Eye, 
   Users, 
-  Shield, 
   ExternalLink, 
   Award, 
   BookOpen, 
   CheckCircle, 
-  Briefcase, 
   Globe,
   Search,
   Layers,
@@ -25,6 +22,7 @@ import {
 } from 'lucide-react';
 import { Linkedin } from '../../components/ui/BrandIcons';
 import { constructMetadata, pageMeta, FOUNDER_YEARS } from '../../lib/seo-config';
+import { companyStats } from '../../data/stats';
 import { FaqAccordion } from '../../components/sections/FaqAccordion';
 import { generateHowToSchema, generateOrganizationSchema } from '../../lib/schema';
 
@@ -74,12 +72,6 @@ export default function AboutPage() {
       issuer: "Google Skillshop",
       status: "Verified",
       link: "https://skillshop.exceedlms.com/student/path/29485-google-analytics-individual-qualification"
-    },
-    {
-      title: "HubSpot Digital Marketing",
-      issuer: "HubSpot Academy",
-      status: "Certification in progress",
-      link: "#"
     }
   ];
 
@@ -101,8 +93,8 @@ export default function AboutPage() {
     },
     {
       icon: <Globe className="w-5 h-5 text-royal-blue" />,
-      title: "🇮🇳 Built for Indian Businesses",
-      desc: "We understand Indian businesses — their culture, their customers, and what digital marketing actually takes to work in India."
+      title: "Built for Delhi NCR Real Estate",
+      desc: "We understand the local real estate market — buyer psychology, competition, and what it takes to generate site visits."
     }
   ];
 
@@ -112,7 +104,7 @@ export default function AboutPage() {
     [
       {
         name: "Detailed Audit",
-        text: "We look at your website speed, SEO keywords, and current ads as a website optimization company and best SEO agency to find issues."
+        text: "We look at your landing page speed, current ad accounts, and lead response time as a real estate marketing agency to find missed opportunities."
       },
       {
         name: "Funnel Design",
@@ -120,7 +112,7 @@ export default function AboutPage() {
       },
       {
         name: "High-Performance Traffic",
-        text: "We launch custom campaigns as a Meta Ads performance agency and manage your Google Ads PPC services to drive real buyers."
+        text: "We launch custom campaigns as a real estate ads performance agency and manage your Google Ads PPC to drive real home buyers."
       },
       {
         name: "Sales Automation",
@@ -150,17 +142,28 @@ export default function AboutPage() {
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#1e293b_1px,transparent_1px),linear-gradient(to_bottom,#1e293b_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-40"></div>
         <div className="absolute -top-40 -right-40 w-96 h-96 rounded-full bg-royal-blue/20 blur-[128px]"></div>
 
-        <div className="max-w-container-max mx-auto px-gutter relative z-10">
-          <div className="max-w-[800px] flex flex-col items-start gap-6">
+        <div className="max-w-container-max mx-auto px-gutter relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          <div className="lg:col-span-8 flex flex-col items-start gap-6">
             <span className="inline-flex items-center gap-2 bg-royal-blue/20 border border-royal-blue/30 px-3 py-1 rounded-full text-xs font-bold text-royal-blue uppercase tracking-wider">
               GROWTH PARTNER
             </span>
             <h1 className="text-4xl sm:text-5xl lg:text-[56px] font-extrabold tracking-tight leading-[1.1] text-white">
-              We Are the Best Digital Marketing Agency & Lead Generation Partner
+              I started Veloxis to fix the real estate agency model.
             </h1>
             <p className="text-lg sm:text-xl text-slate-300 leading-relaxed max-w-2xl">
-              Veloxis Global is a top digital marketing agency in India. We help businesses grow by building automated lead generation services, paid advertising campaigns, and search engine optimization services.
+              No bloated retainers. No vanity metrics. Just a founder-led team focused entirely on scaling your sales pipeline.
             </p>
+          </div>
+          
+          <div className="lg:col-span-4 flex justify-center lg:justify-end">
+            <div className="relative w-48 h-48 sm:w-64 sm:h-64 rounded-full border-4 border-slate-800 shadow-2xl overflow-hidden">
+              <Image 
+                src="/images/profiles/muddassir.jpg" 
+                alt="Muddassir Ali - Founder" 
+                fill 
+                className="object-cover"
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -176,19 +179,19 @@ export default function AboutPage() {
                 OUR STORY
               </span>
               <h2 className="text-3xl font-extrabold text-slate-900 tracking-tight">
-                How Veloxis Global Helps Businesses Grow
+                How I Built Veloxis Global to Help Businesses Grow
               </h2>
               
               <p>
-                Veloxis Global was started with one main goal: to make digital marketing simple, clear, and highly profitable. We believe that every marketing campaign should bring real business sales, not just views, likes, or empty promises.
+                I started Veloxis Global with one main goal: to make digital marketing simple, clear, and highly profitable. I believe that every marketing campaign should bring real business sales, not just views, likes, or empty promises.
               </p>
               
               <p>
-                As a leading <strong>digital marketing agency in India</strong>, we focus on building predictable client acquisition engines. This means we design systems that combine high-performing paid ads, organic search engine optimization, and custom CRM automation to help you get more customers consistently.
+                As a leading <strong>real estate marketing agency in Delhi NCR</strong>, we focus on building predictable client acquisition engines. This means designing systems that combine high-converting landing pages, high-performing paid ads, and custom WhatsApp/CRM automation to help you get more site visits consistently.
               </p>
               
               <p>
-                We noticed that many businesses spend a lot of money on a <strong>paid advertising company</strong> or social media ads, but they do not have a good system to convert those leads into paying customers. Veloxis Global was created to solve this exact problem by building end-to-end marketing funnels.
+                I noticed that many businesses spend a lot of money on a <strong>paid advertising company</strong> or social media ads, but they do not have a good system to convert those leads into paying customers. Veloxis Global was created to solve this exact problem by building end-to-end marketing funnels.
               </p>
               
               <div className="border-l-4 border-royal-blue pl-4 py-2 my-2 italic text-slate-900 font-semibold bg-slate-50">
@@ -200,7 +203,7 @@ export default function AboutPage() {
               </p>
               
               <p>
-                Today, Veloxis Global serves as a trusted growth partner for companies in real estate, e-commerce, coaching, legal, and software industries. We help brands automate their daily sales tasks, optimize their websites, and scale their customer growth using real data and honest strategies.
+                Today, Veloxis Global serves as a trusted growth partner for real estate developers and channel partners in Delhi NCR. We help brands automate their daily sales tasks, optimize their websites, and scale their customer growth using real data and honest strategies.
               </p>
             </div>
 
@@ -211,11 +214,11 @@ export default function AboutPage() {
                 <div className="flex flex-col gap-3.5 text-sm font-semibold text-slate-700">
                   <div className="flex items-center gap-2.5">
                     <CheckCircle className="w-5 h-5 text-royal-blue shrink-0" />
-                    <span>Facebook Ads Marketing & Google PPC</span>
+                    <span>High-Converting Landing Page Design</span>
                   </div>
                   <div className="flex items-center gap-2.5">
                     <CheckCircle className="w-5 h-5 text-royal-blue shrink-0" />
-                    <span>Search Engine Optimization Services (SEO)</span>
+                    <span>Meta Ads Marketing & Google Ads PPC</span>
                   </div>
                   <div className="flex items-center gap-2.5">
                     <CheckCircle className="w-5 h-5 text-royal-blue shrink-0" />
@@ -225,14 +228,6 @@ export default function AboutPage() {
                     <CheckCircle className="w-5 h-5 text-royal-blue shrink-0" />
                     <span>CRM Lead Management & Sales Pipelines</span>
                   </div>
-                  <div className="flex items-center gap-2.5">
-                    <CheckCircle className="w-5 h-5 text-royal-blue shrink-0" />
-                    <span>High-Converting Landing Page Design</span>
-                  </div>
-                  <div className="flex items-center gap-2.5">
-                    <CheckCircle className="w-5 h-5 text-royal-blue shrink-0" />
-                    <span>Full Website Optimization & SEO Audits</span>
-                  </div>
                 </div>
               </div>
 
@@ -240,14 +235,25 @@ export default function AboutPage() {
               <div className="grid grid-cols-2 gap-4">
                 <div className="bg-slate-900 text-white p-5 rounded-2xl border border-white/5 relative overflow-hidden text-left">
                   <div className="absolute top-0 right-0 w-16 h-16 bg-royal-blue/10 rounded-full blur-xl"></div>
-                  <span className="text-2xl sm:text-3xl font-black text-royal-blue block">62+</span>
-                  <span className="text-[11px] text-slate-400 font-bold uppercase tracking-wider block mt-1">SEO Audits Done</span>
+                  <span className="text-2xl sm:text-3xl font-black text-royal-blue block">{companyStats.projectsDelivered || '20+'}</span>
+                  <span className="text-xs font-bold text-slate-500 uppercase tracking-wider block mt-1">Projects Delivered</span>
                 </div>
                 <div className="bg-slate-900 text-white p-5 rounded-2xl border border-white/5 relative overflow-hidden text-left">
                   <div className="absolute top-0 right-0 w-16 h-16 bg-teal-accent/10 rounded-full blur-xl"></div>
                   <span className="text-2xl sm:text-3xl font-black text-teal-accent block">100%</span>
-                  <span className="text-[11px] text-slate-400 font-bold uppercase tracking-wider block mt-1">ROI Focus</span>
+                  <span className="text-xs font-bold text-slate-500 uppercase tracking-wider block mt-1">ROI Focus</span>
                 </div>
+              </div>
+
+              {/* Team photo filling remaining column height */}
+              <div className="relative w-full flex-1 min-h-[220px] rounded-2xl overflow-hidden border border-slate-100">
+                <Image
+                  src="/images/sections/about-story.jpg"
+                  alt="The Veloxis Global team at work"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 40vw"
+                  className="object-cover"
+                />
               </div>
             </div>
 
@@ -284,7 +290,7 @@ export default function AboutPage() {
                   Detailed Audit
                 </h3>
                 <p className="text-xs sm:text-sm text-slate-500 leading-relaxed">
-                  We look at your website speed, SEO keywords, and current ads as a <strong>website optimization company</strong> and <strong>best SEO agency</strong> to find issues.
+                  We look at your landing page speed, current ad accounts, and lead response time as a <strong>real estate marketing agency</strong> to find missed opportunities.
                 </p>
               </div>
             </div>
@@ -320,7 +326,7 @@ export default function AboutPage() {
                   High-Performance Traffic
                 </h3>
                 <p className="text-xs sm:text-sm text-slate-500 leading-relaxed">
-                  We launch custom campaigns as a <strong>Meta Ads performance agency</strong> and manage your <strong>Google Ads PPC services</strong> to drive real buyers.
+                  We launch custom campaigns as a <strong>real estate ads performance agency</strong> and manage your <strong>Google Ads PPC</strong> to drive real home buyers.
                 </p>
               </div>
             </div>
@@ -384,10 +390,10 @@ export default function AboutPage() {
                 OUR VISION
               </span>
               <h3 className="text-2xl font-extrabold text-slate-900">
-                Dominating Regional Digital Growth
+                The Trusted Name in Real Estate Growth
               </h3>
               <p className="text-slate-600 leading-relaxed text-sm sm:text-base">
-                "To be India's most trusted digital growth partner — starting from Kanpur and growing to serve businesses across the country by 2027."
+                "To be Delhi NCR's most trusted real estate growth partner — the first call a developer makes when they need site visits, not just impressions."
               </p>
             </div>
           </div>
@@ -405,7 +411,7 @@ export default function AboutPage() {
               A Lean, Results-First Infrastructure
             </h2>
             <p className="text-lg text-slate-700 leading-relaxed mt-2">
-              "Veloxis Global is a lean, focused agency. I work with a trusted network of SEO specialists, content writers, designers, and ads managers — bringing in the right expertise for each client's needs. No bloated retainer, no unnecessary overhead. Just results."
+              "Veloxis Global is a lean, focused agency. I work with a trusted network of landing page developers, ad managers, and automation specialists — bringing in the right expertise for each client's needs. No bloated retainer, no unnecessary overhead. Just results."
             </p>
           </div>
         </div>
@@ -524,15 +530,15 @@ export default function AboutPage() {
               </span>
               
               <p>
-                Muddassir Ali is the founder of Veloxis Global. He is a professional <strong>digital marketing consultant</strong> with more than {FOUNDER_YEARS} years of experience helping businesses get more customers. He specializes in setting up <strong>B2B lead generation systems</strong> and client acquisition engines that run on autopilot.
+                Muddassir Ali is the founder of Veloxis Global. He is a professional <strong>real estate digital marketing consultant</strong> with more than {FOUNDER_YEARS} years of experience helping developers and brokers get more customers. He specializes in setting up <strong>real estate lead generation systems</strong> and client acquisition engines that run on autopilot.
               </p>
               
               <p>
-                After working with many local businesses, training institutes, and real estate brands, Muddassir realized that most companies waste money on ads because they do not have a good follow-up system. To solve this, he started Veloxis Global, which is now recognized as a trusted provider of <strong>digital marketing services in Kanpur</strong> and across India. He helped build this <strong>marketing automation agency</strong> to ensure businesses can turn cold traffic into loyal clients.
+                After working with many developers, real estate brokers, and channel partners, Muddassir realized that most companies waste money on ads because they do not have a good follow-up system. To solve this, he started Veloxis Global, which is now recognized as a trusted provider of <strong>real estate marketing services in Delhi NCR</strong>. He helped build this <strong>marketing automation agency</strong> to ensure real estate brands can turn cold traffic into site visits and bookings.
               </p>
               
               <p>
-                Muddassir is certified by Google and HubSpot. He manages ad campaigns, optimizes websites for search engines, and builds automation flows that nurture leads. He keeps things simple, honest, and focused on helping your business make more money.
+                Muddassir is certified by Google and HubSpot. He manages ad campaigns, builds high-converting landing pages, and sets up automation flows that nurture leads. He keeps things simple, honest, and focused on helping your business make more money.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 mt-2 w-full sm:w-auto">
@@ -566,11 +572,11 @@ export default function AboutPage() {
         customFaqs={[
           {
             question: "Who is the founder of Veloxis Global?",
-            answer: `Veloxis Global was founded by Muddassir Ali, a digital marketing consultant with over ${FOUNDER_YEARS} years of experience in lead generation services, search engine optimization (SEO), Meta ads, and sales automation.`
+            answer: `Veloxis Global was founded by Muddassir Ali, a digital marketing consultant with over ${FOUNDER_YEARS} years of experience in lead generation services, landing page design, Meta & Google Ads, and sales automation.`
           },
           {
             question: "Where is Veloxis Global based?",
-            answer: "Veloxis Global is based in Kanpur, Uttar Pradesh, India. If you are looking for the best digital marketing services in Kanpur, we are here to help you. We also work with businesses in Noida, Delhi NCR, Lucknow, and other countries."
+            answer: "Veloxis Global is headquartered in Delhi NCR, India. If you are looking for the best real estate marketing services in Delhi, Noida, or Greater Noida, we are here to help you dominate your local market."
           },
           {
             question: "What makes Veloxis Global different from traditional agencies?",

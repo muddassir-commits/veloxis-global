@@ -21,13 +21,11 @@ export default function RealEstateIndustryPage() {
   }
 
   const breadcrumbItems = [
-    { name: 'Industries', href: '/industries' },
     { name: industry.title, href: `/industries/${industry.slug}` }
   ];
 
   const breadcrumbSchema = getBreadcrumbListSchema([
     { name: 'Home', item: 'https://veloxisglobal.com' },
-    { name: 'Industries', item: 'https://veloxisglobal.com/industries' },
     { name: industry.title, item: `https://veloxisglobal.com/industries/${industry.slug}` }
   ]);
 

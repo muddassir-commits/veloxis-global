@@ -2,7 +2,8 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { 
+import Image from 'next/image';
+import {
   ArrowRight, Check, ShieldAlert, Sparkles, 
   TrendingUp, ChevronRight 
 } from 'lucide-react';
@@ -12,37 +13,53 @@ import { Button } from '../ui/Button';
 import { Card } from '../ui/Card';
 import { FaqAccordion } from '../sections/FaqAccordion';
 import { CtaBanner } from '../sections/CtaBanner';
+import { SchemaMarkup } from '../ui/SchemaMarkup';
+import { generateFAQSchema } from '../../lib/schema';
 
 interface IndustryPageTemplateProps {
   industry: IndustryData;
 }
 
 export const IndustryPageTemplate: React.FC<IndustryPageTemplateProps> = ({ industry }) => {
+  const faqSchema = industry.faqs ? generateFAQSchema(
+    industry.faqs.map(f => ({ q: f.question, a: f.answer }))
+  ) : null;
+
   return (
     <div className="bg-slate-50 min-h-screen">
+      {faqSchema && <SchemaMarkup schema={faqSchema} />}
       {/* 1. Hero Section */}
-      <section className="bg-white py-16 sm:py-24 text-left relative overflow-hidden border-b border-slate-100">
-        {/* Glow patterns */}
-        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-royal-blue/5 rounded-full blur-3xl -z-10" />
-        <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-teal-accent/5 rounded-full blur-3xl -z-10" />
+      <section className="text-left relative overflow-hidden border-b border-slate-100 py-16 sm:py-24">
+        <Image
+          src="/images/sections/industries-hero.jpg"
+          alt={`${industry.title} in Delhi NCR`}
+          fill
+          priority
+          className="object-cover object-center"
+          quality={85}
+        />
+        <div
+          className="absolute inset-0 bg-gradient-to-r from-slate-900/92 via-slate-900/80 to-slate-900/55"
+          aria-hidden="true"
+        />
 
-        <div className="max-w-container-max mx-auto px-gutter grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <div className="relative z-10 max-w-container-max mx-auto px-gutter grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           <div className="lg:col-span-7 flex flex-col items-start">
             <Badge variant="teal" className="mb-4 flex items-center gap-1.5">
-              <span className="text-sm">{industry.emoji}</span>
+              <span className="text-sm" aria-hidden="true">{industry.emoji}</span>
               <span>{industry.heroBadge}</span>
             </Badge>
-            <h1 className="text-4xl sm:text-headline-lg font-extrabold text-slate-900 tracking-tight leading-tight mb-6">
+            <h1 className="text-4xl sm:text-headline-lg font-extrabold text-white tracking-tight leading-tight mb-6">
               {industry.heroTitle}
             </h1>
-            <p className="text-base sm:text-body-lg text-on-surface-variant leading-relaxed mb-8">
+            <p className="text-base sm:text-body-lg text-white/80 leading-relaxed mb-8">
               {industry.heroDescription}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
-              <Button id={`industry-hero-audit-${industry.slug}`} href="/free-seo-audit" variant="primary">
+              <Button id={`industry-hero-audit-${industry.slug}`} href="/contact" variant="primary">
                 Get {industry.title} Audit →
               </Button>
-              <Button id={`industry-hero-contact-${industry.slug}`} href="/contact" variant="outline">
+              <Button id={`industry-hero-contact-${industry.slug}`} href="/contact" variant="outline" className="!border-white/30 !text-white hover:!bg-white/10">
                 Talk to Strategy Lead
               </Button>
             </div>
@@ -182,7 +199,7 @@ export const IndustryPageTemplate: React.FC<IndustryPageTemplateProps> = ({ indu
             {industry.recommendedServices.map((service, idx) => (
               <Card key={idx} className="bg-slate-50 border border-slate-200 rounded-3xl p-8 flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow">
                 <div>
-                  <div className="text-3xl mb-4">{service.emoji}</div>
+                  <div className="text-3xl mb-4" aria-hidden="true">{service.emoji}</div>
                   <h3 className="font-extrabold text-lg text-slate-900 mb-3">{service.title}</h3>
                   <p className="text-xs sm:text-sm text-slate-500 mb-6 leading-relaxed">
                     Custom-tailored setups specifically optimized for {industry.title.toLowerCase()} marketing goals.

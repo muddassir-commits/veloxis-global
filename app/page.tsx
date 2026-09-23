@@ -5,8 +5,6 @@ import { constructMetadata, pageMeta } from '../lib/seo-config';
 import { getOrganizationSchema, getWebSiteSchema, getLocalBusinessSchema } from '../lib/schema';
 import { SchemaMarkup } from '../components/ui/SchemaMarkup';
 import { HeroSection } from '../components/sections/HeroSection';
-import { LogosStrip } from '../components/sections/LogosStrip';
-
 // Dynamic imports for below-fold sections — keeps initial JS bundle lean.
 // SSR is kept on (default) for SEO-critical content sections so their text
 // remains in server-rendered HTML. TestimonialsSlider uses ssr:false because
@@ -24,8 +22,8 @@ const CtaBanner = dynamic(() => import('../components/sections/CtaBanner').then(
 
 export const metadata: Metadata = {
   ...constructMetadata({
-    title: "Best Digital Marketing Agency in India | Veloxis Global",
-    description: "Veloxis Global — India's results-driven digital marketing agency. Expert SEO, Google Ads & social media marketing to scale your brand. Get a free audit today.",
+    title: pageMeta.home.title,
+    description: pageMeta.home.description,
     path: pageMeta.home.path
   })
 };
@@ -44,7 +42,6 @@ export default function Home() {
 
       {/* Above-fold sections — static imports, render immediately */}
       <HeroSection />
-      <LogosStrip />
 
       {/* Below-fold sections — dynamic imports, loaded after critical path */}
       <ServicesGrid />

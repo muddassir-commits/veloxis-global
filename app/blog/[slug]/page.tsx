@@ -4,6 +4,7 @@ import { notFound } from 'next/navigation';
 import { SchemaMarkup } from '../../../components/ui/SchemaMarkup';
 import { Breadcrumb } from '../../../components/ui/Breadcrumb';
 import { generateBreadcrumbSchema } from '../../../lib/schema';
+import { CtaBanner } from '../../../components/sections/CtaBanner';
 import BlogPostContent from './BlogPostContent';
 import { constructMetadata } from '../../../lib/seo-config';
 import { Post, blogPosts } from '../../../data/blog-posts';
@@ -115,6 +116,8 @@ export default function SingleBlogPostPage({ params }: Params) {
       </section>
 
       <BlogPostContent post={postWithReadTime} relatedPosts={relatedPosts} />
+
+      <CtaBanner />
     </>
   );
 }

@@ -1,14 +1,13 @@
 import { NextResponse } from 'next/server';
 import * as z from 'zod';
+import { insertRow, escapeHtml } from '../../../lib/db';
+import { sendEmail } from '../../../lib/mail';
 
 const contactSchema = z.object({
   name: z.string().min(2),
-  company: z.string().optional(),
-  email: z.string().email(),
   phone: z.string().regex(/^[6-9]\d{9}$/),
   service: z.string().min(1),
-  city: z.string().min(1),
-  message: z.string().min(10),
+  message: z.string().optional(),
   _honey: z.string().optional(),
 });
 
@@ -33,35 +32,34 @@ export async function POST(request: Request) {
 
     const { _honey, ...formData } = parsedData.data;
 
-    // 3. Forward to N8N webhook
-    const webhookUrl = process.env.N8N_CONTACT_WEBHOOK;
-    if (!webhookUrl) {
-      console.warn('Warning: N8N_CONTACT_WEBHOOK is not configured.');
-      // Return success mock locally to prevent errors if not configured yet
-      return NextResponse.json({ 
-        success: true, 
-        mock: true, 
-        message: 'Mock contact request handled successfully (no N8N webhook set)' 
-      });
+    // 3. Save to Supabase and notify by email. Either one succeeding means the lead is captured.
+    const [saved, mailed] = await Promise.all([
+      insertRow('contacts', {
+        name: formData.name,
+        phone: formData.phone,
+        service: formData.service,
+        message: formData.message || null,
+      }),
+      sendEmail({
+        to: process.env.NOTIFICATION_EMAIL || process.env.SMTP_USER || 'hello@veloxisglobal.com',
+        subject: `New Contact Lead: ${formData.name}`,
+        html: `
+        <h2>New Contact Form Submission</h2>
+        <p><strong>Name:</strong> ${escapeHtml(formData.name)}</p>
+        <p><strong>Phone:</strong> ${escapeHtml(formData.phone)}</p>
+        <p><strong>Service:</strong> ${escapeHtml(formData.service)}</p>
+        <p><strong>Message:</strong> ${escapeHtml(formData.message || 'N/A')}</p>
+      `,
+      }),
+    ]);
+
+    const emailed = mailed.success && !('mock' in mailed);
+    if (!saved.ok && !emailed) {
+      console.error('Contact lead could not be stored or emailed:', formData);
+      return NextResponse.json({ success: false, error: 'Could not submit right now. Please try WhatsApp.' }, { status: 502 });
     }
 
-    const response = await fetch(webhookUrl, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        ...formData,
-        timestamp: new Date().toISOString(),
-        source: 'contact-form'
-      })
-    });
-
-    if (!response.ok) {
-      const errorText = await response.text();
-      console.error('N8N webhook returned error response:', errorText);
-      throw new Error(`N8N response code: ${response.status}`);
-    }
-
-    return NextResponse.json({ success: true, message: 'Contact request forwarded to N8n successfully' });
+    return NextResponse.json({ success: true, message: 'Contact request received successfully' });
   } catch (error: any) {
     console.error('Error handling contact request:', error);
     return NextResponse.json({ success: false, error: error.message || 'Internal server error' }, { status: 500 });

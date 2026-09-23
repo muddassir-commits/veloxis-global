@@ -3,17 +3,17 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { usePathname } from 'next/navigation';
 import { Facebook, Instagram, Linkedin } from '../ui/BrandIcons';
 import { Button } from '../ui/Button';
-import { ChevronDown, ChevronUp, ArrowUp, Phone, Mail, MapPin } from 'lucide-react';
+import { WhatsAppIcon } from '../ui/WhatsAppIcon';
+import { ChevronDown, ChevronUp, ArrowUp, Phone, Mail, MapPin, CheckCircle2 } from 'lucide-react';
+import { siteData } from '../../data/site';
 
 export const Footer: React.FC = () => {
   const [email, setEmail] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [success, setSuccess] = useState<boolean | null>(null);
   const [openSection, setOpenSection] = useState<string | null>(null);
-  const pathname = usePathname();
 
   const toggleSection = (section: string) => {
     setOpenSection(openSection === section ? null : section);
@@ -50,22 +50,6 @@ export const Footer: React.FC = () => {
     });
   };
 
-  const isAuditPage = pathname?.includes('free-seo-audit');
-
-  if (isAuditPage) {
-    return (
-      <footer className="bg-[#0B0F19] text-white py-8 border-t border-slate-800/40 text-center font-sans">
-        <div className="max-w-container-max mx-auto px-gutter flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400 text-left">
-          <p>© {new Date().getFullYear()} Veloxis Global. All rights reserved.</p>
-          <div className="flex gap-4">
-            <Link href="/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</Link>
-            <Link href="/terms" className="hover:text-white transition-colors">Terms of Service</Link>
-          </div>
-        </div>
-      </footer>
-    );
-  }
-
   return (
     <footer className="bg-[#0B0F19] text-white pt-20 pb-8 border-t border-slate-800/40 font-sans relative overflow-hidden">
       {/* Background radial glow decorations */}
@@ -89,7 +73,7 @@ export const Footer: React.FC = () => {
               />
             </Link>
             <p className="text-[15px] sm:text-[16px] text-slate-400 leading-relaxed max-w-lg">
-              India&apos;s results-driven digital marketing agency. We build predictable client acquisition engines by linking paid advertising with advanced sales funnel automation and search engine optimization.
+              Delhi NCR&apos;s results-driven real estate marketing agency. We build predictable lead generation engines by linking paid advertising with high-converting landing pages and WhatsApp automation.
             </p>
             <div className="flex flex-wrap gap-2">
               <span className="text-[10px] font-bold tracking-wider uppercase bg-white/5 border border-white/10 px-2.5 py-1 rounded-full text-slate-400">
@@ -114,7 +98,7 @@ export const Footer: React.FC = () => {
               </div>
               <div className="shrink-0 w-full sm:w-auto text-center">
                 <Button 
-                  href="/free-seo-audit" 
+                  href="/contact" 
                   variant="primary" 
                   className="!rounded-full hover:shadow-lg w-full sm:w-auto text-xs py-3.5 px-6 shrink-0"
                 >
@@ -146,91 +130,27 @@ export const Footer: React.FC = () => {
               id="footer-services-list"
               className={`flex flex-col gap-3 text-[14px] text-slate-400 mt-3 md:mt-0 ${openSection === 'services' ? 'block' : 'hidden md:flex'}`}
             >
+              {/* New services will be added here */}
               <li>
-                <Link href="/services/seo" className="hover:text-white hover:translate-x-1 transition-all duration-200 inline-block">
-                  Search Engine Optimization
+                <Link href="/services/high-converting-landing-pages" className="hover:text-white hover:translate-x-1 transition-all duration-200 inline-block">
+                  Landing Pages
                 </Link>
               </li>
               <li>
-                <Link href="/services/paid-advertising-performance-marketing" className="hover:text-white hover:translate-x-1 transition-all duration-200 inline-block">
-                  Paid Advertising Campaigns
+                <Link href="/services/paid-ads" className="hover:text-white hover:translate-x-1 transition-all duration-200 inline-block">
+                  Meta & Google Ads
                 </Link>
               </li>
               <li>
-                <Link href="/services/google-ads-ppc" className="hover:text-white hover:translate-x-1 transition-all duration-200 inline-block">
-                  Google Ads PPC Services
-                </Link>
-              </li>
-              <li>
-                <Link href="/services/social-media-marketing" className="hover:text-white hover:translate-x-1 transition-all duration-200 inline-block">
-                  Social Media Marketing
-                </Link>
-              </li>
-              <li>
-                <Link href="/services/ai-automation-systems" className="hover:text-white hover:translate-x-1 transition-all duration-200 inline-block">
-                  WhatsApp & CRM Automation
-                </Link>
-              </li>
-              <li>
-                <Link href="/services/web-design-development" className="hover:text-white hover:translate-x-1 transition-all duration-200 inline-block">
-                  Website Design & Dev
+                <Link href="/services/ai-automation" className="hover:text-white hover:translate-x-1 transition-all duration-200 inline-block">
+                  AI & WhatsApp Automation
                 </Link>
               </li>
             </ul>
           </div>
 
-          {/* Focus Industries Column (span 3) */}
+          {/* Locations Column (span 3) */}
           <div className="lg:col-span-3 flex flex-col md:gap-5 border-b border-white/5 md:border-b-0 pb-4 md:pb-0">
-            <button
-              onClick={() => toggleSection('industries')}
-              aria-expanded={openSection === 'industries'}
-              aria-controls="footer-industries-list"
-              className="flex items-center justify-between w-full md:cursor-default text-left md:pointer-events-none focus:outline-none py-2 md:py-0"
-            >
-              <span className="text-[12px] tracking-[0.08em] uppercase text-slate-200 font-black">INDUSTRIES</span>
-              <span className="md:hidden text-slate-400">
-                {openSection === 'industries' ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
-              </span>
-            </button>
-            <ul
-              id="footer-industries-list"
-              className={`flex flex-col gap-3 text-[14px] text-slate-400 mt-3 md:mt-0 ${openSection === 'industries' ? 'block' : 'hidden md:flex'}`}
-            >
-              <li>
-                <Link href="/industries/real-estate" className="hover:text-white hover:translate-x-1 transition-all duration-200 inline-block">
-                  Real Estate Agency
-                </Link>
-              </li>
-              <li>
-                <Link href="/industries/ecommerce" className="hover:text-white hover:translate-x-1 transition-all duration-200 inline-block">
-                  E-commerce & Brands
-                </Link>
-              </li>
-              <li>
-                <Link href="/industries/coaching-consulting" className="hover:text-white hover:translate-x-1 transition-all duration-200 inline-block">
-                  Coaches & Consultants
-                </Link>
-              </li>
-              <li>
-                <Link href="/industries/healthcare" className="hover:text-white hover:translate-x-1 transition-all duration-200 inline-block">
-                  Healthcare & Medical
-                </Link>
-              </li>
-              <li>
-                <Link href="/industries/saas" className="hover:text-white hover:translate-x-1 transition-all duration-200 inline-block">
-                  SaaS & Tech Companies
-                </Link>
-              </li>
-              <li>
-                <Link href="/industries/msme-small-business" className="hover:text-white hover:translate-x-1 transition-all duration-200 inline-block">
-                  MSMEs & Retailers
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          {/* Locations Column (span 2) */}
-          <div className="lg:col-span-2 flex flex-col md:gap-5 border-b border-white/5 md:border-b-0 pb-4 md:pb-0">
             <button
               onClick={() => toggleSection('locations')}
               aria-expanded={openSection === 'locations'}
@@ -247,30 +167,25 @@ export const Footer: React.FC = () => {
               className={`flex flex-col gap-3 text-[14px] text-slate-400 mt-3 md:mt-0 ${openSection === 'locations' ? 'block' : 'hidden md:flex'}`}
             >
               <li>
-                <Link href="/digital-marketing-agency-delhi" className="hover:text-white hover:translate-x-1 transition-all duration-200 inline-block">
-                  Delhi NCR
+                <Link href="/contact" className="hover:text-white hover:translate-x-1 transition-all duration-200 inline-block">
+                  Delhi
                 </Link>
               </li>
               <li>
-                <Link href="/digital-marketing-agency-noida" className="hover:text-white hover:translate-x-1 transition-all duration-200 inline-block">
-                  Noida Agency
+                <Link href="/contact" className="hover:text-white hover:translate-x-1 transition-all duration-200 inline-block">
+                  Noida
                 </Link>
               </li>
               <li>
-                <Link href="/digital-marketing-agency-lucknow" className="hover:text-white hover:translate-x-1 transition-all duration-200 inline-block">
-                  Lucknow Agency
-                </Link>
-              </li>
-              <li>
-                <Link href="/digital-marketing-agency-kanpur" className="hover:text-white hover:translate-x-1 transition-all duration-200 inline-block">
-                  Kanpur (HQ)
+                <Link href="/contact" className="hover:text-white hover:translate-x-1 transition-all duration-200 inline-block">
+                  Greater Noida
                 </Link>
               </li>
             </ul>
           </div>
 
-          {/* Company Column (span 2) */}
-          <div className="lg:col-span-2 flex flex-col md:gap-5 border-b border-white/5 md:border-b-0 pb-4 md:pb-0">
+          {/* Company Column (span 3) */}
+          <div className="lg:col-span-3 flex flex-col md:gap-5 border-b border-white/5 md:border-b-0 pb-4 md:pb-0">
             <button
               onClick={() => toggleSection('company')}
               aria-expanded={openSection === 'company'}
@@ -289,6 +204,11 @@ export const Footer: React.FC = () => {
               <li>
                 <Link href="/about" className="hover:text-white hover:translate-x-1 transition-all duration-200 inline-block">
                   About Our Agency
+                </Link>
+              </li>
+              <li>
+                <Link href="/industries/real-estate" className="hover:text-white hover:translate-x-1 transition-all duration-200 inline-block">
+                  Real Estate Focus
                 </Link>
               </li>
               <li>
@@ -319,8 +239,8 @@ export const Footer: React.FC = () => {
             </ul>
           </div>
 
-          {/* Contact Details Column (span 2) */}
-          <div className="lg:col-span-2 flex flex-col md:gap-5 pb-4 md:pb-0">
+          {/* Contact Details Column (span 3) */}
+          <div className="lg:col-span-3 flex flex-col md:gap-5 pb-4 md:pb-0">
             <button
               onClick={() => toggleSection('contact')}
               aria-expanded={openSection === 'contact'}
@@ -336,17 +256,17 @@ export const Footer: React.FC = () => {
               id="footer-contact-info"
               className={`flex flex-col gap-4 text-[14px] mt-3 md:mt-0 ${openSection === 'contact' ? 'block' : 'hidden md:flex'}`}
             >
-              <a href="tel:+918887620727" className="text-slate-300 hover:text-royal-blue transition-colors flex items-center gap-2">
+              <a href={`tel:${siteData.phoneRaw}`} className="text-slate-300 hover:text-royal-blue transition-colors flex items-center gap-2">
                 <Phone className="w-4 h-4 text-royal-blue shrink-0" />
-                <span>+91-88876 20727</span>
+                <span>{siteData.phone}</span>
               </a>
-              <a href="mailto:info@veloxisglobal.com" className="text-slate-300 hover:text-royal-blue transition-colors flex items-center gap-2 break-all">
+              <a href={`mailto:${siteData.email}`} className="text-slate-300 hover:text-royal-blue transition-colors flex items-center gap-2 break-all">
                 <Mail className="w-4 h-4 text-royal-blue shrink-0" />
-                <span>info@veloxisglobal.com</span>
+                <span>{siteData.email}</span>
               </a>
               <div className="text-slate-400 flex items-start gap-2 leading-relaxed">
                 <MapPin className="w-4 h-4 text-royal-blue shrink-0 mt-1" />
-                <span>12 Faithful Ganj, Cantt, Kanpur, UP</span>
+                <span>{siteData.address}</span>
               </div>
               
               <a
@@ -355,7 +275,8 @@ export const Footer: React.FC = () => {
                 rel="noopener noreferrer"
                 className="bg-[#25D366] hover:bg-[#20ba5a] text-white py-2.5 px-4 rounded-xl font-bold text-xs inline-flex items-center justify-center gap-2 transition-all duration-300 w-full text-center shadow-md shadow-emerald-950/20"
               >
-                <span>💬 Chat on WhatsApp</span>
+                <WhatsAppIcon className="w-4 h-4 shrink-0" />
+                <span>Chat on WhatsApp</span>
               </a>
             </div>
           </div>
@@ -368,17 +289,18 @@ export const Footer: React.FC = () => {
             
             {/* Newsletter text details */}
             <div className="text-left flex flex-col gap-1 max-w-xl">
-              <h4 className="text-base sm:text-lg font-extrabold text-white">Subscribe to Digital Insights</h4>
+              <h4 className="text-base sm:text-lg font-extrabold text-white">Subscribe to Real Estate Marketing Tips</h4>
               <p className="text-xs sm:text-sm text-slate-400 leading-normal">
-                Get weekly B2B growth funnels, automation blueprints, and SEO optimization tips directly in your inbox.
+                Get property lead gen strategies, ad campaign blueprints, and conversion optimization tips for NCR developers.
               </p>
             </div>
 
             {/* Newsletter Input Form */}
             <div className="w-full lg:w-auto min-w-[280px] sm:min-w-[420px]">
               {success === true ? (
-                <p className="text-royal-blue text-[14px] font-bold text-left py-2">
-                  🎉 Subscribed successfully! Thank you for joining.
+                <p className="text-royal-blue text-[14px] font-bold text-left py-2 flex items-center gap-2">
+                  <CheckCircle2 className="w-4 h-4 shrink-0" />
+                  Subscribed successfully! Thank you for joining.
                 </p>
               ) : (
                 <form onSubmit={handleSubscribe} className="flex flex-col sm:flex-row gap-3">
@@ -458,7 +380,7 @@ export const Footer: React.FC = () => {
               Sitemap
             </Link>
             <span className="text-slate-500 font-normal">
-              Made with ❤️ for Indian businesses
+              Founded & run by Muddassir Ali
             </span>
           </div>
 

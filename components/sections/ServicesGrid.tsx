@@ -1,78 +1,80 @@
-'use client';
-
 /**
- * ServicesGrid — reduced to client only for the lucide-react icon map.
- * Framer Motion removed; CSS stagger-reveal handles scroll animations.
+ * ServicesGrid — Server Component (no client-side dependencies needed).
+ * Clean gradient cards with emoji icons for real estate service focus.
  */
 import React from 'react';
 import Link from 'next/link';
-import { Search, Share2, DollarSign, PenTool, Code, Mail, ArrowRight } from 'lucide-react';
+import Image from 'next/image';
+import { ArrowRight } from 'lucide-react';
 import { services } from '../../data/services';
 import { Card } from '../ui/Card';
 import { SectionLabel } from '../ui/SectionLabel';
 
-export const ServicesGrid: React.FC = () => {
-  const iconMap: Record<string, React.ElementType> = {
-    Search: Search,
-    Share2: Share2,
-    DollarSign: DollarSign,
-    PenTool: PenTool,
-    Code: Code,
-    Mail: Mail,
-  };
+const serviceVisuals = [
+  { image: '/images/sections/service-landing-pages.jpg', accentBg: 'bg-blue-50', accentText: 'text-blue-700' },
+  { image: '/images/sections/service-paid-ads.jpg', accentBg: 'bg-violet-50', accentText: 'text-violet-700' },
+  { image: '/images/sections/service-ai-automation.jpg', accentBg: 'bg-emerald-50', accentText: 'text-emerald-700' },
+];
 
+export const ServicesGrid: React.FC = () => {
   return (
-    <section className="bg-slate-50 py-section-gap relative" id="services">
+    <section className="bg-white py-section-gap relative" id="services">
       <div className="max-w-container-max mx-auto px-gutter">
         {/* Section Header */}
         <div className="text-center max-w-[700px] mx-auto mb-16 section-reveal">
-          <SectionLabel className="text-center">OUR SERVICES</SectionLabel>
+          <SectionLabel className="text-center">WHAT WE DO</SectionLabel>
           <h2 className="text-headline-lg-mobile sm:text-headline-lg font-bold text-slate-900 tracking-tight leading-tight">
-            Everything Your Business Needs to Dominate Digital in 2026
+            Three Pipelines. One Growth Engine.
           </h2>
           <p className="text-body-lg text-slate-500 max-w-[600px] mx-auto text-center mt-4">
-            Six specialized services. One unified strategy. Consistent growth.
+            Everything a real estate developer needs to generate qualified leads and fill site visits — no fluff, no vanity metrics.
           </p>
         </div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 stagger-reveal">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 stagger-reveal">
           {services.map((service, idx) => {
-            const IconComponent = iconMap[service.icon] || Search;
-
-            const themeIndex = idx % 3;
-            let iconWrapperClass = '';
-            if (themeIndex === 0) {
-              iconWrapperClass = 'bg-teal-accent/10 text-teal-accent';
-            } else if (themeIndex === 1) {
-              iconWrapperClass = 'bg-indigo-accent/10 text-indigo-accent';
-            } else {
-              iconWrapperClass = 'bg-sunset-orange/10 text-sunset-orange';
-            }
-
+            const visual = serviceVisuals[idx] || serviceVisuals[0];
             return (
               <div key={service.id} className="h-full">
                 <Link href={`/services/${service.slug}`} className="block h-full group">
-                  <Card hover className="flex flex-col items-start text-left h-full">
-                    {/* Icon Wrapper */}
-                    <div className={`w-14 h-14 rounded-xl flex items-center justify-center mb-6 transition-all duration-300 ${iconWrapperClass}`}>
-                      <IconComponent className="w-6 h-6" />
+                  <Card hover className="flex flex-col items-start text-left h-full p-0 overflow-hidden">
+                    {/* Top image banner */}
+                    <div className="w-full h-40 relative overflow-hidden">
+                      <Image
+                        src={visual.image}
+                        alt={service.title}
+                        fill
+                        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                        className="object-cover transition-transform duration-500 group-hover:scale-[1.05]"
+                      />
                     </div>
 
-                    {/* Title */}
-                    <h3 className="text-headline-md font-semibold text-slate-900 group-hover:text-royal-blue transition-colors duration-300">
-                      {service.title}
-                    </h3>
+                    <div className="p-6 sm:p-8 flex flex-col flex-grow">
+                      {/* Title */}
+                      <h3 className="text-xl font-bold text-slate-900 group-hover:text-royal-blue transition-colors duration-300 mb-3">
+                        {service.title}
+                      </h3>
 
-                    {/* Description */}
-                    <p className="text-body-md text-slate-500 mt-3 leading-relaxed flex-grow line-clamp-2">
-                      {service.shortDesc}
-                    </p>
+                      {/* Description */}
+                      <p className="text-body-md text-slate-500 leading-relaxed flex-grow mb-6">
+                        {service.shortDesc}
+                      </p>
 
-                    {/* Explore Link */}
-                    <div className="inline-flex items-center gap-1.5 font-medium text-royal-blue mt-6 transition-colors duration-300">
-                      <span>Explore</span>
-                      <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1.5" />
+                      {/* Benefits chips */}
+                      <div className="flex flex-wrap gap-2 mb-6">
+                        {service.benefits.slice(0, 3).map((benefit, bIdx) => (
+                          <span key={bIdx} className={`text-[11px] font-semibold ${visual.accentBg} ${visual.accentText} rounded-full px-3 py-1`}>
+                            {benefit}
+                          </span>
+                        ))}
+                      </div>
+
+                      {/* Explore Link */}
+                      <div className="inline-flex items-center gap-1.5 font-bold text-sm text-royal-blue transition-colors duration-300 mt-auto">
+                        <span>Learn More</span>
+                        <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1.5" />
+                      </div>
                     </div>
                   </Card>
                 </Link>

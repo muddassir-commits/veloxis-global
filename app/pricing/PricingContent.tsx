@@ -15,36 +15,34 @@ export default function PricingContent() {
   const plans = [
     {
       title: 'Starter',
-      desc: 'Perfect for small businesses starting their digital journey',
+      desc: 'Perfect for single property launches or individual brokers',
       features: [
-        'Local SEO & Google Business Profile (GBP) Setup',
-        'Basic technical health fixes',
-        'Keyword mapping for up to 20 local search terms',
-        'Monthly rank progress and search clicks report',
+        'High-converting single property landing page',
+        'Google Ads setup & management',
+        'WhatsApp lead routing',
+        'Lead capture CRM integration',
         'Email & WhatsApp support'
       ]
     },
     {
       title: 'Growth',
-      desc: 'For established businesses ready to scale aggressively',
+      desc: 'For established developers ready to scale aggressively',
       features: [
-        'Full-scale SEO campaign (Local + Technical)',
-        'Content strategy & article copywriting (4 posts/mo)',
-        'PPC Ad campaigns setup & management (Google + Meta)',
-        'CRM, lead tracker, and WhatsApp automations',
-        'Competitor analysis & rank tracking benchmarks',
+        'Multiple property landing pages',
+        'PPC Ad campaigns (Google + Meta)',
+        'Automated WhatsApp follow-up sequences',
+        'Competitor analysis & tracking benchmarks',
         'Bi-weekly review meetings'
       ],
       popular: true
     },
     {
       title: 'Enterprise',
-      desc: 'Custom campaigns for larger brands and multi-location businesses',
+      desc: 'Custom automation and high-spend campaigns for multi-location developers',
       features: [
-        'National or International SEO frameworks',
-        'High-spend multi-channel Google/Meta/LinkedIn Ads',
-        'Custom high-performance landing page UX development',
-        'Full CRM lead pipeline mapping with custom N8n servers',
+        'National scale Meta/Google Ads',
+        'Custom high-performance UI/UX development',
+        'Full CRM lead pipeline mapping with custom AI',
         'Dedicated senior marketing director assignment',
         'Live Looker Studio performance dashboard integration'
       ]
@@ -70,7 +68,7 @@ export default function PricingContent() {
     },
     {
       q: "How long does it take to see tangible results?",
-      a: "Paid campaigns (Google Ads, Meta Ads) start generating leads in the first week. Organic SEO and keyword authority building typically require 3 to 6 months to establish front-page rankings."
+      a: "Paid campaigns (Google Ads, Meta Ads) start generating leads in the first week. Landing page builds take 3-7 days. WhatsApp automation goes live as soon as your ad campaigns do."
     },
     {
       q: "Can I upgrade, downgrade, or cancel at any time?",
@@ -97,8 +95,8 @@ export default function PricingContent() {
               Every business is different. Our pricing reflects that. Start with a free audit — we'll recommend exactly what you need and what it'll cost. No surprises, no lock-ins.
             </p>
             <div className="mt-2">
-              <Button id="pricing-hero-audit-btn" href="/free-seo-audit" variant="primary" size="lg">
-                Request Free SEO Audit →
+              <Button id="pricing-hero-audit-btn" href="/contact" variant="primary" size="lg">
+                Get Your Free Growth Plan →
               </Button>
             </div>
           </div>
@@ -116,7 +114,7 @@ export default function PricingContent() {
               Bespoke Execution Frameworks
             </h2>
             <p className="text-slate-500 mt-3 text-sm">
-              We align our team scale and resources directly with your brand size and market complexity.
+              We align the project scale and resources directly with your brand size and market complexity.
             </p>
           </div>
 
@@ -155,7 +153,7 @@ export default function PricingContent() {
                 <div className="mt-8 pt-4 border-t border-slate-100">
                   <Button 
                     id={`pricing-plan-btn-${plan.title.toLowerCase()}`}
-                    href="/free-seo-audit" 
+                    href="/contact" 
                     variant={plan.popular ? 'primary' : 'outline'} 
                     className="w-full text-center"
                   >

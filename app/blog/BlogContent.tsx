@@ -20,7 +20,7 @@ export default function BlogContent() {
   const [searchQuery, setSearchQuery] = useState<string>('');
   const [currentPage, setCurrentPage] = useState<number>(1);
 
-  const categories = ['All', 'SEO', 'Google Ads', 'Social Media', 'Content', 'Local SEO'];
+  const categories = ['All', 'Landing Pages', 'Paid Ads', 'AI Automation', 'Growth Tips'];
   const POSTS_PER_PAGE = 3;
 
   // Filter posts by category and search query
@@ -57,10 +57,10 @@ export default function BlogContent() {
           <div className="max-w-xl">
             <Badge color="indigo" className="mb-3">KNOWLEDGE HUB</Badge>
             <h1 className="text-3xl sm:text-4xl lg:text-[46px] font-extrabold tracking-tight text-slate-900 leading-tight">
-              Digital Marketing Knowledge Built for Indian Businesses
+              Real Estate Marketing Playbooks for Delhi NCR
             </h1>
             <p className="text-slate-500 mt-2 text-sm sm:text-base leading-relaxed">
-              Actionable SEO audits, B2B lead generation scripts, and local search hacks from Muddassir Ali.
+              Landing page teardowns, Google &amp; Meta Ads breakdowns, and WhatsApp automation guides from Muddassir Ali.
             </p>
           </div>
 
@@ -108,13 +108,15 @@ export default function BlogContent() {
             
             {/* Visual Block (Left 5 cols) */}
             <div className="lg:col-span-5 bg-slate-100 relative min-h-[260px] lg:min-h-full overflow-hidden">
-              <Image 
-                src={featuredPost.image} 
-                alt={featuredPost.title} 
-                fill 
-                className="object-cover transition-transform duration-500 group-hover:scale-105"
-                priority
-              />
+              <Link href={`/blog/${featuredPost.slug}`} className="block w-full h-full relative min-h-[260px] lg:min-h-full">
+                <Image
+                  src={featuredPost.image}
+                  alt={featuredPost.title}
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 42vw"
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+              </Link>
               <div className="absolute top-6 left-6 z-10">
                 <Badge color={featuredPost.badgeColor}>{featuredPost.category}</Badge>
               </div>
@@ -147,7 +149,6 @@ export default function BlogContent() {
                   </div>
                   <div className="text-left">
                     <span className="text-sm font-bold text-slate-900 block">{featuredPost.author}</span>
-                    <span className="text-[11px] text-slate-400 font-semibold">{featuredPost.date}</span>
                   </div>
                 </div>
 
@@ -185,12 +186,15 @@ export default function BlogContent() {
                 >
                   {/* Card Visual Header */}
                   <div className="h-44 bg-slate-100 relative border-b border-slate-50 flex items-center justify-center overflow-hidden">
-                    <Image 
-                      src={post.image} 
-                      alt={post.title} 
-                      fill 
-                      className="object-cover transition-transform duration-500 group-hover:scale-105"
-                    />
+                    <Link href={`/blog/${post.slug}`} className="block w-full h-full">
+                      <Image
+                        src={post.image}
+                        alt={post.title}
+                        fill
+                        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                        className="object-cover transition-transform duration-500 group-hover:scale-105"
+                      />
+                    </Link>
                     <div className="absolute top-4 left-4 z-10">
                       <Badge color={post.badgeColor}>{post.category}</Badge>
                     </div>
