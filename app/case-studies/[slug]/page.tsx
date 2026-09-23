@@ -46,9 +46,9 @@ export default function SingleCaseStudyPage({ params }: Params) {
   ];
 
   const breadcrumbSchema = generateBreadcrumbSchema([
-    { name: 'Home', url: 'https://veloxisglobal.com' },
-    { name: 'Case Studies', url: 'https://veloxisglobal.com/case-studies' },
-    { name: study.title, url: `https://veloxisglobal.com/case-studies/${study.slug}` }
+    { name: 'Home', url: 'https://www.veloxisglobal.com' },
+    { name: 'Case Studies', url: 'https://www.veloxisglobal.com/case-studies' },
+    { name: study.title, url: `https://www.veloxisglobal.com/case-studies/${study.slug}` }
   ]);
 
   const articleSchema = generateArticleSchema(

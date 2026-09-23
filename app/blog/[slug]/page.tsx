@@ -53,9 +53,9 @@ export default function SingleBlogPostPage({ params }: Params) {
   ];
 
   const breadcrumbSchema = generateBreadcrumbSchema([
-    { name: 'Home', url: 'https://veloxisglobal.com' },
-    { name: 'Blog', url: 'https://veloxisglobal.com/blog' },
-    { name: post.title, url: `https://veloxisglobal.com/blog/${post.slug}` }
+    { name: 'Home', url: 'https://www.veloxisglobal.com' },
+    { name: 'Blog', url: 'https://www.veloxisglobal.com/blog' },
+    { name: post.title, url: `https://www.veloxisglobal.com/blog/${post.slug}` }
   ]);
 
   const articleSchema = {
@@ -65,7 +65,7 @@ export default function SingleBlogPostPage({ params }: Params) {
     "description": post.excerpt,
     "datePublished": post.isoDate,
     "dateModified": post.isoDate,
-    "image": "https://veloxisglobal.com/images/logos/logo.webp",
+    "image": "https://www.veloxisglobal.com/images/logos/logo.webp",
     "author": {
       "@type": "Person",
       "name": post.author,
@@ -80,7 +80,7 @@ export default function SingleBlogPostPage({ params }: Params) {
       "name": "Veloxis Global",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://veloxisglobal.com/images/logos/logo.webp"
+        "url": "https://www.veloxisglobal.com/images/logos/logo.webp"
       }
     },
     "about": post.about ? post.about.map(item => ({

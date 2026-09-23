@@ -19,8 +19,8 @@ export const metadata: Metadata = constructMetadata({
 export default function TestimonialsPage() {
   const breadcrumbItems = [{ name: 'Testimonials', href: '/testimonials' }];
   const breadcrumbSchema = getBreadcrumbListSchema([
-    { name: 'Home', item: 'https://veloxisglobal.com' },
-    { name: 'Testimonials', item: 'https://veloxisglobal.com/testimonials' }
+    { name: 'Home', item: 'https://www.veloxisglobal.com' },
+    { name: 'Testimonials', item: 'https://www.veloxisglobal.com/testimonials' }
   ]);
   const testimonialsSchema = generateTestimonialsSchema(testimonials);
 

@@ -24,13 +24,13 @@ export default function TermsPage() {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://veloxisglobal.com"
+        "item": "https://www.veloxisglobal.com"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Terms of Service",
-        "item": "https://veloxisglobal.com/terms"
+        "item": "https://www.veloxisglobal.com/terms"
       }
     ]
   };
@@ -38,12 +38,12 @@ export default function TermsPage() {
   const webPageSchema = {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "@id": "https://veloxisglobal.com/terms#webpage",
-    "url": "https://veloxisglobal.com/terms",
+    "@id": "https://www.veloxisglobal.com/terms#webpage",
+    "url": "https://www.veloxisglobal.com/terms",
     "name": "Terms of Service | Veloxis Global",
     "description": "Read the Terms of Service for Veloxis Global to learn about our digital agency agreements.",
     "publisher": {
-      "@id": "https://veloxisglobal.com/#organization"
+      "@id": "https://www.veloxisglobal.com/#organization"
     }
   };
 

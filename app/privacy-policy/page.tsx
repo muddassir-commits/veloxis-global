@@ -24,13 +24,13 @@ export default function PrivacyPolicyPage() {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://veloxisglobal.com"
+        "item": "https://www.veloxisglobal.com"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Privacy Policy",
-        "item": "https://veloxisglobal.com/privacy-policy"
+        "item": "https://www.veloxisglobal.com/privacy-policy"
       }
     ]
   };
@@ -38,12 +38,12 @@ export default function PrivacyPolicyPage() {
   const webPageSchema = {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "@id": "https://veloxisglobal.com/privacy-policy#webpage",
-    "url": "https://veloxisglobal.com/privacy-policy",
+    "@id": "https://www.veloxisglobal.com/privacy-policy#webpage",
+    "url": "https://www.veloxisglobal.com/privacy-policy",
     "name": "Privacy Policy | Veloxis Global",
     "description": "Read the Privacy Policy for Veloxis Global to learn how we protect and process your data.",
     "publisher": {
-      "@id": "https://veloxisglobal.com/#organization"
+      "@id": "https://www.veloxisglobal.com/#organization"
     }
   };
 

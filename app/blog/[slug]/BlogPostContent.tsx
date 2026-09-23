@@ -64,9 +64,9 @@ export default function BlogPostContent({ post, relatedPosts }: { post: PostCont
   }, [post.headings]);
 
   const shareUrls = {
-    linkedin: `https://www.linkedin.com/sharing/share-offsite/?url=https://veloxisglobal.com/blog/${post.slug}`,
-    twitter: `https://twitter.com/intent/tweet?url=https://veloxisglobal.com/blog/${post.slug}&text=${encodeURIComponent(post.title)}`,
-    whatsapp: `https://api.whatsapp.com/send?text=${encodeURIComponent(post.title)}%20https://veloxisglobal.com/blog/${post.slug}`
+    linkedin: `https://www.linkedin.com/sharing/share-offsite/?url=https://www.veloxisglobal.com/blog/${post.slug}`,
+    twitter: `https://twitter.com/intent/tweet?url=https://www.veloxisglobal.com/blog/${post.slug}&text=${encodeURIComponent(post.title)}`,
+    whatsapp: `https://api.whatsapp.com/send?text=${encodeURIComponent(post.title)}%20https://www.veloxisglobal.com/blog/${post.slug}`
   };
 
   return (

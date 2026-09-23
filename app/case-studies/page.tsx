@@ -18,8 +18,8 @@ export default function CaseStudiesPage() {
 
   // 2. Generate schemas
   const breadcrumbSchema = generateBreadcrumbSchema([
-    { name: 'Home', url: 'https://veloxisglobal.com' },
-    { name: 'Case Studies', url: 'https://veloxisglobal.com/case-studies' }
+    { name: 'Home', url: 'https://www.veloxisglobal.com' },
+    { name: 'Case Studies', url: 'https://www.veloxisglobal.com/case-studies' }
   ]);
 
   return (

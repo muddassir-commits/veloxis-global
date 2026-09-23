@@ -14,6 +14,6 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ['/api/', '/admin/'],
       }
     ],
-    sitemap: 'https://veloxisglobal.com/sitemap.xml',
+    sitemap: 'https://www.veloxisglobal.com/sitemap.xml',
   };
 }

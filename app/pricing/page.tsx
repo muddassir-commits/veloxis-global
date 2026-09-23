@@ -18,8 +18,8 @@ export default function PricingPage() {
 
   // 2. Generate schemas
   const breadcrumbSchema = generateBreadcrumbSchema([
-    { name: 'Home', url: 'https://veloxisglobal.com' },
-    { name: 'Pricing', url: 'https://veloxisglobal.com/pricing' }
+    { name: 'Home', url: 'https://www.veloxisglobal.com' },
+    { name: 'Pricing', url: 'https://www.veloxisglobal.com/pricing' }
   ]);
 
   const faqSchema = generateFAQSchema([
