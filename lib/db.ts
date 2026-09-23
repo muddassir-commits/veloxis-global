@@ -1,33 +1,49 @@
-import Database from 'better-sqlite3';
-import path from 'path';
-import fs from 'fs';
+// Lead storage in Supabase (Postgres) via its REST API.
+// The tables are insert-only for the publishable key (see RLS policies in Supabase),
+// so this key can add leads but never read them back.
 
-// Ensure the .data directory exists
-const dataDir = path.join(process.cwd(), '.data');
-if (!fs.existsSync(dataDir)) {
-  fs.mkdirSync(dataDir, { recursive: true });
+type InsertResult = { ok: true } | { ok: false; duplicate: boolean; error: string };
+
+export async function insertRow(table: string, row: Record<string, unknown>): Promise<InsertResult> {
+  const url = process.env.SUPABASE_URL;
+  const key = process.env.SUPABASE_PUBLISHABLE_KEY;
+
+  if (!url || !key) {
+    console.warn(`Supabase not configured. Skipping insert into "${table}".`);
+    return { ok: false, duplicate: false, error: 'Supabase not configured' };
+  }
+
+  try {
+    const res = await fetch(`${url}/rest/v1/${table}`, {
+      method: 'POST',
+      headers: {
+        apikey: key,
+        Authorization: `Bearer ${key}`,
+        'Content-Type': 'application/json',
+        Prefer: 'return=minimal',
+      },
+      body: JSON.stringify(row),
+      signal: AbortSignal.timeout(8000),
+      cache: 'no-store',
+    });
+
+    if (res.ok) return { ok: true };
+
+    const body = await res.json().catch(() => ({}));
+    const duplicate = body?.code === '23505';
+    if (!duplicate) console.error(`Supabase insert into "${table}" failed:`, res.status, body);
+    return { ok: false, duplicate, error: body?.message || `HTTP ${res.status}` };
+  } catch (error: any) {
+    console.error(`Supabase insert into "${table}" threw:`, error);
+    return { ok: false, duplicate: false, error: error?.message || 'Network error' };
+  }
 }
 
-// Connect to SQLite DB
-const db = new Database(path.join(dataDir, 'database.sqlite'));
-db.pragma('journal_mode = WAL');
-
-// Initialize tables if they don't exist
-db.exec(`
-  CREATE TABLE IF NOT EXISTS contacts (
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
-    name TEXT NOT NULL,
-    phone TEXT NOT NULL,
-    service TEXT NOT NULL,
-    message TEXT,
-    created_at DATETIME DEFAULT CURRENT_TIMESTAMP
-  );
-
-  CREATE TABLE IF NOT EXISTS newsletter_subscribers (
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
-    email TEXT NOT NULL UNIQUE,
-    created_at DATETIME DEFAULT CURRENT_TIMESTAMP
-  );
-`);
-
-export default db;
+export function escapeHtml(value: string): string {
+  return value
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
+}

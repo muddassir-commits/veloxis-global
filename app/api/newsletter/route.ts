@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
 import * as z from 'zod';
-import db from '../../../lib/db';
+import { insertRow, escapeHtml } from '../../../lib/db';
 import { sendEmail } from '../../../lib/mail';
 
 const newsletterSchema = z.object({
@@ -29,31 +29,27 @@ export async function POST(request: Request) {
 
     const { _honey, ...formData } = parsedData.data;
 
-    // 3. Save to local SQLite database
-    try {
-      const stmt = db.prepare(`
-        INSERT INTO newsletter_subscribers (email)
-        VALUES (@email)
-      `);
-      stmt.run({ email: formData.email });
-    } catch (dbError: any) {
-      if (dbError.code === 'SQLITE_CONSTRAINT_UNIQUE') {
-        console.warn('Email already subscribed:', formData.email);
-        // We can just return success anyway to not leak info, or a friendly message
-      } else {
-        throw dbError;
-      }
+    // 3. Save to Supabase. A repeat subscription is treated as success so we do not leak who is subscribed.
+    const saved = await insertRow('newsletter_subscribers', { email: formData.email });
+    if (!saved.ok && saved.duplicate) {
+      return NextResponse.json({ success: true, message: 'Subscription received successfully' });
     }
 
-    // 4. Send email notification
-    await sendEmail({
+    // 4. Notify by email. Either step succeeding means the subscriber is captured.
+    const mailed = await sendEmail({
       to: process.env.NOTIFICATION_EMAIL || process.env.SMTP_USER || 'hello@veloxisglobal.com',
       subject: `New Newsletter Subscriber: ${formData.email}`,
       html: `
         <h2>New Newsletter Subscription</h2>
-        <p><strong>Email:</strong> ${formData.email}</p>
+        <p><strong>Email:</strong> ${escapeHtml(formData.email)}</p>
       `,
     });
+
+    const emailed = mailed.success && !('mock' in mailed);
+    if (!saved.ok && !emailed) {
+      console.error('Newsletter subscriber could not be stored or emailed:', formData.email);
+      return NextResponse.json({ success: false, error: 'Could not subscribe right now. Please try again later.' }, { status: 502 });
+    }
 
     return NextResponse.json({ success: true, message: 'Subscription received successfully' });
   } catch (error: any) {
