@@ -6,6 +6,7 @@ import { Badge } from '../../components/ui/Badge';
 import { Card } from '../../components/ui/Card';
 import { Button } from '../../components/ui/Button';
 import { Breadcrumb } from '../../components/ui/Breadcrumb';
+import { ImageFrame } from '../../components/ui/ImageFrame';
 import { SchemaMarkup } from '../../components/ui/SchemaMarkup';
 import { getWebPageSchema } from '../../lib/schema';
 import { ContactForm } from '../../components/forms/ContactForm';
@@ -56,9 +57,28 @@ export default function ContactPage() {
             </div>
 
             <ContactForm />
+
+            {/* Mobile/tablet: photo sits after the form so it never pushes the form down */}
+            <ImageFrame
+              src="/images/people/contact/professional-on-phone-call.jpg"
+              alt="A woman in a navy blazer talking on a desk phone in an office"
+              ratio="4/3"
+              sizes="100vw"
+              position="center top"
+              className="lg:hidden shadow-sm border border-slate-100"
+            />
           </div>
 
           <div className="lg:col-span-5 flex flex-col gap-6">
+            <ImageFrame
+              src="/images/people/contact/professional-on-phone-call.jpg"
+              alt="A woman in a navy blazer talking on a desk phone in an office"
+              ratio="4/3"
+              sizes="40vw"
+              position="center top"
+              className="hidden lg:block shadow-sm border border-slate-100"
+            />
+
             <Card hoverable={false} className="bg-white border border-slate-100 p-8 flex flex-col gap-6">
               <h2 className="text-xl sm:text-headline-md font-bold text-slate-900 border-b border-slate-50 pb-4">
                 Other ways to reach us

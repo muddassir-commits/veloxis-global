@@ -8,6 +8,7 @@ import { servicesData, getServiceBySlug } from '../../../data/services-data';
 import { getPlaybookBySlug } from '../../../data/playbooks';
 import { blogPosts } from '../../../data/blog-posts';
 import { Breadcrumb } from '../../../components/ui/Breadcrumb';
+import { ImageFrame } from '../../../components/ui/ImageFrame';
 import { Button } from '../../../components/ui/Button';
 import { SchemaMarkup } from '../../../components/ui/SchemaMarkup';
 import { FaqAccordion } from '../../../components/sections/FaqAccordion';
@@ -19,6 +20,33 @@ const serviceHeroImages: Record<string, { src: string; alt: string }> = {
   'high-converting-landing-pages': { src: '/images/sections/service-landing-pages.jpg', alt: 'Real estate project landing page shown on a laptop and phone' },
   'paid-ads': { src: '/images/sections/service-paid-ads.jpg', alt: 'Property ad campaign dashboard' },
   'ai-automation': { src: '/images/sections/service-ai-automation.jpg', alt: 'WhatsApp chatbot replying to a property enquiry' },
+};
+
+// People photos per service (Pexels stock). Each pixel size matches its frame ratio:
+// intro 3/2 (1500x1000), deliverables 16/9 (1600x900), process 4/3 (1400x1050), sidebar 1/1 (900x900).
+type Photo = { src: string; alt: string; position?: string };
+type ServicePhotos = { intro: Photo; deliverables: Photo; process: Photo; sidebar: Photo };
+
+const P = '/images/people/services';
+const servicePhotos: Record<string, ServicePhotos> = {
+  'high-converting-landing-pages': {
+    intro: { src: `${P}/lp-designer-at-desktop.jpg`, alt: 'Designer working on page layouts on a desktop computer' },
+    deliverables: { src: `${P}/lp-couple-browsing-tablet.jpg`, alt: 'Couple browsing on a tablet together on their sofa', position: 'center 30%' },
+    process: { src: `${P}/lp-site-visit-agent.jpg`, alt: 'Sales executive talking with a couple outside an apartment building' },
+    sidebar: { src: `${P}/lp-agent-welcomes-buyer.jpg`, alt: 'Agent welcoming a young man at the door of a home' },
+  },
+  'paid-ads': {
+    intro: { src: `${P}/ads-team-reviewing-charts.jpg`, alt: 'Marketing team reviewing charts on a laptop at a meeting table' },
+    deliverables: { src: `${P}/ads-campaign-planning-table.jpg`, alt: 'Team planning a campaign around a table with laptops, a tablet and ad spend charts' },
+    process: { src: `${P}/ads-reports-on-laptops.jpg`, alt: 'Two people working on laptops surrounded by printed performance charts' },
+    sidebar: { src: `${P}/ads-woman-scrolling-phone.jpg`, alt: 'Woman scrolling on her phone while sitting on a sofa', position: '70% center' },
+  },
+  'ai-automation': {
+    intro: { src: `${P}/ai-rep-phone-laptop.jpg`, alt: 'Young man checking messages on his phone while working on a laptop' },
+    deliverables: { src: `${P}/ai-call-team-headsets.jpg`, alt: 'Sales team wearing headsets working on laptops', position: 'center 35%' },
+    process: { src: `${P}/ai-man-desk-phone.jpg`, alt: 'Man taking a call on a desk phone in an office' },
+    sidebar: { src: `${P}/ai-man-on-call.jpg`, alt: 'Smiling man talking on his mobile phone' },
+  },
 };
 
 interface PageProps {
@@ -45,6 +73,7 @@ export default function ServicePage({ params }: PageProps) {
 
   const path = `/services/${service.slug}`;
   const hero = serviceHeroImages[service.slug] || serviceHeroImages['high-converting-landing-pages'];
+  const photos = servicePhotos[service.slug] || servicePhotos['high-converting-landing-pages'];
   const related = service.relatedServices.map(getServiceBySlug).filter(Boolean) as typeof servicesData;
   const playbook = getPlaybookBySlug(service.relatedPlaybook);
   const posts = service.relatedPosts
@@ -72,7 +101,7 @@ export default function ServicePage({ params }: PageProps) {
       {/* Hero */}
       <section className="relative py-20 lg:py-28 overflow-hidden text-left">
         <Image src={hero.src} alt="" fill priority sizes="100vw" className="object-cover object-center" quality={80} />
-        <div className="absolute inset-0 bg-gradient-to-r from-slate-900/92 via-slate-900/80 to-slate-900/50" aria-hidden="true" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[rgba(15,23,42,0.92)] via-[rgba(15,23,42,0.8)] to-[rgba(15,23,42,0.5)]" aria-hidden="true" />
         <div className="max-w-container-max mx-auto px-gutter relative z-10">
           <div className="max-w-3xl flex flex-col items-start gap-6">
             <span className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 px-3 py-1 rounded-full text-xs font-bold text-white uppercase tracking-wider">
@@ -103,10 +132,20 @@ export default function ServicePage({ params }: PageProps) {
       <section className="py-20 bg-white">
         <div className="max-w-container-max mx-auto px-gutter grid grid-cols-1 lg:grid-cols-12 gap-12">
           <div className="lg:col-span-8 flex flex-col gap-10">
-            <div className="flex flex-col gap-4 max-w-3xl">
-              {service.intro.map((p, i) => (
-                <p key={i} className="text-slate-600 leading-relaxed text-base sm:text-lg">{p}</p>
-              ))}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+              <div className="flex flex-col gap-4">
+                {service.intro.map((p, i) => (
+                  <p key={i} className="text-slate-600 leading-relaxed text-base sm:text-lg">{p}</p>
+                ))}
+              </div>
+              <ImageFrame
+                src={photos.intro.src}
+                alt={photos.intro.alt}
+                ratio="3/2"
+                position={photos.intro.position}
+                sizes="(min-width: 1280px) 390px, (min-width: 768px) 45vw, 100vw"
+                className="shadow-sm"
+              />
             </div>
 
             <div>
@@ -126,6 +165,14 @@ export default function ServicePage({ params }: PageProps) {
 
             <div>
               <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-6">{service.deliverablesHeading}</h2>
+              <ImageFrame
+                src={photos.deliverables.src}
+                alt={photos.deliverables.alt}
+                ratio="16/9"
+                position={photos.deliverables.position}
+                sizes="(min-width: 1280px) 790px, (min-width: 1024px) 64vw, 100vw"
+                className="mb-6 shadow-sm"
+              />
               <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {service.deliverables.map((item) => (
                   <li key={item.title} className="flex items-start gap-3 p-5 rounded-xl border border-slate-100 bg-white shadow-sm">
@@ -140,21 +187,31 @@ export default function ServicePage({ params }: PageProps) {
               {service.toolsNote && <p className="mt-6 text-sm text-slate-500 leading-relaxed">{service.toolsNote}</p>}
             </div>
 
-            <div>
-              <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-6">How it works</h2>
-              <ol className="flex flex-col gap-4">
-                {service.process.map((step, i) => (
-                  <li key={step.title} className="flex gap-4 items-start">
-                    <span className="w-8 h-8 rounded-full bg-royal-blue text-white text-sm font-bold flex items-center justify-center shrink-0" aria-hidden="true">
-                      {i + 1}
-                    </span>
-                    <div>
-                      <h3 className="font-bold text-slate-900">{step.title}</h3>
-                      <p className="text-sm text-slate-600 leading-relaxed mt-1">{step.desc}</p>
-                    </div>
-                  </li>
-                ))}
-              </ol>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+              <ImageFrame
+                src={photos.process.src}
+                alt={photos.process.alt}
+                ratio="4/3"
+                position={photos.process.position}
+                sizes="(min-width: 1280px) 390px, (min-width: 768px) 45vw, 100vw"
+                className="shadow-sm order-2 md:order-1 md:sticky md:top-24"
+              />
+              <div className="order-1 md:order-2">
+                <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-6">How it works</h2>
+                <ol className="flex flex-col gap-4">
+                  {service.process.map((step, i) => (
+                    <li key={step.title} className="flex gap-4 items-start">
+                      <span className="w-8 h-8 rounded-full bg-royal-blue text-white text-sm font-bold flex items-center justify-center shrink-0" aria-hidden="true">
+                        {i + 1}
+                      </span>
+                      <div>
+                        <h3 className="font-bold text-slate-900">{step.title}</h3>
+                        <p className="text-sm text-slate-600 leading-relaxed mt-1">{step.desc}</p>
+                      </div>
+                    </li>
+                  ))}
+                </ol>
+              </div>
             </div>
           </div>
 
@@ -185,6 +242,15 @@ export default function ServicePage({ params }: PageProps) {
               <p className="text-sm text-slate-500 mt-2">Month-to-month, 30 days’ notice. Final scope confirmed after a free audit.</p>
               <Link href="/pricing" className="inline-block mt-4 text-sm font-bold text-royal-blue hover:underline">See all packages →</Link>
             </div>
+
+            <ImageFrame
+              src={photos.sidebar.src}
+              alt={photos.sidebar.alt}
+              ratio="1/1"
+              position={photos.sidebar.position}
+              sizes="(min-width: 1280px) 395px, 32vw"
+              className="shadow-sm hidden lg:block"
+            />
           </aside>
         </div>
       </section>

@@ -6,6 +6,7 @@ import Image from 'next/image';
 import { Clock, ChevronLeft, ChevronRight, Search } from 'lucide-react';
 import { Badge } from '../../components/ui/Badge';
 import { Card } from '../../components/ui/Card';
+import { ImageFrame } from '../../components/ui/ImageFrame';
 
 import { Post, blogPosts } from '../../data/blog-posts';
 
@@ -106,20 +107,22 @@ export default function BlogContent() {
         {featuredPost && currentPage === 1 && searchQuery === '' && (
           <Card hover className="bg-white border border-slate-100 rounded-2xl overflow-hidden grid grid-cols-1 lg:grid-cols-12 gap-0 mb-12 h-full p-0 group">
             
-            {/* Visual Block (Left 5 cols) */}
-            <div className="lg:col-span-5 bg-slate-100 relative min-h-[260px] lg:min-h-full overflow-hidden">
-              <Link href={`/blog/${featuredPost.slug}`} className="block w-full h-full relative min-h-[260px] lg:min-h-full">
-                <Image
+            {/* Visual Block (Left 5 cols) — fixed 16:10 photo, inset in the card */}
+            <div className="lg:col-span-5 p-4 sm:p-5 lg:pr-0 lg:self-center">
+              <Link href={`/blog/${featuredPost.slug}`} className="block">
+                <ImageFrame
                   src={featuredPost.image}
                   alt={featuredPost.imageAlt}
-                  fill
-                  sizes="(max-width: 1024px) 100vw, 42vw"
-                  className="object-cover transition-transform duration-500 group-hover:scale-105"
-                />
+                  ratio="16/10"
+                  sizes="(max-width: 1024px) calc(100vw - 72px), 480px"
+                  priority
+                  imageClassName="transition-transform duration-500 group-hover:scale-105"
+                >
+                  <span className="absolute top-4 left-4 z-10 rounded-full bg-white/95 shadow-sm">
+                    <Badge color={featuredPost.badgeColor}>{featuredPost.category}</Badge>
+                  </span>
+                </ImageFrame>
               </Link>
-              <div className="absolute top-6 left-6 z-10">
-                <Badge color={featuredPost.badgeColor}>{featuredPost.category}</Badge>
-              </div>
             </div>
 
             {/* Content Block (Right 7 cols) */}
@@ -184,20 +187,21 @@ export default function BlogContent() {
                   hover
                   className="bg-white border border-slate-100 rounded-xl overflow-hidden flex flex-col justify-between h-full p-0 group"
                 >
-                  {/* Card Visual Header */}
-                  <div className="h-44 bg-slate-100 relative border-b border-slate-50 flex items-center justify-center overflow-hidden">
-                    <Link href={`/blog/${post.slug}`} className="block w-full h-full">
-                      <Image
+                  {/* Card Visual Header — every card uses the same 16:10 photo box */}
+                  <div className="p-3 pb-0">
+                    <Link href={`/blog/${post.slug}`} className="block">
+                      <ImageFrame
                         src={post.image}
                         alt={post.imageAlt}
-                        fill
-                        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                        className="object-cover transition-transform duration-500 group-hover:scale-105"
-                      />
+                        ratio="16/10"
+                        sizes="(max-width: 768px) calc(100vw - 56px), (max-width: 1024px) 45vw, 370px"
+                        imageClassName="transition-transform duration-500 group-hover:scale-105"
+                      >
+                        <span className="absolute top-3 left-3 z-10 rounded-full bg-white/95 shadow-sm">
+                          <Badge color={post.badgeColor}>{post.category}</Badge>
+                        </span>
+                      </ImageFrame>
                     </Link>
-                    <div className="absolute top-4 left-4 z-10">
-                      <Badge color={post.badgeColor}>{post.category}</Badge>
-                    </div>
                   </div>
 
                   {/* Card Body */}

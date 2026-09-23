@@ -1,7 +1,7 @@
 import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
-import Image from 'next/image';
+import { ImageFrame } from '../../components/ui/ImageFrame';
 import { constructMetadata, pageMeta } from '../../lib/seo-config';
 import { playbooks } from '../../data/playbooks';
 import { getServiceBySlug } from '../../data/services-data';
@@ -59,9 +59,13 @@ export default function PlaybooksPage() {
             const service = getServiceBySlug(pb.service);
             return (
               <article key={pb.slug} className="bg-white rounded-3xl border border-slate-200 overflow-hidden flex flex-col">
-                <div className="relative h-44">
-                  <Image src={pb.image} alt="" fill sizes="(max-width: 768px) 100vw, 50vw" className="object-cover" />
-                </div>
+                <ImageFrame
+                  src={pb.image}
+                  alt=""
+                  ratio="16/10"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 600px"
+                  className="!rounded-none"
+                />
                 <div className="p-8 flex flex-col flex-grow">
                   <span className="text-xs font-bold uppercase tracking-wider text-slate-500">
                     Example plan · {service?.title} · For {pb.audience.toLowerCase()}

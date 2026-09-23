@@ -9,12 +9,22 @@ export interface PlaybookTable {
   rows: string[][];
 }
 
+// Stock photo (Pexels) shown beside a section. Photos are illustrative only:
+// the people in them are not Veloxis Global clients or staff.
+export interface PlaybookImage {
+  src: string;
+  alt: string;
+  /** CSS object-position, e.g. 'center top' */
+  position?: string;
+}
+
 export interface PlaybookSection {
   id: string;
   heading: string;
   paragraphs?: string[];
   list?: string[];
   table?: PlaybookTable;
+  image?: PlaybookImage;
 }
 
 export interface Playbook {
@@ -45,13 +55,17 @@ export const playbooks: Playbook[] = [
     audience: 'Developers and mandated channel partners',
     scenario:
       'A hypothetical RERA-registered, mid-segment project with 2 and 3 BHK apartments in Greater Noida West (Noida Extension). The goal for the first 90 days is a steady flow of qualified site visits. The project, budget and all planning figures are illustrative.',
-    image: '/images/sections/service-paid-ads.jpg',
-    imageAlt: 'Ad campaign planning board',
+    image: '/images/people/playbooks/ads-team-reviewing-campaign-cover.jpg',
+    imageAlt: 'Four colleagues reviewing bar charts on a laptop and printed marketing reports at a table',
     updated: '2026-09-23',
     sections: [
       {
         id: 'research',
         heading: 'Research: what buyers actually search',
+        image: {
+          src: '/images/people/playbooks/ads-presenting-chart.jpg',
+          alt: 'Woman presenting a chart on a flipchart to colleagues',
+        },
         paragraphs: [
           'Before building campaigns we pull search data for the locality, configuration and project themes. For this area, Google Ads data for India (September 2026) shows about 320 searches a month for “2 bhk flat in noida extension” — a small but very specific audience that is close to buying.',
           'A brand-new project name has almost no searches at launch, so early Google volume comes from locality and configuration searches. Project-name searches grow once Meta ads, hoardings and CPs start spreading the name — which is why the two channels are planned together.',
@@ -117,6 +131,10 @@ export const playbooks: Playbook[] = [
       {
         id: 'budget',
         heading: 'Starting budget split (planning assumption)',
+        image: {
+          src: '/images/people/playbooks/ads-team-budget-review-meeting.jpg',
+          alt: 'Four colleagues in a meeting at a conference table, one taking notes',
+        },
         paragraphs: [
           'For a launch with little brand awareness, a starting split of roughly 60% Meta and 40% Google makes sense: Meta builds awareness and volume while Google captures the smaller pool of active searchers. The split moves weekly towards whichever channel produces site visits at the lower cost.',
         ],
@@ -169,13 +187,17 @@ export const playbooks: Playbook[] = [
     audience: 'Developers, channel partners and brokers',
     scenario:
       'A single project landing page for paid traffic from Google, Meta and CP campaigns. The structure below is the starting point we adapt for each project; content shown is illustrative.',
-    image: '/images/sections/service-landing-pages.jpg',
-    imageAlt: 'Project landing page wireframe',
+    image: '/images/people/playbooks/landing-designer-reviewing-page-cover.jpg',
+    imageAlt: 'Man working at a desk with a large desktop monitor and a laptop',
     updated: '2026-09-23',
     sections: [
       {
         id: 'above-fold',
         heading: 'Above the fold: answer the first five questions',
+        image: {
+          src: '/images/people/playbooks/landing-couple-looking-phone.jpg',
+          alt: 'Couple looking at a phone together at a kitchen counter',
+        },
         paragraphs: [
           'A buyer arriving from an ad decides in seconds whether to stay. The first screen on a phone should answer where, what, how much, whether it is legitimate and how to ask.',
         ],
@@ -217,6 +239,10 @@ export const playbooks: Playbook[] = [
       {
         id: 'speed',
         heading: 'Speed budget',
+        image: {
+          src: '/images/people/playbooks/landing-buyer-scrolling-phone.jpg',
+          alt: 'Close-up of a man scrolling on his smartphone',
+        },
         paragraphs: [
           'Most visitors arrive on a phone, often on a patchy mobile connection. We set a budget before building and test on a mid-range Android phone over 4G.',
         ],
@@ -258,8 +284,8 @@ export const playbooks: Playbook[] = [
     audience: 'Developers, channel partners and brokers',
     scenario:
       'A lead-response setup for a project receiving enquiries from Meta forms, Google, the landing page and property portals. Message wording and timings are illustrative and adjusted for each client.',
-    image: '/images/sections/service-ai-automation.jpg',
-    imageAlt: 'WhatsApp conversation flow diagram',
+    image: '/images/people/playbooks/whatsapp-exec-call-on-the-move.jpg',
+    imageAlt: 'Man in a suit taking a phone call while travelling',
     updated: '2026-09-23',
     sections: [
       {
@@ -291,6 +317,10 @@ export const playbooks: Playbook[] = [
       {
         id: 'site-visits',
         heading: 'Booking site visits and cutting no-shows',
+        image: {
+          src: '/images/people/playbooks/whatsapp-keys-handover.jpg',
+          alt: 'Keys being handed over beside moving boxes in a new home',
+        },
         list: [
           'Buyer picks a date and time slot on WhatsApp.',
           'Confirmation with location pin and the name of the person meeting them.',
@@ -309,6 +339,10 @@ export const playbooks: Playbook[] = [
       {
         id: 'setup',
         heading: 'What the setup needs',
+        image: {
+          src: '/images/people/playbooks/whatsapp-team-agreeing-routing.jpg',
+          alt: 'Colleagues discussing printed documents around a meeting table',
+        },
         list: [
           'An official WhatsApp Business API number through a Business Solution Provider.',
           'Approved message templates for the first reply, reminders and follow-ups.',
@@ -340,13 +374,17 @@ export const playbooks: Playbook[] = [
     audience: 'Channel partners and brokers',
     scenario:
       'A channel partner mandated on three projects by different developers, running their own ads and wanting clean proof of the leads and site visits they bring. The setup is illustrative.',
-    image: '/images/sections/industries-hero.jpg',
-    imageAlt: 'Channel partner lead dashboard',
+    image: '/images/people/playbooks/cp-broker-phone-laptop-cover.jpg',
+    imageAlt: 'Young man talking on his phone while working on a laptop outdoors',
     updated: '2026-09-23',
     sections: [
       {
         id: 'problem',
         heading: 'The problem this solves',
+        image: {
+          src: '/images/people/playbooks/cp-agent-reviewing-papers-with-buyers.jpg',
+          alt: 'Woman showing a document to a couple in a living room',
+        },
         paragraphs: [
           'The same buyer can reach a developer through a CP, a Meta form and the builder’s own phone line in the same week. Without a timestamped record of who registered the buyer first, commission disputes come down to whose word is trusted.',
         ],
@@ -363,6 +401,10 @@ export const playbooks: Playbook[] = [
       {
         id: 'registration',
         heading: 'Timestamped lead registration',
+        image: {
+          src: '/images/people/playbooks/cp-broker-call-at-laptop.jpg',
+          alt: 'Man on a phone call while working on his laptop at an office desk',
+        },
         list: [
           'Every lead is logged with source, project and the exact time it arrived.',
           'The lead is registered with the developer (through their CP portal or by email) the same day, and the confirmation is saved.',

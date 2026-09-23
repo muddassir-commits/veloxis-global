@@ -25,7 +25,7 @@ export const HeroSection: React.FC = () => {
 
       {/* Dark overlay gradient */}
       <div
-        className="absolute inset-0 bg-gradient-to-r from-slate-900/90 via-slate-900/75 to-slate-900/40"
+        className="absolute inset-0 bg-gradient-to-r from-[rgba(15,23,42,0.9)] via-[rgba(15,23,42,0.75)] to-[rgba(15,23,42,0.4)]"
         aria-hidden="true"
       />
 

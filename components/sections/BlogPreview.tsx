@@ -37,19 +37,22 @@ export const BlogPreview: React.FC = () => {
           {posts.map((post, idx) => (
             <div key={idx} className="h-full">
               <Card hover className="flex flex-col h-full overflow-hidden p-0 border border-slate-100 bg-white group">
-                {/* Card Header - gradient accent bar */}
-                <div className="w-full h-48 relative overflow-hidden border-b border-slate-50">
+                {/* Card image — fixed 16:10 box so every card crops the same way */}
+                <div className="w-full aspect-[16/10] relative overflow-hidden bg-slate-100 border-b border-slate-50">
                   <Link href={`/blog/${post.slug}`} className="block w-full h-full">
                     <Image
                       src={post.image}
                       alt={post.imageAlt}
                       fill
-                      sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                      sizes="(max-width: 768px) calc(100vw - 32px), (max-width: 1024px) 50vw, 400px"
                       className="object-cover transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-105"
                     />
                   </Link>
                   <div className="absolute top-4 left-4 z-10">
-                    <Badge variant={idx === 0 ? 'indigo' : idx === 1 ? 'teal' : 'orange'}>
+                    <Badge
+                      variant={idx === 0 ? 'indigo' : idx === 1 ? 'teal' : 'orange'}
+                      className="!bg-white/95 shadow-sm backdrop-blur"
+                    >
                       {post.category}
                     </Badge>
                   </div>

@@ -18,8 +18,11 @@ export interface Post {
   service?: string;
   headings: { id: string; text: string }[];
   htmlContent: string;
+  /** Cover photo, 1600x1000 (16:10). Also used for OG and Article schema. */
   image: string;
   imageAlt: string;
+  /** Optional in-article photos, each placed just before the <h2> with id `beforeHeading`. */
+  inlineImages?: { src: string; alt: string; caption?: string; beforeHeading: string }[];
   about?: { name: string; sameAs: string }[];
 }
 
@@ -107,8 +110,11 @@ export const blogPosts: Post[] = [
 <p>We build <a href="/services/high-converting-landing-pages">project landing pages</a> that explain the EOI process clearly, run <a href="/services/paid-ads">Meta and Google campaigns</a> to fill the priority list, and set up <a href="/services/ai-automation">WhatsApp automation</a> that sends the EOI form and terms the moment someone enquires. See our <a href="/playbooks/new-launch-meta-google-ads-plan">example launch plan</a> for how the campaigns are structured.</p>
 <p><em>This article explains general practice and is not legal advice. Check the current RERA rules in your state and the terms of the specific project.</em></p>
 `,
-    image: '/images/sections/hero-skyline-night.jpg',
-    imageAlt: 'Residential towers at dusk',
+    image: '/images/people/blog/eoi-buyers-reviewing-booking-papers.jpg',
+    imageAlt: 'A property executive going over paperwork with a young couple at a kitchen counter',
+    inlineImages: [
+      { src: '/images/people/blog/eoi-couple-planning-budget.jpg', alt: 'A couple working out their budget with a calculator and notebook at home', caption: 'Work out your budget before paying any token amount.', beforeHeading: 'buyer-checklist' },
+    ],
     about: [{ name: 'Real Estate (Regulation and Development) Act, 2016', sameAs: 'https://en.wikipedia.org/wiki/Real_Estate_(Regulation_and_Development)_Act,_2016' }],
   },
   {
@@ -195,8 +201,11 @@ export const blogPosts: Post[] = [
 <p>If you are a CP or broker, our <a href="/channel-partners">marketing for channel partners</a> page explains how we set this up.</p>
 <p><em>This article explains general practice and is not legal or tax advice.</em></p>
 `,
-    image: '/images/sections/industries-hero.jpg',
-    imageAlt: 'Real estate advisor meeting a client',
+    image: '/images/people/blog/channel-partner-advisor-with-clients.jpg',
+    imageAlt: 'A property advisor explaining figures on a printed sheet to a couple across a desk',
+    inlineImages: [
+      { src: '/images/people/blog/channel-partner-office-discussion.jpg', alt: 'Three colleagues discussing documents in an office', beforeHeading: 'how-cps-work' },
+    ],
     about: [{ name: 'Real Estate (Regulation and Development) Act, 2016', sameAs: 'https://en.wikipedia.org/wiki/Real_Estate_(Regulation_and_Development)_Act,_2016' }],
   },
   {
@@ -275,8 +284,11 @@ export const blogPosts: Post[] = [
 </ul>
 <p>Creative is one part of a campaign. For how we structure the rest — keywords, bidding and tracking — see the <a href="/playbooks/new-launch-meta-google-ads-plan">example launch ads plan</a> or our <a href="/services/paid-ads">Meta and Google ads service</a>.</p>
 `,
-    image: '/images/blog/blog-google-meta-ads.jpg',
-    imageAlt: 'Real estate ad creatives on a phone screen',
+    image: '/images/people/blog/ad-examples-marketer-reviewing-phone.jpg',
+    imageAlt: 'A man in a blazer smiling at his phone at a desk with a laptop',
+    inlineImages: [
+      { src: '/images/people/blog/ad-examples-designer-creatives.jpg', alt: 'A woman checking her phone at a desk with a laptop and printed colour swatches', beforeHeading: 'copy' },
+    ],
   },
   {
     slug: 'google-ads-vs-meta-ads-real-estate-india',
@@ -342,8 +354,11 @@ export const blogPosts: Post[] = [
 <p>Comparing channels on cost per lead is misleading: Meta leads look cheaper, but fewer of them visit. Compare Google and Meta on <strong>cost per site visit</strong>, using your CRM rather than the ad dashboards, and move budget weekly towards whichever produces visits more cheaply.</p>
 <p>We run both channels this way as part of our <a href="/services/paid-ads">real estate lead generation service</a>, with every lead answered on WhatsApp in seconds through <a href="/services/ai-automation">lead automation</a>.</p>
 `,
-    image: '/images/blog/blog-google-meta-ads.jpg',
-    imageAlt: 'Google and Meta ad dashboards side by side',
+    image: '/images/people/blog/google-meta-marketer-phone-desktop.jpg',
+    imageAlt: 'A man using his phone at a desk in front of a desktop monitor',
+    inlineImages: [
+      { src: '/images/people/blog/google-meta-reviewing-report.jpg', alt: 'A woman reading a printed chart in an office while a colleague uses his phone', beforeHeading: 'measure' },
+    ],
     about: [
       { name: 'Google Ads', sameAs: 'https://en.wikipedia.org/wiki/Google_Ads' },
       { name: 'Meta Platforms', sameAs: 'https://en.wikipedia.org/wiki/Meta_Platforms' },
@@ -405,8 +420,11 @@ export const blogPosts: Post[] = [
 <p>Set up conversion tracking for form submits, WhatsApp clicks and calls, and use a tagged link for each campaign and channel partner. Then feed site-visit outcomes from your CRM back to Google and Meta so they optimise for visits, not form fills.</p>
 <p>Want to see the full structure? Our <a href="/playbooks/project-landing-page-blueprint">landing page blueprint</a> shows the section order and tracking events we use, and our <a href="/services/high-converting-landing-pages">landing page service</a> builds it for your project.</p>
 `,
-    image: '/images/blog/blog-landing-pages.jpg',
-    imageAlt: 'Real estate landing page on a mobile phone',
+    image: '/images/people/blog/landing-page-couple-sofa.jpg',
+    imageAlt: 'A young couple laughing together on a sofa at home',
+    inlineImages: [
+      { src: '/images/people/blog/landing-page-couple-working-laptop.jpg', alt: 'A couple working through notes and a laptop at a table at home', beforeHeading: 'above-fold' },
+    ],
     about: [{ name: 'Landing page', sameAs: 'https://en.wikipedia.org/wiki/Landing_page' }],
   },
   {
@@ -481,8 +499,11 @@ export const blogPosts: Post[] = [
 </ul>
 <p>We set this up for developers, brokers and CPs as part of our <a href="/services/ai-automation">real estate chatbot and WhatsApp automation service</a>, usually alongside <a href="/services/paid-ads">Meta and Google ads</a>.</p>
 `,
-    image: '/images/blog/blog-whatsapp-automation.jpg',
-    imageAlt: 'WhatsApp conversation with a property buyer',
+    image: '/images/people/blog/whatsapp-man-messaging-phone.jpg',
+    imageAlt: 'A young man reading a message on his smartphone at home',
+    inlineImages: [
+      { src: '/images/people/blog/whatsapp-office-sales-call.jpg', alt: 'A man on a desk phone talking while a colleague listens in an office', beforeHeading: 'routing' },
+    ],
     about: [
       { name: 'Marketing automation', sameAs: 'https://en.wikipedia.org/wiki/Marketing_automation' },
       { name: 'WhatsApp', sameAs: 'https://en.wikipedia.org/wiki/WhatsApp' },
@@ -540,8 +561,11 @@ export const blogPosts: Post[] = [
 <h2 id="website">Connect it to a page that converts</h2>
 <p>Link the profile to a page that explains what you do and the projects you handle, with WhatsApp and call buttons. For project-specific posts, link to the <a href="/services/high-converting-landing-pages">project landing page</a> rather than your homepage. If you are a CP, our guide to <a href="/blog/channel-partner-in-real-estate">channel partners in real estate</a> and our <a href="/channel-partners">marketing for channel partners</a> page cover the rest of the lead engine.</p>
 `,
-    image: '/images/blog/blog-local-seo.jpg',
-    imageAlt: 'Local map search results on a phone',
+    image: '/images/people/blog/local-seo-man-phone-market.jpg',
+    imageAlt: 'A young man smiling at his phone in a busy market',
+    inlineImages: [
+      { src: '/images/people/blog/local-seo-woman-phone-call.jpg', alt: 'A woman smiling while talking on her phone', beforeHeading: 'reviews' },
+    ],
     about: [{ name: 'Google Business Profile', sameAs: 'https://en.wikipedia.org/wiki/Google_Business_Profile' }],
   },
 ];

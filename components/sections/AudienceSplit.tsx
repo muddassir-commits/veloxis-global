@@ -6,6 +6,7 @@ import React from 'react';
 import Link from 'next/link';
 import { ArrowRight, Building2, Users } from 'lucide-react';
 import { SectionLabel } from '../ui/SectionLabel';
+import { ImageFrame } from '../ui/ImageFrame';
 
 const audiences = [
   {
@@ -14,6 +15,9 @@ const audiences = [
     title: 'Developers & builders',
     desc: 'Launch campaigns, project microsites and lead follow-up for new launches and unsold inventory — with your CP network included.',
     cta: 'Marketing for developers',
+    image: '/images/people/home/site-supervisor-hard-hat.jpg',
+    alt: 'Site supervisor in a safety vest holding a hard hat at a construction site',
+    position: 'center 45%',
   },
   {
     href: '/channel-partners',
@@ -21,6 +25,9 @@ const audiences = [
     title: 'Channel partners & brokers',
     desc: 'Exclusive leads for the projects you’re mandated on, pages under your brand, and a timestamped record of every lead you bring.',
     cta: 'Marketing for channel partners',
+    image: '/images/people/home/agent-couple-paperwork.jpg',
+    alt: 'Property agent going through paperwork with a couple at a table',
+    position: 'center 40%',
   },
 ];
 
@@ -34,14 +41,25 @@ export const AudienceSplit: React.FC = () => (
         </h2>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        {audiences.map(({ href, icon: Icon, title, desc, cta }) => (
-          <Link key={href} href={href} className="group bg-white rounded-2xl border border-slate-200 p-8 hover:shadow-md transition-shadow flex flex-col">
-            <Icon className="w-8 h-8 text-royal-blue mb-5" aria-hidden="true" />
-            <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-royal-blue">{title}</h3>
-            <p className="text-slate-600 leading-relaxed flex-grow">{desc}</p>
-            <span className="inline-flex items-center gap-1.5 mt-6 font-bold text-sm text-royal-blue">
-              {cta} <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" aria-hidden="true" />
-            </span>
+        {audiences.map(({ href, icon: Icon, title, desc, cta, image, alt, position }) => (
+          <Link key={href} href={href} className="group bg-white rounded-2xl border border-slate-200 overflow-hidden hover:shadow-md transition-shadow flex flex-col">
+            <ImageFrame
+              src={image}
+              alt={alt}
+              ratio="16/9"
+              position={position}
+              sizes="(max-width: 768px) calc(100vw - 32px), 600px"
+              className="!rounded-none"
+              imageClassName="transition-transform duration-500 group-hover:scale-[1.03]"
+            />
+            <div className="p-8 flex flex-col flex-grow">
+              <Icon className="w-8 h-8 text-royal-blue mb-5" aria-hidden="true" />
+              <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-royal-blue">{title}</h3>
+              <p className="text-slate-600 leading-relaxed flex-grow">{desc}</p>
+              <span className="inline-flex items-center gap-1.5 mt-6 font-bold text-sm text-royal-blue">
+                {cta} <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" aria-hidden="true" />
+              </span>
+            </div>
           </Link>
         ))}
       </div>

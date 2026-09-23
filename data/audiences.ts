@@ -10,6 +10,28 @@ export interface AudienceHelp extends AudienceBlock {
   service: string;
 }
 
+/** Stock photo (Pexels licence). People shown are models, not clients or staff. */
+export interface AudienceImage {
+  src: string;
+  alt: string;
+  /** CSS object-position, to keep faces in frame when cropped */
+  position?: string;
+}
+
+export interface AudienceImages {
+  hero: AudienceImage;
+  /** beside the intro paragraphs (4:3) */
+  intro: AudienceImage;
+  /** beside the pain cards (4:5) */
+  pains: AudienceImage;
+  /** beside the help cards (4:5) */
+  help: AudienceImage;
+  /** beside the "extra" list (4:3) */
+  extra: AudienceImage;
+  /** beside the example plans and guides (4:3) */
+  resources: AudienceImage;
+}
+
 export interface AudienceData {
   key: 'developers' | 'channel-partners';
   path: string;
@@ -29,6 +51,7 @@ export interface AudienceData {
   faqs: { question: string; answer: string }[];
   ctaTitle: string;
   ctaDescription: string;
+  images: AudienceImages;
 }
 
 export const audiences: Record<AudienceData['key'], AudienceData> = {
@@ -77,6 +100,14 @@ export const audiences: Record<AudienceData['key'], AudienceData> = {
     ],
     ctaTitle: 'Planning a launch or sitting on unsold inventory?',
     ctaDescription: 'Get a free review of your project pages, ads and lead follow-up, with a plan for your next 90 days.',
+    images: {
+      hero: { src: '/images/people/developers/hero-site-engineers-plans.jpg', alt: '' },
+      intro: { src: '/images/people/developers/team-planning-meeting.jpg', alt: 'Team discussing plans around a laptop at a meeting table' },
+      pains: { src: '/images/people/developers/builder-reviewing-plans.jpg', alt: 'Man reading building plans inside a flat that is still under construction', position: 'center 30%' },
+      help: { src: '/images/people/developers/site-visit-buyers.jpg', alt: 'Sales executive with a clipboard showing a young couple around an unfinished apartment', position: '35% center' },
+      extra: { src: '/images/people/developers/sales-office-handshake.jpg', alt: 'Sales executive shaking hands with an older couple across a desk in a sales office' },
+      resources: { src: '/images/people/developers/handover-keys.jpg', alt: 'Smiling man in a suit holding out a set of house keys', position: 'center 30%' },
+    },
   },
   'channel-partners': {
     key: 'channel-partners',
@@ -123,5 +154,13 @@ export const audiences: Record<AudienceData['key'], AudienceData> = {
     ],
     ctaTitle: 'Want leads that come only to you?',
     ctaDescription: 'Tell us which projects you’re mandated on. We’ll review your current lead sources and show you what a setup for your firm would look like.',
+    images: {
+      hero: { src: '/images/people/channel-partners/hero-broker-showing-apartment.jpg', alt: '' },
+      intro: { src: '/images/people/channel-partners/broker-meeting-couple.jpg', alt: 'Young couple going through property papers with an advisor at a desk' },
+      pains: { src: '/images/people/channel-partners/busy-broker-desk.jpg', alt: 'Man on a desk phone looking stressed, with files piled on his desk', position: 'center 30%' },
+      help: { src: '/images/people/channel-partners/agent-on-phone.jpg', alt: 'Smiling man taking a call at his office desk', position: '70% center' },
+      extra: { src: '/images/people/channel-partners/sales-team-discussion.jpg', alt: 'Four colleagues standing in an office discussing papers in a folder' },
+      resources: { src: '/images/people/channel-partners/client-signing-papers.jpg', alt: 'Close-up of a person signing a document on a desk while another person points to the page' },
+    },
   },
 };
