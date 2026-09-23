@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 
-export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://veloxisglobal.com';
+// Canonical host is www (the apex domain 308-redirects to it in Vercel).
+export const SITE_URL = 'https://www.veloxisglobal.com';
 
 export interface MetaProps {
   title: string;

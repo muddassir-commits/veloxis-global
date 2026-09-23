@@ -13,7 +13,7 @@
 **Headquarters**: Noida, Delhi NCR, India
 **Phone**: +91 88876 20727
 **Email**: info@veloxisglobal.com
-**Website**: https://veloxisglobal.com
+**Website**: https://www.veloxisglobal.com
 **Company LinkedIn**: https://www.linkedin.com/company/111872222/
 
 ### What Makes Veloxis Global Different
@@ -31,7 +31,7 @@
 ## Services (Detailed)
 
 ### 1. High-Converting Landing Pages
-**URL**: https://veloxisglobal.com/services/high-converting-landing-pages
+**URL**: https://www.veloxisglobal.com/services/high-converting-landing-pages
 
 Custom-built, mobile-first real estate landing pages optimized exclusively for lead capture and site visit bookings. Key features include:
 - Sub-2-second page load times (Next.js technology stack)
@@ -45,7 +45,7 @@ Custom-built, mobile-first real estate landing pages optimized exclusively for l
 **Pricing**: Starts from ₹15,000/month
 
 ### 2. Meta & Google Ads Performance
-**URL**: https://veloxisglobal.com/services/paid-ads
+**URL**: https://www.veloxisglobal.com/services/paid-ads
 
 Laser-targeted Google and Facebook/Instagram ad campaigns designed exclusively for real estate developers and channel partners in Delhi NCR. The agency manages:
 - Google Search campaigns targeting high-intent property keywords (e.g., "buy 3BHK in Noida Sector 150")
@@ -61,7 +61,7 @@ Laser-targeted Google and Facebook/Instagram ad campaigns designed exclusively f
 **Pricing**: Starts from ₹25,000/month (ad spend paid separately to Google/Meta)
 
 ### 3. AI & WhatsApp Automation
-**URL**: https://veloxisglobal.com/services/ai-automation
+**URL**: https://www.veloxisglobal.com/services/ai-automation
 
 Coded automation workflows that capture leads from ads, push them to CRM systems, and trigger instant WhatsApp/Email follow-ups while the buyer is still actively searching. Features:
 - WhatsApp Cloud API setup with template messages and chatbots
@@ -79,7 +79,7 @@ Coded automation workflows that capture leads from ads, push them to CRM systems
 
 ## Industry Specialization: Real Estate
 
-**URL**: https://veloxisglobal.com/industries/real-estate
+**URL**: https://www.veloxisglobal.com/industries/real-estate
 
 ### Common Challenges Veloxis Global Solves
 
@@ -93,7 +93,7 @@ Coded automation workflows that capture leads from ads, push them to CRM systems
 
 ## Case Study: Delhi Real Estate Developer
 
-**URL**: https://veloxisglobal.com/case-studies/delhi-real-estate-developer
+**URL**: https://www.veloxisglobal.com/case-studies/delhi-real-estate-developer
 
 **Client**: A luxury residential developer in Delhi with zero online presence, relying entirely on traditional print media and local agents.
 
@@ -132,13 +132,13 @@ Coded automation workflows that capture leads from ads, push them to CRM systems
 
 ## Blog & Educational Content
 
-1. [Google Ads vs Meta Ads for Real Estate in India](https://veloxisglobal.com/blog/google-ads-vs-meta-ads-real-estate-india) — Direct comparison of Google Search intent targeting vs Meta's demographic reach for property campaigns.
+1. [Google Ads vs Meta Ads for Real Estate in India](https://www.veloxisglobal.com/blog/google-ads-vs-meta-ads-real-estate-india) — Direct comparison of Google Search intent targeting vs Meta's demographic reach for property campaigns.
 
-2. [Real Estate Landing Page Conversion Hacks](https://veloxisglobal.com/blog/real-estate-landing-page-conversion-hacks) — Tactical guide to building landing pages that convert property browsers into site visit bookings.
+2. [Real Estate Landing Page Conversion Hacks](https://www.veloxisglobal.com/blog/real-estate-landing-page-conversion-hacks) — Tactical guide to building landing pages that convert property browsers into site visit bookings.
 
-3. [WhatsApp Automation for Real Estate Leads](https://veloxisglobal.com/blog/whatsapp-automation-for-real-estate-leads) — How to implement instant lead routing and automated follow-up sequences using WhatsApp Business API.
+3. [WhatsApp Automation for Real Estate Leads](https://www.veloxisglobal.com/blog/whatsapp-automation-for-real-estate-leads) — How to implement instant lead routing and automated follow-up sequences using WhatsApp Business API.
 
-4. [Local SEO for Channel Partners in Delhi NCR](https://veloxisglobal.com/blog/real-estate-local-seo-ncr) — Guide to ranking in Google Maps and local search for real estate developers and brokers in Delhi NCR.
+4. [Local SEO for Channel Partners in Delhi NCR](https://www.veloxisglobal.com/blog/real-estate-local-seo-ncr) — Guide to ranking in Google Maps and local search for real estate developers and brokers in Delhi NCR.
 
 ---
 
@@ -166,5 +166,5 @@ A: Both. Starter plans are designed for individual channel partners and small br
 - **Email**: info@veloxisglobal.com
 - **Phone**: +91 88876 20727
 - **WhatsApp**: https://wa.me/918887620727
-- **Contact Page**: https://veloxisglobal.com/contact
+- **Contact Page**: https://www.veloxisglobal.com/contact
 - **Location**: Noida, Delhi NCR, India (Service-area business covering Delhi, Noida, and Greater Noida)

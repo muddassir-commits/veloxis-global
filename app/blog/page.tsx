@@ -21,8 +21,8 @@ export default function BlogPage() {
 
   // 2. Generate schemas
   const breadcrumbSchema = generateBreadcrumbSchema([
-    { name: 'Home', url: 'https://veloxisglobal.com' },
-    { name: 'Blog', url: 'https://veloxisglobal.com/blog' }
+    { name: 'Home', url: 'https://www.veloxisglobal.com' },
+    { name: 'Blog', url: 'https://www.veloxisglobal.com/blog' }
   ]);
 
   const featuredPost = blogPosts[0];
@@ -32,7 +32,7 @@ export default function BlogPage() {
     "headline": featuredPost.title,
     "datePublished": featuredPost.isoDate,
     "dateModified": featuredPost.isoDate,
-    "image": `https://veloxisglobal.com${featuredPost.image}`,
+    "image": `https://www.veloxisglobal.com${featuredPost.image}`,
     "author": {
       "@type": "Person",
       "name": "Muddassir Ali",
@@ -47,7 +47,7 @@ export default function BlogPage() {
       "name": "Veloxis Global",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://veloxisglobal.com/images/logos/logo.webp"
+        "url": "https://www.veloxisglobal.com/images/logos/logo.webp"
       }
     }
   };

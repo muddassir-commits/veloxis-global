@@ -4,7 +4,7 @@ import { caseStudies } from '../data/case-studies';
 import { industriesData } from '../data/industries-data';
 import { servicesData } from '../data/services-data';
 
-const BASE = 'https://veloxisglobal.com';
+const BASE = 'https://www.veloxisglobal.com';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   // Define realistic static lastModified dates based on content history

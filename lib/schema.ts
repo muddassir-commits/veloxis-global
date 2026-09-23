@@ -3,13 +3,13 @@ export const generateLocalBusinessSchema = (city?: string) => {
   const base = {
     "@context": "https://schema.org",
     "@type": ["LocalBusiness", "ProfessionalService"],
-    "@id": "https://veloxisglobal.com/#localbusiness",
+    "@id": "https://www.veloxisglobal.com/#localbusiness",
     "name": "Veloxis Global",
     "telephone": "+918887620727",
     "email": "info@veloxisglobal.com",
-    "url": "https://veloxisglobal.com/",
+    "url": "https://www.veloxisglobal.com/",
     "priceRange": "₹₹",
-    "image": "https://veloxisglobal.com/images/logos/logo.webp",
+    "image": "https://www.veloxisglobal.com/images/logos/logo.webp",
     "description": "Delhi NCR's results-driven real estate marketing agency. Expert landing pages, Google Ads and Meta Ads for property developers.",
     "openingHoursSpecification": {
       "@type": "OpeningHoursSpecification",
@@ -135,10 +135,10 @@ export const generateServiceSchema = (name: string, description: string) => {
     "provider": {
       "@type": "LocalBusiness",
       "name": "Veloxis Global",
-      "image": "https://veloxisglobal.com/images/logos/logo.webp",
+      "image": "https://www.veloxisglobal.com/images/logos/logo.webp",
       "telephone": "+918887620727",
       "email": "info@veloxisglobal.com",
-      "url": "https://veloxisglobal.com"
+      "url": "https://www.veloxisglobal.com"
     }
   };
 };
@@ -168,7 +168,7 @@ export const generateArticleSchema = (title: string, author: string = "Muddassir
     "author": {
       "@type": "Person",
       "name": author || "Muddassir Ali",
-      "url": "https://veloxisglobal.com/about",
+      "url": "https://www.veloxisglobal.com/about",
       "sameAs": [
         "https://www.linkedin.com/in/muddassir-alii/",
         "https://x.com/muddassir_alii"
@@ -179,7 +179,7 @@ export const generateArticleSchema = (title: string, author: string = "Muddassir
       "name": "Veloxis Global",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://veloxisglobal.com/images/logos/logo.webp"
+        "url": "https://www.veloxisglobal.com/images/logos/logo.webp"
       }
     }
   };
@@ -202,16 +202,16 @@ export const generateOrganizationSchema = () => {
   return {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "@id": "https://veloxisglobal.com/#organization",
+    "@id": "https://www.veloxisglobal.com/#organization",
     "name": "Veloxis Global",
-    "url": "https://veloxisglobal.com",
-    "logo": "https://veloxisglobal.com/images/logos/logo.webp",
+    "url": "https://www.veloxisglobal.com",
+    "logo": "https://www.veloxisglobal.com/images/logos/logo.webp",
     "foundingDate": "2025",
     "founders": [
       {
         "@type": "Person",
         "name": "Muddassir Ali",
-        "url": "https://veloxisglobal.com/about",
+        "url": "https://www.veloxisglobal.com/about",
         "sameAs": [
           "https://www.linkedin.com/in/muddassir-alii/",
           "https://x.com/muddassir_alii"
@@ -247,12 +247,12 @@ export const getWebSiteSchema = () => {
   return {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    "@id": "https://veloxisglobal.com/#website",
-    "url": "https://veloxisglobal.com",
+    "@id": "https://www.veloxisglobal.com/#website",
+    "url": "https://www.veloxisglobal.com",
     "name": "Veloxis Global",
     "description": "Delhi NCR's results-driven real estate marketing agency.",
     "publisher": {
-      "@id": "https://veloxisglobal.com/#organization"
+      "@id": "https://www.veloxisglobal.com/#organization"
     }
   };
 };
@@ -296,7 +296,7 @@ export const generateHowToSchema = (name: string, description: string, steps: { 
           "text": step.text
         }
       ],
-      "image": step.image || "https://veloxisglobal.com/images/logos/logo.webp"
+      "image": step.image || "https://www.veloxisglobal.com/images/logos/logo.webp"
     }))
   };
 };
@@ -319,8 +319,8 @@ export const generateTestimonialsSchema = (testimonials: { author: string; text:
       "itemReviewed": {
         "@type": "Organization",
         "name": "Veloxis Global",
-        "image": "https://veloxisglobal.com/images/logos/logo.webp",
-        "url": "https://veloxisglobal.com"
+        "image": "https://www.veloxisglobal.com/images/logos/logo.webp",
+        "url": "https://www.veloxisglobal.com"
       },
       "publisher": {
         "@type": "Organization",
@@ -347,7 +347,7 @@ export const getContactPageSchema = () => {
         "postalCode": "201301",
         "addressCountry": "IN"
       },
-      "url": "https://veloxisglobal.com/contact"
+      "url": "https://www.veloxisglobal.com/contact"
     }
   };
 };

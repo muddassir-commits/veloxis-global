@@ -25,8 +25,8 @@ export default function RealEstateIndustryPage() {
   ];
 
   const breadcrumbSchema = getBreadcrumbListSchema([
-    { name: 'Home', item: 'https://veloxisglobal.com' },
-    { name: industry.title, item: `https://veloxisglobal.com/industries/${industry.slug}` }
+    { name: 'Home', item: 'https://www.veloxisglobal.com' },
+    { name: industry.title, item: `https://www.veloxisglobal.com/industries/${industry.slug}` }
   ]);
 
   return (

@@ -20,8 +20,8 @@ export const metadata: Metadata = constructMetadata({
 export default function ContactPage() {
   const breadcrumbItems = [{ name: 'Contact Us', href: '/contact' }];
   const breadcrumbSchema = getBreadcrumbListSchema([
-    { name: 'Home', item: 'https://veloxisglobal.com' },
-    { name: 'Contact', item: 'https://veloxisglobal.com/contact' }
+    { name: 'Home', item: 'https://www.veloxisglobal.com' },
+    { name: 'Contact', item: 'https://www.veloxisglobal.com/contact' }
   ]);
   const contactPageSchema = getContactPageSchema();
   const organizationSchema = getOrganizationSchema();

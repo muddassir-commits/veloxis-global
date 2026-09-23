@@ -48,8 +48,8 @@ const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
 export default function ServicesPage() {
   const breadcrumbItems = [{ name: 'Services', href: '/services' }];
   const breadcrumbSchema = getBreadcrumbListSchema([
-    { name: 'Home', item: 'https://veloxisglobal.com' },
-    { name: 'Services', item: 'https://veloxisglobal.com/services' }
+    { name: 'Home', item: 'https://www.veloxisglobal.com' },
+    { name: 'Services', item: 'https://www.veloxisglobal.com/services' }
   ]);
 
   return (
