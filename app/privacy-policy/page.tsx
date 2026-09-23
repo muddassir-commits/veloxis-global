@@ -10,6 +10,7 @@ import { privacyFaqs } from '../../data/page-faqs';
 export const metadata: Metadata = constructMetadata(pageMeta.privacy);
 
 const LAST_UPDATED = '23 September 2026';
+const PRIVACY_EMAIL = 'support@veloxisglobal.com';
 
 // Services that receive data from this site. Keep in sync with app/layout.tsx and lib/.
 const providers = [
@@ -88,8 +89,8 @@ export default function PrivacyPolicyPage() {
             </ul>
             <p>
               We use your data because you gave it to us for these purposes (your consent), or where the DPDP Act allows
-              it for a legitimate use such as complying with the law. When a form is sent, our site tells Google
-              Analytics and Meta that an enquiry happened; your name, phone number and message are not included in that
+              it for a legitimate use such as complying with the law. When a form is sent, and only if you have
+              allowed analytics or marketing cookies, our site tells Google Analytics and Meta that an enquiry happened; your name, phone number and message are not included in that
               event. We do not sell your personal data.
             </p>
 
@@ -121,20 +122,20 @@ export default function PrivacyPolicyPage() {
             </p>
 
             <h2 className={h2}>5. Cookies and tracking</h2>
-            <p>Cookies are small files stored in your browser. This site uses:</p>
+            <p>
+              Cookies are small files stored in your browser. Analytics and marketing tools load only after you allow
+              them in our cookie banner. If you click “Reject all”, or have not chosen yet, none of them run.
+            </p>
             <ul className={list}>
-              <li><strong>Google Analytics and Google Tag Manager:</strong> count visits and see which pages lead to enquiries.</li>
-              <li><strong>Meta Pixel:</strong> measures our Facebook and Instagram ads and lets us show ads to people who visited the site.</li>
-              <li><strong>Microsoft Clarity:</strong> records clicks, scrolling and mouse movement as heatmaps and session recordings. By default, Clarity masks what you type into form fields.</li>
-              <li><strong>Local storage:</strong> remembers your choice on our cookie banner.</li>
+              <li><strong>Essential (always on):</strong> remembers your cookie choice in your browser.</li>
+              <li><strong>Analytics (only with your consent):</strong> Google Analytics and Google Tag Manager count visits and show which pages lead to enquiries; Microsoft Clarity records clicks, scrolling and mouse movement as heatmaps and session recordings, and by default masks what you type into form fields.</li>
+              <li><strong>Marketing (only with your consent):</strong> Meta Pixel and Google ads measurement show which ads bring enquiries and let us show ads to people who visited the site.</li>
             </ul>
-            <p>You can control tracking by:</p>
-            <ul className={list}>
-              <li>blocking or deleting cookies in your browser settings;</li>
-              <li>installing the <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener noreferrer" className={link}>Google Analytics opt-out add-on</a>;</li>
-              <li>changing your <a href="https://www.facebook.com/adpreferences" target="_blank" rel="noopener noreferrer" className={link}>Meta ad preferences</a>;</li>
-              <li>emailing us with any questions about tracking.</li>
-            </ul>
+            <p>
+              You can change or withdraw your choice at any time using <strong>Cookie settings</strong> at the bottom of
+              every page. You can also block or delete cookies in your browser settings, or change your{' '}
+              <a href="https://www.facebook.com/adpreferences" target="_blank" rel="noopener noreferrer" className={link}>Meta ad preferences</a>.
+            </p>
 
             <h2 className={h2}>6. How long we keep it</h2>
             <ul className={list}>
@@ -154,7 +155,7 @@ export default function PrivacyPolicyPage() {
               <li>nominate someone to act for you in case of death or incapacity.</li>
             </ul>
             <p>
-              Email <a href={`mailto:${siteData.email}`} className={link}>{siteData.email}</a> with your request. We may
+              Email <a href={`mailto:${PRIVACY_EMAIL}`} className={link}>{PRIVACY_EMAIL}</a> with your request. We may
               ask you to confirm your identity, and we aim to respond within 30 days. If you are not satisfied with our
               response, you can complain to the Data Protection Board of India.
             </p>
@@ -186,7 +187,7 @@ export default function PrivacyPolicyPage() {
             <h2 className={h2}>12. Contact and grievance officer</h2>
             <p>
               For any privacy question, request or complaint, contact our grievance officer: Muddassir Ali, Founder,
-              Veloxis Global — <a href={`mailto:${siteData.email}`} className={link}>{siteData.email}</a>,{' '}
+              Veloxis Global — <a href={`mailto:${PRIVACY_EMAIL}`} className={link}>{PRIVACY_EMAIL}</a>,{' '}
               <a href={`tel:${siteData.phoneRaw}`} className={link}>{siteData.phone}</a>.
             </p>
           </div>

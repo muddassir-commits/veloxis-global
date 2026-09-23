@@ -63,12 +63,12 @@ export const aboutFaqs = (years: number): PageFaq[] => [
 export const privacyFaqs: PageFaq[] = [
   { question: 'What information does Veloxis Global collect?', answer: 'What you enter in our forms (name, phone, the service you want, an optional message, or your email for the newsletter), plus device, browser and page-visit data collected by cookies and analytics tools.' },
   { question: 'Why do you collect this information?', answer: 'To reply to your enquiry, run the audit you asked for, send the newsletter if you subscribed, and see which pages and ads bring enquiries.' },
-  { question: 'Which tracking tools does this site use?', answer: 'Google Analytics and Google Tag Manager, Meta Pixel and Microsoft Clarity. The policy explains what each one does and how to block them.' },
+  { question: 'Which tracking tools does this site use?', answer: 'Google Analytics and Google Tag Manager, Meta Pixel and Microsoft Clarity. None of them load unless you allow them in the cookie banner, and you can change that any time under Cookie settings in the footer.' },
   { question: 'Do you share my name or phone number with Google or Meta?', answer: 'No. When you send a form, Google Analytics and Meta are told that an enquiry happened, but your name, phone number and message are not included.' },
   { question: 'Where is my form data stored?', answer: 'In a Supabase database on servers in Mumbai, India, and in our email inbox. We do not sell it.' },
   { question: 'How long do you keep my details?', answer: 'Enquiries are deleted within 24 months of our last contact unless you become a client. Newsletter emails are kept until you unsubscribe.' },
-  { question: 'How can I see, correct or delete my data?', answer: `Email ${siteData.email}. We aim to respond within 30 days, and you can complain to the Data Protection Board of India if you are not satisfied.` },
-  { question: 'Who do I contact about privacy questions?', answer: `Our grievance officer, Muddassir Ali, at ${siteData.email} or ${siteData.phone}.` },
+  { question: 'How can I see, correct or delete my data?', answer: `Email support@veloxisglobal.com. We aim to respond within 30 days, and you can complain to the Data Protection Board of India if you are not satisfied.` },
+  { question: 'Who do I contact about privacy questions?', answer: `Our grievance officer, Muddassir Ali, at support@veloxisglobal.com or ${siteData.phone}.` },
 ];
 
 export const termsFaqs: PageFaq[] = [
