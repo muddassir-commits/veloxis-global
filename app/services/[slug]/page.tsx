@@ -30,7 +30,7 @@ type ServicePhotos = { intro: Photo; deliverables: Photo; process: Photo; sideba
 const P = '/images/people/services';
 const servicePhotos: Record<string, ServicePhotos> = {
   'high-converting-landing-pages': {
-    intro: { src: `${P}/lp-designer-at-desktop.jpg`, alt: 'Designer working on page layouts on a desktop computer' },
+    intro: { src: `${P}/real-estate-landing-page-mockup.jpg`, alt: 'Sample real estate project landing page on a laptop and phone, with price, RERA number and site-visit form' },
     deliverables: { src: `${P}/lp-couple-browsing-tablet.jpg`, alt: 'Couple browsing on a tablet together on their sofa', position: 'center 30%' },
     process: { src: `${P}/lp-site-visit-agent.jpg`, alt: 'Sales executive talking with a couple outside an apartment building' },
     sidebar: { src: `${P}/lp-agent-welcomes-buyer.jpg`, alt: 'Agent welcoming a young man at the door of a home' },
@@ -42,7 +42,7 @@ const servicePhotos: Record<string, ServicePhotos> = {
     sidebar: { src: `${P}/ads-woman-scrolling-phone.jpg`, alt: 'Woman scrolling on her phone while sitting on a sofa', position: '70% center' },
   },
   'ai-automation': {
-    intro: { src: `${P}/ai-rep-phone-laptop.jpg`, alt: 'Young man checking messages on his phone while working on a laptop' },
+    intro: { src: `${P}/whatsapp-chatbot-mockup.jpg`, alt: 'Sample WhatsApp chatbot sending a brochure, asking the budget and booking a site visit, beside a lead inbox' },
     deliverables: { src: `${P}/ai-call-team-headsets.jpg`, alt: 'Sales team wearing headsets working on laptops', position: 'center 35%' },
     process: { src: `${P}/ai-man-desk-phone.jpg`, alt: 'Man taking a call on a desk phone in an office' },
     sidebar: { src: `${P}/ai-man-on-call.jpg`, alt: 'Smiling man talking on his mobile phone' },

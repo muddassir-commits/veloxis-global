@@ -17,19 +17,20 @@ import { servicesHubFaqs } from '../../data/page-faqs';
 
 export const metadata: Metadata = constructMetadata(pageMeta.services);
 
-// People-at-work photos (Pexels stock), all 1200x750 to match the 16/10 card frame.
+// Card images, all 1200x750 to match the 16/10 card frame: sample-design mockups
+// for landing pages and automation, a Pexels photo for ads.
 const serviceImages: Record<string, { src: string; alt: string }> = {
   'high-converting-landing-pages': {
-    src: '/images/people/services/hub-landing-pages.jpg',
-    alt: 'Young man working on a laptop in an office lounge',
+    src: '/images/people/home/real-estate-landing-page-mockup.jpg',
+    alt: 'Sample real estate project landing page on a laptop and phone, with price, RERA number and site-visit form',
   },
   'paid-ads': {
     src: '/images/people/services/hub-team-reviewing-charts.jpg',
     alt: 'Four colleagues reviewing printed charts around a laptop',
   },
   'ai-automation': {
-    src: '/images/people/services/hub-ai-automation.jpg',
-    alt: 'Woman wearing a headset replying to customers on a laptop',
+    src: '/images/people/home/whatsapp-chatbot-mockup.jpg',
+    alt: 'Sample WhatsApp chatbot sending a brochure, asking the budget and booking a site visit, beside a lead inbox',
   },
 };
 

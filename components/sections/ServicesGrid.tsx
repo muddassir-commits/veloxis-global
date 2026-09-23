@@ -12,9 +12,9 @@ import { ImageFrame } from '../ui/ImageFrame';
 
 const serviceVisuals = [
   {
-    image: '/images/people/home/landing-page-work-laptop.jpg',
-    alt: 'Man in a turban typing on a laptop at a small desk',
-    position: 'center 35%',
+    image: '/images/people/home/real-estate-landing-page-mockup.jpg',
+    alt: 'Sample real estate project landing page on a laptop and phone, with price, RERA number and site-visit form',
+    position: 'center',
     accentBg: 'bg-blue-50',
     accentText: 'text-blue-700',
   },
@@ -26,9 +26,9 @@ const serviceVisuals = [
     accentText: 'text-violet-700',
   },
   {
-    image: '/images/people/home/whatsapp-chat-phone.jpg',
-    alt: 'Woman smiling as she reads a message on her phone',
-    position: 'center 40%',
+    image: '/images/people/home/whatsapp-chatbot-mockup.jpg',
+    alt: 'Sample WhatsApp chatbot sending a brochure, asking the budget and booking a site visit, beside a lead inbox',
+    position: 'center',
     accentBg: 'bg-emerald-50',
     accentText: 'text-emerald-700',
   },
