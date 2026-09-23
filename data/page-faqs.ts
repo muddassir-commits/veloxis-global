@@ -67,8 +67,8 @@ export const privacyFaqs: PageFaq[] = [
   { question: 'Do you share my name or phone number with Google or Meta?', answer: 'No. When you send a form, Google Analytics and Meta are told that an enquiry happened, but your name, phone number and message are not included.' },
   { question: 'Where is my form data stored?', answer: 'In a Supabase database on servers in Mumbai, India, and in our email inbox. We do not sell it.' },
   { question: 'How long do you keep my details?', answer: 'Enquiries are deleted within 24 months of our last contact unless you become a client. Newsletter emails are kept until you unsubscribe.' },
-  { question: 'How can I see, correct or delete my data?', answer: `Email support@veloxisglobal.com. We aim to respond within 30 days, and you can complain to the Data Protection Board of India if you are not satisfied.` },
-  { question: 'Who do I contact about privacy questions?', answer: `Our grievance officer, Muddassir Ali, at support@veloxisglobal.com or ${siteData.phone}.` },
+  { question: 'How can I see, correct or delete my data?', answer: `Email ${siteData.email}. We aim to respond within 30 days, and you can complain to the Data Protection Board of India if you are not satisfied.` },
+  { question: 'Who do I contact about privacy questions?', answer: `Our grievance officer, Muddassir Ali, at ${siteData.email} or ${siteData.phone}.` },
 ];
 
 export const termsFaqs: PageFaq[] = [
