@@ -61,13 +61,14 @@ export const aboutFaqs = (years: number): PageFaq[] => [
 ];
 
 export const privacyFaqs: PageFaq[] = [
-  { question: 'What information does Veloxis Global collect?', answer: 'Names, email addresses and phone numbers; business details such as company name, website URLs and marketing spend; and the cities you operate in — all provided voluntarily through our forms.' },
-  { question: 'Why do you collect this information?', answer: 'To respond to consultation and audit requests, to prepare audit reports, and to send occasional marketing updates.' },
-  { question: 'Do you use cookies?', answer: 'Yes. We use browser cookies and analytics to understand how the site is used, measure page speed and remember layout preferences.' },
-  { question: 'What does Google Analytics track on this site?', answer: 'Session behaviour and conversion paths — for example which pages are visited before an enquiry is sent.' },
-  { question: 'Will you send me marketing messages?', answer: 'Only occasional marketing updates related to our services.' },
-  { question: 'How can I request my personal data to be deleted?', answer: `Contact us at ${siteData.email}. We will remove your data records within 24 hours.` },
-  { question: 'Who do I contact about privacy questions?', answer: `Email ${siteData.email}.` },
+  { question: 'What information does Veloxis Global collect?', answer: 'What you enter in our forms (name, phone, the service you want, an optional message, or your email for the newsletter), plus device, browser and page-visit data collected by cookies and analytics tools.' },
+  { question: 'Why do you collect this information?', answer: 'To reply to your enquiry, run the audit you asked for, send the newsletter if you subscribed, and see which pages and ads bring enquiries.' },
+  { question: 'Which tracking tools does this site use?', answer: 'Google Analytics and Google Tag Manager, Meta Pixel and Microsoft Clarity. The policy explains what each one does and how to block them.' },
+  { question: 'Do you share my name or phone number with Google or Meta?', answer: 'No. When you send a form, Google Analytics and Meta are told that an enquiry happened, but your name, phone number and message are not included.' },
+  { question: 'Where is my form data stored?', answer: 'In a Supabase database on servers in Mumbai, India, and in our email inbox. We do not sell it.' },
+  { question: 'How long do you keep my details?', answer: 'Enquiries are deleted within 24 months of our last contact unless you become a client. Newsletter emails are kept until you unsubscribe.' },
+  { question: 'How can I see, correct or delete my data?', answer: `Email ${siteData.email}. We aim to respond within 30 days, and you can complain to the Data Protection Board of India if you are not satisfied.` },
+  { question: 'Who do I contact about privacy questions?', answer: `Our grievance officer, Muddassir Ali, at ${siteData.email} or ${siteData.phone}.` },
 ];
 
 export const termsFaqs: PageFaq[] = [
