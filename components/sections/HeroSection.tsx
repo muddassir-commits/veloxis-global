@@ -1,155 +1,90 @@
 /**
  * HeroSection — Server Component.
- *
- * Critical design decisions for LCP:
- * 1. No 'use client' — renders as server HTML so H1 and CTA are visible on first paint.
- * 2. No initial opacity:0 on the left column — text is immediately visible.
- * 3. CSS keyframe fade-in (hero-fade-in) runs AFTER paint, so LCP element is
- *    measured before animation, not after JS hydration.
- * 4. HeroDashboard (the animated right panel) is dynamically imported with ssr:false
- *    so Framer Motion never ships in the critical path of this page.
+ * Full-width real estate hero with background image, overlay, and clean CTA.
+ * No client-side dependencies for maximum LCP performance.
  */
 import React from 'react';
 import Link from 'next/link';
-import dynamic from 'next/dynamic';
+import Image from 'next/image';
 import { Button } from '../ui/Button';
-import { Badge } from '../ui/Badge';
-import { AnimatedCounter } from '../ui/AnimatedCounter';
-import { FOUNDER_YEARS } from '../../lib/seo-config';
-
-// Dynamically import the animated dashboard panel — client-only, non-blocking.
-// A static placeholder prevents layout shift while the component loads.
-const HeroDashboard = dynamic(() => import('./HeroDashboard'), {
-  ssr: false,
-  loading: () => (
-    <div
-      className="lg:col-span-4 relative h-[380px] md:h-[450px] w-full flex items-center justify-center mt-8 lg:mt-0"
-      aria-hidden="true"
-    >
-      <div className="bg-white/70 backdrop-blur-[20px] rounded-2xl border border-white/40 p-6 shadow-xl w-full max-w-[380px] h-[280px] md:h-[320px]" />
-    </div>
-  ),
-});
+import { companyStats } from '../../data/stats';
+import { CheckCircle, Star } from 'lucide-react';
 
 export const HeroSection: React.FC = () => {
   return (
-    <section className="relative min-h-[92vh] bg-slate-50 flex items-center py-16 overflow-hidden">
-      {/* Decorative background grid pattern */}
-      <div
-        className="absolute inset-0 bg-[linear-gradient(to_right,#e2e8f0_1px,transparent_1px),linear-gradient(to_bottom,#e2e8f0_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-40"
+    <section className="relative min-h-[90vh] flex items-center overflow-hidden">
+      {/* Background Image */}
+      <Image
+        src="/images/hero-real-estate.jpg"
+        alt="Premium real estate development in Delhi NCR"
+        fill
+        priority
+        className="object-cover object-center"
+        quality={85}
+      />
+      
+      {/* Dark overlay gradient */}
+      <div 
+        className="absolute inset-0 bg-gradient-to-r from-slate-900/90 via-slate-900/75 to-slate-900/40"
         aria-hidden="true"
       />
 
-      <div className="max-w-[1280px] mx-auto px-4 md:px-16 w-full grid grid-cols-1 lg:grid-cols-10 gap-12 lg:gap-16 items-center relative z-10">
-
-        {/* Left Column — server-rendered, immediately visible for LCP */}
-        {/* CSS hero-fade-in starts after paint so LCP is captured before animation */}
-        <div
-          className="lg:col-span-6 flex flex-col items-start text-left hero-fade-in"
-        >
+      {/* Content */}
+      <div className="max-w-[1280px] mx-auto px-4 md:px-16 w-full relative z-10 py-20">
+        <div className="max-w-[680px] flex flex-col items-start text-left">
+          
           {/* Badge */}
-          <Badge color="teal" className="mb-6">
-            ⚡ CERTIFIED TEAM · SERVING BUSINESSES ACROSS INDIA
-          </Badge>
+          <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-2 mb-8">
+            <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" aria-hidden="true"></span>
+            <span className="text-xs font-bold tracking-wider uppercase text-white/90">Delhi NCR Real Estate Marketing</span>
+          </div>
 
-          {/* H1 Headline — LCP element, no opacity:0 initial state */}
-          <h1 className="text-[32px] md:text-[72px] font-bold md:font-extrabold tracking-[-0.02em] leading-tight md:leading-[1.1] text-slate-900 mb-6 font-sans">
-            India&apos;s Most{' '}
-            <span className="relative inline-block z-10 text-slate-900">
-              Results-Driven
-              <span
-                className="absolute left-0 bottom-2 md:bottom-3 w-full h-[6px] md:h-[8px] bg-gradient-to-r from-royal-blue to-indigo-accent -z-10 rounded-full opacity-35"
-                aria-hidden="true"
-              />
-            </span>{' '}
-            Digital Marketing Agency
+          {/* H1 Headline */}
+          <h1 className="text-[36px] md:text-[56px] lg:text-[64px] font-extrabold tracking-[-0.02em] leading-[1.1] text-white mb-6 font-sans">
+            The Growth Agency That Fills Your{' '}
+            <span className="text-emerald-400">Site Visits</span>
           </h1>
 
           {/* Body Paragraph */}
-          <p className="text-[18px] font-normal text-on-surface-variant leading-relaxed max-w-[560px] font-sans">
-            From professional <Link href="/services/seo" className="text-royal-blue hover:underline font-semibold">SEO Services</Link> to Google Ads campaigns, Veloxis Global delivers measurable digital growth. We are a leading <Link href="/digital-marketing-agency-kanpur" className="text-royal-blue hover:underline font-semibold">Digital Marketing Agency in Kanpur</Link>, serving clients pan-India. No fluff. Only results.
+          <p className="text-[16px] md:text-[18px] font-normal text-white/75 leading-relaxed max-w-[540px] font-sans mb-8">
+            We build predictable lead-generation engines for real estate developers and channel partners in Delhi NCR. High-converting landing pages, Meta & Google Ads, and WhatsApp automation — everything you need to sell properties faster.
           </p>
 
-          {/* CTA Buttons Row */}
-          <div className="flex flex-wrap items-center gap-[16px] mt-10 w-full sm:w-auto">
-            <div className="w-full sm:w-auto rounded-md hero-cta-hover">
-              <Button
-                id="hero-free-audit-btn"
-                variant="primary"
-                size="lg"
-                href="/free-seo-audit"
-                className="w-full sm:w-auto text-center"
-              >
-                Get Your Free Marketing Audit →
-              </Button>
-            </div>
-            <div className="w-full sm:w-auto rounded-md hero-cta-hover">
-              <Button
-                id="hero-see-results-btn"
-                variant="secondary"
-                size="lg"
-                href="#case-studies"
-                className="w-full sm:w-auto text-center"
-              >
-                See Our Results ↓
-              </Button>
-            </div>
+          {/* CTA Buttons */}
+          <div className="flex flex-wrap items-center gap-4 mb-10">
+            <Button
+              id="hero-free-audit-btn"
+              variant="primary"
+              size="lg"
+              href="/contact"
+              className="text-center shadow-lg shadow-blue-600/25"
+            >
+              Get Your Free Growth Plan →
+            </Button>
+            <Link
+              href="/case-studies"
+              className="text-[15px] font-bold text-white/80 hover:text-white transition-colors px-4 py-3 border border-white/20 rounded-xl hover:bg-white/10"
+            >
+              View Case Studies
+            </Link>
           </div>
 
-          <p className="text-sm text-slate-500 mt-4 font-sans">
-            Have questions? <Link href="/contact" className="text-royal-blue hover:underline font-semibold">Contact Veloxis Global</Link> today for a quick consultation.
-          </p>
-
-          {/* Trust Strip */}
-          <div className="flex flex-wrap md:flex-nowrap items-center gap-[32px] mt-12 border-t border-slate-200 pt-8 w-full">
-            {/* Experience */}
-            <div className="flex flex-col gap-1 min-w-[100px] font-sans">
-              <span className="text-[24px] md:text-[32px] font-bold tracking-tight text-slate-900 leading-none">
-                <AnimatedCounter value={FOUNDER_YEARS} suffix="+" />
-              </span>
-              <span className="text-[12px] font-bold tracking-[0.05em] uppercase text-slate-500 leading-none">
-                Years Experience
-              </span>
+          {/* Trust Indicators */}
+          <div className="flex flex-wrap items-center gap-6 text-sm text-white/60">
+            <div className="flex items-center gap-1.5">
+              <CheckCircle className="w-4 h-4 text-emerald-400" aria-hidden="true" />
+              <span>{companyStats.yearsExperience} Years Experience</span>
             </div>
-
-            {/* Projects */}
-            <div className="flex flex-col gap-1 min-w-[100px] font-sans">
-              <span className="text-[24px] md:text-[32px] font-bold tracking-tight text-slate-900 leading-none">
-                <AnimatedCounter value={20} suffix="+" />
-              </span>
-              <span className="text-[12px] font-bold tracking-[0.05em] uppercase text-slate-500 leading-none">
-                Projects Delivered
-              </span>
+            <div className="flex items-center gap-1.5">
+              <CheckCircle className="w-4 h-4 text-emerald-400" aria-hidden="true" />
+              <span>{companyStats.projectsDelivered} Projects Delivered</span>
             </div>
-
-            {/* Rating */}
-            <div className="flex flex-col gap-1 min-w-[100px] font-sans">
-              <div className="flex items-center gap-1.5">
-                <span className="text-yellow-500 text-lg leading-none" aria-hidden="true">⭐</span>
-                <span className="text-[24px] md:text-[32px] font-bold tracking-tight text-slate-900 leading-none">
-                  <AnimatedCounter value={4.9} suffix="★" />
-                </span>
-              </div>
-              <span className="text-[12px] font-bold tracking-[0.05em] uppercase text-slate-500 leading-none">
-                Client Rating
-              </span>
-            </div>
-
-            {/* Cities Served */}
-            <div className="flex flex-col gap-1 min-w-[100px] font-sans">
-              <span className="text-[24px] md:text-[32px] font-bold tracking-tight text-slate-900 leading-none">
-                Pan-India
-              </span>
-              <span className="text-[12px] font-bold tracking-[0.05em] uppercase text-slate-500 leading-none">
-                Reach
-              </span>
+            <div className="flex items-center gap-1.5">
+              <Star className="w-4 h-4 text-emerald-400 fill-emerald-400" aria-hidden="true" />
+              <span>{companyStats.clientRating} Client Rating</span>
             </div>
           </div>
         </div>
-
-        {/* Right Column — animated dashboard, client-only, non-blocking */}
-        <HeroDashboard />
-
       </div>
     </section>
   );

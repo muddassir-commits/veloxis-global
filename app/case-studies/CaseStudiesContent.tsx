@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Badge } from '../../components/ui/Badge';
 import { Card } from '../../components/ui/Card';
 import { Button } from '../../components/ui/Button';
@@ -11,7 +12,7 @@ import { caseStudies } from '../../data/case-studies';
 
 export default function CaseStudiesContent() {
   const [activeFilter, setActiveFilter] = useState<string>('All');
-  const filters = ['All', 'SEO', 'Google Ads', 'Social Media'];
+  const filters = ['All', 'Landing Pages', 'Paid Ads', 'AI Automation'];
 
   const filteredStudies = caseStudies.filter(
     (study) => activeFilter === 'All' || study.serviceCategory === activeFilter
@@ -28,7 +29,7 @@ export default function CaseStudiesContent() {
             Performance Marketing Case Studies
           </h1>
           <p className="text-slate-500 max-w-2xl text-sm sm:text-base leading-relaxed">
-            Data-backed client campaigns detailing our exact optimization funnels, traffic charts, and Lead acquisition metrics.
+            Data-backed client campaigns detailing our exact ad funnels, site-visit numbers, and lead acquisition metrics.
           </p>
         </div>
       </section>
@@ -64,9 +65,15 @@ export default function CaseStudiesContent() {
               className="bg-white border border-slate-100 rounded-2xl overflow-hidden shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow h-full"
             >
               {/* Graphic Block */}
-              <div className="h-48 bg-slate-900 relative flex items-center justify-center overflow-hidden">
-                <div className="absolute inset-0 bg-[radial-gradient(#1e293b_1px,transparent_1px)] bg-[size:16px_16px] opacity-35"></div>
-                <div className="absolute inset-0 bg-gradient-to-br from-royal-blue/30 via-transparent to-slate-900/50"></div>
+              <div className="h-48 relative flex items-center justify-center overflow-hidden">
+                <Image
+                  src={study.image}
+                  alt={study.title}
+                  fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  className="object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/85 via-slate-900/30 to-slate-900/10"></div>
                 <div className="text-center relative z-10 p-6 flex flex-col items-center gap-2">
                   <TrendingUp className="w-10 h-10 text-royal-blue" />
                   <span className="text-white font-extrabold text-lg tracking-tight uppercase">

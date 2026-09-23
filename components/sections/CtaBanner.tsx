@@ -13,8 +13,8 @@ export interface CtaBannerProps {
 }
 
 export const CtaBanner: React.FC<CtaBannerProps> = ({ title, description }) => {
-  const displayTitle = title || "Ready to Grow Your Business in 2026?";
-  const displayDescription = description || "Get a FREE, no-obligation digital marketing audit. We will analyze your search visibility, competitor rankings, and speed profiles to show you exactly how to double your conversions.";
+  const displayTitle = title || "Ready to Scale Your Real Estate Sales in 2026?";
+  const displayDescription = description || "Get a FREE, no-obligation growth roadmap session. We will evaluate your current funnels, audit your competitor channels, and outline an actionable strategy to double your site visits.";
 
   return (
     <section className="py-12 bg-white overflow-hidden section-reveal">
@@ -39,8 +39,8 @@ export const CtaBanner: React.FC<CtaBannerProps> = ({ title, description }) => {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto">
             {/* White bg / Blue text button */}
             <div className="w-full sm:w-auto rounded-full hero-cta-hover">
-              <Button id="cta-banner-free-audit-btn" href="/free-seo-audit" variant="white" className="w-full sm:w-auto text-center shadow-lg">
-                Get Your Free Audit →
+              <Button id="cta-banner-free-audit-btn" href="/contact" variant="white" className="w-full sm:w-auto text-center shadow-lg">
+                Get Your Growth Plan →
               </Button>
             </div>
             {/* Ghost white border button */}

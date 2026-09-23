@@ -3,14 +3,14 @@ export const generateLocalBusinessSchema = (city?: string) => {
   const base = {
     "@context": "https://schema.org",
     "@type": ["LocalBusiness", "ProfessionalService"],
-    "@id": `https://veloxisglobal.com/${city && city.toLowerCase() !== 'general' ? `digital-marketing-agency-${city.toLowerCase()}` : ''}#localbusiness`,
+    "@id": "https://veloxisglobal.com/#localbusiness",
     "name": "Veloxis Global",
     "telephone": "+918887620727",
     "email": "info@veloxisglobal.com",
-    "url": `https://veloxisglobal.com/${city && city.toLowerCase() !== 'general' ? `digital-marketing-agency-${city.toLowerCase()}` : ''}`,
+    "url": "https://veloxisglobal.com/",
     "priceRange": "₹₹",
     "image": "https://veloxisglobal.com/images/logos/logo.webp",
-    "description": "India's results-driven digital marketing agency. Expert SEO, Google Ads and Social Media marketing for businesses across India.",
+    "description": "Delhi NCR's results-driven real estate marketing agency. Expert landing pages, Google Ads and Meta Ads for property developers.",
     "openingHoursSpecification": {
       "@type": "OpeningHoursSpecification",
       "dayOfWeek": [
@@ -104,24 +104,24 @@ export const generateLocalBusinessSchema = (city?: string) => {
       "areaServed": "Delhi NCR"
     };
   } else {
-    // Default to Kanpur address
+    // Default to Noida address
     return {
       ...base,
-      "hasMap": "https://maps.google.com/?q=Veloxis+Global+Kanpur",
+      "hasMap": "https://maps.google.com/?q=Veloxis+Global+Noida",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "12 Faithful Ganj, Cantt",
-        "addressLocality": "Kanpur",
+        "streetAddress": "Logix Techno Park, Sector 127",
+        "addressLocality": "Noida",
         "addressRegion": "Uttar Pradesh",
-        "postalCode": "208004",
+        "postalCode": "201301",
         "addressCountry": "IN"
       },
       "geo": {
         "@type": "GeoCoordinates",
-        "latitude": "26.4499",
-        "longitude": "80.3319"
+        "latitude": "28.5355",
+        "longitude": "77.3910"
       },
-      "areaServed": "India"
+      "areaServed": "Delhi NCR"
     };
   }
 };
@@ -250,7 +250,7 @@ export const getWebSiteSchema = () => {
     "@id": "https://veloxisglobal.com/#website",
     "url": "https://veloxisglobal.com",
     "name": "Veloxis Global",
-    "description": "India's results-driven digital marketing agency.",
+    "description": "Delhi NCR's results-driven real estate marketing agency.",
     "publisher": {
       "@id": "https://veloxisglobal.com/#organization"
     }
@@ -327,5 +327,27 @@ export const generateTestimonialsSchema = (testimonials: { author: string; text:
         "name": "Veloxis Global"
       }
     }))
+  };
+};
+
+export const getContactPageSchema = () => {
+  return {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "mainEntity": {
+      "@type": "LocalBusiness",
+      "name": "Veloxis Global",
+      "telephone": "+91-8887620727",
+      "email": "info@veloxisglobal.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Logix Techno Park, Sector 127",
+        "addressLocality": "Noida",
+        "addressRegion": "Uttar Pradesh",
+        "postalCode": "201301",
+        "addressCountry": "IN"
+      },
+      "url": "https://veloxisglobal.com/contact"
+    }
   };
 };

@@ -39,3 +39,6 @@ next-env.d.ts
 /scratch/
 /seo/
 /files.zip
+
+# local SQLite lead store
+/.data/

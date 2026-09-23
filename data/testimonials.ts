@@ -11,53 +11,30 @@ export interface Testimonial {
 
 export const testimonials: Testimonial[] = [
   {
-    id: "malhotra",
+    id: "real-estate-dev",
     rating: 5,
-    text: "Veloxis Global completely transformed our digital presence. In 6 months, we went from invisible online to ranking #1 in Delhi for our main search terms. Our enquiry volume tripled. Best investment we've made.",
-    author: "Rohit Malhotra",
-    role: "Director",
-    company: "Malhotra Properties",
+    text: "Honestly, they completely turned things around for our new luxury project launch. Our phones haven't stopped ringing since they took over our Google Ads! The lead quality is crazy good. Best decision we made.",
+    author: "Rohit S.",
+    role: "Director of Sales",
+    company: "Premium Real Estate Developers",
     location: "Delhi",
-    website: "https://malhotraproperties.com"
   },
   {
-    id: "skilledge",
+    id: "real-estate-broker",
     rating: 5,
-    text: "Their Google Ads team cut our cost-per-lead by 42% in the first 60 days while doubling our lead volume. The weekly reports are genuinely insightful — not just numbers, but clear next steps.",
-    author: "Priya Agarwal",
-    role: "Founder",
-    company: "SkillEdge Academy",
+    text: "Their WhatsApp automation is a game changer. The moment a lead comes from Facebook, my sales team gets notified and the buyer gets our brochure instantly. We've doubled our site visits.",
+    author: "Amit K.",
+    role: "Managing Director",
+    company: "NCR Property Consultants",
     location: "Noida",
-    website: "https://skilledgeacademy.in"
   },
   {
-    id: "verma",
+    id: "real-estate-channel",
     rating: 5,
-    text: "As a multi-specialty clinic, we needed patients to find us locally. Veloxis set up our Google Business Profiles for all 3 locations and built our local SEO. Footfall increased 60% in 4 months.",
-    author: "Dr. Ashish Verma",
-    role: "Director",
-    company: "Verma Health Group",
-    location: "Lucknow",
-    website: "https://vermahealth.com"
-  },
-  {
-    id: "gupta",
-    rating: 5,
-    text: "We were sceptical about digital marketing for our textile business, but Veloxis proved us wrong. Our B2B leads from Google now account for 40% of new business. Exceptional team.",
-    author: "Suresh Gupta",
-    role: "MD",
-    company: "Gupta Fabrics Ltd.",
-    location: "Kanpur",
-    website: "https://guptafabrics.com"
-  },
-  {
-    id: "bloom",
-    rating: 5,
-    text: "Our Instagram following grew from 2,000 to 58,000 in 8 months. More importantly, our Shopify revenue from social traffic increased 220%. These people know what they are doing.",
-    author: "Neha Singh",
+    text: "We were struggling to get quality leads before Veloxis. They built a hyper-fast landing page and ran targeted Meta ads. Our CPL dropped by 40% and conversion doubled. Highly recommended!",
+    author: "Priya M.",
     role: "Founder",
-    company: "Bloom Skincare",
-    location: "Delhi",
-    website: "https://bloomskincare.co.in"
+    company: "Metro Channel Partners",
+    location: "Greater Noida",
   }
 ];

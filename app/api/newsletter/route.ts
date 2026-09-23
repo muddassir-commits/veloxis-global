@@ -1,5 +1,7 @@
 import { NextResponse } from 'next/server';
 import * as z from 'zod';
+import db from '../../../lib/db';
+import { sendEmail } from '../../../lib/mail';
 
 const newsletterSchema = z.object({
   email: z.string().email(),
@@ -27,35 +29,33 @@ export async function POST(request: Request) {
 
     const { _honey, ...formData } = parsedData.data;
 
-    // 3. Forward to N8N webhook
-    const webhookUrl = process.env.N8N_NEWSLETTER_WEBHOOK;
-    if (!webhookUrl) {
-      console.warn('Warning: N8N_NEWSLETTER_WEBHOOK is not configured.');
-      // Return success mock locally to prevent errors if not configured yet
-      return NextResponse.json({ 
-        success: true, 
-        mock: true, 
-        message: 'Mock newsletter subscription handled successfully (no N8N webhook set)' 
-      });
+    // 3. Save to local SQLite database
+    try {
+      const stmt = db.prepare(`
+        INSERT INTO newsletter_subscribers (email)
+        VALUES (@email)
+      `);
+      stmt.run({ email: formData.email });
+    } catch (dbError: any) {
+      if (dbError.code === 'SQLITE_CONSTRAINT_UNIQUE') {
+        console.warn('Email already subscribed:', formData.email);
+        // We can just return success anyway to not leak info, or a friendly message
+      } else {
+        throw dbError;
+      }
     }
 
-    const response = await fetch(webhookUrl, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        ...formData,
-        timestamp: new Date().toISOString(),
-        source: 'newsletter-form'
-      })
+    // 4. Send email notification
+    await sendEmail({
+      to: process.env.NOTIFICATION_EMAIL || process.env.SMTP_USER || 'hello@veloxisglobal.com',
+      subject: `New Newsletter Subscriber: ${formData.email}`,
+      html: `
+        <h2>New Newsletter Subscription</h2>
+        <p><strong>Email:</strong> ${formData.email}</p>
+      `,
     });
 
-    if (!response.ok) {
-      const errorText = await response.text();
-      console.error('N8N webhook returned error response:', errorText);
-      throw new Error(`N8N response code: ${response.status}`);
-    }
-
-    return NextResponse.json({ success: true, message: 'Subscription forwarded to N8n successfully' });
+    return NextResponse.json({ success: true, message: 'Subscription received successfully' });
   } catch (error: any) {
     console.error('Error handling newsletter subscription:', error);
     return NextResponse.json({ success: false, error: error.message || 'Internal server error' }, { status: 500 });

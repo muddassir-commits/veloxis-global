@@ -5,9 +5,10 @@ import { Badge } from '../../components/ui/Badge';
 import { SchemaMarkup } from '../../components/ui/SchemaMarkup';
 import { FaqAccordion } from '../../components/sections/FaqAccordion';
 import { constructMetadata } from '../../lib/seo-config';
+import { siteData } from '../../data/site';
 
 export const metadata: Metadata = constructMetadata({
-  title: "Privacy Policy | Veloxis Global Digital Marketing Agency",
+  title: "Privacy Policy | Veloxis Global Real Estate Marketing",
   description: "Read the Privacy Policy for Veloxis Global. Learn how we collect, protect, and securely use your personal data. Contact us today for any data requests.",
   path: "/privacy-policy"
 });
@@ -71,7 +72,7 @@ export default function PrivacyPolicyPage() {
             <ul className="list-disc pl-5 flex flex-col gap-2">
               <li><strong>Personal details:</strong> Names, email addresses, and phone numbers.</li>
               <li><strong>Business statistics:</strong> Company name, target website URLs, and marketing spends.</li>
-              <li><strong>Geographic data:</strong> Operational cities like Kanpur, Lucknow, Noida, and Delhi.</li>
+              <li><strong>Geographic data:</strong> Operational cities like Delhi, Noida, and Greater Noida.</li>
             </ul>
 
             <h2 className="text-lg font-extrabold text-slate-900 mt-4">2. Cookies & Analytics</h2>
@@ -86,12 +87,12 @@ export default function PrivacyPolicyPage() {
             <p>We use contact details exclusively to optimize user communications and strategy:</p>
             <ul className="list-disc pl-5 flex flex-col gap-2">
               <li>Responding directly to consultation bookings or audits.</li>
-              <li>Compiling manual PDF SEO audit report metrics.</li>
+              <li>Compiling manual growth audit report metrics.</li>
               <li>Sharing occasional technical marketing updates.</li>
             </ul>
 
             <h2 className="text-lg font-extrabold text-slate-900 mt-4">4. Compliance & Contact</h2>
-            <p>For questions or requests regarding data removal, please contact us directly at <a href="mailto:info@veloxisglobal.com" className="text-royal-blue hover:underline font-bold">info@veloxisglobal.com</a>.</p>
+            <p>For questions or requests regarding data removal, please contact us directly at <a href={`mailto:${siteData.email}`} className="text-royal-blue hover:underline font-bold">{siteData.email}</a>.</p>
           </div>
         </div>
       </section>
@@ -107,7 +108,7 @@ export default function PrivacyPolicyPage() {
           },
           {
             question: "How can I request my personal data to be deleted?",
-            answer: "Simply contact us at info@veloxisglobal.com. We will remove all your data records from our server pipelines within 24 hours."
+            answer: `Simply contact us at ${siteData.email}. We will remove all your data records from our server pipelines within 24 hours.`
           }
         ]}
       />

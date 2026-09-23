@@ -41,7 +41,7 @@ export default function PricingPage() {
     },
     {
       q: "How long does it take to see tangible results?",
-      a: "Paid campaigns (Google Ads, Meta Ads) start generating leads in the first week. Organic SEO and keyword authority building typically require 3 to 6 months to establish front-page rankings."
+      a: "Paid campaigns (Google Ads, Meta Ads) start generating leads in the first week. Landing page builds take 3-7 days. WhatsApp automation goes live as soon as your ad campaigns do."
     },
     {
       q: "Can I upgrade, downgrade, or cancel at any time?",

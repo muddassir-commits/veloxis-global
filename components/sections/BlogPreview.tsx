@@ -3,44 +3,12 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Card } from '../ui/Card';
 import { Badge } from '../ui/Badge';
-import { Calendar, User, Clock, ArrowRight } from 'lucide-react';
+import { Clock, ArrowRight, User } from 'lucide-react';
+import { blogPosts } from '../../data/blog-posts';
 
 export const BlogPreview: React.FC = () => {
-  const posts = [
-    {
-      slug: 'seo-in-2026-whats-changed-for-indian-businesses',
-      title: "SEO in 2026: Guide for Indian Businesses | Veloxis Global",
-      excerpt: "Learn how to rank higher on Google in 2026. Get our expert SEO action plan tailored for Indian businesses and scale your organic website traffic.",
-      category: 'SEO',
-      badge: 'teal' as const,
-      author: 'Muddassir Ali',
-      date: 'May 20, 2026',
-      readTime: '6 min read',
-      image: '/images/blog/seo-2026-guide.png'
-    },
-    {
-      slug: 'google-ads-vs-meta-ads-roi-india',
-      title: "Google Ads vs Meta Ads: India ROI Guide | Veloxis Global",
-      excerpt: "Should you choose Google Ads or Meta Ads in India? Read our direct comparison of CPC, target intent, and conversion ROAS to scale your leads now.",
-      category: 'Paid PPC',
-      badge: 'orange' as const,
-      author: 'Muddassir Ali',
-      date: 'May 15, 2026',
-      readTime: '5 min read',
-      image: '/images/blog/google-meta-roi.png'
-    },
-    {
-      slug: 'how-to-optimize-google-business-profile-2026',
-      title: "Local SEO: Google Business Profile 2026 Guide | Veloxis",
-      excerpt: "Master Google Maps pack positioning in 2026. Read our local GBP optimization checklist to get more phone calls and client visits for your clinic.",
-      category: 'Local SEO',
-      badge: 'indigo' as const,
-      author: 'Muddassir Ali',
-      date: 'May 10, 2026',
-      readTime: '7 min read',
-      image: '/images/blog/gbp-local-seo.png'
-    }
-  ];
+  // Pull the latest 3 blog posts dynamically from actual data
+  const posts = blogPosts.slice(0, 3);
 
   return (
     <section className="bg-slate-50 py-section-gap" id="blog-preview">
@@ -52,7 +20,7 @@ export const BlogPreview: React.FC = () => {
               INSIGHTS
             </Badge>
             <h2 className="text-3xl sm:text-headline-lg font-bold text-slate-900 tracking-tight leading-tight">
-              Digital Marketing Knowledge Built for Indian Businesses
+              Real Estate Marketing Insights for NCR Developers
             </h2>
           </div>
           <Link
@@ -69,17 +37,21 @@ export const BlogPreview: React.FC = () => {
           {posts.map((post, idx) => (
             <div key={idx} className="h-full">
               <Card hover className="flex flex-col h-full overflow-hidden p-0 border border-slate-100 bg-white group">
-                {/* Card Header image */}
-                <div className="w-full h-48 bg-slate-100 relative overflow-hidden border-b border-slate-50">
-                  <Image
-                    src={post.image}
-                    alt={post.title}
-                    fill
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 400px"
-                    className="object-cover transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-105"
-                  />
+                {/* Card Header - gradient accent bar */}
+                <div className="w-full h-48 relative overflow-hidden border-b border-slate-50">
+                  <Link href={`/blog/${post.slug}`} className="block w-full h-full">
+                    <Image
+                      src={post.image}
+                      alt={post.title}
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                      className="object-cover transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-105"
+                    />
+                  </Link>
                   <div className="absolute top-4 left-4 z-10">
-                    <Badge variant={post.badge}>{post.category}</Badge>
+                    <Badge variant={idx === 0 ? 'indigo' : idx === 1 ? 'teal' : 'orange'}>
+                      {post.category}
+                    </Badge>
                   </div>
                 </div>
 
@@ -92,8 +64,8 @@ export const BlogPreview: React.FC = () => {
                       {post.author}
                     </span>
                     <span className="flex items-center gap-1">
-                      <Calendar className="w-3.5 h-3.5" aria-hidden="true" />
-                      {post.date}
+                      <Clock className="w-3.5 h-3.5" aria-hidden="true" />
+                      {post.readTime}
                     </span>
                   </div>
 
@@ -106,11 +78,7 @@ export const BlogPreview: React.FC = () => {
                   </p>
 
                   <div className="flex items-center justify-between mt-auto pt-4 border-t border-slate-50 text-xs font-semibold text-slate-500">
-                    <span className="flex items-center gap-1">
-                      <Clock className="w-3.5 h-3.5" aria-hidden="true" />
-                      {post.readTime}
-                    </span>
-
+                    <span>{post.date}</span>
                     <Link
                       href={`/blog/${post.slug}`}
                       className="inline-flex items-center gap-1 text-royal-blue hover:text-indigo-accent font-bold"

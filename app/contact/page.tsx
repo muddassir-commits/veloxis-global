@@ -6,8 +6,9 @@ import { Card } from '../../components/ui/Card';
 import { Button } from '../../components/ui/Button';
 import { Breadcrumb } from '../../components/ui/Breadcrumb';
 import { SchemaMarkup } from '../../components/ui/SchemaMarkup';
-import { getBreadcrumbListSchema } from '../../lib/schema';
+import { getBreadcrumbListSchema, getContactPageSchema, getOrganizationSchema } from '../../lib/schema';
 import { ContactForm } from '../../components/forms/ContactForm';
+import { siteData } from '@/data/site';
 import { Phone, Mail, MessageCircle, Clock, Calendar } from 'lucide-react';
 
 export const metadata: Metadata = constructMetadata({
@@ -22,10 +23,14 @@ export default function ContactPage() {
     { name: 'Home', item: 'https://veloxisglobal.com' },
     { name: 'Contact', item: 'https://veloxisglobal.com/contact' }
   ]);
+  const contactPageSchema = getContactPageSchema();
+  const organizationSchema = getOrganizationSchema();
 
   return (
     <>
       <SchemaMarkup schema={breadcrumbSchema} />
+      <SchemaMarkup schema={contactPageSchema} />
+      <SchemaMarkup schema={organizationSchema} />
 
       <section className="bg-slate-50 py-8 border-b border-slate-100">
         <div className="max-w-container-max mx-auto px-gutter">
@@ -36,16 +41,25 @@ export default function ContactPage() {
       <section className="bg-slate-50 py-16">
         <div className="max-w-container-max mx-auto px-gutter grid grid-cols-1 lg:grid-cols-12 gap-12 text-left">
           {/* Left Column - Contact Form */}
-          <div className="lg:col-span-7 flex flex-col items-start gap-6">
+          <div className="lg:col-span-7 flex flex-col items-start gap-6 order-last lg:order-first">
             <Badge variant="teal">GET IN TOUCH</Badge>
             
             <h1 className="text-4xl sm:text-headline-lg font-extrabold text-slate-900 tracking-tight leading-tight">
-              Contact Our Digital Marketing Agency Today
+              Let's talk — you'll reach me directly.
             </h1>
             
             <p className="text-base sm:text-body-md text-on-surface-variant leading-relaxed">
               Complete the form below and a performance marketing specialist from our local team will call you within 24 hours to schedule a discovery call.
             </p>
+
+            <div className="flex items-center gap-4 bg-white p-4 rounded-xl border border-slate-100 shadow-sm w-full">
+              <div className="relative w-12 h-12 rounded-full border border-slate-200 overflow-hidden shrink-0">
+                <img src="/images/profiles/muddassir.jpg" alt="Muddassir Ali" className="object-cover w-full h-full" />
+              </div>
+              <p className="text-sm sm:text-base text-on-surface-variant leading-relaxed">
+                I personally reply within a few hours. No sales pressure. Just an honest conversation about growing your business.
+              </p>
+            </div>
 
             <ContactForm />
           </div>
@@ -59,33 +73,33 @@ export default function ContactPage() {
 
               <div className="flex flex-col gap-5">
                 {/* Phone */}
-                <a
-                  href="tel:+918887620727"
-                  className="flex items-start gap-4 p-3 hover:bg-slate-50 rounded-lg transition-colors group"
+                <a 
+                  href={`tel:${siteData.phoneRaw}`}
+                  className="flex items-start gap-4 p-4 sm:p-6 rounded-2xl bg-white border border-slate-100 hover:border-royal-blue/30 hover:shadow-lg transition-all duration-300 group"
                 >
                   <div className="w-10 h-10 rounded-lg bg-royal-blue/10 text-royal-blue flex items-center justify-center shrink-0">
                     <Phone className="w-5 h-5" />
                   </div>
                   <div>
-                    <span className="text-xs font-bold text-slate-400 uppercase tracking-wider block">Call Our Team</span>
+                    <span className="text-xs font-bold text-slate-400 uppercase tracking-wider block">Call Directly</span>
                     <span className="font-extrabold text-slate-900 text-base sm:text-lg block mt-0.5 group-hover:text-royal-blue transition-colors">
-                      +91-88876 20727
+                      {siteData.phone}
                     </span>
                   </div>
                 </a>
 
                 {/* Email */}
-                <a
-                  href="mailto:info@veloxisglobal.com"
-                  className="flex items-start gap-4 p-3 hover:bg-slate-50 rounded-lg transition-colors group"
+                <a 
+                  href={`mailto:${siteData.email}`}
+                  className="flex items-start gap-4 p-4 sm:p-6 rounded-2xl bg-white border border-slate-100 hover:border-royal-blue/30 hover:shadow-lg transition-all duration-300 group"
                 >
                   <div className="w-10 h-10 rounded-lg bg-royal-blue/10 text-royal-blue flex items-center justify-center shrink-0">
                     <Mail className="w-5 h-5" />
                   </div>
                   <div>
-                    <span className="text-xs font-bold text-slate-400 uppercase tracking-wider block">Email Inquiries</span>
+                    <span className="text-xs font-bold text-slate-400 uppercase tracking-wider block">Email Us</span>
                     <span className="font-extrabold text-slate-900 text-base sm:text-lg block mt-0.5 group-hover:text-royal-blue transition-colors">
-                      info@veloxisglobal.com
+                      {siteData.email}
                     </span>
                   </div>
                 </a>

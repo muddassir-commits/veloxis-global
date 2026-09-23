@@ -4,13 +4,17 @@
  */
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { SectionLabel } from '../ui/SectionLabel';
 import { Button } from '../ui/Button';
 import { Card } from '../ui/Card';
 import { Badge } from '../ui/Badge';
 import { TrendingUp, ArrowRight } from 'lucide-react';
+import { caseStudies } from '../../data/case-studies';
 
 export const CasestudyFeature: React.FC = () => {
+  const study = caseStudies[0];
+
   return (
     <section
       className="bg-slate-900 py-section-gap text-white overflow-hidden"
@@ -34,42 +38,39 @@ export const CasestudyFeature: React.FC = () => {
             {/* Left Column */}
             <div className="lg:col-span-7 flex flex-col items-start gap-5">
               <Badge variant="teal" className="px-3 py-1 font-bold text-xs uppercase tracking-wider bg-teal-accent/10 border border-teal-accent/20 text-teal-accent">
-                Real Estate · Delhi · 6 Months
+                {study.industry} · {study.location} · {study.duration}
               </Badge>
 
               <h3 className="text-2xl sm:text-headline-md font-extrabold text-white leading-tight">
-                How We Took a Delhi Real Estate Developer from 0 to 35,000 Monthly Visitors
+                {study.title}
               </h3>
 
               <div className="text-body-md text-white/70 space-y-3">
                 <p>
-                  <strong>Challenge:</strong> Zero online presence, relying completely on traditional print media and local agents, losing leads to digital-first competitors.
+                  <strong>Challenge:</strong> {study.challenge}
                 </p>
                 <p>
-                  <strong>Strategy:</strong> Implemented geo-targeted Local SEO campaigns, optimized Google Business Profiles, and ran high-performance landing pages and search campaigns.
+                  <strong>Strategy:</strong> {study.strategy}
                 </p>
               </div>
 
               {/* Metric Chips — CSS stagger */}
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 w-full my-4 stagger-reveal">
                 <div className="bg-teal-accent/20 border border-teal-accent/30 rounded-lg px-4 py-3 flex flex-col items-start">
-                  <span className="text-xl font-bold text-teal-accent">↑ 340%</span>
-                  <span className="text-[10px] font-bold text-teal-accent uppercase tracking-wider mt-0.5">Organic Traffic</span>
+                  <span className="text-sm font-bold text-teal-accent leading-snug">{study.metrics[0]}</span>
                 </div>
 
                 <div className="bg-sunset-orange/20 border border-sunset-orange/30 rounded-lg px-4 py-3 flex flex-col items-start">
-                  <span className="text-xl font-bold text-sunset-orange">5.2x</span>
-                  <span className="text-[10px] font-bold text-sunset-orange uppercase tracking-wider mt-0.5">Return on Ad Spend</span>
+                  <span className="text-sm font-bold text-sunset-orange leading-snug">{study.metrics[1]}</span>
                 </div>
 
                 <div className="bg-indigo-accent/20 border border-indigo-accent/30 rounded-lg px-4 py-3 flex flex-col items-start">
-                  <span className="text-xl font-bold text-indigo-accent">#1 for 18</span>
-                  <span className="text-[10px] font-bold text-indigo-accent uppercase tracking-wider mt-0.5">Keywords</span>
+                  <span className="text-sm font-bold text-indigo-accent leading-snug">{study.metrics[2]}</span>
                 </div>
               </div>
 
               <Button
-                href="/case-studies/delhi-real-estate-developer"
+                href={`/case-studies/${study.slug}`}
                 variant="outline"
                 className="border-white text-white hover:bg-white/10 hover:text-white"
               >
@@ -77,14 +78,22 @@ export const CasestudyFeature: React.FC = () => {
               </Button>
             </div>
 
-            {/* Right Column — static SVG chart */}
-            <div className="lg:col-span-5 relative w-full h-[320px] bg-slate-900/50 border border-white/5 rounded-xl flex items-center justify-center p-6 overflow-hidden">
-              <div className="w-full h-full flex flex-col justify-between">
+            {/* Right Column — case study photo with overlaid performance chart */}
+            <div className="lg:col-span-5 relative w-full h-[320px] border border-white/5 rounded-xl flex items-center justify-center p-6 overflow-hidden">
+              <Image
+                src="/images/sections/case-study-cover.jpg"
+                alt={study.title}
+                fill
+                sizes="(max-width: 1024px) 100vw, 42vw"
+                className="object-cover"
+              />
+              <div className="absolute inset-0 bg-slate-900/70" aria-hidden="true" />
+              <div className="relative z-10 w-full h-full flex flex-col justify-between">
                 <div className="flex items-center justify-between text-xs text-slate-400 border-b border-white/5 pb-2">
-                  <span className="font-semibold">Performance (Last 6 Months)</span>
+                  <span className="font-semibold">Performance ({study.duration})</span>
                   <span className="text-teal-accent flex items-center gap-1">
                     <TrendingUp className="w-3.5 h-3.5" aria-hidden="true" />
-                    +340%
+                    Trending Up
                   </span>
                 </div>
 
@@ -121,7 +130,7 @@ export const CasestudyFeature: React.FC = () => {
               </div>
 
               {/* Floating Comparison Card */}
-              <div className="absolute bottom-4 right-4 bg-slate-900 border border-white/10 rounded-lg p-3 shadow-2xl z-20 w-[180px]">
+              <div className="absolute bottom-4 right-4 bg-slate-900 border border-white/10 rounded-lg p-3 shadow-2xl z-20 w-[200px]">
                 <h4 className="text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-2">Before/After</h4>
                 <table className="w-full text-[11px] text-left">
                   <thead>
@@ -132,21 +141,13 @@ export const CasestudyFeature: React.FC = () => {
                     </tr>
                   </thead>
                   <tbody>
-                    <tr className="border-b border-white/5">
-                      <td className="py-1 text-slate-300">Visits/mo</td>
-                      <td className="py-1 text-right text-slate-500">150</td>
-                      <td className="py-1 text-right font-bold text-teal-accent">35.2k</td>
-                    </tr>
-                    <tr className="border-b border-white/5">
-                      <td className="py-1 text-slate-300">Citations</td>
-                      <td className="py-1 text-right text-slate-500">12</td>
-                      <td className="py-1 text-right font-bold text-teal-accent">420</td>
-                    </tr>
-                    <tr>
-                      <td className="py-1 text-slate-300">CPL</td>
-                      <td className="py-1 text-right text-slate-500">₹3,400</td>
-                      <td className="py-1 text-right font-bold text-teal-accent">₹650</td>
-                    </tr>
+                    {study.dataComparison.slice(0, 3).map((row, idx) => (
+                      <tr key={idx} className={idx < 2 ? 'border-b border-white/5' : ''}>
+                        <td className="py-1 text-slate-300 pr-2">{row.metricName}</td>
+                        <td className="py-1 text-right text-slate-500">{row.beforeValue}</td>
+                        <td className="py-1 text-right font-bold text-teal-accent">{row.afterValue}</td>
+                      </tr>
+                    ))}
                   </tbody>
                 </table>
               </div>

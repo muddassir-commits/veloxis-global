@@ -38,12 +38,12 @@ export default function TestimonialsPage() {
       {/* Header */}
       <section className="bg-white py-16 sm:py-20 text-center">
         <div className="max-w-container-max mx-auto px-gutter">
-          <Badge variant="indigo" className="mb-4">CLIENT REVIEWS</Badge>
+          <Badge variant="indigo" className="mb-4">REAL ESTATE SUCCESS</Badge>
           <h1 className="text-4xl sm:text-headline-lg font-extrabold text-slate-900 tracking-tight mb-4">
-            Proven Digital Marketing Reviews & Client Testimonials
+            Proven Real Estate Marketing Reviews & Client Testimonials
           </h1>
           <p className="text-base sm:text-body-md text-on-surface-variant max-w-xl mx-auto leading-relaxed">
-            See how we partner with businesses across Delhi, Noida, Lucknow, and Kanpur to cut acquisition costs, double organic traffic, and accelerate revenue.
+            See how we partner with real estate developers and channel partners across Delhi, Noida, and Greater Noida to lower CPL, double site visits, and accelerate revenue.
           </p>
         </div>
       </section>
@@ -86,9 +86,9 @@ export default function TestimonialsPage() {
           <div className="mt-16 text-center bg-white rounded-xl border border-slate-100 p-8 sm:p-12 max-w-2xl mx-auto shadow-sm flex flex-col items-center">
             <h2 className="text-2xl font-bold text-slate-900 mb-2">Want to See Similar Results for Your Business?</h2>
             <p className="text-sm text-on-surface-variant leading-relaxed mb-6 text-center">
-              Let us run a manual technical SEO and conversion audit on your website. No costs, no commitments.
+              Let us run a manual audit of your landing page, ad accounts, and lead response setup. No costs, no commitments.
             </p>
-            <Button id="testimonials-free-audit-btn" href="/free-seo-audit" variant="primary">
+            <Button id="testimonials-free-audit-btn" href="/contact" variant="primary">
               Request Your Free Audit Now →
             </Button>
           </div>

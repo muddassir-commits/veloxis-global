@@ -1,6 +1,7 @@
 import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
+import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import { caseStudies } from '../../../data/case-studies';
 import { constructMetadata } from '../../../lib/seo-config';
@@ -25,8 +26,6 @@ export function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: Params): Promise<Metadata> {
-  // For SEO Audit: title: "Case Study Growth Story | Veloxis Global"
-  // For SEO Audit: description: "Read the detailed digital marketing case study to discover how we scale business organic traffic, Google Ads performance, and lead generation."
   const study = caseStudies.find((s) => s.slug === params.slug);
   if (!study) return {};
 
@@ -67,6 +66,19 @@ export default function SingleCaseStudyPage({ params }: Params) {
         <div className="max-w-container-max mx-auto px-gutter">
           <Breadcrumb items={breadcrumbItems} />
         </div>
+      </section>
+
+      {/* Hero Image */}
+      <section className="bg-slate-900 relative h-[320px] sm:h-[420px] overflow-hidden">
+        <Image
+          src={study.image}
+          alt={study.title}
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/20 to-transparent" aria-hidden="true" />
       </section>
 
       {/* Case Study Body */}
@@ -184,7 +196,7 @@ export default function SingleCaseStudyPage({ params }: Params) {
               <p className="text-xs text-slate-300 leading-relaxed">
                 Let our campaign strategist review your website and keywords to deliver a custom growth blueprint.
               </p>
-              <Button id="case-study-sidebar-audit-btn" href="/free-seo-audit" variant="white" className="w-full mt-2">
+              <Button id="case-study-sidebar-audit-btn" href="/contact" variant="white" className="w-full mt-2">
                 Request Free Audit →
               </Button>
             </Card>
