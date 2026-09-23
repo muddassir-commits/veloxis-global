@@ -15,9 +15,9 @@ export const Badge: React.FC<BadgeProps> = ({ color, variant, children, classNam
   const baseStyles = 'inline-flex items-center rounded-full px-3 py-1 font-bold text-[12px] tracking-[0.05em] uppercase leading-none';
   
   const colors = {
-    teal: 'bg-teal-accent/10 text-teal-accent',
+    teal: 'bg-teal-accent/10 text-teal-800',
     indigo: 'bg-indigo-accent/10 text-indigo-accent',
-    orange: 'bg-sunset-orange/10 text-sunset-orange',
+    orange: 'bg-sunset-orange/10 text-amber-800',
     blue: 'bg-royal-blue/10 text-royal-blue',
   };
 

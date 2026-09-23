@@ -90,7 +90,7 @@ export const Footer: React.FC = () => {
             <div className="bg-white/5 border border-white/10 rounded-3xl p-6 sm:p-8 flex flex-col sm:flex-row items-center justify-between gap-6 relative overflow-hidden backdrop-blur-md shadow-lg shadow-black/20 text-left">
               <div className="absolute top-0 right-0 w-24 h-24 bg-royal-blue/10 rounded-full blur-2xl"></div>
               <div className="flex flex-col gap-2 max-w-md">
-                <span className="text-xs font-black tracking-widest text-royal-blue uppercase">FREE MARKETING AUDIT</span>
+                <span className="text-xs font-black tracking-widest text-blue-300 uppercase">FREE MARKETING AUDIT</span>
                 <p className="text-lg sm:text-xl font-extrabold text-white">Want more site visits from your ad budget?</p>
                 <p className="text-xs sm:text-sm text-slate-400 leading-relaxed">
                   Book a free audit call with the founder. We&apos;ll review your pages, ads and lead follow-up and show you what to fix first.
@@ -363,7 +363,7 @@ export const Footer: React.FC = () => {
             <Link href="/sitemap.xml" className="hover:text-white transition-colors duration-300">
               Sitemap
             </Link>
-            <span className="text-slate-500 font-normal">
+            <span className="text-slate-400 font-normal">
               Founded & run by Muddassir Ali
             </span>
           </div>

@@ -70,7 +70,7 @@ export default function BlogPostContent({ post, relatedPosts, service }: Props) 
           <article className="lg:col-span-8 flex flex-col items-start">
             <Link
               href="/blog"
-              className="inline-flex items-center gap-1.5 text-xs font-bold text-slate-400 hover:text-royal-blue transition-colors mb-6"
+              className="inline-flex items-center gap-1.5 text-xs font-bold text-slate-500 hover:text-royal-blue transition-colors mb-6"
             >
               <ArrowLeft className="w-3.5 h-3.5" />
               Back to Articles
@@ -83,7 +83,7 @@ export default function BlogPostContent({ post, relatedPosts, service }: Props) 
             </h1>
 
             {/* Author Meta Strip */}
-            <div className="flex flex-wrap items-center gap-4 text-xs font-semibold text-slate-400 mb-8 border-y border-slate-100 py-3.5 w-full">
+            <div className="flex flex-wrap items-center gap-4 text-xs font-semibold text-slate-500 mb-8 border-y border-slate-100 py-3.5 w-full">
               <Link
                 href="/about"
                 className="flex items-center gap-1.5 hover:text-royal-blue transition-colors"
@@ -106,7 +106,7 @@ export default function BlogPostContent({ post, relatedPosts, service }: Props) 
 
               {/* Share actions */}
               <div className="ml-auto relative flex items-center gap-2">
-                <span className="text-[11px] uppercase tracking-wider text-slate-400">Share:</span>
+                <span className="text-[11px] uppercase tracking-wider text-slate-500">Share:</span>
                 <a
                   href={shareUrls.linkedin}
                   target="_blank"
@@ -190,7 +190,7 @@ export default function BlogPostContent({ post, relatedPosts, service }: Props) 
                     <h3 className="font-extrabold text-slate-900 text-sm sm:text-base leading-snug group-hover:text-royal-blue transition-colors">
                       {rel.title}
                     </h3>
-                    <span className="text-[11px] font-semibold text-slate-400 block mt-3">
+                    <span className="text-[11px] font-semibold text-slate-500 block mt-3">
                       {rel.readTime}
                     </span>
                   </Link>

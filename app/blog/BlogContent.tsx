@@ -3,9 +3,8 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { Calendar, User, Clock, ChevronLeft, ChevronRight, Search } from 'lucide-react';
+import { Clock, ChevronLeft, ChevronRight, Search } from 'lucide-react';
 import { Badge } from '../../components/ui/Badge';
-import { Button } from '../../components/ui/Button';
 import { Card } from '../../components/ui/Card';
 
 import { Post, blogPosts } from '../../data/blog-posts';
