@@ -11,6 +11,7 @@ import { getArticleSchema } from '../../../lib/schema';
 import { CtaBanner } from '../../../components/sections/CtaBanner';
 import { FaqAccordion } from '../../../components/sections/FaqAccordion';
 import { playbookFaqs } from '../../../data/playbook-faqs';
+import { ImageFrame } from '../../../components/ui/ImageFrame';
 import { Info, ArrowRight } from 'lucide-react';
 
 interface PageProps {
@@ -40,6 +41,10 @@ export default function PlaybookPage({ params }: PageProps) {
   const service = getServiceBySlug(pb.service);
   const others = playbooks.filter((p) => p.slug !== pb.slug);
   const path = `/playbooks/${pb.slug}`;
+  // Position of each section photo on the page, used to alternate right / left.
+  const imageIndex = new Map(
+    pb.sections.filter((s) => s.image).map((s, i) => [s.id, i] as const),
+  );
 
   return (
     <>
@@ -65,6 +70,15 @@ export default function PlaybookPage({ params }: PageProps) {
           </span>
           <h1 className="text-3xl sm:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight mt-3 mb-6">{pb.title}</h1>
 
+          <ImageFrame
+            src={pb.image}
+            alt={pb.imageAlt}
+            ratio="16/10"
+            priority
+            sizes="(max-width: 768px) 100vw, 720px"
+            className="mb-8"
+          />
+
           <div className="flex items-start gap-2 text-sm text-slate-700 bg-amber-50 border border-amber-200 rounded-xl p-4 mb-10">
             <Info className="w-4 h-4 text-amber-600 shrink-0 mt-0.5" aria-hidden="true" />
             <p>
@@ -84,12 +98,42 @@ export default function PlaybookPage({ params }: PageProps) {
           </nav>
 
           <div className="flex flex-col gap-12">
-            {pb.sections.map((s) => (
+            {pb.sections.map((s) => {
+              const paragraphs = s.paragraphs?.map((p, i) => (
+                <p key={i} className="text-slate-700 leading-relaxed mb-4">{p}</p>
+              ));
+              const list = s.list && (
+                <ul className="list-disc pl-5 flex flex-col gap-2 text-slate-700 leading-relaxed">
+                  {s.list.map((item, i) => (
+                    <li key={i}>{item}</li>
+                  ))}
+                </ul>
+              );
+              // Photos alternate right / left down the page. When a section has a table,
+              // only the paragraphs sit beside the photo and the table keeps full width.
+              const imageOnLeft = s.image ? (imageIndex.get(s.id) ?? 0) % 2 === 1 : false;
+              return (
               <section key={s.id} id={s.id} className="scroll-mt-28">
                 <h2 className="text-2xl font-bold text-slate-900 mb-4">{s.heading}</h2>
-                {s.paragraphs?.map((p, i) => (
-                  <p key={i} className="text-slate-700 leading-relaxed mb-4">{p}</p>
-                ))}
+                {s.image ? (
+                  <div className="md:flex md:items-start md:gap-8 mb-4">
+                    <div className="md:flex-1 min-w-0">
+                      {paragraphs}
+                      {!s.table && list}
+                    </div>
+                    <div className={`mt-6 md:mt-1 md:w-2/5 md:shrink-0 ${imageOnLeft ? 'md:order-first' : ''}`}>
+                      <ImageFrame
+                        src={s.image.src}
+                        alt={s.image.alt}
+                        ratio="4/3"
+                        position={s.image.position}
+                        sizes="(max-width: 768px) 100vw, 300px"
+                      />
+                    </div>
+                  </div>
+                ) : (
+                  paragraphs
+                )}
                 {s.table && (
                   <div className="overflow-x-auto border border-slate-200 rounded-xl my-4">
                     <table className="w-full text-sm text-left min-w-[560px]">
@@ -113,15 +157,10 @@ export default function PlaybookPage({ params }: PageProps) {
                     </table>
                   </div>
                 )}
-                {s.list && (
-                  <ul className="list-disc pl-5 flex flex-col gap-2 text-slate-700 leading-relaxed">
-                    {s.list.map((item, i) => (
-                      <li key={i}>{item}</li>
-                    ))}
-                  </ul>
-                )}
+                {(!s.image || s.table) && list}
               </section>
-            ))}
+              );
+            })}
           </div>
 
           {service && (

@@ -4,6 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 import { Breadcrumb } from '../../components/ui/Breadcrumb';
+import { ImageFrame } from '../../components/ui/ImageFrame';
 import { SchemaMarkup } from '../../components/ui/SchemaMarkup';
 import { Target, Eye, Users, ExternalLink, Award, CheckCircle, MapPin } from 'lucide-react';
 import { Linkedin } from '../../components/ui/BrandIcons';
@@ -82,7 +83,7 @@ export default function AboutPage() {
           </div>
           <div className="lg:col-span-4 flex justify-center lg:justify-end">
             <div className="relative w-48 h-48 sm:w-64 sm:h-64 rounded-full border-4 border-slate-800 shadow-2xl overflow-hidden">
-              <Image src="/images/profiles/muddassir.jpg" alt="Muddassir Ali, founder of Veloxis Global" fill priority sizes="256px" className="object-cover" />
+              <Image src="/images/profiles/muddassir.jpg" alt="Muddassir Ali, founder of Veloxis Global" fill priority sizes="256px" className="object-cover object-top" />
             </div>
           </div>
         </div>
@@ -135,9 +136,13 @@ export default function AboutPage() {
                 <span className="text-xs font-bold text-slate-400 uppercase tracking-wider block mt-1">Industry: real estate</span>
               </div>
             </div>
-            <div className="relative w-full min-h-[220px] rounded-2xl overflow-hidden border border-slate-100">
-              <Image src="/images/sections/about-story.jpg" alt="" fill sizes="(max-width: 1024px) 100vw, 40vw" className="object-cover" />
-            </div>
+            <ImageFrame
+              src="/images/people/about/reviewing-printed-chart.jpg"
+              alt=""
+              ratio="4/3"
+              sizes="(max-width: 1024px) 100vw, 40vw"
+              className="border border-slate-100"
+            />
           </div>
         </div>
       </section>
@@ -167,7 +172,17 @@ export default function AboutPage() {
 
       {/* Operating model */}
       <section className="py-20 bg-white text-left">
-        <div className="max-w-3xl mx-auto px-gutter flex flex-col items-start gap-4">
+        <div className="max-w-container-max mx-auto px-gutter grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
+          <div className="lg:col-span-6 order-last lg:order-first">
+            <ImageFrame
+              src="/images/people/about/campaign-planning-session.jpg"
+              alt="Two people planning a marketing campaign together at a laptop, one taking notes"
+              ratio="4/3"
+              sizes="(max-width: 1024px) 100vw, 45vw"
+              className="shadow-xl border border-slate-100"
+            />
+          </div>
+        <div className="lg:col-span-6 flex flex-col items-start gap-4">
           <span className="text-xs font-bold text-royal-blue uppercase tracking-wider">How the agency is set up</span>
           <h2 className="text-3xl font-extrabold text-slate-900 tracking-tight">Lean by design</h2>
           <p className="text-lg text-slate-700 leading-relaxed">
@@ -175,6 +190,7 @@ export default function AboutPage() {
             network of landing page developers, ad specialists and automation engineers, bringing in the right people for
             each project. No bloated retainer, and no junior account manager between you and the person doing the work.
           </p>
+        </div>
         </div>
       </section>
 
@@ -209,7 +225,18 @@ export default function AboutPage() {
             <span className="text-xs font-bold text-royal-blue uppercase tracking-widest block mb-3">What you can expect</span>
             <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">Four commitments</h2>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          <div className="lg:col-span-4 max-w-md w-full mx-auto lg:max-w-none">
+            <ImageFrame
+              src="/images/people/about/colleague-office-lounge.jpg"
+              alt="A smiling man in a waistcoat holding a mug during an informal office conversation"
+              ratio="4/5"
+              sizes="(max-width: 1024px) 448px, 30vw"
+              position="center top"
+              className="shadow-xl border border-slate-100"
+            />
+          </div>
+          <div className="lg:col-span-8 grid grid-cols-1 sm:grid-cols-2 gap-6">
             {values.map((v) => (
               <div key={v.title} className="bg-slate-50 border border-slate-100 rounded-2xl p-6">
                 <div className="w-10 h-10 rounded-lg bg-white shadow-sm flex items-center justify-center mb-5 border border-slate-100" aria-hidden="true">
@@ -220,6 +247,7 @@ export default function AboutPage() {
               </div>
             ))}
           </div>
+          </div>
         </div>
       </section>
 
@@ -227,8 +255,8 @@ export default function AboutPage() {
       <section className="py-20 bg-slate-50 border-t border-slate-100 text-left" id="founder">
         <div className="max-w-container-max mx-auto px-gutter grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           <div className="lg:col-span-5 flex flex-col items-center">
-            <div className="w-full relative rounded-3xl overflow-hidden shadow-2xl border border-slate-100 max-w-[380px] mx-auto bg-slate-100 aspect-[4/5]">
-              <Image src="/images/profiles/Muddassir_Ali.webp" alt="Portrait of Muddassir Ali" fill sizes="380px" className="object-cover" />
+            <div className="w-full relative rounded-3xl overflow-hidden shadow-2xl border border-slate-100 max-w-[380px] mx-auto bg-slate-100 aspect-[3/4]">
+              <Image src="/images/profiles/Muddassir_Ali.webp" alt="Portrait of Muddassir Ali" fill sizes="(max-width: 420px) 100vw, 380px" className="object-cover object-top" />
             </div>
           </div>
           <div className="lg:col-span-7 flex flex-col gap-6 text-slate-700 text-base leading-relaxed">

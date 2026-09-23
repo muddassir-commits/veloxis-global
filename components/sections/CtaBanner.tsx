@@ -34,7 +34,7 @@ export const CtaBanner: React.FC<CtaBannerProps> = ({ title, description }) => {
             {displayTitle}
           </h2>
 
-          <p className="text-body-lg text-white/80 max-w-xl leading-relaxed mb-8">
+          <p className="text-body-lg text-white max-w-xl leading-relaxed mb-8">
             {displayDescription}
           </p>
 
@@ -58,7 +58,7 @@ export const CtaBanner: React.FC<CtaBannerProps> = ({ title, description }) => {
             </div>
           </div>
 
-          <div className="flex flex-wrap justify-center items-center gap-6 mt-10 text-xs font-bold uppercase tracking-wider text-white/70">
+          <div className="flex flex-wrap justify-center items-center gap-6 mt-10 text-xs font-bold uppercase tracking-wider text-white">
             <div className="flex items-center gap-1.5">
               <CheckCircle className="w-4 h-4 text-teal-accent" aria-hidden="true" />
               <span>Real estate only</span>

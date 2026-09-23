@@ -4,16 +4,34 @@
  */
 import React from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
 import { ArrowRight } from 'lucide-react';
 import { servicesData as services } from '../../data/services-data';
 import { Card } from '../ui/Card';
 import { SectionLabel } from '../ui/SectionLabel';
+import { ImageFrame } from '../ui/ImageFrame';
 
 const serviceVisuals = [
-  { image: '/images/sections/service-landing-pages.jpg', accentBg: 'bg-blue-50', accentText: 'text-blue-700' },
-  { image: '/images/sections/service-paid-ads.jpg', accentBg: 'bg-violet-50', accentText: 'text-violet-700' },
-  { image: '/images/sections/service-ai-automation.jpg', accentBg: 'bg-emerald-50', accentText: 'text-emerald-700' },
+  {
+    image: '/images/people/home/real-estate-landing-page-mockup.jpg',
+    alt: 'Sample real estate project landing page on a laptop and phone, with price, RERA number and site-visit form',
+    position: 'center',
+    accentBg: 'bg-blue-50',
+    accentText: 'text-blue-700',
+  },
+  {
+    image: '/images/people/home/team-reviewing-laptops.jpg',
+    alt: 'Team gathered around two laptops reviewing work at an office desk',
+    position: 'center 40%',
+    accentBg: 'bg-violet-50',
+    accentText: 'text-violet-700',
+  },
+  {
+    image: '/images/people/home/whatsapp-chatbot-mockup.jpg',
+    alt: 'Sample WhatsApp chatbot sending a brochure, asking the budget and booking a site visit, beside a lead inbox',
+    position: 'center',
+    accentBg: 'bg-emerald-50',
+    accentText: 'text-emerald-700',
+  },
 ];
 
 export const ServicesGrid: React.FC = () => {
@@ -39,16 +57,16 @@ export const ServicesGrid: React.FC = () => {
               <div key={service.id} className="h-full">
                 <Link href={`/services/${service.slug}`} className="block h-full group">
                   <Card hover className="flex flex-col items-start text-left h-full p-0 overflow-hidden">
-                    {/* Top image banner */}
-                    <div className="w-full h-40 relative overflow-hidden">
-                      <Image
-                        src={visual.image}
-                        alt=""
-                        fill
-                        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                        className="object-cover transition-transform duration-500 group-hover:scale-[1.05]"
-                      />
-                    </div>
+                    {/* Top image — fixed 16:10 box, photo cropped to the same ratio */}
+                    <ImageFrame
+                      src={visual.image}
+                      alt={visual.alt}
+                      ratio="16/10"
+                      position={visual.position}
+                      sizes="(max-width: 768px) calc(100vw - 32px), (max-width: 1024px) 50vw, 400px"
+                      className="!rounded-none"
+                      imageClassName="transition-transform duration-500 group-hover:scale-[1.04]"
+                    />
 
                     <div className="p-6 sm:p-8 flex flex-col flex-grow">
                       {/* Title */}

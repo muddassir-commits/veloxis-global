@@ -7,6 +7,7 @@ import React from 'react';
 import Link from 'next/link';
 import { MapPin } from 'lucide-react';
 import { SectionLabel } from '../ui/SectionLabel';
+import { ImageFrame } from '../ui/ImageFrame';
 
 const areas = [
   {
@@ -40,16 +41,26 @@ export const LocationsGrid: React.FC = () => (
           for projects elsewhere in India.
         </p>
       </div>
-      <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-        {areas.map((a) => (
-          <li key={a.city} className="rounded-2xl border border-slate-100 bg-slate-50 p-6">
-            <h3 className="font-bold text-slate-900 text-lg mb-2 flex items-center gap-2">
-              <MapPin className="w-4 h-4 text-royal-blue" aria-hidden="true" /> {a.city}
-            </h3>
-            <p className="text-sm text-slate-600 leading-relaxed">{a.desc}</p>
-          </li>
-        ))}
-      </ul>
+      <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] gap-8 lg:gap-10 items-center">
+        <ImageFrame
+          src="/images/people/home/home-buyer-browsing-laptop.jpg"
+          alt="Woman sitting on a sofa at home, browsing on her laptop"
+          ratio="1/1"
+          position="center 40%"
+          sizes="(max-width: 1024px) calc(100vw - 32px), 480px"
+          className="max-w-[480px] mx-auto lg:max-w-none"
+        />
+        <ul className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          {areas.map((a) => (
+            <li key={a.city} className="rounded-2xl border border-slate-100 bg-slate-50 p-6">
+              <h3 className="font-bold text-slate-900 text-lg mb-2 flex items-center gap-2">
+                <MapPin className="w-4 h-4 text-royal-blue" aria-hidden="true" /> {a.city}
+              </h3>
+              <p className="text-sm text-slate-600 leading-relaxed">{a.desc}</p>
+            </li>
+          ))}
+        </ul>
+      </div>
       <p className="text-center mt-10 text-sm text-slate-500">
         Working on a project in one of these markets?{' '}
         <Link href="/contact" className="font-bold text-royal-blue hover:underline">Ask for a free audit</Link>.

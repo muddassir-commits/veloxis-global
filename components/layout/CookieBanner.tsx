@@ -42,7 +42,7 @@ export const CookieBanner: React.FC = () => {
   if (!visible) return null;
 
   return (
-    <div className="fixed bottom-0 left-0 w-full z-50 bg-slate-900 text-white border-t border-slate-700 py-4 md:py-3.5 px-gutter shadow-2xl">
+    <div className="fixed bottom-0 left-0 w-full z-[60] bg-slate-900 text-white border-t border-slate-700 py-4 md:py-3.5 px-gutter shadow-2xl">
       <div className="max-w-container-max mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
         {/* Banner Text */}
         <p className="text-[14px] font-medium font-sans text-slate-300 text-center md:text-left leading-relaxed">

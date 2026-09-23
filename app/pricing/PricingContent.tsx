@@ -1,5 +1,6 @@
 import React from 'react';
 import { Button } from '../../components/ui/Button';
+import { ImageFrame } from '../../components/ui/ImageFrame';
 import { Check } from 'lucide-react';
 import { FaqAccordion } from '../../components/sections/FaqAccordion';
 import { plans, pricingFaqs } from '../../data/pricing';
@@ -13,8 +14,8 @@ export default function PricingContent() {
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#1e293b_1px,transparent_1px),linear-gradient(to_bottom,#1e293b_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-40"></div>
         <div className="absolute -top-40 -right-40 w-96 h-96 rounded-full bg-royal-blue/20 blur-[128px]"></div>
 
-        <div className="max-w-container-max mx-auto px-gutter relative z-10">
-          <div className="max-w-[800px] flex flex-col items-start gap-6">
+        <div className="max-w-container-max mx-auto px-gutter relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          <div className="lg:col-span-7 max-w-[800px] flex flex-col items-start gap-6">
             <span className="inline-flex items-center gap-2 bg-royal-blue/20 border border-royal-blue/30 px-3 py-1 rounded-full text-xs font-bold text-royal-blue uppercase tracking-wider">
               PRICING
             </span>
@@ -30,20 +31,40 @@ export default function PricingContent() {
               </Button>
             </div>
           </div>
+          <div className="lg:col-span-5 w-full max-w-xl lg:max-w-none">
+            <ImageFrame
+              src="/images/people/pricing/budget-discussion-laptop.jpg"
+              alt="A man and a woman discussing plans at a table with a laptop and notebook"
+              ratio="4/3"
+              sizes="(max-width: 1024px) 100vw, 40vw"
+              priority
+              className="shadow-2xl border border-slate-800"
+            />
+          </div>
         </div>
       </section>
 
       {/* Service Tiers */}
       <section className="py-20 bg-slate-50 border-b border-slate-100">
         <div className="max-w-container-max mx-auto px-gutter">
-          <div className="text-center max-w-2xl mx-auto mb-16">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center mb-16">
+          <div className="lg:col-span-5">
+            <ImageFrame
+              src="/images/people/pricing/reviewing-campaign-reports.jpg"
+              alt="People reviewing printed charts and reports around a meeting table"
+              ratio="4/3"
+              sizes="(max-width: 1024px) 100vw, 40vw"
+              className="shadow-xl border border-slate-100"
+            />
+          </div>
+          <div className="lg:col-span-7 text-center lg:text-left">
             <span className="text-xs font-bold text-royal-blue uppercase tracking-widest block mb-3">
               STARTING PRICES
             </span>
             <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
               What each service starts from
             </h2>
-            <ul className="mt-6 flex flex-col sm:flex-row sm:justify-center gap-3 text-sm">
+            <ul className="mt-6 flex flex-col sm:flex-row sm:flex-wrap sm:justify-center lg:justify-start gap-3 text-sm">
               {servicesData.map((s) => (
                 <li key={s.slug}>
                   <a href={`/services/${s.slug}`} className="inline-block bg-white border border-slate-200 rounded-full px-4 py-2 hover:border-royal-blue">
@@ -56,6 +77,7 @@ export default function PricingContent() {
             <p className="text-slate-500 mt-6 text-sm">
               Most clients combine services in one of the packages below. Final fees are fixed after a free audit.
             </p>
+          </div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">

@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { GoogleAnalytics } from '@next/third-parties/google';
+import { GoogleAnalytics, GoogleTagManager } from '@next/third-parties/google';
 import Script from 'next/script';
 import { Navbar } from '../components/layout/Navbar';
 import { Footer } from '../components/layout/Footer';
@@ -36,6 +36,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en-IN" className="scroll-smooth">
+      <GoogleTagManager gtmId="GTM-5LS7XH76" />
       <head>
         <meta name="google-site-verification" content={process.env.NEXT_PUBLIC_GSC_TOKEN || "CVRVYJuDB29ung6LskjcSWvfZwi1q4L4b21cJxpbcX8"} />
         <link rel="preload" href="/fonts/PlusJakartaSans.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />

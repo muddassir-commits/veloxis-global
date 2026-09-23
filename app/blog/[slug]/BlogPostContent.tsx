@@ -7,9 +7,29 @@ import { ArrowLeft, Calendar, Clock, Share2, ChevronRight, FileText } from 'luci
 import { Badge } from '../../../components/ui/Badge';
 import { Button } from '../../../components/ui/Button';
 import { Linkedin } from '../../../components/ui/BrandIcons';
+import { ImageFrame } from '../../../components/ui/ImageFrame';
 import { FOUNDER_YEARS } from '../../../lib/seo-config';
 
 import type { Post } from '../../../data/blog-posts';
+
+type InlineImage = NonNullable<Post['inlineImages']>[number];
+
+// Split the article HTML just before each <h2> that has an inline photo, so the
+// photo sits between sections without touching the article text itself.
+const splitContent = (html: string, images: InlineImage[] = []) => {
+  const parts: { html: string; image?: InlineImage }[] = [];
+  let rest = html;
+  let pending: InlineImage | undefined;
+  for (const image of images) {
+    const idx = rest.indexOf(`<h2 id="${image.beforeHeading}"`);
+    if (idx <= 0) continue;
+    parts.push({ html: rest.slice(0, idx), image: pending });
+    rest = rest.slice(idx);
+    pending = image;
+  }
+  parts.push({ html: rest, image: pending });
+  return parts;
+};
 
 const formatDate = (iso: string) =>
   new Date(iso).toLocaleDateString('en-IN', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'Asia/Kolkata' });
@@ -70,7 +90,7 @@ export default function BlogPostContent({ post, relatedPosts, service }: Props) 
           <article className="lg:col-span-8 flex flex-col items-start">
             <Link
               href="/blog"
-              className="inline-flex items-center gap-1.5 text-xs font-bold text-slate-400 hover:text-royal-blue transition-colors mb-6"
+              className="inline-flex items-center gap-1.5 text-xs font-bold text-slate-500 hover:text-royal-blue transition-colors mb-6"
             >
               <ArrowLeft className="w-3.5 h-3.5" />
               Back to Articles
@@ -83,7 +103,7 @@ export default function BlogPostContent({ post, relatedPosts, service }: Props) 
             </h1>
 
             {/* Author Meta Strip */}
-            <div className="flex flex-wrap items-center gap-4 text-xs font-semibold text-slate-400 mb-8 border-y border-slate-100 py-3.5 w-full">
+            <div className="flex flex-wrap items-center gap-4 text-xs font-semibold text-slate-500 mb-8 border-y border-slate-100 py-3.5 w-full">
               <Link
                 href="/about"
                 className="flex items-center gap-1.5 hover:text-royal-blue transition-colors"
@@ -106,7 +126,7 @@ export default function BlogPostContent({ post, relatedPosts, service }: Props) 
 
               {/* Share actions */}
               <div className="ml-auto relative flex items-center gap-2">
-                <span className="text-[11px] uppercase tracking-wider text-slate-400">Share:</span>
+                <span className="text-[11px] uppercase tracking-wider text-slate-500">Share:</span>
                 <a
                   href={shareUrls.linkedin}
                   target="_blank"
@@ -128,22 +148,40 @@ export default function BlogPostContent({ post, relatedPosts, service }: Props) 
               </div>
             </div>
 
-            {/* Featured Image */}
+            {/* Featured Image — fixed 16:10, matches the 1600x1000 source */}
             {post.image && (
-              <div className="w-full aspect-[21/9] sm:aspect-[16/9] relative rounded-2xl overflow-hidden mb-8 border border-slate-100 shadow-sm bg-slate-50">
-                <Image
-                  src={post.image}
-                  alt={post.imageAlt}
-                  fill
-                  sizes="(max-width: 1024px) 100vw, 900px"
-                  priority
-                  className="object-cover"
-                />
-              </div>
+              <ImageFrame
+                src={post.image}
+                alt={post.imageAlt}
+                ratio="16/10"
+                sizes="(max-width: 1024px) calc(100vw - 32px), 760px"
+                priority
+                className="mb-8 border border-slate-100 shadow-sm"
+              />
             )}
 
-            {/* Rendered markdown HTML */}
-            <div className="article-body w-full" dangerouslySetInnerHTML={{ __html: post.htmlContent }} />
+            {/* Rendered article HTML, with optional in-article photos between sections */}
+            <div className="w-full">
+              {splitContent(post.htmlContent, post.inlineImages).map((part, i) => (
+                <React.Fragment key={i}>
+                  {part.image && (
+                    <figure className="my-10">
+                      <ImageFrame
+                        src={part.image.src}
+                        alt={part.image.alt}
+                        ratio="16/10"
+                        sizes="(max-width: 1024px) calc(100vw - 32px), 760px"
+                        className="border border-slate-100"
+                      />
+                      {part.image.caption && (
+                        <figcaption className="mt-3 text-center text-xs text-slate-500">{part.image.caption}</figcaption>
+                      )}
+                    </figure>
+                  )}
+                  <div className="article-body" dangerouslySetInnerHTML={{ __html: part.html }} />
+                </React.Fragment>
+              ))}
+            </div>
 
             {/* Author Bio Box */}
             <div className="bg-slate-50 border border-slate-100 rounded-2xl p-6 sm:p-8 mt-12 w-full grid grid-cols-1 sm:grid-cols-12 gap-6 items-center">
@@ -190,7 +228,7 @@ export default function BlogPostContent({ post, relatedPosts, service }: Props) 
                     <h3 className="font-extrabold text-slate-900 text-sm sm:text-base leading-snug group-hover:text-royal-blue transition-colors">
                       {rel.title}
                     </h3>
-                    <span className="text-[11px] font-semibold text-slate-400 block mt-3">
+                    <span className="text-[11px] font-semibold text-slate-500 block mt-3">
                       {rel.readTime}
                     </span>
                   </Link>

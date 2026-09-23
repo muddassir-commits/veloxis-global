@@ -1,9 +1,9 @@
 import React from 'react';
 import { Metadata } from 'next';
-import Image from 'next/image';
 import Link from 'next/link';
 import { constructMetadata, pageMeta } from '../../lib/seo-config';
 import { Badge } from '../../components/ui/Badge';
+import { ImageFrame } from '../../components/ui/ImageFrame';
 import { Card } from '../../components/ui/Card';
 import { Button } from '../../components/ui/Button';
 import { Breadcrumb } from '../../components/ui/Breadcrumb';
@@ -17,10 +17,21 @@ import { servicesHubFaqs } from '../../data/page-faqs';
 
 export const metadata: Metadata = constructMetadata(pageMeta.services);
 
-const serviceImages: Record<string, string> = {
-  'high-converting-landing-pages': '/images/sections/service-landing-pages.jpg',
-  'paid-ads': '/images/sections/service-paid-ads.jpg',
-  'ai-automation': '/images/sections/service-ai-automation.jpg',
+// Card images, all 1200x750 to match the 16/10 card frame: sample-design mockups
+// for landing pages and automation, a Pexels photo for ads.
+const serviceImages: Record<string, { src: string; alt: string }> = {
+  'high-converting-landing-pages': {
+    src: '/images/people/home/real-estate-landing-page-mockup.jpg',
+    alt: 'Sample real estate project landing page on a laptop and phone, with price, RERA number and site-visit form',
+  },
+  'paid-ads': {
+    src: '/images/people/services/hub-team-reviewing-charts.jpg',
+    alt: 'Four colleagues reviewing printed charts around a laptop',
+  },
+  'ai-automation': {
+    src: '/images/people/home/whatsapp-chatbot-mockup.jpg',
+    alt: 'Sample WhatsApp chatbot sending a brochure, asking the budget and booking a site visit, beside a lead inbox',
+  },
 };
 
 const iconMap: Record<string, React.ComponentType<{ className?: string }>> = { Target, Code, Zap };
@@ -69,17 +80,16 @@ export default function ServicesPage() {
             {servicesData.map((service) => {
               const IconComponent = iconMap[service.icon] || Target;
               const href = `/services/${service.slug}`;
+              const photo = serviceImages[service.slug] || serviceImages['high-converting-landing-pages'];
               return (
                 <Card key={service.id} className="flex flex-col justify-between items-start text-left h-full bg-white p-0 border border-slate-200 rounded-3xl hover:shadow-md transition-shadow relative overflow-hidden">
-                  <div className="w-full h-40 relative overflow-hidden">
-                    <Image
-                      src={serviceImages[service.slug] || serviceImages['high-converting-landing-pages']}
-                      alt=""
-                      fill
-                      sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                      className="object-cover"
-                    />
-                  </div>
+                  <ImageFrame
+                    src={photo.src}
+                    alt={photo.alt}
+                    ratio="16/10"
+                    sizes="(min-width: 1280px) 400px, (min-width: 1024px) 31vw, (min-width: 768px) 46vw, 100vw"
+                    className="!rounded-none"
+                  />
                   <div className="w-full p-8">
                     <div className={`w-12 h-12 rounded-2xl flex items-center justify-center mb-6 border ${accentColors[service.accentColor]}`}>
                       <IconComponent className="w-6 h-6" />
