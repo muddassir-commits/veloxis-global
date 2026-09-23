@@ -7,8 +7,7 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Button } from '../ui/Button';
-import { companyStats } from '../../data/stats';
-import { CheckCircle, Star } from 'lucide-react';
+import { CheckCircle } from 'lucide-react';
 
 export const HeroSection: React.FC = () => {
   return (
@@ -16,15 +15,16 @@ export const HeroSection: React.FC = () => {
       {/* Background Image */}
       <Image
         src="/images/hero-real-estate.jpg"
-        alt="Premium real estate development in Delhi NCR"
+        alt=""
         fill
         priority
+        sizes="100vw"
         className="object-cover object-center"
         quality={85}
       />
-      
+
       {/* Dark overlay gradient */}
-      <div 
+      <div
         className="absolute inset-0 bg-gradient-to-r from-slate-900/90 via-slate-900/75 to-slate-900/40"
         aria-hidden="true"
       />
@@ -32,22 +32,22 @@ export const HeroSection: React.FC = () => {
       {/* Content */}
       <div className="max-w-[1280px] mx-auto px-4 md:px-16 w-full relative z-10 py-20">
         <div className="max-w-[680px] flex flex-col items-start text-left">
-          
+
           {/* Badge */}
           <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-2 mb-8">
             <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" aria-hidden="true"></span>
-            <span className="text-xs font-bold tracking-wider uppercase text-white/90">Delhi NCR Real Estate Marketing</span>
+            <span className="text-xs font-bold tracking-wider uppercase text-white/90">For builders, brokers &amp; channel partners</span>
           </div>
 
           {/* H1 Headline */}
           <h1 className="text-[36px] md:text-[56px] lg:text-[64px] font-extrabold tracking-[-0.02em] leading-[1.1] text-white mb-6 font-sans">
-            The Growth Agency That Fills Your{' '}
-            <span className="text-emerald-400">Site Visits</span>
+            The real estate marketing agency that fills your{' '}
+            <span className="text-emerald-400">site visits</span>
           </h1>
 
           {/* Body Paragraph */}
           <p className="text-[16px] md:text-[18px] font-normal text-white/75 leading-relaxed max-w-[540px] font-sans mb-8">
-            We build predictable lead-generation engines for real estate developers and channel partners in Delhi NCR. High-converting landing pages, Meta & Google Ads, and WhatsApp automation — everything you need to sell properties faster.
+            We build project landing pages, run Meta and Google ads, and set up WhatsApp automation that replies to every enquiry in seconds — for developers, brokers and channel partners in Kanpur, Lucknow, Noida and Delhi NCR. Measured on site visits, not clicks.
           </p>
 
           {/* CTA Buttons */}
@@ -59,13 +59,13 @@ export const HeroSection: React.FC = () => {
               href="/contact"
               className="text-center shadow-lg shadow-blue-600/25"
             >
-              Get Your Free Growth Plan →
+              Get a free marketing audit →
             </Button>
             <Link
-              href="/case-studies"
+              href="/playbooks"
               className="text-[15px] font-bold text-white/80 hover:text-white transition-colors px-4 py-3 border border-white/20 rounded-xl hover:bg-white/10"
             >
-              View Case Studies
+              See example plans
             </Link>
           </div>
 
@@ -73,15 +73,15 @@ export const HeroSection: React.FC = () => {
           <div className="flex flex-wrap items-center gap-6 text-sm text-white/60">
             <div className="flex items-center gap-1.5">
               <CheckCircle className="w-4 h-4 text-emerald-400" aria-hidden="true" />
-              <span>{companyStats.yearsExperience} Years Experience</span>
+              <span>Real estate only</span>
             </div>
             <div className="flex items-center gap-1.5">
               <CheckCircle className="w-4 h-4 text-emerald-400" aria-hidden="true" />
-              <span>{companyStats.projectsDelivered} Projects Delivered</span>
+              <span>Ad spend stays in your accounts</span>
             </div>
             <div className="flex items-center gap-1.5">
-              <Star className="w-4 h-4 text-emerald-400 fill-emerald-400" aria-hidden="true" />
-              <span>{companyStats.clientRating} Client Rating</span>
+              <CheckCircle className="w-4 h-4 text-emerald-400" aria-hidden="true" />
+              <span>Month-to-month, no lock-in</span>
             </div>
           </div>
         </div>

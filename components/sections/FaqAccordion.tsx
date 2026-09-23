@@ -16,12 +16,17 @@ interface FaqAccordionProps {
   customFaqs?: FAQItem[];
   title?: string;
   badgeText?: string;
+  description?: string;
+  /** Emit FAQPage JSON-LD. Turn off if the page already outputs FAQ schema. */
+  withSchema?: boolean;
 }
 
 export const FaqAccordion: React.FC<FaqAccordionProps> = ({
   customFaqs,
   title = 'Frequently Asked Questions',
-  badgeText = 'QUESTIONS?'
+  badgeText = 'QUESTIONS?',
+  description = 'Straight answers about how we run real estate landing pages, ads and WhatsApp automation.',
+  withSchema = true,
 }) => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
@@ -36,7 +41,7 @@ export const FaqAccordion: React.FC<FaqAccordionProps> = ({
   return (
     <section className="bg-white py-section-gap" id="faq">
       {/* Inject FAQ Schema */}
-      <SchemaMarkup schema={schema} />
+      {withSchema && <SchemaMarkup schema={schema} />}
 
       <div className="max-w-3xl mx-auto px-gutter">
         {/* Section Header */}
@@ -48,7 +53,7 @@ export const FaqAccordion: React.FC<FaqAccordionProps> = ({
             {title}
           </h2>
           <p className="text-base sm:text-body-md text-on-surface-variant leading-relaxed">
-            Get answers to common queries about our digital marketing and optimization services.
+            {description}
           </p>
         </div>
 
@@ -65,6 +70,8 @@ export const FaqAccordion: React.FC<FaqAccordionProps> = ({
                   <button
                     id={`faq-btn-${index}`}
                     onClick={() => toggle(index)}
+                    aria-expanded={isOpen}
+                    aria-controls={`faq-panel-${index}`}
                     className="w-full flex items-center justify-between p-6 text-left font-bold text-slate-900 hover:text-royal-blue transition-colors focus:outline-none"
                   >
                     <span className="text-sm sm:text-base pr-4">{faq.question}</span>
@@ -73,8 +80,9 @@ export const FaqAccordion: React.FC<FaqAccordionProps> = ({
                 </h3>
                 
                 <div
+                  id={`faq-panel-${index}`}
                   className={`transition-all duration-300 overflow-hidden ${
-                    isOpen ? 'max-h-[300px] border-t border-slate-100/50' : 'max-h-0'
+                    isOpen ? 'max-h-[600px] border-t border-slate-100/50' : 'max-h-0'
                   }`}
                 >
                   <p className="p-6 text-sm sm:text-body-md text-on-surface-variant leading-relaxed">

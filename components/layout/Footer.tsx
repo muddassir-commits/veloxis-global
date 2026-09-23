@@ -57,10 +57,10 @@ export const Footer: React.FC = () => {
       <div className="absolute bottom-0 right-1/4 w-[400px] h-[400px] rounded-full bg-royal-blue/5 blur-[96px] pointer-events-none translate-y-1/2"></div>
 
       <div className="max-w-container-max mx-auto px-gutter relative z-10">
-        
+
         {/* Tier 1: Brand & Hero CTA Header Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 pb-16 border-b border-white/5 items-center">
-          
+
           {/* Brand Info (col span 6) */}
           <div className="lg:col-span-6 flex flex-col gap-5 text-left">
             <Link href="/" className="flex items-center w-fit">
@@ -73,14 +73,14 @@ export const Footer: React.FC = () => {
               />
             </Link>
             <p className="text-[15px] sm:text-[16px] text-slate-400 leading-relaxed max-w-lg">
-              Delhi NCR&apos;s results-driven real estate marketing agency. We build predictable lead generation engines by linking paid advertising with high-converting landing pages and WhatsApp automation.
+              A real estate marketing agency for builders, brokers and channel partners. We build project landing pages, run Meta and Google ads, and set up WhatsApp automation — measured on site visits.
             </p>
             <div className="flex flex-wrap gap-2">
               <span className="text-[10px] font-bold tracking-wider uppercase bg-white/5 border border-white/10 px-2.5 py-1 rounded-full text-slate-400">
-                Google Certified Partner
+                Real estate only
               </span>
               <span className="text-[10px] font-bold tracking-wider uppercase bg-white/5 border border-white/10 px-2.5 py-1 rounded-full text-slate-400">
-                Meta Performance Specialist
+                Google Ads certified founder
               </span>
             </div>
           </div>
@@ -90,16 +90,16 @@ export const Footer: React.FC = () => {
             <div className="bg-white/5 border border-white/10 rounded-3xl p-6 sm:p-8 flex flex-col sm:flex-row items-center justify-between gap-6 relative overflow-hidden backdrop-blur-md shadow-lg shadow-black/20 text-left">
               <div className="absolute top-0 right-0 w-24 h-24 bg-royal-blue/10 rounded-full blur-2xl"></div>
               <div className="flex flex-col gap-2 max-w-md">
-                <span className="text-xs font-black tracking-widest text-royal-blue uppercase">FREE GROWTH AUDIT</span>
-                <h3 className="text-lg sm:text-xl font-extrabold text-white">Ready to accelerate your customer acquisition?</h3>
+                <span className="text-xs font-black tracking-widest text-royal-blue uppercase">FREE MARKETING AUDIT</span>
+                <p className="text-lg sm:text-xl font-extrabold text-white">Want more site visits from your ad budget?</p>
                 <p className="text-xs sm:text-sm text-slate-400 leading-relaxed">
-                  Claim your free 1-on-1 growth audit call with our founder. Let&apos;s map out a system that works.
+                  Book a free audit call with the founder. We&apos;ll review your pages, ads and lead follow-up and show you what to fix first.
                 </p>
               </div>
               <div className="shrink-0 w-full sm:w-auto text-center">
-                <Button 
-                  href="/contact" 
-                  variant="primary" 
+                <Button
+                  href="/contact"
+                  variant="primary"
                   className="!rounded-full hover:shadow-lg w-full sm:w-auto text-xs py-3.5 px-6 shrink-0"
                 >
                   Get Free Audit →
@@ -112,7 +112,7 @@ export const Footer: React.FC = () => {
 
         {/* Tier 2: Link Directory Sitemap columns */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-12 py-16 text-left border-b border-white/5">
-          
+
           {/* Services Column (span 3) */}
           <div className="lg:col-span-3 flex flex-col md:gap-5 border-b border-white/5 md:border-b-0 pb-4 md:pb-0">
             <button
@@ -133,7 +133,7 @@ export const Footer: React.FC = () => {
               {/* New services will be added here */}
               <li>
                 <Link href="/services/high-converting-landing-pages" className="hover:text-white hover:translate-x-1 transition-all duration-200 inline-block">
-                  Landing Pages
+                  Landing Pages &amp; Microsites
                 </Link>
               </li>
               <li>
@@ -143,7 +143,7 @@ export const Footer: React.FC = () => {
               </li>
               <li>
                 <Link href="/services/ai-automation" className="hover:text-white hover:translate-x-1 transition-all duration-200 inline-block">
-                  AI & WhatsApp Automation
+                  WhatsApp Chatbot &amp; Automation
                 </Link>
               </li>
             </ul>
@@ -157,7 +157,7 @@ export const Footer: React.FC = () => {
               aria-controls="footer-locations-list"
               className="flex items-center justify-between w-full md:cursor-default text-left md:pointer-events-none focus:outline-none py-2 md:py-0"
             >
-              <span className="text-[12px] tracking-[0.08em] uppercase text-slate-200 font-black">LOCATIONS</span>
+              <span className="text-[12px] tracking-[0.08em] uppercase text-slate-200 font-black">WHO WE HELP</span>
               <span className="md:hidden text-slate-400">
                 {openSection === 'locations' ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
               </span>
@@ -167,18 +167,18 @@ export const Footer: React.FC = () => {
               className={`flex flex-col gap-3 text-[14px] text-slate-400 mt-3 md:mt-0 ${openSection === 'locations' ? 'block' : 'hidden md:flex'}`}
             >
               <li>
-                <Link href="/contact" className="hover:text-white hover:translate-x-1 transition-all duration-200 inline-block">
-                  Delhi
+                <Link href="/industries/real-estate" className="hover:text-white hover:translate-x-1 transition-all duration-200 inline-block">
+                  Developers &amp; Builders
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="hover:text-white hover:translate-x-1 transition-all duration-200 inline-block">
-                  Noida
+                <Link href="/channel-partners" className="hover:text-white hover:translate-x-1 transition-all duration-200 inline-block">
+                  Channel Partners &amp; Brokers
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="hover:text-white hover:translate-x-1 transition-all duration-200 inline-block">
-                  Greater Noida
+                <Link href="/playbooks" className="hover:text-white hover:translate-x-1 transition-all duration-200 inline-block">
+                  Example Playbooks
                 </Link>
               </li>
             </ul>
@@ -207,28 +207,13 @@ export const Footer: React.FC = () => {
                 </Link>
               </li>
               <li>
-                <Link href="/industries/real-estate" className="hover:text-white hover:translate-x-1 transition-all duration-200 inline-block">
-                  Real Estate Focus
-                </Link>
-              </li>
-              <li>
-                <Link href="/case-studies" className="hover:text-white hover:translate-x-1 transition-all duration-200 inline-block">
-                  Client Case Studies
-                </Link>
-              </li>
-              <li>
                 <Link href="/pricing" className="hover:text-white hover:translate-x-1 transition-all duration-200 inline-block">
                   Plans &amp; Pricing
                 </Link>
               </li>
               <li>
-                <Link href="/testimonials" className="hover:text-white hover:translate-x-1 transition-all duration-200 inline-block">
-                  Testimonials
-                </Link>
-              </li>
-              <li>
                 <Link href="/blog" className="hover:text-white hover:translate-x-1 transition-all duration-200 inline-block">
-                  Insights Blog
+                  Blog &amp; Guides
                 </Link>
               </li>
               <li>
@@ -268,7 +253,7 @@ export const Footer: React.FC = () => {
                 <MapPin className="w-4 h-4 text-royal-blue shrink-0 mt-1" />
                 <span>{siteData.address}</span>
               </div>
-              
+
               <a
                 href="https://wa.me/918887620727?text=Hi%20Veloxis%20Global%2C%20I%27d%20like%20a%20free%20marketing%20audit"
                 target="_blank"
@@ -286,10 +271,10 @@ export const Footer: React.FC = () => {
         {/* Tier 3: Newsletter Signup Horizontal Panel */}
         <div className="py-12 border-b border-white/5">
           <div className="bg-white/5 border border-white/10 rounded-3xl p-6 sm:p-8 flex flex-col lg:flex-row items-center justify-between gap-6 backdrop-blur-md">
-            
+
             {/* Newsletter text details */}
             <div className="text-left flex flex-col gap-1 max-w-xl">
-              <h4 className="text-base sm:text-lg font-extrabold text-white">Subscribe to Real Estate Marketing Tips</h4>
+              <p className="text-base sm:text-lg font-extrabold text-white">Real estate marketing tips, by email</p>
               <p className="text-xs sm:text-sm text-slate-400 leading-normal">
                 Get property lead gen strategies, ad campaign blueprints, and conversion optimization tips for NCR developers.
               </p>
@@ -338,13 +323,13 @@ export const Footer: React.FC = () => {
 
         {/* Tier 4: Bottom Copyright & Symmetrical Bar */}
         <div className="pt-8 flex flex-col md:flex-row justify-between items-center gap-6 text-[12px] text-slate-400 font-semibold font-sans">
-          
+
           {/* Brand Copyright and social row */}
           <div className="flex flex-col sm:flex-row items-center gap-4 text-center sm:text-left">
             <span>© {new Date().getFullYear()} Veloxis Global. All Rights Reserved.</span>
-            
+
             {/* Social media items */}
-            <div className="flex items-center gap-2.5" role="list" aria-label="Social media links">
+            <div className="flex items-center gap-2.5" aria-label="Social media links">
               {[
                 { icon: Facebook, href: 'https://www.facebook.com/veloxisglobal/', label: 'Facebook' },
                 { icon: Instagram, href: 'https://www.instagram.com/veloxisglobal/', label: 'Instagram' },
@@ -358,7 +343,6 @@ export const Footer: React.FC = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={social.label}
-                    role="listitem"
                     className="w-8 h-8 bg-white/5 hover:bg-royal-blue transition-all duration-300 rounded-full flex items-center justify-center text-white hover:-translate-y-0.5"
                   >
                     <Icon size={14} aria-hidden="true" />

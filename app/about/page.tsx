@@ -5,615 +5,296 @@ import Link from 'next/link';
 
 import { Breadcrumb } from '../../components/ui/Breadcrumb';
 import { SchemaMarkup } from '../../components/ui/SchemaMarkup';
-import { 
-  Target, 
-  Eye, 
-  Users, 
-  ExternalLink, 
-  Award, 
-  BookOpen, 
-  CheckCircle, 
-  Globe,
-  Search,
-  Layers,
-  Zap,
-  MessageSquare,
-  TrendingUp
-} from 'lucide-react';
+import { Target, Eye, Users, ExternalLink, Award, CheckCircle, MapPin } from 'lucide-react';
 import { Linkedin } from '../../components/ui/BrandIcons';
 import { constructMetadata, pageMeta, FOUNDER_YEARS } from '../../lib/seo-config';
-import { companyStats } from '../../data/stats';
 import { FaqAccordion } from '../../components/sections/FaqAccordion';
-import { generateHowToSchema, generateOrganizationSchema } from '../../lib/schema';
+import { getWebPageSchema } from '../../lib/schema';
+import { servicesData } from '../../data/services-data';
+import { siteData } from '../../data/site';
 
-// 1. Dynamic Metadata with E-E-A-T optimization
-export function generateMetadata(): Metadata {
-  return constructMetadata({
-    title: pageMeta.about.title,
-    description: pageMeta.about.description,
-    path: pageMeta.about.path
-  });
-}
+export const metadata: Metadata = constructMetadata(pageMeta.about);
+
+// Course pages on Google Skillshop. Replace with personal credential URLs when available.
+const certifications = [
+  {
+    title: 'Google Ads Search Certification',
+    issuer: 'Google Skillshop',
+    link: 'https://skillshop.exceedlms.com/student/path/18128-google-ads-search-certification',
+  },
+  {
+    title: 'Google Analytics Certification',
+    issuer: 'Google Skillshop',
+    link: 'https://skillshop.exceedlms.com/student/path/29485-google-analytics-individual-qualification',
+  },
+];
+
+const values = [
+  { icon: <Target className="w-5 h-5 text-royal-blue" />, title: 'Site visits, not clicks', desc: 'Every campaign is reported on leads, site visits and cost per site visit — the numbers your sales team cares about.' },
+  { icon: <Eye className="w-5 h-5 text-royal-blue" />, title: 'Your accounts, your data', desc: 'Ads run from your own Google and Meta accounts, and lead data stays in your CRM or sheet.' },
+  { icon: <Users className="w-5 h-5 text-royal-blue" />, title: 'Founder on every account', desc: 'You work directly with the person planning your campaigns, not a rotating account manager.' },
+  { icon: <MapPin className="w-5 h-5 text-royal-blue" />, title: 'Real estate only', desc: 'We don’t split attention across industries. Launches, inventory, RERA, CP programmes — it’s all we work on.' },
+];
+
+const steps = [
+  { title: 'Audit', desc: 'We review your project pages, ad accounts, lead sources and how fast enquiries are answered today.' },
+  { title: 'Plan', desc: 'A 90-day plan covering channels, campaign structure, budget split, pages and WhatsApp flows.' },
+  { title: 'Build', desc: 'Landing page, tracking, WhatsApp automation and CRM connection, tested before launch.' },
+  { title: 'Launch', desc: 'Meta and Google campaigns go live with every enquiry answered on WhatsApp in seconds.' },
+  { title: 'Optimise', desc: 'Weekly changes towards the campaigns producing site visits, with a plain-language report.' },
+];
 
 export default function AboutPage() {
-  const breadcrumbItems = [{ name: 'About Us', href: '/about' }];
-
-  // 2. Organization + Person Schema
-  const organizationSchema = generateOrganizationSchema();
-
-  const breadcrumbSchema = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Home",
-        "item": "https://www.veloxisglobal.com"
-      },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "name": "About Us",
-        "item": "https://www.veloxisglobal.com/about"
-      }
-    ]
-  };
-
-  const certifications = [
-    {
-      title: "Google Ads Search Certification",
-      issuer: "Google Skillshop",
-      status: "Verified",
-      link: "https://skillshop.exceedlms.com/student/path/18128-google-ads-search-certification"
-    },
-    {
-      title: "Google Analytics 4 Certification",
-      issuer: "Google Skillshop",
-      status: "Verified",
-      link: "https://skillshop.exceedlms.com/student/path/29485-google-analytics-individual-qualification"
-    }
-  ];
-
-  const values = [
-    {
-      icon: <Target className="w-5 h-5 text-royal-blue" />,
-      title: "Results First",
-      desc: "Every strategy is measured by business outcomes, not vanity metrics."
-    },
-    {
-      icon: <Eye className="w-5 h-5 text-royal-blue" />,
-      title: "Radical Transparency",
-      desc: "You see everything — reports, spend, results. No black boxes."
-    },
-    {
-      icon: <Users className="w-5 h-5 text-royal-blue" />,
-      title: "Long-term Thinking",
-      desc: "We build relationships, not just campaigns."
-    },
-    {
-      icon: <Globe className="w-5 h-5 text-royal-blue" />,
-      title: "Built for Delhi NCR Real Estate",
-      desc: "We understand the local real estate market — buyer psychology, competition, and what it takes to generate site visits."
-    }
-  ];
-
-  const howToSchema = generateHowToSchema(
-    "Our 5-Step Digital Marketing Process",
-    "We do not believe in guessing. We use a clear, step-by-step method to audit, build, and scale your customer acquisition.",
-    [
-      {
-        name: "Detailed Audit",
-        text: "We look at your landing page speed, current ad accounts, and lead response time as a real estate marketing agency to find missed opportunities."
-      },
-      {
-        name: "Funnel Design",
-        text: "We design high-converting landing pages and map out a customer journey focused on sales funnel optimization."
-      },
-      {
-        name: "High-Performance Traffic",
-        text: "We launch custom campaigns as a real estate ads performance agency and manage your Google Ads PPC to drive real home buyers."
-      },
-      {
-        name: "Sales Automation",
-        text: "We set up WhatsApp automation for business and sales pipeline automation to contact and close leads instantly."
-      },
-      {
-        name: "Scale & Optimize",
-        text: "As a performance-focused lead generation agency, we analyze data weekly to scale campaigns and get you ROI-focused digital marketing."
-      }
-    ]
-  );
-
   return (
     <>
-      <SchemaMarkup schema={breadcrumbSchema} />
-      <SchemaMarkup schema={organizationSchema} />
-      <SchemaMarkup schema={howToSchema} />
+      <SchemaMarkup
+        schema={getWebPageSchema({
+          type: 'AboutPage',
+          name: 'About Veloxis Global',
+          description: pageMeta.about.description,
+          path: '/about',
+        })}
+      />
 
       <section className="bg-slate-50 py-8 border-b border-slate-100">
         <div className="max-w-container-max mx-auto px-gutter">
-          <Breadcrumb items={breadcrumbItems} />
+          <Breadcrumb items={[{ name: 'About', href: '/about' }]} />
         </div>
       </section>
 
-      {/* Hero Section */}
+      {/* Hero */}
       <section className="bg-slate-900 text-white relative py-20 lg:py-28 overflow-hidden text-left">
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,#1e293b_1px,transparent_1px),linear-gradient(to_bottom,#1e293b_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-40"></div>
-        <div className="absolute -top-40 -right-40 w-96 h-96 rounded-full bg-royal-blue/20 blur-[128px]"></div>
-
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#1e293b_1px,transparent_1px),linear-gradient(to_bottom,#1e293b_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-40" aria-hidden="true"></div>
+        <div className="absolute -top-40 -right-40 w-96 h-96 rounded-full bg-royal-blue/20 blur-[128px]" aria-hidden="true"></div>
         <div className="max-w-container-max mx-auto px-gutter relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           <div className="lg:col-span-8 flex flex-col items-start gap-6">
             <span className="inline-flex items-center gap-2 bg-royal-blue/20 border border-royal-blue/30 px-3 py-1 rounded-full text-xs font-bold text-royal-blue uppercase tracking-wider">
-              GROWTH PARTNER
+              About Veloxis Global
             </span>
             <h1 className="text-4xl sm:text-5xl lg:text-[56px] font-extrabold tracking-tight leading-[1.1] text-white">
-              I started Veloxis to fix the real estate agency model.
+              A founder-led real estate marketing agency
             </h1>
             <p className="text-lg sm:text-xl text-slate-300 leading-relaxed max-w-2xl">
-              No bloated retainers. No vanity metrics. Just a founder-led team focused entirely on scaling your sales pipeline.
+              I’m Muddassir Ali. I started Veloxis Global to give builders, brokers and channel partners one thing most
+              agencies don’t: marketing that’s judged on site visits and bookings, not impressions.
             </p>
           </div>
-          
           <div className="lg:col-span-4 flex justify-center lg:justify-end">
             <div className="relative w-48 h-48 sm:w-64 sm:h-64 rounded-full border-4 border-slate-800 shadow-2xl overflow-hidden">
-              <Image 
-                src="/images/profiles/muddassir.jpg" 
-                alt="Muddassir Ali - Founder" 
-                fill 
-                className="object-cover"
-              />
+              <Image src="/images/profiles/muddassir.jpg" alt="Muddassir Ali, founder of Veloxis Global" fill priority sizes="256px" className="object-cover" />
             </div>
           </div>
         </div>
       </section>
 
-      {/* Our Story Section */}
+      {/* Story */}
       <section className="py-20 bg-white text-left">
-        <div className="max-w-container-max mx-auto px-gutter">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-            
-            {/* Story copy (Left) */}
-            <div className="lg:col-span-7 flex flex-col gap-6 text-slate-700 text-sm sm:text-base leading-relaxed">
-              <span className="text-xs font-bold text-royal-blue uppercase tracking-wider">
-                OUR STORY
-              </span>
-              <h2 className="text-3xl font-extrabold text-slate-900 tracking-tight">
-                How I Built Veloxis Global to Help Businesses Grow
-              </h2>
-              
-              <p>
-                I started Veloxis Global with one main goal: to make digital marketing simple, clear, and highly profitable. I believe that every marketing campaign should bring real business sales, not just views, likes, or empty promises.
-              </p>
-              
-              <p>
-                As a leading <strong>real estate marketing agency in Delhi NCR</strong>, we focus on building predictable client acquisition engines. This means designing systems that combine high-converting landing pages, high-performing paid ads, and custom WhatsApp/CRM automation to help you get more site visits consistently.
-              </p>
-              
-              <p>
-                I noticed that many businesses spend a lot of money on a <strong>paid advertising company</strong> or social media ads, but they do not have a good system to convert those leads into paying customers. Veloxis Global was created to solve this exact problem by building end-to-end marketing funnels.
-              </p>
-              
-              <div className="border-l-4 border-royal-blue pl-4 py-2 my-2 italic text-slate-900 font-semibold bg-slate-50">
-                We do not just run ads. We set up complete lead generation systems for your business.
-              </div>
-              
-              <p>
-                Instead of running single Facebook or Google ads, we build a complete customer journey. We combine targeted traffic from Facebook ads marketing and Google Ads PPC services with automated WhatsApp follow-ups, CRM lead tracking, and conversion-optimized landing pages. This keeps your sales pipeline full and makes sure no lead is wasted.
-              </p>
-              
-              <p>
-                Today, Veloxis Global serves as a trusted growth partner for real estate developers and channel partners in Delhi NCR. We help brands automate their daily sales tasks, optimize their websites, and scale their customer growth using real data and honest strategies.
-              </p>
+        <div className="max-w-container-max mx-auto px-gutter grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+          <div className="lg:col-span-7 flex flex-col gap-6 text-slate-700 text-base leading-relaxed">
+            <span className="text-xs font-bold text-royal-blue uppercase tracking-wider">Why Veloxis Global exists</span>
+            <h2 className="text-3xl font-extrabold text-slate-900 tracking-tight">Leads were never the whole problem</h2>
+            <p>
+              Real estate businesses spend heavily on ads, portals and brokers, yet the same complaints come up again and
+              again: leads that don’t pick up, enquiries answered the next morning, and ad reports full of clicks that never
+              became site visits.
+            </p>
+            <p>
+              The fix isn’t just more leads. It’s a connected system: a page built for the project, ads that bring
+              exclusive enquiries, and follow-up that happens in seconds instead of hours. That is what Veloxis Global
+              builds — only for real estate, and only as three services that work together.
+            </p>
+            <div className="border-l-4 border-royal-blue pl-4 py-2 my-2 italic text-slate-900 font-semibold bg-slate-50">
+              We don’t just run ads. We build the path from the ad to the site visit — and measure every step of it.
             </div>
-
-            {/* Agency Approach (Right) */}
-            <div className="lg:col-span-5 flex flex-col gap-6 w-full">
-              <div className="bg-slate-50 border border-slate-100 rounded-2xl p-6">
-                <span className="text-xs font-extrabold text-royal-blue uppercase tracking-wider block mb-4">OUR SERVICES</span>
-                <div className="flex flex-col gap-3.5 text-sm font-semibold text-slate-700">
-                  <div className="flex items-center gap-2.5">
-                    <CheckCircle className="w-5 h-5 text-royal-blue shrink-0" />
-                    <span>High-Converting Landing Page Design</span>
-                  </div>
-                  <div className="flex items-center gap-2.5">
-                    <CheckCircle className="w-5 h-5 text-royal-blue shrink-0" />
-                    <span>Meta Ads Marketing & Google Ads PPC</span>
-                  </div>
-                  <div className="flex items-center gap-2.5">
-                    <CheckCircle className="w-5 h-5 text-royal-blue shrink-0" />
-                    <span>WhatsApp Automation for Business</span>
-                  </div>
-                  <div className="flex items-center gap-2.5">
-                    <CheckCircle className="w-5 h-5 text-royal-blue shrink-0" />
-                    <span>CRM Lead Management & Sales Pipelines</span>
-                  </div>
-                </div>
-              </div>
-
-              {/* Statistics Grid */}
-              <div className="grid grid-cols-2 gap-4">
-                <div className="bg-slate-900 text-white p-5 rounded-2xl border border-white/5 relative overflow-hidden text-left">
-                  <div className="absolute top-0 right-0 w-16 h-16 bg-royal-blue/10 rounded-full blur-xl"></div>
-                  <span className="text-2xl sm:text-3xl font-black text-royal-blue block">{companyStats.projectsDelivered || '20+'}</span>
-                  <span className="text-xs font-bold text-slate-500 uppercase tracking-wider block mt-1">Projects Delivered</span>
-                </div>
-                <div className="bg-slate-900 text-white p-5 rounded-2xl border border-white/5 relative overflow-hidden text-left">
-                  <div className="absolute top-0 right-0 w-16 h-16 bg-teal-accent/10 rounded-full blur-xl"></div>
-                  <span className="text-2xl sm:text-3xl font-black text-teal-accent block">100%</span>
-                  <span className="text-xs font-bold text-slate-500 uppercase tracking-wider block mt-1">ROI Focus</span>
-                </div>
-              </div>
-
-              {/* Team photo filling remaining column height */}
-              <div className="relative w-full flex-1 min-h-[220px] rounded-2xl overflow-hidden border border-slate-100">
-                <Image
-                  src="/images/sections/about-story.jpg"
-                  alt="The Veloxis Global team at work"
-                  fill
-                  sizes="(max-width: 1024px) 100vw, 40vw"
-                  className="object-cover"
-                />
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </section>
-
-      {/* Our Digital Marketing Process */}
-      <section className="py-20 bg-slate-50 border-y border-slate-100 text-left">
-        <div className="max-w-container-max mx-auto px-gutter">
-          <div className="text-center max-w-2xl mx-auto mb-16">
-            <span className="text-xs font-bold text-royal-blue uppercase tracking-widest block mb-3">
-              OUR WORKFLOW
-            </span>
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
-              Our 5-Step Digital Marketing Process
-            </h2>
-            <p className="text-slate-600 mt-3 text-sm sm:text-base leading-relaxed">
-              We do not believe in guessing. We use a clear, step-by-step method to audit, build, and scale your customer acquisition.
+            <p>
+              We work with developers and builders, channel partners and brokers across Kanpur, Lucknow, Noida, Greater
+              Noida and the wider Delhi NCR, and run campaigns for projects elsewhere in India.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
-            {/* Step 1 */}
-            <div className="bg-white border border-slate-100 rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow relative flex flex-col justify-between">
-              <div>
-                <div className="flex justify-between items-start mb-6">
-                  <div className="w-10 h-10 rounded-lg bg-royal-blue/10 flex items-center justify-center text-royal-blue">
-                    <Search className="w-5 h-5" />
-                  </div>
-                  <span className="text-3xl font-black text-slate-200">01</span>
-                </div>
-                <h3 className="font-extrabold text-slate-900 text-lg mb-2">
-                  Detailed Audit
-                </h3>
-                <p className="text-xs sm:text-sm text-slate-500 leading-relaxed">
-                  We look at your landing page speed, current ad accounts, and lead response time as a <strong>real estate marketing agency</strong> to find missed opportunities.
-                </p>
+          <div className="lg:col-span-5 flex flex-col gap-6 w-full">
+            <div className="bg-slate-50 border border-slate-100 rounded-2xl p-6">
+              <h2 className="text-xs font-extrabold text-royal-blue uppercase tracking-wider mb-4">What we do</h2>
+              <ul className="flex flex-col gap-3.5 text-sm font-semibold text-slate-700">
+                {servicesData.map((s) => (
+                  <li key={s.slug} className="flex items-center gap-2.5">
+                    <CheckCircle className="w-5 h-5 text-royal-blue shrink-0" aria-hidden="true" />
+                    <Link href={`/services/${s.slug}`} className="hover:text-royal-blue">{s.title}</Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="grid grid-cols-2 gap-4">
+              <div className="bg-slate-900 text-white p-5 rounded-2xl text-left">
+                <span className="text-2xl sm:text-3xl font-black text-royal-blue block">{FOUNDER_YEARS}+ yrs</span>
+                <span className="text-xs font-bold text-slate-400 uppercase tracking-wider block mt-1">Founder experience</span>
+              </div>
+              <div className="bg-slate-900 text-white p-5 rounded-2xl text-left">
+                <span className="text-2xl sm:text-3xl font-black text-teal-accent block">1</span>
+                <span className="text-xs font-bold text-slate-400 uppercase tracking-wider block mt-1">Industry: real estate</span>
               </div>
             </div>
-
-            {/* Step 2 */}
-            <div className="bg-white border border-slate-100 rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow relative flex flex-col justify-between">
-              <div>
-                <div className="flex justify-between items-start mb-6">
-                  <div className="w-10 h-10 rounded-lg bg-royal-blue/10 flex items-center justify-center text-royal-blue">
-                    <Layers className="w-5 h-5" />
-                  </div>
-                  <span className="text-3xl font-black text-slate-200">02</span>
-                </div>
-                <h3 className="font-extrabold text-slate-900 text-lg mb-2">
-                  Funnel Design
-                </h3>
-                <p className="text-xs sm:text-sm text-slate-500 leading-relaxed">
-                  We design high-converting landing pages and map out a customer journey focused on <strong>sales funnel optimization</strong>.
-                </p>
-              </div>
-            </div>
-
-            {/* Step 3 */}
-            <div className="bg-white border border-slate-100 rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow relative flex flex-col justify-between">
-              <div>
-                <div className="flex justify-between items-start mb-6">
-                  <div className="w-10 h-10 rounded-lg bg-royal-blue/10 flex items-center justify-center text-royal-blue">
-                    <Zap className="w-5 h-5" />
-                  </div>
-                  <span className="text-3xl font-black text-slate-200">03</span>
-                </div>
-                <h3 className="font-extrabold text-slate-900 text-lg mb-2">
-                  High-Performance Traffic
-                </h3>
-                <p className="text-xs sm:text-sm text-slate-500 leading-relaxed">
-                  We launch custom campaigns as a <strong>real estate ads performance agency</strong> and manage your <strong>Google Ads PPC</strong> to drive real home buyers.
-                </p>
-              </div>
-            </div>
-
-            {/* Step 4 */}
-            <div className="bg-white border border-slate-100 rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow relative flex flex-col justify-between">
-              <div>
-                <div className="flex justify-between items-start mb-6">
-                  <div className="w-10 h-10 rounded-lg bg-royal-blue/10 flex items-center justify-center text-royal-blue">
-                    <MessageSquare className="w-5 h-5" />
-                  </div>
-                  <span className="text-3xl font-black text-slate-200">04</span>
-                </div>
-                <h3 className="font-extrabold text-slate-900 text-lg mb-2">
-                  Sales Automation
-                </h3>
-                <p className="text-xs sm:text-sm text-slate-500 leading-relaxed">
-                  We set up <strong>WhatsApp automation for business</strong> and <strong>sales pipeline automation</strong> to contact and close leads instantly.
-                </p>
-              </div>
-            </div>
-
-            {/* Step 5 */}
-            <div className="bg-white border border-slate-100 rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow relative flex flex-col justify-between">
-              <div>
-                <div className="flex justify-between items-start mb-6">
-                  <div className="w-10 h-10 rounded-lg bg-royal-blue/10 flex items-center justify-center text-royal-blue">
-                    <TrendingUp className="w-5 h-5" />
-                  </div>
-                  <span className="text-3xl font-black text-slate-200">05</span>
-                </div>
-                <h3 className="font-extrabold text-slate-900 text-lg mb-2">
-                  Scale & Optimize
-                </h3>
-                <p className="text-xs sm:text-sm text-slate-500 leading-relaxed">
-                  As a performance-focused <strong>lead generation agency</strong>, we analyze data weekly to scale campaigns and get you <strong>ROI-focused digital marketing</strong>.
-                </p>
-              </div>
+            <div className="relative w-full min-h-[220px] rounded-2xl overflow-hidden border border-slate-100">
+              <Image src="/images/sections/about-story.jpg" alt="" fill sizes="(max-width: 1024px) 100vw, 40vw" className="object-cover" />
             </div>
           </div>
         </div>
       </section>
 
-      {/* Mission & Vision */}
-      <section className="py-20 bg-white text-left">
-        <div className="max-w-container-max mx-auto px-gutter">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-white border border-slate-100 rounded-2xl p-8 shadow-sm flex flex-col gap-4">
-              <span className="bg-royal-blue/10 text-royal-blue text-xs font-bold uppercase px-3 py-1 rounded-full w-fit">
-                OUR MISSION
-              </span>
-              <h3 className="text-2xl font-extrabold text-slate-900">
-                Data-Driven & Honest growth
-              </h3>
-              <p className="text-slate-600 leading-relaxed text-sm sm:text-base">
-                "To help every business in India unlock the power of digital marketing with honest, data-driven strategies and no fluff."
-              </p>
-            </div>
-            <div className="bg-white border border-slate-100 rounded-2xl p-8 shadow-sm flex flex-col gap-4">
-              <span className="bg-teal-accent/15 text-teal-accent text-xs font-bold uppercase px-3 py-1 rounded-full w-fit">
-                OUR VISION
-              </span>
-              <h3 className="text-2xl font-extrabold text-slate-900">
-                The Trusted Name in Real Estate Growth
-              </h3>
-              <p className="text-slate-600 leading-relaxed text-sm sm:text-base">
-                "To be Delhi NCR's most trusted real estate growth partner — the first call a developer makes when they need site visits, not just impressions."
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* How We Work */}
+      {/* Process */}
       <section className="py-20 bg-slate-50 border-y border-slate-100 text-left">
         <div className="max-w-container-max mx-auto px-gutter">
-          <div className="max-w-3xl mx-auto flex flex-col items-start gap-4">
-            <span className="text-xs font-bold text-royal-blue uppercase tracking-wider">
-              OPERATIONAL MODEL
-            </span>
-            <h2 className="text-3xl font-extrabold text-slate-900 tracking-tight">
-              A Lean, Results-First Infrastructure
-            </h2>
-            <p className="text-lg text-slate-700 leading-relaxed mt-2">
-              "Veloxis Global is a lean, focused agency. I work with a trusted network of landing page developers, ad managers, and automation specialists — bringing in the right expertise for each client's needs. No bloated retainer, no unnecessary overhead. Just results."
-            </p>
+          <div className="text-center max-w-2xl mx-auto mb-12">
+            <span className="text-xs font-bold text-royal-blue uppercase tracking-widest block mb-3">How we work</span>
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">Five steps from audit to site visits</h2>
           </div>
+          <ol className="grid grid-cols-1 md:grid-cols-5 gap-6">
+            {steps.map((s, i) => (
+              <li key={s.title} className="bg-white border border-slate-100 rounded-2xl p-6">
+                <span className="text-3xl font-black text-slate-200" aria-hidden="true">{String(i + 1).padStart(2, '0')}</span>
+                <h3 className="font-extrabold text-slate-900 mt-2 mb-2">{s.title}</h3>
+                <p className="text-sm text-slate-500 leading-relaxed">{s.desc}</p>
+              </li>
+            ))}
+          </ol>
+          <p className="text-center mt-10 text-sm text-slate-600">
+            Want to see this applied to a real scenario? Read our{' '}
+            <Link href="/playbooks" className="font-bold text-royal-blue hover:underline">example playbooks</Link>.
+          </p>
+        </div>
+      </section>
+
+      {/* Operating model */}
+      <section className="py-20 bg-white text-left">
+        <div className="max-w-3xl mx-auto px-gutter flex flex-col items-start gap-4">
+          <span className="text-xs font-bold text-royal-blue uppercase tracking-wider">How the agency is set up</span>
+          <h2 className="text-3xl font-extrabold text-slate-900 tracking-tight">Lean by design</h2>
+          <p className="text-lg text-slate-700 leading-relaxed">
+            Veloxis Global is a lean, founder-led agency. I plan and oversee every account myself, and work with a small
+            network of landing page developers, ad specialists and automation engineers, bringing in the right people for
+            each project. No bloated retainer, and no junior account manager between you and the person doing the work.
+          </p>
         </div>
       </section>
 
       {/* Certifications */}
-      <section className="py-20 bg-white text-left">
-        <div className="max-w-container-max mx-auto px-gutter">
-          <div className="text-center max-w-2xl mx-auto mb-16">
-            <span className="text-xs font-bold text-royal-blue uppercase tracking-widest block mb-3">
-              E-E-A-T CREDENTIALS
-            </span>
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
-              Industry Certifications & Audits
-            </h2>
-            <p className="text-slate-500 mt-3 text-sm">
-              We strictly adhere to industry verification standards set by official marketing publishers.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {certifications.map((c, i) => (
-              <div key={i} className="bg-white border border-slate-100 rounded-2xl p-6 shadow-sm flex flex-col justify-between items-start gap-6">
-                <div className="flex flex-col gap-2">
-                  <div className="w-10 h-10 rounded-lg bg-royal-blue/10 flex items-center justify-center text-royal-blue mb-2">
-                    {c.link === '#' ? <BookOpen className="w-5 h-5" /> : <Award className="w-5 h-5" />}
-                  </div>
-                  <h3 className="font-extrabold text-slate-900 text-base sm:text-lg">
-                    {c.title}
-                  </h3>
-                  <span className="text-xs font-bold text-slate-400 block uppercase tracking-wider">
-                    {c.issuer}
-                  </span>
-                </div>
-
-                <div className="flex items-center justify-between w-full pt-4 border-t border-slate-50">
-                  <span className={`text-[11px] font-extrabold uppercase px-2.5 py-1 rounded-full ${
-                    c.status === 'Verified' ? 'bg-teal-accent/10 text-teal-accent' : 'bg-orange-400/10 text-orange-500'
-                  }`}>
-                    {c.status}
-                  </span>
-                  {c.link !== '#' && (
-                    <Link 
-                      href={c.link} 
-                      target="_blank"
-                      className="text-xs font-bold text-royal-blue hover:text-royal-blue/80 flex items-center gap-1"
-                    >
-                      <span>Verify ↗</span>
-                    </Link>
-                  )}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Core Values */}
       <section className="py-20 bg-slate-50 border-y border-slate-100 text-left">
         <div className="max-w-container-max mx-auto px-gutter">
-          <div className="text-center max-w-2xl mx-auto mb-16">
-            <span className="text-xs font-bold text-royal-blue uppercase tracking-widest block mb-3">
-              OUR VALUES
-            </span>
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
-              Four Core Commitments
-            </h2>
+          <div className="text-center max-w-2xl mx-auto mb-12">
+            <span className="text-xs font-bold text-royal-blue uppercase tracking-widest block mb-3">Credentials</span>
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">Certifications</h2>
           </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            {values.map((v, i) => (
-              <div key={i} className="bg-slate-50 border border-slate-100 rounded-2xl p-6 hover:shadow-md transition-shadow">
-                <div className="w-10 h-10 rounded-lg bg-white shadow-sm flex items-center justify-center mb-5 border border-slate-100">
-                  {v.icon}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto">
+            {certifications.map((c) => (
+              <div key={c.title} className="bg-white border border-slate-100 rounded-2xl p-6 shadow-sm flex flex-col gap-4">
+                <div className="w-10 h-10 rounded-lg bg-royal-blue/10 flex items-center justify-center text-royal-blue">
+                  <Award className="w-5 h-5" aria-hidden="true" />
                 </div>
-                <h3 className="font-extrabold text-slate-900 text-base mb-2">
-                  {v.title}
-                </h3>
-                <p className="text-xs sm:text-sm text-slate-500 leading-relaxed">
-                  {v.desc}
-                </p>
+                <h3 className="font-extrabold text-slate-900 text-lg">{c.title}</h3>
+                <span className="text-xs font-bold text-slate-400 uppercase tracking-wider">{c.issuer}</span>
+                <Link href={c.link} target="_blank" rel="noopener noreferrer" className="text-xs font-bold text-royal-blue hover:underline mt-auto">
+                  Course details ↗
+                </Link>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Founder Profile Section */}
-      <section className="py-20 bg-white border-t border-slate-100 text-left">
+      {/* Values */}
+      <section className="py-20 bg-white text-left">
         <div className="max-w-container-max mx-auto px-gutter">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            
-            {/* Left side: Photo */}
-            <div className="lg:col-span-5 flex flex-col items-center">
-              <div className="w-full relative rounded-3xl overflow-hidden shadow-2xl border border-slate-100 max-w-[380px] mx-auto bg-slate-100 aspect-[4/5]">
-                <Image 
-                  src="/images/profiles/Muddassir_Ali.webp" 
-                  alt="Muddassir Ali" 
-                  fill
-                  className="object-cover transition-transform duration-500 hover:scale-105"
-                  priority
-                />
+          <div className="text-center max-w-2xl mx-auto mb-12">
+            <span className="text-xs font-bold text-royal-blue uppercase tracking-widest block mb-3">What you can expect</span>
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">Four commitments</h2>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            {values.map((v) => (
+              <div key={v.title} className="bg-slate-50 border border-slate-100 rounded-2xl p-6">
+                <div className="w-10 h-10 rounded-lg bg-white shadow-sm flex items-center justify-center mb-5 border border-slate-100" aria-hidden="true">
+                  {v.icon}
+                </div>
+                <h3 className="font-extrabold text-slate-900 text-base mb-2">{v.title}</h3>
+                <p className="text-sm text-slate-500 leading-relaxed">{v.desc}</p>
               </div>
-            </div>
-
-            {/* Right side: Bio & Info */}
-            <div className="lg:col-span-7 flex flex-col gap-6 text-slate-700 text-sm sm:text-base leading-relaxed">
-              <span className="text-xs font-bold text-royal-blue uppercase tracking-wider">
-                MEET THE FOUNDER
-              </span>
-              <h2 className="text-3xl font-extrabold text-slate-900 tracking-tight">
-                Muddassir Ali
-              </h2>
-              <span className="text-sm font-bold text-slate-500 -mt-4 uppercase tracking-widest block">
-                Founder, Digital Marketing Consultant & Lead Generation Specialist
-              </span>
-              
-              <p>
-                Muddassir Ali is the founder of Veloxis Global. He is a professional <strong>real estate digital marketing consultant</strong> with more than {FOUNDER_YEARS} years of experience helping developers and brokers get more customers. He specializes in setting up <strong>real estate lead generation systems</strong> and client acquisition engines that run on autopilot.
-              </p>
-              
-              <p>
-                After working with many developers, real estate brokers, and channel partners, Muddassir realized that most companies waste money on ads because they do not have a good follow-up system. To solve this, he started Veloxis Global, which is now recognized as a trusted provider of <strong>real estate marketing services in Delhi NCR</strong>. He helped build this <strong>marketing automation agency</strong> to ensure real estate brands can turn cold traffic into site visits and bookings.
-              </p>
-              
-              <p>
-                Muddassir is certified by Google and HubSpot. He manages ad campaigns, builds high-converting landing pages, and sets up automation flows that nurture leads. He keeps things simple, honest, and focused on helping your business make more money.
-              </p>
-
-              <div className="flex flex-col sm:flex-row gap-4 mt-2 w-full sm:w-auto">
-                <Link 
-                  href="https://www.linkedin.com/in/muddassir-alii/" 
-                  target="_blank"
-                  className="flex items-center justify-center gap-2 bg-royal-blue hover:bg-royal-blue/90 transition-colors px-6 py-3 rounded-xl text-xs font-bold text-white shadow-sm shadow-royal-blue/20 animate-fade-in"
-                >
-                  <span>Connect on LinkedIn ↗</span>
-                  <Linkedin className="w-4 h-4 text-white" />
-                </Link>
-                <Link 
-                  href="https://muddassirali.com" 
-                  target="_blank"
-                  className="flex items-center justify-center gap-2 border border-slate-200 hover:bg-slate-50 transition-colors px-6 py-3 rounded-xl text-xs font-bold text-slate-700"
-                >
-                  <span>Founder Portfolio ↗</span>
-                  <ExternalLink className="w-4 h-4 text-slate-500" />
-                </Link>
-              </div>
-            </div>
-
+            ))}
           </div>
         </div>
       </section>
 
-      {/* About FAQs */}
+      {/* Founder */}
+      <section className="py-20 bg-slate-50 border-t border-slate-100 text-left" id="founder">
+        <div className="max-w-container-max mx-auto px-gutter grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          <div className="lg:col-span-5 flex flex-col items-center">
+            <div className="w-full relative rounded-3xl overflow-hidden shadow-2xl border border-slate-100 max-w-[380px] mx-auto bg-slate-100 aspect-[4/5]">
+              <Image src="/images/profiles/Muddassir_Ali.webp" alt="Portrait of Muddassir Ali" fill sizes="380px" className="object-cover" />
+            </div>
+          </div>
+          <div className="lg:col-span-7 flex flex-col gap-6 text-slate-700 text-base leading-relaxed">
+            <span className="text-xs font-bold text-royal-blue uppercase tracking-wider">Meet the founder</span>
+            <h2 className="text-3xl font-extrabold text-slate-900 tracking-tight">Muddassir Ali</h2>
+            <span className="text-sm font-bold text-slate-500 -mt-4 uppercase tracking-widest block">Founder, Veloxis Global</span>
+            <p>
+              Muddassir has worked in digital marketing for over {FOUNDER_YEARS} years, focusing on lead generation, landing
+              pages, Meta and Google Ads, and sales automation. Working with developers, brokers and channel partners, he kept
+              seeing the same pattern: money spent on ads, and leads lost to slow or missing follow-up.
+            </p>
+            <p>
+              He started Veloxis Global to fix that with one connected system for real estate — landing pages, ads and
+              WhatsApp automation — and still plans and oversees every client account personally.
+            </p>
+            <p>He holds Google certifications in Google Ads and Analytics, and is HubSpot certified.</p>
+            <div className="flex flex-col sm:flex-row gap-4 mt-2 w-full sm:w-auto">
+              <Link href="https://www.linkedin.com/in/muddassir-alii/" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 bg-royal-blue hover:bg-royal-blue/90 transition-colors px-6 py-3 rounded-xl text-xs font-bold text-white">
+                <span>Connect on LinkedIn ↗</span>
+                <Linkedin className="w-4 h-4 text-white" />
+              </Link>
+              <Link href="https://muddassirali.com" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 border border-slate-200 hover:bg-white transition-colors px-6 py-3 rounded-xl text-xs font-bold text-slate-700">
+                <span>Founder portfolio ↗</span>
+                <ExternalLink className="w-4 h-4 text-slate-500" aria-hidden="true" />
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <FaqAccordion
-        title="About Veloxis Global FAQs"
+        title="About Veloxis Global"
         badgeText="FAQ"
+        description="Quick answers about who we are and how we work."
         customFaqs={[
           {
-            question: "Who is the founder of Veloxis Global?",
-            answer: `Veloxis Global was founded by Muddassir Ali, a digital marketing consultant with over ${FOUNDER_YEARS} years of experience in lead generation services, landing page design, Meta & Google Ads, and sales automation.`
+            question: 'Who founded Veloxis Global?',
+            answer: `Veloxis Global was founded by Muddassir Ali, who has over ${FOUNDER_YEARS} years of experience in lead generation, landing page design, Meta and Google Ads, and sales automation.`,
           },
           {
-            question: "Where is Veloxis Global based?",
-            answer: "Veloxis Global is headquartered in Delhi NCR, India. If you are looking for the best real estate marketing services in Delhi, Noida, or Greater Noida, we are here to help you dominate your local market."
+            question: 'Where does Veloxis Global work?',
+            answer:
+              'We work with real estate developers, brokers and channel partners in Kanpur, Lucknow, Noida, Greater Noida and the wider Delhi NCR, and run campaigns for projects elsewhere in India. We work remotely and do not have a walk-in office.',
           },
           {
-            question: "What makes Veloxis Global different from traditional agencies?",
-            answer: "We don't sell vanity metrics like impressions or clicks. We build complete sales pipelines, linking paid traffic directly with custom-built landing pages, lead routing mechanisms, WhatsApp automations, and CRM integrations for clear business growth."
-          }
+            question: 'What makes Veloxis Global different from a general digital marketing agency?',
+            answer:
+              'We work only in real estate, offer only three connected services — landing pages, Meta and Google ads, and WhatsApp automation — and report on site visits and cost per site visit rather than clicks and impressions.',
+          },
         ]}
       />
 
-      {/* CTA Section */}
+      {/* CTA */}
       <section className="py-20 bg-slate-900 text-white relative overflow-hidden text-center">
-        <div className="absolute inset-0 bg-[radial-gradient(#1e293b_1px,transparent_1px)] bg-[size:24px_24px] opacity-30"></div>
-        
+        <div className="absolute inset-0 bg-[radial-gradient(#1e293b_1px,transparent_1px)] bg-[size:24px_24px] opacity-30" aria-hidden="true"></div>
         <div className="max-w-container-max mx-auto px-gutter relative z-10">
           <div className="max-w-2xl mx-auto flex flex-col items-center gap-6">
-            <span className="text-xs font-bold text-royal-blue uppercase tracking-widest">
-              LET'S COLLABORATE
-            </span>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight">
-              Let's Build Something Great Together
-            </h2>
-            <p className="text-slate-300 text-sm sm:text-base">
-              Schedule a direct 30-minute growth strategy discovery call with Muddassir or connect on LinkedIn to talk campaigns.
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight">Talk to Muddassir directly</h2>
+            <p className="text-slate-300 text-base">
+              Book a 30-minute call to walk through your project, your current lead flow and what we would change first.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 mt-4 w-full sm:w-auto">
-              <Link 
-                href="https://calendly.com/veloxis-global/30min" 
-                target="_blank"
-                className="bg-royal-blue text-white px-8 py-4 font-bold rounded-lg transition-colors hover:bg-royal-blue/90 w-full sm:w-auto text-center"
-              >
-                Book Discovery Call →
+              <Link href={siteData.booking} target="_blank" rel="noopener noreferrer" className="bg-royal-blue text-white px-8 py-4 font-bold rounded-lg transition-colors hover:bg-royal-blue/90 w-full sm:w-auto text-center">
+                Book a call →
               </Link>
-              <Link 
-                href="https://www.linkedin.com/in/muddassir-alii/" 
-                target="_blank"
-                className="border border-white/20 hover:bg-white/10 px-8 py-4 font-bold rounded-lg transition-colors text-white w-full sm:w-auto text-center"
-              >
-                LinkedIn Profile ↗
+              <Link href="/contact" className="border border-white/20 hover:bg-white/10 px-8 py-4 font-bold rounded-lg transition-colors text-white w-full sm:w-auto text-center">
+                Send a message
               </Link>
             </div>
           </div>

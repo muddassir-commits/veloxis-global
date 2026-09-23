@@ -6,7 +6,7 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { ArrowRight } from 'lucide-react';
-import { services } from '../../data/services';
+import { servicesData as services } from '../../data/services-data';
 import { Card } from '../ui/Card';
 import { SectionLabel } from '../ui/SectionLabel';
 
@@ -24,10 +24,10 @@ export const ServicesGrid: React.FC = () => {
         <div className="text-center max-w-[700px] mx-auto mb-16 section-reveal">
           <SectionLabel className="text-center">WHAT WE DO</SectionLabel>
           <h2 className="text-headline-lg-mobile sm:text-headline-lg font-bold text-slate-900 tracking-tight leading-tight">
-            Three Pipelines. One Growth Engine.
+            Three real estate marketing services that work as one system
           </h2>
           <p className="text-body-lg text-slate-500 max-w-[600px] mx-auto text-center mt-4">
-            Everything a real estate developer needs to generate qualified leads and fill site visits — no fluff, no vanity metrics.
+            A page that converts, ads that bring exclusive enquiries, and automation that replies to every lead — run together and judged on site visits.
           </p>
         </div>
 
@@ -43,7 +43,7 @@ export const ServicesGrid: React.FC = () => {
                     <div className="w-full h-40 relative overflow-hidden">
                       <Image
                         src={visual.image}
-                        alt={service.title}
+                        alt=""
                         fill
                         sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                         className="object-cover transition-transform duration-500 group-hover:scale-[1.05]"
@@ -72,7 +72,7 @@ export const ServicesGrid: React.FC = () => {
 
                       {/* Explore Link */}
                       <div className="inline-flex items-center gap-1.5 font-bold text-sm text-royal-blue transition-colors duration-300 mt-auto">
-                        <span>Learn More</span>
+                        <span>{service.title}</span>
                         <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1.5" />
                       </div>
                     </div>

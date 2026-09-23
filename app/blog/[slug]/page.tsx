@@ -3,119 +3,79 @@ import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { SchemaMarkup } from '../../../components/ui/SchemaMarkup';
 import { Breadcrumb } from '../../../components/ui/Breadcrumb';
-import { generateBreadcrumbSchema } from '../../../lib/schema';
+import { getArticleSchema } from '../../../lib/schema';
 import { CtaBanner } from '../../../components/sections/CtaBanner';
 import BlogPostContent from './BlogPostContent';
 import { constructMetadata } from '../../../lib/seo-config';
-import { Post, blogPosts } from '../../../data/blog-posts';
+import { blogPosts, getPostBySlug } from '../../../data/blog-posts';
+import { getServiceBySlug } from '../../../data/services-data';
 
 interface Params {
-  params: {
-    slug: string;
-  };
+  params: { slug: string };
 }
+
+const readTime = (html: string) => {
+  const words = html.replace(/<[^>]*>/g, ' ').trim().split(/\s+/).filter(Boolean).length;
+  return `${Math.max(1, Math.ceil(words / 200))} min read`;
+};
 
 export function generateStaticParams() {
-  return blogPosts.map((post) => ({
-    slug: post.slug,
-  }));
+  return blogPosts.map((post) => ({ slug: post.slug }));
 }
 
-export async function generateMetadata({ params }: Params): Promise<Metadata> {
-  const post = blogPosts.find((p) => p.slug === params.slug);
+export function generateMetadata({ params }: Params): Metadata {
+  const post = getPostBySlug(params.slug);
   if (!post) return {};
-
   return constructMetadata({
-    title: post.title,
+    title: post.seoTitle,
     description: post.excerpt,
-    path: `/blog/${post.slug}`
+    path: `/blog/${post.slug}`,
+    ogImage: post.image,
+    ogType: 'article',
+    publishedTime: post.isoDate,
+    modifiedTime: post.modifiedIso,
   });
 }
 
 export default function SingleBlogPostPage({ params }: Params) {
-  const post = blogPosts.find((p) => p.slug === params.slug);
+  const post = getPostBySlug(params.slug);
   if (!post) notFound();
 
-  const getReadTime = (html: string) => {
-    const text = html.replace(/<[^>]*>/g, ' ');
-    const words = text.trim().split(/\s+/).filter(Boolean).length;
-    return `${Math.max(1, Math.ceil(words / 200))} min read`;
-  };
-
-  const postWithReadTime = {
-    ...post,
-    readTime: getReadTime(post.htmlContent)
-  };
-
-  const breadcrumbItems = [
-    { name: 'Blog', href: '/blog' },
-    { name: post.title, href: `/blog/${post.slug}` }
-  ];
-
-  const breadcrumbSchema = generateBreadcrumbSchema([
-    { name: 'Home', url: 'https://www.veloxisglobal.com' },
-    { name: 'Blog', url: 'https://www.veloxisglobal.com/blog' },
-    { name: post.title, url: `https://www.veloxisglobal.com/blog/${post.slug}` }
-  ]);
-
-  const articleSchema = {
-    "@context": "https://schema.org",
-    "@type": "BlogPosting",
-    "headline": post.title,
-    "description": post.excerpt,
-    "datePublished": post.isoDate,
-    "dateModified": post.isoDate,
-    "image": "https://www.veloxisglobal.com/images/logos/logo.webp",
-    "author": {
-      "@type": "Person",
-      "name": post.author,
-      "url": "https://www.linkedin.com/in/muddassir-alii/",
-      "sameAs": [
-        "https://www.linkedin.com/in/muddassir-alii/",
-        "https://muddassirali.com"
-      ]
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "Veloxis Global",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://www.veloxisglobal.com/images/logos/logo.webp"
-      }
-    },
-    "about": post.about ? post.about.map(item => ({
-      "@type": "Thing",
-      "name": item.name,
-      "sameAs": item.sameAs
-    })) : undefined,
-    "mentions": post.mentions ? post.mentions.map(item => ({
-      "@type": "Thing",
-      "name": item.name,
-      "sameAs": item.sameAs
-    })) : undefined
-  };
-
-  // Find 2 related posts
+  const path = `/blog/${post.slug}`;
+  // Related: same service first, then same category, then newest.
   const relatedPosts = blogPosts
     .filter((p) => p.slug !== post.slug)
-    .slice(0, 2)
-    .map(p => ({
-      ...p,
-      readTime: getReadTime(p.htmlContent)
-    }));
+    .map((p) => ({ p, score: (post.service && p.service === post.service ? 2 : 0) + (p.category === post.category ? 1 : 0) }))
+    .sort((a, b) => b.score - a.score || b.p.isoDate.localeCompare(a.p.isoDate))
+    .slice(0, 3)
+    .map(({ p }) => ({ ...p, readTime: readTime(p.htmlContent) }));
+  const service = post.service ? getServiceBySlug(post.service) : undefined;
 
   return (
     <>
-      <SchemaMarkup schema={breadcrumbSchema} />
-      <SchemaMarkup schema={articleSchema} />
+      <SchemaMarkup
+        schema={getArticleSchema({
+          title: post.title,
+          description: post.excerpt,
+          path,
+          image: post.image,
+          datePublished: post.isoDate,
+          dateModified: post.modifiedIso,
+          about: post.about,
+        })}
+      />
 
       <section className="bg-slate-50 py-8 border-b border-slate-100">
         <div className="max-w-container-max mx-auto px-gutter">
-          <Breadcrumb items={breadcrumbItems} />
+          <Breadcrumb items={[{ name: 'Blog', href: '/blog' }, { name: post.title, href: path }]} />
         </div>
       </section>
 
-      <BlogPostContent post={postWithReadTime} relatedPosts={relatedPosts} />
+      <BlogPostContent
+        post={{ ...post, readTime: readTime(post.htmlContent) }}
+        relatedPosts={relatedPosts}
+        service={service ? { slug: service.slug, title: service.title, shortDesc: service.shortDesc } : undefined}
+      />
 
       <CtaBanner />
     </>

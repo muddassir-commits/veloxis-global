@@ -2,56 +2,17 @@ import React from 'react';
 import { Metadata } from 'next';
 import { Breadcrumb } from '../../components/ui/Breadcrumb';
 import { Badge } from '../../components/ui/Badge';
-import { SchemaMarkup } from '../../components/ui/SchemaMarkup';
 import { FaqAccordion } from '../../components/sections/FaqAccordion';
-import { constructMetadata } from '../../lib/seo-config';
+import { constructMetadata, pageMeta } from '../../lib/seo-config';
 import { siteData } from '../../data/site';
 
-export const metadata: Metadata = constructMetadata({
-  title: "Terms of Service | Veloxis Global Real Estate Marketing",
-  description: "Read the Terms of Service for Veloxis Global. Learn about our month-to-month service agreements and website usage terms. Contact us with questions.",
-  path: "/terms"
-});
+export const metadata: Metadata = constructMetadata(pageMeta.terms);
 
 export default function TermsPage() {
   const breadcrumbItems = [{ name: 'Terms of Service', href: '/terms' }];
 
-  const breadcrumbSchema = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Home",
-        "item": "https://www.veloxisglobal.com"
-      },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "name": "Terms of Service",
-        "item": "https://www.veloxisglobal.com/terms"
-      }
-    ]
-  };
-
-  const webPageSchema = {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "@id": "https://www.veloxisglobal.com/terms#webpage",
-    "url": "https://www.veloxisglobal.com/terms",
-    "name": "Terms of Service | Veloxis Global",
-    "description": "Read the Terms of Service for Veloxis Global to learn about our digital agency agreements.",
-    "publisher": {
-      "@id": "https://www.veloxisglobal.com/#organization"
-    }
-  };
-
   return (
     <>
-      <SchemaMarkup schema={breadcrumbSchema} />
-      <SchemaMarkup schema={webPageSchema} />
-
       <section className="bg-slate-50 py-8 border-b border-slate-100">
         <div className="max-w-container-max mx-auto px-gutter text-left">
           <Breadcrumb items={breadcrumbItems} />
@@ -87,7 +48,7 @@ export default function TermsPage() {
             <p>These terms and conditions are governed by regional Indian laws:</p>
             <ul className="list-disc pl-5 flex flex-col gap-2">
               <li>Governing body is the Government of India.</li>
-              <li>Any claims are subject strictly to {siteData.address} jurisdiction.</li>
+              <li>Any claims are subject strictly to {siteData.jurisdiction} jurisdiction.</li>
             </ul>
           </div>
         </div>
@@ -95,6 +56,7 @@ export default function TermsPage() {
 
       {/* Terms of Service FAQ Accordion */}
       <FaqAccordion
+        withSchema={false}
         title="Terms & Contracts FAQ"
         badgeText="TERMS FAQ"
         customFaqs={[
@@ -104,7 +66,7 @@ export default function TermsPage() {
           },
           {
             question: "What jurisdiction governs these service terms?",
-            answer: `All agreements and terms of service are governed by the laws of India, subject to courts in ${siteData.address}.`
+            answer: `All agreements and terms of service are governed by the laws of India, subject to courts in ${siteData.jurisdiction}.`
           }
         ]}
       />

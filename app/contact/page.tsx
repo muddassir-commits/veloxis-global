@@ -1,156 +1,123 @@
 import React from 'react';
 import { Metadata } from 'next';
+import Image from 'next/image';
 import { constructMetadata, pageMeta } from '../../lib/seo-config';
 import { Badge } from '../../components/ui/Badge';
 import { Card } from '../../components/ui/Card';
 import { Button } from '../../components/ui/Button';
 import { Breadcrumb } from '../../components/ui/Breadcrumb';
 import { SchemaMarkup } from '../../components/ui/SchemaMarkup';
-import { getBreadcrumbListSchema, getContactPageSchema, getOrganizationSchema } from '../../lib/schema';
+import { getWebPageSchema } from '../../lib/schema';
 import { ContactForm } from '../../components/forms/ContactForm';
 import { siteData } from '@/data/site';
-import { Phone, Mail, MessageCircle, Clock, Calendar } from 'lucide-react';
+import { Phone, Mail, MessageCircle, Clock, Calendar, MapPin } from 'lucide-react';
 
-export const metadata: Metadata = constructMetadata({
-  title: pageMeta.contact.title,
-  description: pageMeta.contact.description,
-  path: pageMeta.contact.path
-});
+export const metadata: Metadata = constructMetadata(pageMeta.contact);
 
 export default function ContactPage() {
-  const breadcrumbItems = [{ name: 'Contact Us', href: '/contact' }];
-  const breadcrumbSchema = getBreadcrumbListSchema([
-    { name: 'Home', item: 'https://www.veloxisglobal.com' },
-    { name: 'Contact', item: 'https://www.veloxisglobal.com/contact' }
-  ]);
-  const contactPageSchema = getContactPageSchema();
-  const organizationSchema = getOrganizationSchema();
-
   return (
     <>
-      <SchemaMarkup schema={breadcrumbSchema} />
-      <SchemaMarkup schema={contactPageSchema} />
-      <SchemaMarkup schema={organizationSchema} />
+      <SchemaMarkup
+        schema={getWebPageSchema({
+          type: 'ContactPage',
+          name: 'Contact Veloxis Global',
+          description: pageMeta.contact.description,
+          path: '/contact',
+        })}
+      />
 
       <section className="bg-slate-50 py-8 border-b border-slate-100">
         <div className="max-w-container-max mx-auto px-gutter">
-          <Breadcrumb items={breadcrumbItems} />
+          <Breadcrumb items={[{ name: 'Contact', href: '/contact' }]} />
         </div>
       </section>
 
       <section className="bg-slate-50 py-16">
         <div className="max-w-container-max mx-auto px-gutter grid grid-cols-1 lg:grid-cols-12 gap-12 text-left">
-          {/* Left Column - Contact Form */}
           <div className="lg:col-span-7 flex flex-col items-start gap-6 order-last lg:order-first">
-            <Badge variant="teal">GET IN TOUCH</Badge>
-            
+            <Badge variant="teal">FREE MARKETING AUDIT</Badge>
             <h1 className="text-4xl sm:text-headline-lg font-extrabold text-slate-900 tracking-tight leading-tight">
-              Let's talk — you'll reach me directly.
+              Contact Veloxis Global
             </h1>
-            
             <p className="text-base sm:text-body-md text-on-surface-variant leading-relaxed">
-              Complete the form below and a performance marketing specialist from our local team will call you within 24 hours to schedule a discovery call.
+              Tell us about your project or current campaigns. We’ll review your landing page, ads and lead follow-up and
+              come back with what we would change first — free, with no obligation.
             </p>
 
             <div className="flex items-center gap-4 bg-white p-4 rounded-xl border border-slate-100 shadow-sm w-full">
               <div className="relative w-12 h-12 rounded-full border border-slate-200 overflow-hidden shrink-0">
-                <img src="/images/profiles/muddassir.jpg" alt="Muddassir Ali" className="object-cover w-full h-full" />
+                <Image src="/images/profiles/muddassir.jpg" alt="Muddassir Ali" fill sizes="48px" className="object-cover" />
               </div>
               <p className="text-sm sm:text-base text-on-surface-variant leading-relaxed">
-                I personally reply within a few hours. No sales pressure. Just an honest conversation about growing your business.
+                Messages come straight to me, Muddassir. I reply personally — no call-centre follow-up, no sales pressure.
               </p>
             </div>
 
             <ContactForm />
           </div>
 
-          {/* Right Column - Direct Contacts */}
           <div className="lg:col-span-5 flex flex-col gap-6">
             <Card hoverable={false} className="bg-white border border-slate-100 p-8 flex flex-col gap-6">
               <h2 className="text-xl sm:text-headline-md font-bold text-slate-900 border-b border-slate-50 pb-4">
-                Direct Contact Channels
+                Other ways to reach us
               </h2>
 
               <div className="flex flex-col gap-5">
-                {/* Phone */}
-                <a 
-                  href={`tel:${siteData.phoneRaw}`}
-                  className="flex items-start gap-4 p-4 sm:p-6 rounded-2xl bg-white border border-slate-100 hover:border-royal-blue/30 hover:shadow-lg transition-all duration-300 group"
-                >
-                  <div className="w-10 h-10 rounded-lg bg-royal-blue/10 text-royal-blue flex items-center justify-center shrink-0">
+                <a href={`tel:${siteData.phoneRaw}`} className="flex items-start gap-4 p-4 sm:p-6 rounded-2xl bg-white border border-slate-100 hover:border-royal-blue/30 hover:shadow-lg transition-all duration-300 group">
+                  <div className="w-10 h-10 rounded-lg bg-royal-blue/10 text-royal-blue flex items-center justify-center shrink-0" aria-hidden="true">
                     <Phone className="w-5 h-5" />
                   </div>
                   <div>
-                    <span className="text-xs font-bold text-slate-400 uppercase tracking-wider block">Call Directly</span>
-                    <span className="font-extrabold text-slate-900 text-base sm:text-lg block mt-0.5 group-hover:text-royal-blue transition-colors">
-                      {siteData.phone}
-                    </span>
+                    <span className="text-xs font-bold text-slate-400 uppercase tracking-wider block">Call</span>
+                    <span className="font-extrabold text-slate-900 text-base sm:text-lg block mt-0.5 group-hover:text-royal-blue transition-colors">{siteData.phone}</span>
                   </div>
                 </a>
 
-                {/* Email */}
-                <a 
-                  href={`mailto:${siteData.email}`}
-                  className="flex items-start gap-4 p-4 sm:p-6 rounded-2xl bg-white border border-slate-100 hover:border-royal-blue/30 hover:shadow-lg transition-all duration-300 group"
-                >
-                  <div className="w-10 h-10 rounded-lg bg-royal-blue/10 text-royal-blue flex items-center justify-center shrink-0">
+                <a href={`mailto:${siteData.email}`} className="flex items-start gap-4 p-4 sm:p-6 rounded-2xl bg-white border border-slate-100 hover:border-royal-blue/30 hover:shadow-lg transition-all duration-300 group">
+                  <div className="w-10 h-10 rounded-lg bg-royal-blue/10 text-royal-blue flex items-center justify-center shrink-0" aria-hidden="true">
                     <Mail className="w-5 h-5" />
                   </div>
                   <div>
-                    <span className="text-xs font-bold text-slate-400 uppercase tracking-wider block">Email Us</span>
-                    <span className="font-extrabold text-slate-900 text-base sm:text-lg block mt-0.5 group-hover:text-royal-blue transition-colors">
-                      {siteData.email}
-                    </span>
+                    <span className="text-xs font-bold text-slate-400 uppercase tracking-wider block">Email</span>
+                    <span className="font-extrabold text-slate-900 text-base sm:text-lg block mt-0.5 group-hover:text-royal-blue transition-colors break-all">{siteData.email}</span>
                   </div>
                 </a>
 
-                {/* WhatsApp */}
-                <a
-                  href="https://wa.me/918887620727?text=Hi%20Veloxis%20Global%2C%20I%27d%20like%20a%20free%20marketing%20audit"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-start gap-4 p-3 hover:bg-slate-50 rounded-lg transition-colors group"
-                >
-                  <div className="w-10 h-10 rounded-lg bg-teal-accent/10 text-teal-accent flex items-center justify-center shrink-0">
+                <a href={siteData.whatsappLink} target="_blank" rel="noopener noreferrer" className="flex items-start gap-4 p-4 sm:p-6 rounded-2xl bg-white border border-slate-100 hover:border-teal-accent/40 hover:shadow-lg transition-all duration-300 group">
+                  <div className="w-10 h-10 rounded-lg bg-teal-accent/10 text-teal-accent flex items-center justify-center shrink-0" aria-hidden="true">
                     <MessageCircle className="w-5 h-5 fill-teal-accent" />
                   </div>
                   <div>
-                    <span className="text-xs font-bold text-slate-400 uppercase tracking-wider block">Chat on WhatsApp</span>
-                    <span className="font-extrabold text-slate-900 text-base sm:text-lg block mt-0.5 group-hover:text-teal-accent transition-colors">
-                      Message Us Now
-                    </span>
+                    <span className="text-xs font-bold text-slate-400 uppercase tracking-wider block">WhatsApp</span>
+                    <span className="font-extrabold text-slate-900 text-base sm:text-lg block mt-0.5 group-hover:text-teal-accent transition-colors">Message us on WhatsApp</span>
                   </div>
                 </a>
               </div>
 
               <hr className="border-slate-100" />
 
-              {/* Hours / Address */}
               <div className="flex flex-col gap-4 text-sm text-on-surface-variant font-medium">
                 <div className="flex items-center gap-2">
-                  <Clock className="w-4 h-4 text-slate-400 shrink-0" />
+                  <Clock className="w-4 h-4 text-slate-400 shrink-0" aria-hidden="true" />
                   <span>Mon–Sat, 9:00 AM – 7:00 PM IST</span>
                 </div>
                 <div className="flex items-start gap-2">
-                  <span className="text-slate-400 font-bold">📍</span>
-                  <span>
-                    12 Faithful Ganj, Cantt, Kanpur, UP — Serving Delhi · Noida · Lucknow · Kanpur
-                  </span>
+                  <MapPin className="w-4 h-4 text-slate-400 shrink-0 mt-0.5" aria-hidden="true" />
+                  <span>{siteData.address}. We work remotely.</span>
                 </div>
               </div>
             </Card>
 
-            {/* Calendly Booking Card */}
             <Card hoverable={false} className="bg-primary-container text-white border-slate-800 p-8 text-center flex flex-col items-center gap-4">
-              <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center">
+              <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center" aria-hidden="true">
                 <Calendar className="w-6 h-6 text-royal-blue" />
               </div>
-              <h3 className="font-bold text-lg">Prefer a Scheduled Video Call?</h3>
-              <p className="text-xs sm:text-sm text-slate-300 leading-relaxed max-w-xs">
-                 Pick a 30-minute slot on our calendar to discuss your digital audit results directly with our strategy director.
+              <h2 className="font-bold text-lg">Prefer a video call?</h2>
+              <p className="text-sm text-slate-300 leading-relaxed max-w-xs">
+                Pick a 30-minute slot to walk through your project and current lead flow with Muddassir.
               </p>
-              <Button id="contact-calendly-btn" href="https://calendly.com/veloxisglobal/30min" target="_blank" variant="white" className="w-full mt-2">
-                Book a Strategy Call →
+              <Button id="contact-calendly-btn" href={siteData.booking} target="_blank" variant="white" className="w-full mt-2">
+                Book a call →
               </Button>
             </Card>
           </div>

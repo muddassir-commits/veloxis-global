@@ -15,22 +15,22 @@ export const servicesGroups: NavbarGroup[] = [
     title: "Real Estate Growth", 
     items: [
       {
-        title: "Landing Pages",
+        title: "Landing Pages & Microsites",
         href: "/services/high-converting-landing-pages",
         emoji: "⚡",
-        description: "High-converting single & multi-property pages"
+        description: "Project pages with RERA details and WhatsApp capture"
       },
       {
         title: "Meta & Google Ads",
         href: "/services/paid-ads",
         emoji: "🎯",
-        description: "Laser-targeted local real estate leads"
+        description: "Exclusive property leads, measured on site visits"
       },
       {
-        title: "AI & WhatsApp Automation",
+        title: "WhatsApp Chatbot & Automation",
         href: "/services/ai-automation",
         emoji: "🤖",
-        description: "Instant lead routing and auto-followups"
+        description: "Instant replies, qualification and visit booking"
       }
     ] 
   }

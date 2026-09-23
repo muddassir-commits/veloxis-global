@@ -2,67 +2,28 @@ import React from 'react';
 import { Metadata } from 'next';
 import { SchemaMarkup } from '../../components/ui/SchemaMarkup';
 import { Breadcrumb } from '../../components/ui/Breadcrumb';
-import { generateBreadcrumbSchema } from '../../lib/schema';
+import { getWebPageSchema } from '../../lib/schema';
 import BlogContent from './BlogContent';
 import { constructMetadata, pageMeta } from '../../lib/seo-config';
-import { blogPosts } from '../../data/blog-posts';
 
-// 1. Dynamic Metadata with canonical alternates
-export function generateMetadata(): Metadata {
-  return constructMetadata({
-    title: pageMeta.blog.title,
-    description: pageMeta.blog.description,
-    path: pageMeta.blog.path
-  });
-}
+export const metadata: Metadata = constructMetadata(pageMeta.blog);
 
 export default function BlogPage() {
-  const breadcrumbItems = [{ name: 'Blog', href: '/blog' }];
-
-  // 2. Generate schemas
-  const breadcrumbSchema = generateBreadcrumbSchema([
-    { name: 'Home', url: 'https://www.veloxisglobal.com' },
-    { name: 'Blog', url: 'https://www.veloxisglobal.com/blog' }
-  ]);
-
-  const featuredPost = blogPosts[0];
-  const featuredArticleSchema = {
-    "@context": "https://schema.org",
-    "@type": "BlogPosting",
-    "headline": featuredPost.title,
-    "datePublished": featuredPost.isoDate,
-    "dateModified": featuredPost.isoDate,
-    "image": `https://www.veloxisglobal.com${featuredPost.image}`,
-    "author": {
-      "@type": "Person",
-      "name": "Muddassir Ali",
-      "url": "https://www.linkedin.com/in/muddassir-alii/",
-      "sameAs": [
-        "https://www.linkedin.com/in/muddassir-alii/",
-        "https://muddassirali.com"
-      ]
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "Veloxis Global",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://www.veloxisglobal.com/images/logos/logo.webp"
-      }
-    }
-  };
-
   return (
     <>
-      <SchemaMarkup schema={breadcrumbSchema} />
-      <SchemaMarkup schema={featuredArticleSchema} />
-
+      <SchemaMarkup
+        schema={getWebPageSchema({
+          type: 'CollectionPage',
+          name: 'Veloxis Global real estate marketing blog',
+          description: pageMeta.blog.description,
+          path: '/blog',
+        })}
+      />
       <section className="bg-slate-50 py-8 border-b border-slate-100">
         <div className="max-w-container-max mx-auto px-gutter">
-          <Breadcrumb items={breadcrumbItems} />
+          <Breadcrumb items={[{ name: 'Blog', href: '/blog' }]} />
         </div>
       </section>
-
       <BlogContent />
     </>
   );

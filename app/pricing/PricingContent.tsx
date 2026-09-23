@@ -1,81 +1,11 @@
-'use client';
-
-import React, { useState } from 'react';
+import React from 'react';
 import { Button } from '../../components/ui/Button';
-import { Check, ChevronDown, ChevronUp } from 'lucide-react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { Check } from 'lucide-react';
+import { FaqAccordion } from '../../components/sections/FaqAccordion';
+import { plans, pricingFaqs } from '../../data/pricing';
+import { servicesData } from '../../data/services-data';
 
 export default function PricingContent() {
-  const [expandedFaq, setExpandedFaq] = useState<number | null>(null);
-
-  const toggleFaq = (index: number) => {
-    setExpandedFaq(expandedFaq === index ? null : index);
-  };
-
-  const plans = [
-    {
-      title: 'Starter',
-      desc: 'Perfect for single property launches or individual brokers',
-      features: [
-        'High-converting single property landing page',
-        'Google Ads setup & management',
-        'WhatsApp lead routing',
-        'Lead capture CRM integration',
-        'Email & WhatsApp support'
-      ]
-    },
-    {
-      title: 'Growth',
-      desc: 'For established developers ready to scale aggressively',
-      features: [
-        'Multiple property landing pages',
-        'PPC Ad campaigns (Google + Meta)',
-        'Automated WhatsApp follow-up sequences',
-        'Competitor analysis & tracking benchmarks',
-        'Bi-weekly review meetings'
-      ],
-      popular: true
-    },
-    {
-      title: 'Enterprise',
-      desc: 'Custom automation and high-spend campaigns for multi-location developers',
-      features: [
-        'National scale Meta/Google Ads',
-        'Custom high-performance UI/UX development',
-        'Full CRM lead pipeline mapping with custom AI',
-        'Dedicated senior marketing director assignment',
-        'Live Looker Studio performance dashboard integration'
-      ]
-    }
-  ];
-
-  const faqs = [
-    {
-      q: "Do you lock clients into long-term contracts?",
-      a: "No. We work month-to-month. Our results earn your retention. We want to be a partner you choose to stay with, not one you are forced to."
-    },
-    {
-      q: "What's the minimum budget to work with you?",
-      a: "Depends entirely on your goals, competitors, and target locations. Let's start with a free audit and find out the exact baseline required for your project."
-    },
-    {
-      q: "How do you determine the final price for a campaign?",
-      a: "We analyze competitor density, technical code size, and target keywords during the free audit phase, then calculate the precise execution hours required monthly."
-    },
-    {
-      q: "Are ad budgets included in your monthly fees?",
-      a: "No. Ad budgets (for Google and Meta Ads) are paid directly to the respective ad platform by the client. We only charge a flat monthly fee for strategy, design, optimization, and analytics tracking."
-    },
-    {
-      q: "How long does it take to see tangible results?",
-      a: "Paid campaigns (Google Ads, Meta Ads) start generating leads in the first week. Landing page builds take 3-7 days. WhatsApp automation goes live as soon as your ad campaigns do."
-    },
-    {
-      q: "Can I upgrade, downgrade, or cancel at any time?",
-      a: "Yes. Since we work on rolling monthly terms, you can change your package or pause services with a simple 30-day notice, allowing us to package assets and pause automation workflows."
-    }
-  ];
-
   return (
     <div className="bg-white font-sans text-left">
       {/* Header Section */}
@@ -86,17 +16,17 @@ export default function PricingContent() {
         <div className="max-w-container-max mx-auto px-gutter relative z-10">
           <div className="max-w-[800px] flex flex-col items-start gap-6">
             <span className="inline-flex items-center gap-2 bg-royal-blue/20 border border-royal-blue/30 px-3 py-1 rounded-full text-xs font-bold text-royal-blue uppercase tracking-wider">
-              PRICING FRAMEWORK
+              PRICING
             </span>
             <h1 className="text-4xl sm:text-5xl lg:text-[56px] font-extrabold tracking-tight leading-[1.1] text-white">
-              Pricing Built Around Your Goals, Not a Generic Package
+              Real estate marketing pricing and packages
             </h1>
             <p className="text-lg sm:text-xl text-slate-300 leading-relaxed max-w-2xl">
-              Every business is different. Our pricing reflects that. Start with a free audit — we'll recommend exactly what you need and what it'll cost. No surprises, no lock-ins.
+              Monthly fees for landing pages, Meta and Google ads, and WhatsApp automation. Ad spend is paid directly to Google and Meta, and there is no lock-in. Start with a free audit and we’ll recommend the right scope.
             </p>
             <div className="mt-2">
               <Button id="pricing-hero-audit-btn" href="/contact" variant="primary" size="lg">
-                Get Your Free Growth Plan →
+                Get a free audit →
               </Button>
             </div>
           </div>
@@ -108,27 +38,37 @@ export default function PricingContent() {
         <div className="max-w-container-max mx-auto px-gutter">
           <div className="text-center max-w-2xl mx-auto mb-16">
             <span className="text-xs font-bold text-royal-blue uppercase tracking-widest block mb-3">
-              SERVICE TIERS
+              STARTING PRICES
             </span>
             <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
-              Bespoke Execution Frameworks
+              What each service starts from
             </h2>
-            <p className="text-slate-500 mt-3 text-sm">
-              We align the project scale and resources directly with your brand size and market complexity.
+            <ul className="mt-6 flex flex-col sm:flex-row sm:justify-center gap-3 text-sm">
+              {servicesData.map((s) => (
+                <li key={s.slug}>
+                  <a href={`/services/${s.slug}`} className="inline-block bg-white border border-slate-200 rounded-full px-4 py-2 hover:border-royal-blue">
+                    <span className="font-bold text-slate-900">{s.title}</span>{' '}
+                    <span className="text-slate-500">· {s.pricingRange.replace('Starts from ', 'from ')}</span>
+                  </a>
+                </li>
+              ))}
+            </ul>
+            <p className="text-slate-500 mt-6 text-sm">
+              Most clients combine services in one of the packages below. Final fees are fixed after a free audit.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
             {plans.map((plan, i) => (
-              <div 
-                key={i} 
+              <div
+                key={i}
                 className={`bg-white border rounded-2xl p-8 flex flex-col justify-between shadow-sm relative ${
                   plan.popular ? 'border-royal-blue ring-1 ring-royal-blue/20' : 'border-slate-100'
                 }`}
               >
                 {plan.popular && (
                   <span className="absolute top-0 right-1/2 translate-x-1/2 -translate-y-1/2 bg-royal-blue text-white text-[10px] font-extrabold px-3 py-1 rounded-full uppercase tracking-wider">
-                    RECOMMENDED VALUE
+                    MOST COMMON
                   </span>
                 )}
 
@@ -137,7 +77,7 @@ export default function PricingContent() {
                   <p className="text-xs sm:text-sm text-slate-500 leading-relaxed mb-6">
                     {plan.desc}
                   </p>
-                  
+
                   <div className="w-full border-t border-slate-100 my-4"></div>
 
                   <ul className="flex flex-col gap-3">
@@ -151,10 +91,10 @@ export default function PricingContent() {
                 </div>
 
                 <div className="mt-8 pt-4 border-t border-slate-100">
-                  <Button 
+                  <Button
                     id={`pricing-plan-btn-${plan.title.toLowerCase()}`}
-                    href="/contact" 
-                    variant={plan.popular ? 'primary' : 'outline'} 
+                    href="/contact"
+                    variant={plan.popular ? 'primary' : 'outline'}
                     className="w-full text-center"
                   >
                     Get Recommendation
@@ -166,59 +106,12 @@ export default function PricingContent() {
         </div>
       </section>
 
-      {/* Pricing FAQs */}
-      <section className="py-20 bg-white">
-        <div className="max-w-container-max mx-auto px-gutter">
-          <div className="text-center max-w-2xl mx-auto mb-16">
-            <span className="text-xs font-bold text-royal-blue uppercase tracking-widest block mb-3">
-              FAQ
-            </span>
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
-              Pricing FAQs & Delivery Policies
-            </h2>
-            <p className="text-slate-500 mt-3 text-sm">
-              Answers regarding contracts, ad spend payments, campaign durations, and cancellation terms.
-            </p>
-          </div>
-
-          <div className="max-w-3xl mx-auto flex flex-col gap-3">
-            {faqs.map((faq, idx) => (
-              <div 
-                key={idx} 
-                className="bg-slate-50 border border-slate-100 rounded-xl overflow-hidden"
-              >
-                <button
-                  id={`pricing-faq-btn-${idx}`}
-                  onClick={() => toggleFaq(idx)}
-                  className="w-full px-6 py-4 flex items-center justify-between text-left font-bold text-slate-900 hover:text-royal-blue transition-colors text-sm sm:text-base gap-4"
-                >
-                  <span>{faq.q}</span>
-                  {expandedFaq === idx ? (
-                    <ChevronUp className="w-5 h-5 text-slate-400 shrink-0" />
-                  ) : (
-                    <ChevronDown className="w-5 h-5 text-slate-400 shrink-0" />
-                  )}
-                </button>
-                <AnimatePresence initial={false}>
-                  {expandedFaq === idx && (
-                    <motion.div
-                      initial={{ height: 0 }}
-                      animate={{ height: "auto" }}
-                      exit={{ height: 0 }}
-                      transition={{ duration: 0.2 }}
-                      className="overflow-hidden"
-                    >
-                      <div className="px-6 pb-5 pt-1 border-t border-slate-200/40 text-xs sm:text-sm text-slate-500 leading-relaxed">
-                        {faq.a}
-                      </div>
-                    </motion.div>
-                  )}
-                </AnimatePresence>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <FaqAccordion
+        customFaqs={pricingFaqs}
+        title="Pricing questions"
+        badgeText="FAQ"
+        description="Contracts, ad spend, timelines and cancellation."
+      />
     </div>
   );
 }

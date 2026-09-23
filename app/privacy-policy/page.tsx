@@ -2,56 +2,17 @@ import React from 'react';
 import { Metadata } from 'next';
 import { Breadcrumb } from '../../components/ui/Breadcrumb';
 import { Badge } from '../../components/ui/Badge';
-import { SchemaMarkup } from '../../components/ui/SchemaMarkup';
 import { FaqAccordion } from '../../components/sections/FaqAccordion';
-import { constructMetadata } from '../../lib/seo-config';
+import { constructMetadata, pageMeta } from '../../lib/seo-config';
 import { siteData } from '../../data/site';
 
-export const metadata: Metadata = constructMetadata({
-  title: "Privacy Policy | Veloxis Global Real Estate Marketing",
-  description: "Read the Privacy Policy for Veloxis Global. Learn how we collect, protect, and securely use your personal data. Contact us today for any data requests.",
-  path: "/privacy-policy"
-});
+export const metadata: Metadata = constructMetadata(pageMeta.privacy);
 
 export default function PrivacyPolicyPage() {
   const breadcrumbItems = [{ name: 'Privacy Policy', href: '/privacy-policy' }];
 
-  const breadcrumbSchema = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Home",
-        "item": "https://www.veloxisglobal.com"
-      },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "name": "Privacy Policy",
-        "item": "https://www.veloxisglobal.com/privacy-policy"
-      }
-    ]
-  };
-
-  const webPageSchema = {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "@id": "https://www.veloxisglobal.com/privacy-policy#webpage",
-    "url": "https://www.veloxisglobal.com/privacy-policy",
-    "name": "Privacy Policy | Veloxis Global",
-    "description": "Read the Privacy Policy for Veloxis Global to learn how we protect and process your data.",
-    "publisher": {
-      "@id": "https://www.veloxisglobal.com/#organization"
-    }
-  };
-
   return (
     <>
-      <SchemaMarkup schema={breadcrumbSchema} />
-      <SchemaMarkup schema={webPageSchema} />
-
       <section className="bg-slate-50 py-8 border-b border-slate-100">
         <div className="max-w-container-max mx-auto px-gutter text-left">
           <Breadcrumb items={breadcrumbItems} />
@@ -99,6 +60,7 @@ export default function PrivacyPolicyPage() {
 
       {/* Privacy Policy FAQ Accordion */}
       <FaqAccordion
+        withSchema={false}
         title="Privacy & Data FAQ"
         badgeText="PRIVACY POLICY FAQ"
         customFaqs={[

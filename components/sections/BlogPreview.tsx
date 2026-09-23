@@ -20,7 +20,7 @@ export const BlogPreview: React.FC = () => {
               INSIGHTS
             </Badge>
             <h2 className="text-3xl sm:text-headline-lg font-bold text-slate-900 tracking-tight leading-tight">
-              Real Estate Marketing Insights for NCR Developers
+              Guides for builders, brokers and channel partners
             </h2>
           </div>
           <Link
@@ -42,7 +42,7 @@ export const BlogPreview: React.FC = () => {
                   <Link href={`/blog/${post.slug}`} className="block w-full h-full">
                     <Image
                       src={post.image}
-                      alt={post.title}
+                      alt={post.imageAlt}
                       fill
                       sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                       className="object-cover transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-105"

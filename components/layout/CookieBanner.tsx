@@ -55,7 +55,7 @@ export const CookieBanner: React.FC = () => {
             onClick={handleManagePreferences}
             variant="ghost"
             size="sm"
-            className="text-white hover:bg-white/10 font-bold px-4 py-2"
+            className="text-white hover:bg-white/10 font-bold px-4 py-2 min-h-[44px]"
           >
             Manage Preferences
           </Button>
@@ -63,7 +63,7 @@ export const CookieBanner: React.FC = () => {
             onClick={handleAcceptAll}
             variant="primary"
             size="sm"
-            className="bg-royal-blue hover:bg-[#1D4ED8] hover:shadow-[0_0_0_4px_rgba(37,99,235,0.2)] text-white font-bold px-6 py-2 w-full md:w-auto"
+            className="bg-royal-blue hover:bg-[#1D4ED8] hover:shadow-[0_0_0_4px_rgba(37,99,235,0.2)] text-white font-bold px-6 py-2 min-h-[44px] w-full md:w-auto"
           >
             Accept All
           </Button>

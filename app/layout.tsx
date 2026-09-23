@@ -7,21 +7,18 @@ import { WhatsAppWidget } from '../components/layout/WhatsAppWidget';
 import { CookieBanner } from '../components/layout/CookieBanner';
 import { StickyMobileBar } from '../components/ui/StickyMobileBar';
 import AnalyticsTracker from '../components/analytics/AnalyticsTracker';
-import { constructMetadata } from '../lib/seo-config';
+import { constructMetadata, pageMeta } from '../lib/seo-config';
 import { SchemaMarkup } from '../components/ui/SchemaMarkup';
-import { getOrganizationSchema, getWebSiteSchema } from '../lib/schema';
+import { getSiteGraph } from '../lib/schema';
 import './globals.css';
 
 export const metadata: Metadata = {
-  ...constructMetadata({
-    title: 'Best Real Estate Marketing Agency in Delhi NCR | Veloxis Global',
-    description: 'Veloxis Global — Delhi NCR\'s trusted real estate marketing agency delivering high-converting landing pages, Google Ads, Meta Ads & WhatsApp automation for property developers.',
-    path: '/'
-  }),
+  ...constructMetadata(pageMeta.home),
   title: {
-    default: 'Best Real Estate Marketing Agency in Delhi NCR | Veloxis Global',
+    default: pageMeta.home.title,
     template: '%s | Veloxis Global',
   },
+  applicationName: 'Veloxis Global',
   icons: {
     icon: [
       { url: '/favicon.ico' },
@@ -42,8 +39,7 @@ export default function RootLayout({
       <head>
         <meta name="google-site-verification" content={process.env.NEXT_PUBLIC_GSC_TOKEN || "CVRVYJuDB29ung6LskjcSWvfZwi1q4L4b21cJxpbcX8"} />
         <link rel="preload" href="/fonts/PlusJakartaSans.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
-        <SchemaMarkup schema={getOrganizationSchema()} />
-        <SchemaMarkup schema={getWebSiteSchema()} />
+        <SchemaMarkup schema={getSiteGraph()} />
       </head>
       <body className="font-sans bg-slate-50 text-on-surface antialiased">
         <Navbar />
