@@ -1,0 +1,57 @@
+{
+  "title": "How to Automate Real Estate Lead Follow-Up on WhatsApp",
+  "seoTitle": "WhatsApp Automation for Real Estate Leads: How to Set Up",
+  "excerpt": "Why property leads go cold, and how to set up WhatsApp automation that replies instantly, qualifies buyers, books site visits and routes every lead.",
+  "date": "2026-08-20",
+  "category": "AI Automation",
+  "service": "ai-automation",
+  "image": "/images/people/blog/whatsapp-man-messaging-phone.jpg",
+  "imageAlt": "A young man reading a message on his smartphone at home",
+  "inlineImages": [
+    {
+      "src": "/images/people/blog/whatsapp-office-sales-call.jpg",
+      "alt": "A man on a desk phone talking while a colleague listens in an office",
+      "beforeHeading": "routing"
+    }
+  ],
+  "about": [
+    {
+      "name": "Marketing automation",
+      "sameAs": "https://en.wikipedia.org/wiki/Marketing_automation"
+    },
+    {
+      "name": "WhatsApp",
+      "sameAs": "https://en.wikipedia.org/wiki/WhatsApp"
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Why do real estate leads go cold?",
+      "answer": "Late replies after office hours, a single call attempt, leads scattered across portals, forms and phones, and buyers ignoring calls from unknown numbers."
+    },
+    {
+      "question": "Can I automate WhatsApp with the free WhatsApp Business app?",
+      "answer": "No. Automation, chatbots and CRM connections need the WhatsApp Business API, set up through an official Business Solution Provider."
+    },
+    {
+      "question": "Do I need approved templates for WhatsApp messages?",
+      "answer": "Yes. WhatsApp requires approved templates for messages sent outside a 24-hour conversation window, such as the first message, reminders and follow-ups."
+    },
+    {
+      "question": "What should an automated real estate WhatsApp flow do?",
+      "answer": "Reply instantly with the brochure, ask budget and timeline, hand qualified buyers to a salesperson, book the site visit, send reminders, and follow up with leads who go quiet."
+    },
+    {
+      "question": "How should leads be routed to sales and channel partners?",
+      "answer": "By project, location or rotation, agreed before automating, with the time each lead arrived and was assigned recorded."
+    },
+    {
+      "question": "Can I message leads who didn’t ask to be contacted?",
+      "answer": "No. Only message people who shared their number with you, and let them opt out."
+    },
+    {
+      "question": "What should I measure after automating?",
+      "answer": "Time to first reply, share of leads answering the first question, site visits booked and completed, and leads with no human contact after 24 hours — which should be zero."
+    }
+  ]
+}

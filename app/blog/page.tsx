@@ -4,6 +4,7 @@ import { SchemaMarkup } from '../../components/ui/SchemaMarkup';
 import { Breadcrumb } from '../../components/ui/Breadcrumb';
 import { getWebPageSchema } from '../../lib/schema';
 import BlogContent from './BlogContent';
+import { getAllPosts, toCard } from '../../lib/blog';
 import { FaqAccordion } from '../../components/sections/FaqAccordion';
 import { blogIndexFaqs } from '../../data/page-faqs';
 import { constructMetadata, pageMeta } from '../../lib/seo-config';
@@ -26,7 +27,7 @@ export default function BlogPage() {
           <Breadcrumb items={[{ name: 'Blog', href: '/blog' }]} />
         </div>
       </section>
-      <BlogContent />
+      <BlogContent posts={getAllPosts().map(toCard)} />
       <FaqAccordion customFaqs={blogIndexFaqs} title="About the blog" badgeText="FAQ" description="Who writes these guides, what they cover and how they are kept up to date." />
     </>
   );

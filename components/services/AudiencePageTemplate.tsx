@@ -5,7 +5,7 @@ import { ArrowRight, AlertTriangle, Check } from 'lucide-react';
 import { AudienceData } from '../../data/audiences';
 import { getServiceBySlug } from '../../data/services-data';
 import { getPlaybookBySlug } from '../../data/playbooks';
-import { blogPosts } from '../../data/blog-posts';
+import { getPostBySlug as getBlogPost } from '../../lib/blog';
 import { Badge } from '../ui/Badge';
 import { Button } from '../ui/Button';
 import { Breadcrumb } from '../ui/Breadcrumb';
@@ -15,7 +15,7 @@ import { CtaBanner } from '../sections/CtaBanner';
 
 export const AudiencePageTemplate: React.FC<{ audience: AudienceData }> = ({ audience }) => {
   const playbooks = audience.relatedPlaybooks.map(getPlaybookBySlug).filter(Boolean);
-  const posts = audience.relatedPosts.map((s) => blogPosts.find((p) => p.slug === s)).filter(Boolean);
+  const posts = audience.relatedPosts.map((s) => getBlogPost(s)).filter(Boolean);
   const img = audience.images;
 
   return (

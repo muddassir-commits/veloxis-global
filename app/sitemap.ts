@@ -1,5 +1,5 @@
 import { MetadataRoute } from 'next';
-import { blogPosts } from '../data/blog-posts';
+import { getAllPosts } from '../lib/blog';
 import { servicesData } from '../data/services-data';
 import { playbooks } from '../data/playbooks';
 import { SITE_URL } from '../lib/seo-config';
@@ -33,7 +33,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: new Date(p.updated),
   }));
 
-  const posts = blogPosts.map((post) => ({
+  const posts = getAllPosts().map((post) => ({
     url: `${SITE_URL}/blog/${post.slug}`,
     lastModified: new Date(post.modifiedIso),
   }));

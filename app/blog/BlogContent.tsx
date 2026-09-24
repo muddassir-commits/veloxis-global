@@ -3,19 +3,16 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { Clock, ChevronLeft, ChevronRight, Search } from 'lucide-react';
+import { Calendar, ChevronLeft, ChevronRight, Search } from 'lucide-react';
 import { Badge } from '../../components/ui/Badge';
 import { Card } from '../../components/ui/Card';
 import { ImageFrame } from '../../components/ui/ImageFrame';
 
-import { Post, blogPosts } from '../../data/blog-posts';
+import type { PostCard } from '../../lib/blog';
 
-const allPostsData: (Post & { featured?: boolean })[] = blogPosts.map((post, idx) => ({
-  ...post,
-  featured: idx === 0
-}));
-
-export default function BlogContent() {
+// Posts arrive newest first from lib/blog; the newest is featured.
+export default function BlogContent({ posts }: { posts: PostCard[] }) {
+  const allPostsData = posts.map((post, idx) => ({ ...post, featured: idx === 0 }));
   const [selectedCategory, setSelectedCategory] = useState<string>('All');
   const [searchQuery, setSearchQuery] = useState<string>('');
   const [currentPage, setCurrentPage] = useState<number>(1);
@@ -157,8 +154,8 @@ export default function BlogContent() {
 
                 <div className="flex items-center gap-4 text-xs font-semibold text-slate-400">
                   <span className="flex items-center gap-1">
-                    <Clock className="w-3.5 h-3.5" />
-                    {featuredPost.readTime}
+                    <Calendar className="w-3.5 h-3.5" aria-hidden="true" />
+                    <time dateTime={featuredPost.isoDate}>{featuredPost.displayDate}</time>
                   </span>
                   <Link 
                     href={`/blog/${featuredPost.slug}`}
@@ -225,8 +222,8 @@ export default function BlogContent() {
                       </div>
                       <div className="flex items-center gap-3 text-slate-400 text-[11px] font-semibold">
                         <span className="flex items-center gap-1">
-                          <Clock className="w-3.5 h-3.5" />
-                          {post.readTime}
+                          <Calendar className="w-3.5 h-3.5" aria-hidden="true" />
+                          <time dateTime={post.isoDate}>{post.displayDate}</time>
                         </span>
                         <Link href={`/blog/${post.slug}`} className="text-royal-blue font-bold">
                           Read →

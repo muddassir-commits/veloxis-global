@@ -3,12 +3,12 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Card } from '../ui/Card';
 import { Badge } from '../ui/Badge';
-import { Clock, ArrowRight, User } from 'lucide-react';
-import { blogPosts } from '../../data/blog-posts';
+import { Calendar, ArrowRight, User } from 'lucide-react';
+import { getAllPosts } from '../../lib/blog';
 
 export const BlogPreview: React.FC = () => {
   // Pull the latest 3 blog posts dynamically from actual data
-  const posts = blogPosts.slice(0, 3);
+  const posts = getAllPosts().slice(0, 3);
 
   return (
     <section className="bg-slate-50 py-section-gap" id="blog-preview">
@@ -67,8 +67,8 @@ export const BlogPreview: React.FC = () => {
                       {post.author}
                     </span>
                     <span className="flex items-center gap-1">
-                      <Clock className="w-3.5 h-3.5" aria-hidden="true" />
-                      {post.readTime}
+                      <Calendar className="w-3.5 h-3.5" aria-hidden="true" />
+                      <time dateTime={post.isoDate}>{post.displayDate}</time>
                     </span>
                   </div>
 
@@ -81,7 +81,7 @@ export const BlogPreview: React.FC = () => {
                   </p>
 
                   <div className="flex items-center justify-between mt-auto pt-4 border-t border-slate-50 text-xs font-semibold text-slate-500">
-                    <span>{post.date}</span>
+                    <span>{post.category}</span>
                     <Link
                       href={`/blog/${post.slug}`}
                       className="inline-flex items-center gap-1 text-royal-blue hover:text-indigo-accent font-bold"

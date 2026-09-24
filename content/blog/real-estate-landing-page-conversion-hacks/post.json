@@ -1,0 +1,53 @@
+{
+  "title": "Real Estate Landing Page Best Practices: 9 Fixes for More Enquiries",
+  "seoTitle": "Real Estate Landing Page Best Practices: 9 Fixes",
+  "excerpt": "Nine practical fixes for real estate landing pages: what to show above the fold, how to handle price and RERA details, form design, speed and tracking.",
+  "date": "2026-08-27",
+  "category": "Landing Pages",
+  "service": "high-converting-landing-pages",
+  "image": "/images/people/blog/landing-page-couple-sofa.jpg",
+  "imageAlt": "A young couple laughing together on a sofa at home",
+  "inlineImages": [
+    {
+      "src": "/images/people/blog/landing-page-couple-working-laptop.jpg",
+      "alt": "A couple working through notes and a laptop at a table at home",
+      "beforeHeading": "above-fold"
+    }
+  ],
+  "about": [
+    {
+      "name": "Landing page",
+      "sameAs": "https://en.wikipedia.org/wiki/Landing_page"
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Why do real estate ads get clicks but few enquiries?",
+      "answer": "Usually the page: ads land on a corporate site or generic page, price and RERA details are hidden, the form is long, or the page is slow on a phone."
+    },
+    {
+      "question": "Should each project have its own landing page?",
+      "answer": "Yes. One page per project, tower or phase, with each ad sent to the page that matches it."
+    },
+    {
+      "question": "What should a buyer see first on the page?",
+      "answer": "Where the project is, the configurations, the starting price, whether it is RERA registered, and a button to get the price sheet on WhatsApp."
+    },
+    {
+      "question": "Should a landing page say “price on request”?",
+      "answer": "No. A starting price or band brings more serious enquiries; the full cost sheet can be sent after the buyer shares their number."
+    },
+    {
+      "question": "How short should the form be?",
+      "answer": "Name, mobile number, configuration and budget — plus a sticky WhatsApp button on mobile for buyers who prefer to chat."
+    },
+    {
+      "question": "How fast should a real estate landing page load?",
+      "answer": "Aim for Google’s “good” Core Web Vitals: main content visible within 2.5 seconds and no layout jumping. Test on a mid-range Android phone over 4G."
+    },
+    {
+      "question": "How do I know which ad produced a site visit?",
+      "answer": "Track form submits, WhatsApp clicks and calls as conversions, give each campaign and CP a tagged link, and feed site-visit outcomes from the CRM back to Google and Meta."
+    }
+  ]
+}
