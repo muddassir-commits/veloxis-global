@@ -6,7 +6,7 @@ import Link from 'next/link';
 import { Breadcrumb } from '../../components/ui/Breadcrumb';
 import { ImageFrame } from '../../components/ui/ImageFrame';
 import { SchemaMarkup } from '../../components/ui/SchemaMarkup';
-import { Target, Eye, Users, ExternalLink, Award, CheckCircle, MapPin } from 'lucide-react';
+import { Target, Eye, Users, ExternalLink, CheckCircle, MapPin } from 'lucide-react';
 import { Linkedin } from '../../components/ui/BrandIcons';
 import { constructMetadata, pageMeta, FOUNDER_YEARS } from '../../lib/seo-config';
 import { FaqAccordion } from '../../components/sections/FaqAccordion';
@@ -16,20 +16,6 @@ import { siteData } from '../../data/site';
 import { aboutFaqs } from '../../data/page-faqs';
 
 export const metadata: Metadata = constructMetadata(pageMeta.about);
-
-// Course pages on Google Skillshop. Replace with personal credential URLs when available.
-const certifications = [
-  {
-    title: 'Google Ads Search Certification',
-    issuer: 'Google Skillshop',
-    link: 'https://skillshop.exceedlms.com/student/path/18128-google-ads-search-certification',
-  },
-  {
-    title: 'Google Analytics Certification',
-    issuer: 'Google Skillshop',
-    link: 'https://skillshop.exceedlms.com/student/path/29485-google-analytics-individual-qualification',
-  },
-];
 
 const values = [
   { icon: <Target className="w-5 h-5 text-royal-blue" />, title: 'Site visits, not clicks', desc: 'Every campaign is reported on leads, site visits and cost per site visit — the numbers your sales team cares about.' },
@@ -194,32 +180,8 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Certifications */}
-      <section className="py-20 bg-slate-50 border-y border-slate-100 text-left">
-        <div className="max-w-container-max mx-auto px-gutter">
-          <div className="text-center max-w-2xl mx-auto mb-12">
-            <span className="text-xs font-bold text-royal-blue uppercase tracking-widest block mb-3">Credentials</span>
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">Certifications</h2>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto">
-            {certifications.map((c) => (
-              <div key={c.title} className="bg-white border border-slate-100 rounded-2xl p-6 shadow-sm flex flex-col gap-4">
-                <div className="w-10 h-10 rounded-lg bg-royal-blue/10 flex items-center justify-center text-royal-blue">
-                  <Award className="w-5 h-5" aria-hidden="true" />
-                </div>
-                <h3 className="font-extrabold text-slate-900 text-lg">{c.title}</h3>
-                <span className="text-xs font-bold text-slate-400 uppercase tracking-wider">{c.issuer}</span>
-                <Link href={c.link} target="_blank" rel="noopener noreferrer" className="text-xs font-bold text-royal-blue hover:underline mt-auto">
-                  Course details ↗
-                </Link>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Values */}
-      <section className="py-20 bg-white text-left">
+      <section className="py-20 bg-slate-50 border-y border-slate-100 text-left">
         <div className="max-w-container-max mx-auto px-gutter">
           <div className="text-center max-w-2xl mx-auto mb-12">
             <span className="text-xs font-bold text-royal-blue uppercase tracking-widest block mb-3">What you can expect</span>
@@ -252,7 +214,7 @@ export default function AboutPage() {
       </section>
 
       {/* Founder */}
-      <section className="py-20 bg-slate-50 border-t border-slate-100 text-left" id="founder">
+      <section className="py-20 bg-white text-left" id="founder">
         <div className="max-w-container-max mx-auto px-gutter grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           <div className="lg:col-span-5 flex flex-col items-center">
             <div className="w-full relative rounded-3xl overflow-hidden shadow-2xl border border-slate-100 max-w-[380px] mx-auto bg-slate-100 aspect-[3/4]">
@@ -272,7 +234,6 @@ export default function AboutPage() {
               He started Veloxis Global to fix that with one connected system for real estate — landing pages, ads and
               WhatsApp automation — and still plans and oversees every client account personally.
             </p>
-            <p>He holds Google certifications in Google Ads and Analytics, and is HubSpot certified.</p>
             <div className="flex flex-col sm:flex-row gap-4 mt-2 w-full sm:w-auto">
               <Link href="https://www.linkedin.com/in/muddassir-alii/" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 bg-royal-blue hover:bg-royal-blue/90 transition-colors px-6 py-3 rounded-xl text-xs font-bold text-white">
                 <span>Connect on LinkedIn ↗</span>

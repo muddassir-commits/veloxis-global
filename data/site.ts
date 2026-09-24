@@ -11,7 +11,7 @@ export const siteData = {
   address: "Serving Kanpur, Lucknow, Noida & Delhi NCR",
   areaServed: ["Kanpur", "Lucknow", "Noida", "Greater Noida", "Delhi NCR"],
   // Legal venue referenced in the Terms of Service.
-  jurisdiction: "Noida, Delhi NCR",
+  jurisdiction: "Kanpur, Uttar Pradesh",
   founder: "Muddassir Ali",
   booking: "https://calendly.com/veloxis-global/30min",
   whatsappLink: "https://wa.me/918887620727?text=Hi%20Veloxis%20Global%2C%20I%27d%20like%20a%20free%20marketing%20audit",
