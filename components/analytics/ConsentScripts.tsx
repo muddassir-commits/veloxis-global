@@ -63,6 +63,8 @@ export default function ConsentScripts() {
               t.src=v;s=b.getElementsByTagName(e)[0];
               s.parentNode.insertBefore(t,s)}(window, document,'script',
               'https://connect.facebook.net/en_US/fbevents.js');
+              // Turn off Meta's automatic button-click / metadata events; we send our own events.
+              fbq('set', 'autoConfig', false, '${PIXEL_ID}');
               fbq('init', '${PIXEL_ID}');
               fbq('track', 'PageView');
             `,
