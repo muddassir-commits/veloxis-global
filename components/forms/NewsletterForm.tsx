@@ -17,6 +17,8 @@ type NewsletterFormData = z.infer<typeof newsletterSchema>;
 export const NewsletterForm: React.FC = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState<boolean | null>(null);
+  // Server message for rate limits (429); other failures use the generic text.
+  const [limitMessage, setLimitMessage] = useState<string | null>(null);
 
   const {
     register,
@@ -34,6 +36,7 @@ export const NewsletterForm: React.FC = () => {
   const onSubmit = async (data: NewsletterFormData) => {
     setIsSubmitting(true);
     setSubmitSuccess(null);
+    setLimitMessage(null);
     try {
       const response = await fetch('/api/newsletter', {
         method: 'POST',
@@ -48,6 +51,10 @@ export const NewsletterForm: React.FC = () => {
         setSubmitSuccess(true);
         reset();
       } else {
+        if (response.status === 429) {
+          const body = await response.json().catch(() => null);
+          setLimitMessage(body?.error || "You've reached today's limit for this form. Please try again tomorrow.");
+        }
         setSubmitSuccess(false);
       }
     } catch (error) {
@@ -110,7 +117,7 @@ export const NewsletterForm: React.FC = () => {
             <span className="text-[14px] text-red-400 font-semibold">{errors.email.message}</span>
           )}
           {submitSuccess === false && (
-            <span className="text-[14px] text-red-400 font-semibold">❌ Submission failed. Please try again.</span>
+            <span className="text-[14px] text-red-400 font-semibold">❌ {limitMessage ?? 'Submission failed. Please try again.'}</span>
           )}
         </form>
       )}

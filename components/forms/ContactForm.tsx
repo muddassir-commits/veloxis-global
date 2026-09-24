@@ -23,6 +23,8 @@ type ContactFormData = z.infer<typeof contactSchema>;
 export const ContactForm: React.FC = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState<boolean | null>(null);
+  // Server message for rate limits (429); other failures use the generic text.
+  const [limitMessage, setLimitMessage] = useState<string | null>(null);
 
   const {
     register,
@@ -43,6 +45,7 @@ export const ContactForm: React.FC = () => {
   const onSubmit = async (data: ContactFormData) => {
     setIsSubmitting(true);
     setSubmitSuccess(null);
+    setLimitMessage(null);
     try {
       const response = await fetch('/api/contact', {
         method: 'POST',
@@ -57,6 +60,10 @@ export const ContactForm: React.FC = () => {
         setSubmitSuccess(true);
         reset();
       } else {
+        if (response.status === 429) {
+          const body = await response.json().catch(() => null);
+          setLimitMessage(body?.error || "You've reached today's limit for this form. Please try again tomorrow.");
+        }
         setSubmitSuccess(false);
       }
     } catch (error) {
@@ -149,7 +156,7 @@ export const ContactForm: React.FC = () => {
 
           {submitSuccess === false && (
             <div className="bg-red-50 text-red-600 text-sm font-semibold p-4 rounded-md border border-red-100">
-              ❌ Something went wrong. Please try again or email {siteData.email} directly.
+              ❌ {limitMessage ?? <>Something went wrong. Please try again or email {siteData.email} directly.</>}
             </div>
           )}
 

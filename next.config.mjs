@@ -7,31 +7,29 @@ const nextConfig = {
   images: {
     formats: ['image/avif', 'image/webp'],
     deviceSizes: [640, 750, 828, 1080, 1200, 1920],
-    minimumCacheTTL: 60,
-    domains: ['veloxisglobal.com', 'www.veloxisglobal.com', 'localhost'],
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: '**',
-      },
-    ],
+    // Next 16 only serves listed qualities; the site uses 75 (default), 80 and 85.
+    qualities: [75, 80, 85],
+    // All images are local files in /public. No remote hosts are allowed, so the
+    // image optimizer cannot be used to fetch or resize third-party images.
   },
   experimental: {
     optimizePackageImports: ['framer-motion', 'lucide-react'],
   },
 
-  // Cache long-lived immutable static assets produced by Next.js build hashing.
+  // Long cache for fonts and images (Next.js and Vercel already cache /_next/static).
   // Vercel sets these automatically but explicit config ensures consistency
   // across any deployment target.
   async headers() {
     return [
       {
-        source: '/_next/static/:path*',
+        // Security headers for every response (HSTS is added by Vercel).
+        source: '/:path*',
         headers: [
-          {
-            key: 'Cache-Control',
-            value: 'public, max-age=31536000, immutable',
-          },
+          { key: 'X-Content-Type-Options', value: 'nosniff' },
+          { key: 'X-Frame-Options', value: 'SAMEORIGIN' },
+          { key: 'Referrer-Policy', value: 'strict-origin-when-cross-origin' },
+          { key: 'Permissions-Policy', value: 'camera=(), microphone=(), geolocation=(), payment=(), usb=()' },
+          { key: 'Cross-Origin-Opener-Policy', value: 'same-origin-allow-popups' },
         ],
       },
       {

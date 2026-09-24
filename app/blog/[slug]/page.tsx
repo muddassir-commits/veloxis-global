@@ -13,7 +13,7 @@ import { blogPosts, getPostBySlug } from '../../../data/blog-posts';
 import { getServiceBySlug } from '../../../data/services-data';
 
 interface Params {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }
 
 const readTime = (html: string) => {
@@ -25,8 +25,9 @@ export function generateStaticParams() {
   return blogPosts.map((post) => ({ slug: post.slug }));
 }
 
-export function generateMetadata({ params }: Params): Metadata {
-  const post = getPostBySlug(params.slug);
+export async function generateMetadata({ params }: Params): Promise<Metadata> {
+  const { slug } = await params;
+  const post = getPostBySlug(slug);
   if (!post) return {};
   return constructMetadata({
     title: post.seoTitle,
@@ -39,8 +40,9 @@ export function generateMetadata({ params }: Params): Metadata {
   });
 }
 
-export default function SingleBlogPostPage({ params }: Params) {
-  const post = getPostBySlug(params.slug);
+export default async function SingleBlogPostPage({ params }: Params) {
+  const { slug } = await params;
+  const post = getPostBySlug(slug);
   if (!post) notFound();
 
   const path = `/blog/${post.slug}`;

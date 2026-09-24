@@ -15,15 +15,16 @@ import { ImageFrame } from '../../../components/ui/ImageFrame';
 import { Info, ArrowRight } from 'lucide-react';
 
 interface PageProps {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }
 
 export function generateStaticParams() {
   return playbooks.map((p) => ({ slug: p.slug }));
 }
 
-export function generateMetadata({ params }: PageProps): Metadata {
-  const pb = getPlaybookBySlug(params.slug);
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+  const { slug } = await params;
+  const pb = getPlaybookBySlug(slug);
   if (!pb) return {};
   return constructMetadata({
     title: pb.seoTitle,
@@ -34,8 +35,9 @@ export function generateMetadata({ params }: PageProps): Metadata {
   });
 }
 
-export default function PlaybookPage({ params }: PageProps) {
-  const pb = getPlaybookBySlug(params.slug);
+export default async function PlaybookPage({ params }: PageProps) {
+  const { slug } = await params;
+  const pb = getPlaybookBySlug(slug);
   if (!pb) notFound();
 
   const service = getServiceBySlug(pb.service);
