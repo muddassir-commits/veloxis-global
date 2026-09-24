@@ -13,7 +13,7 @@ import { ContactForm } from '../../components/forms/ContactForm';
 import { siteData } from '@/data/site';
 import { FaqAccordion } from '../../components/sections/FaqAccordion';
 import { contactFaqs } from '../../data/page-faqs';
-import { Phone, Mail, MessageCircle, Clock, Calendar, MapPin } from 'lucide-react';
+import { Phone, Mail, MessageCircle, Calendar, MapPin } from 'lucide-react';
 
 export const metadata: Metadata = constructMetadata(pageMeta.contact);
 
@@ -119,10 +119,6 @@ export default function ContactPage() {
               <hr className="border-slate-100" />
 
               <div className="flex flex-col gap-4 text-sm text-on-surface-variant font-medium">
-                <div className="flex items-center gap-2">
-                  <Clock className="w-4 h-4 text-slate-400 shrink-0" aria-hidden="true" />
-                  <span>Mon–Sat, 9:00 AM – 7:00 PM IST</span>
-                </div>
                 <div className="flex items-start gap-2">
                   <MapPin className="w-4 h-4 text-slate-400 shrink-0 mt-0.5" aria-hidden="true" />
                   <span>{siteData.address}. We work remotely.</span>

@@ -13,7 +13,7 @@ export const servicesHubFaqs: PageFaq[] = [
   { question: 'Do I have to take all three services?', answer: 'No. You can start with one — for example, WhatsApp automation for leads you already get from portals. Most clients combine all three because each makes the others work better, but it isn’t required.' },
   { question: 'Which service should I start with?', answer: 'If you get leads but struggle to reach them, start with automation. If you run ads but get few enquiries, start with a landing page. If you have no direct lead source at all, start with ads and a landing page together. The free audit tells you which gap is biggest.' },
   { question: 'Do you work with builders, brokers or channel partners?', answer: 'All three. Developers and builders use us for launches and inventory; channel partners and brokers use us to get leads of their own for the projects they are mandated on.' },
-  { question: 'How much do the services cost?', answer: 'Landing pages start from ₹15,000 a month, Meta and Google ads management from ₹25,000 a month, and WhatsApp automation from ₹20,000 a month. Ad spend is paid directly to Google and Meta. Final fees are fixed after a free audit.' },
+  { question: 'How much do the services cost?', answer: 'Landing pages start from ₹15,000 a month, Meta and Google ads management from ₹25,000 a month, and WhatsApp automation from ₹30,000 a month. Ad spend is paid directly to Google and Meta. Final fees are fixed after a free audit.' },
   { question: 'How do you measure results?', answer: 'On leads, how many were contacted, site visits booked and completed, and cost per site visit — reported weekly. Clicks and impressions are available but aren’t the headline.' },
   { question: 'Is there a minimum contract?', answer: 'No. We work month-to-month with 30 days’ notice.' },
   { question: 'Which cities do you cover?', answer: 'We work with clients in Kanpur, Lucknow, Noida, Greater Noida and the wider Delhi NCR, and can run campaigns for projects elsewhere in India.' },
@@ -27,7 +27,6 @@ export const contactFaqs: PageFaq[] = [
   { question: 'Can I just message on WhatsApp instead of filling the form?', answer: `Yes. WhatsApp or call ${siteData.phone}, or email ${siteData.email}.` },
   { question: 'Can I book a video call?', answer: 'Yes. Use the “Book a call” button to pick a 30-minute slot.' },
   { question: 'Do you have an office I can visit?', answer: 'No. Veloxis Global works remotely with clients across Kanpur, Lucknow, Noida and Delhi NCR, so there is no walk-in office.' },
-  { question: 'What are your working hours?', answer: 'Monday to Saturday, 9:00 AM to 7:00 PM IST.' },
 ];
 
 export const playbooksHubFaqs: PageFaq[] = [
