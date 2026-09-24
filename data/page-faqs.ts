@@ -56,7 +56,7 @@ export const aboutFaqs = (years: number): PageFaq[] => [
   { question: 'Why only real estate?', answer: 'Focusing on one industry means every campaign, page and automation is built around how property is actually sold — launches, RERA rules, site visits and channel partners — instead of generic lead generation.' },
   { question: 'Who will work on my account?', answer: 'Muddassir plans and oversees every account personally, working with a small network of landing page developers, ad specialists and automation engineers chosen for each project.' },
   { question: 'What makes you different from a general digital marketing agency?', answer: 'We work only in real estate, offer three connected services rather than everything, and report on site visits and cost per site visit instead of clicks and impressions.' },
-  { question: 'What certifications does the founder hold?', answer: 'Google certifications in Google Ads and Analytics, and a HubSpot certification.' },
+  { question: 'Can I see how you would plan my project before hiring you?', answer: 'Yes. Our playbooks show how we plan launches, landing pages, lead follow-up and channel partner registration, and the free marketing audit reviews your own pages, ads and follow-up with the changes we would make.' },
 ];
 
 export const privacyFaqs: PageFaq[] = [

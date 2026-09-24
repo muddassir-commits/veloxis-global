@@ -81,7 +81,7 @@ export const Footer: React.FC = () => {
                 Real estate only
               </span>
               <span className="text-[10px] font-bold tracking-wider uppercase bg-white/5 border border-white/10 px-2.5 py-1 rounded-full text-slate-400">
-                Google Ads certified founder
+                Founder-led
               </span>
             </div>
           </div>
