@@ -392,7 +392,7 @@ export const servicesData: ServiceData[] = [
     ],
     toolsNote:
       'We build on the official WhatsApp Business API and work with the CRM you already use. WhatsApp message charges are billed by Meta through your provider and are separate from our fee.',
-    pricingRange: 'Starts from ₹20,000 / month',
+    pricingRange: 'Starts from ₹30,000 / month',
     benefits: ['Instant WhatsApp replies', 'Site-visit booking & reminders', 'CRM & CP lead routing'],
     relatedServices: ['paid-ads', 'high-converting-landing-pages'],
     relatedPlaybook: 'whatsapp-lead-response-flow',
