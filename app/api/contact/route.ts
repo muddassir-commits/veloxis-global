@@ -1,6 +1,7 @@
 import { NextResponse } from 'next/server';
 import * as z from 'zod';
 import { insertRow, escapeHtml } from '../../../lib/db';
+import { withinDailyLimit } from '../../../lib/rateLimit';
 import { sendEmail } from '../../../lib/mail';
 
 const contactSchema = z.object({
@@ -17,7 +18,7 @@ export async function POST(request: Request) {
 
     // 1. Validate honeypot (reject if filled)
     if (body._honey && body._honey.trim() !== '') {
-      console.warn('Contact form spam submission detected via honeypot:', body);
+      console.warn('Contact form spam submission blocked by honeypot.');
       return NextResponse.json({ success: false, error: 'Spam detected' }, { status: 400 });
     }
 
@@ -31,6 +32,14 @@ export async function POST(request: Request) {
     }
 
     const { _honey, ...formData } = parsedData.data;
+
+    // Max 3 submissions per visitor per day (reset at midnight IST).
+    if (!(await withinDailyLimit(request, 'contact'))) {
+      return NextResponse.json(
+        { success: false, error: "You've reached today's limit for this form. Please try again tomorrow or message us on WhatsApp." },
+        { status: 429 }
+      );
+    }
 
     // 3. Save to Supabase and notify by email. Either one succeeding means the lead is captured.
     const [saved, mailed] = await Promise.all([

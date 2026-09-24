@@ -1,9 +1,9 @@
 'use client';
 
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useSyncExternalStore } from 'react';
 import Link from 'next/link';
 import { Button } from '../ui/Button';
-import { Consent, OPEN_SETTINGS_EVENT, readConsent, saveConsent } from '../../lib/consent';
+import { Consent, CONSENT_EVENT, OPEN_SETTINGS_EVENT, readConsent, saveConsent } from '../../lib/consent';
 
 const categories: { key: keyof Consent; title: string; desc: string }[] = [
   { key: 'analytics', title: 'Analytics', desc: 'Google Analytics and Microsoft Clarity: which pages are visited and where people get stuck.' },
@@ -11,16 +11,28 @@ const categories: { key: keyof Consent; title: string; desc: string }[] = [
 ];
 
 export const CookieBanner: React.FC = () => {
-  const [visible, setVisible] = useState(false);
+  // True until the visitor has made a choice (read from localStorage; false during server render).
+  const needsChoice = useSyncExternalStore(
+    (onChange) => {
+      window.addEventListener(CONSENT_EVENT, onChange);
+      return () => window.removeEventListener(CONSENT_EVENT, onChange);
+    },
+    () => readConsent() === null,
+    () => false,
+  );
+  const [reopened, setReopened] = useState(false);
+  // Closes the banner after a choice even if the browser blocks localStorage.
+  const [dismissed, setDismissed] = useState(false);
   const [managing, setManaging] = useState(false);
   const [choice, setChoice] = useState<Consent>({ analytics: false, marketing: false });
+  const visible = (needsChoice && !dismissed) || reopened;
 
+  // Footer "Cookie settings" reopens the banner with the current choice.
   useEffect(() => {
-    if (!readConsent()) setVisible(true);
     const open = () => {
       setChoice(readConsent() ?? { analytics: false, marketing: false });
       setManaging(true);
-      setVisible(true);
+      setReopened(true);
     };
     window.addEventListener(OPEN_SETTINGS_EVENT, open);
     return () => window.removeEventListener(OPEN_SETTINGS_EVENT, open);
@@ -28,7 +40,8 @@ export const CookieBanner: React.FC = () => {
 
   const decide = (c: Consent) => {
     saveConsent(c);
-    setVisible(false);
+    setDismissed(true);
+    setReopened(false);
     setManaging(false);
   };
 

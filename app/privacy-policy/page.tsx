@@ -73,6 +73,7 @@ export default function PrivacyPolicyPage() {
             <ul className={list}>
               <li>Device and browser type, approximate location (city level), the page you came from, pages viewed, clicks and time on site, collected through cookies and similar tools (see section 5).</li>
               <li>Server logs kept by our hosting provider, including your IP address, for security and to keep the site running.</li>
+              <li>When you send a form, a scrambled (one-way hashed) version of your IP address, used only to limit each form to 3 submissions per day and deleted after 2 days.</li>
             </ul>
             <p>
               We do not ask for sensitive data such as financial, health or government ID details, and we do not take

@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useSyncExternalStore } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
@@ -30,7 +30,16 @@ export const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const [hasHover, setHasHover] = useState(false);
+  // Mouse (hover-capable) vs touch device, kept in sync with the media query. False on the server.
+  const hasHover = useSyncExternalStore(
+    (onChange) => {
+      const mq = window.matchMedia('(hover: hover)');
+      mq.addEventListener('change', onChange);
+      return () => mq.removeEventListener('change', onChange);
+    },
+    () => window.matchMedia('(hover: hover)').matches,
+    () => false,
+  );
 
   // Mobile accordion states
   const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
@@ -62,25 +71,15 @@ export const Navbar: React.FC = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Detect hover media capability (touch screens vs mouse desktop)
-  useEffect(() => {
-    const mediaQuery = window.matchMedia('(hover: hover)');
-    setHasHover(mediaQuery.matches);
-
-    const listener = (e: MediaQueryListEvent) => {
-      setHasHover(e.matches);
-    };
-    mediaQuery.addEventListener('change', listener);
-    return () => mediaQuery.removeEventListener('change', listener);
-  }, []);
-
-  // Close all menus/drawers on page change
-  useEffect(() => {
+  // Close all menus/drawers on page change (state adjusted during render, as React recommends).
+  const [menuPath, setMenuPath] = useState(pathname);
+  if (menuPath !== pathname) {
+    setMenuPath(pathname);
     setIsOpen(false);
     setServicesOpen(false);
     setMobileServicesOpen(false);
     setMobileActiveServiceGroup(null);
-  }, [pathname]);
+  }
 
   // Prevent scroll when mobile menu is open
   useEffect(() => {
