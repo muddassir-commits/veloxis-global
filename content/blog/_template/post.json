@@ -1,0 +1,23 @@
+{
+  "draft": true,
+  "title": "Post title shown on the page (10-120 characters)",
+  "seoTitle": "Title for Google, under 60 characters",
+  "excerpt": "One or two sentences for cards and Google results, 50 to 160 characters long.",
+  "date": "2026-10-01",
+  "category": "Guides",
+  "service": "paid-ads",
+  "image": "/images/people/blog/cover-name-1600x1000.jpg",
+  "imageAlt": "Plain description of what the cover photo shows",
+  "inlineImages": [
+    { "src": "/images/people/blog/inline-name-1600x1000.jpg", "alt": "What this photo shows", "beforeHeading": "second-section" }
+  ],
+  "faqs": [
+    { "question": "Question 1?", "answer": "Answer taken from the article." },
+    { "question": "Question 2?", "answer": "Answer taken from the article." },
+    { "question": "Question 3?", "answer": "Answer taken from the article." },
+    { "question": "Question 4?", "answer": "Answer taken from the article." },
+    { "question": "Question 5?", "answer": "Answer taken from the article." },
+    { "question": "Question 6?", "answer": "Answer taken from the article." },
+    { "question": "Question 7?", "answer": "Answer taken from the article." }
+  ]
+}

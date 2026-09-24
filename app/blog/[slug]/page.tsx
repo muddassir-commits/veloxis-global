@@ -7,22 +7,19 @@ import { getArticleSchema } from '../../../lib/schema';
 import { CtaBanner } from '../../../components/sections/CtaBanner';
 import BlogPostContent from './BlogPostContent';
 import { FaqAccordion } from '../../../components/sections/FaqAccordion';
-import { blogFaqs } from '../../../data/blog-faqs';
 import { constructMetadata } from '../../../lib/seo-config';
-import { blogPosts, getPostBySlug } from '../../../data/blog-posts';
+import { getAllPosts, getPostBySlug, toCard } from '../../../lib/blog';
 import { getServiceBySlug } from '../../../data/services-data';
 
 interface Params {
   params: Promise<{ slug: string }>;
 }
 
-const readTime = (html: string) => {
-  const words = html.replace(/<[^>]*>/g, ' ').trim().split(/\s+/).filter(Boolean).length;
-  return `${Math.max(1, Math.ceil(words / 200))} min read`;
-};
+// Only valid, published posts get a page; any other slug is a 404.
+export const dynamicParams = false;
 
 export function generateStaticParams() {
-  return blogPosts.map((post) => ({ slug: post.slug }));
+  return getAllPosts().map((post) => ({ slug: post.slug }));
 }
 
 export async function generateMetadata({ params }: Params): Promise<Metadata> {
@@ -47,12 +44,12 @@ export default async function SingleBlogPostPage({ params }: Params) {
 
   const path = `/blog/${post.slug}`;
   // Related: same service first, then same category, then newest.
-  const relatedPosts = blogPosts
+  const relatedPosts = getAllPosts()
     .filter((p) => p.slug !== post.slug)
     .map((p) => ({ p, score: (post.service && p.service === post.service ? 2 : 0) + (p.category === post.category ? 1 : 0) }))
     .sort((a, b) => b.score - a.score || b.p.isoDate.localeCompare(a.p.isoDate))
     .slice(0, 3)
-    .map(({ p }) => ({ ...p, readTime: readTime(p.htmlContent) }));
+    .map(({ p }) => toCard(p));
   const service = post.service ? getServiceBySlug(post.service) : undefined;
 
   return (
@@ -76,14 +73,12 @@ export default async function SingleBlogPostPage({ params }: Params) {
       </section>
 
       <BlogPostContent
-        post={{ ...post, readTime: readTime(post.htmlContent) }}
+        post={post}
         relatedPosts={relatedPosts}
         service={service ? { slug: service.slug, title: service.title, shortDesc: service.shortDesc } : undefined}
       />
 
-      {blogFaqs[post.slug] && (
-        <FaqAccordion customFaqs={blogFaqs[post.slug]} title="Frequently asked questions" badgeText="FAQ" description="Quick answers from this guide." />
-      )}
+      <FaqAccordion customFaqs={post.faqs} title="Frequently asked questions" badgeText="FAQ" description="Quick answers from this guide." />
 
       <CtaBanner />
     </>

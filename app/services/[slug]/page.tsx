@@ -6,7 +6,7 @@ import { notFound } from 'next/navigation';
 import { constructMetadata } from '../../../lib/seo-config';
 import { servicesData, getServiceBySlug } from '../../../data/services-data';
 import { getPlaybookBySlug } from '../../../data/playbooks';
-import { blogPosts } from '../../../data/blog-posts';
+import { getPostBySlug as getBlogPost, type Post } from '../../../lib/blog';
 import { Breadcrumb } from '../../../components/ui/Breadcrumb';
 import { ImageFrame } from '../../../components/ui/ImageFrame';
 import { Button } from '../../../components/ui/Button';
@@ -79,8 +79,8 @@ export default async function ServicePage({ params }: PageProps) {
   const related = service.relatedServices.map(getServiceBySlug).filter(Boolean) as typeof servicesData;
   const playbook = getPlaybookBySlug(service.relatedPlaybook);
   const posts = service.relatedPosts
-    .map((slug) => blogPosts.find((p) => p.slug === slug))
-    .filter(Boolean) as typeof blogPosts;
+    .map((slug) => getBlogPost(slug))
+    .filter(Boolean) as Post[];
 
   return (
     <>

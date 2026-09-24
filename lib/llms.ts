@@ -4,11 +4,10 @@ import { siteData } from '../data/site';
 import { servicesData } from '../data/services-data';
 import { audiences } from '../data/audiences';
 import { playbooks } from '../data/playbooks';
-import { blogPosts } from '../data/blog-posts';
+import { getAllPosts } from './blog';
 import { faqs } from '../data/faqs';
 import { pricingFaqs } from '../data/pricing';
 import { SITE_URL, FOUNDER_YEARS } from './seo-config';
-import { blogFaqs } from '../data/blog-faqs';
 import { playbookFaqs } from '../data/playbook-faqs';
 
 const qa = (list: { question: string; answer: string }[] = []) => list.flatMap((f) => [`Q: ${f.question}`, `A: ${f.answer}`, '']);
@@ -51,7 +50,7 @@ export function buildLlmsTxt(): string {
     '',
     '## Guides',
     '',
-    ...blogPosts.map((p) => `- [${p.title}](${SITE_URL}/blog/${p.slug}): ${p.excerpt}`),
+    ...getAllPosts().map((p) => `- [${p.title}](${SITE_URL}/blog/${p.slug}): ${p.excerpt}`),
     '',
     facts,
     '',
@@ -107,8 +106,8 @@ export function buildLlmsFullTxt(): string {
     out.push('### FAQ', ...qa(playbookFaqs[p.slug]));
   }
 
-  for (const post of blogPosts) {
-    out.push(`## Guide: ${post.title}`, '', `URL: ${SITE_URL}/blog/${post.slug}`, '', stripHtml(post.htmlContent), '', '### FAQ', ...qa(blogFaqs[post.slug]));
+  for (const post of getAllPosts()) {
+    out.push(`## Guide: ${post.title}`, '', `URL: ${SITE_URL}/blog/${post.slug}`, '', stripHtml(post.htmlContent), '', '### FAQ', ...qa(post.faqs));
   }
 
   out.push(contact, '');

@@ -3,14 +3,14 @@
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { ArrowLeft, Calendar, Clock, Share2, ChevronRight, FileText } from 'lucide-react';
+import { ArrowLeft, Calendar, Tag, Share2, ChevronRight, FileText } from 'lucide-react';
 import { Badge } from '../../../components/ui/Badge';
 import { Button } from '../../../components/ui/Button';
 import { Linkedin } from '../../../components/ui/BrandIcons';
 import { ImageFrame } from '../../../components/ui/ImageFrame';
 import { FOUNDER_YEARS } from '../../../lib/seo-config';
 
-import type { Post } from '../../../data/blog-posts';
+import type { Post, PostCard } from '../../../lib/blog';
 
 type InlineImage = NonNullable<Post['inlineImages']>[number];
 
@@ -36,7 +36,7 @@ const formatDate = (iso: string) =>
 
 interface Props {
   post: Post;
-  relatedPosts: Post[];
+  relatedPosts: PostCard[];
   service?: { slug: string; title: string; shortDesc: string };
 }
 
@@ -115,13 +115,16 @@ export default function BlogPostContent({ post, relatedPosts, service }: Props) 
               </Link>
               <span className="flex items-center gap-1.5">
                 <Calendar className="w-3.5 h-3.5" aria-hidden="true" />
-                <time dateTime={post.modifiedIso}>
-                  {post.modifiedIso !== post.isoDate ? 'Updated ' : ''}{formatDate(post.modifiedIso)}
-                </time>
+                <time dateTime={post.isoDate}>{post.displayDate}</time>
+                {post.modifiedIso !== post.isoDate && (
+                  <span className="text-slate-400">
+                    (updated <time dateTime={post.modifiedIso}>{formatDate(post.modifiedIso)}</time>)
+                  </span>
+                )}
               </span>
               <span className="flex items-center gap-1.5">
-                <Clock className="w-3.5 h-3.5" aria-hidden="true" />
-                <span>{post.readTime}</span>
+                <Tag className="w-3.5 h-3.5" aria-hidden="true" />
+                <Link href="/blog" className="hover:text-royal-blue transition-colors">{post.category}</Link>
               </span>
 
               {/* Share actions */}
@@ -228,8 +231,9 @@ export default function BlogPostContent({ post, relatedPosts, service }: Props) 
                     <h3 className="font-extrabold text-slate-900 text-sm sm:text-base leading-snug group-hover:text-royal-blue transition-colors">
                       {rel.title}
                     </h3>
-                    <span className="text-[11px] font-semibold text-slate-500 block mt-3">
-                      {rel.readTime}
+                    <span className="text-[11px] font-semibold text-slate-500 flex items-center gap-1 mt-3">
+                      <Calendar className="w-3 h-3" aria-hidden="true" />
+                      <time dateTime={rel.isoDate}>{rel.displayDate}</time>
                     </span>
                   </Link>
                 ))}

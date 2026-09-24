@@ -1,0 +1,58 @@
+{
+  "title": "What Is EOI in Real Estate? Meaning, Amount, Refunds and Risks",
+  "seoTitle": "What Is EOI in Real Estate? Meaning, Refunds & RERA Rules",
+  "excerpt": "EOI (Expression of Interest) buys priority in a new project. How it works, how it differs from token and booking amounts, refunds, and what RERA says.",
+  "date": "2026-09-24",
+  "category": "Guides",
+  "service": "high-converting-landing-pages",
+  "image": "/images/people/blog/eoi-buyers-reviewing-booking-papers.jpg",
+  "imageAlt": "A property executive going over paperwork with a young couple at a kitchen counter",
+  "inlineImages": [
+    {
+      "src": "/images/people/blog/eoi-couple-planning-budget.jpg",
+      "alt": "A couple working out their budget with a calculator and notebook at home",
+      "caption": "Work out your budget before paying any token amount.",
+      "beforeHeading": "buyer-checklist"
+    }
+  ],
+  "about": [
+    {
+      "name": "Real Estate (Regulation and Development) Act, 2016",
+      "sameAs": "https://en.wikipedia.org/wiki/Real_Estate_(Regulation_and_Development)_Act,_2016"
+    }
+  ],
+  "faqs": [
+    {
+      "question": "What is EOI in real estate?",
+      "answer": "EOI stands for Expression of Interest: a written request, usually with a payment, telling a developer you want to buy in a project about to launch. It gives you priority to choose a unit, not a specific flat."
+    },
+    {
+      "question": "Is EOI the same as booking a flat?",
+      "answer": "No. With an EOI you haven’t been allotted a unit and there is no agreement for sale. Booking comes later, when you select and confirm a unit."
+    },
+    {
+      "question": "What is the difference between EOI, token amount and booking amount?",
+      "answer": "EOI is paid before or at launch for priority. A token holds a selected unit for a short time while paperwork is done. The booking amount confirms the purchase and leads to allotment and the agreement for sale."
+    },
+    {
+      "question": "Is EOI refundable?",
+      "answer": "Often, but only on the conditions written in the EOI terms. A common pattern is a full refund if you don’t get a suitable unit, and a deduction if you withdraw after selecting one. Get the terms in writing."
+    },
+    {
+      "question": "How much is a typical EOI amount?",
+      "answer": "There is no standard figure. It varies widely by project and city, so compare it with the project’s pricing and the written terms."
+    },
+    {
+      "question": "Can a developer collect EOI before RERA registration?",
+      "answer": "Section 3 of the RERA Act bars promoters from advertising, marketing, booking or selling units in a project that must be registered before it is registered, so collecting money for an unregistered project is risky for both sides."
+    },
+    {
+      "question": "How much advance can a developer take without an agreement for sale?",
+      "answer": "Section 13 of the RERA Act says a promoter cannot take more than 10% of the unit cost as an advance or application fee without first entering into a written, registered agreement for sale."
+    },
+    {
+      "question": "What should I check before paying an EOI?",
+      "answer": "The project’s RERA number on the state RERA website, written refund terms, payment by cheque or bank transfer (never cash), a receipt naming the project and amount, and how allotment will work."
+    }
+  ]
+}
