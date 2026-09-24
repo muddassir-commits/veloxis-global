@@ -51,6 +51,7 @@ export const CookieBanner: React.FC = () => {
 
           <div className="flex flex-wrap items-center gap-2 sm:gap-3 w-full md:w-auto justify-center">
             <Button
+              track={false}
               onClick={() => decide({ analytics: false, marketing: false })}
               variant="ghost"
               size="sm"
@@ -59,6 +60,7 @@ export const CookieBanner: React.FC = () => {
               Reject all
             </Button>
             <Button
+              track={false}
               onClick={() => setManaging((m) => !m)}
               variant="ghost"
               size="sm"
@@ -68,6 +70,7 @@ export const CookieBanner: React.FC = () => {
               Manage preferences
             </Button>
             <Button
+              track={false}
               onClick={() => decide({ analytics: true, marketing: true })}
               variant="primary"
               size="sm"
@@ -103,6 +106,7 @@ export const CookieBanner: React.FC = () => {
             ))}
             <div className="flex justify-end">
               <Button
+              track={false}
                 onClick={() => decide(choice)}
                 variant="primary"
                 size="sm"
