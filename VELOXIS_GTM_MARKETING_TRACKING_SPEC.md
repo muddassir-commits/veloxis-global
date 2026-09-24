@@ -2,7 +2,7 @@
 
 **Project:** Veloxis Global\
 **Website:** https://www.veloxisglobal.com/ (canonical host is `www`; the apex redirects to it)\
-**Stack:** Next.js 14 (App Router), hosted on Vercel\
+**Stack:** Next.js 16 (App Router), React 19, hosted on Vercel\
 **Repository:** `muddassir-commits/veloxis-global`\
 **Primary Google account:** `muddassir@veloxisglobal.com`\
 **Last updated:** 24 September 2026, after a full repository audit\
@@ -197,6 +197,15 @@ No personal data (name, phone, email, message) is sent in any event.
 4.  `form_submit` clashed with GA4 Enhanced Measurement. Fixed: form
     interactions turned off.
 5.  GTM could not see the events. Fixed: dataLayer bridge.
+
+## Form submission limit (24 Sep 2026)
+
+Each form accepts at most **3 submissions per visitor per day** (reset at
+midnight IST). `lib/rateLimit.ts` sends a salted SHA-256 hash of the IP to
+the Supabase function `public.consume_form_quota()`; blocked submissions
+get HTTP 429 and **no** `form_submit` / `generate_lead` / Meta event fires.
+Hashes are deleted after 2 days. If Supabase is unreachable the form is
+allowed (fail open).
 
 ## Remaining notes
 
@@ -397,6 +406,9 @@ Tracking should eventually help answer:
     `NEXT_PUBLIC_META_PIXEL_ID` can override it in Vercel).
 -   Fires `PageView`, `Lead`, `Contact`, `BookingClick` and
     `NewsletterSignup` (section 4).
+-   Meta automatic events are **off**: `fbq('set', 'autoConfig', false,
+    PIXEL_ID)` runs before `init` in `ConsentScripts.tsx` (stops
+    `SubscribedButtonClick` noise). Verified live 24 Sep 2026.
 -   Loads only with **marketing** consent.
 
 ### Verified via Marketing API (24 Sep 2026)
@@ -824,11 +836,16 @@ Until the required accounts/IDs and decisions are confirmed:
 -   [x] GA4 key events, custom dimensions, 14-month retention, www stream URL
 -   [x] Google Ads account identified (687-474-7833) and linked to GA4
 -   [x] Google tag architecture decided: Option B (GA4 import)
+-   [x] Google Ads conversions imported; only "Submit lead form"
+    (`generate_lead`) is an account-default goal. Contact, Book appointment
+    and Phone call lead goals are report-only
+-   [x] Meta automatic events disabled (autoConfig false)
+-   [x] Final audit: Next.js 16.3.6 / React 19 upgrade (0 production
+    vulnerabilities), security headers, remote images blocked, 3-per-day
+    form limit, dangling `automation` DNS record removed
 
 ## Pending --- owner (manual)
 
--   [ ] Google Ads: import GA4 key events as conversions (after the link
-    activates, within 24 h); `generate_lead` Primary, others Secondary
 -   [ ] Google Ads: billing / payment method before running any campaign
 -   [ ] Google Ads API (optional): create a manager account, link
     687-474-7833, request a developer token
@@ -905,17 +922,11 @@ the owner's explicit approval.
 
 **GTM stays empty for now. No tag is needed yet.**
 
-1.  **After 24 h, import conversions in Google Ads** (owner, or Claude via
-    browser): `generate_lead` Primary; `whatsapp_click`, `phone_click`,
-    `booking_click` Secondary.
-2.  **Meta Events Manager:** confirm `Lead`, `Contact`, `BookingClick` and
-    `NewsletterSignup` arrive (Test events tab); use `Lead` for lead
-    campaigns.
-3.  **Before the first campaign:** Google Ads billing, Meta domain
+1.  **Before the first campaign:** Google Ads billing, Meta domain
     verification, choose campaign landing pages.
-4.  **One week after launch:** compare GA4 key events, Google Ads
+2.  **One week after launch:** compare GA4 key events, Google Ads
     conversions and Meta events (Claude can report this via API).
-5.  **Later:** remarketing, enhanced conversions, LinkedIn --- each with
+3.  **Later:** remarketing, enhanced conversions, LinkedIn --- each with
     owner approval.
 
 ------------------------------------------------------------------------
