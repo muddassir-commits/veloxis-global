@@ -13,7 +13,7 @@ You are a senior Next.js engineer + technical SEO working on an **existing, live
 - **Templates:** `components/services/ServicePageTemplate.tsx`, `components/services/IndustryPageTemplate.tsx`, plus `components/sections/*` (Hero, ServicesGrid, ProcessTimeline, TestimonialsSlider, CasestudyFeature, LocationsGrid, BlogPreview, CtaBanner, FaqAccordion).
 - **Forms:** `/api/contact`, `/api/audit-request`, `/api/newsletter` — zod validation + honeypot + forward to n8n webhooks (`N8N_*_WEBHOOK` env vars), with a mock-success fallback when the webhook is unset.
 - **Analytics:** GA4 (`G-LC9XWNSGCF`), Meta Pixel (`1484475786790290`), Clarity (`wvclr1xtkt`) in `app/layout.tsx`; helpers in `lib/analytics.ts` and `components/analytics/AnalyticsTracker.tsx`.
-- **Contact facts** (`data/site.ts`): phone `+91-88876 20727`, email `hello@veloxisglobal.com`, Kanpur UP, founder Muddassir Ali.
+- **Contact facts** (`data/site.ts`): phone `+91-91940 20727`, email `hello@veloxisglobal.com`, Kanpur UP, founder Muddassir Ali.
 
 ## MISSION
 

@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { WhatsAppIcon } from '../ui/WhatsAppIcon';
+import { siteData } from '../../data/site';
 
 export const WhatsAppWidget: React.FC = () => {
   const [visible, setVisible] = useState(false);
@@ -28,7 +29,7 @@ export const WhatsAppWidget: React.FC = () => {
 
   if (!visible) return null;
 
-  const whatsappUrl = "https://wa.me/918887620727?text=Hi%20Veloxis%20Global%2C%20I%27d%20like%20a%20free%20marketing%20audit";
+  const whatsappUrl = siteData.whatsappLink;
 
   return (
     <div className="fixed bottom-24 sm:bottom-6 right-6 z-50 group">

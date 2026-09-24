@@ -104,7 +104,7 @@ export const pageMeta = {
   contact: {
     title: 'Contact Veloxis Global | Real Estate Marketing',
     description:
-      'Talk to Veloxis Global about landing pages, property ads or WhatsApp automation. Call or WhatsApp +91 88876 20727, or send the form for a free marketing audit.',
+      'Talk to Veloxis Global about landing pages, property ads or WhatsApp automation. Call or WhatsApp +91 91940 20727, or send the form for a free marketing audit.',
     path: '/contact',
   },
   blog: {

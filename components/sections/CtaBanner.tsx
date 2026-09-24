@@ -6,6 +6,7 @@
 import React from 'react';
 import { Button } from '../ui/Button';
 import { CheckCircle } from 'lucide-react';
+import { siteData } from '../../data/site';
 
 export interface CtaBannerProps {
   title?: string;
@@ -49,7 +50,7 @@ export const CtaBanner: React.FC<CtaBannerProps> = ({ title, description }) => {
             <div className="w-full sm:w-auto rounded-full hero-cta-hover">
               <Button
                 id="cta-banner-whatsapp-btn"
-                href="https://wa.me/918887620727?text=Hi%20Veloxis%20Global%2C%20I%27d%20like%20a%20free%20marketing%20audit"
+                href={siteData.whatsappLink}
                 variant="outline"
                 className="w-full sm:w-auto text-center border-white text-white hover:bg-white/10 hover:text-white"
               >

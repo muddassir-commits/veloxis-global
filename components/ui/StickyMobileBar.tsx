@@ -19,7 +19,7 @@ export const StickyMobileBar: React.FC = () => {
         <div className="w-[1px] h-8 bg-slate-200"></div>
         
         <a 
-          href={`https://wa.me/${siteData.phoneRaw}?text=Hi%20Veloxis%20Global,%20I%20would%20like%20to%20discuss%20a%20project.`}
+          href={siteData.whatsappLink}
           target="_blank"
           rel="noopener noreferrer"
           className="flex flex-col items-center justify-center w-full h-full text-[#25D366] hover:text-[#1da851] transition-colors"

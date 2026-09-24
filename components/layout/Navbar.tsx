@@ -542,12 +542,12 @@ export const Navbar: React.FC = () => {
         {/* Bottom area with CTA and Phone */}
         <div className="flex flex-col gap-4 border-t border-slate-100 pt-6 mt-6">
           <a
-            href="tel:+918887620727"
+            href={`tel:${siteData.phoneRaw}`}
             onClick={() => setIsOpen(false)}
             className="flex items-center justify-center gap-2 font-sans text-[14px] font-bold text-slate-600 hover:text-royal-blue py-3"
           >
             <Phone className="w-3.5 h-3.5 shrink-0" aria-hidden="true" />
-            <span>+91-88876 20727</span>
+            <span>{siteData.phone}</span>
           </a>
           <Button href="/contact" onClick={() => setIsOpen(false)} variant="primary" className="w-full text-center py-3 !rounded-full">
             Get Free Audit →
