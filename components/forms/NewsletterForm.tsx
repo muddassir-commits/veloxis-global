@@ -43,7 +43,7 @@ export const NewsletterForm: React.FC = () => {
 
       if (response.ok) {
         if (typeof window !== 'undefined') {
-          events.formSubmit('NewsletterForm', window.location.pathname);
+          events.newsletterSignup(window.location.pathname);
         }
         setSubmitSuccess(true);
         reset();

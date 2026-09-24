@@ -18,25 +18,25 @@ export default function AnalyticsTracker() {
     }
   }, [pathname]);
 
-  // 3. Track global tel/WhatsApp link clicks
+  // 3. One click listener for the whole site, so each click sends exactly one event.
+  //    Priority: phone > WhatsApp > Calendly > CTA (any <Button>, or any link to /contact).
   useEffect(() => {
     const handleGlobalClick = (e: MouseEvent) => {
-      const target = e.target as HTMLElement;
-      const anchor = target.closest('a');
-      if (!anchor) return;
-
-      const href = anchor.getAttribute('href');
-      if (!href) return;
-
+      const target = e.target as HTMLElement | null;
+      if (!target) return;
       const page = window.location.pathname;
-      if (href.startsWith('tel:')) {
-        events.phoneClick(page);
-      } else if (href.includes('wa.me') || href.includes('api.whatsapp.com/send?phone')) {
-        events.whatsappClick(page);
-      } else if (href.includes('calendly.com')) {
-        events.bookingClick(page);
-      } else if (href === '/contact' || href.startsWith('/contact?')) {
-        events.ctaClick(page, (anchor.textContent || '').trim().slice(0, 60));
+      const anchor = target.closest('a');
+      const href = anchor?.getAttribute('href') || '';
+
+      if (href.startsWith('tel:')) return events.phoneClick(page);
+      if (href.includes('wa.me') || href.includes('api.whatsapp.com/send')) return events.whatsappClick(page);
+      if (href.includes('calendly.com')) return events.bookingClick(page);
+
+      const cta = target.closest<HTMLElement>('[data-cta]');
+      const isContactLink = href === '/contact' || href.startsWith('/contact?') || href.startsWith('/contact#');
+      if (cta || isContactLink) {
+        const el = cta ?? anchor!;
+        events.ctaClick(page, (el.textContent || '').replace(/\s+/g, ' ').trim().slice(0, 60) || 'cta');
       }
     };
 

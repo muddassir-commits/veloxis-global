@@ -52,7 +52,7 @@ export const ContactForm: React.FC = () => {
 
       if (response.ok) {
         if (typeof window !== 'undefined') {
-          events.formSubmit('ContactForm', window.location.pathname);
+          events.leadSubmit('ContactForm', window.location.pathname);
         }
         setSubmitSuccess(true);
         reset();

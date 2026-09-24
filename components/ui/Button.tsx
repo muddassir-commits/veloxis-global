@@ -3,7 +3,6 @@
 import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { events } from '../../lib/analytics';
 
 const MotionLink = motion(Link);
 
@@ -14,10 +13,12 @@ export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElemen
   className?: string;
   target?: string;
   rel?: string;
+  /** Set false for non-marketing buttons (cookie banner, menus). Clicks are tracked by AnalyticsTracker. */
+  track?: boolean;
 }
 
 export const Button = React.forwardRef<HTMLButtonElement | HTMLAnchorElement, ButtonProps>(
-  ({ variant = 'primary', size = 'md', href, className = '', children, ...props }, ref) => {
+  ({ variant = 'primary', size = 'md', href, className = '', children, track = true, ...props }, ref) => {
     // Base styles: transition: all 300ms ease
     const baseStyles = 'inline-flex items-center justify-center font-bold rounded-md transition-all duration-300 ease-in-out focus:outline-none';
     
@@ -37,17 +38,6 @@ export const Button = React.forwardRef<HTMLButtonElement | HTMLAnchorElement, Bu
       lg: 'px-10 py-5 text-lg',
     };
 
-    const handleClick = (e: React.MouseEvent<HTMLAnchorElement | HTMLButtonElement>) => {
-      if (typeof window !== 'undefined') {
-        const location = window.location.pathname;
-        const ctaText = typeof children === 'string' ? children : 'cta_button';
-        events.ctaClick(location, ctaText);
-      }
-      if (props.onClick) {
-        (props.onClick as any)(e);
-      }
-    };
-
     const combinedClassName = `${baseStyles} ${variants[variant]} ${sizes[size]} ${className}`;
 
     const motionProps = {
@@ -61,7 +51,7 @@ export const Button = React.forwardRef<HTMLButtonElement | HTMLAnchorElement, Bu
         <MotionLink
           href={href}
           className={combinedClassName}
-          onClick={handleClick}
+          data-cta={track ? '' : undefined}
           {...motionProps}
           {...(props as any)}
         >
@@ -74,7 +64,7 @@ export const Button = React.forwardRef<HTMLButtonElement | HTMLAnchorElement, Bu
       <motion.button
         ref={ref as React.Ref<HTMLButtonElement>}
         className={combinedClassName}
-        onClick={handleClick}
+        data-cta={track ? '' : undefined}
         {...motionProps}
         {...(props as any)}
       >
