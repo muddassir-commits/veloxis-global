@@ -256,7 +256,7 @@ export const Footer: React.FC = () => {
               </div>
 
               <a
-                href="https://wa.me/918887620727?text=Hi%20Veloxis%20Global%2C%20I%27d%20like%20a%20free%20marketing%20audit"
+                href={siteData.whatsappLink}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-[#25D366] hover:bg-[#20ba5a] text-white py-2.5 px-4 rounded-xl font-bold text-xs inline-flex items-center justify-center gap-2 transition-all duration-300 w-full text-center shadow-md shadow-emerald-950/20"
