@@ -22,5 +22,6 @@ export const siteData = {
     "https://www.instagram.com/veloxisglobal/",
     "https://www.linkedin.com/company/111872222/",
     "https://www.facebook.com/veloxisglobal/",
+    "https://x.com/veloxisglobal",
   ],
 };
