@@ -6,6 +6,7 @@ import { Footer } from '../components/layout/Footer';
 import { WhatsAppWidget } from '../components/layout/WhatsAppWidget';
 import { CookieBanner } from '../components/layout/CookieBanner';
 import { StickyMobileBar } from '../components/ui/StickyMobileBar';
+import { MotionEffects } from '../components/ui/MotionEffects';
 import AnalyticsTracker from '../components/analytics/AnalyticsTracker';
 import { constructMetadata, pageMeta } from '../lib/seo-config';
 import { SchemaMarkup } from '../components/ui/SchemaMarkup';
@@ -48,6 +49,9 @@ export default function RootLayout({
         <WhatsAppWidget />
         <CookieBanner />
         <StickyMobileBar />
+
+        {/* Scroll-reveal and spotlight card effects (styles in globals.css) */}
+        <MotionEffects />
 
         {/* Client-side trackers (scroll depth, PageView, click interception) */}
         <AnalyticsTracker />

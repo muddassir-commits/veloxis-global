@@ -85,8 +85,8 @@ export default function ContactPage() {
               </h2>
 
               <div className="flex flex-col gap-5">
-                <a href={`tel:${siteData.phoneRaw}`} className="flex items-start gap-4 p-4 sm:p-6 rounded-2xl bg-white border border-slate-100 hover:border-royal-blue/30 hover:shadow-lg transition-all duration-300 group">
-                  <div className="w-10 h-10 rounded-lg bg-royal-blue/10 text-royal-blue flex items-center justify-center shrink-0" aria-hidden="true">
+                <a href={`tel:${siteData.phoneRaw}`} className="flex items-start gap-4 p-4 sm:p-6 rounded-2xl bg-white border border-slate-100 hover:border-royal-blue/30 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 group">
+                  <div className="w-10 h-10 rounded-lg bg-royal-blue/10 text-royal-blue flex items-center justify-center shrink-0 transition-all duration-300 group-hover:bg-royal-blue group-hover:text-white group-hover:scale-110" aria-hidden="true">
                     <Phone className="w-5 h-5" />
                   </div>
                   <div>
@@ -95,8 +95,8 @@ export default function ContactPage() {
                   </div>
                 </a>
 
-                <a href={`mailto:${siteData.email}`} className="flex items-start gap-4 p-4 sm:p-6 rounded-2xl bg-white border border-slate-100 hover:border-royal-blue/30 hover:shadow-lg transition-all duration-300 group">
-                  <div className="w-10 h-10 rounded-lg bg-royal-blue/10 text-royal-blue flex items-center justify-center shrink-0" aria-hidden="true">
+                <a href={`mailto:${siteData.email}`} className="flex items-start gap-4 p-4 sm:p-6 rounded-2xl bg-white border border-slate-100 hover:border-royal-blue/30 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 group">
+                  <div className="w-10 h-10 rounded-lg bg-royal-blue/10 text-royal-blue flex items-center justify-center shrink-0 transition-all duration-300 group-hover:bg-royal-blue group-hover:text-white group-hover:scale-110" aria-hidden="true">
                     <Mail className="w-5 h-5" />
                   </div>
                   <div>
@@ -105,8 +105,8 @@ export default function ContactPage() {
                   </div>
                 </a>
 
-                <a href={siteData.whatsappLink} target="_blank" rel="noopener noreferrer" className="flex items-start gap-4 p-4 sm:p-6 rounded-2xl bg-white border border-slate-100 hover:border-teal-accent/40 hover:shadow-lg transition-all duration-300 group">
-                  <div className="w-10 h-10 rounded-lg bg-teal-accent/10 text-teal-accent flex items-center justify-center shrink-0" aria-hidden="true">
+                <a href={siteData.whatsappLink} target="_blank" rel="noopener noreferrer" className="flex items-start gap-4 p-4 sm:p-6 rounded-2xl bg-white border border-slate-100 hover:border-teal-accent/40 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 group">
+                  <div className="w-10 h-10 rounded-lg bg-teal-accent/10 text-teal-accent flex items-center justify-center shrink-0 transition-transform duration-300 group-hover:scale-110 group-hover:-rotate-6" aria-hidden="true">
                     <MessageCircle className="w-5 h-5 fill-teal-accent" />
                   </div>
                   <div>
@@ -126,7 +126,8 @@ export default function ContactPage() {
               </div>
             </Card>
 
-            <Card hoverable={false} className="bg-primary-container text-white border-slate-800 p-8 text-center flex flex-col items-center gap-4">
+            <Card hoverable={false} className="relative bg-primary-container text-white border-slate-800 p-8 text-center flex flex-col items-center gap-4">
+              <span className="border-beam border-beam-light" aria-hidden="true" />
               <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center" aria-hidden="true">
                 <Calendar className="w-6 h-6 text-royal-blue" />
               </div>

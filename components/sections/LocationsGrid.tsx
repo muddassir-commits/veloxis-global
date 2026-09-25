@@ -50,11 +50,11 @@ export const LocationsGrid: React.FC = () => (
           sizes="(max-width: 1024px) calc(100vw - 32px), 480px"
           className="max-w-[480px] mx-auto lg:max-w-none"
         />
-        <ul className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+        <ul className="grid grid-cols-1 sm:grid-cols-2 gap-6 stagger-reveal">
           {areas.map((a) => (
-            <li key={a.city} className="rounded-2xl border border-slate-100 bg-slate-50 p-6">
+            <li key={a.city} className="group spotlight rounded-2xl border border-slate-100 bg-slate-50 p-6 transition-all duration-500 hover:bg-white hover:shadow-lg hover:-translate-y-1">
               <h3 className="font-bold text-slate-900 text-lg mb-2 flex items-center gap-2">
-                <MapPin className="w-4 h-4 text-royal-blue" aria-hidden="true" /> {a.city}
+                <MapPin className="w-4 h-4 text-royal-blue transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:scale-125" aria-hidden="true" /> {a.city}
               </h3>
               <p className="text-sm text-slate-600 leading-relaxed">{a.desc}</p>
             </li>

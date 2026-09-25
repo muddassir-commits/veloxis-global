@@ -102,8 +102,11 @@ export default async function ServicePage({ params }: PageProps) {
 
       {/* Hero */}
       <section className="relative py-20 lg:py-28 overflow-hidden text-left">
-        <Image src={hero.src} alt="" fill priority sizes="100vw" className="object-cover object-center" quality={80} />
+        <Image src={hero.src} alt="" fill priority sizes="100vw" className="object-cover object-center hero-kenburns" quality={80} />
         <div className="absolute inset-0 bg-gradient-to-r from-[rgba(15,23,42,0.92)] via-[rgba(15,23,42,0.8)] to-[rgba(15,23,42,0.5)]" aria-hidden="true" />
+        <div className="absolute inset-0 overflow-hidden" aria-hidden="true">
+          <div className="aurora-blob -left-24 top-0 h-[380px] w-[380px] bg-[rgba(37,99,235,0.32)]" />
+        </div>
         <div className="max-w-container-max mx-auto px-gutter relative z-10">
           <div className="max-w-3xl flex flex-col items-start gap-6">
             <span className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 px-3 py-1 rounded-full text-xs font-bold text-white uppercase tracking-wider">
@@ -152,9 +155,9 @@ export default async function ServicePage({ params }: PageProps) {
 
             <div>
               <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-6">{service.problemsHeading}</h2>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 stagger-reveal">
                 {service.problems.map((item) => (
-                  <div key={item.title} className="bg-slate-50 p-5 rounded-xl border border-slate-100">
+                  <div key={item.title} className="spotlight bg-slate-50 p-5 rounded-xl border border-slate-100 transition-all duration-300 hover:bg-white hover:shadow-md">
                     <h3 className="font-bold text-slate-900 mb-2 flex items-start gap-2">
                       <AlertTriangle className="w-4 h-4 text-orange-500 shrink-0 mt-1" aria-hidden="true" />
                       {item.title}
@@ -175,10 +178,10 @@ export default async function ServicePage({ params }: PageProps) {
                 sizes="(min-width: 1280px) 790px, (min-width: 1024px) 64vw, 100vw"
                 className="mb-6 shadow-sm"
               />
-              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4 stagger-reveal">
                 {service.deliverables.map((item) => (
-                  <li key={item.title} className="flex items-start gap-3 p-5 rounded-xl border border-slate-100 bg-white shadow-sm">
-                    <CheckCircle className="w-5 h-5 text-teal-600 shrink-0 mt-0.5" aria-hidden="true" />
+                  <li key={item.title} className="group spotlight flex items-start gap-3 p-5 rounded-xl border border-slate-100 bg-white shadow-sm transition-all duration-300 hover:shadow-md hover:-translate-y-0.5">
+                    <CheckCircle className="w-5 h-5 text-teal-600 shrink-0 mt-0.5 transition-transform duration-300 group-hover:scale-110" aria-hidden="true" />
                     <div>
                       <h3 className="font-bold text-slate-900 mb-1">{item.title}</h3>
                       <p className="text-sm text-slate-600 leading-relaxed">{item.desc}</p>
@@ -200,10 +203,10 @@ export default async function ServicePage({ params }: PageProps) {
               />
               <div className="order-1 md:order-2">
                 <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-6">How it works</h2>
-                <ol className="flex flex-col gap-4">
+                <ol className="flex flex-col gap-4 stagger-reveal">
                   {service.process.map((step, i) => (
-                    <li key={step.title} className="flex gap-4 items-start">
-                      <span className="w-8 h-8 rounded-full bg-royal-blue text-white text-sm font-bold flex items-center justify-center shrink-0" aria-hidden="true">
+                    <li key={step.title} className="group flex gap-4 items-start">
+                      <span className="w-8 h-8 rounded-full bg-royal-blue text-white text-sm font-bold flex items-center justify-center shrink-0 transition-all duration-300 group-hover:scale-110 group-hover:shadow-[0_0_0_5px_rgba(37,99,235,0.15)]" aria-hidden="true">
                         {i + 1}
                       </span>
                       <div>
@@ -219,7 +222,7 @@ export default async function ServicePage({ params }: PageProps) {
 
           {/* Sidebar */}
           <aside className="lg:col-span-4 flex flex-col gap-6">
-            <div className="bg-slate-900 text-white rounded-2xl p-6">
+            <div className="spotlight spotlight-dark bg-slate-900 text-white rounded-2xl p-6">
               <h2 className="font-bold mb-4 text-lg">Who it’s for</h2>
               <ul className="flex flex-col gap-4">
                 {service.whoFor.map((item) => (
@@ -238,7 +241,8 @@ export default async function ServicePage({ params }: PageProps) {
               </div>
             </div>
 
-            <div className="bg-slate-50 rounded-2xl p-6 border border-slate-100">
+            <div className="relative bg-slate-50 rounded-2xl p-6 border border-slate-100">
+              <span className="border-beam" aria-hidden="true" />
               <h2 className="font-bold text-slate-900 mb-2 text-lg">Pricing</h2>
               <p className="text-2xl font-extrabold text-slate-900">{service.pricingRange}</p>
               <p className="text-sm text-slate-500 mt-2">Month-to-month, 30 days’ notice. Final scope confirmed after a free audit.</p>
@@ -260,23 +264,23 @@ export default async function ServicePage({ params }: PageProps) {
       {/* Related services, playbook and guides */}
       <section className="py-16 bg-slate-50 border-t border-slate-100">
         <div className="max-w-container-max mx-auto px-gutter">
-          <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-8">Works best together</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-8 section-reveal">Works best together</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 stagger-reveal">
             {related.map((s) => (
-              <Link key={s.slug} href={`/services/${s.slug}`} className="group bg-white rounded-2xl border border-slate-200 p-6 hover:shadow-md transition-shadow">
+              <Link key={s.slug} href={`/services/${s.slug}`} className="group spotlight bg-white rounded-2xl border border-slate-200 p-6 hover:shadow-lg hover:-translate-y-1 transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]">
                 <span className="text-xs font-bold uppercase tracking-wider text-slate-500">Service</span>
-                <h3 className="font-bold text-slate-900 mt-2 group-hover:text-royal-blue">{s.h1}</h3>
+                <h3 className="font-bold text-slate-900 mt-2 group-hover:text-royal-blue transition-colors">{s.h1}</h3>
                 <span className="inline-flex items-center gap-1 text-sm font-bold text-royal-blue mt-4">
-                  {s.title} <ArrowRight className="w-4 h-4" aria-hidden="true" />
+                  {s.title} <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" aria-hidden="true" />
                 </span>
               </Link>
             ))}
             {playbook && (
-              <Link href={`/playbooks/${playbook.slug}`} className="group bg-white rounded-2xl border border-slate-200 p-6 hover:shadow-md transition-shadow">
+              <Link href={`/playbooks/${playbook.slug}`} className="group spotlight bg-white rounded-2xl border border-slate-200 p-6 hover:shadow-lg hover:-translate-y-1 transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]">
                 <span className="text-xs font-bold uppercase tracking-wider text-slate-500">Example plan</span>
-                <h3 className="font-bold text-slate-900 mt-2 group-hover:text-royal-blue">{playbook.title}</h3>
+                <h3 className="font-bold text-slate-900 mt-2 group-hover:text-royal-blue transition-colors">{playbook.title}</h3>
                 <span className="inline-flex items-center gap-1 text-sm font-bold text-royal-blue mt-4">
-                  Read the playbook <ArrowRight className="w-4 h-4" aria-hidden="true" />
+                  Read the playbook <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" aria-hidden="true" />
                 </span>
               </Link>
             )}

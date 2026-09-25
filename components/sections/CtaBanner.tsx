@@ -28,6 +28,8 @@ export const CtaBanner: React.FC<CtaBannerProps> = ({ title, description }) => {
             className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.07)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.07)_1px,transparent_1px)] bg-[size:4rem_4rem] opacity-70 animate-grid-shift -z-10"
             aria-hidden="true"
           />
+          {/* Light beam travelling around the border (Magic UI Border Beam, CSS in globals.css) */}
+          <span className="border-beam border-beam-light" aria-hidden="true" />
           {/* Radial mask to fade grid edges */}
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_20%,#2563eb_90%)] -z-10" aria-hidden="true" />
 

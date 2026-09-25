@@ -54,28 +54,29 @@ export default function PlaybooksPage() {
       </section>
 
       <section className="bg-slate-50 py-16">
-        <div className="max-w-container-max mx-auto px-gutter grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="max-w-container-max mx-auto px-gutter grid grid-cols-1 md:grid-cols-2 gap-8 stagger-reveal">
           {playbooks.map((pb) => {
             const service = getServiceBySlug(pb.service);
             return (
-              <article key={pb.slug} className="bg-white rounded-3xl border border-slate-200 overflow-hidden flex flex-col">
+              <article key={pb.slug} className="group spotlight bg-white rounded-3xl border border-slate-200 overflow-hidden flex flex-col transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] hover:shadow-xl hover:-translate-y-1">
                 <ImageFrame
                   src={pb.image}
                   alt=""
                   ratio="16/10"
                   sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 600px"
                   className="!rounded-none"
+                  imageClassName="transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.04]"
                 />
                 <div className="p-8 flex flex-col flex-grow">
                   <span className="text-xs font-bold uppercase tracking-wider text-slate-500">
                     Example plan · {service?.title} · For {pb.audience.toLowerCase()}
                   </span>
                   <h2 className="text-xl font-bold text-slate-900 mt-3 mb-3">
-                    <Link href={`/playbooks/${pb.slug}`} className="hover:text-royal-blue">{pb.title}</Link>
+                    <Link href={`/playbooks/${pb.slug}`} className="hover:text-royal-blue transition-colors">{pb.title}</Link>
                   </h2>
                   <p className="text-sm text-slate-600 leading-relaxed flex-grow">{pb.excerpt}</p>
                   <Link href={`/playbooks/${pb.slug}`} className="inline-flex items-center gap-1 mt-6 text-sm font-bold text-royal-blue">
-                    Read the playbook <ArrowRight className="w-4 h-4" aria-hidden="true" />
+                    Read the playbook <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" aria-hidden="true" />
                   </Link>
                 </div>
               </article>

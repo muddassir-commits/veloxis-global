@@ -180,50 +180,45 @@ iframe {
 }
 
 /* ─────────────────────────────────────────────────────────────────────────────
-   SECTION SCROLL ANIMATIONS (replaces Framer Motion whileInView)
-   Sections start at opacity:0 and animate in when they enter the viewport.
-   Using IntersectionObserver via CSS animation-play-state would require JS.
-   Instead, we use a simple CSS approach: the animation plays once when the
-   element is rendered (all sections are SSR, so they render at page load).
-   For the best LCP, only below-fold sections use this pattern.
+   SCROLL REVEAL (driven by components/ui/MotionEffects.tsx)
+   .section-reveal     — the element fades up when it scrolls into view
+   .stagger-reveal     — its children fade up one after another
+   [data-reveal]       — up (default) | left | right | scale | image | line-x | line-y
+   Only elements below the fold get .reveal-pending, so on-screen content never
+   flashes and nothing is hidden when JavaScript is off.
 ───────────────────────────────────────────────────────────────────────────── */
-@keyframes section-reveal {
-  from {
-    opacity: 0;
-    transform: translateY(24px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
+@keyframes reveal-up    { from { opacity: 0; transform: translateY(28px); } to { opacity: 1; transform: none; } }
+@keyframes reveal-left  { from { opacity: 0; transform: translateX(-32px); } to { opacity: 1; transform: none; } }
+@keyframes reveal-right { from { opacity: 0; transform: translateX(32px); } to { opacity: 1; transform: none; } }
+@keyframes reveal-scale { from { opacity: 0; transform: scale(0.94); } to { opacity: 1; transform: none; } }
+/* Scales UP from 97% (never beyond 100%) so full-width photos can't cause sideways scroll on phones */
+@keyframes reveal-image { from { opacity: 0; transform: scale(0.97); filter: blur(6px); } to { opacity: 1; transform: none; filter: none; } }
+@keyframes reveal-line-x { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+@keyframes reveal-line-y { from { transform: scaleY(0); } to { transform: scaleY(1); } }
 
-.section-reveal {
-  animation: section-reveal 0.5s ease-out both;
-}
+.reveal-pending.section-reveal,
+.reveal-pending.stagger-reveal > *,
+.reveal-pending[data-reveal]:not([data-reveal^="line"]) { opacity: 0; }
+.reveal-pending[data-reveal="line-x"] { transform: scaleX(0); }
+.reveal-pending[data-reveal="line-y"] { transform: scaleY(0); }
 
-/* Staggered children for grids */
-@keyframes child-reveal {
-  from {
-    opacity: 0;
-    transform: translateY(16px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.reveal-in.section-reveal,
+.reveal-in[data-reveal=""],
+.reveal-in[data-reveal="up"] { animation: reveal-up 0.8s cubic-bezier(0.16, 1, 0.3, 1) both; }
+.reveal-in.stagger-reveal > * {
+  animation: reveal-up 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation-delay: calc(var(--reveal-i, 0) * 90ms);
 }
+.reveal-in[data-reveal="left"]  { animation: reveal-left 0.9s cubic-bezier(0.16, 1, 0.3, 1) both; }
+.reveal-in[data-reveal="right"] { animation: reveal-right 0.9s cubic-bezier(0.16, 1, 0.3, 1) both; }
+.reveal-in[data-reveal="scale"] { animation: reveal-scale 0.8s cubic-bezier(0.16, 1, 0.3, 1) both; }
+.reveal-in[data-reveal="image"] { animation: reveal-image 1s cubic-bezier(0.16, 1, 0.3, 1) both; }
+.reveal-in[data-reveal="line-x"] { transform-origin: left center; animation: reveal-line-x 1.4s cubic-bezier(0.65, 0, 0.35, 1) 0.2s both; }
+.reveal-in[data-reveal="line-y"] { transform-origin: center top; animation: reveal-line-y 1.4s cubic-bezier(0.65, 0, 0.35, 1) 0.2s both; }
 
-.stagger-reveal > * {
-  animation: child-reveal 0.4s ease-out both;
+@media print {
+  .reveal-pending, .reveal-pending > * { opacity: 1 !important; transform: none !important; }
 }
-
-.stagger-reveal > *:nth-child(1) { animation-delay: 0.05s; }
-.stagger-reveal > *:nth-child(2) { animation-delay: 0.10s; }
-.stagger-reveal > *:nth-child(3) { animation-delay: 0.15s; }
-.stagger-reveal > *:nth-child(4) { animation-delay: 0.20s; }
-.stagger-reveal > *:nth-child(5) { animation-delay: 0.25s; }
-.stagger-reveal > *:nth-child(6) { animation-delay: 0.30s; }
 
 /* ─────────────────────────────────────────────────────────────────────────────
    LOGO STRIP MARQUEE ANIMATIONS (migrated from styled-jsx in LogosStrip.tsx)
@@ -291,20 +286,180 @@ iframe {
 .animate-scale-in-delay-4 { animation-delay: 0.60s; }
 
 /* ─────────────────────────────────────────────────────────────────────────────
+   SPOTLIGHT CARDS (Magic UI "Magic Card", CSS version)
+   A soft glow and a lit border follow the cursor. --spot-x / --spot-y are set by
+   components/ui/MotionEffects.tsx. Touch devices never see it.
+───────────────────────────────────────────────────────────────────────────── */
+.spotlight { position: relative; isolation: isolate; }
+.spotlight::before,
+.spotlight::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  z-index: 2;
+}
+/* inner glow */
+.spotlight::after {
+  background: radial-gradient(420px circle at var(--spot-x, 50%) var(--spot-y, 50%), rgba(37, 99, 235, 0.07), transparent 60%);
+}
+/* lit border */
+.spotlight::before {
+  padding: 1px;
+  background: radial-gradient(260px circle at var(--spot-x, 50%) var(--spot-y, 50%), rgba(37, 99, 235, 0.6), transparent 70%);
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask: linear-gradient(#000 0 0) content-box exclude, linear-gradient(#000 0 0);
+}
+.spotlight-dark::after {
+  background: radial-gradient(420px circle at var(--spot-x, 50%) var(--spot-y, 50%), rgba(96, 165, 250, 0.16), transparent 60%);
+}
+@media (hover: hover) and (pointer: fine) {
+  .spotlight:hover::before,
+  .spotlight:hover::after { opacity: 1; }
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   BORDER BEAM (Magic UI "Border Beam", CSS version)
+   Drop <span className="border-beam" aria-hidden="true" /> inside any
+   position:relative box that has a border-radius.
+───────────────────────────────────────────────────────────────────────────── */
+@keyframes border-beam { to { offset-distance: 100%; } }
+.border-beam {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1.5px;
+  pointer-events: none;
+  /* The mask hides the travelling dot visually, but only overflow:hidden stops it
+     from widening the page (it rides half outside the box) */
+  overflow: hidden;
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask: linear-gradient(#000 0 0) content-box exclude, linear-gradient(#000 0 0);
+  z-index: 3;
+}
+@supports (offset-path: rect(0 auto auto 0)) {
+  .border-beam::after {
+    content: "";
+    position: absolute;
+    width: 110px;
+    aspect-ratio: 1;
+    background: linear-gradient(to left, var(--beam-from, #93c5fd), var(--beam-to, #2563eb), transparent);
+    offset-path: rect(0 auto auto 0 round 110px);
+    animation: border-beam var(--beam-duration, 8s) linear infinite;
+  }
+}
+.border-beam-light { --beam-from: #ffffff; --beam-to: #a5b4fc; }
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   BUTTON SHINE (Animotion BT03 "Shine Sweep", played once per hover)
+───────────────────────────────────────────────────────────────────────────── */
+.btn-shine { position: relative; overflow: hidden; isolation: isolate; }
+.btn-shine::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background: linear-gradient(120deg, transparent 30%, rgba(255, 255, 255, 0.35) 50%, transparent 70%);
+  transform: translateX(-120%);
+}
+.btn-shine:hover::after { transform: translateX(120%); transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1); }
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   HERO MOTION
+   Ken Burns: the photo settles from 106% to 100% on desktop. It only moves the
+   already-painted image, so LCP is unaffected.
+   Aurora: blurred brand-colour glows drift slowly behind the copy.
+   Underline: the highlighted words get a drawn underline after load.
+───────────────────────────────────────────────────────────────────────────── */
+@keyframes hero-kenburns { from { transform: scale(1.06); } to { transform: scale(1); } }
+@media (min-width: 768px) {
+  .hero-kenburns { animation: hero-kenburns 18s cubic-bezier(0.16, 1, 0.3, 1) both; }
+}
+
+@keyframes aurora-drift {
+  0%, 100% { transform: translate3d(0, 0, 0) scale(1); }
+  33%      { transform: translate3d(6%, -8%, 0) scale(1.1); }
+  66%      { transform: translate3d(-5%, 6%, 0) scale(0.95); }
+}
+.aurora-blob {
+  position: absolute;
+  border-radius: 9999px;
+  filter: blur(90px);
+  pointer-events: none;
+  animation: aurora-drift 22s ease-in-out infinite;
+}
+.aurora-blob-delay { animation-duration: 28s; animation-delay: -9s; }
+
+@keyframes underline-draw { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+.hero-underline { position: relative; white-space: nowrap; }
+.hero-underline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -0.02em;
+  height: 0.08em;
+  border-radius: 9999px;
+  background: linear-gradient(90deg, #34d399, #60a5fa);
+  transform-origin: left center;
+  animation: underline-draw 1.1s cubic-bezier(0.65, 0, 0.35, 1) 0.5s both;
+}
+
+/* Soft pulsing halo, e.g. on the final step of the process timeline */
+@keyframes halo-pulse {
+  0%   { box-shadow: 0 0 0 0 rgba(37, 99, 235, 0.45); }
+  70%  { box-shadow: 0 0 0 16px rgba(37, 99, 235, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(37, 99, 235, 0); }
+}
+.halo-pulse { animation: halo-pulse 2.6s ease-out infinite; }
+
+/* Reading progress bar (Magic UI "Scroll Progress" idea, CSS scroll-driven, no JS) */
+.scroll-progress { display: none; }
+@keyframes scroll-progress-grow { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+@supports (animation-timeline: scroll()) {
+  .scroll-progress {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    z-index: 70;
+    transform-origin: left center;
+    background: linear-gradient(90deg, #2563eb, #4f46e5, #34d399);
+    animation: scroll-progress-grow linear both;
+    animation-timeline: scroll(root block);
+  }
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
    REDUCED MOTION — disable all animations for users who prefer it
 ───────────────────────────────────────────────────────────────────────────── */
 @media (prefers-reduced-motion: reduce) {
   .hero-fade-in,
   .section-reveal,
   .stagger-reveal > *,
+  [data-reveal],
   .animate-marquee-left,
   .animate-marquee-right,
   .animate-grid-shift,
-  .animate-scale-in {
+  .animate-scale-in,
+  .hero-kenburns,
+  .aurora-blob,
+  .halo-pulse,
+  .hero-underline::after {
     animation: none !important;
     opacity: 1 !important;
     transform: none !important;
   }
+  .border-beam,
+  .btn-shine::after { display: none; }
 }
 
 /* Long-form article HTML (blog posts). Tailwind's preflight strips heading, list and table

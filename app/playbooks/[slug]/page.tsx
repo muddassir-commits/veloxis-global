@@ -11,6 +11,7 @@ import { getArticleSchema } from '../../../lib/schema';
 import { CtaBanner } from '../../../components/sections/CtaBanner';
 import { FaqAccordion } from '../../../components/sections/FaqAccordion';
 import { playbookFaqs } from '../../../data/playbook-faqs';
+import { ScrollProgress } from '../../../components/ui/ScrollProgress';
 import { ImageFrame } from '../../../components/ui/ImageFrame';
 import { Info, ArrowRight } from 'lucide-react';
 
@@ -59,6 +60,7 @@ export default async function PlaybookPage({ params }: PageProps) {
           datePublished: pb.updated,
         })}
       />
+      <ScrollProgress />
       <section className="bg-slate-50 py-8 border-b border-slate-100">
         <div className="max-w-container-max mx-auto px-gutter">
           <Breadcrumb items={[{ name: 'Playbooks', href: '/playbooks' }, { name: pb.title, href: path }]} />
@@ -166,7 +168,7 @@ export default async function PlaybookPage({ params }: PageProps) {
           </div>
 
           {service && (
-            <div className="mt-14 rounded-2xl bg-slate-900 text-white p-8">
+            <div className="mt-14 rounded-2xl bg-slate-900 text-white p-8 spotlight spotlight-dark section-reveal">
               <h2 className="text-xl font-bold mb-2">Want this set up for your project?</h2>
               <p className="text-slate-300 text-sm leading-relaxed mb-5">{service.shortDesc}</p>
               <Link href={`/services/${service.slug}`} className="inline-flex items-center gap-1 font-bold text-teal-300 hover:text-white">

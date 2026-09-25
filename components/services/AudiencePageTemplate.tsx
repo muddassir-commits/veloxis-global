@@ -33,11 +33,14 @@ export const AudiencePageTemplate: React.FC<{ audience: AudienceData }> = ({ aud
           fill
           priority
           sizes="100vw"
-          className="object-cover"
+          className="object-cover hero-kenburns"
           style={{ objectPosition: img.hero.position ?? 'center' }}
           quality={80}
         />
         <div className="absolute inset-0 bg-gradient-to-r from-[rgba(15,23,42,0.92)] via-[rgba(15,23,42,0.8)] to-[rgba(15,23,42,0.55)]" aria-hidden="true" />
+        <div className="absolute inset-0 overflow-hidden" aria-hidden="true">
+          <div className="aurora-blob -left-24 top-0 h-[380px] w-[380px] bg-[rgba(37,99,235,0.32)]" />
+        </div>
         <div className="relative z-10 max-w-container-max mx-auto px-gutter">
           <div className="max-w-3xl flex flex-col items-start">
             <Badge variant="teal" className="mb-4 !bg-white/10 !text-white border border-white/20 backdrop-blur-sm">{audience.eyebrow.toUpperCase()}</Badge>
@@ -72,7 +75,7 @@ export const AudiencePageTemplate: React.FC<{ audience: AudienceData }> = ({ aud
       {/* Pains: photo left, cards right */}
       <section className="py-16 bg-slate-50 border-y border-slate-200/60">
         <div className="max-w-container-max mx-auto px-gutter">
-          <h2 className="text-3xl font-bold text-slate-900 mb-10 text-center">{audience.painsHeading}</h2>
+          <h2 className="text-3xl font-bold text-slate-900 mb-10 text-center section-reveal">{audience.painsHeading}</h2>
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8">
             <div className="lg:col-span-4 w-full max-w-md mx-auto lg:max-w-none">
               <ImageFrame
@@ -83,10 +86,10 @@ export const AudiencePageTemplate: React.FC<{ audience: AudienceData }> = ({ aud
                 sizes="(max-width: 1024px) 448px, 400px"
               />
             </div>
-            <div className="lg:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-6 content-center">
+            <div className="lg:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-6 content-center stagger-reveal">
               {audience.pains.map((p) => (
-                <div key={p.title} className="bg-white p-6 border border-slate-200 rounded-2xl">
-                  <AlertTriangle className="w-5 h-5 text-orange-500 mb-4" aria-hidden="true" />
+                <div key={p.title} className="group spotlight bg-white p-6 border border-slate-200 rounded-2xl transition-all duration-500 hover:shadow-lg hover:-translate-y-1">
+                  <AlertTriangle className="w-5 h-5 text-orange-500 mb-4 transition-transform duration-300 group-hover:scale-110 group-hover:-rotate-6" aria-hidden="true" />
                   <h3 className="font-bold text-slate-900 mb-2">{p.title}</h3>
                   <p className="text-sm text-slate-600 leading-relaxed">{p.desc}</p>
                 </div>
@@ -98,19 +101,19 @@ export const AudiencePageTemplate: React.FC<{ audience: AudienceData }> = ({ aud
 
       <section className="bg-white py-16">
         <div className="max-w-container-max mx-auto px-gutter">
-          <h2 className="text-3xl font-bold text-slate-900 mb-10 text-center">{audience.helpHeading}</h2>
+          <h2 className="text-3xl font-bold text-slate-900 mb-10 text-center section-reveal">{audience.helpHeading}</h2>
           {/* Help: cards left, photo right */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8">
-            <div className="lg:col-span-7 flex flex-col gap-5">
+            <div className="lg:col-span-7 flex flex-col gap-5 stagger-reveal">
               {audience.help.map((h) => {
                 const service = getServiceBySlug(h.service);
                 return (
-                  <div key={h.title} className="bg-slate-50 border border-slate-200 rounded-2xl p-7 flex flex-col">
+                  <div key={h.title} className="group spotlight bg-slate-50 border border-slate-200 rounded-2xl p-7 flex flex-col transition-all duration-500 hover:bg-white hover:shadow-lg">
                     <h3 className="font-bold text-lg text-slate-900 mb-3">{h.title}</h3>
                     <p className="text-sm text-slate-600 leading-relaxed flex-grow">{h.desc}</p>
                     {service && (
                       <Link href={`/services/${service.slug}`} className="inline-flex items-center gap-1 mt-5 text-sm font-bold text-royal-blue hover:underline">
-                        {service.title} <ArrowRight className="w-4 h-4" aria-hidden="true" />
+                        {service.title} <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" aria-hidden="true" />
                       </Link>
                     )}
                   </div>
@@ -140,7 +143,7 @@ export const AudiencePageTemplate: React.FC<{ audience: AudienceData }> = ({ aud
             />
             <div className="order-1 lg:order-2">
               <h2 className="text-2xl font-bold text-slate-900 mb-6">{audience.extraHeading}</h2>
-              <ul className="flex flex-col gap-6">
+              <ul className="flex flex-col gap-6 stagger-reveal">
                 {audience.extra.map((e) => (
                   <li key={e.title} className="flex items-start gap-3">
                     <Check className="w-5 h-5 text-teal-600 shrink-0 mt-0.5" aria-hidden="true" />

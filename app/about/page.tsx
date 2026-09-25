@@ -53,10 +53,13 @@ export default function AboutPage() {
       {/* Hero */}
       <section className="bg-slate-900 text-white relative py-20 lg:py-28 overflow-hidden text-left">
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#1e293b_1px,transparent_1px),linear-gradient(to_bottom,#1e293b_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-40" aria-hidden="true"></div>
-        <div className="absolute -top-40 -right-40 w-96 h-96 rounded-full bg-royal-blue/20 blur-[128px]" aria-hidden="true"></div>
+        <div className="absolute inset-0 overflow-hidden" aria-hidden="true">
+          <div className="aurora-blob -top-40 -right-40 w-96 h-96 bg-[rgba(37,99,235,0.3)]" />
+          <div className="aurora-blob aurora-blob-delay -bottom-48 left-1/4 w-80 h-80 bg-[rgba(52,211,153,0.12)]" />
+        </div>
         <div className="max-w-container-max mx-auto px-gutter relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           <div className="lg:col-span-8 flex flex-col items-start gap-6">
-            <span className="inline-flex items-center gap-2 bg-royal-blue/20 border border-royal-blue/30 px-3 py-1 rounded-full text-xs font-bold text-royal-blue uppercase tracking-wider">
+            <span className="inline-flex items-center gap-2 bg-royal-blue/20 border border-royal-blue/30 px-3 py-1 rounded-full text-xs font-bold text-blue-300 uppercase tracking-wider">
               About Veloxis Global
             </span>
             <h1 className="text-4xl sm:text-5xl lg:text-[56px] font-extrabold tracking-tight leading-[1.1] text-white">
@@ -68,7 +71,7 @@ export default function AboutPage() {
             </p>
           </div>
           <div className="lg:col-span-4 flex justify-center lg:justify-end">
-            <div className="relative w-48 h-48 sm:w-64 sm:h-64 rounded-full border-4 border-slate-800 shadow-2xl overflow-hidden">
+            <div className="relative w-48 h-48 sm:w-64 sm:h-64 rounded-full border-4 border-slate-800 shadow-2xl overflow-hidden ring-1 ring-royal-blue/40 ring-offset-8 ring-offset-slate-900 transition-transform duration-700 hover:scale-[1.03]">
               <Image src="/images/profiles/muddassir.jpg" alt="Muddassir Ali, founder of Veloxis Global" fill priority sizes="256px" className="object-cover object-top" />
             </div>
           </div>
@@ -101,23 +104,23 @@ export default function AboutPage() {
           </div>
 
           <div className="lg:col-span-5 flex flex-col gap-6 w-full">
-            <div className="bg-slate-50 border border-slate-100 rounded-2xl p-6">
+            <div className="bg-slate-50 border border-slate-100 rounded-2xl p-6 section-reveal">
               <h2 className="text-xs font-extrabold text-royal-blue uppercase tracking-wider mb-4">What we do</h2>
               <ul className="flex flex-col gap-3.5 text-sm font-semibold text-slate-700">
                 {servicesData.map((s) => (
                   <li key={s.slug} className="flex items-center gap-2.5">
                     <CheckCircle className="w-5 h-5 text-royal-blue shrink-0" aria-hidden="true" />
-                    <Link href={`/services/${s.slug}`} className="hover:text-royal-blue">{s.title}</Link>
+                    <Link href={`/services/${s.slug}`} className="hover:text-royal-blue transition-colors">{s.title}</Link>
                   </li>
                 ))}
               </ul>
             </div>
-            <div className="grid grid-cols-2 gap-4">
-              <div className="bg-slate-900 text-white p-5 rounded-2xl text-left">
+            <div className="grid grid-cols-2 gap-4 stagger-reveal">
+              <div className="spotlight spotlight-dark bg-slate-900 text-white p-5 rounded-2xl text-left">
                 <span className="text-2xl sm:text-3xl font-black text-royal-blue block">{FOUNDER_YEARS}+ yrs</span>
                 <span className="text-xs font-bold text-slate-400 uppercase tracking-wider block mt-1">Founder experience</span>
               </div>
-              <div className="bg-slate-900 text-white p-5 rounded-2xl text-left">
+              <div className="spotlight spotlight-dark bg-slate-900 text-white p-5 rounded-2xl text-left">
                 <span className="text-2xl sm:text-3xl font-black text-teal-accent block">1</span>
                 <span className="text-xs font-bold text-slate-400 uppercase tracking-wider block mt-1">Industry: real estate</span>
               </div>
@@ -136,14 +139,14 @@ export default function AboutPage() {
       {/* Process */}
       <section className="py-20 bg-slate-50 border-y border-slate-100 text-left">
         <div className="max-w-container-max mx-auto px-gutter">
-          <div className="text-center max-w-2xl mx-auto mb-12">
+          <div className="text-center max-w-2xl mx-auto mb-12 section-reveal">
             <span className="text-xs font-bold text-royal-blue uppercase tracking-widest block mb-3">How we work</span>
             <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">Five steps from audit to site visits</h2>
           </div>
-          <ol className="grid grid-cols-1 md:grid-cols-5 gap-6">
+          <ol className="grid grid-cols-1 md:grid-cols-5 gap-6 stagger-reveal">
             {steps.map((s, i) => (
-              <li key={s.title} className="bg-white border border-slate-100 rounded-2xl p-6">
-                <span className="text-3xl font-black text-slate-200" aria-hidden="true">{String(i + 1).padStart(2, '0')}</span>
+              <li key={s.title} className="group spotlight bg-white border border-slate-100 rounded-2xl p-6 transition-all duration-500 hover:shadow-lg hover:-translate-y-1">
+                <span className="text-3xl font-black text-slate-200 transition-colors duration-500 group-hover:text-royal-blue" aria-hidden="true">{String(i + 1).padStart(2, '0')}</span>
                 <h3 className="font-extrabold text-slate-900 mt-2 mb-2">{s.title}</h3>
                 <p className="text-sm text-slate-500 leading-relaxed">{s.desc}</p>
               </li>
@@ -168,7 +171,7 @@ export default function AboutPage() {
               className="shadow-xl border border-slate-100"
             />
           </div>
-        <div className="lg:col-span-6 flex flex-col items-start gap-4">
+        <div className="lg:col-span-6 flex flex-col items-start gap-4 section-reveal">
           <span className="text-xs font-bold text-royal-blue uppercase tracking-wider">How the agency is set up</span>
           <h2 className="text-3xl font-extrabold text-slate-900 tracking-tight">Lean by design</h2>
           <p className="text-lg text-slate-700 leading-relaxed">
@@ -183,7 +186,7 @@ export default function AboutPage() {
       {/* Values */}
       <section className="py-20 bg-slate-50 border-y border-slate-100 text-left">
         <div className="max-w-container-max mx-auto px-gutter">
-          <div className="text-center max-w-2xl mx-auto mb-12">
+          <div className="text-center max-w-2xl mx-auto mb-12 section-reveal">
             <span className="text-xs font-bold text-royal-blue uppercase tracking-widest block mb-3">What you can expect</span>
             <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">Four commitments</h2>
           </div>
@@ -198,10 +201,10 @@ export default function AboutPage() {
               className="shadow-xl border border-slate-100"
             />
           </div>
-          <div className="lg:col-span-8 grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <div className="lg:col-span-8 grid grid-cols-1 sm:grid-cols-2 gap-6 stagger-reveal">
             {values.map((v) => (
-              <div key={v.title} className="bg-slate-50 border border-slate-100 rounded-2xl p-6">
-                <div className="w-10 h-10 rounded-lg bg-white shadow-sm flex items-center justify-center mb-5 border border-slate-100" aria-hidden="true">
+              <div key={v.title} className="group spotlight bg-white border border-slate-100 rounded-2xl p-6 transition-all duration-500 hover:shadow-lg hover:-translate-y-1">
+                <div className="w-10 h-10 rounded-lg bg-slate-50 shadow-sm flex items-center justify-center mb-5 border border-slate-100 transition-transform duration-500 group-hover:scale-110 group-hover:-rotate-6" aria-hidden="true">
                   {v.icon}
                 </div>
                 <h3 className="font-extrabold text-slate-900 text-base mb-2">{v.title}</h3>
@@ -217,11 +220,11 @@ export default function AboutPage() {
       <section className="py-20 bg-white text-left" id="founder">
         <div className="max-w-container-max mx-auto px-gutter grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           <div className="lg:col-span-5 flex flex-col items-center">
-            <div className="w-full relative rounded-3xl overflow-hidden shadow-2xl border border-slate-100 max-w-[380px] mx-auto bg-slate-100 aspect-[3/4]">
+            <div data-reveal="left" className="w-full relative rounded-3xl overflow-hidden shadow-2xl border border-slate-100 max-w-[380px] mx-auto bg-slate-100 aspect-[3/4]">
               <Image src="/images/profiles/Muddassir_Ali.webp" alt="Portrait of Muddassir Ali" fill sizes="(max-width: 420px) 100vw, 380px" className="object-cover object-top" />
             </div>
           </div>
-          <div className="lg:col-span-7 flex flex-col gap-6 text-slate-700 text-base leading-relaxed">
+          <div className="lg:col-span-7 flex flex-col gap-6 text-slate-700 text-base leading-relaxed section-reveal">
             <span className="text-xs font-bold text-royal-blue uppercase tracking-wider">Meet the founder</span>
             <h2 className="text-3xl font-extrabold text-slate-900 tracking-tight">Muddassir Ali</h2>
             <span className="text-sm font-bold text-slate-500 -mt-4 uppercase tracking-widest block">Founder, Veloxis Global</span>
@@ -258,14 +261,17 @@ export default function AboutPage() {
       {/* CTA */}
       <section className="py-20 bg-slate-900 text-white relative overflow-hidden text-center">
         <div className="absolute inset-0 bg-[radial-gradient(#1e293b_1px,transparent_1px)] bg-[size:24px_24px] opacity-30" aria-hidden="true"></div>
+        <div className="absolute inset-0 overflow-hidden" aria-hidden="true">
+          <div className="aurora-blob left-1/2 top-1/2 -ml-48 -mt-48 w-96 h-96 bg-[rgba(37,99,235,0.28)]" />
+        </div>
         <div className="max-w-container-max mx-auto px-gutter relative z-10">
-          <div className="max-w-2xl mx-auto flex flex-col items-center gap-6">
+          <div className="max-w-2xl mx-auto flex flex-col items-center gap-6 section-reveal">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight">Talk to Muddassir directly</h2>
             <p className="text-slate-300 text-base">
               Book a 30-minute call to walk through your project, your current lead flow and what we would change first.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 mt-4 w-full sm:w-auto">
-              <Link href={siteData.booking} target="_blank" rel="noopener noreferrer" className="bg-royal-blue text-white px-8 py-4 font-bold rounded-lg transition-colors hover:bg-royal-blue/90 w-full sm:w-auto text-center">
+              <Link href={siteData.booking} target="_blank" rel="noopener noreferrer" className="btn-shine bg-royal-blue text-white px-8 py-4 font-bold rounded-lg transition-all hover:bg-royal-blue/90 hover:shadow-[0_0_0_4px_rgba(37,99,235,0.3)] w-full sm:w-auto text-center">
                 Book a call →
               </Link>
               <Link href="/contact" className="border border-white/20 hover:bg-white/10 px-8 py-4 font-bold rounded-lg transition-colors text-white w-full sm:w-auto text-center">

@@ -34,7 +34,7 @@ export const FaqAccordion: React.FC<FaqAccordionProps> = ({
       {withSchema && <SchemaMarkup schema={getFAQPageSchema(activeFaqs)} />}
 
       <div className="max-w-3xl mx-auto px-gutter">
-        <div className="text-center mb-12">
+        <div className="text-center mb-12 section-reveal">
           <Badge variant="orange" className="mb-4">
             {badgeText}
           </Badge>
@@ -44,9 +44,9 @@ export const FaqAccordion: React.FC<FaqAccordionProps> = ({
           <p className="text-base sm:text-body-md text-on-surface-variant leading-relaxed">{description}</p>
         </div>
 
-        <dl className="flex flex-col gap-4">
+        <dl className="flex flex-col gap-4 stagger-reveal">
           {activeFaqs.map((faq) => (
-            <div key={faq.question} className="border border-slate-100 rounded-xl bg-slate-50 p-6">
+            <div key={faq.question} className="border border-slate-100 rounded-xl bg-slate-50 p-6 transition-colors duration-300 hover:border-blue-200 hover:bg-white">
               <dt>
                 <h3 className="font-bold text-slate-900 text-base sm:text-lg leading-snug">{faq.question}</h3>
               </dt>

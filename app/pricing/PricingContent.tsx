@@ -12,11 +12,14 @@ export default function PricingContent() {
       {/* Header Section */}
       <section className="bg-slate-900 text-white relative py-20 lg:py-28 overflow-hidden">
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#1e293b_1px,transparent_1px),linear-gradient(to_bottom,#1e293b_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-40"></div>
-        <div className="absolute -top-40 -right-40 w-96 h-96 rounded-full bg-royal-blue/20 blur-[128px]"></div>
+        <div className="absolute inset-0 overflow-hidden" aria-hidden="true">
+          <div className="aurora-blob -top-40 -right-40 w-96 h-96 bg-[rgba(37,99,235,0.3)]" />
+          <div className="aurora-blob aurora-blob-delay -bottom-48 left-1/4 w-80 h-80 bg-[rgba(52,211,153,0.12)]" />
+        </div>
 
         <div className="max-w-container-max mx-auto px-gutter relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           <div className="lg:col-span-7 max-w-[800px] flex flex-col items-start gap-6">
-            <span className="inline-flex items-center gap-2 bg-royal-blue/20 border border-royal-blue/30 px-3 py-1 rounded-full text-xs font-bold text-royal-blue uppercase tracking-wider">
+            <span className="inline-flex items-center gap-2 bg-royal-blue/20 border border-royal-blue/30 px-3 py-1 rounded-full text-xs font-bold text-blue-300 uppercase tracking-wider">
               PRICING
             </span>
             <h1 className="text-4xl sm:text-5xl lg:text-[56px] font-extrabold tracking-tight leading-[1.1] text-white">
@@ -57,7 +60,7 @@ export default function PricingContent() {
               className="shadow-xl border border-slate-100"
             />
           </div>
-          <div className="lg:col-span-7 text-center lg:text-left">
+          <div className="lg:col-span-7 text-center lg:text-left section-reveal">
             <span className="text-xs font-bold text-royal-blue uppercase tracking-widest block mb-3">
               STARTING PRICES
             </span>
@@ -67,7 +70,7 @@ export default function PricingContent() {
             <ul className="mt-6 flex flex-col sm:flex-row sm:flex-wrap sm:justify-center lg:justify-start gap-3 text-sm">
               {servicesData.map((s) => (
                 <li key={s.slug}>
-                  <a href={`/services/${s.slug}`} className="inline-block bg-white border border-slate-200 rounded-full px-4 py-2 hover:border-royal-blue">
+                  <a href={`/services/${s.slug}`} className="inline-block bg-white border border-slate-200 rounded-full px-4 py-2 transition-all duration-300 hover:border-royal-blue hover:shadow-md hover:-translate-y-0.5">
                     <span className="font-bold text-slate-900">{s.title}</span>{' '}
                     <span className="text-slate-500">· {s.pricingRange.replace('Starts from ', 'from ')}</span>
                   </a>
@@ -80,16 +83,17 @@ export default function PricingContent() {
           </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch stagger-reveal">
             {plans.map((plan, i) => (
               <div
                 key={i}
-                className={`bg-white border rounded-2xl p-8 flex flex-col justify-between shadow-sm relative ${
+                className={`spotlight bg-white border rounded-2xl p-8 flex flex-col justify-between shadow-sm relative transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] hover:shadow-xl hover:-translate-y-1.5 ${
                   plan.popular ? 'border-royal-blue ring-1 ring-royal-blue/20' : 'border-slate-100'
                 }`}
               >
+                {plan.popular && <span className="border-beam" aria-hidden="true" />}
                 {plan.popular && (
-                  <span className="absolute top-0 right-1/2 translate-x-1/2 -translate-y-1/2 bg-royal-blue text-white text-[10px] font-extrabold px-3 py-1 rounded-full uppercase tracking-wider">
+                  <span className="absolute z-10 top-0 right-1/2 translate-x-1/2 -translate-y-1/2 bg-royal-blue text-white text-[10px] font-extrabold px-3 py-1 rounded-full uppercase tracking-wider">
                     MOST COMMON
                   </span>
                 )}

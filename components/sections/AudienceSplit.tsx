@@ -40,9 +40,9 @@ export const AudienceSplit: React.FC = () => (
           Built for the people who actually sell property
         </h2>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 stagger-reveal">
         {audiences.map(({ href, icon: Icon, title, desc, cta, image, alt, position }) => (
-          <Link key={href} href={href} className="group bg-white rounded-2xl border border-slate-200 overflow-hidden hover:shadow-md transition-shadow flex flex-col">
+          <Link key={href} href={href} className="group spotlight bg-white rounded-2xl border border-slate-200 overflow-hidden hover:shadow-xl hover:-translate-y-1 transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] flex flex-col">
             <ImageFrame
               src={image}
               alt={alt}
@@ -53,8 +53,8 @@ export const AudienceSplit: React.FC = () => (
               imageClassName="transition-transform duration-500 group-hover:scale-[1.03]"
             />
             <div className="p-8 flex flex-col flex-grow">
-              <Icon className="w-8 h-8 text-royal-blue mb-5" aria-hidden="true" />
-              <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-royal-blue">{title}</h3>
+              <Icon className="w-8 h-8 text-royal-blue mb-5 transition-transform duration-500 group-hover:scale-110 group-hover:-rotate-6" aria-hidden="true" />
+              <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-royal-blue transition-colors">{title}</h3>
               <p className="text-slate-600 leading-relaxed flex-grow">{desc}</p>
               <span className="inline-flex items-center gap-1.5 mt-6 font-bold text-sm text-royal-blue">
                 {cta} <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" aria-hidden="true" />

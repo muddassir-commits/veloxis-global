@@ -20,14 +20,14 @@ export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElemen
 export const Button = React.forwardRef<HTMLButtonElement | HTMLAnchorElement, ButtonProps>(
   ({ variant = 'primary', size = 'md', href, className = '', children, track = true, ...props }, ref) => {
     // Base styles: transition: all 300ms ease
-    const baseStyles = 'inline-flex items-center justify-center font-bold rounded-md transition-all duration-300 ease-in-out focus:outline-none';
+    const baseStyles = 'inline-flex items-center justify-center font-bold rounded-md transition-all duration-300 ease-in-out focus:outline-none focus-visible:ring-2 focus-visible:ring-royal-blue focus-visible:ring-offset-2';
     
     // Variant styles matching design system requirements exactly
     const variants = {
-      primary: 'bg-royal-blue text-white hover:bg-[#1D4ED8] hover:shadow-[0_0_0_4px_rgba(37,99,235,0.2)]',
+      primary: 'btn-shine bg-royal-blue text-white hover:bg-[#1D4ED8] hover:shadow-[0_0_0_4px_rgba(37,99,235,0.2)]',
       secondary: 'bg-transparent border-[1.5px] border-royal-blue text-royal-blue hover:bg-royal-blue/5',
       outline: 'bg-transparent border-[1.5px] border-royal-blue text-royal-blue hover:bg-royal-blue/5', // fallback mapped to secondary
-      white: 'bg-white text-royal-blue hover:bg-slate-50 hover:shadow-[0_0_0_4px_rgba(255,255,255,0.2)]', // fallback white variant
+      white: 'btn-shine bg-white text-royal-blue hover:bg-slate-50 hover:shadow-[0_0_0_4px_rgba(255,255,255,0.2)]', // fallback white variant
       ghost: 'bg-transparent text-slate-900 border-none hover:bg-slate-100',
     };
 
