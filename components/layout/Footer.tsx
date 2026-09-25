@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { openCookieSettings } from '../../lib/consent';
-import { Facebook, Instagram, Linkedin } from '../ui/BrandIcons';
+import { Facebook, Instagram, Linkedin, XLogo } from '../ui/BrandIcons';
 import { Button } from '../ui/Button';
 import { WhatsAppIcon } from '../ui/WhatsAppIcon';
 import { ChevronDown, ChevronUp, ArrowUp, Phone, Mail, MapPin, CheckCircle2 } from 'lucide-react';
@@ -334,7 +334,8 @@ export const Footer: React.FC = () => {
               {[
                 { icon: Facebook, href: 'https://www.facebook.com/veloxisglobal/', label: 'Facebook' },
                 { icon: Instagram, href: 'https://www.instagram.com/veloxisglobal/', label: 'Instagram' },
-                { icon: Linkedin, href: 'https://www.linkedin.com/company/111872222/', label: 'LinkedIn' }
+                { icon: Linkedin, href: 'https://www.linkedin.com/company/111872222/', label: 'LinkedIn' },
+                { icon: XLogo, href: 'https://x.com/veloxisglobal', label: 'X' }
               ].map((social, idx) => {
                 const Icon = social.icon;
                 return (
