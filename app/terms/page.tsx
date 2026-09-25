@@ -40,7 +40,7 @@ export default function TermsPage() {
             <h2 className="text-lg font-extrabold text-slate-900 mt-4">2. Month-to-Month Agreements</h2>
             <p>Our performance services operate on flexible, transparent frameworks:</p>
             <ul className="list-disc pl-5 flex flex-col gap-2">
-              <li>Marketing retainer packages run on a month-to-month basis.</li>
+              <li>Marketing engagements run on a month-to-month basis.</li>
               <li>Clients can pause or terminate campaigns with a 30-day notice.</li>
               <li>No lock-in contracts or hidden cancellation penalties.</li>
             </ul>

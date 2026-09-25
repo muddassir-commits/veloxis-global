@@ -208,8 +208,8 @@ export const Footer: React.FC = () => {
                 </Link>
               </li>
               <li>
-                <Link href="/pricing" className="hover:text-white hover:translate-x-1 transition-all duration-200 inline-block">
-                  Plans &amp; Pricing
+                <Link href="/free-audit" className="hover:text-white hover:translate-x-1 transition-all duration-200 inline-block">
+                  Free Marketing Audit
                 </Link>
               </li>
               <li>

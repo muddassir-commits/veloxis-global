@@ -4,6 +4,7 @@
  * styled-jsx global block removed — keyframes now in globals.css.
  */
 import React from 'react';
+import Link from 'next/link';
 import { Button } from '../ui/Button';
 import { CheckCircle } from 'lucide-react';
 import { siteData } from '../../data/site';
@@ -11,9 +12,11 @@ import { siteData } from '../../data/site';
 export interface CtaBannerProps {
   title?: string;
   description?: string;
+  /** Show the "what the audit covers" link (off on the free audit page itself) */
+  showAuditLink?: boolean;
 }
 
-export const CtaBanner: React.FC<CtaBannerProps> = ({ title, description }) => {
+export const CtaBanner: React.FC<CtaBannerProps> = ({ title, description, showAuditLink = true }) => {
   const displayTitle = title || 'Get a free real estate marketing audit';
   const displayDescription =
     description ||
@@ -28,6 +31,8 @@ export const CtaBanner: React.FC<CtaBannerProps> = ({ title, description }) => {
             className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.07)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.07)_1px,transparent_1px)] bg-[size:4rem_4rem] opacity-70 animate-grid-shift -z-10"
             aria-hidden="true"
           />
+          {/* Light beam travelling around the border (Magic UI Border Beam, CSS in globals.css) */}
+          <span className="border-beam border-beam-light" aria-hidden="true" />
           {/* Radial mask to fade grid edges */}
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_20%,#2563eb_90%)] -z-10" aria-hidden="true" />
 
@@ -58,6 +63,13 @@ export const CtaBanner: React.FC<CtaBannerProps> = ({ title, description }) => {
               </Button>
             </div>
           </div>
+
+          {showAuditLink && (
+            <Link href="/free-audit" className="group inline-flex items-center gap-1 mt-6 text-sm font-semibold text-white/85 hover:text-white underline-offset-4 hover:underline">
+              See what the free audit covers
+              <span className="transition-transform group-hover:translate-x-1" aria-hidden="true">→</span>
+            </Link>
+          )}
 
           <div className="flex flex-wrap justify-center items-center gap-6 mt-10 text-xs font-bold uppercase tracking-wider text-white">
             <div className="flex items-center gap-1.5">

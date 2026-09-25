@@ -64,6 +64,8 @@ const nextConfig = {
   // Every URL removed in the real estate repositioning 301s to its closest live match.
   async redirects() {
     const map = {
+      // Pricing is no longer published; the free audit page replaces it
+      '/pricing': '/free-audit',
       // Industries — only real estate survives
       '/industries': '/industries/real-estate',
       '/industries/saas': '/',

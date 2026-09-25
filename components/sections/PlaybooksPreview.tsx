@@ -22,15 +22,15 @@ export const PlaybooksPreview: React.FC = () => (
             examples for hypothetical projects — not client results.
           </p>
         </div>
-        <Link href="/playbooks" className="inline-flex items-center gap-1.5 font-bold text-sm text-royal-blue self-start shrink-0">
-          All playbooks <ArrowRight className="w-4 h-4" aria-hidden="true" />
+        <Link href="/playbooks" className="group inline-flex items-center gap-1.5 font-bold text-sm text-royal-blue self-start shrink-0">
+          All playbooks <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" aria-hidden="true" />
         </Link>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 stagger-reveal">
         {playbooks.map((pb) => (
-          <Link key={pb.slug} href={`/playbooks/${pb.slug}`} className="group rounded-2xl border border-slate-200 bg-slate-50 p-6 hover:shadow-md transition-shadow flex flex-col">
+          <Link key={pb.slug} href={`/playbooks/${pb.slug}`} className="group spotlight rounded-2xl border border-slate-200 bg-slate-50 p-6 hover:bg-white hover:shadow-lg hover:-translate-y-1 transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] flex flex-col">
             <span className="text-[11px] font-bold uppercase tracking-wider text-slate-500">Example plan</span>
-            <h3 className="font-bold text-slate-900 mt-2 mb-3 group-hover:text-royal-blue leading-snug">{pb.title}</h3>
+            <h3 className="font-bold text-slate-900 mt-2 mb-3 group-hover:text-royal-blue transition-colors leading-snug">{pb.title}</h3>
             <p className="text-sm text-slate-600 leading-relaxed flex-grow">{pb.excerpt}</p>
           </Link>
         ))}

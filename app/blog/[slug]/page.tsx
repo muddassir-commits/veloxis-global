@@ -2,6 +2,7 @@ import React from 'react';
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { SchemaMarkup } from '../../../components/ui/SchemaMarkup';
+import { ScrollProgress } from '../../../components/ui/ScrollProgress';
 import { Breadcrumb } from '../../../components/ui/Breadcrumb';
 import { getArticleSchema } from '../../../lib/schema';
 import { CtaBanner } from '../../../components/sections/CtaBanner';
@@ -66,6 +67,7 @@ export default async function SingleBlogPostPage({ params }: Params) {
         })}
       />
 
+      <ScrollProgress />
       <section className="bg-slate-50 py-8 border-b border-slate-100">
         <div className="max-w-container-max mx-auto px-gutter">
           <Breadcrumb items={[{ name: 'Blog', href: '/blog' }, { name: post.title, href: path }]} />

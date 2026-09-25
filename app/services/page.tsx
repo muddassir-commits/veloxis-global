@@ -10,7 +10,7 @@ import { Breadcrumb } from '../../components/ui/Breadcrumb';
 import { SchemaMarkup } from '../../components/ui/SchemaMarkup';
 import { getWebPageSchema } from '../../lib/schema';
 import { servicesData } from '../../data/services-data';
-import { Target, Code, Zap, ArrowRight } from 'lucide-react';
+import { Target, Code, Zap, ArrowRight, Check } from 'lucide-react';
 import { CtaBanner } from '../../components/sections/CtaBanner';
 import { FaqAccordion } from '../../components/sections/FaqAccordion';
 import { servicesHubFaqs } from '../../data/page-faqs';
@@ -76,39 +76,43 @@ export default function ServicesPage() {
 
       <section className="bg-slate-50 py-16">
         <div className="max-w-container-max mx-auto px-gutter">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 stagger-reveal">
             {servicesData.map((service) => {
               const IconComponent = iconMap[service.icon] || Target;
               const href = `/services/${service.slug}`;
               const photo = serviceImages[service.slug] || serviceImages['high-converting-landing-pages'];
               return (
-                <Card key={service.id} className="flex flex-col justify-between items-start text-left h-full bg-white p-0 border border-slate-200 rounded-3xl hover:shadow-md transition-shadow relative overflow-hidden">
+                // 5-row subgrid (image, heading, description, points, footer): rows line up across cards
+                <Card key={service.id} className="grid grid-rows-subgrid row-span-5 gap-y-0 text-left bg-white p-0 border border-slate-200 rounded-3xl group spotlight hover:shadow-xl hover:-translate-y-1 relative overflow-hidden">
                   <ImageFrame
                     src={photo.src}
                     alt={photo.alt}
                     ratio="16/10"
                     sizes="(min-width: 1280px) 400px, (min-width: 1024px) 31vw, (min-width: 768px) 46vw, 100vw"
                     className="!rounded-none"
+                    imageClassName="transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.05]"
                   />
-                  <div className="w-full p-8">
-                    <div className={`w-12 h-12 rounded-2xl flex items-center justify-center mb-6 border ${accentColors[service.accentColor]}`}>
+                  <div className="px-8 pt-8 pb-3">
+                    <div className={`w-12 h-12 rounded-2xl flex items-center justify-center mb-6 border transition-transform duration-500 group-hover:scale-110 group-hover:-rotate-6 ${accentColors[service.accentColor]}`}>
                       <IconComponent className="w-6 h-6" />
                     </div>
-                    <h2 className="text-xl font-bold text-slate-900 mb-3">
-                      <Link href={href} className="hover:text-royal-blue">{service.title}</Link>
+                    <h2 className="text-xl font-bold text-slate-900">
+                      <Link href={href} className="hover:text-royal-blue transition-colors">{service.title}</Link>
                     </h2>
-                    <p className="text-sm text-on-surface-variant leading-relaxed mb-6">{service.shortDesc}</p>
-                    <ul className="flex flex-col gap-2 text-sm text-slate-700 font-semibold">
+                  </div>
+                  <p className="px-8 pb-6 text-sm text-on-surface-variant leading-relaxed">{service.shortDesc}</p>
+                  <ul className="mx-8 mb-6 flex flex-col gap-2.5 text-sm text-slate-700 font-semibold pt-5 border-t border-slate-100">
                       {service.benefits.map((b) => (
-                        <li key={b} className="flex items-start gap-2 leading-relaxed">
-                          <span className="text-teal-600 shrink-0" aria-hidden="true">✓</span>
+                        <li key={b} className="flex items-center gap-2.5">
+                          <span className="w-5 h-5 rounded-full bg-teal-50 text-teal-600 flex items-center justify-center shrink-0" aria-hidden="true">
+                            <Check className="w-3 h-3" strokeWidth={3} />
+                          </span>
                           <span>{b}</span>
                         </li>
                       ))}
-                    </ul>
-                  </div>
-                  <div className="w-full flex items-center justify-between mt-auto px-8 pb-8 pt-4 border-t border-slate-100 gap-4">
-                    <span className="font-bold text-slate-900 text-sm">{service.pricingRange}</span>
+                  </ul>
+                  <div className="flex items-center justify-between px-8 pb-8 pt-4 border-t border-slate-100 gap-4">
+                    <Link href="/free-audit" className="font-bold text-slate-900 text-sm hover:text-royal-blue transition-colors">Starts with a free audit</Link>
                     <Button href={href} variant="outline" className="py-2 px-4 text-xs font-bold shrink-0" id={`services-card-btn-${service.id}`}>
                       Details →
                     </Button>
@@ -121,7 +125,7 @@ export default function ServicesPage() {
       </section>
 
       <section className="bg-white py-16">
-        <div className="max-w-container-max mx-auto px-gutter grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div className="max-w-container-max mx-auto px-gutter grid grid-cols-1 lg:grid-cols-2 gap-12 stagger-reveal">
           <div>
             <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-4">Why the three work better together</h2>
             <p className="text-slate-600 leading-relaxed mb-4">
@@ -129,8 +133,8 @@ export default function ServicesPage() {
               before the buyer moves on to the next project. When one part is missing, the others underperform — which is
               why most of our clients start with all three and measure them together on cost per site visit.
             </p>
-            <Link href="/playbooks" className="inline-flex items-center gap-1 font-bold text-royal-blue hover:underline">
-              See how they fit together in our example playbooks <ArrowRight className="w-4 h-4" aria-hidden="true" />
+            <Link href="/playbooks" className="group inline-flex items-center gap-1 font-bold text-royal-blue hover:underline">
+              See how they fit together in our example playbooks <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" aria-hidden="true" />
             </Link>
           </div>
           <div className="bg-slate-50 rounded-2xl border border-slate-100 p-8">

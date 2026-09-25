@@ -39,7 +39,8 @@ export const ImageFrame: React.FC<ImageFrameProps> = ({
   imageClassName = '',
   children,
 }) => (
-  <div className={`relative w-full overflow-hidden rounded-2xl bg-slate-100 ${RATIOS[ratio]} ${className}`}>
+  // data-reveal: photos below the fold fade in as they scroll into view (components/ui/MotionEffects.tsx)
+  <div data-reveal="image" className={`relative w-full overflow-hidden rounded-2xl bg-slate-100 ${RATIOS[ratio]} ${className}`}>
     <Image
       src={src}
       alt={alt}

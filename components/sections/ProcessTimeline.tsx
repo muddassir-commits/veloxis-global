@@ -67,10 +67,12 @@ export const ProcessTimeline: React.FC = () => {
         <div className="relative">
           {/* Connector: horizontal through the icons on desktop, vertical on mobile */}
           <div
+            data-reveal="line-x"
             className="hidden lg:block absolute top-[52px] left-[10%] right-[10%] h-[2px] bg-gradient-to-r from-blue-200 via-blue-400 to-blue-600"
             aria-hidden="true"
           />
           <div
+            data-reveal="line-y"
             className="lg:hidden absolute left-7 top-8 bottom-8 w-[2px] bg-gradient-to-b from-blue-200 via-blue-400 to-blue-600"
             aria-hidden="true"
           />
@@ -79,18 +81,18 @@ export const ProcessTimeline: React.FC = () => {
             {steps.map(({ title, desc, phase, output, Icon }, index) => {
               const last = index === steps.length - 1;
               return (
-                <li key={title} className="relative flex gap-5 lg:flex-col lg:gap-0">
+                <li key={title} className="group relative flex gap-5 lg:flex-col lg:gap-0">
                   {/* Icon node on the line */}
                   <div className="relative z-10 shrink-0 lg:mx-auto lg:mb-6">
                     <span
-                      className={`flex h-14 w-14 lg:h-[104px] lg:w-[104px] items-center justify-center rounded-2xl lg:rounded-3xl border shadow-sm ${
+                      className={`flex h-14 w-14 lg:h-[104px] lg:w-[104px] items-center justify-center rounded-2xl lg:rounded-3xl border shadow-sm transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:-translate-y-1 group-hover:shadow-lg ${
                         last
-                          ? 'bg-blue-600 border-blue-600 text-white shadow-blue-600/30 shadow-lg'
-                          : 'bg-white border-slate-200 text-blue-600'
+                          ? 'halo-pulse bg-blue-600 border-blue-600 text-white'
+                          : 'bg-white border-slate-200 text-blue-600 group-hover:border-blue-300'
                       }`}
                       aria-hidden="true"
                     >
-                      <Icon className="h-6 w-6 lg:h-9 lg:w-9" />
+                      <Icon className="h-6 w-6 lg:h-9 lg:w-9 transition-transform duration-500 group-hover:scale-110" />
                     </span>
                     <span
                       className="absolute -right-2 -top-2 flex h-7 w-7 items-center justify-center rounded-full bg-slate-900 text-xs font-bold text-white ring-4 ring-white"
@@ -101,8 +103,8 @@ export const ProcessTimeline: React.FC = () => {
                   </div>
 
                   <div
-                    className={`flex-1 rounded-2xl border p-5 lg:p-6 flex flex-col transition-shadow hover:shadow-md ${
-                      last ? 'bg-slate-900 border-slate-900' : 'bg-white border-slate-200'
+                    className={`spotlight flex-1 rounded-2xl border p-5 lg:p-6 flex flex-col transition-shadow hover:shadow-md ${
+                      last ? 'spotlight-dark bg-slate-900 border-slate-900' : 'bg-white border-slate-200'
                     }`}
                   >
                     <span
