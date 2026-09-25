@@ -10,7 +10,7 @@ import { Breadcrumb } from '../../components/ui/Breadcrumb';
 import { SchemaMarkup } from '../../components/ui/SchemaMarkup';
 import { getWebPageSchema } from '../../lib/schema';
 import { servicesData } from '../../data/services-data';
-import { Target, Code, Zap, ArrowRight } from 'lucide-react';
+import { Target, Code, Zap, ArrowRight, Check } from 'lucide-react';
 import { CtaBanner } from '../../components/sections/CtaBanner';
 import { FaqAccordion } from '../../components/sections/FaqAccordion';
 import { servicesHubFaqs } from '../../data/page-faqs';
@@ -82,7 +82,8 @@ export default function ServicesPage() {
               const href = `/services/${service.slug}`;
               const photo = serviceImages[service.slug] || serviceImages['high-converting-landing-pages'];
               return (
-                <Card key={service.id} className="flex flex-col justify-between items-start text-left h-full bg-white p-0 border border-slate-200 rounded-3xl group spotlight hover:shadow-xl hover:-translate-y-1 relative overflow-hidden">
+                // 5-row subgrid (image, heading, description, points, footer): rows line up across cards
+                <Card key={service.id} className="grid grid-rows-subgrid row-span-5 gap-y-0 text-left bg-white p-0 border border-slate-200 rounded-3xl group spotlight hover:shadow-xl hover:-translate-y-1 relative overflow-hidden">
                   <ImageFrame
                     src={photo.src}
                     alt={photo.alt}
@@ -91,25 +92,27 @@ export default function ServicesPage() {
                     className="!rounded-none"
                     imageClassName="transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.05]"
                   />
-                  <div className="w-full p-8">
+                  <div className="px-8 pt-8 pb-3">
                     <div className={`w-12 h-12 rounded-2xl flex items-center justify-center mb-6 border transition-transform duration-500 group-hover:scale-110 group-hover:-rotate-6 ${accentColors[service.accentColor]}`}>
                       <IconComponent className="w-6 h-6" />
                     </div>
-                    <h2 className="text-xl font-bold text-slate-900 mb-3">
+                    <h2 className="text-xl font-bold text-slate-900">
                       <Link href={href} className="hover:text-royal-blue transition-colors">{service.title}</Link>
                     </h2>
-                    <p className="text-sm text-on-surface-variant leading-relaxed mb-6">{service.shortDesc}</p>
-                    <ul className="flex flex-col gap-2 text-sm text-slate-700 font-semibold">
+                  </div>
+                  <p className="px-8 pb-6 text-sm text-on-surface-variant leading-relaxed">{service.shortDesc}</p>
+                  <ul className="mx-8 mb-6 flex flex-col gap-2.5 text-sm text-slate-700 font-semibold pt-5 border-t border-slate-100">
                       {service.benefits.map((b) => (
-                        <li key={b} className="flex items-start gap-2 leading-relaxed">
-                          <span className="text-teal-600 shrink-0" aria-hidden="true">✓</span>
+                        <li key={b} className="flex items-center gap-2.5">
+                          <span className="w-5 h-5 rounded-full bg-teal-50 text-teal-600 flex items-center justify-center shrink-0" aria-hidden="true">
+                            <Check className="w-3 h-3" strokeWidth={3} />
+                          </span>
                           <span>{b}</span>
                         </li>
                       ))}
-                    </ul>
-                  </div>
-                  <div className="w-full flex items-center justify-between mt-auto px-8 pb-8 pt-4 border-t border-slate-100 gap-4">
-                    <span className="font-bold text-slate-900 text-sm">{service.pricingRange}</span>
+                  </ul>
+                  <div className="flex items-center justify-between px-8 pb-8 pt-4 border-t border-slate-100 gap-4">
+                    <Link href="/free-audit" className="font-bold text-slate-900 text-sm hover:text-royal-blue transition-colors">Starts with a free audit</Link>
                     <Button href={href} variant="outline" className="py-2 px-4 text-xs font-bold shrink-0" id={`services-card-btn-${service.id}`}>
                       Details →
                     </Button>

@@ -243,10 +243,14 @@ export default async function ServicePage({ params }: PageProps) {
 
             <div className="relative bg-slate-50 rounded-2xl p-6 border border-slate-100">
               <span className="border-beam" aria-hidden="true" />
-              <h2 className="font-bold text-slate-900 mb-2 text-lg">Pricing</h2>
-              <p className="text-2xl font-extrabold text-slate-900">{service.pricingRange}</p>
-              <p className="text-sm text-slate-500 mt-2">Month-to-month, 30 days’ notice. Final scope confirmed after a free audit.</p>
-              <Link href="/pricing" className="inline-block mt-4 text-sm font-bold text-royal-blue hover:underline">See all packages →</Link>
+              <h2 className="font-bold text-slate-900 mb-2 text-lg">Start with a free audit</h2>
+              <p className="text-sm text-slate-600 leading-relaxed">
+                Muddassir reviews your current page, ads and lead follow-up and tells you what to fix first — free, with no obligation.
+              </p>
+              <p className="text-sm text-slate-500 mt-3">Month-to-month, 30 days’ notice, no lock-in.</p>
+              <Link href="/free-audit" className="group inline-flex items-center gap-1 mt-4 text-sm font-bold text-royal-blue hover:underline">
+                What the audit covers <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" aria-hidden="true" />
+              </Link>
             </div>
 
             <ImageFrame

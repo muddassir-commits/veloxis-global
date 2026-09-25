@@ -89,11 +89,11 @@ export const pageMeta = {
       'Example real estate marketing plans: campaign structure, keyword groups, bidding, landing page blueprints and WhatsApp lead flows you can inspect.',
     path: '/playbooks',
   },
-  pricing: {
-    title: 'Real Estate Marketing Pricing & Packages | Veloxis',
+  freeAudit: {
+    title: 'Free Real Estate Marketing Audit | Veloxis Global',
     description:
-      'Monthly pricing for real estate landing pages, Meta and Google ad management and WhatsApp automation. Ad spend is paid separately; no lock-in.',
-    path: '/pricing',
+      'Free audit of your real estate landing page, Meta and Google ads and WhatsApp lead follow-up. A founder-led review with the fixes to make first. No obligation.',
+    path: '/free-audit',
   },
   about: {
     title: 'About Veloxis Global & Founder Muddassir Ali',

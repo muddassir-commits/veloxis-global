@@ -34,7 +34,6 @@ export interface ServiceData {
   process: ServiceBlock[];
   whoFor: ServiceBlock[];
   toolsNote?: string;
-  pricingRange: string;
   benefits: string[];
   relatedServices: string[];
   relatedPlaybook: string;
@@ -129,7 +128,6 @@ export const servicesData: ServiceData[] = [
       { title: 'Channel partners', desc: 'Mandated on a project and needing a page of their own, instead of sharing the builder’s link with every other CP.' },
       { title: 'Brokers and property consultants', desc: 'Promoting resale or rental inventory and wanting enquiries to come to them, not to a portal.' },
     ],
-    pricingRange: 'Starts from ₹15,000 / month',
     benefits: ['RERA details above the fold', 'WhatsApp price-sheet capture', 'Built to load fast on mobile'],
     relatedServices: ['paid-ads', 'ai-automation'],
     relatedPlaybook: 'project-landing-page-blueprint',
@@ -260,7 +258,6 @@ export const servicesData: ServiceData[] = [
       { title: 'Teams with a follow-up process', desc: 'Ads work best when someone — or a WhatsApp automation — responds within minutes. We help set that up too.' },
     ],
     toolsNote: 'Ad spend is paid directly to Google and Meta from your own ad accounts. Our fee covers strategy, setup, creatives and weekly optimisation.',
-    pricingRange: 'Starts from ₹25,000 / month',
     benefits: ['Project & locality keywords', 'Qualifying lead forms', 'Cost-per-site-visit reporting'],
     relatedServices: ['high-converting-landing-pages', 'ai-automation'],
     relatedPlaybook: 'new-launch-meta-google-ads-plan',
@@ -392,7 +389,6 @@ export const servicesData: ServiceData[] = [
     ],
     toolsNote:
       'We build on the official WhatsApp Business API and work with the CRM you already use. WhatsApp message charges are billed by Meta through your provider and are separate from our fee.',
-    pricingRange: 'Starts from ₹30,000 / month',
     benefits: ['Instant WhatsApp replies', 'Site-visit booking & reminders', 'CRM & CP lead routing'],
     relatedServices: ['paid-ads', 'high-converting-landing-pages'],
     relatedPlaybook: 'whatsapp-lead-response-flow',

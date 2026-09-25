@@ -4,7 +4,7 @@
  */
 import React from 'react';
 import Link from 'next/link';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, Check } from 'lucide-react';
 import { servicesData as services } from '../../data/services-data';
 import { Card } from '../ui/Card';
 import { SectionLabel } from '../ui/SectionLabel';
@@ -49,14 +49,15 @@ export const ServicesGrid: React.FC = () => {
           </p>
         </div>
 
-        {/* Services Grid */}
+        {/* Services Grid — each card is a 5-row subgrid (image, title, description, points, link),
+            so every row lines up across the cards however the text wraps */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 stagger-reveal">
           {services.map((service, idx) => {
             const visual = serviceVisuals[idx] || serviceVisuals[0];
             return (
-              <div key={service.id} className="h-full">
-                <Link href={`/services/${service.slug}`} className="block h-full group">
-                  <Card hover className="flex flex-col items-start text-left h-full p-0 overflow-hidden">
+              <div key={service.id} className="grid grid-rows-subgrid row-span-5 gap-y-0">
+                <Link href={`/services/${service.slug}`} className="grid grid-rows-subgrid row-span-5 gap-y-0 group">
+                  <Card hover className="grid grid-rows-subgrid row-span-5 gap-y-0 text-left p-0 overflow-hidden">
                     {/* Top image — fixed 16:10 box, photo cropped to the same ratio */}
                     <ImageFrame
                       src={visual.image}
@@ -68,32 +69,33 @@ export const ServicesGrid: React.FC = () => {
                       imageClassName="transition-transform duration-500 group-hover:scale-[1.04]"
                     />
 
-                    <div className="p-6 sm:p-8 flex flex-col flex-grow">
                       {/* Title */}
-                      <h3 className="text-xl font-bold text-slate-900 group-hover:text-royal-blue transition-colors duration-300 mb-3">
+                      <h3 className="px-6 sm:px-8 pt-6 sm:pt-8 pb-3 text-xl font-bold text-slate-900 group-hover:text-royal-blue transition-colors duration-300">
                         {service.title}
                       </h3>
 
                       {/* Description */}
-                      <p className="text-body-md text-slate-500 leading-relaxed flex-grow mb-6">
+                      <p className="px-6 sm:px-8 pb-6 text-body-md text-slate-500 leading-relaxed">
                         {service.shortDesc}
                       </p>
 
-                      {/* Benefits chips */}
-                      <div className="flex flex-wrap gap-2 mb-6">
-                        {service.benefits.slice(0, 3).map((benefit, bIdx) => (
-                          <span key={bIdx} className={`text-[11px] font-semibold ${visual.accentBg} ${visual.accentText} rounded-full px-3 py-1`}>
+                      {/* Key points — one per line so they line up across the cards */}
+                      <ul className="mx-6 sm:mx-8 mb-6 flex flex-col gap-2.5 pt-5 border-t border-slate-100">
+                        {service.benefits.slice(0, 3).map((benefit) => (
+                          <li key={benefit} className="flex items-center gap-2.5 text-sm font-semibold text-slate-700">
+                            <span className={`w-5 h-5 rounded-full ${visual.accentBg} ${visual.accentText} flex items-center justify-center shrink-0`} aria-hidden="true">
+                              <Check className="w-3 h-3" strokeWidth={3} />
+                            </span>
                             {benefit}
-                          </span>
+                          </li>
                         ))}
-                      </div>
+                      </ul>
 
                       {/* Explore Link */}
-                      <div className="inline-flex items-center gap-1.5 font-bold text-sm text-royal-blue transition-colors duration-300 mt-auto">
+                      <div className="px-6 sm:px-8 pb-6 sm:pb-8 flex items-start gap-1.5 font-bold text-sm text-royal-blue transition-colors duration-300">
                         <span>{service.title}</span>
-                        <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1.5" />
+                        <ArrowRight className="w-4 h-4 mt-0.5 shrink-0 transition-transform duration-300 group-hover:translate-x-1.5" />
                       </div>
-                    </div>
                   </Card>
                 </Link>
               </div>

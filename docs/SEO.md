@@ -17,7 +17,7 @@ One primary search intent per page. Don't target a page's primary keyword on any
 | `/industries/real-estate` | marketing for real estate developers | builder marketing, digital marketing for real estate agents (260) | Commercial — developers |
 | `/channel-partners` | channel partner marketing | marketing for real estate channel partners and brokers | Commercial — CPs and brokers |
 | `/playbooks` | real estate marketing strategy (320) | real estate marketing plan examples | Informational → commercial |
-| `/pricing` | real estate marketing packages | real estate marketing pricing | Commercial |
+| `/free-audit` | free real estate marketing audit | real estate marketing review, lead flow audit | Commercial — conversion (replaces `/pricing`, which 301s here; fees are no longer published) |
 | `/blog/what-is-eoi-in-real-estate` | what is eoi in real estate (880) | eoi vs token amount, eoi refund | Informational |
 | `/blog/channel-partner-in-real-estate` | channel partner in real estate (880) | cp commission, rera agent registration | Informational |
 | `/blog/real-estate-ad-examples` | creative real estate ads (880) | real estate ad examples, real estate advertising | Informational |

@@ -6,7 +6,7 @@ import { audiences } from '../data/audiences';
 import { playbooks } from '../data/playbooks';
 import { getAllPosts } from './blog';
 import { faqs } from '../data/faqs';
-import { pricingFaqs } from '../data/pricing';
+import { freeAuditFaqs } from '../data/free-audit';
 import { SITE_URL, FOUNDER_YEARS } from './seo-config';
 import { playbookFaqs } from '../data/playbook-faqs';
 
@@ -59,7 +59,7 @@ export function buildLlmsTxt(): string {
     '## Optional',
     '',
     `- [Full site content](${SITE_URL}/llms-full.txt)`,
-    `- [Pricing](${SITE_URL}/pricing)`,
+    `- [Free marketing audit](${SITE_URL}/free-audit)`,
     '',
   ].join('\n');
 }
@@ -80,7 +80,7 @@ export function buildLlmsFullTxt(): string {
   const out: string[] = ['# Veloxis Global — full site content', '', intro, '', facts, ''];
 
   for (const s of servicesData) {
-    out.push(`## ${s.h1}`, '', `URL: ${SITE_URL}/services/${s.slug}`, `Pricing: ${s.pricingRange}`, '', ...s.intro, '');
+    out.push(`## ${s.h1}`, '', `URL: ${SITE_URL}/services/${s.slug}`, '', ...s.intro, '');
     out.push(`### ${s.problemsHeading}`, ...s.problems.map((p) => `- ${p.title}: ${p.desc}`), '');
     out.push(`### ${s.deliverablesHeading}`, ...s.deliverables.map((d) => `- ${d.title}: ${d.desc}`), '');
     out.push('### How it works', ...s.process.map((p, i) => `${i + 1}. ${p.title}: ${p.desc}`), '');
@@ -94,7 +94,7 @@ export function buildLlmsFullTxt(): string {
   }
 
   out.push('## General FAQ', '', ...faqs.flatMap((f) => [`Q: ${f.question}`, `A: ${f.answer}`, '']));
-  out.push('## Pricing FAQ', '', ...pricingFaqs.flatMap((f) => [`Q: ${f.question}`, `A: ${f.answer}`, '']));
+  out.push('## Free audit FAQ', '', ...freeAuditFaqs.flatMap((f) => [`Q: ${f.question}`, `A: ${f.answer}`, '']));
 
   for (const p of playbooks) {
     out.push(`## Playbook: ${p.title}`, '', `URL: ${SITE_URL}/playbooks/${p.slug}`, `Scenario (example, not a client result): ${p.scenario}`, '');

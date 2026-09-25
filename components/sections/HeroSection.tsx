@@ -39,12 +39,6 @@ export const HeroSection: React.FC = () => {
       <div className="max-w-[1280px] mx-auto px-4 md:px-16 w-full relative z-10 py-20">
         <div className="max-w-[680px] flex flex-col items-start text-left">
 
-          {/* Badge */}
-          <div className="hero-fade-in inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-2 mb-8">
-            <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" aria-hidden="true"></span>
-            <span className="text-xs font-bold tracking-wider uppercase text-white/90">For builders, brokers &amp; channel partners</span>
-          </div>
-
           {/* H1 Headline */}
           <h1 className="text-[36px] md:text-[56px] lg:text-[64px] font-extrabold tracking-[-0.02em] leading-[1.1] text-white mb-6 font-sans">
             The real estate marketing agency that fills your{' '}

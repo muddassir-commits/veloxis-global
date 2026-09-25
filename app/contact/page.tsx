@@ -1,6 +1,7 @@
 import React from 'react';
 import { Metadata } from 'next';
 import Image from 'next/image';
+import Link from 'next/link';
 import { constructMetadata, pageMeta } from '../../lib/seo-config';
 import { Badge } from '../../components/ui/Badge';
 import { Card } from '../../components/ui/Card';
@@ -44,7 +45,8 @@ export default function ContactPage() {
             </h1>
             <p className="text-base sm:text-body-md text-on-surface-variant leading-relaxed">
               Tell us about your project or current campaigns. We’ll review your landing page, ads and lead follow-up and
-              come back with what we would change first — free, with no obligation.
+              come back with what we would change first — free, with no obligation.{' '}
+              <Link href="/free-audit" className="font-semibold text-royal-blue hover:underline">See what the audit covers</Link>.
             </p>
 
             <div className="flex items-center gap-4 bg-white p-4 rounded-xl border border-slate-100 shadow-sm w-full">
