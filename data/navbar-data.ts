@@ -27,7 +27,7 @@ export const servicesGroups: NavbarGroup[] = [
         description: "Exclusive property leads, measured on site visits"
       },
       {
-        title: "WhatsApp Chatbot & Automation",
+        title: "AI Chatbot & WhatsApp Automation",
         href: "/services/ai-automation",
         emoji: "🤖",
         description: "Instant replies, qualification and visit booking"

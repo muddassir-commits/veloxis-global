@@ -62,7 +62,7 @@ export const pageMeta = {
   home: {
     title: 'Real Estate Marketing Agency | Veloxis Global',
     description:
-      'We build project landing pages, run Meta and Google ads for property leads, and set up WhatsApp automation for builders, brokers and channel partners.',
+      'Real estate digital marketing agency: project landing pages, Meta and Google ads for property leads, and AI WhatsApp automation for builders, brokers and CPs.',
     path: '/',
   },
   services: {
@@ -78,9 +78,9 @@ export const pageMeta = {
     path: '/industries/real-estate',
   },
   channelPartners: {
-    title: 'Marketing for Real Estate Channel Partners | Veloxis',
+    title: 'Real Estate Channel Partner & Agent Marketing | Veloxis',
     description:
-      'Marketing for real estate channel partners and brokers: exclusive leads from Meta and Google, project pages you control, and instant WhatsApp follow-up.',
+      'Digital marketing for real estate agents, brokers and channel partners: exclusive Meta and Google leads, project pages you control, instant WhatsApp replies.',
     path: '/channel-partners',
   },
   playbooks: {
@@ -110,7 +110,7 @@ export const pageMeta = {
   blog: {
     title: 'Real Estate Marketing Blog | Veloxis Global',
     description:
-      'Practical guides for builders, brokers and channel partners: Meta and Google ads for property, landing pages, WhatsApp follow-up, EOI and CP programmes.',
+      'Guides for builders, brokers and CPs: real estate lead generation, Meta and Google ads, AI and WhatsApp follow-up, landing pages, EOI and CP programmes.',
     path: '/blog',
   },
   privacy: {

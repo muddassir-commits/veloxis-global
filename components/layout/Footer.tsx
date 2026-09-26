@@ -144,7 +144,7 @@ export const Footer: React.FC = () => {
               </li>
               <li>
                 <Link href="/services/ai-automation" className="hover:text-white hover:translate-x-1 transition-all duration-200 inline-block">
-                  WhatsApp Chatbot &amp; Automation
+                  AI Chatbot &amp; WhatsApp Automation
                 </Link>
               </li>
             </ul>

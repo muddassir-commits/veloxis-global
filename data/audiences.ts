@@ -87,7 +87,7 @@ export const audiences: Record<AudienceData['key'], AudienceData> = {
       { title: 'Numbers your sales head trusts', desc: 'Weekly reporting on leads, contact rate, site visits and cost per site visit, taken from your CRM rather than ad dashboards.' },
     ],
     relatedPlaybooks: ['new-launch-meta-google-ads-plan', 'project-landing-page-blueprint'],
-    relatedPosts: ['what-is-eoi-in-real-estate', 'google-ads-vs-meta-ads-real-estate-india', 'real-estate-ad-examples'],
+    relatedPosts: ['what-is-eoi-in-real-estate', 'meta-ads-for-real-estate-india', 'ai-for-real-estate-india', 'google-ads-vs-meta-ads-real-estate-india'],
     faqs: [
       { question: 'Do you work with small and mid-size developers?', answer: 'Yes. Most of our work is with developers running one to a few projects at a time, where the founder or sales head wants direct control over lead generation instead of depending only on portals and CPs.' },
       { question: 'Will this replace our channel partners?', answer: 'No. CPs remain an important sales channel. Our work gives you a direct lead source alongside them, and we can give your CPs tagged pages and links so their leads are tracked fairly.' },
@@ -119,7 +119,7 @@ export const audiences: Record<AudienceData['key'], AudienceData> = {
       'Your own leads for the projects you’re mandated on — from Meta and Google, on pages under your brand, answered on WhatsApp the moment they arrive.',
     intro: [
       'Channel partners bring a large share of residential bookings in India, yet most run on WhatsApp groups, shared portal leads and the builder’s marketing material. The same buyer is often called by several brokers within an hour, and when two parties claim a booking, the CP without records usually loses.',
-      'We set up a simple lead engine for CPs and brokers: project pages you control, ads that produce leads only you receive, instant WhatsApp replies, and a timestamped record of every lead and site visit you can show the developer.',
+      'Digital marketing for real estate agents doesn’t have to mean posting on Instagram every day. We set up a simple lead engine for CPs and brokers: project pages you control, ads that produce leads only you receive, instant WhatsApp replies, and a timestamped record of every lead and site visit you can show the developer.',
     ],
     painsHeading: 'What channel partners tell us',
     pains: [
@@ -141,7 +141,7 @@ export const audiences: Record<AudienceData['key'], AudienceData> = {
       { title: 'Registration records that hold up', desc: 'Every lead is logged with the time it arrived and when it was registered with the developer.' },
     ],
     relatedPlaybooks: ['channel-partner-lead-registration', 'whatsapp-lead-response-flow'],
-    relatedPosts: ['channel-partner-in-real-estate', 'real-estate-local-seo-ncr', 'whatsapp-automation-for-real-estate-leads'],
+    relatedPosts: ['channel-partner-in-real-estate', 'how-to-generate-real-estate-leads', 'real-estate-local-seo-ncr', 'whatsapp-automation-for-real-estate-leads'],
     faqs: [
       { question: 'Can a channel partner run ads for a developer’s project?', answer: 'Usually yes, if the developer allows it. Many developers set rules on project names, pricing and offers in CP ads. The ads should carry the project’s RERA number and your RERA agent registration number.' },
       { question: 'Do I need to be RERA-registered as an agent?', answer: 'Real estate agents who market or sell RERA-registered projects are generally required to register with the state RERA authority. Most developers also ask for it before onboarding a CP.' },
@@ -151,6 +151,7 @@ export const audiences: Record<AudienceData['key'], AudienceData> = {
       { question: 'Can you help independent brokers with resale inventory too?', answer: 'Yes. The same approach — a focused page, local ads and instant WhatsApp follow-up — works for resale and rental inventory.' },
       { question: 'Can I run campaigns for several projects at once?', answer: 'Yes. Each mandated project gets its own page and campaign, so leads, budgets and results stay separate and each developer’s rules are followed.' },
       { question: 'Will the leads and data belong to me?', answer: 'Yes. Ads run from your own Google and Meta accounts, and leads go to your CRM or Google Sheet.' },
+      { question: 'What does digital marketing for real estate agents include?', answer: 'For most agents and CPs it comes down to four things: a page for each project or listing you can send buyers to, Meta (Facebook and Instagram) and Google ads that bring enquiries only you receive, an instant WhatsApp reply to every lead, and a Google Business Profile so local searches find you. Posting on social media helps, but it rarely brings leads on its own.' },
     ],
     ctaTitle: 'Want leads that come only to you?',
     ctaDescription: 'Tell us which projects you’re mandated on. We’ll review your current lead sources and show you what a setup for your firm would look like.',

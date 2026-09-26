@@ -276,7 +276,7 @@ export default function BlogPostContent({ post, relatedPosts, service }: Props) 
               <div className="absolute top-0 right-0 w-24 h-24 bg-royal-blue/30 rounded-full blur-xl"></div>
 
               <p className="text-lg font-extrabold relative z-10 leading-tight">
-                {service ? `Need help with ${service.title.toLowerCase()}?` : 'Want more site visits from your marketing?'}
+                {service ? `Need help with ${service.title}?` : 'Want more site visits from your marketing?'}
               </p>
               <p className="text-xs text-slate-400 leading-relaxed relative z-10">
                 {service ? service.shortDesc : 'Get a free review of your landing page, ads and lead response time, with a plan to fix what is leaking.'}

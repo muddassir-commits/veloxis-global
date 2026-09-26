@@ -47,7 +47,7 @@ export const HeroSection: React.FC = () => {
 
           {/* Body Paragraph */}
           <p className="text-[16px] md:text-[18px] font-normal text-white/75 leading-relaxed max-w-[540px] font-sans mb-8">
-            We build project landing pages, run Meta and Google ads, and set up WhatsApp automation that replies to every enquiry in seconds — for developers, brokers and channel partners in Kanpur, Lucknow, Noida and Delhi NCR. Measured on site visits, not clicks.
+            We build project landing pages, run Meta (Facebook &amp; Instagram) and Google ads, and set up AI WhatsApp automation that replies to every enquiry in seconds — for developers, brokers and channel partners in Kanpur, Lucknow, Noida and Delhi NCR. Measured on site visits, not clicks.
           </p>
 
           {/* CTA Buttons */}

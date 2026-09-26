@@ -1,0 +1,61 @@
+{
+  "title": "AI for Real Estate in India: 5 Practical Uses for Builders and Brokers",
+  "seoTitle": "AI for Real Estate in India: 5 Practical Uses",
+  "excerpt": "How Indian developers, brokers and channel partners can use AI today — WhatsApp chatbots, lead scoring, ad copy and smarter bidding — and where it falls short.",
+  "date": "2026-09-26",
+  "category": "AI Automation",
+  "service": "ai-automation",
+  "image": "/images/people/blog/ai-real-estate-agent-laptop.jpg",
+  "imageAlt": "A woman talking on her phone while typing on a laptop at an office desk",
+  "inlineImages": [
+    {
+      "src": "/images/people/blog/ai-real-estate-team-reviewing-screen.jpg",
+      "alt": "A woman pointing at a computer screen with a pencil while a colleague looks on",
+      "beforeHeading": "limits"
+    }
+  ],
+  "about": [
+    {
+      "name": "Artificial intelligence",
+      "sameAs": "https://en.wikipedia.org/wiki/Artificial_intelligence"
+    },
+    {
+      "name": "Chatbot",
+      "sameAs": "https://en.wikipedia.org/wiki/Chatbot"
+    }
+  ],
+  "faqs": [
+    {
+      "question": "How is AI used in real estate marketing?",
+      "answer": "Mainly in three ways: chatbots that reply to buyers and book site visits, generative tools that draft ad copy, descriptions and creatives, and machine learning in Google and Meta that decides who sees your ads — which works far better when you send back which leads visited and booked."
+    },
+    {
+      "question": "Is there an AI tool for real estate agents in India?",
+      "answer": "Yes. The most useful for Indian agents and CPs is an AI chatbot on the WhatsApp Business API that replies to every enquiry instantly, answers questions in English or Hinglish, qualifies the buyer and books visits. General tools like ChatGPT, Claude, Gemini and Canva help with copy and creatives."
+    },
+    {
+      "question": "What is the best use of AI for a real estate developer?",
+      "answer": "Instant lead response. Replying to every enquiry within seconds, qualifying it and booking a site visit has a faster effect on sales than any other AI use, because most leads are lost to slow follow-up."
+    },
+    {
+      "question": "Can AI replace real estate salespeople?",
+      "answer": "No. AI handles the first reply, routine questions, reminders and summaries. Site visits, negotiation and building trust with a family making a large purchase still need people."
+    },
+    {
+      "question": "Can an AI chatbot give wrong information to buyers?",
+      "answer": "It can if it is not restricted. A real estate chatbot should answer only from approved project details — price band, configurations, RERA number, possession date — and hand the chat to a person whenever it is unsure."
+    },
+    {
+      "question": "Do RERA rules apply to AI-written ads?",
+      "answer": "Yes. The promoter is responsible for what an advertisement says, whoever or whatever wrote it. Section 12 of the RERA Act makes the promoter compensate buyers who suffer a loss from incorrect or false statements in an advertisement or prospectus."
+    },
+    {
+      "question": "Is it legal to use AI calling bots on bought phone number lists?",
+      "answer": "It is risky. The people on those lists did not agree to hear from you, promotional calls to DND-registered numbers can breach TRAI rules, and India’s Digital Personal Data Protection Act, 2023 requires consent for using personal data. Contact only people who enquired with you."
+    },
+    {
+      "question": "How do I start using AI in my real estate business?",
+      "answer": "Start with an AI WhatsApp reply on every lead source, let it ask your qualification questions, send qualified-lead and site-visit data back to Google and Meta, and measure the result on cost per site visit."
+    }
+  ]
+}
