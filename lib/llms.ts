@@ -12,7 +12,7 @@ import { playbookFaqs } from '../data/playbook-faqs';
 
 const qa = (list: { question: string; answer: string }[] = []) => list.flatMap((f) => [`Q: ${f.question}`, `A: ${f.answer}`, '']);
 
-const intro = `> Veloxis Global is a real estate marketing agency for developers, builders, brokers and channel partners in India. It builds project landing pages, runs Meta and Google ads for property leads, and sets up WhatsApp chatbots and CRM automation that reply to every enquiry within seconds. It works only in real estate and reports on site visits and cost per site visit.`;
+const intro = `> Veloxis Global is a real estate marketing agency for developers, builders, brokers and channel partners in India. It builds project landing pages, runs Meta (Facebook and Instagram) and Google ads for property leads, and sets up AI WhatsApp chatbots and CRM automation that reply to every enquiry within seconds. It works only in real estate and reports on site visits and cost per site visit.`;
 
 const contact = `## Contact
 
@@ -26,7 +26,7 @@ const facts = `## Key facts
 
 - Founder: ${siteData.founder} (${FOUNDER_YEARS}+ years in digital marketing) — ${SITE_URL}/about
 - Industry focus: real estate only
-- Services: landing pages & project microsites; Meta & Google ads for lead generation; WhatsApp chatbot & CRM automation
+- Services: landing pages & project microsites; Meta (Facebook & Instagram) & Google ads for real estate lead generation; AI chatbot, WhatsApp & CRM automation
 - Terms: month-to-month with 30 days' notice; ad spend is paid directly to Google and Meta by the client
 - Playbooks on this site are example plans for hypothetical projects, not client case studies`;
 

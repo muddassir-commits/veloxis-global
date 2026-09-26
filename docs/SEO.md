@@ -6,29 +6,43 @@ Search volumes are Google Ads data for India via DataForSEO (September 2026).
 ## Keyword map
 
 One primary search intent per page. Don't target a page's primary keyword on any other page.
+Volumes refreshed 2026-09-26 (research in `research/kw-free-2026-09/KEYWORD-MAP.md`; repeat it with the `keyword-research` skill).
 
 | Page | Primary keyword (monthly searches) | Secondary keywords | Intent |
 |---|---|---|---|
-| `/` | real estate marketing agency (880) | real estate digital marketing agency (720), real estate marketing companies (320) | Commercial — choosing an agency |
-| `/services` | real estate marketing services (260) | real estate digital marketing services (210) | Commercial — comparing services |
-| `/services/high-converting-landing-pages` | real estate landing page design | real estate website design (590), real estate landing page (390), project microsite | Commercial |
-| `/services/paid-ads` | real estate lead generation (1,300) | real estate ads (1,900), facebook ads for real estate (320), google ads for real estate (260) | Commercial |
-| `/services/ai-automation` | real estate chatbot (480) | whatsapp automation for real estate, real estate CRM integration | Commercial |
-| `/industries/real-estate` | marketing for real estate developers | builder marketing, digital marketing for real estate agents (260) | Commercial — developers |
-| `/channel-partners` | channel partner marketing | marketing for real estate channel partners and brokers | Commercial — CPs and brokers |
-| `/playbooks` | real estate marketing strategy (320) | real estate marketing plan examples | Informational → commercial |
-| `/free-audit` | free real estate marketing audit | real estate marketing review, lead flow audit | Commercial — conversion (replaces `/pricing`, which 301s here; fees are no longer published) |
+| `/` | real estate marketing agency (880) | real estate digital marketing agency (720), real estate marketing company (320) | Commercial — choosing an agency |
+| `/services` | real estate marketing services | real estate digital marketing services | Commercial — comparing services |
+| `/services/high-converting-landing-pages` | real estate landing page (390) | real estate website design (590, SERP is mostly design galleries), project microsite | Commercial |
+| `/services/paid-ads` | real estate lead generation (1,300) | facebook ads for real estate (320), google ads for real estate (260), meta ads for real estate (90, ×3 in a year), real estate lead generation agency (110), real estate lead generation services (90) | Commercial |
+| `/services/ai-automation` | real estate chatbot (480, rising) | real estate AI chatbot, ai chatbot for real estate (40, ×7), real estate automation (50), whatsapp marketing for real estate (40) | Commercial |
+| `/industries/real-estate` | marketing for real estate developers | builder marketing | Commercial — developers |
+| `/channel-partners` | channel partner marketing | digital marketing for real estate agents (260), marketing for brokers | Commercial — CPs and brokers |
+| `/playbooks` | real estate marketing strategies (320) | real estate marketing ideas (140), real estate marketing plan | Informational → commercial |
+| `/free-audit` | free real estate marketing audit | real estate marketing review, lead flow audit | Commercial — conversion |
+| `/blog/ai-for-real-estate-india` | ai for real estate (1,000, fastest-rising) | ai in real estate marketing, ai for real estate agents (70), ai in real estate india (40) | Informational |
+| `/blog/how-to-generate-real-estate-leads` | how to generate real estate leads (480) | how to get clients in real estate (90 × several variants), real estate leads free (90), junk/fake leads | Informational |
+| `/blog/meta-ads-for-real-estate-india` | meta ads for real estate (90) | facebook ads for real estate (as a guide), instagram ads for real estate (40) | Informational |
+| `/blog/google-ads-for-real-estate-india` | google ads for real estate agents / in india | google ads strategy for real estate, negative keywords for real estate | Informational |
+| `/blog/real-estate-ad-examples` | real estate ads (1,900) | real estate advertising, real estate ad examples, real estate ad ideas (90), real estate ads creative (140) | Informational — the SERP is inspiration/examples, not agencies |
+| `/blog/channel-partner-in-real-estate` | channel partner in real estate (880) | how to become a channel partner in real estate (110), cp commission, rera agent registration | Informational |
 | `/blog/what-is-eoi-in-real-estate` | what is eoi in real estate (880) | eoi vs token amount, eoi refund | Informational |
-| `/blog/channel-partner-in-real-estate` | channel partner in real estate (880) | cp commission, rera agent registration | Informational |
-| `/blog/real-estate-ad-examples` | creative real estate ads (880) | real estate ad examples, real estate advertising | Informational |
-| `/blog/google-ads-vs-meta-ads-real-estate-india` | facebook ads vs google ads for real estate | meta ads for real estate | Informational |
+| `/blog/google-ads-vs-meta-ads-real-estate-india` | facebook ads vs google ads for real estate | google ads vs meta ads | Informational |
 | `/blog/real-estate-landing-page-conversion-hacks` | real estate landing page best practices | landing page for property launch | Informational |
 | `/blog/whatsapp-automation-for-real-estate-leads` | whatsapp automation for real estate leads | real estate lead follow up | Informational |
-| `/blog/real-estate-local-seo-ncr` | google business profile for real estate agents | local seo for brokers | Informational |
+| `/blog/real-estate-local-seo-ncr` | local seo for real estate (70) | google business profile for real estate agents | Informational |
+
+Service page vs guide on the same topic: the service page targets the commercial phrase ("real estate lead generation", "real estate chatbot"); the guide targets the how-to / what-is phrase. Always link guide → service page.
+
+Copy rules from the research:
+- Write "Meta (Facebook and Instagram) ads", not only "Facebook ads" — in India "meta ads" is now searched more than "facebook ads" (Google Trends, 2026).
+- Lead with lead **quality** (junk leads, site visits, follow-up speed) — that is what builders and brokers complain about.
 
 Deliberately **not** targeted:
-- **real estate crm (2,400)** — Google shows CRM software vendors and "top 10 CRM" lists. We mention CRM integration, but don't compete for this term.
-- **real estate + city** (e.g. "real estate marketing agency lucknow") — too little search volume to justify separate city pages. Revisit once the Google Business Profile is verified.
+- **real estate crm (2,400)** — Google shows CRM software vendors and "top 10 CRM" lists.
+- **builder website (60,500)** — means website-builder tools, not property builders.
+- **channel partner meaning (1,300)** — generic business definition.
+- **how to sell property / flat fast (210–260)** — homeowners, not our clients.
+- **real estate + city** (e.g. "real estate marketing agency lucknow") — 0–40 searches a month. Revisit once the Google Business Profile is verified.
 
 ## Where things live
 

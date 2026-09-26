@@ -1,0 +1,57 @@
+{
+  "title": "Google Ads for Real Estate in India: Keywords, Settings and Tracking",
+  "seoTitle": "Google Ads for Real Estate in India: A Practical Guide",
+  "excerpt": "Set up Google Ads for Indian property: campaign types, keyword groups, negative keywords, location settings, ad copy and tracking that bids for site visits.",
+  "date": "2026-09-26",
+  "category": "Paid Ads",
+  "service": "paid-ads",
+  "image": "/images/people/blog/google-ads-man-searching-laptop.jpg",
+  "imageAlt": "A man in a turban working on a laptop at a table by a window",
+  "inlineImages": [
+    {
+      "src": "/images/people/blog/google-ads-analyst-reviewing-data.jpg",
+      "alt": "A person marking printed charts with a pen next to a laptop",
+      "beforeHeading": "tracking"
+    }
+  ],
+  "about": [
+    {
+      "name": "Google Ads",
+      "sameAs": "https://en.wikipedia.org/wiki/Google_Ads"
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Do Google Ads work for real estate?",
+      "answer": "Yes, especially for buyers already searching for a locality, configuration or project name. They work less well for brand-new launches with no search demand yet, where Meta usually builds interest first."
+    },
+    {
+      "question": "Which Google Ads campaign type is best for real estate?",
+      "answer": "Search campaigns on project, locality and configuration keywords. Add Performance Max or Demand Gen only once conversion tracking reports qualified leads, not just form fills."
+    },
+    {
+      "question": "What keywords should I use for real estate Google Ads?",
+      "answer": "Your project name, locality plus configuration searches like “3 BHK in [sector]”, property type and stage like “ready to move flats in [city]”, and the builder’s brand name — each in its own ad group."
+    },
+    {
+      "question": "What negative keywords should real estate ads use?",
+      "answer": "Rent, rental, PG, hostel, lease, job, salary, course, resale for new launches, news, map, pdf and free, plus anything irrelevant found in the weekly search terms report."
+    },
+    {
+      "question": "Which location setting should I choose?",
+      "answer": "For most projects, “Presence: people in or regularly in your included locations”. Use “presence or interest” only deliberately, for example in a separate campaign for NRI buyers."
+    },
+    {
+      "question": "How much do Google Ads cost for real estate in India?",
+      "answer": "It varies widely by city, locality and ticket size. Give each campaign enough budget to learn, and judge it on cost per site visit rather than cost per click or cost per lead."
+    },
+    {
+      "question": "Can I bid on competitor project names?",
+      "answer": "Some advertisers do, but check your legal position first and never use another company’s trademark in your ad text."
+    },
+    {
+      "question": "How do I track site visits from Google Ads?",
+      "answer": "Record the click ID with each lead, mark qualified leads and site visits in your CRM, and send them back to Google with enhanced conversions for leads or offline conversion import."
+    }
+  ]
+}

@@ -183,17 +183,18 @@ export const servicesData: ServiceData[] = [
     emoji: '🎯',
     icon: 'Target',
     accentColor: 'indigo',
-    seoTitle: 'Real Estate Lead Generation (Meta & Google Ads) | Veloxis',
+    seoTitle: 'Real Estate Lead Generation: Meta & Google Ads | Veloxis',
     metaDescription:
-      'Real estate lead generation with Meta and Google ads: project and locality keywords, Lead Ads with qualifying questions, and reporting on cost per site visit.',
+      'Real estate lead generation with Meta (Facebook, Instagram) and Google ads: qualifying forms that cut junk leads, and weekly reports on cost per site visit.',
     serviceType: 'Real estate lead generation',
-    eyebrow: 'Meta & Google ads',
+    eyebrow: 'Meta (Facebook) & Google ads',
     h1: 'Real estate lead generation with Meta and Google ads',
     shortDesc:
       'Google Search for buyers already looking, Meta for new launches and retargeting, and reporting on the number that matters to your sales team: cost per site visit.',
     intro: [
       'Most builders and brokers we speak to already get leads. The complaint is what happens next: numbers that don’t pick up, enquiries that were never serious, and portal leads shared with five other brokers before the first call.',
-      'We run Meta and Google ads so that the leads you get are exclusive to you and easier to qualify. Google Search catches buyers searching for your project, locality or configuration. Meta builds volume around a launch and retargets people who already saw the project. Both are judged on site visits, not clicks.',
+      'We run Meta ads (on Facebook and Instagram) and Google ads so that the leads you get are exclusive to you and easier to qualify. Google Search catches buyers searching for your project, locality or configuration. Meta builds volume around a launch and retargets people who already saw the project. Both are judged on site visits, not clicks.',
+      'That is the difference between a real estate lead generation agency and one that sells lead volume: we would rather send your sales team 40 buyers who pick up, answer the budget question and book a visit than 400 numbers that waste a telecaller’s week.',
     ],
     problemsHeading: 'Where real estate ad budgets usually leak',
     problems: [
@@ -217,11 +218,11 @@ export const servicesData: ServiceData[] = [
     deliverablesHeading: 'What we set up and run',
     deliverables: [
       {
-        title: 'Google Search campaigns',
+        title: 'Google Ads search campaigns',
         desc: 'Ad groups for project-name, locality (“3 BHK in Sector 150 Noida”) and property-type searches, with negative keywords that filter out rentals, jobs and portal browsing.',
       },
       {
-        title: 'Meta lead campaigns',
+        title: 'Meta (Facebook & Instagram) lead campaigns',
         desc: 'Instant forms and click-to-WhatsApp ads on Facebook and Instagram, set up under Meta’s rules for housing ads where they apply.',
       },
       {
@@ -261,13 +262,24 @@ export const servicesData: ServiceData[] = [
     benefits: ['Project & locality keywords', 'Qualifying lead forms', 'Cost-per-site-visit reporting'],
     relatedServices: ['high-converting-landing-pages', 'ai-automation'],
     relatedPlaybook: 'new-launch-meta-google-ads-plan',
-    relatedPosts: ['google-ads-vs-meta-ads-real-estate-india', 'real-estate-ad-examples'],
+    relatedPosts: [
+      'how-to-generate-real-estate-leads',
+      'meta-ads-for-real-estate-india',
+      'google-ads-for-real-estate-india',
+      'google-ads-vs-meta-ads-real-estate-india',
+      'real-estate-ad-examples',
+    ],
     cta: 'Get a free ads audit',
     faqs: [
       {
         question: 'Is ad spend included in your fee?',
         answer:
           'No. Ad spend is paid directly to Google and Meta from your own ad accounts, so you keep full control and visibility. Our monthly fee covers strategy, setup, creatives and optimisation.',
+      },
+      {
+        question: 'Do Facebook ads work for real estate in India?',
+        answer:
+          'Yes, for the right job. Facebook and Instagram (Meta) ads are strong for new launches, EOI drives and retargeting, because they reach buyers before they start searching. They are weak when judged on cheap leads alone: instant forms attract curious scrollers unless the form asks qualifying questions and every lead gets a reply within minutes.',
       },
       {
         question: 'Which is better for real estate: Google Ads or Meta ads?',
@@ -309,21 +321,22 @@ export const servicesData: ServiceData[] = [
   {
     id: 'ai-automation',
     slug: 'ai-automation',
-    title: 'WhatsApp Chatbot & Automation',
+    title: 'AI Chatbot & WhatsApp Automation',
     emoji: '🤖',
     icon: 'Zap',
     accentColor: 'orange',
-    seoTitle: 'Real Estate Chatbot & WhatsApp Automation | Veloxis',
+    seoTitle: 'Real Estate AI Chatbot & WhatsApp Automation | Veloxis',
     metaDescription:
-      'WhatsApp chatbots and CRM automation for real estate: instant replies to every enquiry, lead qualification, site-visit booking, reminders and CP lead tagging.',
-    serviceType: 'Real estate chatbot and WhatsApp automation',
-    eyebrow: 'WhatsApp chatbot & automation',
-    h1: 'A real estate chatbot that answers every enquiry on WhatsApp in seconds',
+      'AI chatbots and WhatsApp automation for real estate: an instant reply to every enquiry, lead qualification, site-visit booking, reminders and CRM routing.',
+    serviceType: 'Real estate AI chatbot and WhatsApp automation',
+    eyebrow: 'AI chatbot & WhatsApp automation',
+    h1: 'A real estate AI chatbot that answers every enquiry on WhatsApp in seconds',
     shortDesc:
       'Every lead — from ads, your website or portals — gets an instant WhatsApp reply with the brochure, a few qualifying questions and a site-visit slot, then lands with the right salesperson or CP.',
     intro: [
       'Property buyers enquire with several projects at once, often late in the evening after the sales team has gone home. The first reply usually wins the conversation — and the site visit.',
       'We set up WhatsApp chatbots and follow-up automation that reply the moment an enquiry comes in, ask the questions your sales team would ask, book site visits and remind buyers before they come. Leads are routed to the right person and recorded in your CRM, so nothing sits in someone’s personal phone.',
+      'The AI part is practical, not magic. The chatbot understands questions typed in English or Hinglish, answers only from the project details you approve — price band, configurations, RERA number, possession date — and hands the chat to a person whenever it isn’t sure. It never invents a price, an offer or a possession promise.',
     ],
     problemsHeading: 'Where real estate leads go cold',
     problems: [
@@ -392,9 +405,14 @@ export const servicesData: ServiceData[] = [
     benefits: ['Instant WhatsApp replies', 'Site-visit booking & reminders', 'CRM & CP lead routing'],
     relatedServices: ['paid-ads', 'high-converting-landing-pages'],
     relatedPlaybook: 'whatsapp-lead-response-flow',
-    relatedPosts: ['whatsapp-automation-for-real-estate-leads', 'channel-partner-in-real-estate'],
+    relatedPosts: ['ai-for-real-estate-india', 'whatsapp-automation-for-real-estate-leads', 'channel-partner-in-real-estate'],
     cta: 'Get a free lead-flow audit',
     faqs: [
+      {
+        question: 'What is a real estate chatbot?',
+        answer:
+          'A real estate chatbot is software that replies to property enquiries automatically — usually on WhatsApp or a website — shares the brochure and price sheet, asks qualifying questions like budget and configuration, and books site visits. An AI chatbot also understands free-typed questions instead of only button taps, and passes the buyer to a salesperson when needed.',
+      },
       {
         question: 'Do we need the WhatsApp Business API, or is the WhatsApp Business app enough?',
         answer:
