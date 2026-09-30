@@ -52,6 +52,15 @@
     {
       "question": "How should I compare the two channels?",
       "answer": "On cost per site visit from your CRM, not on cost per lead from the ad dashboards, and move budget weekly towards the cheaper source of visits."
+    },
+    {
+      "question": "How should I split my budget between Google and Meta?",
+      "answer": "Start with more on Meta for a launch with little awareness (our launch plan assumes roughly 60% Meta and 40% Google) and more on Google for a known project. Then move budget weekly towards whichever produces site visits more cheaply."
+    },
+    {
+      "question": "Do Google and Meta ads work together?",
+      "answer": "Yes. Meta ads create project-name searches that Google campaigns capture, and Google visitors who didn’t enquire can be retargeted on Meta. Both should send buyers to the same landing page and the same instant WhatsApp follow-up."
     }
-  ]
+  ],
+  "updated": "2026-10-01"
 }

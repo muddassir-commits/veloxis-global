@@ -48,6 +48,15 @@
     {
       "question": "How do I know which ad produced a site visit?",
       "answer": "Track form submits, WhatsApp clicks and calls as conversions, give each campaign and CP a tagged link, and feed site-visit outcomes from the CRM back to Google and Meta."
+    },
+    {
+      "question": "What sections should a real estate landing page have?",
+      "answer": "A hero with locality, configurations, starting price and RERA number; reasons to choose the project; location with travel times; floor plans; amenities; construction progress and track record; payment plan; FAQs; and a final call to action."
+    },
+    {
+      "question": "Does landing page speed affect ad costs?",
+      "answer": "Yes. Google Ads considers landing page experience when deciding how often ads show and what you pay per click, and Meta shows fewer ads to people it expects to abandon slow pages."
     }
-  ]
+  ],
+  "updated": "2026-10-01"
 }

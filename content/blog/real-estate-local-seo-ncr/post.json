@@ -1,7 +1,7 @@
 {
-  "title": "Google Business Profile for Real Estate Agents and Channel Partners",
-  "seoTitle": "Google Business Profile for Real Estate Agents & CPs",
-  "excerpt": "How brokers and channel partners can set up and grow a Google Business Profile: categories, service areas, photos, posts and asking for reviews the right way.",
+  "title": "Local SEO for Real Estate: Google Business Profile Guide for Agents and CPs",
+  "seoTitle": "Local SEO for Real Estate: Google Business Profile",
+  "excerpt": "Local SEO for real estate agents and CPs: set up a Google Business Profile, write the description, get reviews the right way, fix citations and track leads.",
   "date": "2026-08-13",
   "category": "Growth Tips",
   "image": "/images/people/blog/local-seo-man-phone-market.jpg",
@@ -25,12 +25,20 @@
       "answer": "Local searches like “property dealer near me” show map results first. A well-kept profile is one of the cheapest sources of local enquiries."
     },
     {
+      "question": "Is a Google Business Profile free?",
+      "answer": "Yes. A Google Business Profile is free, and there is no paid version that ranks better in the map results."
+    },
+    {
       "question": "How does Google rank local results?",
       "answer": "Mainly on relevance, distance and prominence — how well the profile matches the search, how close you are, and how well known and reviewed you are."
     },
     {
       "question": "Can I add keywords to my business name?",
       "answer": "No. Use your real business name exactly as on your signboard and documents. Keyword stuffing breaks Google’s guidelines and can get the profile suspended."
+    },
+    {
+      "question": "How do I write a Google Business Profile description for real estate?",
+      "answer": "Use the 750 characters to say who you are and where, what property you handle, one specific reason to choose you, and what to do next. Include your RERA agent number, and skip keyword lists, links and promotional prices."
     },
     {
       "question": "Which category should a real estate agent choose?",
@@ -48,5 +56,6 @@
       "question": "What should the profile link to?",
       "answer": "A page explaining what you do and the projects you handle, with WhatsApp and call buttons — and for project posts, the project’s landing page."
     }
-  ]
+  ],
+  "updated": "2026-10-01"
 }
