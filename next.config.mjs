@@ -91,7 +91,7 @@ const nextConfig = {
       '/services/analytics-tracking-attribution': '/services/paid-ads',
       '/services/email-marketing': '/services/ai-automation',
       '/services/ai-automation-systems': '/services/ai-automation',
-      '/services/audits-consulting-strategy': '/contact',
+      '/services/audits-consulting-strategy': '/free-audit',
       '/services/brand-strategy-positioning': '/services',
       '/services/ecommerce-catalog-services': '/services',
       '/services/industry-specific-marketing': '/services',
@@ -102,7 +102,7 @@ const nextConfig = {
       '/digital-marketing-agency-noida': '/industries/real-estate',
       '/digital-marketing-agency-lucknow': '/industries/real-estate',
       '/digital-marketing-agency-kanpur': '/industries/real-estate',
-      '/free-seo-audit': '/contact',
+      '/free-seo-audit': '/free-audit',
       '/author/muddassir-ali': '/about',
 
       // Case studies and testimonials were replaced by example playbooks (Sept 2026)
