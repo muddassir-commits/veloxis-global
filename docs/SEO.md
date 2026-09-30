@@ -30,6 +30,10 @@ Volumes refreshed 2026-09-26 (research in `research/kw-free-2026-09/KEYWORD-MAP.
 | `/blog/real-estate-landing-page-conversion-hacks` | real estate landing page best practices | landing page for property launch | Informational |
 | `/blog/whatsapp-automation-for-real-estate-leads` | whatsapp automation for real estate leads | real estate lead follow up | Informational |
 | `/blog/real-estate-local-seo-ncr` | local seo for real estate (70) | google business profile for real estate agents | Informational |
+| `/blog/rera-number-check` | rera number check (3,600) | rera number (2,900), check rera number (720), rera number format (170), is rera mandatory (70) | Informational |
+| `/blog/real-estate-brochure` | real estate brochure (1,000) | real estate brochure design, what to include in a real estate brochure | Informational |
+
+The remaining 28 posts of the 60-day plan, with keywords, dates and internal links, are in `docs/CONTENT-PLAN.md`. Add each row here when its post is published. Volumes are from DataForSEO, India, 2026-10-01.
 
 Service page vs guide on the same topic: the service page targets the commercial phrase ("real estate lead generation", "real estate chatbot"); the guide targets the how-to / what-is phrase. Always link guide → service page.
 

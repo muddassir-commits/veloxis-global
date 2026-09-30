@@ -1,0 +1,80 @@
+{
+  "title": "RERA Number Check: What It Is, How to Verify It, and Where It Must Appear",
+  "seoTitle": "RERA Number Check: How to Verify a Project or Agent",
+  "excerpt": "How to check a RERA number on your state RERA website, what project and agent number formats look like, and where builders and CPs must show it in their ads.",
+  "date": "2026-09-28",
+  "category": "Guides",
+  "service": "high-converting-landing-pages",
+  "image": "/images/people/blog/rera-couple-reviewing-documents.jpg",
+  "imageAlt": "A young couple sitting at a table going through printed property documents",
+  "inlineImages": [
+    {
+      "src": "/images/people/blog/rera-architects-checking-plans.jpg",
+      "alt": "Two men reading building plans spread on a car bonnet beside a construction site",
+      "caption": "Every phase of a project above the size thresholds needs its own registration.",
+      "beforeHeading": "is-rera-mandatory"
+    },
+    {
+      "src": "/images/people/blog/rera-man-checking-laptop-phone.jpg",
+      "alt": "A couple at home checking papers with a laptop, phone and calculator on the table",
+      "caption": "Checking a RERA number takes a few minutes on the state authority’s website.",
+      "beforeHeading": "how-to-check-rera-number"
+    },
+    {
+      "src": "/images/people/blog/rera-residential-towers.jpg",
+      "alt": "Residential apartment buildings in an Indian city seen from street level",
+      "beforeHeading": "what-to-look-at"
+    },
+    {
+      "src": "/images/people/blog/rera-blank-billboard.jpg",
+      "alt": "A large blank billboard on a steel frame against a blue sky",
+      "caption": "Hoardings are advertisements too: the RERA number and authority website belong on them.",
+      "beforeHeading": "where-to-display"
+    },
+    {
+      "src": "/images/people/blog/rera-man-signing-document.jpg",
+      "alt": "Close-up of a man in a suit signing a printed document with a pen",
+      "beforeHeading": "penalties"
+    }
+  ],
+  "about": [
+    {
+      "name": "Real Estate (Regulation and Development) Act, 2016",
+      "sameAs": "https://en.wikipedia.org/wiki/Real_Estate_(Regulation_and_Development)_Act,_2016"
+    }
+  ],
+  "faqs": [
+    {
+      "question": "What is a RERA number?",
+      "answer": "It is the registration number a state Real Estate Regulatory Authority gives to a project or an agent under the RERA Act, 2016. A project number shows the project is on public record; an agent number shows the agent is registered in that state."
+    },
+    {
+      "question": "How do I check a RERA number?",
+      "answer": "Go to the RERA website of the state where the project is located, open the registered projects search, and search by the registration number. Then check that the promoter, project name, address and registration validity match what you were told."
+    },
+    {
+      "question": "What does a RERA number look like?",
+      "answer": "There is no national format. UP RERA project numbers start with UPRERAPRJ and agent numbers with UPRERAAGT; MahaRERA project numbers start with P and agent numbers with A. The only reliable test is searching the number on the state authority’s website."
+    },
+    {
+      "question": "Is RERA registration mandatory for every project?",
+      "answer": "It is mandatory unless the land doesn’t exceed 500 square metres or the project has no more than eight apartments, including all phases. States can lower these thresholds. Plotted and commercial projects are covered too."
+    },
+    {
+      "question": "Where must a builder show the RERA number?",
+      "answer": "Section 11(2) of the Act requires every advertisement or prospectus to include the registration number and the authority’s website address. In practice that means landing pages, ads, brochures, hoardings, newspaper ads and social creatives."
+    },
+    {
+      "question": "What is the 70/30 rule in RERA?",
+      "answer": "Section 4(2)(l)(D) requires promoters to deposit 70% of the money collected from buyers in a separate bank account and use it only for the land and construction costs of that project."
+    },
+    {
+      "question": "Do real estate agents need a RERA number?",
+      "answer": "Yes. Section 9 of the Act requires agents to register with the state authority before they facilitate the sale of any plot, apartment or building in a registered project."
+    },
+    {
+      "question": "What is the penalty for not registering a project under RERA?",
+      "answer": "Under Section 59, a penalty of up to 10% of the estimated project cost. If the promoter keeps ignoring orders, imprisonment of up to three years, a further fine of up to 10%, or both."
+    }
+  ]
+}

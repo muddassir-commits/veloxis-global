@@ -1,0 +1,74 @@
+{
+  "title": "Real Estate Brochure: What to Include, How to Design It, and How to Send It",
+  "seoTitle": "Real Estate Brochure: What to Include & Design Tips",
+  "excerpt": "What to include in a real estate brochure, the order buyers read in, design and floor plan tips, print vs digital formats, and sending it on WhatsApp fast.",
+  "date": "2026-09-30",
+  "category": "Landing Pages",
+  "service": "high-converting-landing-pages",
+  "image": "/images/people/blog/brochure-designer-reviewing-prints.jpg",
+  "imageAlt": "A designer holding up colourful printed brochure pages in front of a laptop",
+  "inlineImages": [
+    {
+      "src": "/images/people/blog/brochure-team-reviewing-draft.jpg",
+      "alt": "Two people pointing at pages of an open printed brochure on a wooden table",
+      "caption": "Order the brochure the way buyers read it, not the way the project was planned.",
+      "beforeHeading": "structure"
+    },
+    {
+      "src": "/images/people/blog/brochure-designer-colour-swatches.jpg",
+      "alt": "A designer at a laptop comparing colour and material swatch cards",
+      "beforeHeading": "design-tips"
+    },
+    {
+      "src": "/images/people/blog/brochure-floor-plan-drawing.jpg",
+      "alt": "Hands resting on a printed architectural floor plan with a pen beside it",
+      "caption": "Floor plans are the most-read pages of any project brochure.",
+      "beforeHeading": "floor-plans"
+    },
+    {
+      "src": "/images/people/blog/brochure-woman-on-phone.jpg",
+      "alt": "A woman reading something on her smartphone outdoors",
+      "caption": "Most buyers will read your brochure on a phone, often on WhatsApp.",
+      "beforeHeading": "whatsapp-delivery"
+    },
+    {
+      "src": "/images/people/blog/brochure-man-reading.jpg",
+      "alt": "A man in a striped shirt studying a printed leaflet at an office table",
+      "beforeHeading": "mistakes"
+    }
+  ],
+  "faqs": [
+    {
+      "question": "What should a real estate brochure include?",
+      "answer": "The project name and locality, RERA registration number and authority website, configurations and possession timeline, a location map with real distances, floor plans with carpet area, amenities, specifications, developer background, a clear next step and a disclaimer."
+    },
+    {
+      "question": "Should the price be in the brochure?",
+      "answer": "Many developers keep prices in a separate price sheet because prices change more often than the brochure is reprinted. If you do, give the price sheet the same project name and RERA number and send both together."
+    },
+    {
+      "question": "How should a real estate brochure be structured?",
+      "answer": "In the order buyers ask questions: cover, the project at a glance, location, floor plans, amenities, specifications, the developer, and a clear call to visit. Long brochures benefit from a one-page summary at the front."
+    },
+    {
+      "question": "Does a brochure need a RERA number?",
+      "answer": "Yes. The RERA Act treats a prospectus as an advertisement, so it must carry the project’s registration number and the website address of the state authority."
+    },
+    {
+      "question": "Which area should the floor plans show?",
+      "answer": "Lead with carpet area, because apartments are sold on carpet area under RERA. If you also show built-up or super area, label each figure clearly, and add room dimensions."
+    },
+    {
+      "question": "What is the difference between a print and a digital brochure?",
+      "answer": "Print brochures are for the site office, expos and CP meetings, where paper and finish matter. Digital brochures are for WhatsApp and email, where file size, loading speed and readability on a phone matter most."
+    },
+    {
+      "question": "Can ChatGPT design a real estate brochure?",
+      "answer": "AI tools can draft copy, simplify specifications and suggest layouts, but floor plans, areas, distances, dates, amenities and legal text must come from approved documents and be checked by a person."
+    },
+    {
+      "question": "How fast should the brochure be sent after an enquiry?",
+      "answer": "Within seconds if possible. Buyers often enquire with several projects the same evening, and the first to reply with the brochure, price sheet and a visit slot usually gets the visit. WhatsApp automation makes this possible day and night."
+    }
+  ]
+}
