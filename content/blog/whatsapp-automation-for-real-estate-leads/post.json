@@ -52,6 +52,15 @@
     {
       "question": "What should I measure after automating?",
       "answer": "Time to first reply, share of leads answering the first question, site visits booked and completed, and leads with no human contact after 24 hours — which should be zero."
+    },
+    {
+      "question": "What is the difference between the WhatsApp Business app and the API?",
+      "answer": "The free app suits one person handling a few chats. The WhatsApp Business API connects to ad forms, landing pages and a CRM, runs chatbot flows and reminders, and lets several salespeople share one number."
+    },
+    {
+      "question": "Do I need approved templates to message real estate leads?",
+      "answer": "Yes, for any message sent outside the 24-hour window that opens when a customer messages you. Meta reviews templates and charges for them by category, with marketing messages costing more than utility messages like reminders."
     }
-  ]
+  ],
+  "updated": "2026-10-01"
 }
