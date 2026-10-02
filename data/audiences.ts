@@ -1,5 +1,6 @@
 // Audience pages: who we help. One primary intent each —
-// developers: "marketing for real estate developers"; channel partners: "channel partner marketing".
+// developers: "marketing for real estate developers"; channel partners: "channel partner marketing";
+// nri: "NRI real estate marketing" (developers and CPs selling to Indians abroad; our clients stay in India).
 
 export interface AudienceBlock {
   title: string;
@@ -33,13 +34,19 @@ export interface AudienceImages {
 }
 
 export interface AudienceData {
-  key: 'developers' | 'channel-partners';
+  key: 'developers' | 'channel-partners' | 'nri';
   path: string;
   breadcrumb: string;
+  /** Parent page in the breadcrumb trail, for pages nested under another audience */
+  parent?: { name: string; href: string };
+  /** Hero button; defaults to the free marketing review on /contact */
+  heroCta?: { label: string; href: string };
   eyebrow: string;
   h1: string;
   lead: string;
   intro: string[];
+  /** One-line cross-link shown under the intro */
+  introLink?: { text: string; label: string; href: string };
   painsHeading: string;
   pains: AudienceBlock[];
   helpHeading: string;
@@ -67,6 +74,7 @@ export const audiences: Record<AudienceData['key'], AudienceData> = {
       'Most small and mid-size developers sell through a mix of channel partners, property portals and hoardings, with a corporate website that was never built to convert ad traffic. When a launch slows down, it is hard to tell whether the problem is the market, the price, the leads or the follow-up.',
       'We give developers a lead engine they own: a landing page for each project, Meta and Google campaigns that produce exclusive enquiries, and WhatsApp automation that replies to every lead in seconds and books site visits. Everything is measured on cost per site visit, so you know what each rupee of marketing does.',
     ],
+    introLink: { text: 'Selling to buyers who live abroad?', label: 'See how NRI buyer campaigns work', href: '/industries/real-estate/nri-buyers' },
     painsHeading: 'What developers tell us is going wrong',
     pains: [
       { title: 'Launch absorption is slower than planned', desc: 'The first months of a launch set the tone with lenders and CPs, and a slow start makes every later phase harder to sell.' },
@@ -121,6 +129,7 @@ export const audiences: Record<AudienceData['key'], AudienceData> = {
       'Channel partners bring a large share of residential bookings in India, yet most run on WhatsApp groups, shared portal leads and the builder’s marketing material. The same buyer is often called by several brokers within an hour, and when two parties claim a booking, the CP without records usually loses.',
       'Digital marketing for real estate agents doesn’t have to mean posting on Instagram every day. We set up a simple lead engine for CPs and brokers: project pages you control, ads that produce leads only you receive, instant WhatsApp replies, and a timestamped record of every lead and site visit you can show the developer.',
     ],
+    introLink: { text: 'Some of your buyers live in Dubai or London?', label: 'See how NRI buyer campaigns work', href: '/industries/real-estate/nri-buyers' },
     painsHeading: 'What channel partners tell us',
     pains: [
       { title: 'Shared portal leads', desc: 'A portal enquiry reaches several brokers at once. By the time you call, the buyer has already heard the pitch.' },
@@ -162,6 +171,63 @@ export const audiences: Record<AudienceData['key'], AudienceData> = {
       help: { src: '/images/people/channel-partners/agent-on-phone.jpg', alt: 'Smiling man taking a call at his office desk', position: '70% center' },
       extra: { src: '/images/people/channel-partners/sales-team-discussion.jpg', alt: 'Four colleagues standing in an office discussing papers in a folder' },
       resources: { src: '/images/people/channel-partners/client-signing-papers.jpg', alt: 'Close-up of a person signing a document on a desk while another person points to the page' },
+    },
+  },
+  nri: {
+    key: 'nri',
+    path: '/industries/real-estate/nri-buyers',
+    breadcrumb: 'NRI Buyers',
+    parent: { name: 'Real Estate Developers', href: '/industries/real-estate' },
+    heroCta: { label: 'Book a free NRI campaign audit →', href: '/contact?service=NRI%20buyer%20campaigns' },
+    eyebrow: 'NRI buyers',
+    h1: 'Reach NRI buyers in Dubai, London and New York, and reply in their time zone',
+    lead:
+      'For developers and channel partners in India: exclusive enquiries from Indians living abroad, answered on WhatsApp in seconds, qualified and booked for a video site visit.',
+    intro: [
+      'Many buyers for projects in Noida, Lucknow and Kanpur don’t live in India. They work in Dubai, London or New Jersey and want a flat in their home city, for their parents, for later, or as an investment. They are serious buyers, but they enquire at odd hours, can’t walk into a site office, and ask about payment and paperwork before they ask about the floor plan.',
+      'We run your NRI campaigns as a separate track of the same lead system: Meta ads shown to Indians in the countries you choose, an NRI version of your project page, and a WhatsApp flow that replies instantly, sends the documents buyers abroad ask for, and books the sales call in the buyer’s own evening. You stay the seller. We bring the enquiries and make sure none of them go cold.',
+    ],
+    painsHeading: 'Why NRI enquiries are hard to convert',
+    pains: [
+      { title: 'They arrive while your team is asleep', desc: 'Evening in New York is early morning in India. An enquiry that waits until office hours has usually gone cold, or gone to someone else.' },
+      { title: 'Portal NRI leads are shared and generic', desc: 'The same overseas buyer is sold to several brokers, often with no project, budget or city attached.' },
+      { title: 'Buyers can’t visit the site', desc: 'Someone in Dubai needs a video walkthrough, the RERA certificate and a cost sheet before they will even book a call.' },
+      { title: 'Payment and paperwork questions stall the deal', desc: '“Can I buy as an NRI?”, “Which account do I pay from?”, “Can I get a home loan?” Without quick, clear answers, the buyer puts it off.' },
+    ],
+    helpHeading: 'How we run NRI campaigns',
+    help: [
+      { service: 'high-converting-landing-pages', title: 'An NRI version of your project page', desc: 'Price in INR with an approximate AED, USD or GBP guide, the RERA number, a video walkthrough, a “Book a video site visit” button and a short NRI FAQ block.' },
+      { service: 'paid-ads', title: 'Meta ads shown to Indians abroad', desc: 'Separate campaigns for the Gulf, the UK and North America, aimed at cities with large Indian communities and delivered in the buyer’s evening hours.' },
+      { service: 'ai-automation', title: 'WhatsApp that works in their time zone', desc: 'An instant reply in English or Hindi, day or night. The brochure, cost sheet and RERA certificate go out automatically, video visits are booked on WhatsApp, and follow-ups are timed to the buyer’s clock.' },
+    ],
+    extraHeading: 'Built for buyers who live abroad',
+    extra: [
+      { title: 'Video site visits and recorded walkthroughs', desc: 'A live video call from the site or show flat, plus a recorded walkthrough buyers can share with family.' },
+      { title: 'Family-in-India handoff', desc: 'If the buyer’s parent or sibling in India wants to see the site, they book a physical visit, and the lead stays logged to the same buyer.' },
+      { title: 'Time-zone coverage', desc: 'The auto-reply goes out instantly. The sales callback is scheduled in the buyer’s local evening, not at 3 AM their time.' },
+      { title: 'Reporting split by country', desc: 'Leads, cost per lead and video visits for each market, so budget moves to the countries that actually produce buyers.' },
+    ],
+    relatedPlaybooks: ['nri-buyer-campaign-plan', 'whatsapp-lead-response-flow'],
+    relatedPosts: ['meta-ads-for-real-estate-india', 'whatsapp-automation-for-real-estate-leads', 'real-estate-landing-page-conversion-hacks', 'rera-number-check'],
+    faqs: [
+      { question: 'Can NRIs buy property in India?', answer: 'Yes. Under FEMA, NRIs and OCI cardholders can buy residential and commercial property in India. They cannot buy agricultural land, plantation property or a farmhouse without RBI approval (inheritance is treated differently). We recommend buyers confirm their own case with their CA or lawyer.' },
+      { question: 'How do NRIs pay for property in India?', answer: 'Through normal banking channels: money sent from abroad, or funds in their NRE, NRO or FCNR account, as FEMA requires. Cash in foreign currency and traveller’s cheques are not allowed. Indian banks offer home loans to NRIs. We recommend buyers confirm the details with their bank and CA.' },
+      { question: 'Which countries do you target?', answer: 'The UAE and the rest of the Gulf first, as they are closest in time and home to a large Indian community. Then the UK, the US, Canada, Singapore and Australia, depending on your project and early results.' },
+      { question: 'Can NRI buyers book without visiting India?', answer: 'Many start with a video site visit, the RERA certificate and the cost sheet, and some book that way. Others ask a parent or sibling in India to visit first. The flow supports both, and the lead stays tied to the same buyer.' },
+      { question: 'Do ads in the US and Canada work differently?', answer: 'Yes. Meta may require property ads shown in the US, Canada and parts of Europe to run under its Housing special ad category, which removes age and gender targeting and limits location targeting. We plan those campaigns around it, using creative, page content and retargeting rather than narrow audiences.' },
+      { question: 'What ad budget is needed for NRI campaigns?', answer: 'Leads in the Gulf, UK and US usually cost more than leads in India, so we recommend a separate NRI budget on top of your India budget (we suggest at least ₹15,000 a month for India). We give you a realistic range for your project on the free audit call.' },
+      { question: 'How do video site visits work?', answer: 'The buyer picks a slot on WhatsApp in their own time zone. Your salesperson calls from the site or show flat on WhatsApp video, and the recorded walkthrough and documents are sent afterwards so the buyer can share them with family.' },
+      { question: 'Can you run this for just one project or tower?', answer: 'Yes. NRI campaigns can run for a single project, phase or tower, with its own page, budget and report.' },
+    ],
+    ctaTitle: 'Want NRI enquiries for your project?',
+    ctaDescription: 'Tell us your project and which countries your buyers come from. We’ll review your current NRI leads and follow-up, and show you how an NRI campaign would run.',
+    images: {
+      hero: { src: '/images/people/nri-buyers/hero-dubai-skyline-dusk.jpg', alt: '' },
+      intro: { src: '/images/people/nri-buyers/video-call-laptop.jpg', alt: 'Person on a video call with two people on a laptop screen' },
+      pains: { src: '/images/people/nri-buyers/man-working-remotely-laptop.jpg', alt: 'Man in a turban working on a laptop at a small table at home', position: '30% center' },
+      help: { src: '/images/people/nri-buyers/young-man-laptop-lounge.jpg', alt: 'Young man smiling while working on a laptop in a lounge', position: '75% center' },
+      extra: { src: '/images/people/nri-buyers/family-looking-at-phone.jpg', alt: 'Two women and a small child on a sofa looking at a phone together' },
+      resources: { src: '/images/people/nri-buyers/dubai-aerial-skyline.jpg', alt: 'Aerial view of the Dubai skyline with the Burj Khalifa and highway interchanges' },
     },
   },
 };

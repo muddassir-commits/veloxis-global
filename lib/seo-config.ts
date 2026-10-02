@@ -83,6 +83,12 @@ export const pageMeta = {
       'Digital marketing for real estate agents, brokers and channel partners: exclusive Meta and Google leads, project pages you control, instant WhatsApp replies.',
     path: '/channel-partners',
   },
+  nriBuyers: {
+    title: 'NRI Real Estate Marketing for Developers & CPs | Veloxis',
+    description:
+      'Meta ads to Indians in the UAE, UK and US, an NRI project page and WhatsApp replies in their time zone. For developers and channel partners in India.',
+    path: '/industries/real-estate/nri-buyers',
+  },
   playbooks: {
     title: 'Real Estate Marketing Playbooks & Strategy Examples',
     description:

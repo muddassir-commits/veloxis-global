@@ -39,4 +39,12 @@ export const playbookFaqs: Record<string, PageFaq[]> = {
     { question: 'What report should a CP share with the developer?', answer: 'One row per lead with buyer details, project, first-contact timestamp, registration confirmation, and visit date and status.' },
     { question: 'Is this based on a real CP?', answer: 'No. It is an example setup for a hypothetical channel partner with three mandates.' },
   ],
+  'nri-buyer-campaign-plan': [
+    { question: 'Which country should an NRI campaign start with?', answer: 'Usually the UAE. It is close to India in time, so calls are easy to schedule, and it has a large Indian community. The UK or US is added in week 3 based on early cost per lead and how many leads reply.' },
+    { question: 'Should NRI ads run as one campaign or several?', answer: 'Several. One campaign per country or region keeps budgets, timing and messages separate, and shows which market actually produces buyers.' },
+    { question: 'When should the sales team call NRI leads?', answer: 'In the buyer’s evening, roughly 7 to 10 PM their time. For the UAE that is 8:30 to 11:30 PM IST; for the US East Coast it is early the next morning in India. The WhatsApp auto-reply covers the gap instantly.' },
+    { question: 'Does Meta’s Housing special ad category apply to NRI campaigns?', answer: 'It can for ads shown in the US, Canada and parts of Europe. Age and gender targeting are removed and location targeting is limited there, so those campaigns rely on creative and retargeting.' },
+    { question: 'What should be measured in the first 30 days?', answer: 'Leads, contact rate, video visits booked and cost per video visit, each split by country. Bookings from NRI buyers often take longer than 30 days.' },
+    { question: 'Is this a real client campaign?', answer: 'No. It is an example plan for a hypothetical project. Time differences are factual; markets, timings and messages are illustrative.' },
+  ],
 };

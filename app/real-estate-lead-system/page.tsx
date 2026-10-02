@@ -16,7 +16,7 @@ import { getServiceSchema } from '../../lib/schema';
 import { constructMetadata, pageMeta } from '../../lib/seo-config';
 import { siteData } from '../../data/site';
 import {
-  MIN_AD_BUDGET, leadSystemFaqs, leadSystemIncluded, leadSystemMetrics, leadSystemNeeds, leadSystemPricing,
+  MIN_AD_BUDGET, leadSystemFaqs, leadSystemIncluded, leadSystemMetrics, leadSystemNeeds, leadSystemNri, leadSystemPricing,
   leadSystemProblems, leadSystemReasons, leadSystemSteps, leadSystemTimeline,
 } from '../../data/lead-system';
 
@@ -279,6 +279,17 @@ export default function LeadSystemPage() {
               );
             })}
           </div>
+        </div>
+      </section>
+
+      {/* NRI track, one line out to its own page */}
+      <section className="py-12 bg-slate-50 border-t border-slate-100">
+        <div className="max-w-3xl mx-auto px-gutter text-center section-reveal">
+          <h2 className="text-2xl font-extrabold text-slate-900 tracking-tight mb-3">{leadSystemNri.title}</h2>
+          <p className="text-slate-600 leading-relaxed mb-4">{leadSystemNri.desc}</p>
+          <Link href={leadSystemNri.href} className="inline-flex items-center gap-2 font-bold text-royal-blue hover:underline">
+            {leadSystemNri.linkLabel} <ArrowRight className="w-4 h-4" aria-hidden="true" />
+          </Link>
         </div>
       </section>
 

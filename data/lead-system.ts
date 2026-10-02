@@ -119,6 +119,13 @@ export const leadSystemReasons = [
   },
 ];
 
+export const leadSystemNri = {
+  title: 'Selling to NRI buyers too?',
+  desc: 'The same system can run a separate track for Indians living abroad: ads in the UAE, UK or US, an NRI version of your project page, and WhatsApp replies and video site visits timed to the buyer’s evening.',
+  linkLabel: 'See how NRI buyer campaigns work',
+  href: '/industries/real-estate/nri-buyers',
+};
+
 export const leadSystemPricing = [
   { title: 'One-time setup fee', desc: 'Landing page, ad account setup, tracking and the WhatsApp flow, built in week 1.' },
   { title: 'Monthly management fee', desc: 'Running and optimising the ads, WhatsApp flow updates, weekly reports and the monthly review.' },
@@ -179,6 +186,11 @@ export const leadSystemFaqs = [
     question: 'I already have a website. Do I still need a landing page?',
     answer:
       'Yes. A website tells buyers about your business. A landing page is built for one project and one action, the enquiry, so ads convert better when they send buyers there.',
+  },
+  {
+    question: 'Can this target NRI buyers abroad?',
+    answer:
+      'Yes. NRI campaigns run as a separate track with their own ads, page, budget and report, starting with the UAE and the Gulf. Leads abroad usually cost more than in India, so the NRI track needs its own ad budget.',
   },
   {
     question: 'Which cities do you work in?',
