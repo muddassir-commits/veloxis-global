@@ -95,6 +95,12 @@ export const pageMeta = {
       'Free audit of your real estate landing page, Meta and Google ads and WhatsApp lead follow-up. A founder-led review with the fixes to make first. No obligation.',
     path: '/free-audit',
   },
+  leadSystem: {
+    title: 'Real Estate Lead System: Ads, Page & WhatsApp | Veloxis',
+    description:
+      'Meta ads, a project landing page and instant WhatsApp replies, run as one system for real estate agents and builders. Setup fee plus monthly, no lock-in.',
+    path: '/real-estate-lead-system',
+  },
   about: {
     title: 'About Veloxis Global & Founder Muddassir Ali',
     description:

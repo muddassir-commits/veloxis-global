@@ -20,7 +20,7 @@ const contactSchema = z.object({
 
 type ContactFormData = z.infer<typeof contactSchema>;
 
-export const ContactForm: React.FC = () => {
+export const ContactForm: React.FC<{ defaultService?: string }> = ({ defaultService = '' }) => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState<boolean | null>(null);
   // Server message for rate limits (429); other failures use the generic text.
@@ -36,7 +36,7 @@ export const ContactForm: React.FC = () => {
     defaultValues: {
       name: '',
       phone: '',
-      service: '',
+      service: defaultService,
       message: '',
       _honey: '',
     }
@@ -86,9 +86,9 @@ export const ContactForm: React.FC = () => {
           </p>
           <div className="text-left bg-white rounded-md p-4 border border-slate-100 max-w-sm w-full text-sm flex flex-col gap-2 shadow-sm">
             <span className="font-bold text-slate-900">What Happens Next:</span>
-            <span className="text-slate-600">1. We review your website and requirements.</span>
-            <span className="text-slate-600">2. We schedule a brief discovery call.</span>
-            <span className="text-slate-600">3. We deliver a custom growth proposal.</span>
+            <span className="text-slate-600">1. We look at your project and your current lead flow.</span>
+            <span className="text-slate-600">2. We fix a time for a short call.</span>
+            <span className="text-slate-600">3. You get a written plan and quote.</span>
           </div>
         </div>
       ) : (
@@ -140,6 +140,7 @@ export const ContactForm: React.FC = () => {
               <option value="Meta & Google Ads">Meta & Google Ads</option>
               <option value="AI & WhatsApp Automation">AI & WhatsApp Automation</option>
               <option value="Full Pipeline Setup (All)">Full Pipeline Setup (All)</option>
+              <option value="Real Estate Lead System">Real Estate Lead System (Ads + Page + WhatsApp)</option>
               <option value="Other">Other</option>
             </select>
             {errors.service && <span className="text-[14px] text-red-500 font-medium">{errors.service.message}</span>}

@@ -10,6 +10,18 @@ const transporter = nodemailer.createTransport({
   },
 });
 
+/** Logs in to the mail server without sending anything. Used by /api/health. */
+export async function verifyEmailLogin(): Promise<boolean> {
+  if (!process.env.SMTP_USER) return false;
+  try {
+    await transporter.verify();
+    return true;
+  } catch (error) {
+    console.error('Email login check failed:', error);
+    return false;
+  }
+}
+
 export async function sendEmail({
   to,
   subject,

@@ -16,6 +16,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/channel-partners',
     '/playbooks',
     '/free-audit',
+    '/real-estate-lead-system',
     '/about',
     '/contact',
     '/blog',
