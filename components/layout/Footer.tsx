@@ -178,6 +178,11 @@ export const Footer: React.FC = () => {
                 </Link>
               </li>
               <li>
+                <Link href="/industries/real-estate/nri-buyers" className="hover:text-white hover:translate-x-1 transition-all duration-200 inline-block">
+                  NRI Buyer Campaigns
+                </Link>
+              </li>
+              <li>
                 <Link href="/playbooks" className="hover:text-white hover:translate-x-1 transition-all duration-200 inline-block">
                   Example Playbooks
                 </Link>

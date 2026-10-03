@@ -111,6 +111,8 @@ export const Navbar: React.FC = () => {
     if (normHref === '/') return normPath === '/';
     return normPath === normHref || normPath.startsWith(normHref + '/');
   };
+  // The NRI page sits under /industries/real-estate but has its own nav link.
+  const developersActive = isActive('/industries/real-estate') && !isActive('/industries/real-estate/nri-buyers');
 
   return (
     <>
@@ -257,7 +259,7 @@ export const Navbar: React.FC = () => {
                   ? 'px-2.5 py-1 text-[13px]'
                   : 'px-3.5 py-1.5 text-[14px]'
               } ${
-                isActive('/industries/real-estate') ? 'bg-royal-blue text-white shadow-sm shadow-royal-blue/15' : 'text-slate-700 hover:bg-slate-100/80 hover:text-royal-blue'
+                developersActive ? 'bg-royal-blue text-white shadow-sm shadow-royal-blue/15' : 'text-slate-700 hover:bg-slate-100/80 hover:text-royal-blue'
               }`}
             >
               Developers
@@ -274,6 +276,19 @@ export const Navbar: React.FC = () => {
               }`}
             >
               Channel Partners
+            </Link>
+
+            <Link
+              href="/industries/real-estate/nri-buyers"
+              className={`font-sans font-semibold transition-all duration-300 rounded-full whitespace-nowrap shrink-0 hidden 2xl:inline-block ${
+                scrolled
+                  ? 'px-2.5 py-1 text-[13px]'
+                  : 'px-3.5 py-1.5 text-[14px]'
+              } ${
+                isActive('/industries/real-estate/nri-buyers') ? 'bg-royal-blue text-white shadow-sm shadow-royal-blue/15' : 'text-slate-700 hover:bg-slate-100/80 hover:text-royal-blue'
+              }`}
+            >
+              NRI Buyers
             </Link>
 
             <Link
@@ -467,7 +482,7 @@ export const Navbar: React.FC = () => {
               href="/industries/real-estate"
               onClick={() => setIsOpen(false)}
               className={`font-bold text-[16px] py-3 border-b border-slate-100 transition-colors duration-300 ${
-                isActive('/industries/real-estate') ? 'text-royal-blue font-bold' : 'text-slate-900 hover:text-royal-blue'
+                developersActive ? 'text-royal-blue font-bold' : 'text-slate-900 hover:text-royal-blue'
               }`}
             >
               For Developers
@@ -481,6 +496,16 @@ export const Navbar: React.FC = () => {
               }`}
             >
               For Channel Partners
+            </Link>
+
+            <Link
+              href="/industries/real-estate/nri-buyers"
+              onClick={() => setIsOpen(false)}
+              className={`font-bold text-[16px] py-3 border-b border-slate-100 transition-colors duration-300 ${
+                isActive('/industries/real-estate/nri-buyers') ? 'text-royal-blue font-bold' : 'text-slate-900 hover:text-royal-blue'
+              }`}
+            >
+              For NRI Buyer Campaigns
             </Link>
 
             {/* Core Stacked Links */}

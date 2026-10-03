@@ -434,6 +434,116 @@ export const playbooks: Playbook[] = [
       },
     ],
   },
+  {
+    slug: 'nri-buyer-campaign-plan',
+    title: 'NRI buyer campaign plan: 30 days from first ad to video site visits',
+    seoTitle: 'NRI Real Estate Campaign Plan: 30-Day Example',
+    metaDescription:
+      'An example 30-day NRI campaign for an Indian real estate project: Gulf-first launch, targeting notes, a time-zone table, WhatsApp scripts and the numbers to track.',
+    excerpt:
+      'A Gulf-first launch, then the UK or US: targeting notes, a time-zone table against IST, a sample WhatsApp flow and the numbers we would track by country.',
+    service: 'paid-ads',
+    audience: 'Developers and channel partners selling to NRI buyers',
+    scenario:
+      'A hypothetical RERA-registered residential project in Noida or Lucknow whose sales team gets occasional enquiries from Indians abroad and wants a steady, trackable NRI channel alongside its India campaigns. The project, markets and timings are illustrative.',
+    image: '/images/people/playbooks/nri-buyer-call-high-rise-cover.jpg',
+    imageAlt: 'Man on a phone call by the window of a high-rise office overlooking a city',
+    updated: '2026-10-03',
+    sections: [
+      {
+        id: 'goal',
+        heading: 'Who it’s for and the goal',
+        image: {
+          src: '/images/people/playbooks/nri-phone-at-night.jpg',
+          alt: 'Hand holding a smartphone at night with city lights behind',
+        },
+        paragraphs: [
+          'This plan is for a developer or channel partner in India who already sells to local buyers and wants a separate, measurable stream of buyers living abroad. The goal for the first 30 days is not bookings. It is a working channel: NRI enquiries answered in seconds, qualified on WhatsApp, and booked for video site visits, with a clear cost per video visit for each country.',
+          'NRI buyers usually take longer to decide than local buyers and often involve family in India, so the plan measures progress in conversations and video visits, not just form fills.',
+        ],
+      },
+      {
+        id: 'plan',
+        heading: 'The 30-day plan',
+        table: {
+          headers: ['Week', 'Focus', 'Done when'],
+          rows: [
+            ['Week 1', 'NRI landing page, WhatsApp flow and document kit (brochure, cost sheet, RERA certificate, recorded walkthrough)', 'Every document reaches a test number on WhatsApp within seconds of a test enquiry'],
+            ['Week 2', 'Launch in the UAE: Dubai, Abu Dhabi and Sharjah, with ads delivered in the buyer’s evening hours', 'Enquiries arriving daily and every one answered automatically'],
+            ['Week 3', 'Add the UK or the US, chosen on early cost per lead and how many UAE leads reply', 'Second market live with its own campaign and budget'],
+            ['Week 4', 'Retarget page visitors and video viewers; push video site visits to everyone who replied', 'Video visits booked and a first cost per video visit for each country'],
+          ],
+        },
+      },
+      {
+        id: 'targeting',
+        heading: 'Targeting notes',
+        list: [
+          'One campaign per country or region, never one “NRI” audience. Costs, time zones and buyer questions differ by market.',
+          'Location targeting on people living in the chosen cities, combined with language (Hindi or the relevant regional language) and interests linked to India, such as Indian news, festivals or the home state.',
+          'Two messages tested side by side: a home for family or for later, and an investment (rental demand, connectivity, RERA status). Investment buyers rarely care about BHK counts first.',
+          'Ads shown in the US, Canada and parts of Europe may have to run under Meta’s Housing special ad category, which removes age and gender targeting and limits location targeting. Those campaigns lean on creative and retargeting instead.',
+          'Meta’s targeting options change often. Check what is available in Ads Manager when you build the campaign rather than relying on any list, including this one.',
+        ],
+      },
+      {
+        id: 'time-zones',
+        heading: 'Time zones against IST',
+        paragraphs: [
+          'The auto-reply goes out instantly at any hour. Human calls and follow-ups are timed to the buyer’s evening, roughly 7 to 10 PM their time. The table shows what that means for your sales team in India. Daylight saving dates differ by country, so check the current offset before scheduling.',
+        ],
+        table: {
+          headers: ['Market', 'Time difference from IST', 'Their 7–10 PM in IST'],
+          rows: [
+            ['UAE, Oman', '1.5 hours behind', '8:30–11:30 PM'],
+            ['Saudi Arabia, Qatar, Kuwait, Bahrain', '2.5 hours behind', '9:30 PM–12:30 AM'],
+            ['UK (summer time / winter time)', '4.5 / 5.5 hours behind', '11:30 PM–2:30 AM / 12:30–3:30 AM'],
+            ['US East and Toronto (summer / winter)', '9.5 / 10.5 hours behind', '4:30–7:30 AM / 5:30–8:30 AM next day'],
+            ['US West and Vancouver (summer / winter)', '12.5 / 13.5 hours behind', '7:30–10:30 AM / 8:30–11:30 AM next day'],
+            ['Singapore', '2.5 hours ahead', '4:30–7:30 PM'],
+            ['Sydney (winter / summer time)', '4.5 / 5.5 hours ahead', '2:30–5:30 PM / 1:30–4:30 PM'],
+          ],
+        },
+      },
+      {
+        id: 'whatsapp-script',
+        heading: 'WhatsApp flow script (example)',
+        image: {
+          src: '/images/people/playbooks/nri-video-call-laptop.jpg',
+          alt: 'Person on a laptop video call with a smiling woman on screen',
+        },
+        paragraphs: [
+          'Example wording only. Messages sent more than 24 hours after the buyer’s last reply must use templates approved by WhatsApp, and every message is adjusted to the project and the developer’s rules.',
+        ],
+        table: {
+          headers: ['When', 'Example message'],
+          rows: [
+            ['Instantly, any hour', '“Hi {name}, thanks for asking about {project}, {locality}. Here are the brochure and RERA certificate. Are you looking at 2 BHK or 3 BHK?”'],
+            ['Buyer replies', '“Thanks! Which country are you in, and when are you planning to buy: within 3 months, in 3–12 months, or just exploring?”'],
+            ['Payment question', '“NRIs can buy residential property in India and pay from an NRE, NRO or FCNR account. Here is the cost sheet. Please confirm your own case with your CA. Would you like a call with our team?”'],
+            ['Video visit offer', '“We can show you the site on a WhatsApp video call. Does {slot 1} or {slot 2} your time suit you?”'],
+            ['Day before the visit', '“Your video site visit is tomorrow at {time} your time. {salesperson} will call you on WhatsApp video from the site.”'],
+            ['Family handoff', '“Would someone in your family in India like to see the site in person? Share their name and number and we’ll book a visit for them.”'],
+            ['Buyer goes quiet', '“Here is this month’s construction update for {project}. Reply CALL any time and we’ll ring you in your evening.”'],
+          ],
+        },
+      },
+      {
+        id: 'metrics',
+        heading: 'What we report, by country',
+        table: {
+          headers: ['Metric', 'Why it matters'],
+          rows: [
+            ['Leads', 'Volume from each market and campaign'],
+            ['Contact rate', 'Share of leads who replied or took a call. Low numbers point to timing or follow-up, not the ads'],
+            ['Video visits booked', 'The first real sign of a serious buyer abroad'],
+            ['Cost per video visit', 'The number budgets are moved on between countries'],
+            ['Family visits in India', 'Physical site visits by relatives, logged to the same buyer'],
+          ],
+        },
+      },
+    ],
+  },
 ];
 
 export function getPlaybookBySlug(slug: string) {

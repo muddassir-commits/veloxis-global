@@ -17,12 +17,15 @@ export const AudiencePageTemplate: React.FC<{ audience: AudienceData }> = ({ aud
   const playbooks = audience.relatedPlaybooks.map(getPlaybookBySlug).filter(Boolean);
   const posts = audience.relatedPosts.map((s) => getBlogPost(s)).filter(Boolean);
   const img = audience.images;
+  const crumbs = [...(audience.parent ? [audience.parent] : []), { name: audience.breadcrumb, href: audience.path }];
+  const heroCta = audience.heroCta ?? { label: 'Get a free marketing review →', href: '/contact' };
+  const faqWho = { developers: 'developers', 'channel-partners': 'channel partners and brokers', nri: 'developers and channel partners' }[audience.key];
 
   return (
     <>
       <section className="bg-slate-50 py-8 border-b border-slate-100">
         <div className="max-w-container-max mx-auto px-gutter">
-          <Breadcrumb items={[{ name: audience.breadcrumb, href: audience.path }]} />
+          <Breadcrumb items={crumbs} />
         </div>
       </section>
 
@@ -46,8 +49,8 @@ export const AudiencePageTemplate: React.FC<{ audience: AudienceData }> = ({ aud
             <Badge variant="teal" className="mb-4 !bg-white/10 !text-white border border-white/20 backdrop-blur-sm">{audience.eyebrow.toUpperCase()}</Badge>
             <h1 className="text-4xl sm:text-headline-lg font-extrabold text-white tracking-tight leading-tight mb-6">{audience.h1}</h1>
             <p className="text-base sm:text-body-lg text-white/80 leading-relaxed mb-8">{audience.lead}</p>
-            <Button id={`audience-hero-cta-${audience.key}`} href="/contact" variant="primary">
-              Get a free marketing review →
+            <Button id={`audience-hero-cta-${audience.key}`} href={heroCta.href} variant="primary">
+              {heroCta.label}
             </Button>
           </div>
         </div>
@@ -60,6 +63,14 @@ export const AudiencePageTemplate: React.FC<{ audience: AudienceData }> = ({ aud
             {audience.intro.map((p, i) => (
               <p key={i} className="text-slate-700 leading-relaxed text-base sm:text-lg">{p}</p>
             ))}
+            {audience.introLink && (
+              <p className="text-slate-700 leading-relaxed text-base sm:text-lg">
+                {audience.introLink.text}{' '}
+                <Link href={audience.introLink.href} className="font-bold text-royal-blue hover:underline">
+                  {audience.introLink.label} →
+                </Link>
+              </p>
+            )}
           </div>
           <ImageFrame
             src={img.intro.src}
@@ -197,7 +208,7 @@ export const AudiencePageTemplate: React.FC<{ audience: AudienceData }> = ({ aud
         customFaqs={audience.faqs}
         title="Common questions"
         badgeText="FAQ"
-        description={`What ${audience.key === 'developers' ? 'developers' : 'channel partners and brokers'} usually ask before working with us.`}
+        description={`What ${faqWho} usually ask before working with us.`}
       />
 
       <CtaBanner title={audience.ctaTitle} description={audience.ctaDescription} />

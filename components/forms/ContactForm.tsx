@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import * as z from 'zod';
@@ -20,7 +20,17 @@ const contactSchema = z.object({
 
 type ContactFormData = z.infer<typeof contactSchema>;
 
-export const ContactForm: React.FC = () => {
+const serviceOptions = [
+  { value: 'High-Converting Landing Pages', label: 'High-Converting Landing Pages' },
+  { value: 'Meta & Google Ads', label: 'Meta & Google Ads' },
+  { value: 'AI & WhatsApp Automation', label: 'AI & WhatsApp Automation' },
+  { value: 'Full Pipeline Setup (All)', label: 'Full Pipeline Setup (All)' },
+  { value: 'Real Estate Lead System', label: 'Real Estate Lead System (Ads + Page + WhatsApp)' },
+  { value: 'NRI buyer campaigns', label: 'NRI buyer campaigns' },
+  { value: 'Other', label: 'Other' },
+];
+
+export const ContactForm: React.FC<{ defaultService?: string }> = ({ defaultService = '' }) => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState<boolean | null>(null);
   // Server message for rate limits (429); other failures use the generic text.
@@ -30,17 +40,25 @@ export const ContactForm: React.FC = () => {
     register,
     handleSubmit,
     reset,
+    setValue,
     formState: { errors },
   } = useForm<ContactFormData>({
     resolver: zodResolver(contactSchema),
     defaultValues: {
       name: '',
       phone: '',
-      service: '',
+      service: defaultService,
       message: '',
       _honey: '',
     }
   });
+
+  // Links like /contact?service=NRI%20buyer%20campaigns preselect an option. Read on the client
+  // so pages with the form stay static.
+  useEffect(() => {
+    const wanted = new URLSearchParams(window.location.search).get('service');
+    if (wanted && serviceOptions.some((o) => o.value === wanted)) setValue('service', wanted);
+  }, [setValue]);
 
   const onSubmit = async (data: ContactFormData) => {
     setIsSubmitting(true);
@@ -86,9 +104,9 @@ export const ContactForm: React.FC = () => {
           </p>
           <div className="text-left bg-white rounded-md p-4 border border-slate-100 max-w-sm w-full text-sm flex flex-col gap-2 shadow-sm">
             <span className="font-bold text-slate-900">What Happens Next:</span>
-            <span className="text-slate-600">1. We review your website and requirements.</span>
-            <span className="text-slate-600">2. We schedule a brief discovery call.</span>
-            <span className="text-slate-600">3. We deliver a custom growth proposal.</span>
+            <span className="text-slate-600">1. We look at your project and your current lead flow.</span>
+            <span className="text-slate-600">2. We fix a time for a short call.</span>
+            <span className="text-slate-600">3. You get a written plan and quote.</span>
           </div>
         </div>
       ) : (
@@ -136,11 +154,9 @@ export const ContactForm: React.FC = () => {
               {...register('service')}
             >
               <option value="">Select a service</option>
-              <option value="High-Converting Landing Pages">High-Converting Landing Pages</option>
-              <option value="Meta & Google Ads">Meta & Google Ads</option>
-              <option value="AI & WhatsApp Automation">AI & WhatsApp Automation</option>
-              <option value="Full Pipeline Setup (All)">Full Pipeline Setup (All)</option>
-              <option value="Other">Other</option>
+              {serviceOptions.map((o) => (
+                <option key={o.value} value={o.value}>{o.label}</option>
+              ))}
             </select>
             {errors.service && <span className="text-[14px] text-red-500 font-medium">{errors.service.message}</span>}
           </div>
