@@ -8,18 +8,22 @@ import { CookieBanner } from '../components/layout/CookieBanner';
 import { StickyMobileBar } from '../components/ui/StickyMobileBar';
 import { MotionEffects } from '../components/ui/MotionEffects';
 import AnalyticsTracker from '../components/analytics/AnalyticsTracker';
-import { constructMetadata, pageMeta } from '../lib/seo-config';
+import { SITE_URL, DEFAULT_OG_IMAGE } from '../lib/seo-config';
 import { SchemaMarkup } from '../components/ui/SchemaMarkup';
 import { getSiteGraph } from '../lib/schema';
 import './globals.css';
 
+// Site-wide defaults only. Every page sets its own title, description and canonical; anything that
+// doesn't (the 404 page) must not inherit the homepage canonical, so none is set here.
 export const metadata: Metadata = {
-  ...constructMetadata(pageMeta.home),
+  metadataBase: new URL(SITE_URL),
   title: {
-    default: pageMeta.home.title,
+    default: 'Veloxis Global',
     template: '%s | Veloxis Global',
   },
   applicationName: 'Veloxis Global',
+  openGraph: { siteName: 'Veloxis Global', locale: 'en_IN', type: 'website', images: [DEFAULT_OG_IMAGE] },
+  twitter: { card: 'summary_large_image' },
   icons: {
     icon: [
       { url: '/favicon.ico' },

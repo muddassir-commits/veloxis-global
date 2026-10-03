@@ -16,7 +16,7 @@ import { getServiceSchema } from '../../lib/schema';
 import { constructMetadata, pageMeta } from '../../lib/seo-config';
 import { siteData } from '../../data/site';
 import {
-  MIN_AD_BUDGET, leadSystemFaqs, leadSystemIncluded, leadSystemMetrics, leadSystemNeeds, leadSystemNri, leadSystemPricing,
+  MIN_AD_BUDGET, leadSystemDefinition, leadSystemFaqs, leadSystemIncluded, leadSystemMetrics, leadSystemNeeds, leadSystemNri, leadSystemPricing,
   leadSystemProblems, leadSystemReasons, leadSystemSteps, leadSystemTimeline,
 } from '../../data/lead-system';
 
@@ -60,7 +60,7 @@ export default function LeadSystemPage() {
         <div className="max-w-container-max mx-auto px-gutter relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           <div className="lg:col-span-7 flex flex-col items-start gap-6">
             <span className="inline-flex items-center gap-2 bg-royal-blue/20 border border-royal-blue/30 px-3 py-1 rounded-full text-xs font-bold text-blue-300 uppercase tracking-wider">
-              Real Estate Lead System
+              Real estate lead generation system
             </span>
             <h1 className="text-4xl sm:text-5xl lg:text-[56px] font-extrabold tracking-tight leading-[1.1] text-white">
               Genuine buyer enquiries on your WhatsApp, every day
@@ -102,6 +102,14 @@ export default function LeadSystemPage() {
               className="shadow-2xl border border-slate-800"
             />
           </div>
+        </div>
+      </section>
+
+      {/* Direct answer: what this is, in one paragraph */}
+      <section className="bg-white pt-14 pb-2">
+        <div className="max-w-3xl mx-auto px-gutter text-center">
+          <h2 className="text-2xl font-extrabold text-slate-900 tracking-tight mb-3">{leadSystemDefinition.question}</h2>
+          <p className="text-slate-600 leading-relaxed text-lg">{leadSystemDefinition.answer}</p>
         </div>
       </section>
 

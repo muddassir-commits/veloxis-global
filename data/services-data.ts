@@ -183,7 +183,7 @@ export const servicesData: ServiceData[] = [
     emoji: '🎯',
     icon: 'Target',
     accentColor: 'indigo',
-    seoTitle: 'Real Estate Lead Generation: Meta & Google Ads | Veloxis',
+    seoTitle: 'Meta & Google Ads for Real Estate Leads | Veloxis',
     metaDescription:
       'Real estate lead generation with Meta (Facebook, Instagram) and Google ads: qualifying forms that cut junk leads, and weekly reports on cost per site visit.',
     serviceType: 'Real estate lead generation',

@@ -53,6 +53,8 @@ export interface AudienceData {
   help: AudienceHelp[];
   extraHeading: string;
   extra: AudienceBlock[];
+  /** Optional city section (old city URLs redirect to the developers page) */
+  local?: { heading: string; intro: string; areas: AudienceBlock[] };
   relatedPlaybooks: string[];
   relatedPosts: string[];
   faqs: { question: string; answer: string }[];
@@ -94,6 +96,17 @@ export const audiences: Record<AudienceData['key'], AudienceData> = {
       { title: 'Launch-to-possession planning', desc: 'Pre-launch EOI capture, launch campaigns, and a “ready to move” push once OC is received — each with its own page and message.' },
       { title: 'Numbers your sales head trusts', desc: 'Weekly reporting on leads, contact rate, site visits and cost per site visit, taken from your CRM rather than ad dashboards.' },
     ],
+    local: {
+      heading: 'Real estate marketing in Kanpur, Lucknow, Noida and Delhi NCR',
+      intro:
+        'We work with developers and channel partners across Uttar Pradesh and Delhi NCR. Campaigns are planned locality by locality, because buyers search and compare by area, not by city.',
+      areas: [
+        { title: 'Kanpur', desc: 'A close-knit market where many buyers already know a broker. Fast WhatsApp follow-up and clear price and RERA details on the page decide who gets the site visit.' },
+        { title: 'Lucknow', desc: 'Buyers compare projects locality by locality, so each project gets its own page and ads aimed at the areas buyers actually search for.' },
+        { title: 'Noida and Greater Noida', desc: 'Many projects compete for the same buyers in the same sectors, so exclusive leads, speed of reply and cost per site visit matter more than reach.' },
+        { title: 'Delhi NCR', desc: 'A large, crowded ad market where narrow targeting, retargeting and well-qualified enquiries keep the cost per site visit under control.' },
+      ],
+    },
     relatedPlaybooks: ['new-launch-meta-google-ads-plan', 'project-landing-page-blueprint'],
     relatedPosts: ['what-is-eoi-in-real-estate', 'meta-ads-for-real-estate-india', 'ai-for-real-estate-india', 'google-ads-vs-meta-ads-real-estate-india'],
     faqs: [
@@ -184,6 +197,7 @@ export const audiences: Record<AudienceData['key'], AudienceData> = {
     lead:
       'For developers and channel partners in India: exclusive enquiries from Indians living abroad, answered on WhatsApp in seconds, qualified and booked for a video site visit.',
     intro: [
+      'NRI real estate marketing means reaching Indians who live in the UAE, the UK, the US and other countries with Meta ads, an NRI-ready project page and WhatsApp replies in their time zone, then booking them for a video site visit. Veloxis Global runs it for developers and channel partners in India.',
       'Many buyers for projects in Noida, Lucknow and Kanpur don’t live in India. They work in Dubai, London or New Jersey and want a flat in their home city, for their parents, for later, or as an investment. They are serious buyers, but they enquire at odd hours, can’t walk into a site office, and ask about payment and paperwork before they ask about the floor plan.',
       'We run your NRI campaigns as a separate track of the same lead system: Meta ads shown to Indians in the countries you choose, an NRI version of your project page, and a WhatsApp flow that replies instantly, sends the documents buyers abroad ask for, and books the sales call in the buyer’s own evening. You stay the seller. We bring the enquiries and make sure none of them go cold.',
     ],

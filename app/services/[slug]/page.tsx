@@ -14,6 +14,7 @@ import { SchemaMarkup } from '../../../components/ui/SchemaMarkup';
 import { FaqAccordion } from '../../../components/sections/FaqAccordion';
 import { getServiceSchema } from '../../../lib/schema';
 import { CtaBanner } from '../../../components/sections/CtaBanner';
+import { LeadSystemCallout } from '../../../components/sections/LeadSystemCallout';
 import { Target, CheckCircle, AlertTriangle, ArrowRight } from 'lucide-react';
 
 const serviceHeroImages: Record<string, { src: string; alt: string }> = {
@@ -302,6 +303,7 @@ export default async function ServicePage({ params }: PageProps) {
         </div>
       </section>
 
+      <LeadSystemCallout />
       <FaqAccordion
         customFaqs={service.faqs}
         title={`${service.title}: common questions`}

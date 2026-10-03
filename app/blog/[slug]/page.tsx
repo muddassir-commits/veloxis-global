@@ -32,6 +32,9 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
     description: post.excerpt,
     path: `/blog/${post.slug}`,
     ogImage: post.image,
+    // Blog covers are exported at 1600x1000 (see content/blog/_template).
+    ogImageWidth: 1600,
+    ogImageHeight: 1000,
     ogType: 'article',
     publishedTime: post.isoDate,
     modifiedTime: post.modifiedIso,

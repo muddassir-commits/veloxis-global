@@ -5,6 +5,13 @@
 
 export const MIN_AD_BUDGET = '₹15,000';
 
+// Short, quotable answer shown under the hero (for buyers skimming and for AI answers).
+export const leadSystemDefinition = {
+  question: 'What is the Real Estate Lead System?',
+  answer:
+    'It is a done-for-you lead generation setup for real estate agents, brokers and builders: Meta ads aimed at real buyers, a landing page for each project, and an instant WhatsApp reply to every enquiry. Veloxis Global sets it up in two weeks, runs it month to month and reports site visits every week.',
+};
+
 export const leadSystemProblems = [
   {
     title: 'Portal leads are shared',
@@ -145,6 +152,11 @@ export const leadSystemNeeds = [
 
 export const leadSystemFaqs = [
   {
+    question: 'What is real estate lead generation?',
+    answer:
+      'It is the work of finding people who want to buy property and getting their name and number to your sales team while they are still interested. In India that usually means ads on Facebook, Instagram and Google, a page that collects the enquiry, and a fast reply. The Lead System does all three.',
+  },
+  {
     question: 'How many leads will I get?',
     answer:
       'It depends on your budget, city, project and price band, so we don’t promise a number before seeing them. On the free audit call we look at your project and give you a realistic range.',
@@ -163,6 +175,11 @@ export const leadSystemFaqs = [
     question: 'Do you call the leads for us?',
     answer:
       'No. The WhatsApp flow replies instantly and asks the qualifying questions, and your team calls the buyers who answer. Buyers trust the person who will actually show them the property, so the call should come from you, ideally the same day.',
+  },
+  {
+    question: 'How much does a real estate lead cost?',
+    answer:
+      'It depends on the city, the price band, how narrow the targeting is and how many questions the form asks. A cheap lead that never picks up costs more in the end, so we judge campaigns on cost per site visit, not cost per lead. We give you a realistic range for your project on the free audit call.',
   },
   {
     question: 'Is the ad spend included in your fee?',

@@ -9,10 +9,20 @@ import { faqs } from '../data/faqs';
 import { freeAuditFaqs } from '../data/free-audit';
 import { SITE_URL, FOUNDER_YEARS } from './seo-config';
 import { playbookFaqs } from '../data/playbook-faqs';
+import {
+  MIN_AD_BUDGET, leadSystemFaqs, leadSystemIncluded, leadSystemMetrics, leadSystemNri, leadSystemProblems, leadSystemSteps,
+  leadSystemTimeline,
+} from '../data/lead-system';
 
 const qa = (list: { question: string; answer: string }[] = []) => list.flatMap((f) => [`Q: ${f.question}`, `A: ${f.answer}`, '']);
 
-const intro = `> Veloxis Global is a real estate marketing agency for developers, builders, brokers and channel partners in India. It builds project landing pages, runs Meta (Facebook and Instagram) and Google ads for property leads, and sets up AI WhatsApp chatbots and CRM automation that reply to every enquiry within seconds. It works only in real estate and reports on site visits and cost per site visit.`;
+const intro = `> ${siteData.definition} It works only in real estate and reports on site visits and cost per site visit.`;
+
+// Build date: the llms routes are static, so this is when the content was last published.
+const updated = `Last updated: ${new Date().toISOString().slice(0, 10)}`;
+
+const leadSystemSummary =
+  'Meta ads, a project landing page and an instant WhatsApp reply, set up and run as one system for real estate agents, brokers, channel partners and builders. One-time setup fee plus a monthly fee, month-to-month after setup; ad spend is paid by the client directly to Meta.';
 
 const contact = `## Contact
 
@@ -28,13 +38,23 @@ const facts = `## Key facts
 - Industry focus: real estate only
 - Services: landing pages & project microsites; Meta (Facebook & Instagram) & Google ads for real estate lead generation; AI chatbot, WhatsApp & CRM automation
 - Terms: month-to-month with 30 days' notice; ad spend is paid directly to Google and Meta by the client
-- Playbooks on this site are example plans for hypothetical projects, not client case studies`;
+- Playbooks on this site are example plans for hypothetical projects, not client case studies
+- ${siteData.disambiguation}`;
 
 export function buildLlmsTxt(): string {
   return [
     '# Veloxis Global',
     '',
     intro,
+    '',
+    updated,
+    '',
+    '## Core offer',
+    '',
+    `- [Real Estate Lead System](${SITE_URL}/real-estate-lead-system): ${leadSystemSummary}`,
+    `- [Free marketing audit](${SITE_URL}/free-audit): a free review of a project's landing page, ads and lead follow-up with the founder.`,
+    `- [About Veloxis Global and founder ${siteData.founder}](${SITE_URL}/about)`,
+    `- [Contact](${SITE_URL}/contact): phone and WhatsApp ${siteData.phone}, email ${siteData.email}.`,
     '',
     '## Services',
     '',
@@ -59,7 +79,6 @@ export function buildLlmsTxt(): string {
     '## Optional',
     '',
     `- [Full site content](${SITE_URL}/llms-full.txt)`,
-    `- [Free marketing audit](${SITE_URL}/free-audit)`,
     '',
   ].join('\n');
 }
@@ -77,7 +96,17 @@ const stripHtml = (html: string) =>
     .trim();
 
 export function buildLlmsFullTxt(): string {
-  const out: string[] = ['# Veloxis Global — full site content', '', intro, '', facts, ''];
+  const out: string[] = ['# Veloxis Global — full site content', '', intro, '', updated, '', facts, ''];
+
+  out.push('## Real Estate Lead System', '', `URL: ${SITE_URL}/real-estate-lead-system`, '', leadSystemSummary, '');
+  out.push('### The problem', ...leadSystemProblems.map((p) => `- ${p.title}: ${p.desc}`), '');
+  out.push('### How it works', ...leadSystemSteps.map((st, i) => `${i + 1}. ${st.title}: ${st.desc}`), '');
+  out.push('### What is included', ...leadSystemIncluded.map((g) => `- ${g.group}: ${g.items.join('; ')}`), '');
+  out.push('### Timeline', ...leadSystemTimeline.map((t) => `- ${t.when} (${t.title}): ${t.desc}`), '');
+  out.push('### Weekly report', ...leadSystemMetrics.map((m) => `- ${m.label}: ${m.desc}`), '');
+  out.push(`### ${leadSystemNri.title}`, leadSystemNri.desc, `More: ${SITE_URL}${leadSystemNri.href}`, '');
+  out.push(`Recommended minimum ad budget: ${MIN_AD_BUDGET} a month per project, paid directly to Meta. Fees are quoted after the free audit call.`, '');
+  out.push('### FAQ', ...qa(leadSystemFaqs));
 
   for (const s of servicesData) {
     out.push(`## ${s.h1}`, '', `URL: ${SITE_URL}/services/${s.slug}`, '', ...s.intro, '');

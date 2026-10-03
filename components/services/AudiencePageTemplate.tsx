@@ -170,6 +170,25 @@ export const AudiencePageTemplate: React.FC<{ audience: AudienceData }> = ({ aud
         </div>
       </section>
 
+      {audience.local && (
+        <section className="bg-white py-16 border-t border-slate-100">
+          <div className="max-w-container-max mx-auto px-gutter">
+            <div className="max-w-3xl mb-10">
+              <h2 className="text-3xl font-bold text-slate-900 mb-4">{audience.local.heading}</h2>
+              <p className="text-slate-700 leading-relaxed text-base sm:text-lg">{audience.local.intro}</p>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+              {audience.local.areas.map((a) => (
+                <div key={a.title} className="bg-slate-50 border border-slate-200 rounded-2xl p-6">
+                  <h3 className="font-bold text-slate-900 mb-2">{a.title}</h3>
+                  <p className="text-sm text-slate-600 leading-relaxed">{a.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* Plans and guides, photo right */}
       <section className="bg-slate-50 py-14 border-t border-slate-100">
         <div className="max-w-container-max mx-auto px-gutter grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 items-center">
