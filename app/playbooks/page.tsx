@@ -61,7 +61,7 @@ export default function PlaybooksPage() {
               <article key={pb.slug} className="group spotlight bg-white rounded-3xl border border-slate-200 overflow-hidden flex flex-col transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] hover:shadow-xl hover:-translate-y-1">
                 <ImageFrame
                   src={pb.image}
-                  alt=""
+                  alt={pb.imageAlt}
                   ratio="16/10"
                   sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 600px"
                   className="!rounded-none"

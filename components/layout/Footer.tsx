@@ -10,6 +10,51 @@ import { WhatsAppIcon } from '../ui/WhatsAppIcon';
 import { ChevronDown, ChevronUp, ArrowUp, Phone, Mail, MapPin, CheckCircle2 } from 'lucide-react';
 import { siteData } from '../../data/site';
 
+// Footer link directory. Every href must be a live, indexable page.
+const footerColumns = [
+  {
+    id: 'services',
+    title: 'Services',
+    links: [
+      { label: 'Real Estate Lead System', href: '/real-estate-lead-system' },
+      { label: 'Landing Pages & Microsites', href: '/services/high-converting-landing-pages' },
+      { label: 'Meta & Google Ads', href: '/services/paid-ads' },
+      { label: 'WhatsApp & AI Automation', href: '/services/ai-automation' },
+      { label: 'All Services', href: '/services' },
+    ],
+  },
+  {
+    id: 'audiences',
+    title: 'Who We Help',
+    links: [
+      { label: 'Developers & Builders', href: '/industries/real-estate' },
+      { label: 'Channel Partners & Brokers', href: '/channel-partners' },
+      { label: 'NRI Buyer Campaigns', href: '/industries/real-estate/nri-buyers' },
+      { label: 'Example Playbooks', href: '/playbooks' },
+    ],
+  },
+  {
+    id: 'resources',
+    title: 'Guides',
+    links: [
+      { label: 'All Guides', href: '/blog' },
+      { label: 'How to Get Real Estate Leads', href: '/blog/how-to-generate-real-estate-leads' },
+      { label: 'Meta Ads for Real Estate', href: '/blog/meta-ads-for-real-estate-india' },
+      { label: 'WhatsApp Lead Follow-Up', href: '/blog/whatsapp-automation-for-real-estate-leads' },
+      { label: 'RERA Number Check', href: '/blog/rera-number-check' },
+    ],
+  },
+  {
+    id: 'company',
+    title: 'Company',
+    links: [
+      { label: 'About Veloxis Global', href: '/about' },
+      { label: 'Free Marketing Audit', href: '/free-audit' },
+      { label: 'Contact Us', href: '/contact' },
+    ],
+  },
+];
+
 export const Footer: React.FC = () => {
   const [email, setEmail] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -111,166 +156,78 @@ export const Footer: React.FC = () => {
 
         </div>
 
-        {/* Tier 2: Link Directory Sitemap columns */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-12 py-16 text-left border-b border-white/5">
+        {/* Tier 2: contact column + link directory */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-x-8 gap-y-2 md:gap-y-10 lg:gap-x-10 py-16 text-left border-b border-white/5">
 
-          {/* Services Column (span 3) */}
-          <div className="lg:col-span-3 flex flex-col md:gap-5 border-b border-white/5 md:border-b-0 pb-4 md:pb-0">
-            <button
-              onClick={() => toggleSection('services')}
-              aria-expanded={openSection === 'services'}
-              aria-controls="footer-services-list"
-              className="flex items-center justify-between w-full md:cursor-default text-left md:pointer-events-none focus:outline-none py-2 md:py-0"
+          {/* Contact + service area (always open) */}
+          <div className="md:col-span-2 lg:col-span-4 flex flex-col gap-4 pb-6 md:pb-0 border-b border-white/5 md:border-b-0">
+            <span className="text-[12px] tracking-[0.08em] uppercase text-slate-200 font-black">GET IN TOUCH</span>
+            <a href={`tel:${siteData.phoneRaw}`} className="text-[15px] text-slate-200 hover:text-white transition-colors flex items-center gap-2.5 w-fit">
+              <Phone className="w-4 h-4 text-royal-blue shrink-0" aria-hidden="true" />
+              <span>{siteData.phone}</span>
+            </a>
+            <a href={`mailto:${siteData.email}`} className="text-[15px] text-slate-200 hover:text-white transition-colors flex items-center gap-2.5 w-fit break-all">
+              <Mail className="w-4 h-4 text-royal-blue shrink-0" aria-hidden="true" />
+              <span>{siteData.email}</span>
+            </a>
+            <a
+              href={siteData.whatsappLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-[#25D366] hover:bg-[#20ba5a] text-white py-2.5 px-4 rounded-xl font-bold text-xs inline-flex items-center justify-center gap-2 transition-all duration-300 w-full sm:w-fit shadow-md shadow-emerald-950/20"
             >
-              <span className="text-[12px] tracking-[0.08em] uppercase text-slate-200 font-black">SERVICES</span>
-              <span className="md:hidden text-slate-400">
-                {openSection === 'services' ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
-              </span>
-            </button>
-            <ul
-              id="footer-services-list"
-              className={`flex flex-col gap-3 text-[14px] text-slate-400 mt-3 md:mt-0 ${openSection === 'services' ? 'block' : 'hidden md:flex'}`}
-            >
-              {/* New services will be added here */}
-              <li>
-                <Link href="/services/high-converting-landing-pages" className="hover:text-white hover:translate-x-1 transition-all duration-200 inline-block">
-                  Landing Pages &amp; Microsites
-                </Link>
-              </li>
-              <li>
-                <Link href="/services/paid-ads" className="hover:text-white hover:translate-x-1 transition-all duration-200 inline-block">
-                  Meta & Google Ads
-                </Link>
-              </li>
-              <li>
-                <Link href="/services/ai-automation" className="hover:text-white hover:translate-x-1 transition-all duration-200 inline-block">
-                  AI Chatbot &amp; WhatsApp Automation
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          {/* Locations Column (span 3) */}
-          <div className="lg:col-span-3 flex flex-col md:gap-5 border-b border-white/5 md:border-b-0 pb-4 md:pb-0">
-            <button
-              onClick={() => toggleSection('locations')}
-              aria-expanded={openSection === 'locations'}
-              aria-controls="footer-locations-list"
-              className="flex items-center justify-between w-full md:cursor-default text-left md:pointer-events-none focus:outline-none py-2 md:py-0"
-            >
-              <span className="text-[12px] tracking-[0.08em] uppercase text-slate-200 font-black">WHO WE HELP</span>
-              <span className="md:hidden text-slate-400">
-                {openSection === 'locations' ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
-              </span>
-            </button>
-            <ul
-              id="footer-locations-list"
-              className={`flex flex-col gap-3 text-[14px] text-slate-400 mt-3 md:mt-0 ${openSection === 'locations' ? 'block' : 'hidden md:flex'}`}
-            >
-              <li>
-                <Link href="/industries/real-estate" className="hover:text-white hover:translate-x-1 transition-all duration-200 inline-block">
-                  Developers &amp; Builders
-                </Link>
-              </li>
-              <li>
-                <Link href="/channel-partners" className="hover:text-white hover:translate-x-1 transition-all duration-200 inline-block">
-                  Channel Partners &amp; Brokers
-                </Link>
-              </li>
-              <li>
-                <Link href="/industries/real-estate/nri-buyers" className="hover:text-white hover:translate-x-1 transition-all duration-200 inline-block">
-                  NRI Buyer Campaigns
-                </Link>
-              </li>
-              <li>
-                <Link href="/playbooks" className="hover:text-white hover:translate-x-1 transition-all duration-200 inline-block">
-                  Example Playbooks
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          {/* Company Column (span 3) */}
-          <div className="lg:col-span-3 flex flex-col md:gap-5 border-b border-white/5 md:border-b-0 pb-4 md:pb-0">
-            <button
-              onClick={() => toggleSection('company')}
-              aria-expanded={openSection === 'company'}
-              aria-controls="footer-company-list"
-              className="flex items-center justify-between w-full md:cursor-default text-left md:pointer-events-none focus:outline-none py-2 md:py-0"
-            >
-              <span className="text-[12px] tracking-[0.08em] uppercase text-slate-200 font-black">COMPANY</span>
-              <span className="md:hidden text-slate-400">
-                {openSection === 'company' ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
-              </span>
-            </button>
-            <ul
-              id="footer-company-list"
-              className={`flex flex-col gap-3 text-[14px] text-slate-400 mt-3 md:mt-0 ${openSection === 'company' ? 'block' : 'hidden md:flex'}`}
-            >
-              <li>
-                <Link href="/about" className="hover:text-white hover:translate-x-1 transition-all duration-200 inline-block">
-                  About Our Agency
-                </Link>
-              </li>
-              <li>
-                <Link href="/free-audit" className="hover:text-white hover:translate-x-1 transition-all duration-200 inline-block">
-                  Free Marketing Audit
-                </Link>
-              </li>
-              <li>
-                <Link href="/blog" className="hover:text-white hover:translate-x-1 transition-all duration-200 inline-block">
-                  Blog &amp; Guides
-                </Link>
-              </li>
-              <li>
-                <Link href="/contact" className="hover:text-white hover:translate-x-1 transition-all duration-200 inline-block">
-                  Contact Us
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          {/* Contact Details Column (span 3) */}
-          <div className="lg:col-span-3 flex flex-col md:gap-5 pb-4 md:pb-0">
-            <button
-              onClick={() => toggleSection('contact')}
-              aria-expanded={openSection === 'contact'}
-              aria-controls="footer-contact-info"
-              className="flex items-center justify-between w-full md:cursor-default text-left md:pointer-events-none focus:outline-none py-2 md:py-0"
-            >
-              <span className="text-[12px] tracking-[0.08em] uppercase text-slate-200 font-black">GET IN TOUCH</span>
-              <span className="md:hidden text-slate-400">
-                {openSection === 'contact' ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
-              </span>
-            </button>
-            <div
-              id="footer-contact-info"
-              className={`flex flex-col gap-4 text-[14px] mt-3 md:mt-0 ${openSection === 'contact' ? 'block' : 'hidden md:flex'}`}
-            >
-              <a href={`tel:${siteData.phoneRaw}`} className="text-slate-300 hover:text-royal-blue transition-colors flex items-center gap-2">
-                <Phone className="w-4 h-4 text-royal-blue shrink-0" />
-                <span>{siteData.phone}</span>
-              </a>
-              <a href={`mailto:${siteData.email}`} className="text-slate-300 hover:text-royal-blue transition-colors flex items-center gap-2 break-all">
-                <Mail className="w-4 h-4 text-royal-blue shrink-0" />
-                <span>{siteData.email}</span>
-              </a>
-              <div className="text-slate-400 flex items-start gap-2 leading-relaxed">
-                <MapPin className="w-4 h-4 text-royal-blue shrink-0 mt-1" />
-                <span>{siteData.address}</span>
-              </div>
-
-              <a
-                href={siteData.whatsappLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-[#25D366] hover:bg-[#20ba5a] text-white py-2.5 px-4 rounded-xl font-bold text-xs inline-flex items-center justify-center gap-2 transition-all duration-300 w-full text-center shadow-md shadow-emerald-950/20"
-              >
-                <WhatsAppIcon className="w-4 h-4 shrink-0" />
-                <span>Chat on WhatsApp</span>
-              </a>
+              <WhatsAppIcon className="w-4 h-4 shrink-0" />
+              <span>Chat on WhatsApp</span>
+            </a>
+            <div className="mt-2">
+              <p className="text-[12px] tracking-[0.08em] uppercase text-slate-200 font-black mb-3 flex items-center gap-2">
+                <MapPin className="w-3.5 h-3.5 text-royal-blue" aria-hidden="true" />
+                Areas we serve
+              </p>
+              <ul className="flex flex-wrap gap-2" aria-label="Areas we serve">
+                {siteData.areaServed.map((area) => (
+                  <li key={area} className="text-[12px] font-semibold bg-white/5 border border-white/10 px-2.5 py-1 rounded-full text-slate-300">
+                    {area}
+                  </li>
+                ))}
+              </ul>
+              <p className="text-[12px] text-slate-500 mt-3">Service-area business, no walk-in office.</p>
             </div>
           </div>
+
+          {/* Link columns (accordions on mobile) */}
+          {footerColumns.map((col) => (
+            <nav
+              key={col.id}
+              aria-label={col.title}
+              className="lg:col-span-2 flex flex-col md:gap-5 border-b border-white/5 md:border-b-0 py-1 md:py-0"
+            >
+              <button
+                type="button"
+                onClick={() => toggleSection(col.id)}
+                aria-expanded={openSection === col.id}
+                aria-controls={`footer-${col.id}-list`}
+                className="flex items-center justify-between w-full md:cursor-default text-left md:pointer-events-none focus:outline-none py-3 md:py-0"
+              >
+                <span className="text-[12px] tracking-[0.08em] uppercase text-slate-200 font-black">{col.title}</span>
+                <span className="md:hidden text-slate-400" aria-hidden="true">
+                  {openSection === col.id ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
+                </span>
+              </button>
+              <ul
+                id={`footer-${col.id}-list`}
+                className={`flex-col gap-3 text-[14px] text-slate-400 pb-4 md:pb-0 ${openSection === col.id ? 'flex' : 'hidden md:flex'}`}
+              >
+                {col.links.map((l) => (
+                  <li key={l.href}>
+                    <Link href={l.href} className="hover:text-white hover:translate-x-1 transition-all duration-200 inline-block leading-snug">
+                      {l.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+          ))}
 
         </div>
 
@@ -370,9 +327,6 @@ export const Footer: React.FC = () => {
             <button type="button" onClick={openCookieSettings} className="hover:text-white transition-colors duration-300">
               Cookie settings
             </button>
-            <Link href="/sitemap.xml" className="hover:text-white transition-colors duration-300">
-              Sitemap
-            </Link>
             <span className="text-slate-400 font-normal">
               Founded & run by Muddassir Ali
             </span>

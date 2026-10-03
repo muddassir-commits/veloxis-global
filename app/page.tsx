@@ -15,6 +15,8 @@ const BlogPreview = dynamic(() => import('../components/sections/BlogPreview').t
 const FaqAccordion = dynamic(() => import('../components/sections/FaqAccordion').then((m) => ({ default: m.FaqAccordion })));
 const CtaBanner = dynamic(() => import('../components/sections/CtaBanner').then((m) => ({ default: m.CtaBanner })));
 
+import { LeadSystemCallout } from '../components/sections/LeadSystemCallout';
+
 export const metadata: Metadata = constructMetadata(pageMeta.home);
 
 export default function Home() {
@@ -22,6 +24,7 @@ export default function Home() {
     <>
       <HeroSection />
       <ServicesGrid />
+      <LeadSystemCallout className="bg-slate-50" />
       <AudienceSplit />
       <ProcessTimeline />
       <PlaybooksPreview />

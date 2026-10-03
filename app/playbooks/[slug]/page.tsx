@@ -11,6 +11,7 @@ import { getArticleSchema } from '../../../lib/schema';
 import { CtaBanner } from '../../../components/sections/CtaBanner';
 import { FaqAccordion } from '../../../components/sections/FaqAccordion';
 import { playbookFaqs } from '../../../data/playbook-faqs';
+import { siteData } from '../../../data/site';
 import { ScrollProgress } from '../../../components/ui/ScrollProgress';
 import { ImageFrame } from '../../../components/ui/ImageFrame';
 import { Info, ArrowRight } from 'lucide-react';
@@ -31,7 +32,11 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     title: pb.seoTitle,
     description: pb.metaDescription,
     path: `/playbooks/${pb.slug}`,
+    ogImage: pb.image,
+    ogImageWidth: 1600,
+    ogImageHeight: 1000,
     ogType: 'article',
+    publishedTime: pb.updated,
     modifiedTime: pb.updated,
   });
 }
@@ -72,7 +77,14 @@ export default async function PlaybookPage({ params }: PageProps) {
           <span className="text-xs font-bold uppercase tracking-wider text-royal-blue">
             Example plan · {service?.title}
           </span>
-          <h1 className="text-3xl sm:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight mt-3 mb-6">{pb.title}</h1>
+          <h1 className="text-3xl sm:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight mt-3 mb-4">{pb.title}</h1>
+          <p className="text-sm text-slate-500 mb-6">
+            By <Link href="/about" className="font-semibold text-slate-700 hover:text-royal-blue">{siteData.founder}</Link>, founder of Veloxis Global
+            {' · '}Updated{' '}
+            <time dateTime={pb.updated}>
+              {new Date(pb.updated).toLocaleDateString('en-IN', { day: 'numeric', month: 'long', year: 'numeric' })}
+            </time>
+          </p>
 
           <ImageFrame
             src={pb.image}

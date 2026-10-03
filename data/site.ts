@@ -13,10 +13,16 @@ export const siteData = {
   // Legal venue referenced in the Terms of Service.
   jurisdiction: "Kanpur, Uttar Pradesh",
   founder: "Muddassir Ali",
+  // One definition used everywhere AI tools and search engines read about us (schema, llms.txt, About).
+  definition:
+    "Veloxis Global is a real estate marketing agency in India that builds project landing pages, runs Meta and Google ads for property leads, and sets up WhatsApp automation that replies to every enquiry in seconds, for developers, brokers and channel partners in Kanpur, Lucknow, Noida, Greater Noida and Delhi NCR.",
+  // Kept apart from any similarly named company in search results.
+  disambiguation: "Indian real estate marketing agency. Not related to Veloxis Pharmaceuticals or VXI Global.",
   booking: "https://calendly.com/veloxis-global/30min",
   whatsappLink: "https://wa.me/919194020727?text=Hi%20Veloxis%20Global%2C%20I%27d%20like%20a%20free%20marketing%20audit",
   founderLinkedIn: "https://www.linkedin.com/in/muddassir-alii/",
   founderX: "https://x.com/muddassir_alii",
+  founderPortfolio: "https://muddassirali.com",
   logo: "https://www.veloxisglobal.com/images/logos/logo.png",
   socials: [
     "https://www.instagram.com/veloxisglobal/",
