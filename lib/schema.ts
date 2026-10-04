@@ -17,11 +17,13 @@ export const getSiteGraph = () => ({
       '@type': ['Organization', 'ProfessionalService'],
       '@id': ORG_ID,
       name: siteData.name,
+      alternateName: ['Veloxis Global Real Estate Marketing', 'veloxisglobal.com'],
       url: BASE,
       logo: { '@type': 'ImageObject', url: siteData.logo, width: 2000, height: 500 },
       image: siteData.logo,
-      description:
-        'Veloxis Global is a real estate marketing agency for builders, developers, brokers and channel partners. We build project landing pages, run Meta and Google ads for property leads, and set up WhatsApp chatbots and CRM automation that reply to every enquiry.',
+      description: siteData.definition,
+      disambiguatingDescription: siteData.disambiguation,
+      slogan: 'Real estate marketing measured on site visits, not clicks.',
       email: siteData.email,
       telephone: siteData.phoneRaw,
       founder: { '@id': FOUNDER_ID },
@@ -35,6 +37,8 @@ export const getSiteGraph = () => ({
         'WhatsApp automation',
         'Real estate chatbots',
         'Channel partner marketing',
+        'NRI real estate marketing',
+        'Real estate lead generation system',
       ],
       sameAs: siteData.socials,
       contactPoint: {
@@ -61,8 +65,10 @@ export const getSiteGraph = () => ({
       jobTitle: 'Founder',
       url: `${BASE}/about`,
       image: `${BASE}/images/profiles/muddassir.jpg`,
+      description: 'Founder of Veloxis Global, a real estate marketing agency in India.',
       worksFor: { '@id': ORG_ID },
-      sameAs: [siteData.founderLinkedIn, siteData.founderX],
+      knowsAbout: ['Real estate marketing', 'Meta ads', 'Google Ads', 'WhatsApp automation'],
+      sameAs: [siteData.founderLinkedIn, siteData.founderPortfolio, siteData.founderX],
     },
   ],
 });
@@ -140,7 +146,7 @@ export const getArticleSchema = ({
   datePublished,
   dateModified: dateModified || datePublished,
   inLanguage: 'en-IN',
-  author: { '@id': FOUNDER_ID },
+  author: { '@type': 'Person', '@id': FOUNDER_ID, name: siteData.founder, url: `${BASE}/about` },
   publisher: { '@id': ORG_ID },
   ...(about?.length ? { about: about.map((a) => ({ '@type': 'Thing', name: a.name, sameAs: a.sameAs })) } : {}),
 });
@@ -150,11 +156,16 @@ export const getWebPageSchema = ({
   name,
   description,
   path,
+  mentions,
+  dateModified,
 }: {
   type?: 'WebPage' | 'AboutPage' | 'ContactPage' | 'CollectionPage';
   name: string;
   description: string;
   path: string;
+  /** @id of a node the page is about besides the organisation, e.g. the founder */
+  mentions?: string;
+  dateModified?: string;
 }) => ({
   '@context': 'https://schema.org',
   '@type': type,
@@ -164,5 +175,7 @@ export const getWebPageSchema = ({
   url: `${BASE}${path}`,
   isPartOf: { '@id': WEBSITE_ID },
   about: { '@id': ORG_ID },
+  ...(mentions ? { mentions: { '@id': mentions } } : {}),
+  ...(dateModified ? { dateModified } : {}),
   inLanguage: 'en-IN',
 });

@@ -10,7 +10,7 @@ import { Target, Eye, Users, ExternalLink, CheckCircle, MapPin } from 'lucide-re
 import { Linkedin } from '../../components/ui/BrandIcons';
 import { constructMetadata, pageMeta, FOUNDER_YEARS } from '../../lib/seo-config';
 import { FaqAccordion } from '../../components/sections/FaqAccordion';
-import { getWebPageSchema } from '../../lib/schema';
+import { getWebPageSchema, FOUNDER_ID } from '../../lib/schema';
 import { servicesData } from '../../data/services-data';
 import { siteData } from '../../data/site';
 import { aboutFaqs } from '../../data/page-faqs';
@@ -41,6 +41,7 @@ export default function AboutPage() {
           name: 'About Veloxis Global',
           description: pageMeta.about.description,
           path: '/about',
+          mentions: FOUNDER_ID,
         })}
       />
 
@@ -65,6 +66,7 @@ export default function AboutPage() {
             <h1 className="text-4xl sm:text-5xl lg:text-[56px] font-extrabold tracking-tight leading-[1.1] text-white">
               A founder-led real estate marketing agency
             </h1>
+            <p className="text-base sm:text-lg text-slate-200 leading-relaxed max-w-2xl">{siteData.definition}</p>
             <p className="text-lg sm:text-xl text-slate-300 leading-relaxed max-w-2xl">
               I’m Muddassir Ali. I started Veloxis Global to give builders, brokers and channel partners one thing most
               agencies don’t: marketing that’s judged on site visits and bookings, not impressions.
@@ -127,7 +129,7 @@ export default function AboutPage() {
             </div>
             <ImageFrame
               src="/images/people/about/reviewing-printed-chart.jpg"
-              alt=""
+              alt="Person reviewing a printed chart of campaign results"
               ratio="4/3"
               sizes="(max-width: 1024px) 100vw, 40vw"
               className="border border-slate-100"

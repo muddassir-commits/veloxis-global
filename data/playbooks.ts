@@ -367,7 +367,7 @@ export const playbooks: Playbook[] = [
     title: 'Lead registration and marketing setup for a channel partner',
     seoTitle: 'Channel Partner Lead Registration & Marketing Setup',
     metaDescription:
-      'An example setup for a real estate channel partner: tagged project pages, timestamped lead registration, instant WhatsApp replies and a visit report for builders.',
+      'An example setup for a real estate channel partner: tagged project pages, timestamped lead registration, instant WhatsApp replies and a visit report.',
     excerpt:
       'Tagged project pages, timestamped lead registration, instant replies and a simple report that helps a CP prove which buyers they brought.',
     service: 'ai-automation',
@@ -439,7 +439,7 @@ export const playbooks: Playbook[] = [
     title: 'NRI buyer campaign plan: 30 days from first ad to video site visits',
     seoTitle: 'NRI Real Estate Campaign Plan: 30-Day Example',
     metaDescription:
-      'An example 30-day NRI campaign for an Indian real estate project: Gulf-first launch, targeting notes, a time-zone table, WhatsApp scripts and the numbers to track.',
+      'An example 30-day NRI campaign for a real estate project: Gulf-first launch, targeting notes, a time-zone table, WhatsApp scripts and the numbers to track.',
     excerpt:
       'A Gulf-first launch, then the UK or US: targeting notes, a time-zone table against IST, a sample WhatsApp flow and the numbers we would track by country.',
     service: 'paid-ads',

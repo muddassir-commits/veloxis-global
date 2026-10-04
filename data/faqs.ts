@@ -41,6 +41,11 @@ export const faqs: FAQItem[] = [
       'No. We work month-to-month with 30 days’ notice. Ad spend is paid directly to Google and Meta from your own ad accounts, so you keep control of the budget and the data.',
   },
   {
+    question: 'Which cities do you work in?',
+    answer:
+      'Kanpur, Lucknow, Noida, Greater Noida and the wider Delhi NCR. Most of the work is done remotely, so we can also run campaigns for projects elsewhere in India.',
+  },
+  {
     question: 'Do you offer a free audit?',
     answer:
       'Yes. We review your current project pages, ads and lead follow-up and share what we would change first. There is no obligation to work with us afterwards.',

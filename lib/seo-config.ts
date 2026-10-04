@@ -11,6 +11,9 @@ export interface MetaProps {
   description: string;
   path: string;
   ogImage?: string;
+  /** Real pixel size of ogImage, when it isn't the default 1200x630 */
+  ogImageWidth?: number;
+  ogImageHeight?: number;
   ogType?: 'website' | 'article';
   publishedTime?: string;
   modifiedTime?: string;
@@ -22,6 +25,8 @@ export function constructMetadata({
   description,
   path,
   ogImage = DEFAULT_OG_IMAGE,
+  ogImageWidth = 1200,
+  ogImageHeight = 630,
   ogType = 'website',
   publishedTime,
   modifiedTime,
@@ -42,7 +47,7 @@ export function constructMetadata({
       description,
       url,
       siteName: 'Veloxis Global',
-      images: [{ url: ogImage, width: 1200, height: 630, alt: title }],
+      images: [{ url: ogImage, width: ogImageWidth, height: ogImageHeight, alt: title }],
       locale: 'en_IN',
       type: ogType,
       ...(ogType === 'article' ? { publishedTime, modifiedTime, authors: [`${SITE_URL}/about`] } : {}),
@@ -102,7 +107,7 @@ export const pageMeta = {
     path: '/free-audit',
   },
   leadSystem: {
-    title: 'Real Estate Lead System: Ads, Page & WhatsApp | Veloxis',
+    title: 'Real Estate Lead Generation for Builders & Agents | Veloxis',
     description:
       'Meta ads, a project landing page and instant WhatsApp replies, run as one system for real estate agents and builders. Setup fee plus monthly, no lock-in.',
     path: '/real-estate-lead-system',
