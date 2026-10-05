@@ -15,6 +15,7 @@ import { FaqAccordion } from '../../../components/sections/FaqAccordion';
 import { getServiceSchema } from '../../../lib/schema';
 import { CtaBanner } from '../../../components/sections/CtaBanner';
 import { LeadSystemCallout } from '../../../components/sections/LeadSystemCallout';
+import { ReviewedLine } from '../../../components/ui/ReviewedLine';
 import { Target, CheckCircle, AlertTriangle, ArrowRight } from 'lucide-react';
 
 const serviceHeroImages: Record<string, { src: string; alt: string }> = {
@@ -117,6 +118,7 @@ export default async function ServicePage({ params }: PageProps) {
               {service.h1}
             </h1>
             <p className="text-lg sm:text-xl text-slate-300 leading-relaxed max-w-2xl">{service.shortDesc}</p>
+            <ReviewedLine />
             <div className="mt-2 flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
               <Button id={`service-hero-cta-${service.id}`} href="/contact" variant="primary" size="lg" className="w-full sm:w-auto">
                 {service.cta} →

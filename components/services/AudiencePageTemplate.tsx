@@ -12,6 +12,7 @@ import { Breadcrumb } from '../ui/Breadcrumb';
 import { ImageFrame } from '../ui/ImageFrame';
 import { FaqAccordion } from '../sections/FaqAccordion';
 import { CtaBanner } from '../sections/CtaBanner';
+import { ReviewedLine } from '../ui/ReviewedLine';
 
 export const AudiencePageTemplate: React.FC<{ audience: AudienceData }> = ({ audience }) => {
   const playbooks = audience.relatedPlaybooks.map(getPlaybookBySlug).filter(Boolean);
@@ -48,7 +49,8 @@ export const AudiencePageTemplate: React.FC<{ audience: AudienceData }> = ({ aud
           <div className="max-w-3xl flex flex-col items-start">
             <Badge variant="teal" className="mb-4 !bg-white/10 !text-white border border-white/20 backdrop-blur-sm">{audience.eyebrow.toUpperCase()}</Badge>
             <h1 className="text-4xl sm:text-headline-lg font-extrabold text-white tracking-tight leading-tight mb-6">{audience.h1}</h1>
-            <p className="text-base sm:text-body-lg text-white/80 leading-relaxed mb-8">{audience.lead}</p>
+            <p className="text-base sm:text-body-lg text-white/80 leading-relaxed mb-3">{audience.lead}</p>
+            <ReviewedLine className="text-white/60 mb-8" />
             <Button id={`audience-hero-cta-${audience.key}`} href={heroCta.href} variant="primary">
               {heroCta.label}
             </Button>

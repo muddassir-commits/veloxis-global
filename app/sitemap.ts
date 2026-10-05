@@ -2,11 +2,11 @@ import { MetadataRoute } from 'next';
 import { getAllPosts } from '../lib/blog';
 import { servicesData } from '../data/services-data';
 import { playbooks } from '../data/playbooks';
-import { SITE_URL } from '../lib/seo-config';
+import { SITE_URL, CONTENT_REVIEWED } from '../lib/seo-config';
 
 // Only canonical, indexable URLs. Google ignores priority/changefreq, so lastModified
 // is the only hint that matters — bump SITE_CONTENT_UPDATED when static pages change.
-const SITE_CONTENT_UPDATED = new Date('2026-10-03T00:00:00+05:30');
+const SITE_CONTENT_UPDATED = new Date(`${CONTENT_REVIEWED}T00:00:00+05:30`);
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes = [
