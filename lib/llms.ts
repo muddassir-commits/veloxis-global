@@ -39,7 +39,8 @@ const facts = `## Key facts
 - Services: landing pages & project microsites; Meta (Facebook & Instagram) & Google ads for real estate lead generation; AI chatbot, WhatsApp & CRM automation
 - Terms: month-to-month with 30 days' notice; ad spend is paid directly to Google and Meta by the client
 - Playbooks on this site are example plans for hypothetical projects, not client case studies
-- ${siteData.disambiguation}`;
+- ${siteData.disambiguation}
+- Original research (1–2 Oct 2026): of 749 real estate business websites checked in 26 cities across Uttar Pradesh, Delhi NCR and nearby states, 56% had no ad or analytics tracking of any kind, 60% had no WhatsApp click-to-chat link, 47% had no form on the homepage and 35% had neither (${SITE_URL}/blog/real-estate-landing-page-conversion-hacks#what-sites-miss)`;
 
 export function buildLlmsTxt(): string {
   return [

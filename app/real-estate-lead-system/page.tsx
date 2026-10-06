@@ -12,6 +12,8 @@ import { SchemaMarkup } from '../../components/ui/SchemaMarkup';
 import { ContactForm } from '../../components/forms/ContactForm';
 import { FaqAccordion } from '../../components/sections/FaqAccordion';
 import { WhatsAppFlowMockup } from '../../components/sections/WhatsAppFlowMockup';
+import { ReviewedLine } from '../../components/ui/ReviewedLine';
+import { websiteAudit } from '../../data/research';
 import { getServiceSchema } from '../../lib/schema';
 import { constructMetadata, pageMeta } from '../../lib/seo-config';
 import { siteData } from '../../data/site';
@@ -77,6 +79,7 @@ export default function LeadSystemPage() {
                 </li>
               ))}
             </ul>
+            <ReviewedLine />
             <div className="mt-2 flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
               <Button id="lead-system-hero-btn" href="#enquire" variant="primary" size="lg" className="w-full sm:w-auto">
                 Book a free audit call →
@@ -136,6 +139,34 @@ export default function LeadSystemPage() {
               );
             })}
           </div>
+        </div>
+      </section>
+
+      {/* Original research: what real estate websites are missing */}
+      <section className="py-20 bg-slate-50 border-t border-slate-100">
+        <div className="max-w-container-max mx-auto px-gutter">
+          <div className="max-w-3xl mb-10 section-reveal">
+            <span className="text-xs font-bold text-royal-blue uppercase tracking-widest block mb-3">Our research</span>
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight mb-4">
+              We checked {websiteAudit.sample} real estate websites. More than half can’t track where a lead came from.
+            </h2>
+            <p className="text-slate-600 leading-relaxed">
+              On {websiteAudit.dates} we checked the homepages of {websiteAudit.sample} real estate agents, consultants and
+              developers across {websiteAudit.cities} cities in Uttar Pradesh, Delhi NCR and nearby states. Here is what we found:
+            </p>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {websiteAudit.findings.map((f) => (
+              <div key={f.label} className="bg-white border border-slate-200 rounded-2xl p-6">
+                <p className="text-4xl font-extrabold text-royal-blue tracking-tight">{f.pct}%</p>
+                <p className="font-bold text-slate-900 mt-2 leading-snug">{f.label}</p>
+                <p className="text-sm text-slate-600 mt-2 leading-relaxed">{f.detail}</p>
+              </div>
+            ))}
+          </div>
+          <p className="text-xs text-slate-500 mt-6 max-w-3xl leading-relaxed">
+            <strong>How we checked:</strong> {websiteAudit.method}
+          </p>
         </div>
       </section>
 
