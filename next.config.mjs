@@ -99,7 +99,6 @@ const nextConfig = {
 
       // City pages and lead magnet
       '/digital-marketing-agency-delhi': '/industries/real-estate',
-      '/digital-marketing-agency-noida': '/industries/real-estate',
       '/free-seo-audit': '/free-audit',
       '/author/muddassir-ali': '/about',
 

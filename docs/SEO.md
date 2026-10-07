@@ -37,6 +37,7 @@ Volumes refreshed 2026-09-26 (research in `research/kw-free-2026-09/KEYWORD-MAP.
 | `/blog/real-estate-hoarding-design` | real estate hoarding (390) | real estate hoarding design (320), hoarding ideas (40), hoarding ads (30), wall branding (30) | Informational |
 | `/digital-marketing-agency-lucknow` | digital marketing agency in lucknow | real estate marketing agency lucknow, real estate digital marketing lucknow | Commercial (local) |
 | `/digital-marketing-agency-kanpur` | digital marketing agency in kanpur | real estate marketing agency kanpur, real estate digital marketing kanpur | Commercial (local) |
+| `/digital-marketing-agency-noida` | digital marketing agency in noida | real estate marketing agency noida, greater noida west, yamuna expressway | Commercial (local) |
 
 The remaining 27 posts of the 60-day plan, with keywords, dates and internal links, are in `docs/CONTENT-PLAN.md`. Add each row here when its post is published. Volumes are from DataForSEO, India, 2026-10-01.
 

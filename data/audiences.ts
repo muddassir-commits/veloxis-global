@@ -36,7 +36,7 @@ export interface AudienceImages {
 }
 
 export interface AudienceData {
-  key: 'developers' | 'channel-partners' | 'nri' | 'lucknow' | 'kanpur';
+  key: 'developers' | 'channel-partners' | 'nri' | 'lucknow' | 'kanpur' | 'noida';
   path: string;
   breadcrumb: string;
   /** Parent page in the breadcrumb trail, for pages nested under another audience */
@@ -105,7 +105,7 @@ export const audiences: Record<AudienceData['key'], AudienceData> = {
       areas: [
         { title: 'Kanpur', href: '/digital-marketing-agency-kanpur', desc: 'A close-knit market where many buyers already know a broker. Fast WhatsApp follow-up and clear price and RERA details on the page decide who gets the site visit.' },
         { title: 'Lucknow', href: '/digital-marketing-agency-lucknow', desc: 'Buyers compare projects locality by locality, so each project gets its own page and ads aimed at the areas buyers actually search for.' },
-        { title: 'Noida and Greater Noida', desc: 'Many projects compete for the same buyers in the same sectors, so exclusive leads, speed of reply and cost per site visit matter more than reach.' },
+        { title: 'Noida and Greater Noida', href: '/digital-marketing-agency-noida', desc: 'Many projects compete for the same buyers in the same sectors, so exclusive leads, speed of reply and cost per site visit matter more than reach.' },
         { title: 'Delhi NCR', desc: 'A large, crowded ad market where narrow targeting, retargeting and well-qualified enquiries keep the cost per site visit under control.' },
       ],
     },
@@ -382,6 +382,74 @@ export const audiences: Record<AudienceData['key'], AudienceData> = {
       help: { src: '/images/people/kanpur/apartment-block-construction.jpg', alt: 'Apartment block under construction, with finished floors next to bare concrete ones' },
       extra: { src: '/images/people/kanpur/riverside-boats-morning.jpg', alt: 'Boats moored along a river bank on a hazy morning, with buildings behind' },
       resources: { src: '/images/people/kanpur/apartment-towers-from-below.jpg', alt: 'Apartment towers seen from below against a blue sky' },
+    },
+  },
+  noida: {
+    key: 'noida',
+    path: '/digital-marketing-agency-noida',
+    breadcrumb: 'Noida & Greater Noida',
+    eyebrow: 'Noida & Greater Noida · real estate only',
+    h1: 'Digital marketing agency in Noida for real estate',
+    lead:
+      'For builders, developers, brokers and channel partners in Noida, Greater Noida and Greater Noida West: project landing pages, Meta and Google ads for property leads, and WhatsApp replies in seconds.',
+    intro: [
+      'Veloxis Global is a digital marketing agency for real estate only. We work with developers, builders, brokers and channel partners selling projects in Noida, Greater Noida, Greater Noida West (Noida Extension) and along the Yamuna Expressway, and we don’t take clients from other industries.',
+      'Noida is one of the most crowded property ad markets in North India. Many projects compete for the same buyers in the same sectors, portals sell the same enquiry to several brokers, and buyers compare three or four projects before they book a visit. In a market like this, reach matters less than three things: exclusive leads, how fast you reply, and the cost of each site visit.',
+      'So we plan by sector and corridor, not by city: a landing page for each project, Google ads on project-name and sector searches, Meta ads for people living and working nearby, and an instant WhatsApp reply with the price sheet and a visit slot. Every project we promote must be UP RERA registered, and the registration number goes on every ad and page.',
+    ],
+    introLink: { text: 'Want to see the full setup?', label: 'See the Real Estate Lead System', href: '/real-estate-lead-system' },
+    painsHeading: 'What slows real estate sales in Noida',
+    pains: [
+      { title: 'The same buyer, called by five brokers', desc: 'Portal and aggregator leads in Noida are shared widely. Whoever answers first, with the right price and floor plan, usually gets the visit.' },
+      { title: 'High cost per lead in a crowded market', desc: 'Many developers bid on the same searches and audiences, so broad campaigns get expensive fast. Narrow targeting and good pages bring the cost down.' },
+      { title: 'Buyers comparing sector by sector', desc: 'A buyer in Sector 150 is not looking at Greater Noida West, and an investor on the Yamuna Expressway thinks differently from a family moving from Delhi.' },
+      { title: 'Leads that never get a proper reply', desc: 'Evening and weekend enquiries wait for office hours, and in Noida a few hours is long enough to lose the buyer.' },
+    ],
+    helpHeading: 'What we do for Noida builders and brokers',
+    help: [
+      { service: 'high-converting-landing-pages', title: 'A landing page for each Noida project', desc: 'Sector, price band, configurations, UP RERA number, possession date and a site-visit button on the first screen, built for mobile.' },
+      { service: 'paid-ads', title: 'Meta and Google ads by sector', desc: 'Google ads on project and “flats in sector …” searches, and Meta ads for people living or working nearby, measured on cost per site visit.' },
+      { service: 'ai-automation', title: 'WhatsApp reply in seconds, day or night', desc: 'Every enquiry gets the brochure, price sheet and location pin instantly, is asked a few qualifying questions and is booked for a visit.' },
+    ],
+    extraHeading: 'Why a real estate-only agency for Noida',
+    extra: [
+      { title: 'Exclusive leads, not shared ones', desc: 'Leads from your own ads and pages come only to you, so you are not racing other brokers for the same buyer.' },
+      { title: 'Judged on cost per site visit', desc: 'Cheap leads that never visit are not a win. Campaigns are cut or scaled on visits, not clicks.' },
+      { title: 'UP RERA compliance built in', desc: 'Project and agent registration numbers on every ad and page, and no claims about price, possession or returns that the project can’t back up.' },
+      { title: 'You own everything', desc: 'Ads run from your own Meta and Google accounts, leads go to your sheet or CRM, and you pay the ad spend directly.' },
+    ],
+    local: {
+      heading: 'Noida corridors we plan campaigns around',
+      intro:
+        'Each project gets ads and messaging for the buyers who search for its sector or corridor. These are the areas Noida buyers ask about most.',
+      areas: [
+        { title: 'Noida Expressway', desc: 'High-rise and premium projects in the sectors along the expressway, where buyers compare builders, amenities and connectivity.' },
+        { title: 'Greater Noida West (Noida Extension)', desc: 'Large, value-focused projects with many launches side by side. Price, possession and a fast reply decide who gets the visit.' },
+        { title: 'Central Noida', desc: 'Established sectors with resale, ready-to-move and a few new launches, popular with families already living in Noida.' },
+        { title: 'Greater Noida and the Yamuna Expressway', desc: 'Plots and new projects towards Jewar, where investors and end users both search and compare price per square foot.' },
+      ],
+    },
+    relatedPlaybooks: ['new-launch-meta-google-ads-plan', 'channel-partner-lead-registration'],
+    relatedPosts: ['google-ads-vs-meta-ads-real-estate-india', 'channel-partner-in-real-estate', 'what-is-eoi-in-real-estate', 'real-estate-local-seo-ncr'],
+    faqs: [
+      { question: 'Do you work only with real estate businesses in Noida?', answer: 'Yes. We are a real estate-only digital marketing agency. In Noida and Greater Noida we work with developers, builders, brokers and channel partners, and we don’t take clients from other industries.' },
+      { question: 'Do you have an office in Noida?', answer: 'No. We are a founder-led team based in Kanpur and work with Noida clients on WhatsApp, phone and video calls. Your ads, pages and leads are all set up in accounts you own.' },
+      { question: 'Which digital marketing services do you offer in Noida?', answer: 'Three things that work together: a landing page for each project, Meta (Facebook and Instagram) and Google ads for property leads, and WhatsApp automation that replies to every enquiry in seconds and books site visits.' },
+      { question: 'How much ad budget does a Noida project need?', answer: 'You pay the ad spend directly to Meta and Google. We recommend at least ₹15,000 a month per project to start; Noida is a competitive market, so launches usually need more. Our own fee is separate and quoted after a free audit.' },
+      { question: 'Do you cover Greater Noida West and the Yamuna Expressway?', answer: 'Yes. We plan campaigns for projects across Noida, Greater Noida, Greater Noida West (Noida Extension) and the Yamuna Expressway corridor, sector by sector.' },
+      { question: 'Can you promote a project that is not UP RERA registered?', answer: 'No. We only advertise projects that are registered with UP RERA, and the registration number appears on every ad and landing page.' },
+      { question: 'How soon can a Noida campaign go live?', answer: 'Usually within one to two weeks, once we have the price sheet, brochure, renders and RERA details. The landing page, tracking, WhatsApp flow and ads are built together.' },
+      { question: 'Do you work with channel partners selling Noida projects?', answer: 'Yes. CPs get a page for each mandated project under their own brand, ads that bring leads only they receive, and a timestamped record of every lead to show the developer.' },
+    ],
+    ctaTitle: 'Selling a project in Noida or Greater Noida?',
+    ctaDescription: 'Get a free review of your project page, ads and lead follow-up, with the first three fixes we would make.',
+    images: {
+      hero: { src: '/images/people/noida/hero-skyline-cranes-night.jpg', alt: '' },
+      intro: { src: '/images/people/noida/apartment-blocks-sunset.jpg', alt: 'Rows of apartment blocks stretching to the horizon under a golden evening sky' },
+      pains: { src: '/images/people/noida/metro-platform-electronic-city.jpg', alt: 'Passengers on an elevated metro platform as a train arrives, with a sign towards Noida Electronic City' },
+      help: { src: '/images/people/noida/apartment-balconies-evening.jpg', alt: 'Tall apartment buildings with rows of balconies lit by the evening sun' },
+      extra: { src: '/images/people/noida/expressway-through-fields.jpg', alt: 'A wide expressway running through green fields towards the horizon' },
+      resources: { src: '/images/people/noida/metro-viaduct-towers.jpg', alt: 'An elevated metro viaduct curving past tall residential towers on a hazy day' },
     },
   },
 };

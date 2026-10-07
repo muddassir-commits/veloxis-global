@@ -32,6 +32,7 @@ const footerColumns = [
       { label: 'NRI Buyer Campaigns', href: '/industries/real-estate/nri-buyers' },
       { label: 'Real Estate Marketing in Lucknow', href: '/digital-marketing-agency-lucknow' },
       { label: 'Real Estate Marketing in Kanpur', href: '/digital-marketing-agency-kanpur' },
+      { label: 'Real Estate Marketing in Noida', href: '/digital-marketing-agency-noida' },
       { label: 'Example Playbooks', href: '/playbooks' },
     ],
   },
@@ -176,7 +177,7 @@ export const Footer: React.FC = () => {
               href={siteData.whatsappLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-[#25D366] hover:bg-[#20ba5a] text-white py-2.5 px-4 rounded-xl font-bold text-xs inline-flex items-center justify-center gap-2 transition-all duration-300 w-full sm:w-fit shadow-md shadow-emerald-950/20"
+              className="bg-[#25D366] hover:bg-[#20ba5a] text-slate-900 py-2.5 px-4 rounded-xl font-bold text-xs inline-flex items-center justify-center gap-2 transition-all duration-300 w-full sm:w-fit shadow-md shadow-emerald-950/20"
             >
               <WhatsAppIcon className="w-4 h-4 shrink-0" />
               <span>Chat on WhatsApp</span>
@@ -193,7 +194,7 @@ export const Footer: React.FC = () => {
                   </li>
                 ))}
               </ul>
-              <p className="text-[12px] text-slate-500 mt-3">Service-area business, no walk-in office.</p>
+              <p className="text-[12px] text-slate-400 mt-3">Service-area business, no walk-in office.</p>
             </div>
           </div>
 

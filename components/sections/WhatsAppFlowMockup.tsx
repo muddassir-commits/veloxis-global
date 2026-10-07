@@ -39,7 +39,7 @@ export const WhatsAppFlowMockup: React.FC<{ className?: string }> = ({ className
             }`}
           >
             {m.text}
-            <span className="mt-1 flex items-center justify-end gap-1 text-[10px] text-slate-500">
+            <span className="mt-1 flex items-center justify-end gap-1 text-[10px] text-slate-600">
               {m.time}
               {m.from === 'buyer' && <CheckCheck className="h-3 w-3 text-sky-500" />}
             </span>

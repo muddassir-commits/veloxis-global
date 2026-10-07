@@ -20,7 +20,7 @@ export const AudiencePageTemplate: React.FC<{ audience: AudienceData }> = ({ aud
   const img = audience.images;
   const crumbs = [...(audience.parent ? [audience.parent] : []), { name: audience.breadcrumb, href: audience.path }];
   const heroCta = audience.heroCta ?? { label: 'Get a free marketing review →', href: '/contact' };
-  const faqWho = { developers: 'developers', 'channel-partners': 'channel partners and brokers', nri: 'developers and channel partners', lucknow: 'Lucknow builders and brokers', kanpur: 'Kanpur builders and brokers' }[audience.key];
+  const faqWho = { developers: 'developers', 'channel-partners': 'channel partners and brokers', nri: 'developers and channel partners', lucknow: 'Lucknow builders and brokers', kanpur: 'Kanpur builders and brokers', noida: 'Noida builders and brokers' }[audience.key];
 
   return (
     <>

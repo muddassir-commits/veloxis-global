@@ -17,6 +17,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/channel-partners',
     '/digital-marketing-agency-lucknow',
     '/digital-marketing-agency-kanpur',
+    '/digital-marketing-agency-noida',
     '/playbooks',
     '/free-audit',
     '/real-estate-lead-system',

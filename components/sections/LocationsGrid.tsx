@@ -12,6 +12,7 @@ import { ImageFrame } from '../ui/ImageFrame';
 const areas: { city: string; desc: string; href?: string }[] = [
   {
     city: 'Noida & Greater Noida',
+    href: '/digital-marketing-agency-noida',
     desc: 'New launches along the Noida Expressway, Noida Extension (Greater Noida West) and the Yamuna Expressway corridor towards Jewar.',
   },
   {

@@ -120,11 +120,11 @@ export default function AboutPage() {
             <div className="grid grid-cols-2 gap-4 stagger-reveal">
               <div className="spotlight spotlight-dark bg-slate-900 text-white p-5 rounded-2xl text-left">
                 <span className="text-2xl sm:text-3xl font-black text-royal-blue block">{FOUNDER_YEARS}+ yrs</span>
-                <span className="text-xs font-bold text-slate-400 uppercase tracking-wider block mt-1">Founder experience</span>
+                <span className="text-xs font-bold text-slate-300 uppercase tracking-wider block mt-1">Founder experience</span>
               </div>
               <div className="spotlight spotlight-dark bg-slate-900 text-white p-5 rounded-2xl text-left">
                 <span className="text-2xl sm:text-3xl font-black text-teal-accent block">1</span>
-                <span className="text-xs font-bold text-slate-400 uppercase tracking-wider block mt-1">Industry: real estate</span>
+                <span className="text-xs font-bold text-slate-300 uppercase tracking-wider block mt-1">Industry: real estate</span>
               </div>
             </div>
             <ImageFrame
