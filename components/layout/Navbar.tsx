@@ -4,9 +4,10 @@ import React, { useState, useEffect, useRef, useSyncExternalStore } from 'react'
 import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
-import { Menu, X, ChevronDown, Phone, Zap, Target, Bot, ArrowRight, ShieldCheck } from 'lucide-react';
+import { Menu, X, ChevronDown, Zap, Target, Bot, ArrowRight, ShieldCheck } from 'lucide-react';
 import { Button } from '../ui/Button';
 import { servicesGroups } from '../../data/navbar-data';
+import { WhatsAppIcon } from '../ui/WhatsAppIcon';
 import { siteData } from '../../data/site';
 
 const serviceIconMap: Record<string, React.ComponentType<{ className?: string }>> = {
@@ -331,7 +332,7 @@ export const Navbar: React.FC = () => {
             </Link>
           </nav>
 
-          {/* Right: Desktop CTA & Phone */}
+          {/* Right: Desktop CTA & WhatsApp */}
           <div className={`hidden lg:flex items-center shrink-0 transition-all duration-300 ${scrolled ? 'gap-2.5 xl:gap-3.5 lg:gap-3' : 'gap-4 lg:gap-5'}`}>
             <div className="hero-cta-hover !rounded-full shrink-0">
               <Button
@@ -344,15 +345,18 @@ export const Navbar: React.FC = () => {
               </Button>
             </div>
             <a
-              href={`tel:${siteData.phoneRaw}`}
-              title={`Call ${siteData.phone}`}
+              href={siteData.whatsappLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              title={`WhatsApp ${siteData.phone}`}
+              aria-label={`WhatsApp ${siteData.phone}`}
               className={`flex items-center justify-center rounded-full bg-royal-blue/10 text-royal-blue hover:bg-royal-blue hover:text-white transition-all duration-300 shrink-0 ${
                 scrolled
                   ? 'w-8 h-8'
                   : 'w-10 h-10'
               }`}
             >
-              <Phone className={`shrink-0 ${scrolled ? 'w-4 h-4' : 'w-4.5 h-4.5'}`} aria-hidden="true" />
+              <WhatsAppIcon className={`shrink-0 ${scrolled ? 'w-4 h-4' : 'w-4.5 h-4.5'}`} />
             </a>
           </div>
 
@@ -541,15 +545,17 @@ export const Navbar: React.FC = () => {
           </nav>
         </div>
 
-        {/* Bottom area with CTA and Phone */}
+        {/* Bottom area with CTA and WhatsApp */}
         <div className="flex flex-col gap-4 border-t border-slate-100 pt-6 mt-6">
           <a
-            href={`tel:${siteData.phoneRaw}`}
+            href={siteData.whatsappLink}
+            target="_blank"
+            rel="noopener noreferrer"
             onClick={() => setIsOpen(false)}
             className="flex items-center justify-center gap-2 font-sans text-[14px] font-bold text-slate-600 hover:text-royal-blue py-3"
           >
-            <Phone className="w-3.5 h-3.5 shrink-0" aria-hidden="true" />
-            <span>{siteData.phone}</span>
+            <WhatsAppIcon className="w-3.5 h-3.5 shrink-0" />
+            <span>WhatsApp {siteData.phone}</span>
           </a>
           <Button href="/contact" onClick={() => setIsOpen(false)} variant="primary" className="w-full text-center py-3 !rounded-full">
             Get Free Audit →

@@ -3,7 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { Button } from '../components/ui/Button';
-import { Phone, ArrowRight, Home } from 'lucide-react';
+import { MessageCircle, ArrowRight, Home } from 'lucide-react';
 import { siteData } from '../data/site';
 
 export default function NotFound() {
@@ -61,11 +61,13 @@ export default function NotFound() {
               Need immediate assistance?
             </span>
             <a
-              href={`tel:${siteData.phoneRaw}`}
+              href={siteData.whatsappLink}
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 text-sm font-extrabold text-slate-900 hover:text-royal-blue transition-colors"
             >
-              <Phone className="w-4 h-4 text-royal-blue" />
-              {siteData.phone}
+              <MessageCircle className="w-4 h-4 text-royal-blue" />
+              WhatsApp {siteData.phone}
             </a>
           </div>
         </div>

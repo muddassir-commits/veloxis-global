@@ -24,7 +24,7 @@ export const contactFaqs: PageFaq[] = [
   { question: 'What is included in the free marketing audit?', answer: 'A review of your project landing page or website, your Google and Meta ad accounts if you run ads, and how quickly enquiries are answered today — with the changes we would make first.' },
   { question: 'Is the audit really free, with no obligation?', answer: 'Yes. You can use the recommendations yourself or with another agency. There is no obligation to work with us.' },
   { question: 'What should I prepare before we talk?', answer: 'The project details (location, configurations, price band, RERA number), your current lead sources, rough monthly ad spend if any, and who follows up leads today.' },
-  { question: 'Can I just message on WhatsApp instead of filling the form?', answer: `Yes. WhatsApp or call ${siteData.phone}, or email ${siteData.email}.` },
+  { question: 'Can I just message on WhatsApp instead of filling the form?', answer: `Yes. WhatsApp ${siteData.phone} (WhatsApp only, no calls), or email ${siteData.email}.` },
   { question: 'Can I book a video call?', answer: 'Yes. Use the “Book a call” button to pick a 30-minute slot.' },
   { question: 'Do you have an office I can visit?', answer: 'No. Veloxis Global works remotely with clients across Kanpur, Lucknow, Noida and Delhi NCR, so there is no walk-in office.' },
 ];

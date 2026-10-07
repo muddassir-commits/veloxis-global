@@ -7,7 +7,7 @@ import { openCookieSettings } from '../../lib/consent';
 import { Facebook, Instagram, Linkedin, XLogo } from '../ui/BrandIcons';
 import { Button } from '../ui/Button';
 import { WhatsAppIcon } from '../ui/WhatsAppIcon';
-import { ChevronDown, ChevronUp, ArrowUp, Phone, Mail, MapPin, CheckCircle2 } from 'lucide-react';
+import { ChevronDown, ChevronUp, ArrowUp, Mail, MapPin, CheckCircle2 } from 'lucide-react';
 import { siteData } from '../../data/site';
 
 // Footer link directory. Every href must be a live, indexable page.
@@ -165,9 +165,9 @@ export const Footer: React.FC = () => {
           {/* Contact + service area (always open) */}
           <div className="md:col-span-2 lg:col-span-4 flex flex-col gap-4 pb-6 md:pb-0 border-b border-white/5 md:border-b-0">
             <span className="text-[12px] tracking-[0.08em] uppercase text-slate-200 font-black">GET IN TOUCH</span>
-            <a href={`tel:${siteData.phoneRaw}`} className="text-[15px] text-slate-200 hover:text-white transition-colors flex items-center gap-2.5 w-fit">
-              <Phone className="w-4 h-4 text-royal-blue shrink-0" aria-hidden="true" />
-              <span>{siteData.phone}</span>
+            <a href={siteData.whatsappLink} target="_blank" rel="noopener noreferrer" className="text-[15px] text-slate-200 hover:text-white transition-colors flex items-center gap-2.5 w-fit">
+              <WhatsAppIcon className="w-4 h-4 text-royal-blue shrink-0" />
+              <span>WhatsApp {siteData.phone}</span>
             </a>
             <a href={`mailto:${siteData.email}`} className="text-[15px] text-slate-200 hover:text-white transition-colors flex items-center gap-2.5 w-fit break-all">
               <Mail className="w-4 h-4 text-royal-blue shrink-0" aria-hidden="true" />
