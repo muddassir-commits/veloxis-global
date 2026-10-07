@@ -58,7 +58,7 @@ export default function PrivacyPolicyPage() {
               Kanpur, Lucknow, Noida and Delhi NCR. For the personal data described here, we decide why and how it is
               used, which makes us the “Data Fiduciary” under the DPDP Act. You can reach us at{' '}
               <a href={`mailto:${siteData.email}`} className={link}>{siteData.email}</a> or{' '}
-              <a href={`tel:${siteData.phoneRaw}`} className={link}>{siteData.phone}</a>.
+              <a href={siteData.whatsappLink} className={link} target="_blank" rel="noopener noreferrer">WhatsApp {siteData.phone}</a>.
             </p>
 
             <h2 className={h2}>2. What we collect</h2>
@@ -189,7 +189,7 @@ export default function PrivacyPolicyPage() {
             <p>
               For any privacy question, request or complaint, contact our grievance officer: Muddassir Ali, Founder,
               Veloxis Global — <a href={`mailto:${PRIVACY_EMAIL}`} className={link}>{PRIVACY_EMAIL}</a>,{' '}
-              <a href={`tel:${siteData.phoneRaw}`} className={link}>{siteData.phone}</a>.
+              <a href={siteData.whatsappLink} className={link} target="_blank" rel="noopener noreferrer">WhatsApp {siteData.phone}</a>.
             </p>
           </div>
         </div>

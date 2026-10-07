@@ -14,7 +14,7 @@ import { ContactForm } from '../../components/forms/ContactForm';
 import { siteData } from '@/data/site';
 import { FaqAccordion } from '../../components/sections/FaqAccordion';
 import { contactFaqs } from '../../data/page-faqs';
-import { Phone, Mail, MessageCircle, Calendar, MapPin } from 'lucide-react';
+import { Mail, MessageCircle, Calendar, MapPin } from 'lucide-react';
 
 export const metadata: Metadata = constructMetadata(pageMeta.contact);
 
@@ -87,16 +87,6 @@ export default function ContactPage() {
               </h2>
 
               <div className="flex flex-col gap-5">
-                <a href={`tel:${siteData.phoneRaw}`} className="flex items-start gap-4 p-4 sm:p-6 rounded-2xl bg-white border border-slate-100 hover:border-royal-blue/30 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 group">
-                  <div className="w-10 h-10 rounded-lg bg-royal-blue/10 text-royal-blue flex items-center justify-center shrink-0 transition-all duration-300 group-hover:bg-royal-blue group-hover:text-white group-hover:scale-110" aria-hidden="true">
-                    <Phone className="w-5 h-5" />
-                  </div>
-                  <div>
-                    <span className="text-xs font-bold text-slate-500 uppercase tracking-wider block">Call</span>
-                    <span className="font-extrabold text-slate-900 text-base sm:text-lg block mt-0.5 group-hover:text-royal-blue transition-colors">{siteData.phone}</span>
-                  </div>
-                </a>
-
                 <a href={`mailto:${siteData.email}`} className="flex items-start gap-4 p-4 sm:p-6 rounded-2xl bg-white border border-slate-100 hover:border-royal-blue/30 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 group">
                   <div className="w-10 h-10 rounded-lg bg-royal-blue/10 text-royal-blue flex items-center justify-center shrink-0 transition-all duration-300 group-hover:bg-royal-blue group-hover:text-white group-hover:scale-110" aria-hidden="true">
                     <Mail className="w-5 h-5" />
@@ -113,7 +103,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <span className="text-xs font-bold text-slate-500 uppercase tracking-wider block">WhatsApp</span>
-                    <span className="font-extrabold text-slate-900 text-base sm:text-lg block mt-0.5 group-hover:text-teal-accent transition-colors">Message us on WhatsApp</span>
+                    <span className="font-extrabold text-slate-900 text-base sm:text-lg block mt-0.5 group-hover:text-teal-accent transition-colors">{siteData.phone}</span>
                   </div>
                 </a>
               </div>
