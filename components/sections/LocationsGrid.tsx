@@ -9,7 +9,7 @@ import { MapPin } from 'lucide-react';
 import { SectionLabel } from '../ui/SectionLabel';
 import { ImageFrame } from '../ui/ImageFrame';
 
-const areas = [
+const areas: { city: string; desc: string; href?: string }[] = [
   {
     city: 'Noida & Greater Noida',
     desc: 'New launches along the Noida Expressway, Noida Extension (Greater Noida West) and the Yamuna Expressway corridor towards Jewar.',
@@ -20,10 +20,12 @@ const areas = [
   },
   {
     city: 'Lucknow',
+    href: '/digital-marketing-agency-lucknow',
     desc: 'Residential projects and plotted developments on growth corridors such as Sultanpur Road and Shaheed Path.',
   },
   {
     city: 'Kanpur',
+    href: '/digital-marketing-agency-kanpur',
     desc: 'Gated plotted communities and new residential projects for local developers and brokers.',
   },
 ];
@@ -57,6 +59,11 @@ export const LocationsGrid: React.FC = () => (
                 <MapPin className="w-4 h-4 text-royal-blue transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:scale-125" aria-hidden="true" /> {a.city}
               </h3>
               <p className="text-sm text-slate-600 leading-relaxed">{a.desc}</p>
+              {a.href && (
+                <Link href={a.href} className="inline-block mt-3 text-sm font-bold text-royal-blue hover:underline">
+                  Real estate marketing in {a.city} →
+                </Link>
+              )}
             </li>
           ))}
         </ul>

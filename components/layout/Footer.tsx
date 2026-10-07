@@ -30,6 +30,8 @@ const footerColumns = [
       { label: 'Developers & Builders', href: '/industries/real-estate' },
       { label: 'Channel Partners & Brokers', href: '/channel-partners' },
       { label: 'NRI Buyer Campaigns', href: '/industries/real-estate/nri-buyers' },
+      { label: 'Real Estate Marketing in Lucknow', href: '/digital-marketing-agency-lucknow' },
+      { label: 'Real Estate Marketing in Kanpur', href: '/digital-marketing-agency-kanpur' },
       { label: 'Example Playbooks', href: '/playbooks' },
     ],
   },

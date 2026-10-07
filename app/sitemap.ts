@@ -15,6 +15,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/industries/real-estate',
     '/industries/real-estate/nri-buyers',
     '/channel-partners',
+    '/digital-marketing-agency-lucknow',
+    '/digital-marketing-agency-kanpur',
     '/playbooks',
     '/free-audit',
     '/real-estate-lead-system',
