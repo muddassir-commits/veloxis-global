@@ -5,6 +5,8 @@
 export interface AudienceBlock {
   title: string;
   desc: string;
+  /** Optional link under the block (used for city pages) */
+  href?: string;
 }
 
 export interface AudienceHelp extends AudienceBlock {
@@ -34,7 +36,7 @@ export interface AudienceImages {
 }
 
 export interface AudienceData {
-  key: 'developers' | 'channel-partners' | 'nri';
+  key: 'developers' | 'channel-partners' | 'nri' | 'lucknow' | 'kanpur';
   path: string;
   breadcrumb: string;
   /** Parent page in the breadcrumb trail, for pages nested under another audience */
@@ -101,8 +103,8 @@ export const audiences: Record<AudienceData['key'], AudienceData> = {
       intro:
         'We work with developers and channel partners across Uttar Pradesh and Delhi NCR. Campaigns are planned locality by locality, because buyers search and compare by area, not by city.',
       areas: [
-        { title: 'Kanpur', desc: 'A close-knit market where many buyers already know a broker. Fast WhatsApp follow-up and clear price and RERA details on the page decide who gets the site visit.' },
-        { title: 'Lucknow', desc: 'Buyers compare projects locality by locality, so each project gets its own page and ads aimed at the areas buyers actually search for.' },
+        { title: 'Kanpur', href: '/digital-marketing-agency-kanpur', desc: 'A close-knit market where many buyers already know a broker. Fast WhatsApp follow-up and clear price and RERA details on the page decide who gets the site visit.' },
+        { title: 'Lucknow', href: '/digital-marketing-agency-lucknow', desc: 'Buyers compare projects locality by locality, so each project gets its own page and ads aimed at the areas buyers actually search for.' },
         { title: 'Noida and Greater Noida', desc: 'Many projects compete for the same buyers in the same sectors, so exclusive leads, speed of reply and cost per site visit matter more than reach.' },
         { title: 'Delhi NCR', desc: 'A large, crowded ad market where narrow targeting, retargeting and well-qualified enquiries keep the cost per site visit under control.' },
       ],
@@ -242,6 +244,144 @@ export const audiences: Record<AudienceData['key'], AudienceData> = {
       help: { src: '/images/people/nri-buyers/young-man-laptop-lounge.jpg', alt: 'Young man smiling while working on a laptop in a lounge', position: '75% center' },
       extra: { src: '/images/people/nri-buyers/family-looking-at-phone.jpg', alt: 'Two women and a small child on a sofa looking at a phone together' },
       resources: { src: '/images/people/nri-buyers/dubai-aerial-skyline.jpg', alt: 'Aerial view of the Dubai skyline with the Burj Khalifa and highway interchanges' },
+    },
+  },
+  // City pages live on the old city URLs, which already had search history. Real estate only;
+  // no office is claimed (service-area business, founder based in Kanpur).
+  lucknow: {
+    key: 'lucknow',
+    path: '/digital-marketing-agency-lucknow',
+    breadcrumb: 'Lucknow',
+    eyebrow: 'Lucknow · real estate only',
+    h1: 'Digital marketing agency in Lucknow for real estate',
+    lead:
+      'For builders, developers, brokers and channel partners in Lucknow: project landing pages, Meta and Google ads for property leads, and WhatsApp replies that reach every enquiry in seconds.',
+    intro: [
+      'Veloxis Global is a digital marketing agency for real estate only. We work with developers, builders, brokers and channel partners selling projects in Lucknow, and we don’t take clients from other industries. If you sell flats, villas, plots or commercial space in Lucknow, everything we build is aimed at one number: site visits.',
+      'Lucknow buyers rarely search for “property in Lucknow”. They search by corridor and locality: Gomti Nagar Extension, Sushant Golf City, Shaheed Path, Sultanpur Road, Raebareli Road, Faizabad Road, IIM Road or Jankipuram. So we plan each project locality by locality: a landing page for the project, ads shown to people searching for and living near that area, and an instant WhatsApp reply with the price sheet and a site-visit slot.',
+      'We are a founder-led team based in Kanpur, close enough to know the Lucknow market and its buyers. Every project we promote must be UP RERA registered, and the registration number goes on every ad and page.',
+    ],
+    introLink: { text: 'Want to see the full setup?', label: 'See the Real Estate Lead System', href: '/real-estate-lead-system' },
+    painsHeading: 'What slows real estate sales in Lucknow',
+    pains: [
+      { title: 'Portal leads shared with other brokers', desc: 'A buyer who enquires on a portal gets several calls within the hour. Whoever replies first and clearest usually gets the site visit.' },
+      { title: 'Ads aimed at “all of Lucknow”', desc: 'A Sultanpur Road plotted project and a Gomti Nagar apartment have different buyers. City-wide targeting spends money on people who will never visit.' },
+      { title: 'Enquiries answered the next day', desc: 'Evening and Sunday enquiries wait until the office opens, and by then the buyer has spoken to someone else.' },
+      { title: 'A website that doesn’t sell the project', desc: 'Buyers want price, size, location, RERA number and possession date on the first screen. A slow corporate site with a contact form loses them.' },
+    ],
+    helpHeading: 'What we do for Lucknow builders and brokers',
+    help: [
+      { service: 'high-converting-landing-pages', title: 'A landing page for each Lucknow project', desc: 'Locality, price band, configurations, UP RERA number and a site-visit button on the first screen, built to load fast on mobile data.' },
+      { service: 'paid-ads', title: 'Meta and Google ads by locality', desc: 'Google ads on project, locality and “flats in …” searches, and Meta ads for people living or working near the project, measured on cost per site visit.' },
+      { service: 'ai-automation', title: 'WhatsApp reply in seconds, day or night', desc: 'Every enquiry gets the brochure, price sheet and location pin on WhatsApp instantly, is asked a few qualifying questions and is booked for a visit.' },
+    ],
+    extraHeading: 'Why work with a real estate-only agency in Lucknow',
+    extra: [
+      { title: 'One industry, one goal', desc: 'We don’t run campaigns for restaurants or coaching centres. Our pages, ads and WhatsApp flows are built only for property sales.' },
+      { title: 'UP RERA compliance built in', desc: 'Project and agent registration numbers on every ad and page, and no claims about price, possession or returns that the project can’t back up.' },
+      { title: 'You own everything', desc: 'Ads run from your own Meta and Google accounts, leads go to your sheet or CRM, and you pay the ad spend directly to Meta and Google.' },
+      { title: 'Plain weekly reporting', desc: 'Leads, how many were contacted, site visits booked and cost per site visit. No vanity numbers.' },
+    ],
+    local: {
+      heading: 'Lucknow localities we plan campaigns around',
+      intro:
+        'Each project gets ads and messaging for the buyers who actually search for its area. These are the corridors Lucknow buyers ask about most.',
+      areas: [
+        { title: 'Gomti Nagar and Gomti Nagar Extension', desc: 'Established and premium apartments and villas. Buyers compare builders and amenities, so a clear project page and a fast reply matter most.' },
+        { title: 'Sushant Golf City and Shaheed Path', desc: 'Townships and new launches on the edge of the city. Good for launch campaigns and EOI capture before prices move.' },
+        { title: 'Sultanpur Road and Raebareli Road', desc: 'Plotted developments and affordable to mid-range projects, where investors and first-time buyers both search.' },
+        { title: 'Faizabad Road, IIM Road and Jankipuram', desc: 'Apartments for families and working buyers who already live in north and east Lucknow and want to stay close.' },
+      ],
+    },
+    relatedPlaybooks: ['new-launch-meta-google-ads-plan', 'project-landing-page-blueprint'],
+    relatedPosts: ['real-estate-local-seo-ncr', 'meta-ads-for-real-estate-india', 'rera-number-check', 'how-to-generate-real-estate-leads'],
+    faqs: [
+      { question: 'Do you work only with real estate businesses in Lucknow?', answer: 'Yes. We are a real estate-only digital marketing agency. In Lucknow we work with developers, builders, brokers and channel partners, and we don’t take clients from other industries.' },
+      { question: 'Do you have an office in Lucknow?', answer: 'No. We are a founder-led team based in Kanpur and work with Lucknow clients on WhatsApp, phone and video calls. Your ads, pages and leads are all set up in accounts you own.' },
+      { question: 'Which digital marketing services do you offer in Lucknow?', answer: 'Three things that work together: a landing page for each project, Meta (Facebook and Instagram) and Google ads for property leads, and WhatsApp automation that replies to every enquiry in seconds and books site visits.' },
+      { question: 'How much ad budget does a Lucknow project need?', answer: 'You pay the ad spend directly to Meta and Google. We recommend at least ₹15,000 a month per project to get enough enquiries to learn from, and more for a launch. Our own fee is separate and quoted after a free audit.' },
+      { question: 'Can you promote a project that is not UP RERA registered?', answer: 'No. We only advertise projects that are registered with UP RERA, and the registration number appears on every ad and landing page.' },
+      { question: 'Do you also do SEO and social media posting?', answer: 'Our focus is lead generation: pages, paid ads and WhatsApp follow-up. We build landing pages so they can rank and advise on your Google Business Profile, but we don’t sell monthly posting packages.' },
+      { question: 'How soon can a Lucknow campaign go live?', answer: 'Usually within one to two weeks, once we have the price sheet, brochure, photos or renders and RERA details. The landing page, tracking, WhatsApp flow and ads are built together.' },
+      { question: 'Do you work with individual brokers and channel partners in Lucknow?', answer: 'Yes. Brokers and CPs get a page for each mandated project under their own brand, ads that bring leads only they receive, and a timestamped record of every lead to show the developer.' },
+    ],
+    ctaTitle: 'Selling a project in Lucknow?',
+    ctaDescription: 'Get a free review of your project page, ads and lead follow-up, with the first three fixes we would make.',
+    images: {
+      hero: { src: '/images/people/lucknow/hero-lucknow-skyline-garden.jpg', alt: '' },
+      intro: { src: '/images/people/lucknow/towers-under-construction.jpg', alt: 'Row of new residential towers, some still under construction with cranes on top' },
+      pains: { src: '/images/people/lucknow/heritage-facade-evening.jpg', alt: 'Ornate heritage building with arched windows in warm evening light' },
+      help: { src: '/images/people/lucknow/clock-tower-blue-sky.jpg', alt: 'Red-brick clock tower against a clear blue sky' },
+      extra: { src: '/images/people/lucknow/city-view-through-arch.jpg', alt: 'A minaret, gardens and a domed building seen through a carved stone arch' },
+      resources: { src: '/images/people/lucknow/apartments-city-view.jpg', alt: 'White apartment building with balconies, with the city skyline behind it' },
+    },
+  },
+  kanpur: {
+    key: 'kanpur',
+    path: '/digital-marketing-agency-kanpur',
+    breadcrumb: 'Kanpur',
+    eyebrow: 'Kanpur · real estate only',
+    h1: 'Digital marketing agency in Kanpur for real estate',
+    lead:
+      'For builders, developers, brokers and channel partners in Kanpur: project landing pages, Meta and Google ads for property leads, and WhatsApp replies that reach every enquiry in seconds.',
+    intro: [
+      'Veloxis Global is a founder-led digital marketing agency based in Kanpur, and we work only in real estate. Our clients are developers, builders, brokers and channel partners selling flats, plots, villas and commercial space. We don’t take clients from other industries.',
+      'Kanpur is a word-of-mouth market. Many buyers already know a broker or a relative in property, and they ask on WhatsApp before they ever fill a form. Speed and trust decide who gets the site visit. We give each project a clear landing page with price, size, location and UP RERA details, ads aimed at the localities buyers actually live in and search for, and an instant WhatsApp reply with the price sheet and a visit slot.',
+      'Because we are in Kanpur, we know a buyer in Swaroop Nagar looks for something different from a buyer in Naubasta. Every project we promote must be UP RERA registered, and the registration number goes on every ad and page.',
+    ],
+    introLink: { text: 'Want to see the full setup?', label: 'See the Real Estate Lead System', href: '/real-estate-lead-system' },
+    painsHeading: 'What slows real estate sales in Kanpur',
+    pains: [
+      { title: 'Everything depends on referrals', desc: 'Referrals are great until they slow down. Without a direct lead source, a new project or phase has no way to fill its site-visit calendar.' },
+      { title: 'Ads that reach all of Kanpur and beyond', desc: 'Boosted posts with city-wide targeting bring likes from people who will never buy. Locality and intent matter more than reach.' },
+      { title: 'Late replies to WhatsApp enquiries', desc: 'A buyer messages in the evening, hears back the next afternoon, and has already visited another project.' },
+      { title: 'No proof of what marketing works', desc: 'Without tracking, nobody knows which hoarding, post or ad brought the buyer who booked, so budgets are set by guesswork.' },
+    ],
+    helpHeading: 'What we do for Kanpur builders and brokers',
+    help: [
+      { service: 'high-converting-landing-pages', title: 'A landing page for each Kanpur project', desc: 'Locality, price band, configurations, UP RERA number and a site-visit button on the first screen, built for mobile.' },
+      { service: 'paid-ads', title: 'Meta and Google ads by locality', desc: 'Google ads on project and “flats in …” or “plots in …” searches, and Meta ads for people living near the project, measured on cost per site visit.' },
+      { service: 'ai-automation', title: 'WhatsApp reply in seconds, day or night', desc: 'Every enquiry gets the brochure, price sheet and location pin instantly, is asked a few qualifying questions and is booked for a visit.' },
+    ],
+    extraHeading: 'Why a Kanpur-based, real estate-only agency',
+    extra: [
+      { title: 'Local and founder-led', desc: 'You work directly with the founder, who lives in Kanpur, not with an account manager in another city.' },
+      { title: 'One industry, one goal', desc: 'Our pages, ads and WhatsApp flows are built only for property sales and measured on site visits.' },
+      { title: 'UP RERA compliance built in', desc: 'Registration numbers on every ad and page, and no promises about price, possession or returns the project can’t back up.' },
+      { title: 'You own everything', desc: 'Ads run from your own Meta and Google accounts, leads go to your sheet or CRM, and you pay the ad spend directly.' },
+    ],
+    local: {
+      heading: 'Kanpur localities we plan campaigns around',
+      intro:
+        'Kanpur buyers search and compare by area. Each project gets ads and messaging for the people who live near it or want to move there.',
+      areas: [
+        { title: 'Swaroop Nagar, Civil Lines and Tilak Nagar', desc: 'Central, established areas with premium apartments, where buyers expect detail, privacy and a quick, polite reply.' },
+        { title: 'Kalyanpur, Kakadeo and Rawatpur', desc: 'Family and student-belt localities with steady demand for apartments and rental-friendly units.' },
+        { title: 'Kidwai Nagar, Barra and Naubasta', desc: 'Large South Kanpur neighbourhoods where affordable flats and plots sell on price, payment plans and location.' },
+        { title: 'Panki, Shyam Nagar and the outskirts', desc: 'Plotted developments and new projects on the edges of the city, where investors and first-time buyers compare price per square foot.' },
+      ],
+    },
+    relatedPlaybooks: ['project-landing-page-blueprint', 'whatsapp-lead-response-flow'],
+    relatedPosts: ['whatsapp-automation-for-real-estate-leads', 'google-ads-for-real-estate-india', 'real-estate-brochure', 'how-to-generate-real-estate-leads'],
+    faqs: [
+      { question: 'Are you based in Kanpur?', answer: 'Yes. Veloxis Global is a founder-led agency run by Muddassir Ali from Kanpur. We work with clients on WhatsApp, phone and video calls, and don’t have a public walk-in office.' },
+      { question: 'Do you work only with real estate businesses?', answer: 'Yes. We are a real estate-only digital marketing agency. In Kanpur we work with developers, builders, brokers and channel partners, and we don’t take clients from other industries.' },
+      { question: 'Which digital marketing services do you offer in Kanpur?', answer: 'Three things that work together: a landing page for each project, Meta (Facebook and Instagram) and Google ads for property leads, and WhatsApp automation that replies to every enquiry in seconds and books site visits.' },
+      { question: 'How much ad budget does a Kanpur project need?', answer: 'You pay the ad spend directly to Meta and Google. We recommend at least ₹15,000 a month per project to start, and more for a launch. Our own fee is separate and quoted after a free audit.' },
+      { question: 'Can online ads work in a referral-driven market like Kanpur?', answer: 'Yes, when they are narrow. Ads aimed at the right localities, a page that answers price and RERA questions, and an instant WhatsApp reply add a steady source of new buyers alongside your referrals.' },
+      { question: 'Can you promote plots and plotted developments?', answer: 'Yes, if the project is registered with UP RERA where registration is required. Plot campaigns focus on location, price per square yard, approvals and site-visit booking.' },
+      { question: 'How soon can a Kanpur campaign go live?', answer: 'Usually within one to two weeks, once we have the price sheet, brochure, photos and RERA details. The page, tracking, WhatsApp flow and ads are built together.' },
+      { question: 'Do you work with individual brokers in Kanpur?', answer: 'Yes. Brokers and channel partners get a page for each project they sell, ads that bring leads only they receive, and instant WhatsApp follow-up.' },
+    ],
+    ctaTitle: 'Selling a project in Kanpur?',
+    ctaDescription: 'Get a free review of your project page, ads and lead follow-up from a Kanpur-based, real estate-only team.',
+    images: {
+      hero: { src: '/images/people/kanpur/hero-temple-spires.jpg', alt: '' },
+      intro: { src: '/images/people/kanpur/residential-towers-lake.jpg', alt: 'Tall residential towers beside a lake, with green trees in the foreground' },
+      pains: { src: '/images/people/kanpur/clock-tower-market-street.jpg', alt: 'Red-brick clock tower above a busy market street with shop signs' },
+      help: { src: '/images/people/kanpur/apartment-block-construction.jpg', alt: 'Apartment block under construction, with finished floors next to bare concrete ones' },
+      extra: { src: '/images/people/kanpur/riverside-boats-morning.jpg', alt: 'Boats moored along a river bank on a hazy morning, with buildings behind' },
+      resources: { src: '/images/people/kanpur/apartment-towers-from-below.jpg', alt: 'Apartment towers seen from below against a blue sky' },
     },
   },
 };

@@ -34,6 +34,9 @@ Volumes refreshed 2026-09-26 (research in `research/kw-free-2026-09/KEYWORD-MAP.
 | `/blog/real-estate-brochure` | real estate brochure (1,000) | real estate brochure design, what to include in a real estate brochure | Informational |
 | `/blog/real-estate-social-media-marketing` | real estate social media (260) | real estate social media post (390), real estate on social media (260), real estate facebook page (40), real estate post ideas (50) | Informational |
 | `/blog/rera-registration-for-agents` | rera registration for agents (480) | how to become real estate agent in india (320), rera agent registration fee (210), online rera registration for agents (140), how to become rera registered agent (50) | Informational |
+| `/blog/real-estate-hoarding-design` | real estate hoarding (390) | real estate hoarding design (320), hoarding ideas (40), hoarding ads (30), wall branding (30) | Informational |
+| `/digital-marketing-agency-lucknow` | digital marketing agency in lucknow | real estate marketing agency lucknow, real estate digital marketing lucknow | Commercial (local) |
+| `/digital-marketing-agency-kanpur` | digital marketing agency in kanpur | real estate marketing agency kanpur, real estate digital marketing kanpur | Commercial (local) |
 
 The remaining 27 posts of the 60-day plan, with keywords, dates and internal links, are in `docs/CONTENT-PLAN.md`. Add each row here when its post is published. Volumes are from DataForSEO, India, 2026-10-01.
 
@@ -48,7 +51,7 @@ Deliberately **not** targeted:
 - **builder website (60,500)** — means website-builder tools, not property builders.
 - **channel partner meaning (1,300)** — generic business definition.
 - **how to sell property / flat fast (210–260)** — homeowners, not our clients.
-- **real estate + city** (e.g. "real estate marketing agency lucknow") — 0–40 searches a month. Revisit once the Google Business Profile is verified.
+- **real estate + city** (e.g. "real estate marketing agency lucknow") — 0–40 searches a month, so the city pages target "digital marketing agency in lucknow/kanpur" (GSC, Sept–Oct 2026: 486 and 260 impressions on the old city URLs) and qualify the visitor as real estate only. Pages restored on the old URLs on 7 Oct 2026.
 
 ## Where things live
 

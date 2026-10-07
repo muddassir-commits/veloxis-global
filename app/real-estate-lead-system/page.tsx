@@ -196,6 +196,9 @@ export default function LeadSystemPage() {
                       <p className="text-xs font-bold text-royal-blue uppercase tracking-widest">Step {i + 1} · {s.step}</p>
                       <h3 className="font-extrabold text-slate-900 mt-1">{s.title}</h3>
                       <p className="text-sm text-slate-600 leading-relaxed mt-1">{s.desc}</p>
+                      <Link href={s.href} className="inline-block mt-2 text-sm font-bold text-royal-blue hover:underline">
+                        {s.linkLabel} →
+                      </Link>
                     </div>
                   </li>
                 );

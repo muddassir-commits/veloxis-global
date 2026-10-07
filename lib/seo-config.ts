@@ -5,7 +5,7 @@ export const SITE_URL = 'https://www.veloxisglobal.com';
 export const DEFAULT_OG_IMAGE = '/images/og/homepage-og.jpg';
 /** When the offer, service and audience pages were last checked for accuracy. Shown on those pages
  *  and used as the sitemap lastmod for static pages — bump it whenever they are reviewed. */
-export const CONTENT_REVIEWED = '2026-10-05';
+export const CONTENT_REVIEWED = '2026-10-07';
 
 export interface MetaProps {
   /** Rendered exactly as written — include the brand yourself. Keep it under ~60 characters. */
@@ -96,6 +96,18 @@ export const pageMeta = {
     description:
       'Meta ads to Indians in the UAE, UK and US, an NRI project page and WhatsApp replies in their time zone. For developers and channel partners in India.',
     path: '/industries/real-estate/nri-buyers',
+  },
+  lucknow: {
+    title: 'Lucknow Digital Marketing Agency for Real Estate | Veloxis',
+    description:
+      'Real estate-only digital marketing agency for Lucknow builders, brokers and CPs: project landing pages, Meta and Google ads, and instant WhatsApp replies.',
+    path: '/digital-marketing-agency-lucknow',
+  },
+  kanpur: {
+    title: 'Kanpur Digital Marketing Agency for Real Estate | Veloxis',
+    description:
+      'Kanpur-based, real estate-only digital marketing agency for builders, brokers and CPs: project landing pages, Meta and Google ads, instant WhatsApp replies.',
+    path: '/digital-marketing-agency-kanpur',
   },
   playbooks: {
     title: 'Real Estate Marketing Playbooks & Strategy Examples',

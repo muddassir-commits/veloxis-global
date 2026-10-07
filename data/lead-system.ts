@@ -30,16 +30,22 @@ export const leadSystemProblems = [
 export const leadSystemSteps = [
   {
     step: 'Ad',
+    href: '/services/paid-ads',
+    linkLabel: 'Meta & Google ads in detail',
     title: 'Meta ads aimed at real buyers',
     desc: 'Facebook and Instagram ads for your project, targeted by location, budget and buyer intent, with questions that filter out time-wasters.',
   },
   {
     step: 'Page',
+    href: '/services/high-converting-landing-pages',
+    linkLabel: 'Project landing pages in detail',
     title: 'A landing page for your project',
     desc: 'One fast, mobile-first page per project: location, price band, RERA number, floor plans and photos, with a short enquiry form and a WhatsApp button.',
   },
   {
     step: 'WhatsApp',
+    href: '/services/ai-automation',
+    linkLabel: 'WhatsApp & AI automation in detail',
     title: 'An instant WhatsApp reply',
     desc: 'Every enquiry gets a WhatsApp message within seconds, day or night, with project details and a few questions. A wrong number can’t reply, so fake enquiries show up straight away. Then follow-ups until the buyer replies.',
   },

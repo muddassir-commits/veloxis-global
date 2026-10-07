@@ -20,7 +20,7 @@ export const AudiencePageTemplate: React.FC<{ audience: AudienceData }> = ({ aud
   const img = audience.images;
   const crumbs = [...(audience.parent ? [audience.parent] : []), { name: audience.breadcrumb, href: audience.path }];
   const heroCta = audience.heroCta ?? { label: 'Get a free marketing review →', href: '/contact' };
-  const faqWho = { developers: 'developers', 'channel-partners': 'channel partners and brokers', nri: 'developers and channel partners' }[audience.key];
+  const faqWho = { developers: 'developers', 'channel-partners': 'channel partners and brokers', nri: 'developers and channel partners', lucknow: 'Lucknow builders and brokers', kanpur: 'Kanpur builders and brokers' }[audience.key];
 
   return (
     <>
@@ -184,6 +184,11 @@ export const AudiencePageTemplate: React.FC<{ audience: AudienceData }> = ({ aud
                 <div key={a.title} className="bg-slate-50 border border-slate-200 rounded-2xl p-6">
                   <h3 className="font-bold text-slate-900 mb-2">{a.title}</h3>
                   <p className="text-sm text-slate-600 leading-relaxed">{a.desc}</p>
+                  {a.href && (
+                    <Link href={a.href} className="inline-block mt-3 text-sm font-bold text-royal-blue hover:underline">
+                      Marketing in {a.title} →
+                    </Link>
+                  )}
                 </div>
               ))}
             </div>
