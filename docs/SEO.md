@@ -35,8 +35,10 @@ Volumes refreshed 2026-09-26 (research in `research/kw-free-2026-09/KEYWORD-MAP.
 | `/blog/real-estate-social-media-marketing` | real estate social media (260) | real estate social media post (390), real estate on social media (260), real estate facebook page (40), real estate post ideas (50) | Informational |
 | `/blog/rera-registration-for-agents` | rera registration for agents (480) | how to become real estate agent in india (320), rera agent registration fee (210), online rera registration for agents (140), how to become rera registered agent (50) | Informational |
 | `/blog/real-estate-hoarding-design` | real estate hoarding (390) | real estate hoarding design (320), hoarding ideas (40), hoarding ads (30), wall branding (30) | Informational |
+| `/blog/real-estate-seo-india` | real estate seo (480) | real estate seo agency (90), seo india (50), real estate agent seo (50) | Informational |
 | `/digital-marketing-agency-lucknow` | digital marketing agency in lucknow | real estate marketing agency lucknow, real estate digital marketing lucknow | Commercial (local) |
 | `/digital-marketing-agency-kanpur` | digital marketing agency in kanpur | real estate marketing agency kanpur, real estate digital marketing kanpur | Commercial (local) |
+| `/digital-marketing-agency-noida` | digital marketing agency in noida | real estate marketing agency noida, greater noida west, yamuna expressway | Commercial (local) |
 
 The remaining 27 posts of the 60-day plan, with keywords, dates and internal links, are in `docs/CONTENT-PLAN.md`. Add each row here when its post is published. Volumes are from DataForSEO, India, 2026-10-01.
 

@@ -92,7 +92,7 @@ export default function ContactPage() {
                     <Phone className="w-5 h-5" />
                   </div>
                   <div>
-                    <span className="text-xs font-bold text-slate-400 uppercase tracking-wider block">Call</span>
+                    <span className="text-xs font-bold text-slate-500 uppercase tracking-wider block">Call</span>
                     <span className="font-extrabold text-slate-900 text-base sm:text-lg block mt-0.5 group-hover:text-royal-blue transition-colors">{siteData.phone}</span>
                   </div>
                 </a>
@@ -102,7 +102,7 @@ export default function ContactPage() {
                     <Mail className="w-5 h-5" />
                   </div>
                   <div>
-                    <span className="text-xs font-bold text-slate-400 uppercase tracking-wider block">Email</span>
+                    <span className="text-xs font-bold text-slate-500 uppercase tracking-wider block">Email</span>
                     <span className="font-extrabold text-slate-900 text-base sm:text-lg block mt-0.5 group-hover:text-royal-blue transition-colors break-all">{siteData.email}</span>
                   </div>
                 </a>
@@ -112,7 +112,7 @@ export default function ContactPage() {
                     <MessageCircle className="w-5 h-5 fill-teal-accent" />
                   </div>
                   <div>
-                    <span className="text-xs font-bold text-slate-400 uppercase tracking-wider block">WhatsApp</span>
+                    <span className="text-xs font-bold text-slate-500 uppercase tracking-wider block">WhatsApp</span>
                     <span className="font-extrabold text-slate-900 text-base sm:text-lg block mt-0.5 group-hover:text-teal-accent transition-colors">Message us on WhatsApp</span>
                   </div>
                 </a>

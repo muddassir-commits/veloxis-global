@@ -1,0 +1,80 @@
+{
+  "title": "Real Estate SEO in India: Keywords, Project Pages and Local SEO for Builders and Agents",
+  "seoTitle": "Real Estate SEO in India: A Guide for Builders & Agents",
+  "excerpt": "Real estate SEO in India: the four types of SEO, keywords worth targeting, project and locality pages that rank, local SEO for agents, AI and how to measure it.",
+  "date": "2026-10-08",
+  "category": "Guides",
+  "service": "high-converting-landing-pages",
+  "image": "/images/people/blog/seo-wooden-letter-blocks.jpg",
+  "imageAlt": "Wooden blocks spelling SEO on an orange surface next to a laptop",
+  "inlineImages": [
+    {
+      "src": "/images/people/blog/seo-man-searching-laptop.jpg",
+      "alt": "A man in a blue jacket and red beanie searching on a laptop outdoors",
+      "caption": "Most buyers start with a search. The question is whose page they land on.",
+      "beforeHeading": "types-of-seo"
+    },
+    {
+      "src": "/images/people/blog/seo-notebook-keyword-sketch.jpg",
+      "alt": "A notebook with SEO, keywords, backlinks and title sketched in coloured pens beside a laptop keyboard",
+      "beforeHeading": "keywords"
+    },
+    {
+      "src": "/images/people/blog/seo-buyer-checking-phone.jpg",
+      "alt": "A young man in a green sweater and mustard beanie looking up from his phone",
+      "caption": "Project-name searches come from people who are already interested. Make sure they find your page.",
+      "beforeHeading": "project-and-locality-pages"
+    },
+    {
+      "src": "/images/people/blog/seo-map-search-on-phone.jpg",
+      "alt": "A hand zooming into a map on a smartphone lying on a wooden table",
+      "beforeHeading": "local-seo"
+    },
+    {
+      "src": "/images/people/blog/seo-printed-traffic-report.jpg",
+      "alt": "A hand holding a printed report full of charts next to a laptop",
+      "caption": "Judge SEO the way you judge ads: by site visits, not visitors.",
+      "beforeHeading": "measure"
+    }
+  ],
+  "about": [
+    {
+      "name": "Search engine optimization",
+      "sameAs": "https://en.wikipedia.org/wiki/Search_engine_optimization"
+    }
+  ],
+  "faqs": [
+    {
+      "question": "What is real estate SEO?",
+      "answer": "Real estate SEO means setting up your website and online presence so Google shows your pages when buyers search for the projects, localities and services you sell. It brings enquiries without paying per click, for as long as the page ranks."
+    },
+    {
+      "question": "What are the four types of SEO?",
+      "answer": "On-page SEO (the content and structure of each page), technical SEO (how easily Google can crawl and load the site), local SEO (showing up for searches with a place in them and on Google Maps) and off-page SEO (signals from other websites, mainly links)."
+    },
+    {
+      "question": "Which real estate keywords should a builder target first?",
+      "answer": "The project and builder names, because people searching them are already interested. Then locality plus configuration searches such as “3 BHK in Gomti Nagar Extension”, and the questions buyers ask before they buy."
+    },
+    {
+      "question": "Can a small builder outrank property portals?",
+      "answer": "Rarely for broad searches such as “flats in Noida”, where portals have years of authority. But a small builder can win project-name, builder-name and specific locality searches with good, separate pages for each project and area."
+    },
+    {
+      "question": "Is SEO being replaced by AI?",
+      "answer": "No, but it is changing. Google's AI summaries and assistants like ChatGPT build their answers from web pages and often cite them. Clear, factual pages with plain-text answers and FAQs are more likely to be quoted, and searches with intent to buy still send people to websites."
+    },
+    {
+      "question": "How long does real estate SEO take?",
+      "answer": "Weeks for a new page to be indexed and months to settle into a stable position, longer for a new website. Most builders run ads for a launch and build SEO alongside it."
+    },
+    {
+      "question": "Should a channel partner copy the developer's project page?",
+      "answer": "No. Google tends to show only one version of duplicate content, usually the developer's. Write your own page with your own details, your RERA agent number and what you add for the buyer."
+    },
+    {
+      "question": "What should happen to a project page when the project sells out?",
+      "answer": "Keep it with a sold-out note and links to newer projects, or redirect it to the closest live page. Deleting it throws away the rankings and links it had earned."
+    }
+  ]
+}

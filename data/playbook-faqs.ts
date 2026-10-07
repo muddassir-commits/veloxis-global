@@ -45,6 +45,8 @@ export const playbookFaqs: Record<string, PageFaq[]> = {
     { question: 'When should the sales team call NRI leads?', answer: 'In the buyer’s evening, roughly 7 to 10 PM their time. For the UAE that is 8:30 to 11:30 PM IST; for the US East Coast it is early the next morning in India. The WhatsApp auto-reply covers the gap instantly.' },
     { question: 'Does Meta’s Housing special ad category apply to NRI campaigns?', answer: 'It can for ads shown in the US, Canada and parts of Europe. Age and gender targeting are removed and location targeting is limited there, so those campaigns rely on creative and retargeting.' },
     { question: 'What should be measured in the first 30 days?', answer: 'Leads, contact rate, video visits booked and cost per video visit, each split by country. Bookings from NRI buyers often take longer than 30 days.' },
+    { question: 'What should an NRI landing page include?', answer: 'The price in INR with an approximate AED, USD or GBP guide, the RERA number, a video walkthrough, a “Book a video site visit” button and a short FAQ on buying as an NRI: payments through NRE or NRO accounts, home loans and paperwork.' },
+    { question: 'Should NRI leads get a different WhatsApp flow?', answer: 'Yes. The flow asks which country the buyer lives in, sends the brochure, cost sheet and RERA certificate at once, and offers video visit slots in the buyer’s own time zone instead of a site visit.' },
     { question: 'Is this a real client campaign?', answer: 'No. It is an example plan for a hypothetical project. Time differences are factual; markets, timings and messages are illustrative.' },
   ],
 };
