@@ -184,6 +184,12 @@ No personal data (name, phone, email, message) is sent in any event.
 -   Stream URL: `https://www.veloxisglobal.com`.
 -   Google Signals: off.
 -   Linked to Google Ads `687-474-7833` (section 9).
+-   Internal traffic (8 Oct 2026): opening any page with `?internal=1`
+    stores `vg-internal=1` in that browser's localStorage, and the
+    consent-default script in `app/layout.tsx` then sends
+    `traffic_type=internal` on every GA4 hit. `?internal=0` removes it.
+    The GA4 data filter "Internal Traffic" excludes these hits. An IP rule
+    is not used because the owner's IP changes.
 
 ## Resolved issues (branch `fix/tracking-events`, 24 Sep 2026)
 
