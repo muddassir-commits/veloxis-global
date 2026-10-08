@@ -74,6 +74,9 @@ export default function RootLayout({
               try{var c=JSON.parse(localStorage.getItem('cookie-consent-v2')||'null');
               if(!c&&localStorage.getItem('cookie-consent')==='accepted'){c={analytics:true,marketing:true};}
               if(c){var m=c.marketing?'granted':'denied';gtag('consent','update',{analytics_storage:c.analytics?'granted':'denied',ad_storage:m,ad_user_data:m,ad_personalization:m});}}catch(e){}
+              try{var q=new URLSearchParams(location.search).get('internal');
+              if(q==='1')localStorage.setItem('vg-internal','1');else if(q==='0')localStorage.removeItem('vg-internal');
+              if(localStorage.getItem('vg-internal')==='1')gtag('set',{traffic_type:'internal'});}catch(e){}
             `,
           }}
         />
