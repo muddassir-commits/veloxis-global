@@ -1,5 +1,5 @@
 // Google Analytics 4, GTM dataLayer and Meta Pixel event tracking.
-// Spec: VELOXIS_GTM_MARKETING_TRACKING_SPEC.md, section 4.
+// Spec: VELOXIS_GTM_MARKETING_TRACKING_SPEC.md (private business workspace, 01_foundation/website-docs), section 4.
 
 declare global {
   interface Window {
