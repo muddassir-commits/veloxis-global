@@ -42,3 +42,6 @@ next-env.d.ts
 
 # local SQLite lead store
 /.data/
+
+# Generated report from scripts/seo-audit.js
+seo_audit_report.md
