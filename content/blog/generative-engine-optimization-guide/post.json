@@ -1,0 +1,77 @@
+{
+  "title": "Generative Engine Optimization (GEO): How to Get Your Business Into ChatGPT, Gemini and Google’s AI Answers",
+  "seoTitle": "GEO & AEO Guide: Get Found in ChatGPT and AI Overviews",
+  "excerpt": "What generative engine optimization (GEO) and AEO are, how AI tools pick sources, six steps to get cited in ChatGPT and AI Overviews, and how to measure it free.",
+  "date": "2026-10-12",
+  "category": "Guides",
+  "service": "high-converting-landing-pages",
+  "image": "/images/people/blog/geo-chatgpt-on-laptop.jpg",
+  "imageAlt": "A laptop on a desk showing the ChatGPT introduction page on a green screen",
+  "inlineImages": [
+    {
+      "src": "/images/people/blog/geo-google-search-on-laptop.jpg",
+      "alt": "A laptop screen showing the Google search page with suggestions under the search box",
+      "caption": "Google’s AI Overviews and AI Mode are built on Google’s normal search index.",
+      "beforeHeading": "how-ai-picks-sources"
+    },
+    {
+      "src": "/images/people/blog/geo-man-working-on-laptop.jpg",
+      "alt": "A man in a turban working on a laptop at a small desk in a green-walled room",
+      "beforeHeading": "step-2-entity"
+    },
+    {
+      "src": "/images/people/blog/geo-ai-chat-assistant-screen.jpg",
+      "alt": "An AI chat assistant's welcome screen with an empty message box, in dark mode",
+      "caption": "AI answers quote passages, so each answer should stand on its own.",
+      "beforeHeading": "step-3-answers"
+    },
+    {
+      "src": "/images/people/blog/geo-analytics-dashboard-laptop.jpg",
+      "alt": "A laptop on a sofa showing an analytics dashboard with charts and a map",
+      "beforeHeading": "measure"
+    },
+    {
+      "src": "/images/people/blog/geo-team-planning-whiteboard.jpg",
+      "alt": "Two colleagues planning with sticky notes on a whiteboard",
+      "beforeHeading": "checklist"
+    }
+  ],
+  "about": [
+    { "name": "Generative engine optimization", "sameAs": "https://en.wikipedia.org/wiki/Generative_engine_optimization" },
+    { "name": "Search engine optimization", "sameAs": "https://en.wikipedia.org/wiki/Search_engine_optimization" }
+  ],
+  "faqs": [
+    {
+      "question": "What is generative engine optimization (GEO)?",
+      "answer": "GEO means making your content easy for AI tools such as ChatGPT, Gemini, Perplexity, Copilot and Google's AI Overviews to find, trust and quote when they write an answer."
+    },
+    {
+      "question": "What is the difference between GEO, AEO and SEO?",
+      "answer": "SEO gets your pages into search indexes and normal results. AEO (answer engine optimization) makes each answer on a page easy to lift. GEO makes AI tools trust your business enough to name or cite it in their answers."
+    },
+    {
+      "question": "Is GEO replacing SEO?",
+      "answer": "No. Google's AI Overviews and AI Mode are built on Google's normal index, and ChatGPT and Copilot use search indexes including Bing. Good SEO is the foundation; GEO adds entity consistency, answer-first writing and mentions on other websites."
+    },
+    {
+      "question": "How do I get my business mentioned in ChatGPT?",
+      "answer": "Allow OAI-SearchBot in robots.txt, get indexed in Bing, use one consistent business description everywhere, write answer-first pages with specific facts, and get listed and reviewed on the third-party sites that ChatGPT already cites for your topic."
+    },
+    {
+      "question": "Do I need special schema for AI Overviews?",
+      "answer": "Google says no special markup is needed. Organization, Article, FAQPage and Service schema still help systems read your pages correctly, as long as the markup matches what is visible."
+    },
+    {
+      "question": "Does llms.txt help with AI search?",
+      "answer": "It is optional. llms.txt is a proposed summary file for AI tools; Google has said it does not use it, and there is little evidence other tools rely on it yet."
+    },
+    {
+      "question": "How can I measure AI visibility for free?",
+      "answer": "Check 20 customer prompts monthly in ChatGPT, Gemini, Perplexity and Copilot, track referrals from chatgpt.com and perplexity.ai in Google Analytics 4, and watch impressions on question-style queries in Google Search Console."
+    },
+    {
+      "question": "How long does GEO take to work?",
+      "answer": "Months rather than days. Indexing, mentions on other sites and trust build over time, so measure monthly."
+    }
+  ]
+}

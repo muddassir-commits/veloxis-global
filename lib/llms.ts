@@ -71,6 +71,8 @@ export function buildLlmsTxt(): string {
     '',
     '## Guides',
     '',
+    `Topic hub: ${SITE_URL}/guides (AI search/GEO/AEO, ads, SEO, WhatsApp automation, Reels, landing pages, RERA). Free tool: ${SITE_URL}/tools/website-audit (website audit and AI search readiness check).`,
+    '',
     ...getAllPosts().map((p) => `- [${p.title}](${SITE_URL}/blog/${p.slug}): ${p.excerpt}`),
     '',
     facts,

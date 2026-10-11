@@ -1,0 +1,78 @@
+{
+  "title": "Instagram Reels Marketing: A Step-by-Step Guide, With Real Estate Examples",
+  "seoTitle": "Instagram Reels Marketing Guide (With Real Estate Examples)",
+  "excerpt": "How to use Instagram Reels for business: account setup, 15 Reel ideas, filming on a phone, hooks, posting times, RERA rules and turning views into enquiries.",
+  "date": "2026-10-12",
+  "category": "Growth Tips",
+  "service": "paid-ads",
+  "image": "/images/people/blog/reels-man-filming-himself-phone.jpg",
+  "imageAlt": "A phone on a gimbal recording a man in a patterned shirt, seen on the phone screen",
+  "inlineImages": [
+    {
+      "src": "/images/people/blog/reels-instagram-phone-on-tripod.jpg",
+      "alt": "A smartphone showing the Instagram logo, held upright in a tripod clamp",
+      "beforeHeading": "setup"
+    },
+    {
+      "src": "/images/people/blog/reels-agent-filming-empty-apartment.jpg",
+      "alt": "A woman in a dark suit filming an empty, bright apartment with her phone",
+      "caption": "Real, unedited walkthroughs earn more trust than renders.",
+      "beforeHeading": "reel-ideas"
+    },
+    {
+      "src": "/images/people/blog/reels-woman-setting-up-phone-ring-light.jpg",
+      "alt": "A woman adjusting a smartphone on a tripod in front of a ring light",
+      "caption": "A tripod, front light and a clip-on mic cover most of what you need.",
+      "beforeHeading": "how-to-shoot"
+    },
+    {
+      "src": "/images/people/blog/reels-scrolling-feed-on-phone.jpg",
+      "alt": "Close-up of a hand with red nails scrolling a social media feed on a phone",
+      "beforeHeading": "posting"
+    },
+    {
+      "src": "/images/people/blog/reels-agent-showing-flat-to-couple.jpg",
+      "alt": "A real estate agent with a clipboard showing an unfinished flat to a young couple",
+      "caption": "The Reel starts the conversation; the site visit closes it.",
+      "beforeHeading": "reels-to-leads"
+    }
+  ],
+  "about": [
+    { "name": "Instagram Reels", "sameAs": "https://en.wikipedia.org/wiki/Instagram" },
+    { "name": "Social media marketing", "sameAs": "https://en.wikipedia.org/wiki/Social_media_marketing" }
+  ],
+  "faqs": [
+    {
+      "question": "How long should an Instagram Reel be?",
+      "answer": "Instagram allows Reels of up to three minutes, but most Reels that travel furthest are 7 to 30 seconds long. Keep it as short as the idea allows and put the main point in the first two seconds."
+    },
+    {
+      "question": "How often should a business post Reels?",
+      "answer": "Three Reels a week, every week, is a good rhythm for a small team. Consistency over two to three months matters more than posting a lot in one week."
+    },
+    {
+      "question": "What are good Reel ideas for real estate?",
+      "answer": "Unedited 20-second walkthroughs, \"what ₹X gets you in this locality\", monthly construction progress, the view from a high floor, explainers such as carpet area vs super built-up area, total cost breakdowns, locality tours and replies to buyers' comments."
+    },
+    {
+      "question": "Do property Reels need a RERA number?",
+      "answer": "Yes. A Reel that promotes a specific project is an advertisement, so it should show the project's RERA registration number, and the agent's number if you are a broker. Some states, such as Maharashtra, also require a QR code."
+    },
+    {
+      "question": "Can business accounts use trending music on Reels?",
+      "answer": "Only sounds licensed for commercial use. Use Instagram's commercial sound library or royalty-free music; a copyrighted film song can get the Reel muted or removed."
+    },
+    {
+      "question": "What makes a good Reel hook?",
+      "answer": "Say the result first, ask the question your buyer is asking, or start in the middle of the action. Put the hook in on-screen text as well, because many people watch with the sound off."
+    },
+    {
+      "question": "How do I turn Reel views into leads?",
+      "answer": "End every Reel with one clear action such as \"WhatsApp FLAT\", reply to comments and DMs instantly, move the conversation to WhatsApp to book a site visit, boost Reels that already perform well, and retarget people who watched your Reels with ads."
+    },
+    {
+      "question": "Which Reel numbers should I track?",
+      "answer": "Accounts reached and the share of non-followers, average watch time, shares and saves, profile visits and WhatsApp taps, and the enquiries and site visits that mention the Reel."
+    }
+  ]
+}

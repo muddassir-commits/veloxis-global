@@ -319,16 +319,16 @@ export const Navbar: React.FC = () => {
             </Link>
 
             <Link
-              href="/blog"
+              href="/guides"
               className={`font-sans font-semibold transition-all duration-300 rounded-full whitespace-nowrap shrink-0 ${
                 scrolled
                   ? 'px-2.5 py-1 text-[13px]'
                   : 'px-3.5 py-1.5 text-[14px]'
               } ${
-                isActive('/blog') ? 'bg-royal-blue text-white shadow-sm shadow-royal-blue/15' : 'text-slate-700 hover:bg-slate-100/80 hover:text-royal-blue'
+                (isActive('/guides') || isActive('/blog')) ? 'bg-royal-blue text-white shadow-sm shadow-royal-blue/15' : 'text-slate-700 hover:bg-slate-100/80 hover:text-royal-blue'
               }`}
             >
-              Blog
+              Guides
             </Link>
           </nav>
 
@@ -534,13 +534,13 @@ export const Navbar: React.FC = () => {
             </Link>
 
             <Link
-              href="/blog"
+              href="/guides"
               onClick={() => setIsOpen(false)}
               className={`font-bold text-[16px] py-3 border-b border-slate-100 transition-colors duration-300 ${
-                isActive('/blog') ? 'text-royal-blue font-bold' : 'text-slate-900 hover:text-royal-blue'
+                (isActive('/guides') || isActive('/blog')) ? 'text-royal-blue font-bold' : 'text-slate-900 hover:text-royal-blue'
               }`}
             >
-              Blog
+              Guides
             </Link>
           </nav>
         </div>
