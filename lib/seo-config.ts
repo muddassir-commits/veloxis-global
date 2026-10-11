@@ -145,6 +145,18 @@ export const pageMeta = {
       'Talk to Veloxis Global about landing pages, property ads or WhatsApp automation. WhatsApp +91 91940 20727, or send the form for a free marketing audit.',
     path: '/contact',
   },
+  guides: {
+    title: 'Digital Marketing & AI Search Guides | Veloxis Global',
+    description:
+      'Free guides on AI search (GEO, AEO), Meta and Google ads, SEO, WhatsApp automation, Reels and landing pages, with real examples from Indian real estate.',
+    path: '/guides',
+  },
+  websiteAudit: {
+    title: 'Free Website Audit & AI Visibility Check | Veloxis Global',
+    description:
+      'Free website audit: check any page for SEO basics, speed, tracking, lead capture and AI search readiness (ChatGPT, Gemini, AI Overviews). Instant results.',
+    path: '/tools/website-audit',
+  },
   blog: {
     title: 'Real Estate Marketing Blog | Veloxis Global',
     description:

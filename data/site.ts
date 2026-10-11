@@ -24,6 +24,8 @@ export const siteData = {
   founderX: "https://x.com/muddassir_alii",
   founderPortfolio: "https://muddassirali.com",
   logo: "https://www.veloxisglobal.com/images/logos/logo.png",
+  // Square version for Google's logo and knowledge panel (wide logos get cropped or skipped).
+  logoSquare: "https://www.veloxisglobal.com/images/logos/logo-square.png",
   socials: [
     "https://www.instagram.com/veloxisglobal/",
     "https://www.linkedin.com/company/111872222/",
