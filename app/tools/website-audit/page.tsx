@@ -49,7 +49,7 @@ export default function WebsiteAuditPage() {
   return (
     <>
       <SchemaMarkup schema={schema} />
-      <section className="bg-slate-50 py-8 border-b border-slate-100">
+      <section className="bg-slate-50 pt-16 lg:pt-[72px] border-b border-slate-100">
         <div className="max-w-container-max mx-auto px-gutter">
           <Breadcrumb items={[{ name: 'Guides', href: '/guides' }, { name: 'Website Audit', href: '/tools/website-audit' }]} />
         </div>
@@ -61,11 +61,11 @@ export default function WebsiteAuditPage() {
             Free tool · No sign-up
           </span>
           <h1 className="mt-4 text-4xl sm:text-headline-lg font-extrabold text-slate-900 tracking-tight">
-            Free Website Audit and AI Visibility Check
+            Free SEO and Website Audit Tool, with an AI Visibility Check
           </h1>
           <p className="mt-4 text-base sm:text-lg text-slate-600 leading-relaxed">
-            Enter any web page. In under a minute you get a score for AI search readiness, SEO basics, lead capture, tracking,
-            speed and trust, with a plain-English fix for every problem and the five to do first.
+            Enter any web page for a free SEO audit and website performance check. In under a minute you get a score for AI search
+            readiness, SEO basics, lead capture, tracking, speed and trust, with a plain-English fix for every problem and the five to do first.
           </p>
           <div className="mt-8">
             <AuditTool />

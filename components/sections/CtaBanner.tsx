@@ -65,7 +65,7 @@ export const CtaBanner: React.FC<CtaBannerProps> = ({ title, description, showAu
           </div>
 
           {showAuditLink && (
-            <Link href="/free-audit" className="group inline-flex items-center gap-1 mt-6 text-sm font-semibold text-white/85 hover:text-white underline-offset-4 hover:underline">
+            <Link href="/free-audit" className="group inline-flex items-center gap-1 mt-6 py-1 text-sm font-semibold text-white/85 hover:text-white underline-offset-4 hover:underline">
               See what the free audit covers
               <span className="transition-transform group-hover:translate-x-1" aria-hidden="true">→</span>
             </Link>

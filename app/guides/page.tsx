@@ -55,7 +55,7 @@ export default function GuidesPage() {
       {schemas.map((schema, i) => (
         <SchemaMarkup key={i} schema={schema} />
       ))}
-      <section className="bg-slate-50 py-8 border-b border-slate-100">
+      <section className="bg-slate-50 pt-16 lg:pt-[72px] border-b border-slate-100">
         <div className="max-w-container-max mx-auto px-gutter">
           <Breadcrumb items={[{ name: 'Guides', href: '/guides' }]} />
         </div>

@@ -108,7 +108,7 @@ export const ProcessTimeline: React.FC = () => {
                     }`}
                   >
                     <span
-                      className={`text-[11px] font-bold uppercase tracking-[0.12em] ${
+                      className={`text-xs font-bold uppercase tracking-[0.12em] ${
                         last ? 'text-blue-300' : 'text-blue-700'
                       }`}
                     >

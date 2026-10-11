@@ -30,7 +30,7 @@ export default function ContactPage() {
         })}
       />
 
-      <section className="bg-slate-50 py-8 border-b border-slate-100">
+      <section className="bg-slate-50 pt-16 lg:pt-[72px] border-b border-slate-100">
         <div className="max-w-container-max mx-auto px-gutter">
           <Breadcrumb items={[{ name: 'Contact', href: '/contact' }]} />
         </div>
@@ -38,7 +38,7 @@ export default function ContactPage() {
 
       <section className="bg-slate-50 py-16">
         <div className="max-w-container-max mx-auto px-gutter grid grid-cols-1 lg:grid-cols-12 gap-12 text-left">
-          <div className="lg:col-span-7 flex flex-col items-start gap-6 order-last lg:order-first">
+          <div className="lg:col-span-7 flex flex-col items-start gap-6">
             <Badge variant="teal">FREE MARKETING AUDIT</Badge>
             <h1 className="text-4xl sm:text-headline-lg font-extrabold text-slate-900 tracking-tight leading-tight">
               Contact Veloxis Global
@@ -81,7 +81,7 @@ export default function ContactPage() {
               className="hidden lg:block shadow-sm border border-slate-100"
             />
 
-            <Card hoverable={false} className="bg-white border border-slate-100 p-8 flex flex-col gap-6">
+            <Card hoverable={false} className="bg-white border border-slate-100 p-5 sm:p-8 flex flex-col gap-6">
               <h2 className="text-xl sm:text-headline-md font-bold text-slate-900 border-b border-slate-50 pb-4">
                 Other ways to reach us
               </h2>
@@ -93,7 +93,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <span className="text-xs font-bold text-slate-500 uppercase tracking-wider block">Email</span>
-                    <span className="font-extrabold text-slate-900 text-base sm:text-lg block mt-0.5 group-hover:text-royal-blue transition-colors break-all">{siteData.email}</span>
+                    <span className="font-extrabold text-slate-900 text-[15px] sm:text-lg block mt-0.5 group-hover:text-royal-blue transition-colors [overflow-wrap:anywhere]">{siteData.email}</span>
                   </div>
                 </a>
 

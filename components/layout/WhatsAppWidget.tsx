@@ -32,7 +32,7 @@ export const WhatsAppWidget: React.FC = () => {
   const whatsappUrl = siteData.whatsappLink;
 
   return (
-    <div className="fixed bottom-24 sm:bottom-6 right-6 z-50 group">
+    <div className="hidden md:block fixed bottom-6 right-6 z-50 group">
       {/* Tooltip on hover */}
       <div className="absolute bottom-full right-0 mb-3 bg-slate-900 text-white text-xs font-semibold px-3 py-2 rounded-md shadow-md opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap pointer-events-none">
         Chat with us on WhatsApp

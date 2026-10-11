@@ -126,10 +126,10 @@ export const Footer: React.FC = () => {
               A real estate marketing agency for builders, brokers and channel partners. We build project landing pages, run Meta and Google ads, and set up WhatsApp automation — measured on site visits.
             </p>
             <div className="flex flex-wrap gap-2">
-              <span className="text-[10px] font-bold tracking-wider uppercase bg-white/5 border border-white/10 px-2.5 py-1 rounded-full text-slate-400">
+              <span className="text-xs font-bold tracking-wider uppercase bg-white/5 border border-white/10 px-2.5 py-1 rounded-full text-slate-400">
                 Real estate only
               </span>
-              <span className="text-[10px] font-bold tracking-wider uppercase bg-white/5 border border-white/10 px-2.5 py-1 rounded-full text-slate-400">
+              <span className="text-xs font-bold tracking-wider uppercase bg-white/5 border border-white/10 px-2.5 py-1 rounded-full text-slate-400">
                 Founder-led
               </span>
             </div>
@@ -166,11 +166,11 @@ export const Footer: React.FC = () => {
           {/* Contact + service area (always open) */}
           <div className="md:col-span-2 lg:col-span-4 flex flex-col gap-4 pb-6 md:pb-0 border-b border-white/5 md:border-b-0">
             <span className="text-[12px] tracking-[0.08em] uppercase text-slate-200 font-black">GET IN TOUCH</span>
-            <a href={siteData.whatsappLink} target="_blank" rel="noopener noreferrer" className="text-[15px] text-slate-200 hover:text-white transition-colors flex items-center gap-2.5 w-fit">
+            <a href={siteData.whatsappLink} target="_blank" rel="noopener noreferrer" className="text-[15px] text-slate-200 hover:text-white transition-colors flex items-center gap-2.5 w-fit min-h-[28px]">
               <WhatsAppIcon className="w-4 h-4 text-royal-blue shrink-0" />
               <span>WhatsApp {siteData.phone}</span>
             </a>
-            <a href={`mailto:${siteData.email}`} className="text-[15px] text-slate-200 hover:text-white transition-colors flex items-center gap-2.5 w-fit break-all">
+            <a href={`mailto:${siteData.email}`} className="text-[15px] text-slate-200 hover:text-white transition-colors flex items-center gap-2.5 w-fit min-h-[28px] break-all">
               <Mail className="w-4 h-4 text-royal-blue shrink-0" aria-hidden="true" />
               <span>{siteData.email}</span>
             </a>
@@ -322,13 +322,13 @@ export const Footer: React.FC = () => {
 
           {/* Privacy & Sitemap links */}
           <div className="flex flex-wrap items-center justify-center gap-6">
-            <Link href="/privacy-policy" className="hover:text-white transition-colors duration-300">
+            <Link href="/privacy-policy" className="inline-block py-2 -my-2 hover:text-white transition-colors duration-300">
               Privacy Policy
             </Link>
-            <Link href="/terms" className="hover:text-white transition-colors duration-300">
+            <Link href="/terms" className="inline-block py-2 -my-2 hover:text-white transition-colors duration-300">
               Terms of Service
             </Link>
-            <button type="button" onClick={openCookieSettings} className="hover:text-white transition-colors duration-300">
+            <button type="button" onClick={openCookieSettings} className="inline-block py-2 -my-2 hover:text-white transition-colors duration-300">
               Cookie settings
             </button>
             <span className="text-slate-400 font-normal">

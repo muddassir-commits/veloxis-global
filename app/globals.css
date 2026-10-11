@@ -473,6 +473,10 @@ iframe {
 .article-body ul { list-style: disc; padding-left: 1.4rem; }
 .article-body ol { list-style: decimal; padding-left: 1.4rem; }
 .article-body li + li { margin-top: 0.45rem; }
+.article-body { overflow-wrap: break-word; }
+.article-body code { overflow-wrap: anywhere; word-break: break-word; }
+.article-body pre { overflow-x: auto; max-width: 100%; }
+.article-body a { overflow-wrap: anywhere; }
 .article-body table { width: 100%; border-collapse: collapse; font-size: 0.9rem; display: block; overflow-x: auto; }
 .article-body th, .article-body td { border: 1px solid #e2e8f0; padding: 0.6rem 0.8rem; text-align: left; vertical-align: top; }
 .article-body th { background: #f8fafc; color: #0f172a; font-weight: 700; }

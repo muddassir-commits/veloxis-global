@@ -84,7 +84,7 @@ export const BlogPreview: React.FC = () => {
                     <span>{post.category}</span>
                     <Link
                       href={`/blog/${post.slug}`}
-                      className="inline-flex items-center gap-1 text-royal-blue hover:text-indigo-accent font-bold"
+                      className="inline-flex items-center gap-1 py-1.5 -my-1.5 text-royal-blue hover:text-indigo-accent font-bold"
                     >
                       Read Post →
                     </Link>

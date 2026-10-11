@@ -99,7 +99,7 @@ const nextConfig = {
 
       // City pages and lead magnet
       '/digital-marketing-agency-delhi': '/industries/real-estate',
-      '/free-seo-audit': '/free-audit',
+      '/free-seo-audit': '/tools/website-audit',
       '/author/muddassir-ali': '/about',
 
       // Case studies and testimonials were replaced by example playbooks (Sept 2026)

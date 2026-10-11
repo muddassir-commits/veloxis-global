@@ -152,9 +152,9 @@ export const pageMeta = {
     path: '/guides',
   },
   websiteAudit: {
-    title: 'Free Website Audit & AI Visibility Check | Veloxis Global',
+    title: 'Free SEO & Website Audit Tool (Speed, AI Search) | Veloxis Global',
     description:
-      'Free website audit: check any page for SEO basics, speed, tracking, lead capture and AI search readiness (ChatGPT, Gemini, AI Overviews). Instant results.',
+      'Free SEO audit and website performance audit in under a minute: SEO basics, speed, tracking, lead capture and AI search readiness (ChatGPT, Gemini, AI Overviews).',
     path: '/tools/website-audit',
   },
   blog: {
