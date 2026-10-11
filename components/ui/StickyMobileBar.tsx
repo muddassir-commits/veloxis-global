@@ -15,7 +15,7 @@ export const StickyMobileBar: React.FC = () => {
           className="flex flex-col items-center justify-center w-full h-full text-[#25D366] hover:text-[#1da851] transition-colors"
         >
           <WhatsAppIcon className="w-5 h-5 mb-1" />
-          <span className="text-[10px] font-bold text-emerald-800">WhatsApp</span>
+          <span className="text-xs font-bold text-emerald-800">WhatsApp</span>
         </a>
         
         <div className="w-[1px] h-8 bg-slate-200"></div>
@@ -25,7 +25,7 @@ export const StickyMobileBar: React.FC = () => {
           className="flex flex-col items-center justify-center w-full h-full text-indigo-accent hover:text-indigo-600 transition-colors"
         >
           <FileBarChart2 className="w-5 h-5 mb-1" />
-          <span className="text-[10px] font-bold">Get Audit</span>
+          <span className="text-xs font-bold">Get Audit</span>
         </Link>
       </div>
     </div>

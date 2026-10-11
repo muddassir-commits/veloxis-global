@@ -198,10 +198,10 @@ export const Navbar: React.FC = () => {
               >
                 <div className="p-7 pb-6">
                   <div className="flex items-baseline justify-between mb-5">
-                    <span className="text-[11px] font-black tracking-widest uppercase bg-gradient-to-r from-royal-blue to-indigo-accent bg-clip-text text-transparent">
+                    <span className="text-xs font-black tracking-widest uppercase bg-gradient-to-r from-royal-blue to-indigo-accent bg-clip-text text-transparent">
                       What We Do
                     </span>
-                    <span className="text-[11px] font-semibold text-slate-400">Three services. One growth engine.</span>
+                    <span className="text-xs font-semibold text-slate-400">Three services. One growth engine.</span>
                   </div>
 
                   {/* 3-column service cards */}
@@ -226,7 +226,7 @@ export const Navbar: React.FC = () => {
                               {item.description}
                             </span>
                           </div>
-                          <span className="inline-flex items-center gap-1 text-[11px] font-bold text-royal-blue opacity-0 group-hover:opacity-100 -translate-x-1 group-hover:translate-x-0 transition-all duration-200 mt-auto">
+                          <span className="inline-flex items-center gap-1 text-xs font-bold text-royal-blue opacity-0 group-hover:opacity-100 -translate-x-1 group-hover:translate-x-0 transition-all duration-200 mt-auto">
                             Explore <ArrowRight className="w-3 h-3" />
                           </span>
                         </Link>
@@ -339,7 +339,7 @@ export const Navbar: React.FC = () => {
                 href="/contact"
                 variant="primary"
                 size="sm"
-                className={`!rounded-full transition-all duration-300 shrink-0 ${scrolled ? 'px-3.5 py-1.5 text-[11px]' : 'px-4 py-2 text-xs'}`}
+                className={`!rounded-full transition-all duration-300 shrink-0 ${scrolled ? 'px-3.5 py-1.5 text-xs' : 'px-4 py-2 text-xs'}`}
               >
                 Get Free Audit →
               </Button>
@@ -474,7 +474,7 @@ export const Navbar: React.FC = () => {
                 <Link
                   href="/services"
                   onClick={() => setIsOpen(false)}
-                  className="text-xs font-bold text-royal-blue mt-4 hover:underline"
+                  className="inline-block py-2 text-xs font-bold text-royal-blue mt-2 hover:underline"
                 >
                   View All Services →
                 </Link>

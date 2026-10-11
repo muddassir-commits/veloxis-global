@@ -220,7 +220,7 @@ export default function BlogContent({ posts }: { posts: PostCard[] }) {
                         </div>
                         <span className="text-xs font-bold text-slate-700">{post.author}</span>
                       </div>
-                      <div className="flex items-center gap-3 text-slate-400 text-[11px] font-semibold">
+                      <div className="flex items-center gap-3 text-slate-400 text-xs font-semibold">
                         <span className="flex items-center gap-1">
                           <Calendar className="w-3.5 h-3.5" aria-hidden="true" />
                           <time dateTime={post.isoDate}>{post.displayDate}</time>

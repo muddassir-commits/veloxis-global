@@ -29,7 +29,7 @@ export const PlaybooksPreview: React.FC = () => (
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 stagger-reveal">
         {playbooks.map((pb) => (
           <Link key={pb.slug} href={`/playbooks/${pb.slug}`} className="group spotlight rounded-2xl border border-slate-200 bg-slate-50 p-6 hover:bg-white hover:shadow-lg hover:-translate-y-1 transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] flex flex-col">
-            <span className="text-[11px] font-bold uppercase tracking-wider text-slate-500">Example plan</span>
+            <span className="text-xs font-bold uppercase tracking-wider text-slate-500">Example plan</span>
             <h3 className="font-bold text-slate-900 mt-2 mb-3 group-hover:text-royal-blue transition-colors leading-snug">{pb.title}</h3>
             <p className="text-sm text-slate-600 leading-relaxed flex-grow">{pb.excerpt}</p>
           </Link>

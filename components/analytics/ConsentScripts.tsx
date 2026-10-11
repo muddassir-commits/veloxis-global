@@ -10,12 +10,23 @@ const GTM_ID = 'GTM-5LS7XH76';
 const PIXEL_ID = process.env.NEXT_PUBLIC_META_PIXEL_ID || '1484475786790290';
 const CLARITY_ID = process.env.NEXT_PUBLIC_CLARITY_ID || 'wvclr1xtkt';
 
+// Devices marked as the team's own (visit any page with ?internal=1, undo with ?internal=0; set in
+// app/layout.tsx) load no tracker at all: no GTM, GA4, Clarity or Meta Pixel, so nothing is recorded.
+function isInternalDevice() {
+  try {
+    return localStorage.getItem('vg-internal') === '1';
+  } catch {
+    return false;
+  }
+}
+
 // Loads each tracker only after the visitor has allowed its category.
 // Consent is only ever widened within a page view; withdrawing it takes effect on the next load.
 export default function ConsentScripts() {
   const [consent, setConsent] = useState<Consent | null>(null);
 
   useEffect(() => {
+    if (isInternalDevice()) return;
     const merge = (c: Consent | null) =>
       setConsent((prev) => (c ? { analytics: !!prev?.analytics || c.analytics, marketing: !!prev?.marketing || c.marketing } : prev));
     merge(readConsent());
