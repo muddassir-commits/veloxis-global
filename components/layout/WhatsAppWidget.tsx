@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import Image from 'next/image';
+import { WhatsAppIcon } from '../ui/WhatsAppIcon';
 import { siteData } from '../../data/site';
 
 export const WhatsAppWidget: React.FC = () => {
@@ -52,8 +52,8 @@ export const WhatsAppWidget: React.FC = () => {
           <span className="absolute inset-0 rounded-full ring-4 ring-green-300 opacity-75 animate-ping"></span>
         )}
 
-        {/* Chatbot icon (white on transparent) */}
-        <Image src="/images/whatsapp-chatbot.png" alt="" width={32} height={32} className="w-[32px] h-[32px] relative z-10" priority={false} />
+        {/* Official WhatsApp glyph, white on the green button */}
+        <WhatsAppIcon variant="current" className="w-[30px] h-[30px] relative z-10" />
       </a>
     </div>
   );

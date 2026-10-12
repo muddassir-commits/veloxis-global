@@ -14,7 +14,8 @@ import { ContactForm } from '../../components/forms/ContactForm';
 import { siteData } from '@/data/site';
 import { FaqAccordion } from '../../components/sections/FaqAccordion';
 import { contactFaqs } from '../../data/page-faqs';
-import { Mail, MessageCircle, Calendar, MapPin } from 'lucide-react';
+import { Mail, Calendar, MapPin } from 'lucide-react';
+import { WhatsAppIcon } from '../../components/ui/WhatsAppIcon';
 
 export const metadata: Metadata = constructMetadata(pageMeta.contact);
 
@@ -98,8 +99,8 @@ export default function ContactPage() {
                 </a>
 
                 <a href={siteData.whatsappLink} target="_blank" rel="noopener noreferrer" className="flex items-start gap-4 p-4 sm:p-6 rounded-2xl bg-white border border-slate-100 hover:border-teal-accent/40 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 group">
-                  <div className="w-10 h-10 rounded-lg bg-teal-accent/10 text-teal-accent flex items-center justify-center shrink-0 transition-transform duration-300 group-hover:scale-110 group-hover:-rotate-6" aria-hidden="true">
-                    <MessageCircle className="w-5 h-5 fill-teal-accent" />
+                  <div className="w-10 h-10 rounded-lg bg-[#25D366]/10 flex items-center justify-center shrink-0 transition-transform duration-300 group-hover:scale-110 group-hover:-rotate-6" aria-hidden="true">
+                    <WhatsAppIcon className="w-5 h-5" />
                   </div>
                   <div>
                     <span className="text-xs font-bold text-slate-500 uppercase tracking-wider block">WhatsApp</span>
