@@ -349,14 +349,14 @@ export const Navbar: React.FC = () => {
               target="_blank"
               rel="noopener noreferrer"
               title={`WhatsApp ${siteData.phone}`}
-              aria-label={`WhatsApp ${siteData.phone}`}
-              className={`flex items-center justify-center rounded-full bg-royal-blue/10 text-royal-blue hover:bg-royal-blue hover:text-white transition-all duration-300 shrink-0 ${
+              aria-label={`Chat on WhatsApp ${siteData.phone}`}
+              className={`flex items-center justify-center rounded-full bg-[#25D366]/10 ring-1 ring-[#25D366]/25 hover:bg-[#25D366]/20 hover:ring-[#25D366]/50 transition-all duration-300 shrink-0 ${
                 scrolled
                   ? 'w-8 h-8'
                   : 'w-10 h-10'
               }`}
             >
-              <WhatsAppIcon className={`shrink-0 ${scrolled ? 'w-4 h-4' : 'w-4.5 h-4.5'}`} />
+              <WhatsAppIcon className={`shrink-0 ${scrolled ? 'w-[18px] h-[18px]' : 'w-5 h-5'}`} />
             </a>
           </div>
 
@@ -554,7 +554,7 @@ export const Navbar: React.FC = () => {
             onClick={() => setIsOpen(false)}
             className="flex items-center justify-center gap-2 font-sans text-[14px] font-bold text-slate-600 hover:text-royal-blue py-3"
           >
-            <WhatsAppIcon className="w-3.5 h-3.5 shrink-0" />
+            <WhatsAppIcon className="w-[18px] h-[18px] shrink-0" />
             <span>WhatsApp {siteData.phone}</span>
           </a>
           <Button href="/contact" onClick={() => setIsOpen(false)} variant="primary" className="w-full text-center py-3 !rounded-full">

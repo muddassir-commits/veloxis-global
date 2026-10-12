@@ -167,7 +167,7 @@ export const Footer: React.FC = () => {
           <div className="md:col-span-2 lg:col-span-4 flex flex-col gap-4 pb-6 md:pb-0 border-b border-white/5 md:border-b-0">
             <span className="text-[12px] tracking-[0.08em] uppercase text-slate-200 font-black">GET IN TOUCH</span>
             <a href={siteData.whatsappLink} target="_blank" rel="noopener noreferrer" className="text-[15px] text-slate-200 hover:text-white transition-colors flex items-center gap-2.5 w-fit min-h-[28px]">
-              <WhatsAppIcon className="w-4 h-4 text-royal-blue shrink-0" />
+              <WhatsAppIcon className="w-4 h-4 shrink-0" />
               <span>WhatsApp {siteData.phone}</span>
             </a>
             <a href={`mailto:${siteData.email}`} className="text-[15px] text-slate-200 hover:text-white transition-colors flex items-center gap-2.5 w-fit min-h-[28px] break-all">
@@ -180,7 +180,7 @@ export const Footer: React.FC = () => {
               rel="noopener noreferrer"
               className="bg-[#25D366] hover:bg-[#20ba5a] text-slate-900 py-2.5 px-4 rounded-xl font-bold text-xs inline-flex items-center justify-center gap-2 transition-all duration-300 w-full sm:w-fit shadow-md shadow-emerald-950/20"
             >
-              <WhatsAppIcon className="w-4 h-4 shrink-0" />
+              <WhatsAppIcon variant="current" className="w-4 h-4 shrink-0" />
               <span>Chat on WhatsApp</span>
             </a>
             <div className="mt-2">

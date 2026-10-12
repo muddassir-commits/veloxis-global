@@ -12,7 +12,8 @@ export const StickyMobileBar: React.FC = () => {
           href={siteData.whatsappLink}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex flex-col items-center justify-center w-full h-full text-[#25D366] hover:text-[#1da851] transition-colors"
+          className="flex flex-col items-center justify-center w-full h-full hover:bg-emerald-50 transition-colors"
+          aria-label="Chat on WhatsApp"
         >
           <WhatsAppIcon className="w-5 h-5 mb-1" />
           <span className="text-xs font-bold text-emerald-800">WhatsApp</span>
