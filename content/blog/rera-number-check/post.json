@@ -1,6 +1,6 @@
 {
   "title": "RERA Number Check: What It Is, How to Verify It, and Where It Must Appear",
-  "seoTitle": "RERA Number Check: How to Verify a Project or Agent",
+  "seoTitle": "RERA Number Check: How to Verify a RERA Number Online",
   "excerpt": "How to check a RERA number on your state RERA website, what project and agent number formats look like, and where builders and CPs must show it in their ads.",
   "date": "2026-09-28",
   "category": "Guides",
@@ -76,5 +76,6 @@
       "question": "What is the penalty for not registering a project under RERA?",
       "answer": "Under Section 59, a penalty of up to 10% of the estimated project cost. If the promoter keeps ignoring orders, imprisonment of up to three years, a further fine of up to 10%, or both."
     }
-  ]
+  ],
+  "updated": "2026-10-13"
 }
