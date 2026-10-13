@@ -98,7 +98,7 @@ export const pageMeta = {
     path: '/industries/real-estate/nri-buyers',
   },
   lucknow: {
-    title: 'Lucknow Digital Marketing Agency for Real Estate | Veloxis',
+    title: 'Digital Marketing Agency in Lucknow for Real Estate | Veloxis',
     description:
       'Real estate-only digital marketing agency for Lucknow builders, brokers and CPs: project landing pages, Meta and Google ads, and instant WhatsApp replies.',
     path: '/digital-marketing-agency-lucknow',
@@ -152,7 +152,7 @@ export const pageMeta = {
     path: '/guides',
   },
   websiteAudit: {
-    title: 'Free SEO & Website Audit Tool (Speed, AI Search) | Veloxis Global',
+    title: 'Free SEO & Website Audit Tool: Speed, AI Search | Veloxis',
     description:
       'Free SEO audit and website performance audit in under a minute: SEO basics, speed, tracking, lead capture and AI search readiness (ChatGPT, Gemini, AI Overviews).',
     path: '/tools/website-audit',
