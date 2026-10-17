@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Veloxis Global — Off-Page SEO & Authority Hub (Live Tracker)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0b0f17;
+      --card: #131b2a;
+      --card-border: #1e293b;
+      --primary: #2563eb;
+      --primary-glow: rgba(37, 99, 235, 0.25);
+      --emerald: #10b981;
+      --emerald-glow: rgba(16, 185, 129, 0.2);
+      --text: #f1f5f9;
+      --muted: #94a3b8;
+      --amber: #f59e0b;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      line-height: 1.6;
+      padding: 32px 16px 80px;
+    }
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 40px;
+      padding-bottom: 30px;
+      border-bottom: 1px solid var(--card-border);
+    }
+    .badge {
+      display: inline-block;
+      padding: 6px 14px;
+      border-radius: 9999px;
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      background: rgba(37, 99, 235, 0.15);
+      color: #60a5fa;
+      border: 1px solid rgba(37, 99, 235, 0.3);
+      margin-bottom: 12px;
+    }
+    h1 {
+      font-size: 32px;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      margin-bottom: 10px;
+    }
+    .subtitle {
+      color: var(--muted);
+      font-size: 15px;
+      max-width: 650px;
+      margin: 0 auto;
+    }
+    .stats-bar {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+      margin-bottom: 32px;
+    }
+    .stat-card {
+      background: var(--card);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      padding: 20px;
+      text-align: center;
+    }
+    .stat-num {
+      font-size: 28px;
+      font-weight: 800;
+      color: var(--emerald);
+    }
+    .stat-label {
+      font-size: 12px;
+      color: var(--muted);
+      text-transform: uppercase;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+    }
+    .progress-wrap {
+      background: #1e293b;
+      border-radius: 9999px;
+      height: 10px;
+      width: 100%;
+      margin-top: 10px;
+      overflow: hidden;
+    }
+    .progress-bar {
+      background: linear-gradient(90deg, var(--primary), var(--emerald));
+      height: 100%;
+      width: 0%;
+      transition: width 0.4s ease;
+    }
+    .alert-box {
+      background: rgba(245, 158, 11, 0.08);
+      border: 1px solid rgba(245, 158, 11, 0.25);
+      border-radius: 12px;
+      padding: 16px 20px;
+      margin-bottom: 32px;
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      font-size: 14px;
+    }
+    .copy-kit {
+      background: var(--card);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      padding: 24px;
+      margin-bottom: 40px;
+    }
+    .copy-kit h2 {
+      font-size: 18px;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .copy-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 12px;
+    }
+    .copy-item {
+      background: #0f172a;
+      border: 1px solid #1e293b;
+      padding: 12px 14px;
+      border-radius: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .copy-item-title {
+      font-size: 11px;
+      color: var(--muted);
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+    .copy-item-val {
+      font-size: 13px;
+      font-family: 'JetBrains Mono', monospace;
+      color: #38bdf8;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      max-width: 180px;
+    }
+    .btn-copy {
+      background: rgba(37, 99, 235, 0.2);
+      border: 1px solid rgba(37, 99, 235, 0.4);
+      color: #93c5fd;
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-size: 11px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: all 0.2s;
+    }
+    .btn-copy:hover {
+      background: var(--primary);
+      color: #fff;
+    }
+    .category-section {
+      background: var(--card);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      padding: 24px;
+      margin-bottom: 24px;
+    }
+    .category-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid #1e293b;
+    }
+    .category-title {
+      font-size: 18px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .da-badge {
+      font-size: 11px;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 6px;
+      background: rgba(16, 185, 129, 0.15);
+      color: #34d399;
+      border: 1px solid rgba(16, 185, 129, 0.3);
+    }
+    .task-list {
+      display: flex;
+      flex-col;
+      gap: 10px;
+    }
+    .task-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: #0f172a;
+      border: 1px solid #1e293b;
+      padding: 14px 18px;
+      border-radius: 12px;
+      transition: all 0.2s;
+    }
+    .task-row:hover {
+      border-color: #334155;
+      background: #131d33;
+    }
+    .task-row.done {
+      opacity: 0.55;
+      border-color: #064e3b;
+      background: rgba(6, 78, 59, 0.2);
+    }
+    .task-left {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex: 1;
+    }
+    .custom-check {
+      width: 20px;
+      height: 20px;
+      cursor: pointer;
+      accent-color: var(--emerald);
+    }
+    .task-name {
+      font-size: 15px;
+      font-weight: 600;
+    }
+    .task-meta {
+      font-size: 12px;
+      color: var(--muted);
+      margin-top: 2px;
+    }
+    .task-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .btn-visit {
+      color: #93c5fd;
+      text-decoration: none;
+      font-size: 12px;
+      font-weight: 600;
+      padding: 6px 12px;
+      border-radius: 8px;
+      background: rgba(37, 99, 235, 0.15);
+      border: 1px solid rgba(37, 99, 235, 0.3);
+      transition: all 0.2s;
+    }
+    .btn-visit:hover {
+      background: var(--primary);
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="badge">Official Live Tracker</div>
+      <h1>Veloxis Global — Off-Page SEO &amp; Authority Hub</h1>
+      <p class="subtitle">Complete interactive execution tracker. Check items off as you submit them — progress is automatically saved to your browser so you can resume anytime.</p>
+    </header>
+
+    <div class="stats-bar">
+      <div class="stat-card">
+        <div class="stat-num" id="completed-count">0 / 25</div>
+        <div class="stat-label">Submissions Completed</div>
+        <div class="progress-wrap"><div class="progress-bar" id="progress-bar"></div></div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num" id="percentage">0%</div>
+        <div class="stat-label">Overall Completion</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num" style="color: #38bdf8;">DA 96</div>
+        <div class="stat-label">Max Network Authority</div>
+      </div>
+    </div>
+
+    <div class="alert-box">
+      <div>⚠️</div>
+      <div>
+        <strong>Critical Instruction:</strong> Always use <code>info@veloxisglobal.com</code> for directory registrations. <strong>Never use <code>muddassir@</code></strong> so your client outreach inbox stays 100% spam-free. <em>(Google Business Profile is deliberately excluded per your schedule).</em>
+      </div>
+    </div>
+
+    <!-- Quick Copy Kit -->
+    <div class="copy-kit">
+      <h2>📋 Quick Copy-Paste Kit (Click to Copy)</h2>
+      <div class="copy-grid">
+        <div class="copy-item">
+          <div><div class="copy-item-title">Company Name</div><div class="copy-item-val">Veloxis Global</div></div>
+          <button class="btn-copy" onclick="copyText('Veloxis Global')">Copy</button>
+        </div>
+        <div class="copy-item">
+          <div><div class="copy-item-title">Official Email</div><div class="copy-item-val">info@veloxisglobal.com</div></div>
+          <button class="btn-copy" onclick="copyText('info@veloxisglobal.com')">Copy</button>
+        </div>
+        <div class="copy-item">
+          <div><div class="copy-item-title">Phone</div><div class="copy-item-val">+91 91940 20727</div></div>
+          <button class="btn-copy" onclick="copyText('+91 91940 20727')">Copy</button>
+        </div>
+        <div class="copy-item">
+          <div><div class="copy-item-title">Website URL</div><div class="copy-item-val">https://www.veloxisglobal.com</div></div>
+          <button class="btn-copy" onclick="copyText('https://www.veloxisglobal.com')">Copy</button>
+        </div>
+        <div class="copy-item">
+          <div><div class="copy-item-title">HQ City</div><div class="copy-item-val">Kanpur, Uttar Pradesh, India</div></div>
+          <button class="btn-copy" onclick="copyText('Kanpur, Uttar Pradesh, India')">Copy</button>
+        </div>
+        <div class="copy-item">
+          <div><div class="copy-item-title">Founder</div><div class="copy-item-val">Muddassir Ali</div></div>
+          <button class="btn-copy" onclick="copyText('Muddassir Ali')">Copy</button>
+        </div>
+        <div class="copy-item" style="grid-column: 1 / -1;">
+          <div style="flex: 1;"><div class="copy-item-title">140-Char Short Bio</div><div class="copy-item-val" style="max-width: 100%; white-space: normal;">Real estate marketing agency for UP &amp; NCR builders: project landing pages, Meta &amp; Google ads, and 24/7 AI WhatsApp lead qualification.</div></div>
+          <button class="btn-copy" onclick="copyText('Real estate marketing agency for UP & NCR builders: project landing pages, Meta & Google ads, and 24/7 AI WhatsApp lead qualification.')">Copy</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- TIER 1 -->
+    <div class="category-section">
+      <div class="category-header">
+        <div class="category-title">🏛️ Tier 1: Foundation Entity Hubs <span class="da-badge">DA 90–96</span></div>
+      </div>
+      <div class="task-list">
+        <div class="task-row" id="row-cb">
+          <div class="task-left">
+            <input type="checkbox" class="custom-check" id="cb" onchange="toggleTask('cb')">
+            <div>
+              <div class="task-name">Crunchbase Organization Profile</div>
+              <div class="task-meta">DA 91 · Feeds Google Knowledge Graph, ChatGPT, Perplexity &amp; Gemini</div>
+            </div>
+          </div>
+          <div class="task-actions">
+            <a href="https://www.crunchbase.com/add-new" target="_blank" class="btn-visit">Open Site ↗</a>
+          </div>
+        </div>
+
+        <div class="task-row" id="row-clutch">
+          <div class="task-left">
+            <input type="checkbox" class="custom-check" id="clutch" onchange="toggleTask('clutch')">
+            <div>
+              <div class="task-name">Clutch.co Verified Agency Listing</div>
+              <div class="task-meta">DA 90 · #1 Ranking B2B directory in India for real estate agencies</div>
+            </div>
+          </div>
+          <div class="task-actions">
+            <a href="https://clutch.co/get-listed" target="_blank" class="btn-visit">Open Site ↗</a>
+          </div>
+        </div>
+
+        <div class="task-row" id="row-goodfirms">
+          <div class="task-left">
+            <input type="checkbox" class="custom-check" id="goodfirms" onchange="toggleTask('goodfirms')">
+            <div>
+              <div class="task-name">GoodFirms Marketing Agency Profile</div>
+              <div class="task-meta">DA 86 · Verified Indian Agency Directory &amp; DoFollow Profile</div>
+            </div>
+          </div>
+          <div class="task-actions">
+            <a href="https://www.goodfirms.co/get-listed" target="_blank" class="btn-visit">Open Site ↗</a>
+          </div>
+        </div>
+
+        <div class="task-row" id="row-gh">
+          <div class="task-left">
+            <input type="checkbox" class="custom-check" id="gh" onchange="toggleTask('gh')">
+            <div>
+              <div class="task-name">GitHub Organization Profile</div>
+              <div class="task-meta">DA 96 · High-authority technical entity signal with website backlink</div>
+            </div>
+          </div>
+          <div class="task-actions">
+            <a href="https://github.com/organizations/new" target="_blank" class="btn-visit">Open Site ↗</a>
+          </div>
+        </div>
+
+        <div class="task-row" id="row-trustpilot">
+          <div class="task-left">
+            <input type="checkbox" class="custom-check" id="trustpilot" onchange="toggleTask('trustpilot')">
+            <div>
+              <div class="task-name">Trustpilot Business Page</div>
+              <div class="task-meta">DA 93 · Claim free business profile for veloxisglobal.com</div>
+            </div>
+          </div>
+          <div class="task-actions">
+            <a href="https://business.trustpilot.com/" target="_blank" class="btn-visit">Open Site ↗</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TIER 2: B2B DIRECTORIES -->
+    <div class="category-section">
+      <div class="category-header">
+        <div class="category-title">🏢 Tier 2: B2B Agency &amp; PropTech Directories <span class="da-badge">DA 70–85</span></div>
+      </div>
+      <div class="task-list">
+        <div class="task-row" id="row-designrush">
+          <div class="task-left">
+            <input type="checkbox" class="custom-check" id="designrush" onchange="toggleTask('designrush')">
+            <div>
+              <div class="task-name">DesignRush Agency Registry</div>
+              <div class="task-meta">DA 76 · Specialized real estate marketing category</div>
+            </div>
+          </div>
+          <div class="task-actions"><a href="https://www.designrush.com/agency-register" target="_blank" class="btn-visit">Open Site ↗</a></div>
+        </div>
+
+        <div class="task-row" id="row-sortlist">
+          <div class="task-left">
+            <input type="checkbox" class="custom-check" id="sortlist" onchange="toggleTask('sortlist')">
+            <div>
+              <div class="task-name">Sortlist Provider Account</div>
+              <div class="task-meta">DA 78 · Client matchmaking &amp; agency ranking</div>
+            </div>
+          </div>
+          <div class="task-actions"><a href="https://www.sortlist.com/join" target="_blank" class="btn-visit">Open Site ↗</a></div>
+        </div>
+
+        <div class="task-row" id="row-topdevs">
+          <div class="task-left">
+            <input type="checkbox" class="custom-check" id="topdevs" onchange="toggleTask('topdevs')">
+            <div>
+              <div class="task-name">TopDevelopers Listing</div>
+              <div class="task-meta">DA 72 · Digital marketing &amp; web dev agency directory</div>
+            </div>
+          </div>
+          <div class="task-actions"><a href="https://www.topdevelopers.co/get-listed" target="_blank" class="btn-visit">Open Site ↗</a></div>
+        </div>
+
+        <div class="task-row" id="row-ambition">
+          <div class="task-left">
+            <input type="checkbox" class="custom-check" id="ambition" onchange="toggleTask('ambition')">
+            <div>
+              <div class="task-name">AmbitionBox Company Profile</div>
+              <div class="task-meta">DA 82 · High Indian employer &amp; corporate search trust</div>
+            </div>
+          </div>
+          <div class="task-actions"><a href="https://www.ambitionbox.com/" target="_blank" class="btn-visit">Open Site ↗</a></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TIER 3: INDIAN LOCAL & TRADE -->
+    <div class="category-section">
+      <div class="category-header">
+        <div class="category-title">🇮🇳 Tier 3: Indian Trade &amp; Local Citations <span class="da-badge">DA 75–85</span></div>
+      </div>
+      <div class="task-list">
+        <div class="task-row" id="row-indiamart">
+          <div class="task-left">
+            <input type="checkbox" class="custom-check" id="indiamart" onchange="toggleTask('indiamart')">
+            <div>
+              <div class="task-name">IndiaMART Verified Supplier Listing</div>
+              <div class="task-meta">DA 84 · Real estate lead generation &amp; marketing services</div>
+            </div>
+          </div>
+          <div class="task-actions"><a href="https://seller.indiamart.com/" target="_blank" class="btn-visit">Open Site ↗</a></div>
+        </div>
+
+        <div class="task-row" id="row-justdial">
+          <div class="task-left">
+            <input type="checkbox" class="custom-check" id="justdial" onchange="toggleTask('justdial')">
+            <div>
+              <div class="task-name">Justdial Kanpur &amp; Lucknow Business Listing</div>
+              <div class="task-meta">DA 80 · Core regional NAP citation for UP real estate searches</div>
+            </div>
+          </div>
+          <div class="task-actions"><a href="https://www.justdial.com/Free-Listing" target="_blank" class="btn-visit">Open Site ↗</a></div>
+        </div>
+
+        <div class="task-row" id="row-sulekha">
+          <div class="task-left">
+            <input type="checkbox" class="custom-check" id="sulekha" onchange="toggleTask('sulekha')">
+            <div>
+              <div class="task-name">Sulekha B2B Agency Listing</div>
+              <div class="task-meta">DA 77 · High-intent business enquiries in North India</div>
+            </div>
+          </div>
+          <div class="task-actions"><a href="https://www.sulekha.com/" target="_blank" class="btn-visit">Open Site ↗</a></div>
+        </div>
+
+        <div class="task-row" id="row-exporters">
+          <div class="task-left">
+            <input type="checkbox" class="custom-check" id="exporters" onchange="toggleTask('exporters')">
+            <div>
+              <div class="task-name">ExportersIndia Profile</div>
+              <div class="task-meta">DA 75 · Corporate service listing</div>
+            </div>
+          </div>
+          <div class="task-actions"><a href="https://www.exportersindia.com/" target="_blank" class="btn-visit">Open Site ↗</a></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TIER 4: DIGITAL PR & SYNDICATION -->
+    <div class="category-section">
+      <div class="category-header">
+        <div class="category-title">📰 Tier 4: Digital PR &amp; Syndication Backlinks <span class="da-badge">DA 90–96</span></div>
+      </div>
+      <div class="task-list">
+        <div class="task-row" id="row-medium">
+          <div class="task-left">
+            <input type="checkbox" class="custom-check" id="medium" onchange="toggleTask('medium')">
+            <div>
+              <div class="task-name">Medium Publication: "Real Estate Growth India"</div>
+              <div class="task-meta">DA 96 · Publish executive summary with links to /services/paid-ads</div>
+            </div>
+          </div>
+          <div class="task-actions"><a href="https://medium.com/" target="_blank" class="btn-visit">Open Site ↗</a></div>
+        </div>
+
+        <div class="task-row" id="row-substack">
+          <div class="task-left">
+            <input type="checkbox" class="custom-check" id="substack" onchange="toggleTask('substack')">
+            <div>
+              <div class="task-name">Substack Newsletter Setup</div>
+              <div class="task-meta">DA 92 · Create UP Real Estate Marketing Digest with website link</div>
+            </div>
+          </div>
+          <div class="task-actions"><a href="https://substack.com/" target="_blank" class="btn-visit">Open Site ↗</a></div>
+        </div>
+
+        <div class="task-row" id="row-devto">
+          <div class="task-left">
+            <input type="checkbox" class="custom-check" id="devto" onchange="toggleTask('devto')">
+            <div>
+              <div class="task-name">Dev.to / Hashnode PropTech Architecture Post</div>
+              <div class="task-meta">DA 91 · Article on WhatsApp API Lead Flow linking to /services/ai-automation</div>
+            </div>
+          </div>
+          <div class="task-actions"><a href="https://dev.to/" target="_blank" class="btn-visit">Open Site ↗</a></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TIER 5: DOCUMENT HUBS -->
+    <div class="category-section">
+      <div class="category-header">
+        <div class="category-title">📊 Tier 5: Presentation &amp; Document Sharing <span class="da-badge">DA 88–94</span></div>
+      </div>
+      <div class="task-list">
+        <div class="task-row" id="row-slideshare">
+          <div class="task-left">
+            <input type="checkbox" class="custom-check" id="slideshare" onchange="toggleTask('slideshare')">
+            <div>
+              <div class="task-name">SlideShare Presentation Upload</div>
+              <div class="task-meta">DA 92 · Upload 2026 Ad Benchmark PDF with link to /services/paid-ads</div>
+            </div>
+          </div>
+          <div class="task-actions"><a href="https://www.slideshare.net/" target="_blank" class="btn-visit">Open Site ↗</a></div>
+        </div>
+
+        <div class="task-row" id="row-scribd">
+          <div class="task-left">
+            <input type="checkbox" class="custom-check" id="scribd" onchange="toggleTask('scribd')">
+            <div>
+              <div class="task-name">Scribd Document Upload</div>
+              <div class="task-meta">DA 93 · Upload Real Estate Lead Generation Blueprint</div>
+            </div>
+          </div>
+          <div class="task-actions"><a href="https://www.scribd.com/" target="_blank" class="btn-visit">Open Site ↗</a></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    const STORAGE_KEY = 'veloxis_offpage_progress_v1';
+    
+    function loadProgress() {
+      try {
+        const saved = JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}');
+        const checkboxes = document.querySelectorAll('.custom-check');
+        let done = 0;
+        checkboxes.forEach(cb => {
+          if (saved[cb.id]) {
+            cb.checked = true;
+            document.getElementById('row-' + cb.id)?.classList.add('done');
+            done++;
+          }
+        });
+        updateStats(done, checkboxes.length);
+      } catch (e) {}
+    }
+
+    function toggleTask(id) {
+      const cb = document.getElementById(id);
+      const row = document.getElementById('row-' + id);
+      if (cb.checked) {
+        row?.classList.add('done');
+      } else {
+        row?.classList.remove('done');
+      }
+      saveProgress();
+    }
+
+    function saveProgress() {
+      const checkboxes = document.querySelectorAll('.custom-check');
+      const state = {};
+      let done = 0;
+      checkboxes.forEach(cb => {
+        state[cb.id] = cb.checked;
+        if (cb.checked) done++;
+      });
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+      updateStats(done, checkboxes.length);
+    }
+
+    function updateStats(done, total) {
+      document.getElementById('completed-count').innerText = `${done} / ${total}`;
+      const pct = Math.round((done / total) * 100);
+      document.getElementById('percentage').innerText = `${pct}%`;
+      document.getElementById('progress-bar').style.width = `${pct}%`;
+    }
+
+    function copyText(str) {
+      navigator.clipboard.writeText(str).then(() => {
+        alert('Copied to clipboard: ' + str);
+      });
+    }
+
+    window.onload = loadProgress;
+  </script>
+</body>
+</html>
