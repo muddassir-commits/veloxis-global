@@ -8,6 +8,7 @@ import { Badge } from '../../../components/ui/Badge';
 import { Button } from '../../../components/ui/Button';
 import { Linkedin } from '../../../components/ui/BrandIcons';
 import { ImageFrame } from '../../../components/ui/ImageFrame';
+import { InArticleLeadMagnet } from '../../../components/blog/InArticleLeadMagnet';
 import { FOUNDER_YEARS } from '../../../lib/seo-config';
 
 import type { Post, PostCard } from '../../../lib/blog';
@@ -165,25 +166,30 @@ export default function BlogPostContent({ post, relatedPosts, service }: Props) 
 
             {/* Rendered article HTML, with optional in-article photos between sections */}
             <div className="w-full">
-              {splitContent(post.htmlContent, post.inlineImages).map((part, i) => (
-                <React.Fragment key={i}>
-                  {part.image && (
-                    <figure className="my-10">
-                      <ImageFrame
-                        src={part.image.src}
-                        alt={part.image.alt}
-                        ratio="16/10"
-                        sizes="(max-width: 1024px) calc(100vw - 32px), 760px"
-                        className="border border-slate-100"
-                      />
-                      {part.image.caption && (
-                        <figcaption className="mt-3 text-center text-xs text-slate-500">{part.image.caption}</figcaption>
-                      )}
-                    </figure>
-                  )}
-                  <div className="article-body" dangerouslySetInnerHTML={{ __html: part.html }} />
-                </React.Fragment>
-              ))}
+              {(() => {
+                const parts = splitContent(post.htmlContent, post.inlineImages);
+                const leadMagnetIndex = Math.max(0, Math.floor(parts.length / 2) - 1);
+                return parts.map((part, i) => (
+                  <React.Fragment key={i}>
+                    {part.image && (
+                      <figure className="my-10">
+                        <ImageFrame
+                          src={part.image.src}
+                          alt={part.image.alt}
+                          ratio="16/10"
+                          sizes="(max-width: 1024px) calc(100vw - 32px), 760px"
+                          className="border border-slate-100"
+                        />
+                        {part.image.caption && (
+                          <figcaption className="mt-3 text-center text-xs text-slate-500">{part.image.caption}</figcaption>
+                        )}
+                      </figure>
+                    )}
+                    <div className="article-body" dangerouslySetInnerHTML={{ __html: part.html }} />
+                    {i === leadMagnetIndex && <InArticleLeadMagnet />}
+                  </React.Fragment>
+                ));
+              })()}
             </div>
 
             {/* Author Bio Box */}
