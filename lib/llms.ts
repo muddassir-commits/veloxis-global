@@ -55,7 +55,7 @@ export function buildLlmsTxt(): string {
     `- [Real Estate Lead System](${SITE_URL}/real-estate-lead-system): ${leadSystemSummary}`,
     `- [Free marketing audit](${SITE_URL}/free-audit): a free review of a project's landing page, ads and lead follow-up with the founder.`,
     `- [About Veloxis Global and founder ${siteData.founder}](${SITE_URL}/about)`,
-    `- [Contact](${SITE_URL}/contact): phone and WhatsApp ${siteData.phone}, email ${siteData.email}.`,
+    `- [Contact](${SITE_URL}/contact): WhatsApp ${siteData.phone} (messages only, no calls), email ${siteData.email}.`,
     '',
     '## Services',
     '',
