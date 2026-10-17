@@ -1,0 +1,498 @@
+<title>Veloxis Keyword &amp; Language Map</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --bg:#f7f9fb; --surface:#ffffff; --surface-2:#f0f3f7; --line:#dfe4ea;
+  --ink:#191c1e; --muted:#4d5260; --faint:#737887;
+  --blue:#0051d5; --blue-soft:#e3ebff; --blue-ink:#003ea8;
+  --teal:#0b7f75; --teal-soft:#dff5f2;
+  --amber:#a44a06; --amber-soft:#fdf0e1;
+  --mono:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  --sans:"Plus Jakarta Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --radius:10px;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme:dark;
+    --bg:#0e1320; --surface:#151b2b; --surface-2:#1b2336; --line:#2a3349;
+    --ink:#e7eaf1; --muted:#b1b8c8; --faint:#8a92a6;
+    --blue:#86a8ff; --blue-soft:#1d2a4d; --blue-ink:#b4c5ff;
+    --teal:#5fd3c4; --teal-soft:#123532;
+    --amber:#f3b36b; --amber-soft:#3a2714;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --bg:#0e1320; --surface:#151b2b; --surface-2:#1b2336; --line:#2a3349;
+  --ink:#e7eaf1; --muted:#b1b8c8; --faint:#8a92a6;
+  --blue:#86a8ff; --blue-soft:#1d2a4d; --blue-ink:#b4c5ff;
+  --teal:#5fd3c4; --teal-soft:#123532;
+  --amber:#f3b36b; --amber-soft:#3a2714;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:15px;line-height:1.55;padding-inline:16px;padding-block:0 64px}
+.wrap{max-width:1080px;margin:0 auto}
+header.top{padding-block:36px 20px;display:grid;gap:14px}
+.eyebrow{font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--blue)}
+h1{font-size:clamp(26px,4vw,36px);line-height:1.15;margin:0;font-weight:800;letter-spacing:-.02em;text-wrap:balance}
+.lede{margin:0;color:var(--muted);max-width:68ch}
+.stats{display:flex;flex-wrap:wrap;gap:8px 18px;font-size:13px;color:var(--faint)}
+.stats b{color:var(--ink);font-variant-numeric:tabular-nums}
+.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);padding-block:10px;border-bottom:1px solid var(--line);display:grid;gap:10px}
+.tabs{display:flex;gap:4px;overflow-x:auto;scrollbar-width:thin;padding-bottom:2px}
+.tab{flex:none;border:1px solid transparent;background:none;color:var(--muted);font:600 14px var(--sans);padding:7px 12px;border-radius:999px;cursor:pointer}
+.tab:hover{color:var(--ink);background:var(--surface-2)}
+.tab[aria-selected="true"]{background:var(--ink);color:var(--bg)}
+.tab:focus-visible,button:focus-visible,input:focus-visible,a:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
+.tools{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.search{flex:1 1 240px;display:flex;align-items:center;gap:8px;background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:0 10px}
+.search input{flex:1;border:0;background:transparent;color:var(--ink);font:15px var(--sans);padding:9px 0;min-width:0}
+.search input:focus{outline:none}
+.search:focus-within{border-color:var(--blue)}
+.hint{font-size:13px;color:var(--faint)}
+main{padding-top:24px}
+section.panel{display:grid;gap:28px}
+h2{font-size:21px;margin:0;letter-spacing:-.01em;text-wrap:balance}
+h3{font-size:16px;margin:0}
+.sub{color:var(--muted);margin:4px 0 0;max-width:70ch;font-size:14px}
+.group{display:grid;gap:12px}
+.ghead{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap;border-bottom:1px solid var(--line);padding-bottom:8px}
+.ghead .count{font-size:12px;color:var(--faint);font-variant-numeric:tabular-nums;margin-left:8px;font-weight:500}
+.copy{border:1px solid var(--line);background:var(--surface);color:var(--muted);font:600 12px var(--sans);padding:5px 10px;border-radius:6px;cursor:pointer}
+.copy:hover{color:var(--blue);border-color:var(--blue)}
+.intents{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
+.intent h4{margin:0 0 8px;font-size:12px;letter-spacing:.07em;text-transform:uppercase;color:var(--faint)}
+ul.q{list-style:none;margin:0;padding:0;display:grid;gap:4px}
+ul.q li{font-family:var(--mono);font-size:13px;line-height:1.45;padding:5px 8px;border-radius:6px;background:var(--surface);border:1px solid var(--line);cursor:pointer;word-break:break-word}
+ul.q li:hover{border-color:var(--blue);color:var(--blue-ink)}
+ul.q li.done{border-color:var(--teal);color:var(--teal)}
+.quotes{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:12px}
+.quote{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:14px 16px;display:grid;gap:10px;align-content:start}
+.quote p{margin:0;font-size:15px}
+.meta{display:flex;gap:10px;align-items:center;flex-wrap:wrap;font-size:12px}
+.tag{font-weight:700;font-size:11px;letter-spacing:.05em;text-transform:uppercase;padding:2px 7px;border-radius:4px}
+.tag.s{background:var(--teal-soft);color:var(--teal)}
+.tag.i{background:var(--amber-soft);color:var(--amber)}
+.meta a{color:var(--faint);text-decoration:none;border-bottom:1px dotted var(--faint);word-break:break-all}
+.meta a:hover{color:var(--blue);border-color:var(--blue)}
+ol.qs{margin:0;padding-left:22px;display:grid;gap:6px;columns:1}
+ol.qs li{padding-left:4px}
+.insights{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:14px}
+.insight{padding:16px 18px;border-radius:var(--radius);background:var(--surface);border:1px solid var(--line);display:grid;gap:6px;align-content:start}
+.insight h3{font-size:15.5px;line-height:1.35}
+.insight p{margin:0;color:var(--muted);font-size:14px}
+.map{display:grid;gap:12px}
+.page{display:grid;grid-template-columns:minmax(0,220px) minmax(0,1fr);gap:8px 22px;padding:16px 18px;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius)}
+.page .url{font-family:var(--mono);font-size:13px;color:var(--blue);word-break:break-all}
+.page .note{font-size:13px;color:var(--faint);margin-top:4px}
+.page dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:6px 12px;font-size:14px}
+.page dt{color:var(--faint);font-size:12px;text-transform:uppercase;letter-spacing:.06em;padding-top:2px}
+.page dd{margin:0}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{font-family:var(--mono);font-size:12.5px;padding:3px 8px;border-radius:5px;background:var(--surface-2);border:1px solid var(--line)}
+.chip.p{background:var(--blue-soft);border-color:transparent;color:var(--blue-ink);font-weight:500}
+.callout{border:1px solid var(--line);border-left:3px solid var(--amber);background:var(--surface);border-radius:6px;padding:14px 16px;font-size:14px;color:var(--muted)}
+.callout b{color:var(--ink)}
+.callout ul{margin:6px 0 0;padding-left:18px;display:grid;gap:4px}
+.cities{display:grid;gap:18px}
+.city{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px 24px;padding:18px;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius)}
+.city h3{grid-column:1/-1;display:flex;gap:10px;align-items:baseline;flex-wrap:wrap}
+.city h3 small{font-weight:500;color:var(--faint);font-size:13px}
+.city h4{margin:0 0 8px;font-size:12px;letter-spacing:.07em;text-transform:uppercase;color:var(--faint)}
+.city ul.ctx{margin:0;padding-left:18px;display:grid;gap:6px;font-size:14px}
+.city ul.ctx a{color:var(--faint);font-size:12px}
+.tablewrap{overflow-x:auto;border:1px solid var(--line);border-radius:var(--radius);background:var(--surface)}
+table{border-collapse:collapse;width:100%;min-width:640px;font-size:14px}
+th,td{text-align:left;padding:10px 14px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--faint);font-weight:700;background:var(--surface-2)}
+tr:last-child td{border-bottom:0}
+td a{color:var(--blue);text-decoration:none;word-break:break-all;font-size:13px}
+td.term{font-weight:700;white-space:nowrap}
+.hin{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:10px}
+.hin div{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:10px 14px}
+.hin .h{font-family:var(--mono);font-size:13.5px;color:var(--ink)}
+.hin .e{font-size:13px;color:var(--faint);margin-top:2px}
+.empty{color:var(--faint);font-size:14px;padding:18px 0}
+.toast{position:fixed;left:50%;bottom:calc(20px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);background:var(--ink);color:var(--bg);font-weight:600;font-size:13px;padding:8px 14px;border-radius:8px;opacity:0;transition:opacity .2s;pointer-events:none}
+.toast.on{opacity:1}
+@media (max-width:680px){
+  .page,.city{grid-template-columns:1fr}
+}
+@media (prefers-reduced-motion:reduce){.toast{transition:none}}
+</style>
+
+<div class="wrap">
+  <header class="top">
+    <div class="eyebrow">Veloxis Global · Real estate search research · Sept 2026</div>
+    <h1>What Indian builders, brokers and channel partners search for — and how they talk about it</h1>
+    <p class="lede">Real search phrasing, pain points in their own words, and the questions they ask across your three services: landing pages, Meta &amp; Google ads, and WhatsApp/AI automation. Every quote is tagged <span class="tag s">Sourced</span> with a link, or <span class="tag i">Inferred</span> when it’s a pattern rather than a verbatim line.</p>
+    <div class="stats" id="stats"></div>
+  </header>
+
+  <div class="bar">
+    <div class="tabs" role="tablist" id="tabs"></div>
+    <div class="tools">
+      <label class="search" for="filter">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" style="color:var(--faint)"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <input id="filter" type="search" placeholder="Filter this tab — e.g. whatsapp, noida, fake leads" autocomplete="off">
+      </label>
+      <span class="hint">Click any query to copy it.</span>
+    </div>
+  </div>
+
+  <main id="main"></main>
+</div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+const D = {
+queries: [
+ {service:"Landing pages & project websites", groups:[
+  {intent:"Learning / problem-aware", items:["what is a project microsite in real estate","landing page vs website real estate which is better","do builders need a separate website for every project","why is my real estate website not getting leads","real estate website traffic but no enquiries","how to make a real estate landing page","real estate landing page best practices india","how much does a real estate website cost in india","real estate landing page cost india","what should a real estate project website have","rera qr code mandatory on website","rera rules for website advertisement","why do real estate websites load slow on mobile","pre launch vs soft launch real estate meaning","what is eoi in real estate","property website banani hai kaise"]},
+  {intent:"Comparing options", items:["best real estate landing page design company india","real estate website design company delhi ncr","real estate microsite design company gurgaon","own website vs 99acres magicbricks for builder leads","high converting real estate landing page examples india","real estate landing page company vs freelancer","wordpress vs custom website for builder project","questions to ask before hiring a real estate digital marketing agency","real estate landing page agency reviews india"]},
+  {intent:"Ready to hire", items:["hire real estate landing page designer india","get website made for property launch","real estate project microsite pricing packages","real estate website design company noida price","hire agency for builder project website","real estate website banwane wali company","real estate website development company near me"]},
+  {intent:"Local", items:["real estate website design company noida","real estate website design company greater noida west","builder website design company sector 62 noida","real estate landing page agency gurgaon","property website developer lucknow","real estate web design company kanpur"]}
+ ]},
+ {service:"Meta & Google ads", groups:[
+  {intent:"Learning / problem-aware", items:["facebook ads for real estate leads india","how to run facebook ads for real estate in india","google ads for real estate india","facebook ads vs google ads for real estate india","real estate leads kaise laye facebook ads se","property ke leads kaise nikale google ads facebook ads se","facebook lead ads vs landing page real estate","meta special ad category real estate india","performance max for real estate india","why am i getting fake leads on facebook ads","why real estate leads don't pick up the phone","how to reduce fake leads in google ads real estate","how to target nri buyers on facebook ads","lookalike audience for real estate facebook ads india","retargeting real estate buyers facebook ads","rera advertising rules for real estate ads india","how to get site visits from facebook ads","facebook ads budget for real estate per month india","google ads budget for real estate builders india"]},
+  {intent:"Comparing options", items:["best facebook ads agency for real estate in india","best google ads agency for real estate india","top real estate ppc agency in india","facebook ads vs 99acres leads which is better","magicbricks vs running own facebook ads","cost per lead facebook ads real estate india","cost per lead google ads real estate india","cost per site visit real estate ads india","meta ads vs google ads roi real estate","is facebook ads worth it for real estate agents india","real estate ppc agency cost india","real estate lead generation company pricing india"]},
+  {intent:"Ready to hire", items:["hire facebook ads expert for real estate india","real estate lead generation agency near me","meta ads management for property builders","facebook ads package for real estate india price","ppc for realtors india","real estate marketing agency channel partner leads"]},
+  {intent:"Local", items:["facebook ads agency for real estate noida","facebook ads for builders in noida extension","google ads agency delhi ncr real estate","google ads agency for real estate gurgaon","real estate lead generation in noida","real estate lead generation in gurugram","real estate lead generation in lucknow","real estate lead generation agency kanpur"]}
+ ]},
+ {service:"WhatsApp & AI automation", groups:[
+  {intent:"Learning / problem-aware", items:["why do real estate leads go cold","real estate leads not picking up calls","how to stop losing real estate leads","why sales team doesn't call back leads","how fast should you respond to a property lead","real estate lead response time india","how many follow ups needed to close a real estate deal","excel sheet vs crm for real estate leads","real estate lead leakage meaning","how to qualify a property buyer before site visit","how to reduce no-shows for site visits","what is whatsapp business api for real estate","chatbot vs telecaller for real estate leads","can ai replace real estate telecallers","how does lead scoring work in real estate crm"]},
+  {intent:"Comparing options", items:["best whatsapp automation tools for real estate india","best real estate crm india 2026","sell.do vs leadsquared vs leadrat comparison","wati vs aisensy vs interakt for real estate","best ai chatbot for property enquiries india","best ai voice agent for real estate leads india","real estate crm with whatsapp integration india","real estate crm for channel partners india","ai lead qualification tools for builders india"]},
+  {intent:"Ready to hire", items:["whatsapp business api setup cost real estate india","whatsapp chatbot development cost india","hire agency for real estate whatsapp automation","site visit booking bot for builders","missed call lead generation service for real estate","real estate lead automation packages pricing","real estate crm demo request india"]},
+  {intent:"Local", items:["real estate crm noida","ai automation company noida real estate","whatsapp automation agency gurgaon real estate","whatsapp marketing company kanpur real estate","real estate crm ghaziabad faridabad"]}
+ ]},
+ {service:"Their business (not a service yet)", groups:[
+  {intent:"Builders & developers", items:["digital marketing agency for real estate builders india","how to sell unsold inventory flats fast","how to launch a new residential project marketing plan","builder digital marketing budget percentage","how to increase site visits for under construction project","site visit to booking conversion rate real estate","real estate marketing case study builder roi","channel partner management software real estate","OC CC kaise milta hai builder ke liye","GST on under construction flat kitna hai"]},
+  {intent:"Brokers & agencies", items:["99acres subscription price kitna hai","how to get real estate leads without portal","property portal se lead nahi mil raha","99acres vs magicbricks vs housing.com for brokers","how to verify real estate lead genuine","property dealer whatsapp automation","real estate digital marketing package price india","real estate agent instagram marketing kaise kare","how to increase site visit to booking ratio"]},
+  {intent:"Channel partners", items:["channel partner agreement format real estate india","real estate channel partner commission percentage","how to avoid lead ownership dispute real estate","channel partner payout delay complaint","lead tagging system real estate crm","real estate channel partner portal login","how to track my registered leads with builder","how to become channel partner for builder project","best builder to work with as channel partner india"]},
+  {intent:"Independent consultants", items:["how to get clients as independent property consultant","how to market myself as a property dealer","lead generation for independent real estate agent low budget","real estate agent website free india","property consultant vs broker difference","real estate agent kaise bane india","property consultant income kitna hota hai"]}
+ ]}
+],
+voices: [
+ {who:"Builders & developers", items:[
+  {t:"Invested ₹20 lakh over six months with a local agency across Facebook, Instagram, Google and outdoor — 12 genuine leads, zero bookings. He felt cheated.", s:"https://aimarketinglab.in/blogs/digital-marketing-for-real-estate-in-india/", n:"Documented case, paraphrased"},
+  {t:"“These are fake leads.” — the most common builder complaint. When one agency audited it, most leads were real but unqualified or never followed up.", s:"https://aajneeti.social/lead-excuse-is-killing-indian-real-estate-growth/"},
+  {t:"The traffic is coming in — 500, 1,000, maybe 2,000 visitors per month. But leads? Almost zero.", s:"https://www.opzynic.com/blog/real-estate-website-conversion-optimization-india"},
+  {t:"Most builder websites are too self-centric, difficult to navigate, or lack a clear path to action.", s:"https://marketika.dev/insights/how-to-build-high-converting-real-estate-project-websites-2"},
+  {t:"A developer who delays or disputes payouts gets quietly deprioritised by channel partners, no matter how good the project is.", s:"https://www.sell.do/blog/role-and-advantages-of-a-channel-partner-in-real-estate"},
+  {t:"Is it the market, our pricing, or our marketing? We honestly can’t tell why this quarter is slow.", n:"Pattern across builder case studies"},
+  {t:"We need the first 20% sold fast — the CPs and the lender are watching absorption.", n:"Unspoken launch KPI"}
+ ]},
+ {who:"Brokers & agencies", items:[
+  {t:"A buyer fills out an enquiry form at 7:30 pm. By 8:00 pm, they have received calls from six different brokers.", s:"https://optimizedgrowth.com/real-estate-marketing/blog/magicbricks-lead-quality-brokers-2026/"},
+  {t:"Every portal lead is shared — that’s the model. A lead you generate yourself is exclusive; no competitor gets the same phone number an hour later.", s:"https://closingfox.com/for-business-owners/99acres-vs-magicbricks-vs-housing/"},
+  {t:"Paid subscriptions often do not produce promised leads or activation.", s:"https://99acres.pissedconsumer.com/review.html", n:"Review-site summary"},
+  {t:"Dozens of people call to sell premium packages — but once you buy, the calls stop.", s:"https://ca.trustpilot.com/review/magicbricks.com", n:"Review complaint pattern, paraphrased"},
+  {t:"Someone forgets to send brochures, wrong details get shared, and by the next day the buyer is speaking to a more organized broker.", s:"https://blog.campaignhq.co/whatsapp-for-property-dealers"},
+  {t:"Most independent agents still rely on physical paper diaries, messy Excel spreadsheets or WhatsApp groups.", s:"https://brocr.in/guide-to-digital-marketing-for-real-estate-brokers-india/"},
+  {t:"Leads to aa rahe hain, but koi convert nahi ho raha.", n:"Hinglish pattern"},
+  {t:"Number hi nahi utha rahe log.", n:"Hinglish pattern"}
+ ]},
+ {who:"Channel partners", items:[
+  {t:"The same buyer walks in through a partner, fills a Meta lead form, and calls the developer’s number in the same week.", s:"https://www.sell.do/blog/role-and-advantages-of-a-channel-partner-in-real-estate"},
+  {t:"Partners who cannot see what they have earned, what is approved and what is pending stop prioritising the project.", s:"https://www.sell.do/blog/role-and-advantages-of-a-channel-partner-in-real-estate"},
+  {t:"Leads sitting in a sub-broker’s personal phone, follow-ups tracked in a WhatsApp group, site visits recorded on paper.", s:"https://www.sell.do/blog/role-and-advantages-of-a-channel-partner-in-real-estate"},
+  {t:"Most developers treat their CP program like an afterthought — a WhatsApp group, a handshake commission deal, and zero lead tracking.", s:"https://leadrat.com/channel-partners-in-real-estate-a-complete-2026-guide/"},
+  {t:"Builder ki in-house team ne humara registered lead direct call karke close kar liya.", n:"CP complaint pattern"}
+ ]},
+ {who:"Sales & follow-up (everyone)", items:[
+  {t:"The sales team spends half its day calling numbers that don’t connect.", s:"https://www.touchstoneinfotech.com/meta-ads-for-real-estate-leads-in-india-campaign-structure-budgets-creatives-that-actually-convert/"},
+  {t:"Most teams stop after the second call.", s:"https://estateautopilots.com/5-hidden-reasons-why-your-real-estate-leads-never-pick-up-calls-and-what-you-can-do-about-it/"},
+  {t:"Many agents call a lead once, send a generic brochure, and if the client says “I will check and get back,” the follow-up stops.", s:"https://blog.getklosed.com/blog/why-real-estate-leads-go-cold/"},
+  {t:"Real estate browsing peaks between 9 PM and 11 PM — but most sales teams clock out at 7 PM.", s:"https://www.automatebusiness.com/blog/why-real-estate-leads-go-cold-after-the-first-enquiry-and-how-to-prevent-it/"},
+  {t:"For most property dealers, the problem is not getting leads. The real problem starts after the lead comes in.", s:"https://wonestop.com/blog/whatsapp-api-for-real-estate-lead-generation"},
+  {t:"If your customer database is sitting in an Excel sheet, sending messages one by one is not practical.", s:"https://wonestop.com/blog/whatsapp-api-for-real-estate-lead-generation"},
+  {t:"Mera sales team follow-up hi nahi karta, lead thanda ho jaata hai.", n:"Hinglish pattern"},
+  {t:"Portal se lead aata hai, koi turant reply nahi karta, dusra broker le jaata hai.", n:"Hinglish pattern"}
+ ]},
+ {who:"On ads & lead quality", items:[
+  {t:"Meta has no idea which of your leads turned into genuine buyers, so it keeps finding more people who fill out forms, not people who buy.", s:"https://www.touchstoneinfotech.com/meta-ads-for-real-estate-leads-in-india-campaign-structure-budgets-creatives-that-actually-convert/"},
+  {t:"A low cost-per-lead is often a warning sign, not a win.", s:"https://getmerank.com/blog/top-10-real-estate-lead-generation-agencies-in-india/"},
+  {t:"Cheap CPL creates volume, but cost per site visit tells you what you’re actually getting.", s:"https://getmerank.com/blog/top-10-real-estate-lead-generation-agencies-in-india/"},
+  {t:"The bidding system cannot tell a real enquiry from a bot fill unless you tell it; if you feed it junk, it learns to buy junk.", s:"https://www.relevantaudience.com/google-ads-en/google-ads-invalid-leads-three-form-checks/"},
+  {t:"Including the RERA number in print but forgetting it on social creatives is a common mistake.", s:"https://insomniacs.in/blog/rera-advertising-rules-real-estate-india/", n:"Search summary"},
+  {t:"Sirf numbers badhte hain, sale nahi hoti.", n:"Hinglish pattern"}
+ ]},
+ {who:"Independent consultants", items:[
+  {t:"The struggle is getting business and having clients be respectful of their time.", s:"https://www.quora.com/What-are-the-struggles-of-a-real-estate-agent-1"},
+  {t:"Expecting that same broker to also spend hours analyzing digital marketing is completely unrealistic.", s:"https://brocr.in/guide-to-digital-marketing-for-real-estate-brokers-india/"},
+  {t:"Realtors are becoming content creators — Reels reach far more people than static posts.", s:"https://www.forbesindia.com/article/storyboard18/why-realtors-are-becoming-content-creators/75957/1"},
+  {t:"Instagram try kiya, do hafte mein koi lead nahi aaya, band kar diya.", n:"Pattern: quitting content before it compounds"}
+ ]}
+],
+questions: [
+ {topic:"Landing pages & websites", items:["Why is my real estate website getting traffic but no enquiries?","Landing page or full website — which is better for a property launch?","Do I need a separate website for every project?","How much does a real estate landing page cost in India?","What should a high-converting real estate landing page include?","Should the page show pricing, or say “Price on Request”?","Do I legally need my RERA number and QR code on the project website?","How do I stop my site loading slowly on mobile and 4G?","Can a landing page send enquiries straight to WhatsApp?","Does my landing page need an EOI form for pre-launch?","How do channel partners get their own trackable version of the project page?","How do I get leads without depending on 99acres or MagicBricks?"]},
+ {topic:"Meta & Google ads", items:["Does Facebook advertising actually work for real estate in India?","Facebook ads or Google ads — which is better for property?","How much should a builder spend per month on ads?","Why do I keep getting fake or junk leads from Facebook?","What is a good cost per lead for real estate in India?","What is cost per site visit, and why does it matter more than CPL?","How do I set up Meta’s Special Ad Category for housing?","Can I target by pincode or locality under the housing category?","Does Performance Max work for real estate?","Lead form or landing page — where should ads send people?","Should I bid on my own project name? Can competitors bid on it?","Is running my own ads better than buying portal leads?","How do I know if an agency is sending real leads or recycled ones?","What RERA disclosures does a Facebook or Google ad need?","What’s the minimum budget for a small broker or CP?"]},
+ {topic:"WhatsApp & AI automation", items:["Why do real estate leads go cold so fast?","How quickly do I need to reply to a property enquiry?","Is WhatsApp Business API official and legal for real estate in India?","How much does a WhatsApp chatbot cost in India?","Can a bot actually qualify a buyer, or only answer FAQs?","Will the bot understand Hinglish messages?","Can AI replace my telecalling team?","How do I share leads fairly between my sales team and CPs?","How do I automate site-visit booking and cut no-shows?","Can WhatsApp automation pick up 99acres, MagicBricks and Housing.com leads?","How do I handle enquiries that come in at 10 PM?","What changes in WhatsApp messaging costs from October 2026?"]},
+ {topic:"Channel partners & sales ops", items:["How do we stop lead-ownership disputes between CPs and our sales team?","What should a channel partner agreement include?","How long should a CP’s registered lead stay valid after a site visit?","How can CPs see what they’ve earned and what’s pending?","What’s a normal site-visit-to-booking ratio?","How many follow-ups does it take to convert a lead?"]}
+],
+cities: [
+ {name:"Noida", aka:"incl. Noida Expressway", q:["real estate marketing agency noida","real estate digital marketing noida","real estate lead generation noida","builder marketing agency noida","real estate website design noida","facebook ads agency for real estate noida","property marketing agency noida","real estate marketing services near me noida"],
+  ctx:[["Steady apartment launches across sectors like 93B, 128 and 151.","https://www.99acres.com/new-projects-in-noida-ffid"],["99acres is the dominant listing platform builders and brokers compete on.","https://www.99acres.com/"]],
+  comp:["DM4RE","PayperJump","RankHigher","Alpha Ad Tech","ScaleAcres"]},
+ {name:"Greater Noida West & Yamuna Expressway", aka:"Noida Extension, Jewar corridor", q:["real estate marketing agency greater noida","noida extension real estate marketing","property marketing greater noida west","yamuna expressway real estate marketing","jewar plots marketing","builder marketing yamuna expressway","facebook ads for builders in noida extension","2 bhk flat in noida extension"],
+  ctx:[["Jewar (Noida International) Airport is the demand story for the Yamuna Expressway corridor.","https://www.sobha.com/blog/yamuna-expressway-real-estate-jewar-airport-investment-corridor/"],["Local agencies pitch “Jewar plots” and Noida Extension flat sales as specialties.","https://digimarcy.in/real-estate-marketing-agency-in-greater-noida"]],
+  comp:["Digimarcy","DM4RE","PayperJump","iiidigimedia"]},
+ {name:"Delhi NCR", aka:"the umbrella search", q:["real estate marketing agency delhi ncr","real estate digital marketing delhi ncr","real estate lead generation delhi ncr","google ads real estate delhi","meta ads real estate lead generation delhi","real estate website design delhi","builder marketing agency delhi","property marketing services delhi"],
+  ctx:[["Buyers treat NCR as separate micro-markets (Delhi, Noida, Greater Noida, Gurugram, Ghaziabad, Faridabad) with different budgets.","https://adspyder.io/real-estate-ads-in-new-delhi/"],["NCR contributed more than half of India’s luxury housing sales in H1 2025.","https://realtynmore.com/luxe-capital-ncr-luxury-home-trends-to-watch-out-for-in-2025-and-beyond/"]],
+  comp:["Fifth Shield","ScaleAcres","GTF Technologies","Ahead Ads","DigiEstate"]},
+ {name:"Gurugram", aka:"Gurgaon", q:["real estate marketing agency gurgaon","real estate digital marketing gurugram","real estate website design gurgaon","google ads agency for real estate gurgaon","meta ads real estate gurgaon","real estate lead generation gurugram","real estate microsite design company gurgaon","real estate crm gurgaon"],
+  ctx:[["Micro-markets — Golf Course Road, Dwarka Expressway, Sohna Road, New Gurgaon — each need their own targeting.","https://dgtlinnovations.in/blog/digital-marketing-strategies-real-estate-gurgaon"]],
+  comp:["ScaleAcres","DM4RE","Madhats Media","Gulisons","Why Shy"]},
+ {name:"Ghaziabad", aka:"incl. Indirapuram", q:["real estate marketing agency ghaziabad","real estate digital marketing ghaziabad","real estate lead generation ghaziabad","real estate marketing indirapuram","builder marketing agency ghaziabad","real estate website design ghaziabad"],
+  ctx:[["Indirapuram lists a large number of new and upcoming residential projects.","https://www.99acres.com/new-projects-in-indirapuram-ghaziabad-ffid"]],
+  comp:["iiidigimedia","Rank By Digital","DM4RE"]},
+ {name:"Lucknow", aka:"Sultanpur Road, Shaheed Path", q:["real estate marketing agency lucknow","real estate digital marketing lucknow","real estate lead generation lucknow","builder marketing agency lucknow","property website developer lucknow","sultanpur road property marketing","shaheed path real estate marketing","digital marketing agency for real estate lucknow"],
+  ctx:[["Lucknow posted 22.61% year-on-year price appreciation, ahead of Delhi.","https://www.businesstoday.in/personal-finance/real-estate/story/goa-kanpur-lucknow-lead-tier-2-real-estate-boom-in-india-473249-2025-04-23"],["Sultanpur Road has a long list of new and pre-launch projects.","https://www.99acres.com/new-projects-in-sultanpur-road-lucknow-ffid"],["Shaheed Path is marketed as a fast-growing corridor.","https://mozartrealty.in/property-on-shaheed-path-lucknow/"]],
+  comp:["REMA","ScaleAcres","Pitch Pine Media","Kramate","God Digital Marketing"]},
+ {name:"Kanpur", aka:"your home market", q:["real estate marketing agency kanpur","real estate digital marketing kanpur","real estate lead generation agency kanpur","builder marketing agency kanpur","real estate web design company kanpur","property dealer marketing kanpur","whatsapp marketing company kanpur real estate","residential plots kanpur"],
+  ctx:[["Kanpur posted 24.53% year-on-year price appreciation — the highest of the cities cited in that report.","https://www.businesstoday.in/personal-finance/real-estate/story/goa-kanpur-lucknow-lead-tier-2-real-estate-boom-in-india-473249-2025-04-23"],["Gated plotted communities are growing alongside apartments.","https://www.360plot.com/plot/kanpur"],["Search results are mostly directories (Justdial, IndiaYellowPages) with few real-estate-only agencies — an open lane for you.","https://www.justdial.com/Kanpur/Real-Estate-Agents/nct-10192623"]],
+  comp:["RealtyDigi (web design)","BotMax AI","WhatsBoost","Mostly directories"]}
+],
+glossary: [
+ ["Site visit","A buyer physically visiting the project or sample flat — the highest-intent step before booking."],
+ ["CPSV","Cost per site visit. The metric experienced buyers of marketing trust more than cost per lead."],
+ ["CPL","Cost per lead. Cheap CPL is increasingly read as a warning sign of junk leads."],
+ ["Walk-in","A visitor who arrives without a booked appointment."],
+ ["EOI","Expression of Interest: a non-binding early commitment, often with a refundable token, before launch pricing."],
+ ["Token / booking amount","Token reserves a unit temporarily; booking amount confirms the deal and is usually non-refundable."],
+ ["Pre-launch / soft launch","Selling stages before the formal launch. Pre-launch selling before RERA registration is not allowed."],
+ ["Possession","Handover of the unit to the buyer; the most disputed milestone in Indian real estate."],
+ ["RERA number & QR code","Registration details that must appear on ads and project websites (QR code mandated in several states)."],
+ ["OC / CC","Occupancy Certificate / Completion Certificate — often confused, both matter before handover."],
+ ["BSP / PLC / FRC","Basic Sale Price / Preferential Location Charge / Floor Rise Charge — the lines of a cost sheet."],
+ ["Cost sheet / price sheet","Itemised price per unit; buyers bounce off pages that hide it."],
+ ["Inventory","Unsold units across towers and floors."],
+ ["Project microsite","A dedicated website for one project, separate from the builder’s main site."],
+ ["CP (channel partner)","A RERA-registered broker who sells a builder’s inventory for commission."],
+ ["CP portal / lead registration","Where CPs register a buyer with a timestamp so the commission can’t be disputed."],
+ ["Lead tagging / attribution","Recording which source (CP, portal, ad, walk-in) brought the buyer first."],
+ ["Payout","A CP’s commission; slow or opaque payouts make CPs drop a project."],
+ ["Portal leads","Leads from 99acres, MagicBricks, Housing.com — shared with several brokers."],
+ ["Exclusive leads","Leads from your own ads and pages that no competitor receives."],
+ ["Speed-to-lead","Time from enquiry to first reply; the core promise of automation."],
+ ["Lead leakage","Leads lost between portals, phones, WhatsApp groups and Excel."],
+ ["Pre-sales / telecaller","The team that calls and qualifies leads before sales meets them."],
+ ["Special Ad Category","Meta’s housing ad rules, which restrict age, gender and precise location targeting."],
+ ["WABA / green tick","Official WhatsApp Business API account; the green tick is a verified business badge."]
+],
+hinglish: [
+ ["real estate leads kaise laye","how do I get real estate leads"],
+ ["property ke leads kaise nikale","how do I pull out property leads"],
+ ["property portal se lead nahi mil raha","not getting leads from the portal"],
+ ["99acres subscription price kitna hai","how much is the 99acres subscription"],
+ ["leads to aa rahe hain, convert nahi ho raha","leads come in but don’t convert"],
+ ["number hi nahi utha rahe log","people don’t even pick up"],
+ ["lead thanda ho gaya","the lead went cold"],
+ ["follow-up nahi hua","nobody followed up"],
+ ["turant reply chahiye","need an instant reply"],
+ ["site visit book karo","book the site visit"],
+ ["budget kitna hai? kaunsa configuration chahiye?","what’s the budget? which BHK?"],
+ ["CP ko lead do","pass the lead to the channel partner"],
+ ["Excel mein leads chal rahe hain","we run leads from Excel"],
+ ["website banwane wali company","a company that makes websites"],
+ ["property website banani hai","I need a property website made"],
+ ["real estate agent kaise bane","how to become a real estate agent"],
+ ["OC CC kaise milta hai","how do you get OC and CC"]
+],
+competitors: [
+ ["DM4RE","Real-estate-only agency across NCR and Lucknow","“100% real estate-focused”, landing pages, Google Ads, project + locality keywords (“2 BHK flat in Noida Extension”)","https://dm4re.com/"],
+ ["ScaleAcres","Real estate PPC, NCR + Lucknow","“Real estate PPC agency”, “lowest CPL”, “get real buyer leads without waiting for SEO”","https://scaleacres.com/real-estate-ppc-service/"],
+ ["PayperJump","Noida / Greater Noida","“No.1 real estate marketing agency in Noida”, villa plots, drone shoots","https://payperjump.com/real-estate-noida/"],
+ ["Digimarcy","Greater Noida, Jewar","“Verified leads”, Jewar plots, Noida Extension","https://digimarcy.in/real-estate-marketing-agency-in-greater-noida"],
+ ["AAJneeti","Lead gen, Noida/Gurugram/Lucknow","“Real estate lead generation in [city]”, qualified leads, reputation management","https://aajneeti.social/real-estate-lead-generation-in-noida/"],
+ ["Why Shy","Gurgaon","Project microsites, township launches, “fills your site visits calendar”","https://www.whyshy.co/real-estate-marketing-agency"],
+ ["Realtica","Builders only","Qualifying landing pages with budget + BHK + timeline pre-filter","https://www.realtica.in/"],
+ ["NS Ventures","Builder project websites","Mobile-first microsites, “locality + project” SEO, AI search visibility","https://nsventures.in/real-estate-project-websites-and-landing-pages/"],
+ ["REMA","Lucknow","“Best real estate marketing agency in Lucknow”","https://realestatemarketingagency.in/top-real-estate-marketing-agency-in-lucknow"],
+ ["Sell.Do","Real estate CRM","“Real estate WhatsApp marketing”, “channel partner CRM”","https://www.sell.do/real-estate-crm/whatsapp-marketing"],
+ ["Leadrat","Real estate CRM","“Top real estate CRM in India”, channel partner guide","https://leadrat.com/channel-partners-in-real-estate-a-complete-2026-guide/"],
+ ["Interakt / AiSensy / Gallabox","WhatsApp API providers","“WhatsApp API for real estate lead nurturing”, “qualify WhatsApp leads with AI agent”","https://www.interakt.shop/whatsapp-ai-agents/real-estate/"],
+ ["opZynic","AI chatbot for real estate","“Traffic but zero leads — 9 fixes”, AI qualification chatbot","https://www.opzynic.com/blog/ai-chatbot-real-estate-lead-generation-2026"]
+]
+};
+
+const VOL = [["Paid ads","real estate ads",1900,"LOW",0.99],["Paid ads","real estate advertising",1900,"LOW",0.99],["Paid ads","creative real estate ads",880,"LOW",2.43],["Paid ads","property advertisement",590,"LOW",1.59],["Paid ads","fb ads for real estate",320,"LOW",1.18],["Paid ads","facebook ads for real estate",320,"LOW",1.18],["Paid ads","google ads for real estate",260,"LOW",1.64],["Paid ads","meta ads for real estate",90,"LOW",1.32],["Lead generation","real estate lead generation",1300,"MEDIUM",2.17],["Lead generation","real estate leads",1300,"MEDIUM",2.17],["Lead generation","lead generation for agents",880,"MEDIUM",1.77],["Lead generation","property leads",70,"LOW",1.4],["Lead generation","cost per lead real estate",10,"LOW",null],["AI & automation","real estate crm",2400,"MEDIUM",2.8],["AI & automation","real estate crm software",1600,"LOW",3.41],["AI & automation","best crm for real estate",260,"MEDIUM",3.24],["AI & automation","crm for real estate agents",170,"MEDIUM",3.55],["AI & automation","real estate chatbot",480,"LOW",1.18],["AI & automation","real estate whatsapp marketing",10,"MEDIUM",2.22],["AI & automation","whatsapp automation for real estate",20,"LOW",1.17],["Agency / brand","real estate marketing agency",880,"LOW",1.95],["Agency / brand","real estate marketing",880,"LOW",1.76],["Agency / brand","real estate digital marketing agency",720,"LOW",1.59],["Agency / brand","real estate digital marketing",720,"LOW",1.68],["Agency / brand","real estate marketing companies",320,"LOW",3.75],["Agency / brand","real estate marketing services",260,"LOW",null],["Agency / brand","digital marketing for real estate agents",260,"MEDIUM",2.07],["Agency / brand","real estate digital marketing services",210,"LOW",1.81],["Agency / brand","real estate social media marketing",320,"LOW",2.28],["Agency / brand","real estate marketing strategy",320,"LOW",0.89],["Agency / brand","seo services for real estate",590,"LOW",null],["Landing pages & websites","real estate website design",590,"LOW",1.34],["Landing pages & websites","real estate landing page",390,"LOW",1.06],["Landing pages & websites","real estate agent landing page",390,"LOW",1.06],["Landing pages & websites","building a real estate website",170,"LOW",2.38],["Landing pages & websites","real estate website companies",170,"LOW",0.77],["Landing pages & websites","real estate landing page design",70,"LOW",0.96],["Channel partners","channel partner in real estate",880,"LOW",0.99],["Channel partners","channel partner real estate",260,"LOW",0.75],["Blog topics","what is eoi in real estate",880,"LOW",0.31],["Blog topics","2 bhk flat in noida extension",320,"LOW",0.2],["Cities","digital marketing agency in lucknow",4400,"LOW",0.57],["Cities","best digital marketing agency in lucknow",1600,"LOW",0.57],["Cities","digital marketing agency in kanpur",720,"LOW",0.33],["Cities","best digital marketing agency in kanpur",480,"LOW",0.3],["Cities","digital marketing company in kanpur",320,"LOW",0.1],["Cities","real estate marketing agency gurgaon",20,"MEDIUM",2.72]];
+
+const INSIGHTS = [
+ ["The complaint is rarely “we need more leads”","Builders and brokers say they already get leads. What they complain about is quality (“fake leads”) and follow-up (“nobody picks up”). Sell the fix for what happens after the click, not volume."],
+ ["Cost per site visit is the language of serious buyers","Across ads research, cheap CPL is treated as a warning sign. Pages and proposals that talk in cost per site visit and site-visit-to-booking ratio signal you understand the business."],
+ ["Portal fatigue is a real opening","Brokers resent shared 99acres/MagicBricks leads and subscriptions that don’t pay back. “Exclusive leads from your own ads” is a direct, searchable alternative."],
+ ["Speed beats everything, and the peak is 9–11 PM","Buyers enquire with several brokers at once and browse after sales teams log off. Instant WhatsApp reply is the most concrete promise you can make."],
+ ["Channel partners are an underserved persona","CPs fight over lead ownership and payouts. Few agencies speak to them directly — a dedicated page could own this language."],
+ ["Trust has to be shown, not claimed","RERA number and QR on every page and ad, visible pricing, real project photos, and proof over promises. Agencies are assumed to overpromise until shown otherwise."]
+];
+
+const MAP = [
+ {url:"/", role:"Homepage", primary:["real estate marketing agency · 880"], secondary:["real estate digital marketing agency · 720","real estate marketing · 880","real estate marketing companies · 320"], note:"Keep the homepage on the agency terms; the service pages carry the specific ones."},
+ {url:"/services/high-converting-landing-pages", role:"Landing pages", primary:["real estate website design · 590"], secondary:["real estate landing page · 390","building a real estate website · 170","project microsite"], note:"“Website design” has more searches than “landing page”; use both. Suggested title (56 chars): Real Estate Landing Pages & Project Microsites | Veloxis — or lead with “Real Estate Website Design & Landing Pages”."},
+ {url:"/services/paid-ads", role:"Meta & Google ads", primary:["real estate ads · 1,900"], secondary:["real estate lead generation · 1,300","real estate leads · 1,300","creative real estate ads · 880","facebook ads for real estate · 320","google ads for real estate · 260"], note:"This is your largest demand pool. Suggested title: Real Estate Ads & Lead Generation — Meta and Google | Veloxis."},
+ {url:"/services/ai-automation", role:"WhatsApp & AI automation", primary:["real estate crm · 2,400"], secondary:["real estate crm software · 1,600","real estate chatbot · 480","whatsapp automation for real estate · 20"], note:"People search for a CRM and a chatbot, not “AI automation”. Frame the page as a real-estate CRM + WhatsApp chatbot setup (you set up and connect the tools), without claiming to sell CRM software."},
+ {url:"/industries/real-estate", role:"Who we help", primary:["digital marketing for real estate agents · 260"], secondary:["real estate digital marketing services · 210","real estate marketing services · 260"], note:"Split later into builder, broker and channel-partner pages."},
+ {url:"New: channel partner page", role:"Biggest gap", primary:["channel partner in real estate · 880"], secondary:["channel partner real estate · 260"], note:"880 searches a month and almost no agency targets it. A guide + service page for CPs is the single best new page."},
+ {url:"New: blog posts", role:"Content", primary:["what is eoi in real estate · 880","creative real estate ads · 880"], secondary:["real estate marketing strategy · 320","real estate social media marketing · 320","fake leads facebook ads","cost per site visit"], note:"EOI is informational but pulls exactly the right audience (builders and CPs). Long-tail pain questions have no measurable volume but make good FAQ entries."},
+ {url:"Cities", role:"Honest read", primary:["digital marketing agency in lucknow · 4,400","digital marketing agency in kanpur · 720"], secondary:["real estate marketing agency gurgaon · 20"], note:"“Real estate + city” searches are too small for Google to report (except Gurgaon, 20). The volume is in generic “digital marketing agency in [city]”, which your old pages ranked for at positions 40–70. City pages should target real-estate terms for relevance, not expect big traffic."}
+];
+
+const TABS = [
+ {id:"start", label:"Start here"},
+ {id:"volumes", label:"Search volumes"},
+ {id:"queries", label:"Search queries"},
+ {id:"voices", label:"How they talk"},
+ {id:"questions", label:"Questions"},
+ {id:"cities", label:"Cities"},
+ {id:"words", label:"Vocabulary & Hinglish"},
+ {id:"competitors", label:"Competitors"}
+];
+
+const $ = s => document.querySelector(s);
+const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const host = u => { try { return new URL(u).hostname.replace(/^www\./,""); } catch(e){ return u; } };
+let current = "start", term = "";
+
+function toast(msg){ const t=$("#toast"); t.textContent=msg; t.classList.add("on"); clearTimeout(toast._t); toast._t=setTimeout(()=>t.classList.remove("on"),1400); }
+function copyText(text, el){
+  const done = () => { toast("Copied"); if(el){ el.classList.add("done"); setTimeout(()=>el.classList.remove("done"),900);} };
+  try {
+    navigator.clipboard.writeText(text).then(done, () => fallback(text, done));
+  } catch(e){ fallback(text, done); }
+}
+function fallback(text, done){
+  const ta=document.createElement("textarea"); ta.value=text; ta.setAttribute("readonly",""); ta.style.position="fixed"; ta.style.opacity="0";
+  document.body.appendChild(ta); ta.select();
+  let ok=false; try{ ok=document.execCommand("copy"); }catch(e){}
+  ta.remove(); ok ? done() : toast("Select the text and copy it manually");
+}
+const match = s => !term || s.toLowerCase().includes(term);
+
+function stats(){
+  const nq = D.queries.reduce((a,s)=>a+s.groups.reduce((b,g)=>b+g.items.length,0),0) + D.cities.reduce((a,c)=>a+c.q.length,0);
+  const nv = D.voices.reduce((a,g)=>a+g.items.length,0);
+  const ns = D.voices.reduce((a,g)=>a+g.items.filter(i=>i.s).length,0);
+  const nquest = D.questions.reduce((a,g)=>a+g.items.length,0);
+  $("#stats").innerHTML = `<span><b>${nq}</b> search queries</span><span><b>${nv}</b> pain statements (${ns} sourced)</span><span><b>${nquest}</b> questions</span><span><b>${VOL.length}</b> terms with volume</span><span><b>${D.cities.length}</b> city clusters</span><span><b>${D.competitors.length}</b> competitors</span>`;
+}
+
+function qList(items){
+  return `<ul class="q">${items.map(q=>`<li tabindex="0" data-copy="${esc(q)}">${esc(q)}</li>`).join("")}</ul>`;
+}
+
+function renderStart(){
+  const ins = INSIGHTS.filter(([h,p])=>match(h+p));
+  const map = MAP.filter(m=>match([m.url,m.role,m.note,...m.primary,...m.secondary].join(" ")));
+  return `<section class="panel">
+   <div class="group"><div><h2>What the research says</h2><p class="sub">Six patterns that showed up across all five research tracks. Use them to decide what each page leads with.</p></div>
+    ${ins.length?`<div class="insights">${ins.map(([h,p])=>`<div class="insight"><h3>${esc(h)}</h3><p>${esc(p)}</p></div>`).join("")}</div>`:""}
+   </div>
+   <div class="group"><div><h2>Which words belong on which page</h2><p class="sub">My recommendation, now with monthly Google searches in India (the number after each phrase).</p></div>
+    <div class="map">${map.map(m=>`<div class="page"><div><div class="url">${esc(m.url)}</div><div class="note">${esc(m.role)}</div></div>
+      <dl><dt>Main</dt><dd><div class="chips">${m.primary.map(k=>`<span class="chip p">${esc(k)}</span>`).join("")}</div></dd>
+      <dt>Support</dt><dd><div class="chips">${m.secondary.map(k=>`<span class="chip">${esc(k)}</span>`).join("")}</div></dd>
+      <dt>Note</dt><dd style="color:var(--muted)">${esc(m.note)}</dd></dl></div>`).join("")}</div>
+   </div>
+   <div class="callout"><b>Read this before using the numbers.</b>
+    <ul>
+     <li><b>Search volumes are on the Search volumes tab.</b> Most long phrases have no measurable volume; the page plan below uses the short terms that do.</li>
+     <li><b>Statistics are third-party blog claims</b> (conversion rates, CPL ranges, response-time figures). Treat them as directional; don’t quote them on the site as fact.</li>
+     <li><b>Inferred lines are patterns, not quotes.</b> Never use them as testimonials.</li>
+     <li><b>Reddit threads weren’t searchable</b>, so “own words” come from review sites, Quora, industry blogs and case studies.</li>
+    </ul></div>
+  </section>`;
+}
+
+function renderQueries(){
+  let html="", any=false;
+  D.queries.forEach(s=>{
+    const groups = s.groups.map(g=>({...g, items:g.items.filter(match)})).filter(g=>g.items.length);
+    if(!groups.length) return; any=true;
+    const all = groups.flatMap(g=>g.items);
+    html += `<div class="group"><div class="ghead"><h2>${esc(s.service)}<span class="count">${all.length}</span></h2><button class="copy" data-copyall="${esc(all.join("\n"))}">Copy all</button></div>
+      <div class="intents">${groups.map(g=>`<div class="intent"><h4>${esc(g.intent)}</h4>${qList(g.items)}</div>`).join("")}</div></div>`;
+  });
+  return `<section class="panel">${any?html:empty()}</section>`;
+}
+
+function renderVoices(){
+  let html="", any=false;
+  D.voices.forEach(g=>{
+    const items = g.items.filter(i=>match(i.t+" "+(i.n||"")+" "+g.who));
+    if(!items.length) return; any=true;
+    html += `<div class="group"><div class="ghead"><h2>${esc(g.who)}<span class="count">${items.length}</span></h2></div><div class="quotes">${items.map(i=>`<div class="quote"><p>${esc(i.t)}</p><div class="meta">${i.s?`<span class="tag s">Sourced</span><a href="${esc(i.s)}" target="_blank" rel="noopener">${esc(host(i.s))}</a>`:`<span class="tag i">Inferred</span>`}${i.n?`<span style="color:var(--faint)">${esc(i.n)}</span>`:""}</div></div>`).join("")}</div></div>`;
+  });
+  return `<section class="panel">${any?html:empty()}</section>`;
+}
+
+function renderQuestions(){
+  let html="", any=false;
+  D.questions.forEach(g=>{
+    const items=g.items.filter(match); if(!items.length) return; any=true;
+    html += `<div class="group"><div class="ghead"><h2>${esc(g.topic)}<span class="count">${items.length}</span></h2><button class="copy" data-copyall="${esc(items.join("\n"))}">Copy all</button></div><ol class="qs">${items.map(q=>`<li>${esc(q)}</li>`).join("")}</ol></div>`;
+  });
+  return `<section class="panel"><p class="sub" style="margin:0">Use these as FAQ entries on service pages and as blog post titles — each one is a question people type or ask.</p>${any?html:empty()}</section>`;
+}
+
+function renderCities(){
+  const cs = D.cities.filter(c=>match([c.name,c.aka,...c.q,...c.ctx.map(x=>x[0]),...c.comp].join(" ")));
+  return `<section class="panel"><p class="sub" style="margin:0">Search phrasing per city, local context we could source, and who ranks today. Figures link to their source; unsourced figures from the research were left out.</p>
+  ${cs.length?`<div class="cities">${cs.map(c=>`<div class="city"><h3>${esc(c.name)} <small>${esc(c.aka)}</small></h3>
+   <div><h4>How they search</h4>${qList(c.q)}</div>
+   <div style="display:grid;gap:16px;align-content:start"><div><h4>Local context</h4><ul class="ctx">${c.ctx.map(([t,u])=>`<li>${esc(t)} <a href="${esc(u)}" target="_blank" rel="noopener">${esc(host(u))}</a></li>`).join("")}</ul></div>
+   <div><h4>Ranking today</h4><div class="chips">${c.comp.map(x=>`<span class="chip">${esc(x)}</span>`).join("")}</div></div></div></div>`).join("")}</div>`:empty()}</section>`;
+}
+
+function renderWords(){
+  const gl = D.glossary.filter(([a,b])=>match(a+b));
+  const hi = D.hinglish.filter(([a,b])=>match(a+b));
+  if(!gl.length && !hi.length) return `<section class="panel">${empty()}</section>`;
+  return `<section class="panel">
+   ${hi.length?`<div class="group"><div class="ghead"><h2>Hinglish they actually use<span class="count">${hi.length}</span></h2></div><div class="hin">${hi.map(([h,e])=>`<div><div class="h">${esc(h)}</div><div class="e">${esc(e)}</div></div>`).join("")}</div></div>`:""}
+   ${gl.length?`<div class="group"><div class="ghead"><h2>Industry vocabulary<span class="count">${gl.length}</span></h2></div><div class="tablewrap"><table><thead><tr><th>Term</th><th>What it means to them</th></tr></thead><tbody>${gl.map(([t,d])=>`<tr><td class="term">${esc(t)}</td><td>${esc(d)}</td></tr>`).join("")}</tbody></table></div></div>`:""}
+  </section>`;
+}
+
+function renderCompetitors(){
+  const cs = D.competitors.filter(r=>match(r.join(" ")));
+  return `<section class="panel"><p class="sub" style="margin:0">What competing agencies and tools target, taken from their own page titles and copy.</p>
+  ${cs.length?`<div class="tablewrap"><table><thead><tr><th>Who</th><th>Focus</th><th>What they target</th><th>Page</th></tr></thead><tbody>${cs.map(([n,f,k,u])=>`<tr><td class="term">${esc(n)}</td><td>${esc(f)}</td><td>${esc(k)}</td><td><a href="${esc(u)}" target="_blank" rel="noopener">${esc(host(u))}</a></td></tr>`).join("")}</tbody></table></div>`:empty()}</section>`;
+}
+
+function renderVolumes(){
+  const rows = VOL.filter(r=>match(r.join(" ")));
+  const groups=[...new Set(rows.map(r=>r[0]))];
+  return `<section class="panel"><div><h2>Monthly Google searches in India</h2><p class="sub">From Google Ads data via DataForSEO, September 2026. Google groups close variants, so similar phrases can show the same number. CPC is what advertisers pay per click in US dollars — a higher CPC means the term is worth money to someone.</p></div>
+  <div class="callout"><b>Only 26 of the 224 research phrases have measurable volume.</b> Long, conversational questions fall below Google’s reporting threshold — use them as FAQ entries and blog angles, and build pages around the short terms below.</div>
+  ${rows.length?`<div class="tablewrap"><table><thead><tr><th>Keyword</th><th style="text-align:right">Searches / month</th><th>Competition</th><th style="text-align:right">CPC</th><th>Topic</th></tr></thead><tbody>${groups.map(g=>rows.filter(r=>r[0]===g).sort((a,b)=>b[2]-a[2]).map(([t,k,v,c,cpc])=>`<tr><td style="font-family:var(--mono);font-size:13px">${esc(k)}</td><td style="text-align:right;font-variant-numeric:tabular-nums;font-weight:700">${v.toLocaleString("en-IN")}</td><td>${esc((c||"—").toLowerCase())}</td><td style="text-align:right;font-variant-numeric:tabular-nums">${cpc!=null?"$"+cpc.toFixed(2):"—"}</td><td style="color:var(--faint)">${esc(t)}</td></tr>`).join("")).join("")}</tbody></table></div>`:empty()}</section>`;
+}
+
+const empty = () => `<p class="empty">Nothing on this tab matches “${esc(term)}”.</p>`;
+const R = {start:renderStart, volumes:renderVolumes, queries:renderQueries, voices:renderVoices, questions:renderQuestions, cities:renderCities, words:renderWords, competitors:renderCompetitors};
+
+function render(){
+  $("#tabs").innerHTML = TABS.map(t=>`<button class="tab" role="tab" id="tab-${t.id}" aria-selected="${t.id===current}" data-tab="${t.id}">${t.label}</button>`).join("");
+  $("#main").innerHTML = R[current]();
+}
+
+document.addEventListener("click", e=>{
+  const tab = e.target.closest("[data-tab]");
+  if(tab){ current = tab.dataset.tab; try{ localStorage.setItem("vx-tab", current); }catch(err){} try{ history.replaceState(null,"","#"+current); }catch(err){} render(); window.scrollTo({top:0}); return; }
+  const li = e.target.closest("[data-copy]"); if(li){ copyText(li.dataset.copy, li); return; }
+  const all = e.target.closest("[data-copyall]"); if(all){ copyText(all.dataset.copyall); }
+});
+document.addEventListener("keydown", e=>{
+  if((e.key==="Enter"||e.key===" ") && e.target.matches("[data-copy]")){ e.preventDefault(); copyText(e.target.dataset.copy, e.target); }
+});
+$("#filter").addEventListener("input", e=>{ term = e.target.value.trim().toLowerCase(); $("#main").innerHTML = R[current](); });
+
+(function init(){
+  const h = (location.hash||"").slice(1);
+  let saved = null; try{ saved = localStorage.getItem("vx-tab"); }catch(e){}
+  if(TABS.some(t=>t.id===h)) current = h; else if(saved && TABS.some(t=>t.id===saved)) current = saved;
+  stats(); render();
+})();
+</script>

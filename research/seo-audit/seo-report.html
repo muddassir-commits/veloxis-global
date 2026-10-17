@@ -1,0 +1,271 @@
+<title>Veloxis SEO Overhaul Report</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --bg:#f7f9fb; --surface:#ffffff; --surface-2:#f0f3f7; --line:#dfe4ea;
+  --ink:#191c1e; --muted:#4d5260; --faint:#6b7080;
+  --blue:#0051d5; --blue-soft:#e3ebff;
+  --good:#0b7f75; --good-soft:#dff5f2;
+  --warn:#a44a06; --warn-soft:#fdf0e1;
+  --bad:#b42318; --bad-soft:#fdecea;
+  --mono:"JetBrains Mono",ui-monospace,Menlo,Consolas,monospace;
+  --sans:"Plus Jakarta Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme:dark;
+    --bg:#0e1320; --surface:#151b2b; --surface-2:#1b2336; --line:#2a3349;
+    --ink:#e7eaf1; --muted:#b1b8c8; --faint:#8a92a6;
+    --blue:#86a8ff; --blue-soft:#1d2a4d;
+    --good:#5fd3c4; --good-soft:#123532;
+    --warn:#f3b36b; --warn-soft:#3a2714;
+    --bad:#ff8f86; --bad-soft:#3b1b1a;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --bg:#0e1320; --surface:#151b2b; --surface-2:#1b2336; --line:#2a3349;
+  --ink:#e7eaf1; --muted:#b1b8c8; --faint:#8a92a6;
+  --blue:#86a8ff; --blue-soft:#1d2a4d;
+  --good:#5fd3c4; --good-soft:#123532;
+  --warn:#f3b36b; --warn-soft:#3a2714;
+  --bad:#ff8f86; --bad-soft:#3b1b1a;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:15px;line-height:1.6;padding-inline:16px;padding-block:0 72px}
+.wrap{max-width:980px;margin:0 auto}
+header{padding-block:40px 24px;display:grid;gap:12px}
+.eyebrow{font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--blue)}
+h1{font-size:clamp(26px,4vw,36px);line-height:1.15;margin:0;font-weight:800;letter-spacing:-.02em;text-wrap:balance}
+.lede{margin:0;color:var(--muted);max-width:68ch}
+nav.toc{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);border-bottom:1px solid var(--line);padding-block:10px;display:flex;gap:6px;overflow-x:auto}
+nav.toc a{flex:none;font-size:13px;font-weight:600;color:var(--muted);text-decoration:none;padding:6px 11px;border-radius:999px}
+nav.toc a:hover{background:var(--surface-2);color:var(--ink)}
+nav.toc a:focus-visible,a:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
+section{padding-top:40px;display:grid;gap:14px}
+h2{font-size:22px;margin:0;letter-spacing:-.01em;text-wrap:balance}
+h3{font-size:16px;margin:8px 0 0}
+p{margin:0;max-width:72ch}
+.muted{color:var(--muted)}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:14px 16px;display:grid;gap:6px;align-content:start}
+.card .k{font-size:12px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--faint)}
+.card .v{font-weight:700}
+.pill{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;padding:2px 8px;border-radius:4px;white-space:nowrap}
+.pill.good{background:var(--good-soft);color:var(--good)}
+.pill.warn{background:var(--warn-soft);color:var(--warn)}
+.pill.bad{background:var(--bad-soft);color:var(--bad)}
+.tablewrap{overflow-x:auto;border:1px solid var(--line);border-radius:10px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;min-width:620px;font-size:14px}
+th,td{text-align:left;padding:9px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-size:12px;letter-spacing:.05em;text-transform:uppercase;color:var(--faint);background:var(--surface-2);font-weight:700}
+tr:last-child td{border-bottom:0}
+td code,p code,li code{font-family:var(--mono);font-size:12.5px;background:var(--surface-2);padding:1px 5px;border-radius:4px;word-break:break-word}
+ul.list{margin:0;padding-left:20px;display:grid;gap:6px;max-width:76ch}
+.sev{font-weight:700}
+.roadmap{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px}
+.roadmap .card h3{margin:0}
+.callout{border:1px solid var(--line);border-left:3px solid var(--warn);background:var(--surface);border-radius:6px;padding:12px 14px;color:var(--muted);font-size:14px}
+.callout b{color:var(--ink)}
+footer{margin-top:48px;color:var(--faint);font-size:13px}
+</style>
+
+<div class="wrap">
+  <header>
+    <div class="eyebrow">veloxisglobal.com · SEO overhaul · 23 September 2026</div>
+    <h1>What was wrong with the site’s SEO, what changed, and what’s left for you</h1>
+    <p class="lede">A full audit and rebuild of on-page, technical and content SEO for the real estate site. <b>Live since 23 September 2026</b> (pull request #4 merged), and verified on the live site.</p>
+  </header>
+
+  <nav class="toc" aria-label="Report sections">
+    <a href="#scorecard">Scorecard</a><a href="#found">What we found</a><a href="#fixed">What we fixed</a><a href="#pages">Pages changed</a><a href="#keywords">Keyword map</a><a href="#files">Files changed</a><a href="#validation">Validation</a><a href="#remaining">Your to-do</a><a href="#roadmap">30/60/90 days</a>
+  </nav>
+
+  <section id="scorecard">
+    <h2>1. Scorecard</h2>
+    <p class="muted">Before → after, judged on specific checks rather than an invented score. Performance is marked as unmeasured because the local Lighthouse run was affected by low memory; measure it on the live site.</p>
+    <div class="tablewrap"><table>
+      <thead><tr><th>Area</th><th>Before</th><th>After</th><th>Basis</th></tr></thead>
+      <tbody>
+        <tr><td>Technical SEO</td><td><span class="pill bad">Weak</span></td><td><span class="pill good">Strong</span></td><td>Canonicals match www on all 25 URLs; sitemap from data; 46 single-hop redirects</td></tr>
+        <tr><td>Indexability</td><td><span class="pill bad">Blocked</span></td><td><span class="pill good">Strong</span></td><td>Apex/www conflict fixed; no noindex; every sitemap URL returns 200</td></tr>
+        <tr><td>On-page SEO</td><td><span class="pill warn">Mixed</span></td><td><span class="pill good">Strong</span></td><td>Unique titles ≤60, descriptions 142–159, one H1 per page</td></tr>
+        <tr><td>Content SEO</td><td><span class="pill bad">Thin</span></td><td><span class="pill good">Good</span></td><td>Service pages ~470 → 1,050–1,250 words; 7 guides of 625–1,030 words</td></tr>
+        <tr><td>Internal linking</td><td><span class="pill warn">Mixed</span></td><td><span class="pill good">Strong</span></td><td>0 orphans, 0 broken links; services ↔ audiences ↔ playbooks ↔ guides</td></tr>
+        <tr><td>Structured data</td><td><span class="pill bad">Risky</span></td><td><span class="pill good">Strong</span></td><td>No fake address or self-rating; no duplicates; valid JSON-LD on every page</td></tr>
+        <tr><td>Trust / E-E-A-T</td><td><span class="pill bad">Risky</span></td><td><span class="pill good">Good</span></td><td>Invented proof removed; founder-led story; consistent contact details</td></tr>
+        <tr><td>Local SEO</td><td><span class="pill bad">Conflicting</span></td><td><span class="pill warn">Needs GBP</span></td><td>Service-area setup is consistent; Business Profile still unverified</td></tr>
+        <tr><td>AI / LLM discoverability</td><td><span class="pill warn">Outdated</span></td><td><span class="pill good">Strong</span></td><td>llms.txt and llms-full.txt (~11k words) generated from live data</td></tr>
+        <tr><td>Accessibility</td><td><span class="pill warn">—</span></td><td><span class="pill good">91–92</span></td><td>Lighthouse accessibility after fixes to contrast, ARIA, headings, tap targets</td></tr>
+        <tr><td>Performance</td><td><span class="pill warn">Unmeasured</span></td><td><span class="pill warn">Measure live</span></td><td>CLS 0; LCP/TBT distorted locally — check PageSpeed after deploy</td></tr>
+        <tr><td>FAQs</td><td><span class="pill warn">1–3 per page, some hidden</span></td><td><span class="pill good">7–8 visible on all 25 pages</span></td><td>Every answer in the HTML and open; FAQ schema matches the page exactly</td></tr>
+        <tr><td>Conversion SEO</td><td><span class="pill bad">Broken</span></td><td><span class="pill good">Good</span></td><td>Contact booking link was 404; CTAs clearer; lead/booking events tracked</td></tr>
+      </tbody>
+    </table></div>
+  </section>
+
+  <section id="found">
+    <h2>2. What we found</h2>
+    <div class="tablewrap"><table>
+      <thead><tr><th>Severity</th><th>Problem</th><th>Where</th><th>Why it matters</th></tr></thead>
+      <tbody>
+        <tr><td><span class="pill bad">Critical</span></td><td>Canonicals, sitemap and schema used the apex domain while the site served on www</td><td>All pages</td><td>Google saw every page as a redirect; the landing pages URL couldn’t be indexed</td></tr>
+        <tr><td><span class="pill bad">Critical</span></td><td>Four different office addresses in structured data, none confirmed</td><td><code>lib/schema.ts</code></td><td>Conflicting business details undermine local rankings and trust</td></tr>
+        <tr><td><span class="pill bad">Critical</span></td><td>Fake proof: 4.9★ from 24 reviews, placeholder testimonials, an unreal case study, “Google Certified Partner” badge</td><td>Home, nav, footer, schema, /testimonials, /case-studies</td><td>Breaks Google’s review and spam policies and Google Partner branding rules; consumer-law risk</td></tr>
+        <tr><td><span class="pill bad">High</span></td><td>“Book a Strategy Call” on /contact went to a Calendly 404</td><td><code>app/contact/page.tsx</code></td><td>Lost bookings from the highest-intent page</td></tr>
+        <tr><td><span class="pill bad">High</span></td><td>Service pages ~470 words, 1 FAQ each, H1s without searched terms</td><td><code>/services/*</code></td><td>Too thin to rank for commercial terms</td></tr>
+        <tr><td><span class="pill bad">High</span></td><td>Blog posts ~200 words with unsourced statistics and review-gating advice</td><td><code>data/blog-posts.ts</code></td><td>Thin content; the review advice broke Google policy</td></tr>
+        <tr><td><span class="pill bad">High</span></td><td>Blog article headings, lists and links unstyled (typography plugin not installed)</td><td>Blog template</td><td>Articles looked like one wall of text</td></tr>
+        <tr><td><span class="pill warn">Medium</span></td><td>Organization/WebSite schema output twice on the homepage; FAQPage twice on /industries</td><td>Layout + pages</td><td>Duplicate entities confuse parsers</td></tr>
+        <tr><td><span class="pill warn">Medium</span></td><td>Pricing FAQ answers not in the HTML until clicked</td><td>/pricing</td><td>FAQ schema pointed to text Google couldn’t see</td></tr>
+        <tr><td><span class="pill warn">Medium</span></td><td>Blog pagination hid 3 of 7 posts behind JavaScript</td><td>/blog</td><td>Posts not crawlable from the blog index</td></tr>
+        <tr><td><span class="pill warn">Medium</span></td><td>Service descriptions duplicated in two data files</td><td><code>data/services.ts</code></td><td>Copy drifts; the homepage showed old text</td></tr>
+        <tr><td><span class="pill warn">Medium</span></td><td>llms.txt described old pages, a fake case study and a Noida address</td><td><code>public/llms*.txt</code></td><td>AI search engines repeat what these files say</td></tr>
+        <tr><td><span class="pill warn">Low</span></td><td>Duplicated process-step headings, H1→H4 jumps, missing aria-expanded, low-contrast labels</td><td>Various</td><td>Accessibility and heading clarity</td></tr>
+        <tr><td><span class="pill warn">Low</span></td><td>Duplicate <code>favicon.ico</code> in <code>app/</code> and <code>public/</code></td><td>Dev server</td><td>500 error in development</td></tr>
+      </tbody>
+    </table></div>
+  </section>
+
+  <section id="fixed">
+    <h2>3. What we fixed</h2>
+    <h3>Structure</h3>
+    <ul class="list">
+      <li><b>/case-studies → /playbooks.</b> Four example plans with real research, keyword groups, bidding stages, landing page blueprint, WhatsApp flow and CP lead registration — each labelled “example plan, not a client result”.</li>
+      <li><b>/testimonials removed</b> (placeholders), redirected to /playbooks.</li>
+      <li><b>New /channel-partners page</b>; <b>/industries/real-estate</b> repositioned for developers and builders. Both built from one template.</li>
+      <li><b>3 new guides</b> targeting 880 searches/month each: EOI in real estate, channel partner in real estate, real estate ad examples.</li>
+    </ul>
+    <h3>Content</h3>
+    <ul class="list">
+      <li>Service pages rewritten around searched terms, with problems, deliverables, process, who it’s for, 7–8 FAQs and links to related services, playbooks and guides.</li>
+      <li>Homepage: keyword-led H1, honest trust line, “Who we help”, playbooks, service-area section and 7 FAQs.</li>
+      <li>About, Contact, Pricing, footer and CTA banner rewritten without superlatives or unverifiable claims.</li>
+      <li>4 existing blog posts rewritten to 625–780 words each with sources where facts are cited; the Google vs Meta post keeps its real May 2026 date.</li>
+    </ul>
+    <h3>Technical</h3>
+    <ul class="list">
+      <li>One site-wide <code>@graph</code>: Organization + ProfessionalService (service-area business, no address, no rating), WebSite, founder Person.</li>
+      <li>Per page: Service, BlogPosting, FAQPage, BreadcrumbList, AboutPage, ContactPage, CollectionPage — each once.</li>
+      <li>Central metadata registry; titles render exactly as written; Open Graph and Twitter cards on every page; article dates on posts.</li>
+      <li>Sitemap, llms.txt and llms-full.txt generated from the data files, so they can’t go stale.</li>
+      <li>GA4 <code>generate_lead</code>, <code>booking_click</code> and <code>cta_click</code> events; phone and WhatsApp clicks now include the source page.</li>
+    </ul>
+  </section>
+
+  <section id="pages">
+    <h2>4. Pages changed</h2>
+    <div class="tablewrap"><table>
+      <thead><tr><th>Page</th><th>Title</th><th>H1</th><th>Content</th><th>Schema</th><th>Links</th></tr></thead>
+      <tbody>
+        <tr><td><code>/</code></td><td>✓</td><td>✓</td><td>Rewritten sections</td><td>Duplicates removed; FAQPage</td><td>✓</td></tr>
+        <tr><td><code>/services</code></td><td>✓</td><td>✓</td><td>Expanded</td><td>CollectionPage</td><td>✓</td></tr>
+        <tr><td><code>/services/high-converting-landing-pages</code></td><td>✓</td><td>✓</td><td>Full rewrite</td><td>Service, FAQPage</td><td>✓</td></tr>
+        <tr><td><code>/services/paid-ads</code></td><td>✓</td><td>✓</td><td>Full rewrite</td><td>Service, FAQPage</td><td>✓</td></tr>
+        <tr><td><code>/services/ai-automation</code></td><td>✓</td><td>✓</td><td>Full rewrite</td><td>Service, FAQPage</td><td>✓</td></tr>
+        <tr><td><code>/industries/real-estate</code></td><td>✓</td><td>✓</td><td>Full rewrite (developers)</td><td>Service, FAQPage</td><td>✓</td></tr>
+        <tr><td><code>/channel-partners</code></td><td colspan="5">New page</td></tr>
+        <tr><td><code>/playbooks</code> + 4 plans</td><td colspan="5">New pages</td></tr>
+        <tr><td><code>/about</code></td><td>✓</td><td>✓</td><td>Full rewrite</td><td>AboutPage; HowTo removed</td><td>✓</td></tr>
+        <tr><td><code>/contact</code></td><td>✓</td><td>✓</td><td>Rewritten; booking link fixed</td><td>ContactPage</td><td>✓</td></tr>
+        <tr><td><code>/pricing</code></td><td>✓</td><td>✓</td><td>Plans and FAQs rewritten</td><td>FAQPage (single source)</td><td>✓</td></tr>
+        <tr><td><code>/blog</code></td><td>✓</td><td>✓</td><td>All posts crawlable</td><td>CollectionPage</td><td>✓</td></tr>
+        <tr><td>7 blog posts</td><td>✓</td><td>✓</td><td>4 rewritten, 3 new</td><td>BlogPosting with dates</td><td>✓</td></tr>
+        <tr><td><code>/privacy-policy</code>, <code>/terms</code></td><td>✓</td><td>—</td><td>Jurisdiction field centralised</td><td>Irrelevant FAQ schema removed</td><td>—</td></tr>
+        <tr><td><code>/case-studies*</code>, <code>/testimonials</code></td><td colspan="5">Removed — 301 to /playbooks</td></tr>
+      </tbody>
+    </table></div>
+  </section>
+
+  <section id="keywords">
+    <h2>5. Keyword map</h2>
+    <p class="muted">Monthly Google searches in India (Google Ads data via DataForSEO, September 2026). Search results were checked for each main term to confirm intent. The same map lives in <code>docs/SEO.md</code>.</p>
+    <div class="tablewrap"><table>
+      <thead><tr><th>Page</th><th>Primary</th><th>Secondary</th><th>Intent</th></tr></thead>
+      <tbody>
+        <tr><td><code>/</code></td><td>real estate marketing agency (880)</td><td>real estate digital marketing agency (720)</td><td>Commercial</td></tr>
+        <tr><td><code>/services</code></td><td>real estate marketing services (260)</td><td>real estate digital marketing services (210)</td><td>Commercial</td></tr>
+        <tr><td>Landing pages</td><td>real estate landing page design</td><td>real estate website design (590), real estate landing page (390)</td><td>Commercial</td></tr>
+        <tr><td>Paid ads</td><td>real estate lead generation (1,300)</td><td>real estate ads (1,900), facebook ads (320), google ads (260) for real estate</td><td>Commercial</td></tr>
+        <tr><td>Automation</td><td>real estate chatbot (480)</td><td>whatsapp automation for real estate, CRM integration</td><td>Commercial</td></tr>
+        <tr><td>Developers</td><td>marketing for real estate developers</td><td>builder marketing</td><td>Commercial</td></tr>
+        <tr><td>Channel partners</td><td>channel partner marketing</td><td>marketing for brokers</td><td>Commercial</td></tr>
+        <tr><td><code>/playbooks</code></td><td>real estate marketing strategy (320)</td><td>marketing plan examples</td><td>Informational</td></tr>
+        <tr><td>EOI guide</td><td>what is eoi in real estate (880)</td><td>eoi vs token, eoi refund</td><td>Informational</td></tr>
+        <tr><td>CP guide</td><td>channel partner in real estate (880)</td><td>CP commission, RERA agent</td><td>Informational</td></tr>
+        <tr><td>Ad examples</td><td>creative real estate ads (880)</td><td>real estate ad examples</td><td>Informational</td></tr>
+      </tbody>
+    </table></div>
+    <p class="callout"><b>Deliberately not targeted:</b> “real estate crm” (2,400) — the results are CRM software vendors and “top 10” lists, so an agency page can’t compete. Real estate + city searches were too small to justify separate city pages.</p>
+  </section>
+
+  <section id="files">
+    <h2>6. Files changed</h2>
+    <div class="tablewrap"><table>
+      <thead><tr><th>File</th><th>Change</th><th>Reason</th></tr></thead>
+      <tbody>
+        <tr><td><code>lib/schema.ts</code></td><td>Rewritten</td><td>Single entity graph; no address or rating; typed page-level helpers</td></tr>
+        <tr><td><code>lib/seo-config.ts</code></td><td>Rewritten</td><td>Exact titles, canonical, OG/Twitter, central page metadata</td></tr>
+        <tr><td><code>lib/llms.ts</code>, <code>app/llms*.txt/route.ts</code></td><td>New</td><td>Generated llms files replace stale static ones</td></tr>
+        <tr><td><code>data/site.ts</code></td><td>Expanded</td><td>Single source of business facts and links</td></tr>
+        <tr><td><code>data/services-data.ts</code></td><td>Rewritten</td><td>Full service content</td></tr>
+        <tr><td><code>data/audiences.ts</code>, <code>data/playbooks.ts</code>, <code>data/pricing.ts</code></td><td>New</td><td>Content for new pages and shared FAQs</td></tr>
+        <tr><td><code>data/blog-posts.ts</code>, <code>data/faqs.ts</code></td><td>Rewritten</td><td>Real content; honest FAQs</td></tr>
+        <tr><td><code>app/services/[slug]</code>, <code>app/services</code></td><td>Rewritten</td><td>New sections, Service schema, related links</td></tr>
+        <tr><td><code>app/playbooks/**</code>, <code>app/channel-partners</code></td><td>New</td><td>New pages</td></tr>
+        <tr><td><code>components/services/AudiencePageTemplate.tsx</code></td><td>New</td><td>Replaces IndustryPageTemplate</td></tr>
+        <tr><td><code>components/sections/*</code></td><td>Edited / new</td><td>Hero, services grid, process, locations, CTA; new AudienceSplit and PlaybooksPreview</td></tr>
+        <tr><td><code>components/ui/Breadcrumb.tsx</code>, <code>FaqAccordion.tsx</code></td><td>Edited</td><td>Emit their own schema; accessibility</td></tr>
+        <tr><td><code>components/layout/*</code></td><td>Edited</td><td>Nav, footer and cookie banner links, claims and accessibility</td></tr>
+        <tr><td><code>app/about</code>, <code>contact</code>, <code>pricing</code>, <code>blog/**</code>, legal pages</td><td>Rewritten / edited</td><td>Copy, schema, a11y, booking-link fix</td></tr>
+        <tr><td><code>app/sitemap.ts</code>, <code>next.config.mjs</code></td><td>Rewritten / edited</td><td>Data-driven sitemap; redirects for removed pages</td></tr>
+        <tr><td><code>app/globals.css</code>, <code>lib/analytics.ts</code>, <code>AnalyticsTracker.tsx</code></td><td>Edited</td><td>Article styles; conversion events</td></tr>
+        <tr><td>11 files removed</td><td>Deleted</td><td>Case studies, testimonials, industries data, stats, duplicate services data, unused sections, duplicate favicon</td></tr>
+        <tr><td><code>docs/SEO.md</code>, <code>scripts/seo/*</code></td><td>New</td><td>Keyword map, rules, and repeatable checks</td></tr>
+      </tbody>
+    </table></div>
+  </section>
+
+  <section id="validation">
+    <h2>7. Validation</h2>
+    <div class="cards">
+      <div class="card"><span class="k">Live site (after merge)</span><span class="v">25 URLs, 0 problems</span><span class="muted">All pages 7–8 visible FAQs; 46 redirects pass; apex → www 308</span></div>
+      <div class="card"><span class="k">Search Console</span><span class="v">Landing pages URL indexed</span><span class="muted">Sitemap resubmitted; new pages pending discovery</span></div>
+      <div class="card"><span class="k">Build</span><span class="v">34 pages, 0 type errors</span><span class="muted">Lint: 0 errors, 2 old warnings</span></div>
+      <div class="card"><span class="k">Crawl (production build)</span><span class="v">25 URLs, 0 problems</span><span class="muted">Titles, descriptions, canonicals, H1s, JSON-LD, links, orphans</span></div>
+      <div class="card"><span class="k">Redirects</span><span class="v">46 of 46 pass</span><span class="muted">Single hop to a 200 page</span></div>
+      <div class="card"><span class="k">Lighthouse (local, mobile)</span><span class="v">SEO 92 · A11y 91–92 · CLS 0</span><span class="muted">SEO 92 because robots.txt failed during the low-memory test run; it returns 200 live</span></div>
+    </div>
+  </section>
+
+  <section id="remaining">
+    <h2>8. What can’t be fixed from the code — your to-do</h2>
+    <div class="tablewrap"><table>
+      <thead><tr><th>Priority</th><th>Action</th><th>Why</th></tr></thead>
+      <tbody>
+        <tr><td><span class="pill bad">Now</span></td><td>Request indexing in Search Console for the homepage, /services/paid-ads, /services/ai-automation, /channel-partners, /playbooks and the 3 new guides</td><td>Speeds up discovery; Google allows about 10 requests a day</td></tr>
+        <tr><td><span class="pill bad">Now</span></td><td>Update the Privacy Policy (ideally with a lawyer) to cover Meta Pixel, Microsoft Clarity, Supabase lead storage, email notifications and the current service cities</td><td>The policy doesn’t describe all the data processing the site does</td></tr>
+        <tr><td><span class="pill bad">This week</span></td><td>Verify your Google Business Profile as a service-area business (no address), same name, phone and website</td><td>The biggest local-search signal still missing</td></tr>
+        <tr><td><span class="pill warn">This week</span></td><td>Send your personal Google Skillshop / HubSpot certificate links</td><td>The About page links only to course pages, which don’t verify anything</td></tr>
+        <tr><td><span class="pill warn">This week</span></td><td>Confirm or correct: pricing “starts from” amounts, Mon–Sat 9–7 hours, legal jurisdiction (Noida, Delhi NCR) in the Terms</td><td>Carried over from the old site; I didn’t change them</td></tr>
+        <tr><td><span class="pill warn">This month</span></td><td>Mark <code>generate_lead</code> and <code>booking_click</code> as key events in GA4</td><td>Makes leads visible in reports and Google Ads</td></tr>
+        <tr><td><span class="pill warn">This month</span></td><td>Collect real Google reviews from real clients (every client, not just happy ones)</td><td>Replaces the removed rating with real proof</td></tr>
+        <tr><td><span class="pill warn">When ready</span></td><td>Share real results (with client permission) to turn a playbook into a real case study</td><td>Real proof is the strongest trust signal</td></tr>
+        <tr><td><span class="pill warn">Ongoing</span></td><td>Backlinks: CREDAI/NAREDCO chapters, real estate directories, guest posts, podcast appearances</td><td>Authority can’t be built in code</td></tr>
+      </tbody>
+    </table></div>
+  </section>
+
+  <section id="roadmap">
+    <h2>9. Next 30 / 60 / 90 days</h2>
+    <div class="roadmap">
+      <div class="card"><span class="k">Days 1–30</span><h3>Get indexed and verified</h3><ul class="list"><li>Merge, request indexing, watch Search Console Pages report weekly</li><li>Verify Business Profile; add service areas, photos, weekly posts</li><li>Run PageSpeed Insights live; fix LCP if above 2.5 s</li><li>Set GA4 key events</li></ul></div>
+      <div class="card"><span class="k">Days 31–60</span><h3>Grow the content cluster</h3><ul class="list"><li>New guides: cost per site visit, fake leads on Facebook, RERA ad rules, Meta housing ad category, 99acres vs your own ads</li><li>First real Google reviews</li><li>Check which queries each page appears for and adjust titles</li></ul></div>
+      <div class="card"><span class="k">Days 61–90</span><h3>Authority and proof</h3><ul class="list"><li>First real case study (with permission)</li><li>5–10 relevant backlinks from real estate bodies and publications</li><li>Decide on city pages using Search Console data, not guesswork</li><li>Refresh search volumes with DataForSEO</li></ul></div>
+    </div>
+  </section>
+
+  <footer>Prepared by Claude for Veloxis Global. Search volumes: Google Ads data via DataForSEO, India, September 2026. Checks: <code>scripts/seo/crawl.js</code> and <code>scripts/seo/check-redirects.js</code>.</footer>
+</div>
