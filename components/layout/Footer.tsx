@@ -38,9 +38,9 @@ const footerColumns = [
   },
   {
     id: 'resources',
-    title: 'Guides',
+    title: 'Blog & Articles',
     links: [
-      { label: 'All Guides', href: '/guides' },
+      { label: 'All Blog Posts', href: '/blog' },
       { label: 'Free Website Audit Tool', href: '/tools/website-audit' },
       { label: 'How to Get Real Estate Leads', href: '/blog/how-to-generate-real-estate-leads' },
       { label: 'Meta Ads for Real Estate', href: '/blog/meta-ads-for-real-estate-india' },
