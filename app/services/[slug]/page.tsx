@@ -16,6 +16,8 @@ import { getServiceSchema } from '../../../lib/schema';
 import { CtaBanner } from '../../../components/sections/CtaBanner';
 import { LeadSystemCallout } from '../../../components/sections/LeadSystemCallout';
 import { ReviewedLine } from '../../../components/ui/ReviewedLine';
+import { PaidAdsBenchmarks } from '../../../components/services/PaidAdsBenchmarks';
+import { WhatsAppFlowSimulator } from '../../../components/services/WhatsAppFlowSimulator';
 import { Target, CheckCircle, AlertTriangle, ArrowRight } from 'lucide-react';
 
 const serviceHeroImages: Record<string, { src: string; alt: string }> = {
@@ -221,6 +223,9 @@ export default async function ServicePage({ params }: PageProps) {
                 </ol>
               </div>
             </div>
+
+            {service.slug === 'paid-ads' && <PaidAdsBenchmarks />}
+            {service.slug === 'ai-automation' && <WhatsAppFlowSimulator />}
           </div>
 
           {/* Sidebar */}
