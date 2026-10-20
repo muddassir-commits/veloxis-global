@@ -62,10 +62,10 @@ export const HeroSection: React.FC = () => {
               Get a free marketing audit →
             </Button>
             <Link
-              href="/playbooks"
+              href="/real-estate-lead-system"
               className="group inline-flex items-center gap-1.5 text-[15px] font-bold text-white/80 hover:text-white transition-all px-4 py-3 border border-white/20 rounded-xl hover:bg-white/10 hover:border-white/40 backdrop-blur-sm"
             >
-              See example plans
+              How the Lead System works
               <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" aria-hidden="true" />
             </Link>
           </div>
