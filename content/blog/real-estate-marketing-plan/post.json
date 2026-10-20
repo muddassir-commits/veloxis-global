@@ -1,0 +1,62 @@
+{
+  "title": "Real Estate Marketing Plan: Step-by-Step Blueprint for Builders",
+  "seoTitle": "Real Estate Marketing Plan: Builder Blueprint (2026)",
+  "excerpt": "A complete real estate marketing plan for developers in India: budget allocation, media mix, digital funnels, and milestone KPIs across UP and Delhi NCR.",
+  "date": "2026-10-20",
+  "category": "Guides",
+  "service": "paid-ads",
+  "image": "/images/people/blog/google-meta-reviewing-report.jpg",
+  "imageAlt": "Real estate marketing director reviewing 12-month campaign budget allocations and media mix projections on a laptop",
+  "inlineImages": [
+    {
+      "src": "/images/people/blog/social-content-calendar-whiteboard.jpg",
+      "alt": "Comprehensive real estate marketing launch timeline and channel schedule mapped on a project planning board",
+      "caption": "A structured 12-month marketing plan maps out budget allocation across pre-launch, main launch, and sustained inventory sales.",
+      "beforeHeading": "budget-allocation-matrix"
+    },
+    {
+      "src": "/images/people/blog/meta-ads-marketer-planning-campaign.jpg",
+      "alt": "Performance marketing strategist configuring target buyer personas and demographic parameters for property ads",
+      "caption": "Balancing high-intent Google Search with high-scale Meta retargeting ensures a continuous flow of qualified buyer inquiries.",
+      "beforeHeading": "the-omnichannel-media-mix"
+    }
+  ],
+  "about": [
+    { "name": "Marketing Plan", "sameAs": "https://en.wikipedia.org/wiki/Marketing_plan" },
+    { "name": "Real Estate Development", "sameAs": "https://en.wikipedia.org/wiki/Real_estate_development" }
+  ],
+  "faqs": [
+    {
+      "question": "What percentage of project cost should be allocated to real estate marketing?",
+      "answer": "Industry standards across North India dictate allocating 2.5% to 4.5% of total project revenue (Gross Development Value) to sales and marketing, depending on project scale, competitive density, and ticket size."
+    },
+    {
+      "question": "How should a builder divide budget between digital and traditional marketing?",
+      "answer": "In 2026, progressive developers split budgets 60% digital (Meta Ads, Google Search, programmatic, WhatsApp automation) and 40% traditional (outdoor hoardings, newspaper launch jackets, and on-site experience centers)."
+    },
+    {
+      "question": "What is the typical customer acquisition cost (CAC) for residential flats in NCR?",
+      "answer": "For mid-segment apartments (₹70L–₹1.5Cr) in Noida or Lucknow, customer acquisition costs typically range between 1.8% to 2.5% of the apartment value, translating to ₹1.5L to ₹3L per closed sale."
+    },
+    {
+      "question": "When should marketing start for a new residential development?",
+      "answer": "Marketing strategy begins 90 days before launch for positioning and creative production. However, public ad spend and lead generation can only commence after obtaining official RERA registration."
+    },
+    {
+      "question": "What are the 3 phases of a project marketing lifecycle?",
+      "answer": "The lifecycle includes: Phase 1 Pre-Launch (RERA compliance, channel partner onboarding), Phase 2 Grand Launch (omnichannel blitz, introductory pricing), and Phase 3 Sustained Velocity (milestone construction updates, referral programs)."
+    },
+    {
+      "question": "How do channel partners fit into the marketing plan?",
+      "answer": "Channel partners act as an outsourced sales force. The marketing plan must allocate budget for CP meets, incentive slabs, digital sales kits, and co-branded landing pages to activate top local brokers."
+    },
+    {
+      "question": "Which digital marketing channel has the highest ROI for property sales?",
+      "answer": "Google Search ads deliver the highest purchase intent with lowest Cost Per Site Visit, while Meta (Instagram/Facebook) delivers the largest volume of inquiries and brand awareness at scale."
+    },
+    {
+      "question": "How can builders track marketing ROI across multiple agencies?",
+      "answer": "Implement unified CRM lead source attribution with unique UTM parameters, dedicated virtual phone numbers, and daily Cost-Per-Site-Visit (CPSV) tracking across every active channel."
+    }
+  ]
+}

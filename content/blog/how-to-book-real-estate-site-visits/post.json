@@ -1,0 +1,62 @@
+{
+  "title": "How to Book Site Visits from Online Enquiries: The 7-Minute Rule",
+  "seoTitle": "How to Book Real Estate Site Visits (7-Minute Rule)",
+  "excerpt": "How top builders convert digital clicks into booked property tours: the 7-minute call script, WhatsApp scheduling automation, and weekend visit incentives.",
+  "date": "2026-10-19",
+  "category": "Landing Pages",
+  "service": "high-converting-landing-pages",
+  "image": "/images/people/blog/leads-couple-site-visit.jpg",
+  "imageAlt": "Real estate sales consultant giving an on-site property tour to a family at a modern residential community",
+  "inlineImages": [
+    {
+      "src": "/images/people/blog/ad-examples-marketer-reviewing-phone.jpg",
+      "alt": "Real estate marketing executive reviewing site visit booking metrics on a smartphone",
+      "caption": "The bridge between digital ad spend and developer revenue is the physical site visit.",
+      "beforeHeading": "the-seven-minute-framework"
+    },
+    {
+      "src": "/images/people/blog/channel-partner-advisor-with-clients.jpg",
+      "alt": "Channel partner presenting floor plans and booking discounts to buyers in a project sample flat",
+      "caption": "Offering specific 2-slot site visit options converts twice as many buyers as open-ended questions.",
+      "beforeHeading": "high-converting-calling-script"
+    }
+  ],
+  "about": [
+    { "name": "Site Visit", "sameAs": "https://en.wikipedia.org/wiki/Site_visit" },
+    { "name": "Sales Conversion", "sameAs": "https://en.wikipedia.org/wiki/Conversion_marketing" }
+  ],
+  "faqs": [
+    {
+      "question": "What is the 7-minute rule for booking real estate site visits?",
+      "answer": "The 7-minute rule states that initiating contact within 7 minutes of an online inquiry yields a 391% increase in site visit commitments compared to reaching out after 30 minutes, because the buyer's focus is still on your property."
+    },
+    {
+      "question": "What is the benchmark site visit conversion rate in India?",
+      "answer": "Average digital real estate campaigns achieve a 3% to 5% site visit rate from raw leads. High-performing funnels using instant WhatsApp automation and fast qualification achieve 12% to 18% site visit completion."
+    },
+    {
+      "question": "Why do prospective buyers agree to a site visit and then not show up?",
+      "answer": "No-shows happen because the prospect lacked conviction, received no reminder sequence, or was overwhelmed by spam calls from other brokers. Automated WhatsApp location pins and confirmation calls reduce no-shows by 50%."
+    },
+    {
+      "question": "Should builders offer free cab pickups for site visits?",
+      "answer": "Yes. In competitive micro-markets like Noida Expressway or Greater Noida West, offering an Uber/Ola voucher or complimentary cab service increases physical attendance on high-ticket luxury projects (₹1.5Cr+) by over 30%."
+    },
+    {
+      "question": "How should sales executives ask for the site visit appointment?",
+      "answer": "Never ask open-ended questions like 'When can you visit?'. Use the alternate choice technique: 'We have site tour slots available this Saturday at 11:30 AM or Sunday at 3:30 PM. Which works better for your family?'"
+    },
+    {
+      "question": "What role does WhatsApp play in confirming site visits?",
+      "answer": "WhatsApp serves as the verification anchor: send a live Google Map pin, project entry gate directions, the relationship manager's direct contact card, and a digital visitor pass."
+    },
+    {
+      "question": "How many times should a sales rep follow up before dropping a lead?",
+      "answer": "Sales reps should execute a minimum of 6 structured follow-ups across 14 days (calls, WhatsApp video teasers, and SMS reminders) before reassigning a cold lead to the automated nurture database."
+    },
+    {
+      "question": "Can virtual 3D tours replace physical site visits?",
+      "answer": "Virtual 3D tours are excellent micro-qualification tools that filter out casual browsers, but they do not replace physical site visits where families evaluate construction quality, neighborhood vibes, and sample flat finishes."
+    }
+  ]
+}

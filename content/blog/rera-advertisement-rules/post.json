@@ -1,0 +1,62 @@
+{
+  "title": "RERA Advertisement Rules: Compliance Checklist for Digital and Print Ads",
+  "seoTitle": "RERA Advertisement Rules: Ad Compliance Guide (2026)",
+  "excerpt": "Official RERA advertisement rules for builders and brokers: QR codes, registration numbers, disclaimer sizes, and avoiding heavy penalties in UP and NCR.",
+  "date": "2026-10-19",
+  "category": "Guides",
+  "service": "paid-ads",
+  "image": "/images/people/blog/rera-architects-checking-plans.jpg",
+  "imageAlt": "Legal advisors and architects reviewing RERA approval certificates and ad layouts on a drafting table",
+  "inlineImages": [
+    {
+      "src": "/images/people/blog/rera-blank-billboard.jpg",
+      "alt": "Highway outdoor hoarding frame showing clear section for RERA registration number and official website URL",
+      "caption": "All outdoor hoardings and digital banners must display the official RERA registration number with readable font hierarchy.",
+      "beforeHeading": "mandatory-elements-checklist"
+    },
+    {
+      "src": "/images/people/blog/rera-agent-reading-contract.jpg",
+      "alt": "Real estate channel partner verifying agent RERA registration details against project marketing collateral",
+      "caption": "Channel partners promoting builder projects must display both the project RERA and their own individual agent registration ID.",
+      "beforeHeading": "channel-partner-compliance-rules"
+    }
+  ],
+  "about": [
+    { "name": "Real Estate (Regulation and Development) Act, 2016", "sameAs": "https://en.wikipedia.org/wiki/Real_Estate_(Regulation_and_Development)_Act,_2016" },
+    { "name": "UP RERA", "sameAs": "https://up-rera.in" }
+  ],
+  "faqs": [
+    {
+      "question": "Can a builder advertise a project before getting RERA approval?",
+      "answer": "No. Under Section 3 of the RERA Act, 2016, no promoter can advertise, market, book, sell, or invite persons to purchase any plot, apartment, or building without first registering the project with the state Real Estate Regulatory Authority."
+    },
+    {
+      "question": "What is the penalty for advertising an unregistered real estate project?",
+      "answer": "Promoters violating Section 3 face severe financial penalties of up to 10% of the estimated project cost, and potential imprisonment of up to 3 years for continued non-compliance."
+    },
+    {
+      "question": "Are social media ads and Instagram Reels covered under RERA advertising rules?",
+      "answer": "Yes. Digital advertisements on Meta (Facebook, Instagram), Google Ads, YouTube, email newsletters, and WhatsApp broadcasts are legally classified as advertisements and must strictly display the RERA registration number and portal URL."
+    },
+    {
+      "question": "Is the RERA QR code mandatory in print and outdoor advertisements?",
+      "answer": "Yes. State authorities such as MahaRERA and UP RERA mandate a scannable QR code on all newspaper advertisements, brochures, flyers, and highway hoardings pointing directly to the project's official portal listing."
+    },
+    {
+      "question": "Do channel partners need to display their own RERA number in ads?",
+      "answer": "Yes. Under Section 10 of RERA, real estate brokers and channel partners must explicitly display their individual or firm RERA registration number alongside the developer's project RERA ID in all marketing communications."
+    },
+    {
+      "question": "What are the rules regarding delivery timelines and possession dates in ads?",
+      "answer": "Any advertised possession date must match the exact completion date declared in the official RERA affidavit. Advertising an earlier delivery date than what is registered on the portal is treated as misleading advertising."
+    },
+    {
+      "question": "Are terms like 'Luxurious', 'World-Class', or 'Starting Price' regulated?",
+      "answer": "Yes. Misleading price representations (such as advertising base selling price without disclosing mandatory charges like EDC, IDC, or GST) can attract penalties under unfair trade practices."
+    },
+    {
+      "question": "How can builders ensure their landing pages are 100% RERA compliant?",
+      "answer": "Landing pages must prominently feature the project RERA number in the header and footer, provide a direct link to the state RERA portal, show the registered promoter legal entity, and include the official project name as registered."
+    }
+  ]
+}
