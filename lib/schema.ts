@@ -186,3 +186,38 @@ export const getWebPageSchema = ({
   ...(dateModified ? { dateModified } : {}),
   inLanguage: 'en-IN',
 });
+
+export const getVideoSchema = ({
+  name,
+  description,
+  thumbnailUrl,
+  uploadDate,
+  duration,
+  contentUrl,
+  embedUrl,
+  transcript,
+}: {
+  name: string;
+  description: string;
+  thumbnailUrl: string;
+  uploadDate: string;
+  duration?: string;
+  contentUrl?: string;
+  embedUrl?: string;
+  transcript?: string;
+}) => ({
+  '@context': 'https://schema.org',
+  '@type': 'VideoObject',
+  name,
+  description,
+  thumbnailUrl: thumbnailUrl.startsWith('http') ? thumbnailUrl : `${BASE}${thumbnailUrl}`,
+  uploadDate,
+  ...(duration ? { duration } : {}),
+  ...(contentUrl ? { contentUrl } : {}),
+  ...(embedUrl ? { embedUrl } : {}),
+  ...(transcript ? { transcript } : {}),
+  inLanguage: ['hi-IN', 'en-IN'],
+  publisher: { '@id': ORG_ID },
+  author: { '@type': 'Person', '@id': FOUNDER_ID, name: siteData.founder },
+});
+
