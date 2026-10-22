@@ -54,6 +54,8 @@ export const leadSystemSteps = [
 export const leadSystemIncluded = [
   {
     group: 'Landing page',
+    href: '/services/high-converting-landing-pages',
+    linkLabel: 'Dedicated landing page service',
     items: [
       'One landing page per project, built and hosted for you',
       'Mobile-first, loads fast on a 4G phone',
@@ -63,6 +65,8 @@ export const leadSystemIncluded = [
   },
   {
     group: 'Meta ads',
+    href: '/services/paid-ads',
+    linkLabel: 'Dedicated paid ads service',
     items: [
       'Campaign setup on Facebook and Instagram',
       'Ad creatives and copy for your project',
@@ -72,6 +76,8 @@ export const leadSystemIncluded = [
   },
   {
     group: 'WhatsApp flow',
+    href: '/services/ai-automation',
+    linkLabel: 'Dedicated AI & automation service',
     items: [
       'WhatsApp Business API on your own number',
       'Instant auto-reply with brochure, location and price band',

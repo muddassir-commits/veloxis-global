@@ -261,6 +261,15 @@ export default function LeadSystemPage() {
                       </li>
                     ))}
                   </ul>
+                  {'href' in g && g.href && (
+                    <Link
+                      href={g.href as string}
+                      className="inline-flex items-center gap-1.5 text-xs font-bold text-royal-blue hover:underline mt-5 pt-4 border-t border-slate-200/70"
+                    >
+                      <span>{'linkLabel' in g ? (g.linkLabel as string) : 'Learn more'}</span>
+                      <ArrowRight className="w-3.5 h-3.5" aria-hidden="true" />
+                    </Link>
+                  )}
                 </div>
               );
             })}

@@ -192,8 +192,34 @@ export default function BlogPostContent({ post, relatedPosts, service }: Props) 
               })()}
             </div>
 
+            {/* In-Article Service Bridge (Direct Link to Service) */}
+            {service && (
+              <div className="my-10 p-6 sm:p-8 rounded-2xl bg-gradient-to-br from-slate-900 via-slate-850 to-slate-900 text-white border border-slate-800 shadow-xl relative overflow-hidden text-left">
+                <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-5">
+                  <div className="flex-1">
+                    <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/10 text-emerald-400 text-xs font-bold tracking-wider uppercase w-fit border border-emerald-500/20 mb-3">
+                      Dedicated Real Estate Service
+                    </span>
+                    <h3 className="text-xl sm:text-2xl font-extrabold text-white tracking-tight leading-snug">
+                      Looking for expert execution on {service.title}?
+                    </h3>
+                    <p className="text-sm sm:text-base text-slate-300 mt-2 leading-relaxed">
+                      {service.shortDesc}
+                    </p>
+                  </div>
+                  <Link
+                    href={`/services/${service.slug}`}
+                    className="shrink-0 inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-royal-blue hover:bg-blue-600 text-white font-bold text-sm shadow-lg shadow-blue-950/40 transition-all duration-300 hover:scale-[1.02]"
+                  >
+                    <span>Explore Service Details</span>
+                    <ChevronRight className="w-4 h-4" />
+                  </Link>
+                </div>
+              </div>
+            )}
+
             {/* Author Bio Box */}
-            <div className="bg-slate-50 border border-slate-100 rounded-2xl p-6 sm:p-8 mt-12 w-full grid grid-cols-1 sm:grid-cols-12 gap-6 items-center">
+            <div className="bg-slate-50 border border-slate-100 rounded-2xl p-6 sm:p-8 mt-6 w-full grid grid-cols-1 sm:grid-cols-12 gap-6 items-center">
               <div className="sm:col-span-3 flex justify-center">
                 <Link href="/about">
                   <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-full overflow-hidden bg-slate-100 relative shadow-sm border border-slate-200 hover:opacity-90 transition-opacity">
