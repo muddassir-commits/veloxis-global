@@ -1,0 +1,64 @@
+{
+  "title": "Real Estate Marketing Budget Guide: How Much Should Builders Spend?",
+  "seoTitle": "Real Estate Marketing Budget Allocation Guide (2026)",
+  "excerpt": "How top builders calculate marketing spend as a percentage of gross development value (GDV), allocate across channels, and optimize CAC.",
+  "date": "2026-10-23",
+  "category": "Paid Ads",
+  "service": "paid-ads",
+  "image": "/images/people/blog/google-ads-analyst-reviewing-data.jpg",
+  "imageAlt": "Real estate finance and marketing directors reviewing quarterly budget allocation spreadsheet",
+  "inlineImages": [
+    {
+      "src": "/images/people/blog/google-meta-reviewing-report.jpg",
+      "alt": "Executive review of marketing spend return on investment and cost per site visit metrics",
+      "caption": "Allocating capital based on Customer Acquisition Cost (CAC) prevents runaway budget burns.",
+      "beforeHeading": "the-industry-standard-percentage-of-gdv"
+    },
+    {
+      "src": "/images/people/blog/social-team-reviewing-results.jpg",
+      "alt": "Digital growth team analyzing channel performance benchmarks across Meta and Google",
+      "caption": "Modern developers allocate over 65% of ongoing budgets to high-velocity digital funnels.",
+      "beforeHeading": "the-70-20-10-channel-allocation-rule"
+    }
+  ],
+  "about": [
+    {
+      "name": "Marketing budget",
+      "sameAs": "https://en.wikipedia.org/wiki/Marketing_budget"
+    },
+    {
+      "name": "Customer acquisition cost",
+      "sameAs": "https://en.wikipedia.org/wiki/Customer_acquisition_cost"
+    }
+  ],
+  "faqs": [
+    {
+      "question": "What percentage of GDV should a real estate developer spend on marketing?",
+      "answer": "In India, developers allocate between 2% and 4.5% of Gross Development Value (GDV) to total sales and marketing expenses, depending on project scale, brand equity, and market competition."
+    },
+    {
+      "question": "How much marketing budget is required to launch a ₹100 Crore residential tower?",
+      "answer": "A ₹100 Cr tower typically requires a total marketing allocation of ₹2.5 Cr to ₹3.5 Cr across its lifecycle, with approximately ₹80 Lakhs to ₹1.2 Cr deployed during the initial 90-day launch phase."
+    },
+    {
+      "question": "What is an acceptable Customer Acquisition Cost (CAC) in Indian real estate?",
+      "answer": "For mid-income housing (₹60L–₹1.2Cr), target CAC is 1.5% to 2.5% of unit value (₹1.2L–₹2.5L per closed booking). For luxury developments, CAC can range from 2.5% to 4%."
+    },
+    {
+      "question": "Why do traditional real estate marketing budgets fail?",
+      "answer": "Because builders commit 60% of their funds upfront to un-trackable print ads and outdoor hoardings with zero ongoing retargeting or lead qualification infrastructure."
+    },
+    {
+      "question": "How should channel partner brokerage relate to marketing budget?",
+      "answer": "Brokerage (typically 2% to 4%) is separate from marketing spend. However, digital marketing empowers channel partners with co-branded landing pages, significantly increasing their closing efficiency."
+    },
+    {
+      "question": "How does digital advertising lower total marketing expenditure?",
+      "answer": "Digital ads allow granular real-time testing. Poor-performing ads are paused within 48 hours, directing 100% of capital only into proven, high-converting buyer cohorts."
+    },
+    {
+      "question": "What is the minimum monthly digital ad spend needed for predictable site visits?",
+      "answer": "A minimum monthly spend of ₹75,000 to ₹1.5 Lakhs on Meta and Google is recommended to feed the algorithm sufficient conversion data and generate 25 to 50 qualified weekend visits."
+    }
+  ]
+}

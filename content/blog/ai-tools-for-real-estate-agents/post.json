@@ -1,0 +1,64 @@
+{
+  "title": "Best AI Tools for Real Estate Agents: ChatGPT Prompts & Automation",
+  "seoTitle": "Best AI Tools for Real Estate Agents & Brokers (2026)",
+  "excerpt": "Top AI software, ChatGPT prompts, and automated systems top-earning real estate agents use to create listings, nurture leads, and scale sales.",
+  "date": "2026-10-22",
+  "category": "AI Automation",
+  "service": "ai-automation",
+  "image": "/images/people/blog/ai-real-estate-agent-laptop.jpg",
+  "imageAlt": "Real estate broker using artificial intelligence tools on laptop to generate property listing descriptions",
+  "inlineImages": [
+    {
+      "src": "/images/people/blog/geo-chatgpt-on-laptop.jpg",
+      "alt": "ChatGPT interface generating high-converting real estate ad copy and buyer email follow-ups",
+      "caption": "Generative AI creates month-long social content calendars in under 15 minutes.",
+      "beforeHeading": "essential-ai-toolstack-for-property-brokers"
+    },
+    {
+      "src": "/images/people/blog/geo-analytics-dashboard-laptop.jpg",
+      "alt": "Real estate analytics dashboard tracking AI automated lead score and pipeline velocity",
+      "caption": "Predictive AI scores incoming leads by purchasing power and urgency timeline.",
+      "beforeHeading": "copy-paste-chatgpt-prompts-for-agents"
+    }
+  ],
+  "about": [
+    {
+      "name": "Artificial intelligence",
+      "sameAs": "https://en.wikipedia.org/wiki/Artificial_intelligence"
+    },
+    {
+      "name": "Real estate broker",
+      "sameAs": "https://en.wikipedia.org/wiki/Real_estate_broker"
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Can AI replace real estate agents in India?",
+      "answer": "No. Real estate transactions in India require high human trust, physical site visits, and legal negotiations. AI replaces the repetitive administrative tasks (lead qualification, follow-ups, copywriting), allowing top agents to close more deals."
+    },
+    {
+      "question": "What are the best free AI tools for real estate brokers?",
+      "answer": "ChatGPT for listing descriptions and ad copy, Canva Magic Studio for property flyers and reels, and ElevenLabs / Sarvam for professional Hindi voiceovers."
+    },
+    {
+      "question": "How does AI improve property listing descriptions?",
+      "answer": "AI highlights key lifestyle benefits, carpet area advantages, and nearby transit links using emotional storytelling rather than boring dry bullet points."
+    },
+    {
+      "question": "What is predictive lead scoring in real estate?",
+      "answer": "AI algorithms analyze a buyer's digital behavior (pages visited, floor plans downloaded, chat speed) to rank leads by highest likelihood of booking a site visit."
+    },
+    {
+      "question": "How can agents use AI for Instagram Reels scripts?",
+      "answer": "Prompting AI with the property location and budget produces viral 20-second reel hooks, voiceover scripts, and hashtag strategies in seconds."
+    },
+    {
+      "question": "Can AI automate WhatsApp follow-ups for brokers?",
+      "answer": "Yes. AI conversational agents connected to WhatsApp Business API reply instantly 24/7, answer RERA questions, and schedule visit slots automatically."
+    },
+    {
+      "question": "How much time does AI save an active property consultant?",
+      "answer": "Active agents save 10 to 18 hours per week by automating repetitive emails, brochure distribution, ad writing, and initial client qualification."
+    }
+  ]
+}
