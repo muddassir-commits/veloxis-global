@@ -12,13 +12,13 @@
       "src": "/images/people/blog/channel-partner-advisor-with-clients.jpg",
       "alt": "Channel partner advising residential property buyers during weekend sales discussion",
       "caption": "Consultative objection handling turns skeptical prospects into confirmed site visits.",
-      "beforeHeading": "the-cold-calling-opener-that-hooks-buyers"
+      "beforeHeading": "the-consultative-cold-calling-framework"
     },
     {
       "src": "/images/people/blog/eoi-couple-planning-budget.jpg",
       "alt": "Couple reviewing property cost breakdown and payment schedule options",
       "caption": "Transparent price comparisons eliminate price-resistance objections within the first 3 minutes.",
-      "beforeHeading": "handling-the-3-most-common-objections"
+      "beforeHeading": "mastering-the-top-5-indian-buyer-objections"
     }
   ],
   "about": [
@@ -33,32 +33,36 @@
   ],
   "faqs": [
     {
-      "question": "What is the biggest mistake real estate telecallers make in India?",
-      "answer": "Opening with 'Sir are you looking to buy a flat?' which triggers instant defensive resistance. Consultative openers focus on market updates, price changes, or infrastructure triggers."
+      "question": "What is the biggest mistake Indian real estate telecallers make?",
+      "answer": "Opening with 'Sir are you looking for a flat?' which triggers instant defensive resistance. Consultative scripts open by referencing the prospect's digital download and setting a strict 90-second time limit."
     },
     {
       "question": "How do you handle the objection 'Your price is too high'?",
-      "answer": "Never defend the sticker price. Frame the price per square foot against the deliverable carpet area, infrastructure appreciation, and flexible construction-linked payment plans."
+      "answer": "Never defend the sticker price. Frame the price against carpet area efficiency, RERA deliverable area, infrastructure appreciation, and construction-linked payment savings."
     },
     {
-      "question": "What is the optimal duration for a real estate qualification call?",
-      "answer": "A first qualification call should strictly take 3 to 5 minutes. The only goal of the call is locking in a confirmed weekend site visit, not closing a 2-crore property over the phone."
+      "question": "What is the optimal duration for a real estate qualification phone call?",
+      "answer": "A first qualification call should strictly last 3 to 5 minutes. The only goal of the call is confirming a physical weekend site visit, not closing a multi-crore property over the phone."
     },
     {
-      "question": "How should sales teams follow up on WhatsApp after a phone call?",
-      "answer": "Within 2 minutes of hanging up, send a clean summary card with the site address, GPS link, floor plan PDF, and confirmed visit time slot."
+      "question": "How should property sales teams follow up on WhatsApp after a phone call?",
+      "answer": "Within 2 minutes of hanging up, dispatch an automated summary card containing the site address, Google Maps GPS pin, floor plan PDF, and confirmed visit slot."
     },
     {
       "question": "What is the 3-Touch Follow-Up formula for un-responsive leads?",
-      "answer": "Touch 1 (Day 1): Floor plan PDF. Touch 2 (Day 3): 30-second site construction video update. Touch 3 (Day 7): Price escalation deadline notification."
+      "answer": "Touch 1 (Day 1): Floor plan PDF and pricing sheet. Touch 2 (Day 3): 20-second site construction progress video. Touch 3 (Day 7): Price escalation deadline warning."
     },
     {
-      "question": "How can developers train sales teams on objection handling?",
-      "answer": "Conduct daily 15-minute roleplay sessions covering the top 5 buyer objections: price resistance, location distance, possession delays, builder track record, and market slowdown."
+      "question": "How can developers train sales executives on objection handling effectively?",
+      "answer": "Conduct daily 15-minute roleplay sessions tackling the top 5 buyer objections: price resistance, location distance, possession delays, builder track record, and market slowdown."
     },
     {
-      "question": "Does automated WhatsApp messaging improve cold call success rates?",
-      "answer": "Yes. Pre-warming leads by delivering a brochure over WhatsApp before the call increases call connection rates by over 50%."
+      "question": "Does pre-warming leads on WhatsApp improve telecaller pickup rates?",
+      "answer": "Yes. Delivering a welcome brochure on WhatsApp before calling increases phone connection rates from 18% to over 54% because the buyer recognizes the brand name."
+    },
+    {
+      "question": "How does an alternate-choice close increase site visit commitments?",
+      "answer": "Instead of asking 'When will you visit?', providing two specific options ('Saturday 11:30 AM or Sunday 3:00 PM') forces a decision between times rather than a yes-or-no rejection."
     }
   ]
 }

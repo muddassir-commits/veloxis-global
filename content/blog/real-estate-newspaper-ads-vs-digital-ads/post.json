@@ -12,13 +12,13 @@
       "src": "/images/people/blog/google-meta-marketer-phone-desktop.jpg",
       "alt": "Real estate digital performance marketing analytics comparing lead acquisition metrics",
       "caption": "Digital advertising delivers traceable buyer attribution down to the exact rupee spent.",
-      "beforeHeading": "the-cost-per-site-visit-equation"
+      "beforeHeading": "cost-per-site-visit-benchmarks"
     },
     {
       "src": "/images/people/blog/leads-couple-site-visit.jpg",
       "alt": "Prospective home buyers visiting residential sales lounge following targeted digital campaign",
       "caption": "Qualified site visits generated through digital funnels cost 60% less than broad print distribution.",
-      "beforeHeading": "when-newspaper-ads-still-make-sense"
+      "beforeHeading": "the-hybrid-newspaper-digital-bridge"
     }
   ],
   "about": [
@@ -33,32 +33,36 @@
   ],
   "faqs": [
     {
-      "question": "How much does a full-page newspaper ad cost in Delhi NCR or Mumbai?",
-      "answer": "A front jacket or full-page color ad in top dailies like The Times of India or Hindustan Times costs between ₹15 Lakhs and ₹45 Lakhs for a single city edition on a weekend."
+      "question": "How much does a full-page newspaper jacket ad cost in Delhi NCR or Mumbai?",
+      "answer": "A front jacket or full-page color ad in top dailies like The Times of India or Hindustan Times costs between ₹20 Lakhs and ₹45 Lakhs for a single city edition on a weekend."
     },
     {
-      "question": "What is the average Cost Per Site Visit (CPSV) for print vs digital?",
-      "answer": "Newspaper jacket ads average between ₹12,000 and ₹25,000 per qualified site visit due to high spillover. Targeted digital funnels average between ₹3,500 and ₹6,500 per booked visit."
+      "question": "What is the average Cost Per Site Visit (CPSV) for print vs digital in Indian real estate?",
+      "answer": "Newspaper jacket ads average between ₹18,000 and ₹35,000 per qualified site visit due to high untargeted spillover. Targeted digital funnels average between ₹3,200 and ₹5,500 per booked visit."
     },
     {
-      "question": "Why do Indian builders continue spending heavily on print ads?",
-      "answer": "Print ads establish immediate institutional prestige, signal financial strength to existing investors, and create instant momentum among traditional high-net-worth local buyers."
+      "question": "Why do Indian developers continue spending heavily on print advertising?",
+      "answer": "Print ads establish institutional prestige, signal financial solvency to lenders and channel partners, and create rapid launch awareness among older, high-net-worth business owners."
     },
     {
-      "question": "Can newspaper ads track buyer inquiries accurately?",
-      "answer": "Only through proxy methods such as dedicated virtual phone numbers (IVR), QR codes, or unique vanity landing page URLs printed in the creative."
+      "question": "How can builders track buyer inquiries from print newspaper ads accurately?",
+      "answer": "By printing dynamic WhatsApp QR codes that link directly to automated qualification chatbots, or utilizing dedicated virtual IVR telephone numbers with call recording."
     },
     {
       "question": "How does digital advertising prevent lead leakage compared to print?",
-      "answer": "Digital ads direct traffic to 1-tap WhatsApp qualification flows or high-speed landing pages that capture verified phone numbers and intent in seconds."
+      "answer": "Digital ads direct traffic to 1-tap WhatsApp qualification flows or high-speed landing pages that capture verified phone numbers and intent within 42 seconds, followed by automatic CRM alerts."
     },
     {
-      "question": "What is the ideal budget split between print and digital for a new launch?",
-      "answer": "Modern high-growth developers allocate 20-30% of their launch budget to print for brand prestige, and 70-80% to digital for sustained, qualified lead generation."
+      "question": "What is the ideal budget split between print and digital for a new project launch?",
+      "answer": "High-growth developers use the 70/30 allocation model: 30% of capital toward tactical print signaling during launch weekends, and 70% toward an always-on digital performance funnel."
     },
     {
-      "question": "Are younger homebuyers influenced by print newspaper ads?",
-      "answer": "Over 82% of first-time homebuyers aged 28 to 42 research properties primarily on mobile devices, social media feeds, and YouTube property walkthroughs."
+      "question": "Do millennial and Gen-Z homebuyers read print real estate advertisements?",
+      "answer": "No. Over 85% of homebuyers aged 28 to 42 research residential properties primarily on mobile devices, vertical social media reels, and YouTube video walkthroughs."
+    },
+    {
+      "question": "Can digital advertising retarget buyers who didn't book a visit immediately?",
+      "answer": "Yes. Digital pixel retargeting continuously nurtures past visitors across Meta, Google Display, and YouTube with construction progress updates and pricing deadlines over a 90-day window."
     }
   ]
 }

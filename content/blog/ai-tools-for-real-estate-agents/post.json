@@ -12,13 +12,13 @@
       "src": "/images/people/blog/geo-chatgpt-on-laptop.jpg",
       "alt": "ChatGPT interface generating high-converting real estate ad copy and buyer email follow-ups",
       "caption": "Generative AI creates month-long social content calendars in under 15 minutes.",
-      "beforeHeading": "essential-ai-toolstack-for-property-brokers"
+      "beforeHeading": "the-essential-ai-software-stack"
     },
     {
       "src": "/images/people/blog/geo-analytics-dashboard-laptop.jpg",
       "alt": "Real estate analytics dashboard tracking AI automated lead score and pipeline velocity",
       "caption": "Predictive AI scores incoming leads by purchasing power and urgency timeline.",
-      "beforeHeading": "copy-paste-chatgpt-prompts-for-agents"
+      "beforeHeading": "copy-paste-chatgpt-prompts-for-brokers"
     }
   ],
   "about": [
@@ -34,31 +34,35 @@
   "faqs": [
     {
       "question": "Can AI replace real estate agents in India?",
-      "answer": "No. Real estate transactions in India require high human trust, physical site visits, and legal negotiations. AI replaces the repetitive administrative tasks (lead qualification, follow-ups, copywriting), allowing top agents to close more deals."
+      "answer": "No. Property transactions in India involve significant life savings, legal verifications, and physical site inspections that require deep human trust. AI automates administrative tasks, allowing top agents to close more deals."
     },
     {
-      "question": "What are the best free AI tools for real estate brokers?",
-      "answer": "ChatGPT for listing descriptions and ad copy, Canva Magic Studio for property flyers and reels, and ElevenLabs / Sarvam for professional Hindi voiceovers."
+      "question": "What are the best free or low-cost AI tools for real estate consultants?",
+      "answer": "ChatGPT and Claude for copywriting and sales scripts, Canva Magic Studio for property flyers, VirtualStagingAI for unfurnished room visuals, and Sarvam AI for Hindi voiceovers."
     },
     {
-      "question": "How does AI improve property listing descriptions?",
-      "answer": "AI highlights key lifestyle benefits, carpet area advantages, and nearby transit links using emotional storytelling rather than boring dry bullet points."
+      "question": "How does AI virtual staging benefit real estate marketing?",
+      "answer": "It transforms empty, bare-concrete flats into photorealistic furnished luxury interiors within 30 seconds, boosting digital ad click-through rates by up to 40%."
     },
     {
-      "question": "What is predictive lead scoring in real estate?",
-      "answer": "AI algorithms analyze a buyer's digital behavior (pages visited, floor plans downloaded, chat speed) to rank leads by highest likelihood of booking a site visit."
+      "question": "What is predictive lead scoring in real estate sales?",
+      "answer": "Predictive AI algorithms analyze incoming lead behavior—including device type, digital engagement, and budget selections—to rank leads by highest likelihood of booking a site visit."
     },
     {
-      "question": "How can agents use AI for Instagram Reels scripts?",
-      "answer": "Prompting AI with the property location and budget produces viral 20-second reel hooks, voiceover scripts, and hashtag strategies in seconds."
+      "question": "How can property brokers use AI for Instagram Reels?",
+      "answer": "By prompting AI with property specs, agents generate viral 20-second video hooks, scene directions, and natural Hindi voiceovers without needing expensive video editors."
     },
     {
-      "question": "Can AI automate WhatsApp follow-ups for brokers?",
-      "answer": "Yes. AI conversational agents connected to WhatsApp Business API reply instantly 24/7, answer RERA questions, and schedule visit slots automatically."
+      "question": "Can AI automate WhatsApp lead follow-ups for developers?",
+      "answer": "Yes. Integrating Meta's Cloud API with AI conversational engines enables 24/7 instant brochure distribution, buyer qualification, and weekend site visit scheduling in under 42 seconds."
     },
     {
-      "question": "How much time does AI save an active property consultant?",
-      "answer": "Active agents save 10 to 18 hours per week by automating repetitive emails, brochure distribution, ad writing, and initial client qualification."
+      "question": "How many hours per week does AI save an active real estate broker?",
+      "answer": "Active property advisors save between 12 and 18 hours per week by automating repetitive copywriting, collateral distribution, cold follow-up texts, and lead screening."
+    },
+    {
+      "question": "Is AI copy compliant with RERA advertising regulations in India?",
+      "answer": "Yes, provided the prompt instructs the AI model to include mandatory statutory disclaimers, official RERA project registration numbers, and approved promoter details."
     }
   ]
 }
