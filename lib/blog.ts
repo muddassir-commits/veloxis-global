@@ -110,6 +110,15 @@ function loadOne(slug: string): { post?: Post; draft?: boolean; problems: string
   if (html && headings.length < 2) problems.push('content.html needs at least two <h2 id="..."> headings');
   if (/<h2(?![^>]*\bid=)/.test(html)) problems.push('every <h2> needs an id, e.g. <h2 id="pricing">');
   if (/<h1[\s>]/.test(html)) problems.push('content.html must not contain <h1> (the title is the h1)');
+  // Catch HTML broken by bulk find-and-replace (e.g. "<pNone>", empty list items, unclosed tags).
+  const badTag = html.match(/<\/?[a-z0-9]+(?:None|undefined|null)\b[^>]*>/i);
+  if (badTag) problems.push(`content.html has a broken tag: ${badTag[0]}`);
+  if (/<(p|li|ul|ol|td|blockquote)>\s*<\/\1>/.test(html)) problems.push('content.html has an empty <p>, <li>, <ul>, <ol>, <td> or <blockquote>');
+  for (const tag of ['p', 'li', 'ul', 'ol', 'table', 'tr', 'td', 'th', 'blockquote', 'strong', 'em', 'a', 'h2', 'h3']) {
+    const open = (html.match(new RegExp(`<${tag}[\\s>]`, 'g')) || []).length;
+    const close = (html.match(new RegExp(`</${tag}>`, 'g')) || []).length;
+    if (open !== close) problems.push(`content.html has ${open} <${tag}> but ${close} </${tag}>`);
+  }
 
   for (const img of [meta.image, ...(meta.inlineImages ?? []).map((i) => i.src)]) {
     if (!fs.existsSync(path.join(PUBLIC_DIR, img))) problems.push(`image not found: public${img}`);

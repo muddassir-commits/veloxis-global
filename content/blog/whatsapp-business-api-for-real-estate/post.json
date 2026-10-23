@@ -1,24 +1,22 @@
 {
-  "title": "WhatsApp Business API for Real Estate: Automating Enquiries",
-  "seoTitle": "WhatsApp Business API for Real Estate (2026 Guide)",
-  "excerpt": "How top developers automate high-volume buyer qualification, floor plan distribution, and weekend site visit bookings on WhatsApp.",
+  "title": "WhatsApp Business API for Real Estate: Pricing, Chatbots, Templates and Setup (2026)",
+  "seoTitle": "WhatsApp Business API for Real Estate: Cost & Setup",
+  "excerpt": "WhatsApp Business API for real estate: app vs API, Meta's per-message pricing from October 2026, a lead-to-site-visit flow, chatbots, bulk message rules, setup.",
   "date": "2026-10-21",
   "category": "AI Automation",
   "service": "ai-automation",
   "image": "/images/people/blog/whatsapp-man-messaging-phone.jpg",
-  "imageAlt": "Homebuyer interacting with an automated real estate WhatsApp qualification bot on mobile",
+  "imageAlt": "A young man reading a message on his smartphone at home",
   "inlineImages": [
     {
       "src": "/images/people/blog/whatsapp-office-sales-call.jpg",
-      "alt": "Real estate sales team receiving pre-qualified buyer leads synced from WhatsApp automation",
-      "caption": "Automated WhatsApp flows reduce sales rep response times from 14 hours down to under 45 seconds.",
-      "beforeHeading": "the-42-second-qualification-funnel"
+      "alt": "A man on a desk phone talking while a colleague listens in an office",
+      "beforeHeading": "whatsapp-flow"
     },
     {
       "src": "/images/people/blog/ai-real-estate-team-reviewing-screen.jpg",
-      "alt": "PropTech marketing operations team monitoring WhatsApp campaign delivery metrics",
-      "caption": "WhatsApp Cloud API infrastructure scales effortlessly across thousands of simultaneous inquiries.",
-      "beforeHeading": "fixing-site-visit-no-shows"
+      "alt": "A woman pointing at a computer screen with a pencil while a colleague looks on",
+      "beforeHeading": "no-shows"
     }
   ],
   "about": [
@@ -33,36 +31,37 @@
   ],
   "faqs": [
     {
-      "question": "What is the difference between WhatsApp Business App and WhatsApp Business API?",
-      "answer": "The free app is limited to one physical smartphone and manual chats. The official Cloud API supports multi-agent CRMs, automated chatbot funnels, green tick verification, and broadcast messaging to tens of thousands of buyers."
+      "question": "What is the WhatsApp Business API?",
+      "answer": "Meta's WhatsApp Business Platform, which lets a business connect WhatsApp to its ads, website and CRM, automate replies and flows, and let a team handle chats from a dashboard instead of one phone."
     },
     {
-      "question": "How fast does an automated WhatsApp funnel qualify an incoming real estate lead?",
-      "answer": "Veloxis automated flows qualify buyer configuration, budget range, purchase timeline, and preferred site visit slots within 42 seconds of clicking a Meta or Google ad."
+      "question": "Is the WhatsApp Business API free?",
+      "answer": "No. Meta charges per delivered message by category and country; messages from users to you are free. From 1 October 2026 service replies are charged after the first 1,000 free per number per month, and the provider charges its own platform fee."
     },
     {
-      "question": "What is the open rate of WhatsApp messages compared to email in Indian real estate?",
-      "answer": "Real estate marketing emails in India average an 8-12% open rate, whereas WhatsApp Business API messages achieve an industry-leading 95-98% open rate, with 80% read within 10 minutes."
+      "question": "What is the difference between the WhatsApp Business app and the API?",
+      "answer": "The app is a free phone app for one person or a small team with basic auto-replies. The API supports full automation, CRM and ad integration and team inboxes, and charges per message."
     },
     {
-      "question": "Can WhatsApp automation send personalized floor plans and pricing dynamically?",
-      "answer": "Yes. Based on whether the buyer clicks '2 BHK' or '3 BHK', the system dynamically delivers the corresponding architectural floor plan PDF, cost sheet, and RERA certificate instantly."
+      "question": "Can WhatsApp chatbots be used for real estate?",
+      "answer": "Yes, to answer common questions, send brochures and floor plans, qualify buyers and book site visits at any hour. The bot should answer only from approved project information and hand over to a person for negotiation, legal questions and complaints."
     },
     {
-      "question": "How do developers prevent WhatsApp account bans when broadcasting?",
-      "answer": "By using the official Meta WhatsApp Cloud API with pre-approved message templates, clear opt-in permissions, and strictly maintaining quality ratings above Medium."
+      "question": "Can I send bulk WhatsApp messages to property buyers?",
+      "answer": "Only to people who opted in. WhatsApp's Business Messaging Policy requires opt-in and approved templates for business-initiated messages, and numbers that get blocked or reported have their messaging limits cut. Bought lists also conflict with the DPDP Act, 2023."
     },
     {
-      "question": "Does the WhatsApp Business API integrate with real estate CRMs?",
-      "answer": "Yes. The API integrates seamlessly with Salesforce, LeadSquared, Sell.Do, HubSpot, and custom databases via webhooks and bi-directional REST APIs."
+      "question": "What is the 24-hour window on WhatsApp?",
+      "answer": "When a user messages your business, a 24-hour customer service window opens in which you can reply with free-form messages. Outside it, you can only send approved template messages."
     },
     {
-      "question": "Can buyers book physical site visit appointments directly inside WhatsApp?",
-      "answer": "Yes. Interactive date-picker buttons allow prospects to lock in Saturday or Sunday morning slots and receive calendar invites with GPS map directions automatically."
+      "question": "How long does WhatsApp Business API setup take?",
+      "answer": "It depends on business verification and template approval by Meta. The steps are: choose a provider, verify the business, register a number, get templates approved, connect lead sources and CRM, then build and test the flow."
     },
     {
-      "question": "How does WhatsApp automation reduce weekend site visit no-show rates?",
-      "answer": "By sending automated GPS location maps 24 hours prior, personalized voice note reminders on the morning of the visit, and simple 1-tap rescheduling buttons."
+      "question": "Which WhatsApp templates does a real estate business need?",
+      "answer": "At least a welcome message with the brochure and a question, a site visit confirmation, a visit reminder, a no-show follow-up and an after-visit follow-up. Name the project and the buyer and include useful information in each."
     }
-  ]
+  ],
+  "updated": "2026-10-23"
 }

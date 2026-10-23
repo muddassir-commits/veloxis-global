@@ -132,7 +132,7 @@ export default function ServicesPage() {
             <p className="text-slate-600 leading-relaxed mb-4">
               Ads bring buyers to a page. The page turns them into enquiries. Automation makes sure every enquiry is answered
               before the buyer moves on to the next project. When one part is missing, the others underperform — which is
-              why most of our clients start with all three and measure them together on cost per site visit.
+              why we recommend starting with all three and measuring them together on cost per site visit.
             </p>
             <Link href="/playbooks" className="group inline-flex items-center gap-1 font-bold text-royal-blue hover:underline">
               See how they fit together in our example playbooks <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" aria-hidden="true" />

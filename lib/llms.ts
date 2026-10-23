@@ -27,7 +27,7 @@ const leadSystemSummary =
 const contact = `## Contact
 
 - Email: ${siteData.email}
-- Phone / WhatsApp: ${siteData.phone}
+- WhatsApp: ${siteData.phone} (messages only, no calls)
 - Service area: ${siteData.areaServed.join(', ')} (service-area business; no walk-in office)
 - Book a call: ${siteData.booking}
 - Website: ${SITE_URL}`;

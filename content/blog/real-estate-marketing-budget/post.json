@@ -1,24 +1,23 @@
 {
-  "title": "Real Estate Marketing Budget Guide: How Much Should Builders Spend?",
-  "seoTitle": "Real Estate Marketing Budget Allocation Guide (2026)",
-  "excerpt": "How top builders plan marketing spend as a share of gross development value (GDV), allocate across channels, and track CAC.",
+  "title": "Real Estate Marketing Budget: How to Calculate It From Cost per Lead, Visit and Booking",
+  "seoTitle": "Real Estate Marketing Budget: How to Calculate It",
+  "excerpt": "How to set a real estate marketing budget from your own numbers: cost per lead, per site visit and per booking, channel split, test budget and costly mistakes.",
   "date": "2026-10-23",
   "category": "Paid Ads",
   "service": "paid-ads",
   "image": "/images/people/blog/google-ads-analyst-reviewing-data.jpg",
-  "imageAlt": "Real estate finance and marketing directors reviewing quarterly budget allocation spreadsheet",
+  "imageAlt": "A person marking printed charts with a pen next to a laptop",
   "inlineImages": [
     {
       "src": "/images/people/blog/google-meta-reviewing-report.jpg",
-      "alt": "Executive review of marketing spend return on investment and cost per site visit metrics",
-      "caption": "Allocating capital based on Customer Acquisition Cost (CAC) prevents runaway budget burns.",
-      "beforeHeading": "the-industry-standard-percentage-of-gdv"
+      "alt": "A woman reading a printed chart in an office while a colleague uses his phone",
+      "beforeHeading": "how-much-to-spend"
     },
     {
       "src": "/images/people/blog/social-team-reviewing-results.jpg",
-      "alt": "Digital growth team analyzing channel performance benchmarks across Meta and Google",
-      "caption": "Many developers now put most of their ongoing budget into digital funnels.",
-      "beforeHeading": "the-70-20-10-channel-allocation-rule"
+      "alt": "A marketing team gathered around a laptop reviewing results, with charts on a board behind them",
+      "beforeHeading": "channel-split",
+      "caption": "Compare channels on cost per site visit, not cost per lead."
     }
   ],
   "about": [
@@ -33,32 +32,37 @@
   ],
   "faqs": [
     {
-      "question": "What percentage of GDV should a real estate developer spend on marketing?",
-      "answer": "In India, developers allocate between 2% and 4.5% of Gross Development Value (GDV) to total sales and marketing expenses, depending on project scale, brand equity, and market competition."
+      "question": "How much should a builder spend on real estate marketing?",
+      "answer": "Work backwards: bookings needed × your cost per booking, plus creative, tools and fees, then check it against the margin per unit. We haven't found a reliable published percentage-of-revenue benchmark for Indian projects, so your own numbers are the best guide."
     },
     {
-      "question": "How much marketing budget is required to launch a ₹100 Crore residential tower?",
-      "answer": "A ₹100 Cr tower typically requires a total marketing allocation of ₹2.5 Cr to ₹3.5 Cr across its lifecycle, with approximately ₹80 Lakhs to ₹1.2 Cr deployed during the initial 90-day launch phase."
+      "question": "How do you calculate cost per lead in real estate?",
+      "answer": "Divide ad spend by the number of leads. For example, ₹1,00,000 spent for 250 leads is a cost per lead of ₹400. Also calculate cost per qualified lead, per site visit and per booking, because cheap leads are often not buyers."
     },
     {
-      "question": "What is an acceptable Customer Acquisition Cost (CAC) in Indian real estate?",
-      "answer": "For mid-income housing (₹60L–₹1.2Cr), target CAC is 1.5% to 2.5% of unit value (₹1.2L–₹2.5L per closed booking). For luxury developments, CAC can range from 2.5% to 4%."
+      "question": "What is a reasonable cost per lead for real estate in India?",
+      "answer": "There is no single honest figure: it depends on city, price segment, platform, ad, landing page, form type and season. Set your own baseline in the first month and improve against it. Judge channels on cost per site visit and per booking."
     },
     {
-      "question": "Why do traditional real estate marketing budgets fail?",
-      "answer": "Because builders commit 60% of their funds upfront to un-trackable print ads and outdoor hoardings with zero ongoing retargeting or lead qualification infrastructure."
+      "question": "What is customer acquisition cost in real estate?",
+      "answer": "The total marketing spend divided by the number of bookings it produced: what it costs to sell one unit. Compare it with your margin per unit to see whether a channel is worth scaling."
     },
     {
-      "question": "How should channel partner brokerage relate to marketing budget?",
-      "answer": "However, digital marketing empowers channel partners with co-branded landing pages, significantly increasing their closing efficiency."
+      "question": "How should a real estate marketing budget be split?",
+      "answer": "By job: Google search to capture existing demand, Meta ads to create demand, hoardings and print for local launch awareness, channel partners and portals, and lasting assets like the landing page and video. Then move money monthly towards the lowest cost per visit."
     },
     {
-      "question": "How does digital advertising lower total marketing expenditure?",
-      "answer": "Digital ads allow granular real-time testing."
+      "question": "What is the minimum ad budget for a real estate project?",
+      "answer": "We recommend at least ₹15,000 a month per project on ads as a starting point, more for a launch or a competitive market. Run it for four to six weeks and set the full budget from the results."
     },
     {
-      "question": "What is the minimum monthly digital ad spend needed for predictable site visits?",
-      "answer": "A minimum monthly spend of ₹75,000 to ₹1.5 Lakhs on Meta and Google is recommended to feed the algorithm sufficient conversion data and generate 25 to 50 qualified weekend visits."
+      "question": "What are the biggest real estate marketing budget mistakes?",
+      "answer": "Judging channels by cost per lead, slow follow-up, no tracking, sending ads to a homepage, spreading money over too many channels, and spending everything at launch with nothing left for retargeting."
+    },
+    {
+      "question": "What should a monthly marketing report for a builder show?",
+      "answer": "One row per channel with spend, leads, qualified leads, site visits, bookings, cost per visit and cost per booking, plus a one-line decision on where money moves next month."
     }
-  ]
+  ],
+  "updated": "2026-10-23"
 }

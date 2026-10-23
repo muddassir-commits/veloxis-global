@@ -481,3 +481,5 @@ iframe {
 .article-body th, .article-body td { border: 1px solid #e2e8f0; padding: 0.6rem 0.8rem; text-align: left; vertical-align: top; }
 .article-body th { background: #f8fafc; color: #0f172a; font-weight: 700; }
 .article-body em { color: #64748b; }
+/* Scripts and message templates in posts */
+.article-body blockquote { border-left: 4px solid var(--royal-blue); background: #f8fafc; padding: 0.9rem 1.1rem; border-radius: 0 0.5rem 0.5rem 0; color: #1e293b; }

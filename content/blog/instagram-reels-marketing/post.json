@@ -38,13 +38,19 @@
     }
   ],
   "about": [
-    { "name": "Instagram Reels", "sameAs": "https://en.wikipedia.org/wiki/Instagram" },
-    { "name": "Social media marketing", "sameAs": "https://en.wikipedia.org/wiki/Social_media_marketing" }
+    {
+      "name": "Instagram Reels",
+      "sameAs": "https://en.wikipedia.org/wiki/Instagram"
+    },
+    {
+      "name": "Social media marketing",
+      "sameAs": "https://en.wikipedia.org/wiki/Social_media_marketing"
+    }
   ],
   "faqs": [
     {
       "question": "How long should an Instagram Reel be?",
-      "answer": "Instagram allows Reels of up to three minutes, but most Reels that travel furthest are 7 to 30 seconds long. Keep it as short as the idea allows and put the main point in the first two seconds."
+      "answer": "Instagram allows Reels of up to three minutes. For property, keep it as short as the idea allows and put the main point in the first two seconds."
     },
     {
       "question": "How often should a business post Reels?",
@@ -74,5 +80,6 @@
       "question": "Which Reel numbers should I track?",
       "answer": "Accounts reached and the share of non-followers, average watch time, shares and saves, profile visits and WhatsApp taps, and the enquiries and site visits that mention the Reel."
     }
-  ]
+  ],
+  "updated": "2026-10-23"
 }

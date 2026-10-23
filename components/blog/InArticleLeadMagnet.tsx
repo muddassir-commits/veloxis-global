@@ -22,9 +22,9 @@ export const InArticleLeadMagnet: React.FC = () => {
           <span>Free Marketing Audit</span>
         </div>
 
-        <h3 className="text-xl sm:text-2xl font-extrabold text-white tracking-tight leading-snug">
+        <p className="text-xl sm:text-2xl font-extrabold text-white tracking-tight leading-snug">
           Get a free check of your enquiry flow
-        </h3>
+        </p>
 
         <p className="text-sm sm:text-base text-slate-300 leading-relaxed max-w-2xl">
           Send us your project page or ad link and we will show you where enquiries are lost, in plain language. No fee, no obligation.

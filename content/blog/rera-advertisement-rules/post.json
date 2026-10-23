@@ -1,24 +1,23 @@
 {
-  "title": "RERA Advertisement Rules: Compliance Checklist for Digital and Print Ads",
-  "seoTitle": "RERA Advertisement Rules: Ad Compliance Guide (2026)",
-  "excerpt": "Official RERA advertisement rules for builders and brokers: QR codes, registration numbers, disclaimer sizes, and avoiding heavy penalties in UP and NCR.",
+  "title": "RERA Advertisement Rules: What Every Real Estate Ad Must Show (2026 Checklist)",
+  "seoTitle": "RERA Advertisement Rules: Checklist for Real Estate Ads",
+  "excerpt": "RERA advertisement rules explained: no ads before registration, the registration number and website in every ad, UP RERA's QR code, CP duties and penalties.",
   "date": "2026-10-19",
   "category": "Guides",
   "service": "paid-ads",
   "image": "/images/people/blog/rera-architects-checking-plans.jpg",
-  "imageAlt": "Legal advisors and architects reviewing RERA approval certificates and ad layouts on a drafting table",
+  "imageAlt": "Two men reading building plans spread on a car bonnet beside a construction site",
   "inlineImages": [
     {
       "src": "/images/people/blog/rera-blank-billboard.jpg",
-      "alt": "Highway outdoor hoarding frame showing clear section for RERA registration number and official website URL",
-      "caption": "All outdoor hoardings and digital banners must display the official RERA registration number with readable font hierarchy.",
-      "beforeHeading": "mandatory-elements-checklist"
+      "alt": "A large blank billboard on a steel frame against a blue sky",
+      "beforeHeading": "what-ads-must-show",
+      "caption": "On a hoarding, the RERA number has to be readable from the road."
     },
     {
       "src": "/images/people/blog/rera-agent-reading-contract.jpg",
-      "alt": "Real estate channel partner verifying agent RERA registration details against project marketing collateral",
-      "caption": "Channel partners promoting builder projects must display both the project RERA and their own individual agent registration ID.",
-      "beforeHeading": "channel-partner-compliance-rules"
+      "alt": "A man in a navy suit reading a document at his desk",
+      "beforeHeading": "agents-and-cps"
     }
   ],
   "about": [
@@ -33,36 +32,37 @@
   ],
   "faqs": [
     {
-      "question": "Can a builder advertise a project before getting RERA approval?",
-      "answer": "No. Under Section 3 of the RERA Act, 2016, no promoter can advertise, market, book, sell, or invite persons to purchase any plot, apartment, or building without first registering the project with the state Real Estate Regulatory Authority."
+      "question": "What are the RERA rules for real estate advertisements?",
+      "answer": "A project that must be registered cannot be advertised before registration (Section 3 of the RERA Act, 2016). After registration, every advertisement must prominently show the registration number and the state authority's website address (Section 11(2)). States add their own directions, such as UP RERA's project QR code."
     },
     {
-      "question": "What is the penalty for advertising an unregistered real estate project?",
-      "answer": "Promoters violating Section 3 face severe financial penalties of up to 10% of the estimated project cost, and potential imprisonment of up to 3 years for continued non-compliance."
+      "question": "Is the RERA number mandatory in social media ads?",
+      "answer": "Yes. RERA's definition of advertisement covers publicity in any medium, so Facebook, Instagram, Google and YouTube ads, WhatsApp broadcasts and posts by channel partners all need the project's registration number and the authority's website address."
     },
     {
-      "question": "Are social media ads and Instagram Reels covered under RERA advertising rules?",
-      "answer": "Yes. Digital advertisements on Meta (Facebook, Instagram), Google Ads, YouTube, email newsletters, and WhatsApp broadcasts are legally classified as advertisements and must strictly display the RERA registration number and portal URL."
+      "question": "Is a QR code mandatory in UP RERA advertisements?",
+      "answer": "Yes. Since July 2024 UP RERA assigns each project a unique QR code and requires promoters to print it in brochures and advertisements and on documents given to buyers, such as booking forms, allotment letters and builder-buyer agreements."
     },
     {
-      "question": "Is the RERA QR code mandatory in print and outdoor advertisements?",
-      "answer": "Yes. State authorities such as MahaRERA and UP RERA mandate a scannable QR code on all newspaper advertisements, brochures, flyers, and highway hoardings pointing directly to the project's official portal listing."
+      "question": "Can a builder advertise a project before RERA registration?",
+      "answer": "No. Section 3(1) bars a promoter from advertising, marketing, booking, selling or inviting people to buy units in a project that must be registered until it is registered. The penalty is up to 10% of the estimated project cost under Section 59."
     },
     {
-      "question": "Do channel partners need to display their own RERA number in ads?",
-      "answer": "Yes. Under Section 10 of RERA, real estate brokers and channel partners must explicitly display their individual or firm RERA registration number alongside the developer's project RERA ID in all marketing communications."
+      "question": "What is the penalty for an advertisement without the RERA number?",
+      "answer": "For a promoter, breaking Section 11(2) can attract a penalty of up to 5% of the estimated project cost under Section 61. For an agent who breaks the agent rules, the penalty is up to ₹10,000 a day, up to 5% of the cost of the unit, under Section 62."
     },
     {
-      "question": "What are the rules regarding delivery timelines and possession dates in ads?",
-      "answer": "Any advertised possession date must match the exact completion date declared in the official RERA affidavit. Advertising an earlier delivery date than what is registered on the portal is treated as misleading advertising."
+      "question": "What happens if a real estate ad makes a false claim?",
+      "answer": "Under Section 12, if a buyer pays based on false or incorrect information in an advertisement, prospectus or model apartment and suffers a loss, the promoter must compensate them. If the buyer withdraws, the promoter must refund the money with interest and compensation."
     },
     {
-      "question": "Are terms like 'Luxurious', 'World-Class', or 'Starting Price' regulated?",
-      "answer": "Yes. Misleading price representations (such as advertising base selling price without disclosing mandatory charges like EDC, IDC, or GST) can attract penalties under unfair trade practices."
+      "question": "Do channel partners have to follow RERA advertising rules?",
+      "answer": "Yes. Agents must be RERA-registered (Section 9), must not market unregistered projects and must not use unfair trade practices such as false statements (Section 10). Their ads are ads for the project, so they need the project's registration number and authority website, and usually the agent's own number."
     },
     {
-      "question": "How can builders ensure their landing pages are 100% RERA compliant?",
-      "answer": "Landing pages must prominently feature the project RERA number in the header and footer, provide a direct link to the state RERA portal, show the registered promoter legal entity, and include the official project name as registered."
+      "question": "Does RERA apply to commercial property ads?",
+      "answer": "Yes. The Act's definition of apartment includes offices, shops, showrooms and godowns, so commercial projects above the size limits must register and follow the same advertising rules as residential ones."
     }
-  ]
+  ],
+  "updated": "2026-10-23"
 }

@@ -1,24 +1,22 @@
 {
-  "title": "Pre-Launch Real Estate Marketing: Collecting EOIs Without Regulatory Fines",
-  "seoTitle": "Pre-Launch Real Estate Marketing & EOI Guide (2026)",
-  "excerpt": "How developers conduct high-velocity pre-launch campaigns, collect Expressions of Interest (EOIs) lawfully, and sell out inventory in UP and NCR.",
+  "title": "Pre-Launch Real Estate Marketing: What It Means After RERA and How to Run One",
+  "seoTitle": "Pre-Launch Real Estate Marketing: A RERA-Safe Plan",
+  "excerpt": "What pre-launch means in real estate after RERA, what you can and can't do before registration, a week-by-week EOI campaign plan and a buyer checklist.",
   "date": "2026-10-20",
   "category": "Growth Tips",
   "service": "paid-ads",
   "image": "/images/people/blog/eoi-buyers-reviewing-booking-papers.jpg",
-  "imageAlt": "Home buyers reviewing an Expression of Interest (EOI) application form with priority token allotment documents",
+  "imageAlt": "A property executive going over paperwork with a young couple at a kitchen counter",
   "inlineImages": [
     {
       "src": "/images/people/blog/eoi-couple-planning-budget.jpg",
-      "alt": "Family reviewing project pre-launch price advantage and payment plan options with a property advisor",
-      "caption": "Early-stage pre-launch marketing creates intense buyer urgency around introductory pricing tranches.",
-      "beforeHeading": "the-modern-eoi-mechanism"
+      "alt": "A couple working out their budget with a calculator and notebook at home",
+      "beforeHeading": "eoi-phase"
     },
     {
       "src": "/images/people/blog/channel-partner-office-discussion.jpg",
-      "alt": "Channel partner conference discussing priority booking tokens and developer launch incentives",
-      "caption": "Top tier channel partners drive up to 70% of pre-launch EOI collections when equipped with digital sales kits.",
-      "beforeHeading": "channel-partner-prelaunch-strategy"
+      "alt": "Three colleagues discussing documents in an office",
+      "beforeHeading": "channel-partners"
     }
   ],
   "about": [
@@ -33,36 +31,37 @@
   ],
   "faqs": [
     {
-      "question": "Can a builder legally collect EOIs before RERA registration?",
-      "answer": "No. Under Section 3 of RERA, accepting any advance money, booking deposit, or Expression of Interest (EOI) before obtaining official project RERA registration is strictly illegal and subject to severe penalties."
+      "question": "What is pre-launch in real estate?",
+      "answer": "It is the period before a project's public launch, when developers collect interest from early buyers, often through an EOI, before full prices and inventory are released. Under RERA, a project that must be registered can't be marketed or booked before registration, so a lawful pre-launch runs between registration and the public price launch."
     },
     {
-      "question": "How do developers market pre-launch projects lawfully under RERA?",
-      "answer": "Developers obtain RERA registration for the project first, then launch an official 'Priority Booking Window' or 'Launch Phase 1' offering introductory pricing and priority unit selection to early EOI depositors."
+      "question": "Is pre-launch booking legal under RERA?",
+      "answer": "Not before registration. Section 3 of the RERA Act, 2016 bars promoters from advertising, marketing, booking, selling or inviting people to buy units in a project that must be registered until it is registered. After registration, an early-access EOI phase is allowed, within the 10% advance limit of Section 13."
     },
     {
-      "question": "What is the difference between a Soft Launch and an Official Launch?",
-      "answer": "Historically, soft launches happened before government approvals. In the post-RERA era, a soft launch refers to a private launch window for registered channel partner clients at tranche-1 pricing before public advertising begins."
+      "question": "What can a developer do before RERA registration?",
+      "answer": "Prepare: creative with space for the RERA details, a landing page on a private link, WhatsApp replies, call scripts, CRM, paused ad campaigns and draft channel partner agreements. Don't run project ads, publish the project page, put up hoardings or collect EOIs before the registration number arrives."
     },
     {
-      "question": "What is a Refundable vs Non-Refundable EOI token?",
-      "answer": "A standard EOI token (typically ₹1L to ₹5L) is 100% fully refundable if the buyer is not allotted their preferred unit or floor during the formal price release event."
+      "question": "What is the penalty for marketing a project before RERA registration?",
+      "answer": "Up to 10% of the estimated project cost under Section 59(1). If the promoter keeps breaking the rule or ignores orders, Section 59(2) allows imprisonment up to three years, a further fine up to 10%, or both."
     },
     {
-      "question": "Why do Indian buyers participate in pre-launch EOI campaigns?",
-      "answer": "Buyers participate to lock in 'First Mover Advantage': inaugural pricing is typically 10% to 18% lower than post-launch market rates, guaranteeing immediate paper capital appreciation."
+      "question": "Are pre-launch prices really lower?",
+      "answer": "Developers often offer early buyers a launch price or priority, but there is no rule that pre-launch prices are lower, and no guarantee of appreciation. Compare the offer with similar registered projects nearby and read the written terms."
     },
     {
-      "question": "How should builders structure digital ads during a pre-launch campaign?",
-      "answer": "Pre-launch ads should focus on exclusivity, unit scarcity, and price escalation countdowns: 'Inaugural Pricing for First 50 Units Only. Prices Increase by ₹500/sq.ft. on Launch Date'."
+      "question": "Is a pre-launch EOI refundable?",
+      "answer": "Only on the terms written in the EOI form. Common terms are a full refund if you don't choose a unit and a deduction if you withdraw after choosing one. Get the refund conditions and timeline in writing before paying."
     },
     {
-      "question": "What happens to the EOI token on launch day?",
-      "answer": "On launch day, depositors are called in priority sequence according to their token timestamp."
+      "question": "How should a pre-launch campaign be planned?",
+      "answer": "Build everything 4–6 weeks before registration and keep it paused. On registration day add the RERA details, publish the landing page and switch on Meta and Google ads. Reply to every enquiry within minutes, run the EOI window, then allot units and move ads to site visits after launch."
     },
     {
-      "question": "How can developers automate EOI token tracking?",
-      "answer": "Use a centralized cloud CRM integrated with instant payment gateway links and automated WhatsApp receipts, ensuring complete transparency and zero manual paperwork errors."
+      "question": "What should buyers check before paying for a pre-launch offer?",
+      "answer": "The project's RERA registration number on the state RERA website, written EOI terms, payment to the developer's account with a receipt, an advance within 10% until an agreement for sale is registered, and a possession date that matches the RERA filing."
     }
-  ]
+  ],
+  "updated": "2026-10-23"
 }

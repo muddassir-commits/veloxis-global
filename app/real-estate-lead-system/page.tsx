@@ -14,7 +14,7 @@ import { FaqAccordion } from '../../components/sections/FaqAccordion';
 import { WhatsAppFlowMockup } from '../../components/sections/WhatsAppFlowMockup';
 import { ReviewedLine } from '../../components/ui/ReviewedLine';
 import { websiteAudit } from '../../data/research';
-import { getServiceSchema, getVideoSchema } from '../../lib/schema';
+import { getServiceSchema } from '../../lib/schema';
 import { constructMetadata, pageMeta } from '../../lib/seo-config';
 import { siteData } from '../../data/site';
 import {
@@ -42,16 +42,6 @@ export default function LeadSystemPage() {
           path: pageMeta.leadSystem.path,
           serviceType: 'Real estate lead generation',
           audience: 'Real estate agents, brokers, channel partners and builders',
-        })}
-      />
-      <SchemaMarkup
-        schema={getVideoSchema({
-          name: 'Lead Leak #2: 7-Field Form vs WhatsApp Qualification in Real Estate Ads',
-          description: 'Case analysis: Why real estate Meta ads lose 85% of buyer leads on 7-question forms, and how 1-tap WhatsApp automation qualifies buyers in 42 seconds.',
-          thumbnailUrl: '/images/og/lead-system-og.jpg',
-          uploadDate: '2026-10-21T10:00:00+05:30',
-          duration: 'PT19.5S',
-          transcript: 'Aapne pachaas hazaar rupaye ads par kharch kiye. Buyer ne ad par click kiya, par aage saat sawaalon ka lamba form aa gaya. Naam, shahar, budget, salary, OTP... buyer ne tabhi back button daba diya. Fix simple hai. Lamba form hatao, WhatsApp button lagao, aur ek minute mein qualify karo. Apna lead funnel check karwana hai? Comment karein, AUDIT.',
         })}
       />
 

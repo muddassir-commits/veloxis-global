@@ -1,24 +1,22 @@
 {
-  "title": "How to Book Site Visits from Online Enquiries: The 7-Minute Rule",
-  "seoTitle": "How to Book Real Estate Site Visits (7-Minute Rule)",
-  "excerpt": "How top builders convert digital clicks into booked property tours: the fast-response call script, WhatsApp scheduling automation, and weekend visit incentives.",
+  "title": "How to Book Real Estate Site Visits: Steps, Scripts, Site Visit Form and Report",
+  "seoTitle": "How to Book Real Estate Site Visits (Form + Scripts)",
+  "excerpt": "How to turn property enquiries into site visits: a 7-step process, WhatsApp and call scripts, a site visit form template, a report example and no-show fixes.",
   "date": "2026-10-19",
   "category": "Landing Pages",
   "service": "high-converting-landing-pages",
   "image": "/images/people/blog/leads-couple-site-visit.jpg",
-  "imageAlt": "Real estate sales consultant giving an on-site property tour to a family at a modern residential community",
+  "imageAlt": "A property advisor going through papers with a young couple inside an apartment",
   "inlineImages": [
     {
       "src": "/images/people/blog/ad-examples-marketer-reviewing-phone.jpg",
-      "alt": "Real estate marketing executive reviewing site visit booking metrics on a smartphone",
-      "caption": "The bridge between digital ad spend and developer revenue is the physical site visit.",
-      "beforeHeading": "the-seven-minute-framework"
+      "alt": "A man in a blazer smiling at his phone at a desk with a laptop",
+      "beforeHeading": "booking-steps"
     },
     {
       "src": "/images/people/blog/channel-partner-advisor-with-clients.jpg",
-      "alt": "Channel partner presenting floor plans and booking discounts to buyers in a project sample flat",
-      "caption": "Offering specific 2-slot site visit options converts twice as many buyers as open-ended questions.",
-      "beforeHeading": "high-converting-calling-script"
+      "alt": "A property advisor explaining figures on a printed sheet to a couple across a desk",
+      "beforeHeading": "scripts"
     }
   ],
   "about": [
@@ -33,36 +31,37 @@
   ],
   "faqs": [
     {
-      "question": "What is the speed rule for booking real estate site visits?",
-      "answer": "The speed rule says that contacting a buyer within a few minutes of their online enquiry works better than waiting, because their interest in your property is still fresh."
+      "question": "What is a site visit in real estate?",
+      "answer": "A visit by a prospective buyer to the project, usually the sample flat, site office or tower, with a salesperson or channel partner. It is often the buyer's first real look at the location and construction quality, and the step where most decisions are made."
     },
     {
-      "question": "What is the benchmark site visit conversion rate in India?",
-      "answer": "Average digital real estate campaigns achieve a 3% to 5% site visit rate from raw leads. High-performing funnels using instant WhatsApp automation and fast qualification achieve 12% to 18% site visit completion."
+      "question": "How do I book more site visits from online leads?",
+      "answer": "Reply within minutes on WhatsApp, ask two or three qualifying questions, call with context, offer two specific visit times, confirm with the location pin and the host's number, send reminders, and follow up after the visit."
     },
     {
-      "question": "Why do prospective buyers agree to a site visit and then not show up?",
-      "answer": "No-shows happen because the prospect lacked conviction, received no reminder sequence, or was overwhelmed by spam calls from other brokers."
+      "question": "What should a real estate site visit form include?",
+      "answer": "Visitor name and contact details, how they heard about the project (including the CP's name and RERA number), configuration, budget, purpose and timeline, visit date and salesperson, feedback and objections, consent to contact them, and the next step with a date."
     },
     {
-      "question": "Should builders offer free cab pickups for site visits?",
-      "answer": "Yes. In competitive micro-markets like Noida Expressway or Greater Noida West, offering an Uber/Ola voucher or complimentary cab service increases physical attendance on high-ticket luxury projects (₹1.5Cr+) by over 30%."
+      "question": "What is a site visit report?",
+      "answer": "A short note written after each visit: who came, what they need, what they saw, what they liked, their concerns, which other projects they're considering, and the agreed next step. It keeps the follow-up specific."
     },
     {
-      "question": "How should sales executives ask for the site visit appointment?",
-      "answer": "Never ask open-ended questions like 'When can you visit?'. Which works better for your family?'"
+      "question": "How do I reduce site visit no-shows?",
+      "answer": "Book only qualified leads, fix a specific time, remind the evening before and the morning of the visit with the location pin, make rescheduling easy, and call no-shows the same day with two new slots."
     },
     {
-      "question": "What role does WhatsApp play in confirming site visits?",
-      "answer": "WhatsApp serves as the verification anchor: send a live Google Map pin, project entry gate directions, the relationship manager's direct contact card, and a digital visitor pass."
+      "question": "What is a good site visit conversion rate?",
+      "answer": "There is no reliable public benchmark for India, because rates vary by lead source, price segment, location and reply speed. Track your own lead-to-visit, show rate and visit-to-booking rates by source each week and compare sources against each other."
     },
     {
-      "question": "How many times should a sales rep follow up before dropping a lead?",
-      "answer": "Sales reps should execute a minimum of 6 structured follow-ups across 14 days (calls, WhatsApp video teasers, and SMS reminders) before reassigning a cold lead to the automated nurture database."
+      "question": "What should I say to get a buyer to visit the site?",
+      "answer": "Refer to what they told you, suggest the units that fit, explain why seeing the site helps them decide, and offer two specific times, for example: \"Would Saturday at 11 or Sunday at 4 work better for you?\""
     },
     {
-      "question": "Can virtual 3D tours replace physical site visits?",
-      "answer": "Virtual 3D tours are excellent micro-qualification tools that filter out casual browsers, but they do not replace physical site visits where families evaluate construction quality, neighborhood vibes, and sample flat finishes."
+      "question": "Should site visit confirmations be automated?",
+      "answer": "Yes. Confirmations, location pins and reminders are easy to automate on WhatsApp with approved templates. Qualifying the buyer and agreeing the visit time work better with a person."
     }
-  ]
+  ],
+  "updated": "2026-10-23"
 }

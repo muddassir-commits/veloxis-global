@@ -1,41 +1,37 @@
 {
-  "title": "Real Estate Broker Commission in India: Slabs, RERA Rules & Builder Payouts",
-  "seoTitle": "Real Estate Broker Commission in India: 2026 Slabs",
-  "excerpt": "Real estate broker commission in India explained: how resale and builder commissions are usually structured, who pays, RERA rules and GST.",
+  "title": "Real Estate Broker Commission in India: Rates, Who Pays, RERA, GST and TDS",
+  "seoTitle": "Real Estate Broker Commission in India: Who Pays & Rules",
+  "excerpt": "Real estate broker commission in India: who pays in resale and new projects, Haryana's 1% cap, CP payouts, RERA agent rules, 18% GST and 2% TDS.",
   "date": "2026-10-17",
   "category": "Growth Tips",
   "service": "paid-ads",
   "image": "/images/people/blog/channel-partner-office-discussion.jpg",
-  "imageAlt": "A senior real estate broker discussing commission agreements with a commercial property developer in an office",
+  "imageAlt": "Three colleagues discussing documents in an office",
   "inlineImages": [
     {
       "src": "/images/people/blog/channel-partner-advisor-with-clients.jpg",
-      "alt": "A property consultant walking clients through a luxury apartment pricing sheet",
-      "caption": "Commission structures vary dramatically between primary builder launches and secondary market resale.",
+      "alt": "A property advisor explaining figures on a printed sheet to a couple across a desk",
       "beforeHeading": "commission-slabs"
     },
     {
       "src": "/images/people/blog/rera-agent-contract-on-desk.jpg",
-      "alt": "A pen resting on a registered builder-buyer brokerage agreement on a wooden desk",
-      "caption": "In primary market transactions, the developer pays the commission; buyers pay zero.",
-      "beforeHeading": "who-pays"
+      "alt": "A laptop, a phone, a pen and a printed contract on a wooden desk next to a cup of tea",
+      "beforeHeading": "who-pays",
+      "caption": "Agree the rate, who pays and when it is due before the first visit."
     },
     {
       "src": "/images/people/blog/rera-agent-checking-papers.jpg",
-      "alt": "A real estate agent reviewing RERA registration certificates and commission payout schedules",
-      "caption": "Under RERA Section 9, only registered agents and channel partners can legally claim brokerage on registered projects.",
+      "alt": "A young man in an orange T-shirt reading printed papers in front of a laptop",
       "beforeHeading": "rera-rules"
     },
     {
       "src": "/images/people/blog/leads-broker-calling-client.jpg",
-      "alt": "A broker on a phone call following up with high-intent buyers",
-      "caption": "Brokers who handle high volumes often negotiate tiered kicker slabs with developers.",
+      "alt": "A man in a suit talking on a desk phone in his office",
       "beforeHeading": "broker-vs-own-ads"
     },
     {
       "src": "/images/people/blog/rera-agent-giving-keys-client.jpg",
-      "alt": "A real estate agent handing over house keys to smiling property buyers at possession",
-      "caption": "Final milestone payouts typically happen upon registration or possession handover.",
+      "alt": "A smiling agent in a mustard blazer handing a set of keys to a client against a grey wall",
       "beforeHeading": "how-to-negotiate"
     }
   ],
@@ -52,35 +48,36 @@
   "faqs": [
     {
       "question": "How much commission does a real estate broker charge in India?",
-      "answer": "On secondary market resale deals, brokers typically charge 1% to 2% of the transaction value from both the buyer and the seller. On residential rental deals, the fee is usually 15 days to 1 month's rent. For new project launches, channel partners charge buyers 0% and receive 2% to 5% directly from the builder."
+      "answer": "There is no national fixed rate. In resale and rentals the fee is agreed in writing between the broker and the buyer, seller or tenant, usually as a percentage of the price or a share of the rent. In new projects the developer pays the channel partner under its CP agreement. Haryana is an exception: its property dealer rules allow 1% of the agreed price, half from each side."
     },
     {
-      "question": "Who pays the broker commission on new launch builder flats?",
-      "answer": "The homebuyer pays zero brokerage fees."
+      "question": "Who pays the broker commission on a new project flat?",
+      "answer": "Normally the developer. Channel partners are paid by the developer under their CP agreement, so a home buyer booking a new-project flat through a CP usually pays no brokerage. If a CP asks you for brokerage on a new booking, ask for the reason in writing."
     },
     {
-      "question": "Is real estate broker commission regulated by RERA?",
-      "answer": "RERA does not cap or fix brokerage percentages; commission rates are governed by mutual agreement. However, RERA Section 9 mandates that brokers must be officially registered with the state RERA authority to legally facilitate sales and receive commissions on registered projects."
+      "question": "Does RERA fix broker commission?",
+      "answer": "No. The RERA Act, 2016 does not set commission rates. It requires agents to register with the state RERA authority (Section 9), sets their duties (Section 10) and penalises breaches with up to ₹10,000 a day, up to 5% of the property's cost (Section 62)."
     },
     {
-      "question": "Is GST applicable on real estate brokerage in India?",
-      "answer": "Yes. Brokerage services attract 18% Goods and Services Tax (GST). If the broker is GST-registered, they invoice the fee plus 18% GST. For corporate developer payouts, Tax Deducted at Source (TDS) under Section 194H also applies."
+      "question": "Is there a legal cap on brokerage in Haryana?",
+      "answer": "Yes. Rule 10 of the Haryana Regulation of Property Dealers and Consultants Rules, 2009 allows 1% of the agreed consideration value, paid half by the seller and half by the buyer. HRERA said in October 2020 it would enforce the cap. Check the current position with HRERA before agreeing a fee."
     },
     {
-      "question": "What is a 70/30 commission split in real estate?",
-      "answer": "In real estate brokerage agencies, a 70/30 split means the individual agent keeps 70% of the gross commission earned on a deal, while the brokerage firm or principal channel partner retains 30% to cover office infrastructure, CRM software, marketing leads, and administrative support."
+      "question": "Is GST charged on real estate brokerage?",
+      "answer": "Yes. Brokerage is a taxable service at 18% GST. A broker must register for GST once yearly turnover crosses ₹20 lakh for services in most states (₹10 lakh in special category states) and then adds GST to the invoice."
     },
     {
-      "question": "When does a builder pay commission to a channel partner?",
-      "answer": "Builder commission payouts are tied to payment milestones."
+      "question": "What is the TDS rate on brokerage and commission?",
+      "answer": "2% once commission paid to one person crosses ₹20,000 in the year, or 20% without a PAN. From 1 April 2026 this rule sits in Section 393(1) of the Income-tax Act, 2025, which replaced Section 194H of the 1961 Act. Confirm the current rate with your chartered accountant."
     },
     {
-      "question": "Can a homebuyer negotiate brokerage fees in India?",
-      "answer": "Yes. In resale transactions, brokerage fees are negotiable."
+      "question": "What is a 70/30 commission split?",
+      "answer": "It is how a brokerage firm and its agent share a commission: the agent keeps 70% and the firm keeps 30% for office, leads, software and support. The term comes mainly from the US; in India firms use many models, from salary plus incentive to a share of each deal."
     },
     {
-      "question": "Should builders rely only on broker networks or their own digital ads?",
-      "answer": "Relying solely on broker networks costs developers 3% to 5% per unit plus kicker bonuses. Leading developers run a hybrid model: maintaining strong channel partner relationships while running their own digital lead engine (Meta ads, project landing pages, and instant WhatsApp response) where customer acquisition costs are often under 1.5%."
+      "question": "When does a developer pay a channel partner?",
+      "answer": "At the milestone written in the CP agreement, for example after the buyer has paid a set share of the price or after the agreement for sale is registered. The agreement should also say how buyers are registered to a CP and what happens to commission if a booking is cancelled."
     }
-  ]
+  ],
+  "updated": "2026-10-23"
 }
