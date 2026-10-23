@@ -6,7 +6,7 @@
   "category": "Guides",
   "service": "paid-ads",
   "image": "/images/people/blog/google-meta-reviewing-report.jpg",
-  "imageAlt": "Real estate marketing director reviewing 12-month campaign budget allocations and media mix projections on a laptop",
+  "imageAlt": "Real estate marketing director reviewing a 12-month campaign plan on a laptop",
   "inlineImages": [
     {
       "src": "/images/people/blog/social-content-calendar-whiteboard.jpg",
@@ -22,8 +22,14 @@
     }
   ],
   "about": [
-    { "name": "Marketing Plan", "sameAs": "https://en.wikipedia.org/wiki/Marketing_plan" },
-    { "name": "Real Estate Development", "sameAs": "https://en.wikipedia.org/wiki/Real_estate_development" }
+    {
+      "name": "Marketing Plan",
+      "sameAs": "https://en.wikipedia.org/wiki/Marketing_plan"
+    },
+    {
+      "name": "Real Estate Development",
+      "sameAs": "https://en.wikipedia.org/wiki/Real_estate_development"
+    }
   ],
   "faqs": [
     {
@@ -40,7 +46,7 @@
     },
     {
       "question": "When should marketing start for a new residential development?",
-      "answer": "Marketing strategy begins 90 days before launch for positioning and creative production. However, public ad spend and lead generation can only commence after obtaining official RERA registration."
+      "answer": "However, public ad spend and lead generation can only commence after obtaining official RERA registration."
     },
     {
       "question": "What are the 3 phases of a project marketing lifecycle?",

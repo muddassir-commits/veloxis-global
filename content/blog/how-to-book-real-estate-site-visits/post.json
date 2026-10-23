@@ -1,7 +1,7 @@
 {
   "title": "How to Book Site Visits from Online Enquiries: The 7-Minute Rule",
   "seoTitle": "How to Book Real Estate Site Visits (7-Minute Rule)",
-  "excerpt": "How top builders convert digital clicks into booked property tours: the 7-minute call script, WhatsApp scheduling automation, and weekend visit incentives.",
+  "excerpt": "How top builders convert digital clicks into booked property tours: the fast-response call script, WhatsApp scheduling automation, and weekend visit incentives.",
   "date": "2026-10-19",
   "category": "Landing Pages",
   "service": "high-converting-landing-pages",
@@ -22,13 +22,19 @@
     }
   ],
   "about": [
-    { "name": "Site Visit", "sameAs": "https://en.wikipedia.org/wiki/Site_visit" },
-    { "name": "Sales Conversion", "sameAs": "https://en.wikipedia.org/wiki/Conversion_marketing" }
+    {
+      "name": "Site Visit",
+      "sameAs": "https://en.wikipedia.org/wiki/Site_visit"
+    },
+    {
+      "name": "Sales Conversion",
+      "sameAs": "https://en.wikipedia.org/wiki/Conversion_marketing"
+    }
   ],
   "faqs": [
     {
-      "question": "What is the 7-minute rule for booking real estate site visits?",
-      "answer": "The 7-minute rule states that initiating contact within 7 minutes of an online inquiry yields a 391% increase in site visit commitments compared to reaching out after 30 minutes, because the buyer's focus is still on your property."
+      "question": "What is the speed rule for booking real estate site visits?",
+      "answer": "The speed rule says that contacting a buyer within a few minutes of their online enquiry works better than waiting, because their interest in your property is still fresh."
     },
     {
       "question": "What is the benchmark site visit conversion rate in India?",
@@ -36,7 +42,7 @@
     },
     {
       "question": "Why do prospective buyers agree to a site visit and then not show up?",
-      "answer": "No-shows happen because the prospect lacked conviction, received no reminder sequence, or was overwhelmed by spam calls from other brokers. Automated WhatsApp location pins and confirmation calls reduce no-shows by 50%."
+      "answer": "No-shows happen because the prospect lacked conviction, received no reminder sequence, or was overwhelmed by spam calls from other brokers."
     },
     {
       "question": "Should builders offer free cab pickups for site visits?",
@@ -44,7 +50,7 @@
     },
     {
       "question": "How should sales executives ask for the site visit appointment?",
-      "answer": "Never ask open-ended questions like 'When can you visit?'. Use the alternate choice technique: 'We have site tour slots available this Saturday at 11:30 AM or Sunday at 3:30 PM. Which works better for your family?'"
+      "answer": "Never ask open-ended questions like 'When can you visit?'. Which works better for your family?'"
     },
     {
       "question": "What role does WhatsApp play in confirming site visits?",

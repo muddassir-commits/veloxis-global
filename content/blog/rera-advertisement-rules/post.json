@@ -22,8 +22,14 @@
     }
   ],
   "about": [
-    { "name": "Real Estate (Regulation and Development) Act, 2016", "sameAs": "https://en.wikipedia.org/wiki/Real_Estate_(Regulation_and_Development)_Act,_2016" },
-    { "name": "UP RERA", "sameAs": "https://up-rera.in" }
+    {
+      "name": "Real Estate (Regulation and Development) Act, 2016",
+      "sameAs": "https://en.wikipedia.org/wiki/Real_Estate_(Regulation_and_Development)_Act,_2016"
+    },
+    {
+      "name": "UP RERA",
+      "sameAs": "https://up-rera.in"
+    }
   ],
   "faqs": [
     {

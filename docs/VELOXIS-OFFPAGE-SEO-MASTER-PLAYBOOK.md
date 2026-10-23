@@ -33,7 +33,7 @@ These profiles establish Veloxis Global in Google's Knowledge Graph and feed LLM
   - Real Estate Web & Landing Page Design: 30%
   - AI & WhatsApp Marketing Automation: 30%
 * **Target Audience**: Real Estate Developers, Builders, Commercial Promoters, Channel Partners
-* **Hourly Rate / Retainer**: ₹25,000 – ₹60,000 / month (or $500 – $1,500 / mo)
+* **Hourly Rate / Retainer**: [pricing kept private]
 * **Tagline**: The Real Estate Lead Generation & Site-Visit Engine for UP & Delhi NCR
 
 ---

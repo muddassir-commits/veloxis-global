@@ -22,8 +22,14 @@
     }
   ],
   "about": [
-    { "name": "Brand Architecture", "sameAs": "https://en.wikipedia.org/wiki/Brand_architecture" },
-    { "name": "Real Estate in India", "sameAs": "https://en.wikipedia.org/wiki/Real_estate_in_India" }
+    {
+      "name": "Brand Architecture",
+      "sameAs": "https://en.wikipedia.org/wiki/Brand_architecture"
+    },
+    {
+      "name": "Real Estate in India",
+      "sameAs": "https://en.wikipedia.org/wiki/Real_estate_in_India"
+    }
   ],
   "faqs": [
     {
@@ -32,7 +38,7 @@
     },
     {
       "question": "Can digital ads work without existing brand reputation?",
-      "answer": "Ads without branding can generate cheap phone numbers, but lead-to-visit conversion drops below 2%. Without brand trust, prospects do not answer sales calls or attend scheduled weekend site visits."
+      "answer": "Without brand trust, prospects do not answer sales calls or attend scheduled weekend site visits."
     },
     {
       "question": "How should small brokers build a personal brand in Delhi NCR?",
@@ -44,7 +50,7 @@
     },
     {
       "question": "How does branding reduce Cost Per Lead (CPL) on Meta ads?",
-      "answer": "Strong brand awareness increases ad click-through rates (CTR) by 40-70%, directly lowering Meta's auction CPMs. Recognized builders regularly see qualified CPLs at half the cost of unknown competitors."
+      "answer": "Recognized builders regularly see qualified CPLs at half the cost of unknown competitors."
     },
     {
       "question": "Should a real estate channel partner brand themselves or the builder?",

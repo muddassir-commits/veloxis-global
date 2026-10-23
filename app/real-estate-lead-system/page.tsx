@@ -93,7 +93,7 @@ export default function LeadSystemPage() {
             <div className="flex flex-wrap items-center gap-2.5 pt-1">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 border border-white/20 text-xs font-semibold text-white backdrop-blur-md">
                 <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-                <span>Google Ads Certified Partner</span>
+                <span>Google Certified Founder</span>
                 <span className="text-emerald-300 font-mono text-[11px] font-bold">Skillshop Verified</span>
               </div>
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 border border-white/20 text-xs font-semibold text-white backdrop-blur-md">
@@ -273,122 +273,6 @@ export default function LeadSystemPage() {
                 </div>
               );
             })}
-          </div>
-        </div>
-      </section>
-
-      {/* Verified Performance Benchmarks & Client Case Studies */}
-      <section className="py-20 bg-slate-900 text-white border-t border-slate-800">
-        <div className="max-w-container-max mx-auto px-gutter">
-          <div className="max-w-3xl mb-12 section-reveal">
-            <span className="text-xs font-bold text-blue-400 uppercase tracking-widest block mb-3">Live Client Benchmarks</span>
-            <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight mb-4">
-              Real performance data from live regional campaigns
-            </h2>
-            <p className="text-slate-300 leading-relaxed text-base">
-              We engineer multi-channel campaigns judged on verified cost per enquiry and booked site visits. Below are authentic operational benchmarks from live growth systems engineered by our founder.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 stagger-reveal">
-            {/* Case 1: Geofenced Performance */}
-            <div className="bg-white/5 border border-white/10 rounded-2xl p-7 flex flex-col justify-between hover:border-royal-blue/50 transition-colors">
-              <div>
-                <div className="flex items-center justify-between mb-4">
-                  <span className="text-xs font-bold uppercase tracking-wider text-emerald-400 bg-emerald-500/10 px-2.5 py-1 rounded-full border border-emerald-500/20">
-                    62% CPA Reduction
-                  </span>
-                  <span className="text-xs text-slate-400 font-mono">Google Ads</span>
-                </div>
-                <h3 className="text-xl font-extrabold text-white mb-2">Hyper-Local Geofenced Acquisition</h3>
-                <p className="text-xs text-slate-300 leading-relaxed mb-4">
-                  Scaled high-intent acquisitions in Central Noida (Pincodes 201309 &amp; 201307). Slashed cost from ₹38.90 down to ₹24.38 and ₹12.50 in optimized phases.
-                </p>
-                <div className="space-y-2 text-xs border-t border-white/10 pt-4 text-slate-300">
-                  <div className="flex justify-between">
-                    <span className="text-slate-400">Total Volume:</span>
-                    <span className="font-bold text-white">177+ Verified Actions</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="text-slate-400">Optimized CPA:</span>
-                    <span className="font-bold text-emerald-400">₹12.50 / action</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="text-slate-400">Device Hygiene:</span>
-                    <span className="font-bold text-white">10% Tablet Waste Cut</span>
-                  </div>
-                </div>
-              </div>
-              <p className="text-[11px] text-slate-400 mt-5 pt-3 border-t border-white/5">
-                Key optimization: Hourly dayparting (11:00–13:00, 17:00) + 3km micro-geofence.
-              </p>
-            </div>
-
-            {/* Case 2: Meta Ads Engine */}
-            <div className="bg-white/5 border border-white/10 rounded-2xl p-7 flex flex-col justify-between hover:border-royal-blue/50 transition-colors">
-              <div>
-                <div className="flex items-center justify-between mb-4">
-                  <span className="text-xs font-bold uppercase tracking-wider text-blue-400 bg-blue-500/10 px-2.5 py-1 rounded-full border border-blue-500/20">
-                    48 Ad Creatives
-                  </span>
-                  <span className="text-xs text-slate-400 font-mono">Meta Ads (FB/IG)</span>
-                </div>
-                <h3 className="text-xl font-extrabold text-white mb-2">Dual-Sided Marketplace Funnel</h3>
-                <p className="text-xs text-slate-300 leading-relaxed mb-4">
-                  Engineered split acquisition: Hindi direct-to-WhatsApp onboarding for blue-collar supply, paired with English-first buyer demand campaigns.
-                </p>
-                <div className="space-y-2 text-xs border-t border-white/10 pt-4 text-slate-300">
-                  <div className="flex justify-between">
-                    <span className="text-slate-400">Creative Formats:</span>
-                    <span className="font-bold text-white">1:1, 4:5, 9:16, 1.91:1</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="text-slate-400">Lead Latency:</span>
-                    <span className="font-bold text-emerald-400">&lt;60-Second Reply</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="text-slate-400">Account Governance:</span>
-                    <span className="font-bold text-white">Unblocked Business Portfolios</span>
-                  </div>
-                </div>
-              </div>
-              <p className="text-[11px] text-slate-400 mt-5 pt-3 border-t border-white/5">
-                Key optimization: 1-tap WhatsApp chat links eliminating landing-page drop-offs.
-              </p>
-            </div>
-
-            {/* Case 3: Analytics Telemetry */}
-            <div className="bg-white/5 border border-white/10 rounded-2xl p-7 flex flex-col justify-between hover:border-royal-blue/50 transition-colors">
-              <div>
-                <div className="flex items-center justify-between mb-4">
-                  <span className="text-xs font-bold uppercase tracking-wider text-amber-400 bg-amber-500/10 px-2.5 py-1 rounded-full border border-amber-500/20">
-                    Clean Telemetry
-                  </span>
-                  <span className="text-xs text-slate-400 font-mono">GA4 &amp; GTM</span>
-                </div>
-                <h3 className="text-xl font-extrabold text-white mb-2">Closed-Loop Attribution</h3>
-                <p className="text-xs text-slate-300 leading-relaxed mb-4">
-                  Consolidated 6 fragmented data streams down to 3 clean properties. Audited and eliminated artificial conversion inflation from auto-firing session events.
-                </p>
-                <div className="space-y-2 text-xs border-t border-white/10 pt-4 text-slate-300">
-                  <div className="flex justify-between">
-                    <span className="text-slate-400">Data Pipeline:</span>
-                    <span className="font-bold text-white">GA4 + Firebase + Search Console</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="text-slate-400">Reporting Engine:</span>
-                    <span className="font-bold text-emerald-400">Automated Python CLI</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="text-slate-400">Data Integrity:</span>
-                    <span className="font-bold text-white">Zero False Conversions</span>
-                  </div>
-                </div>
-              </div>
-              <p className="text-[11px] text-slate-400 mt-5 pt-3 border-t border-white/5">
-                Key optimization: Custom event tracking mapped strictly to verified business outcomes.
-              </p>
-            </div>
           </div>
         </div>
       </section>

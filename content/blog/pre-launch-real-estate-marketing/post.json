@@ -22,8 +22,14 @@
     }
   ],
   "about": [
-    { "name": "Expression of interest", "sameAs": "https://en.wikipedia.org/wiki/Expression_of_interest" },
-    { "name": "Real estate investment", "sameAs": "https://en.wikipedia.org/wiki/Real_estate_investment" }
+    {
+      "name": "Expression of interest",
+      "sameAs": "https://en.wikipedia.org/wiki/Expression_of_interest"
+    },
+    {
+      "name": "Real estate investment",
+      "sameAs": "https://en.wikipedia.org/wiki/Real_estate_investment"
+    }
   ],
   "faqs": [
     {
@@ -52,7 +58,7 @@
     },
     {
       "question": "What happens to the EOI token on launch day?",
-      "answer": "On launch day, depositors are called in priority sequence according to their token timestamp. If they select a unit, the token converts into the formal 10% booking advance and an Agreement for Sale is executed."
+      "answer": "On launch day, depositors are called in priority sequence according to their token timestamp."
     },
     {
       "question": "How can developers automate EOI token tracking?",

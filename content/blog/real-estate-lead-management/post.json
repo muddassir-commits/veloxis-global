@@ -1,7 +1,7 @@
 {
-  "title": "Real Estate Lead Management: Stop Losing 60% of Enquiries",
+  "title": "Real Estate Lead Management: Stop Losing Enquiries",
   "seoTitle": "Real Estate Lead Management: Stop Lead Leakage (2026)",
-  "excerpt": "Why real estate teams lose 60% of buyer inquiries, the 5-minute response rule, WhatsApp CRM automation, and converting leads into site visits.",
+  "excerpt": "Why real estate teams lose buyer enquiries, the 5-minute response rule, WhatsApp follow-up automation, and converting leads into site visits.",
   "date": "2026-10-18",
   "category": "AI Automation",
   "service": "ai-automation",
@@ -11,7 +11,7 @@
     {
       "src": "/images/people/blog/whatsapp-man-messaging-phone.jpg",
       "alt": "Executive responding to an incoming buyer lead via WhatsApp Business API on mobile",
-      "caption": "Inquiries replied to within 60 seconds on WhatsApp convert at 400% higher rates than morning callbacks.",
+      "caption": "Enquiries answered quickly on WhatsApp usually get a better response than ones answered the next day.",
       "beforeHeading": "the-five-minute-decay-curve"
     },
     {
@@ -22,13 +22,19 @@
     }
   ],
   "about": [
-    { "name": "Lead Management", "sameAs": "https://en.wikipedia.org/wiki/Lead_management" },
-    { "name": "Customer Relationship Management", "sameAs": "https://en.wikipedia.org/wiki/Customer_relationship_management" }
+    {
+      "name": "Lead Management",
+      "sameAs": "https://en.wikipedia.org/wiki/Lead_management"
+    },
+    {
+      "name": "Customer Relationship Management",
+      "sameAs": "https://en.wikipedia.org/wiki/Customer_relationship_management"
+    }
   ],
   "faqs": [
     {
       "question": "Why do real estate companies lose 60% of their online leads?",
-      "answer": "The primary cause is delayed response time. In Indian real estate, 65% of ad inquiries occur between 7 PM and 11 PM. If the sales desk does not reply until 11 AM the next day, the buyer has already engaged with competing builders."
+      "answer": "The primary cause is delayed response time."
     },
     {
       "question": "What is the 5-minute lead response rule in real estate?",
@@ -44,7 +50,7 @@
     },
     {
       "question": "Why do sales executives hate manual Excel lead sheets?",
-      "answer": "Excel sheets lack automated reminders, click-to-call dialing, and duplicate detection. Sales reps waste 35% of their working hours manually updating spreadsheets rather than talking to buyers."
+      "answer": "Excel sheets lack automated reminders, click-to-call dialing, and duplicate detection."
     },
     {
       "question": "How can builders prevent leads from getting recycled by brokers?",
