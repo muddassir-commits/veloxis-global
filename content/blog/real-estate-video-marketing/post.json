@@ -1,24 +1,22 @@
 {
-  "title": "Real Estate Video Marketing: 3D Walkthroughs & Drone Shoots That Sell",
-  "seoTitle": "Real Estate Video Marketing & Drone Guide India (2026)",
-  "excerpt": "How developers and brokers use short-form reels, 3D animated walkthroughs, and FPV drone shoots to sell residential and commercial inventory.",
+  "title": "Real Estate Video Marketing: Walkthroughs, Virtual Tours, Drone Rules and Reels",
+  "seoTitle": "Real Estate Video Marketing: Walkthroughs to Drone Rules",
+  "excerpt": "Real estate video marketing: which videos work where, a simple phone kit, how to shoot a walkthrough, virtual tours, India's drone rules, YouTube and Reels.",
   "date": "2026-10-23",
   "category": "Landing Pages",
   "service": "high-converting-landing-pages",
   "image": "/images/people/blog/social-creator-filming-gimbal.jpg",
-  "imageAlt": "Videographer filming luxury property tour with professional camera gimbal and high-resolution lens",
+  "imageAlt": "A man setting up a smartphone on a gimbal to record himself indoors",
   "inlineImages": [
     {
       "src": "/images/people/blog/reels-instagram-phone-on-tripod.jpg",
-      "alt": "Smartphone on tripod recording 9:16 vertical video reel inside a furnished sample apartment",
-      "caption": "Vertical short-form video reels generate 4x higher engagement than traditional wide-angle photos.",
-      "beforeHeading": "the-3-tiers-of-real-estate-video-production"
+      "alt": "A smartphone showing the Instagram logo, held upright in a tripod clamp",
+      "beforeHeading": "types-of-video"
     },
     {
       "src": "/images/people/blog/reels-agent-showing-flat-to-couple.jpg",
-      "alt": "Real estate consultant presenting property view to couple during filmed walkthrough tour",
-      "caption": "Human-led video tours establish emotional buyer connection before physical visits.",
-      "beforeHeading": "structuring-a-viral-20-second-instagram-reel"
+      "alt": "A real estate agent with a clipboard showing an unfinished flat to a young couple",
+      "beforeHeading": "reels-and-shorts"
     }
   ],
   "about": [
@@ -33,32 +31,37 @@
   ],
   "faqs": [
     {
-      "question": "Why is video marketing critical for Indian real estate in 2026?",
-      "answer": "Over 78% of property buyers watch video walkthroughs before booking a site visit. Video showcases realistic room proportions, sunlight exposure, and construction progress that static photos cannot convey."
+      "question": "What is real estate video marketing?",
+      "answer": "Using video, such as walkthroughs, location tours, construction updates, virtual tours, drone shots and short Reels, to show buyers what photos and brochures can't, and to turn that interest into enquiries and site visits."
     },
     {
-      "question": "What performs better: High-budget 3D renders or raw smartphone walkthroughs?",
-      "answer": "Raw, authentic smartphone walkthroughs filmed by charismatic agents consistently outperform expensive 3D renders on Instagram and YouTube by 3:1 in cost per lead."
+      "question": "What types of video work best for real estate?",
+      "answer": "Sample flat walkthroughs, location and commute tours, monthly construction updates, explainers (carpet area, payment plans, RERA checks), virtual tours for remote buyers, drone footage of the surroundings, and handover videos with buyers' permission."
     },
     {
-      "question": "Are drone shoots legal for real estate in India?",
-      "answer": "Yes, provided the drone pilot is DGCA-licensed (Digital Sky compliant) and does not operate within red or yellow restricted airport zones."
+      "question": "What equipment do I need for real estate videos?",
+      "answer": "A recent smartphone that records 1080p or 4K, a phone gimbal, a wireless clip-on microphone, a tripod, good daylight or a small LED light, and a phone editor with auto-captions."
     },
     {
-      "question": "What is the ideal video length for real estate Instagram Reels?",
-      "answer": "18 to 35 seconds. Focus on an immediate hook in the first 3 seconds, highlight the 3 best features, and conclude with a clear CTA to comment 'AUDIT' or click WhatsApp."
+      "question": "What is a virtual tour in real estate?",
+      "answer": "A 360° tour that lets buyers look around a property themselves on a phone or laptop. It is most useful for NRI and out-of-town buyers and as a filter before a site visit."
     },
     {
-      "question": "How do developers use video to attract NRI property investors?",
-      "answer": "NRIs in Dubai, the US, and the UK rely heavily on 4K drone neighborhood videos showing highway connectivity, school proximity, and monthly construction progress updates."
+      "question": "Do I need permission to fly a drone for a real estate shoot in India?",
+      "answer": "Under the Drone Rules, 2021 the drone must be registered on Digital Sky, the pilot needs a remote pilot certificate for commercial use of drones above nano size, and the airspace map must be checked; yellow and red zones need permission or are off limits. Hiring a certified operator is simplest."
     },
     {
-      "question": "What equipment does an agent need to shoot professional property videos?",
-      "answer": "An iPhone 15/16 Pro, a DJI Osmo Mobile gimbal, a wireless lapel microphone (DJI Mic / Rode Wireless Go), and an ultra-wide angle lens."
+      "question": "How long should a real estate Reel be?",
+      "answer": "Instagram allows Reels of up to three minutes and YouTube Shorts can also run up to three minutes, but for property short and specific usually works best: one flat, one view or one question answered, with captions and a clear call to action."
     },
     {
-      "question": "Should videos be embedded directly on project landing pages?",
-      "answer": "Yes. Embedding a 60-second video walkthrough on your landing page increases visitor conversion rates by up to 86%."
+      "question": "Can I use 3D renders in real estate video ads?",
+      "answer": "Yes, but label them as artist's impressions and make sure they don't show finishes, views or amenities buyers won't get. Under Section 12 of the RERA Act, the promoter can be liable for false statements in advertisements."
+    },
+    {
+      "question": "How do I get enquiries from property videos?",
+      "answer": "Place a walkthrough on the landing page next to the form and WhatsApp button, send it on WhatsApp after each enquiry, run your best videos as Meta ads and retarget viewers, and tag each video's link so you can see which brings enquiries."
     }
-  ]
+  ],
+  "updated": "2026-10-23"
 }

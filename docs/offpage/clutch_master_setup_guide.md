@@ -12,7 +12,7 @@
 | **Messages / Inquiries** | Direct buyer leads who message you through Clutch's "Contact Agency" button. Sent to `info@veloxisglobal.com`. |
 | **Portfolio** | Project case studies showing live URLs, screenshots, client industry, and quantitative results. |
 | **Industry Recognition** | Badges, awards, and certifications (e.g. Meta Blueprint, Google Certified). |
-| **Packages** | Fixed-scope service offerings with pricing (e.g., "RERA Launch Funnel: ₹50,000/mo"). |
+| **Packages** | Fixed-scope service offerings with pricing (e.g., "[package pricing kept private]"). |
 | **AI Visibility (NEW)** | Shows how often Veloxis Global is cited by OpenAI, Gemini, and Perplexity when users search for real estate marketing agencies. |
 | **Performance Analytics** | Traffic analytics showing monthly profile impressions, clicks to `veloxisglobal.com`, and inquiries. |
 | **Leads & Audience Insights** | B2B buyer intent data revealing which companies visited your Clutch listing. |

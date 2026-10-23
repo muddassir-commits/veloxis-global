@@ -1,62 +1,68 @@
 {
-  "title": "Real Estate Lead Management: Stop Losing 60% of Enquiries",
-  "seoTitle": "Real Estate Lead Management: Stop Lead Leakage (2026)",
-  "excerpt": "Why real estate teams lose 60% of buyer inquiries, the 5-minute response rule, WhatsApp CRM automation, and converting leads into site visits.",
+  "title": "Real Estate Lead Management: Stages, Speed, CRM and Follow-Up That Gets Site Visits",
+  "seoTitle": "Real Estate Lead Management: Stages, CRM & Follow-Up",
+  "excerpt": "Real estate lead management explained: types of leads, how fast to reply, a 7-stage system, follow-up rules, what a real estate CRM does and what to measure.",
   "date": "2026-10-18",
   "category": "AI Automation",
   "service": "ai-automation",
   "image": "/images/people/blog/leads-broker-calling-client.jpg",
-  "imageAlt": "Real estate sales manager wearing a headset and managing incoming digital property inquiries on a dual-screen CRM dashboard",
+  "imageAlt": "A man in a suit talking on a desk phone in his office",
   "inlineImages": [
     {
       "src": "/images/people/blog/whatsapp-man-messaging-phone.jpg",
-      "alt": "Executive responding to an incoming buyer lead via WhatsApp Business API on mobile",
-      "caption": "Inquiries replied to within 60 seconds on WhatsApp convert at 400% higher rates than morning callbacks.",
-      "beforeHeading": "the-five-minute-decay-curve"
+      "alt": "A young man reading a message on his smartphone at home",
+      "beforeHeading": "reply-speed",
+      "caption": "A buyer who enquires at 10 pm has usually enquired elsewhere too."
     },
     {
       "src": "/images/people/blog/channel-partner-office-discussion.jpg",
-      "alt": "Real estate sales team meeting in a glass conference room reviewing monthly lead conversion ratios",
-      "caption": "Structured CRM stage tagging prevents high-intent leads from getting lost in sales reps' personal notebooks.",
-      "beforeHeading": "building-the-automated-lead-engine"
+      "alt": "Three colleagues discussing documents in an office",
+      "beforeHeading": "what-is-a-crm"
     }
   ],
   "about": [
-    { "name": "Lead Management", "sameAs": "https://en.wikipedia.org/wiki/Lead_management" },
-    { "name": "Customer Relationship Management", "sameAs": "https://en.wikipedia.org/wiki/Customer_relationship_management" }
+    {
+      "name": "Lead Management",
+      "sameAs": "https://en.wikipedia.org/wiki/Lead_management"
+    },
+    {
+      "name": "Customer Relationship Management",
+      "sameAs": "https://en.wikipedia.org/wiki/Customer_relationship_management"
+    }
   ],
   "faqs": [
     {
-      "question": "Why do real estate companies lose 60% of their online leads?",
-      "answer": "The primary cause is delayed response time. In Indian real estate, 65% of ad inquiries occur between 7 PM and 11 PM. If the sales desk does not reply until 11 AM the next day, the buyer has already engaged with competing builders."
+      "question": "What is real estate lead management?",
+      "answer": "It is the process of capturing every enquiry in one place, replying fast, qualifying buyers, following up until each lead books a site visit or says no, and measuring which sources bring bookings."
     },
     {
-      "question": "What is the 5-minute lead response rule in real estate?",
-      "answer": "Research proves that contacting a digital real estate lead within 5 minutes increases the odds of qualifying the buyer by 21x compared to waiting 30 minutes. After 1 hour, the probability of booking a site visit drops by 80%."
+      "question": "What is a real estate lead?",
+      "answer": "A person who has shared their contact details and shown interest in buying, selling or renting property, by filling a form, sending a WhatsApp message, calling, enquiring on a portal or visiting a site office. A lead is not yet a buyer."
     },
     {
-      "question": "How does WhatsApp automation improve lead qualification?",
-      "answer": "An automated WhatsApp flow instantly delivers project brochures, price ranges, and floor plans, while asking 2 qualifying questions (budget and timeline) before handing the lead to a senior sales executive."
+      "question": "What are the main types of real estate leads?",
+      "answer": "By source: Meta lead forms, Google search ads, website forms, WhatsApp click-to-chat, property portals, channel partners, and referrals and walk-ins. By readiness: hot, warm, cold and closed."
     },
     {
-      "question": "What are the essential CRM stages for property sales?",
-      "answer": "A standard real estate pipeline must include: New Enquiry, WhatsApp Verified, Contacted / Qualified, Site Visit Scheduled, Site Visit Completed, Negotiation / EOI, and Booking Closed."
+      "question": "How quickly should I respond to a real estate lead?",
+      "answer": "Within minutes if possible. A 2011 Harvard Business Review study found firms that contacted online leads within an hour were nearly seven times as likely to qualify them as firms that waited longer. An instant WhatsApp reply plus a call from a person is the practical answer."
     },
     {
-      "question": "Why do sales executives hate manual Excel lead sheets?",
-      "answer": "Excel sheets lack automated reminders, click-to-call dialing, and duplicate detection. Sales reps waste 35% of their working hours manually updating spreadsheets rather than talking to buyers."
+      "question": "What is a CRM in real estate?",
+      "answer": "Software that stores every lead with its source, stage, notes, calls, messages and next action, and reminds the team what to do each day. It also reports which sources produce site visits and bookings."
     },
     {
-      "question": "How can builders prevent leads from getting recycled by brokers?",
-      "answer": "Deploy a centralized cloud lead engine with automatic timestamping and duplicate checking. When a lead enters from any source, it is permanently locked to the first originating channel partner."
+      "question": "What should real estate lead management software do?",
+      "answer": "Pull leads in automatically from ads, website, WhatsApp and portals, send an instant acknowledgement, assign leads, track stages and next actions, schedule site visits, report by source, and send qualified leads and visits back to Meta and Google."
     },
     {
-      "question": "What is an acceptable lead-to-site-visit ratio in North India?",
-      "answer": "For mid-income residential projects (₹60L–₹1.5Cr) in UP and NCR, a well-managed lead funnel achieves a 10% to 15% site visit ratio from total qualified digital leads."
+      "question": "How do you qualify a property buyer?",
+      "answer": "Ask four questions early, ideally in the first WhatsApp reply: which configuration, what budget range, when they plan to buy, and whether it's for living or investment."
     },
     {
-      "question": "Can WhatsApp chatbots replace human sales agents in real estate?",
-      "answer": "No. The chatbot's role is strictly speed-to-lead: instant brochure delivery and initial qualification. Closing high-value property transactions will always require skilled human empathy and negotiation on-site."
+      "question": "What should a real estate sales team measure?",
+      "answer": "Time to first reply, leads with no contact after 24 hours, conversion from lead to qualified to visit to booking by source, cost per site visit and per booking, and the reasons leads were closed."
     }
-  ]
+  ],
+  "updated": "2026-10-23"
 }

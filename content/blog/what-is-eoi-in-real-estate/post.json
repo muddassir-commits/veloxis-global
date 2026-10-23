@@ -1,7 +1,7 @@
 {
-  "title": "EOI Meaning in Real Estate: Full Form, EOI Amount, Refunds and Risks",
-  "seoTitle": "EOI Meaning in Real Estate: Full Form, EOI Amount & Refund",
-  "excerpt": "EOI meaning in real estate: Expression of Interest. How much the EOI amount is, EOI vs token vs booking, when it is refundable, and what RERA says.",
+  "title": "EOI in Real Estate: Meaning, Full Form, EOI Amount, Cheque and Refund Rules",
+  "seoTitle": "EOI in Real Estate: Meaning, Full Form, Amount & Refund",
+  "excerpt": "EOI in real estate means Expression of Interest. What the EOI amount and EOI cheque are, EOI vs token vs booking, when an EOI is refundable, and what RERA says.",
   "date": "2026-09-24",
   "category": "Guides",
   "service": "high-converting-landing-pages",
@@ -25,6 +25,10 @@
     {
       "question": "What is EOI in real estate?",
       "answer": "EOI stands for Expression of Interest: a written request, usually with a payment, telling a developer you want to buy in a project about to launch. It gives you priority to choose a unit, not a specific flat."
+    },
+    {
+      "question": "What is the full form of EOI?",
+      "answer": "EOI stands for Expression of Interest. In real estate it is a form plus a payment that gives a buyer priority to choose a unit at a project launch. In tenders, jobs and business deals it means a first, usually non-binding, statement of interest."
     },
     {
       "question": "What is an EOI cheque or EOI payment?",
@@ -51,13 +55,9 @@
       "answer": "Section 3 of the RERA Act bars promoters from advertising, marketing, booking or selling units in a project that must be registered before it is registered, so collecting money for an unregistered project is risky for both sides."
     },
     {
-      "question": "How much advance can a developer take without an agreement for sale?",
-      "answer": "Section 13 of the RERA Act says a promoter cannot take more than 10% of the unit cost as an advance or application fee without first entering into a written, registered agreement for sale."
-    },
-    {
       "question": "What should I check before paying an EOI?",
       "answer": "The project’s RERA number on the state RERA website, written refund terms, payment by cheque or bank transfer (never cash), a receipt naming the project and amount, and how allotment will work."
     }
   ],
-  "updated": "2026-10-13"
+  "updated": "2026-10-23"
 }

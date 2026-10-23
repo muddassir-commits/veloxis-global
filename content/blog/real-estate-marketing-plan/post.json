@@ -1,62 +1,67 @@
 {
-  "title": "Real Estate Marketing Plan: Step-by-Step Blueprint for Builders",
-  "seoTitle": "Real Estate Marketing Plan: Builder Blueprint (2026)",
-  "excerpt": "A complete real estate marketing plan for developers in India: budget allocation, media mix, digital funnels, and milestone KPIs across UP and Delhi NCR.",
+  "title": "Real Estate Marketing Plan: 7 Steps, a One-Page Template and an Example",
+  "seoTitle": "Real Estate Marketing Plan: 7 Steps and a Free Template",
+  "excerpt": "How to write a real estate marketing plan in 7 steps: goal, buyer, positioning, channels, budget, follow-up and measurement, with a template and an example.",
   "date": "2026-10-20",
   "category": "Guides",
   "service": "paid-ads",
   "image": "/images/people/blog/google-meta-reviewing-report.jpg",
-  "imageAlt": "Real estate marketing director reviewing 12-month campaign budget allocations and media mix projections on a laptop",
+  "imageAlt": "A woman reading a printed chart in an office while a colleague uses his phone",
   "inlineImages": [
     {
       "src": "/images/people/blog/social-content-calendar-whiteboard.jpg",
-      "alt": "Comprehensive real estate marketing launch timeline and channel schedule mapped on a project planning board",
-      "caption": "A structured 12-month marketing plan maps out budget allocation across pre-launch, main launch, and sustained inventory sales.",
-      "beforeHeading": "budget-allocation-matrix"
+      "alt": "A whiteboard with a weekly social media content calendar above a laptop on a meeting table",
+      "beforeHeading": "template"
     },
     {
       "src": "/images/people/blog/meta-ads-marketer-planning-campaign.jpg",
-      "alt": "Performance marketing strategist configuring target buyer personas and demographic parameters for property ads",
-      "caption": "Balancing high-intent Google Search with high-scale Meta retargeting ensures a continuous flow of qualified buyer inquiries.",
-      "beforeHeading": "the-omnichannel-media-mix"
+      "alt": "Close-up of a woman writing notes in a notebook beside her laptop",
+      "beforeHeading": "example"
     }
   ],
   "about": [
-    { "name": "Marketing Plan", "sameAs": "https://en.wikipedia.org/wiki/Marketing_plan" },
-    { "name": "Real Estate Development", "sameAs": "https://en.wikipedia.org/wiki/Real_estate_development" }
+    {
+      "name": "Marketing Plan",
+      "sameAs": "https://en.wikipedia.org/wiki/Marketing_plan"
+    },
+    {
+      "name": "Real Estate Development",
+      "sameAs": "https://en.wikipedia.org/wiki/Real_estate_development"
+    }
   ],
   "faqs": [
     {
-      "question": "What percentage of project cost should be allocated to real estate marketing?",
-      "answer": "Industry standards across North India dictate allocating 2.5% to 4.5% of total project revenue (Gross Development Value) to sales and marketing, depending on project scale, competitive density, and ticket size."
+      "question": "What is a real estate marketing plan?",
+      "answer": "A short written plan, usually for one project or one quarter, that sets out the goal, the buyer, the positioning, the channels, the budget, how enquiries will be handled and how results will be measured."
     },
     {
-      "question": "How should a builder divide budget between digital and traditional marketing?",
-      "answer": "In 2026, progressive developers split budgets 60% digital (Meta Ads, Google Search, programmatic, WhatsApp automation) and 40% traditional (outdoor hoardings, newspaper launch jackets, and on-site experience centers)."
+      "question": "What are the 7 steps of a real estate marketing plan?",
+      "answer": "1) Set the goal in bookings, 2) define the buyer, 3) write the positioning, 4) choose the channels, 5) set the budget, 6) plan the follow-up, 7) decide what to measure and when to review."
     },
     {
-      "question": "What is the typical customer acquisition cost (CAC) for residential flats in NCR?",
-      "answer": "For mid-segment apartments (₹70L–₹1.5Cr) in Noida or Lucknow, customer acquisition costs typically range between 1.8% to 2.5% of the apartment value, translating to ₹1.5L to ₹3L per closed sale."
+      "question": "How do I write a marketing plan for a real estate project?",
+      "answer": "Start from the sales target and work back to the visits and leads needed, describe the most likely buyer, write one positioning sentence with proof, give each channel a job and a budget, plan the follow-up, and review the numbers weekly."
     },
     {
-      "question": "When should marketing start for a new residential development?",
-      "answer": "Marketing strategy begins 90 days before launch for positioning and creative production. However, public ad spend and lead generation can only commence after obtaining official RERA registration."
+      "question": "Which channels should a real estate marketing plan include?",
+      "answer": "Usually a mix of Meta ads, Google search ads, property portals, channel partners, hoardings or print, and organic channels like social media and Google Business Profile. With a small budget, run two channels properly rather than many badly."
     },
     {
-      "question": "What are the 3 phases of a project marketing lifecycle?",
-      "answer": "The lifecycle includes: Phase 1 Pre-Launch (RERA compliance, channel partner onboarding), Phase 2 Grand Launch (omnichannel blitz, introductory pricing), and Phase 3 Sustained Velocity (milestone construction updates, referral programs)."
+      "question": "What should a real estate agent's marketing plan include?",
+      "answer": "One or two localities to specialise in, a complete Google Business Profile and RERA number on everything, weekly posts and videos, one paid source to test, same-day follow-up on every enquiry, and a habit of asking for reviews and referrals."
     },
     {
-      "question": "How do channel partners fit into the marketing plan?",
-      "answer": "Channel partners act as an outsourced sales force. The marketing plan must allocate budget for CP meets, incentive slabs, digital sales kits, and co-branded landing pages to activate top local brokers."
+      "question": "How long should a real estate marketing plan be?",
+      "answer": "Two or three pages is enough. A one-page table covering goal, buyer, positioning, offer, channels, creative, follow-up, calendar, measurement and compliance works for most projects."
     },
     {
-      "question": "Which digital marketing channel has the highest ROI for property sales?",
-      "answer": "Google Search ads deliver the highest purchase intent with lowest Cost Per Site Visit, while Meta (Instagram/Facebook) delivers the largest volume of inquiries and brand awareness at scale."
+      "question": "How often should a real estate marketing plan be reviewed?",
+      "answer": "Look at leads, visits and bookings by source every week, and move budget between channels at a monthly review based on cost per site visit and per booking."
     },
     {
-      "question": "How can builders track marketing ROI across multiple agencies?",
-      "answer": "Implement unified CRM lead source attribution with unique UTM parameters, dedicated virtual phone numbers, and daily Cost-Per-Site-Visit (CPSV) tracking across every active channel."
+      "question": "Does a real estate marketing plan need to cover RERA?",
+      "answer": "Yes. Every ad must carry the project's RERA registration number and the authority's website (plus the QR code in UP), and every claim must match the approved plans and RERA filing."
     }
-  ]
+  ],
+  "updated": "2026-10-23"
 }

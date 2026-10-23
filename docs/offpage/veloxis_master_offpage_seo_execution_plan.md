@@ -27,7 +27,7 @@ Keep these standard details ready in a notepad so you can copy-paste them in 10 
 | **Operational Cities** | Kanpur, Lucknow, Noida, Greater Noida, Delhi NCR |
 | **Primary Category** | Digital Marketing Agency / Real Estate Marketing |
 | **Secondary Categories** | Advertising Agency, Lead Generation Service, AI Automation |
-| **Pricing / Retainer** | ₹25,000 – ₹60,000 / month (or $500 – $1,200 / mo) |
+| **Pricing / Retainer** | [pricing kept private] |
 | **Year Founded** | 2024 |
 | **Team Size** | 2–10 employees |
 

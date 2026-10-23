@@ -82,12 +82,12 @@ export const WhatsAppFlowMockup: React.FC<WhatsAppFlowMockupProps> = ({ classNam
           <div className="self-start max-w-[88%] rounded-2xl rounded-tl-none bg-white px-3.5 py-2.5 text-[12.5px] leading-snug text-slate-900 shadow-sm border border-black/5">
             <p className="font-semibold text-[#075E54] text-[11px] mb-1">Veloxis Lead Automation</p>
             <p>
-              Hi Rahul! Thanks for your interest in <strong>Green Valley Residency</strong>, Gomti Nagar Extension 🏡
+              Hi Rahul! Thanks for your interest in <strong>[Your Project]</strong>, Gomti Nagar Extension 🏡
             </p>
             <div className="bg-slate-50 border border-slate-200/80 rounded-lg p-2 my-1.5 text-[11.5px] text-slate-700">
               <p className="font-semibold text-slate-900">📄 3 BHK Luxury Residences</p>
               <p>• Starting from ₹78 Lakhs</p>
-              <p>• UP RERA Registered: UPRERAPRJ99281</p>
+              <p>• UP RERA no.: [your RERA number]</p>
               <p className="text-emerald-700 font-bold mt-1">✓ Digital Brochure Sent</p>
             </div>
             <p className="mt-1">To connect you with the project lead, what is your preferred budget range?</p>

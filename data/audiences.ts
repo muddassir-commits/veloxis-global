@@ -327,7 +327,7 @@ export const audiences: Record<AudienceData['key'], AudienceData> = {
     lead:
       'For builders, developers, brokers and channel partners in Kanpur: project landing pages, Meta and Google ads for property leads, and WhatsApp replies that reach every enquiry in seconds.',
     intro: [
-      'Veloxis Global is a founder-led digital marketing agency based in Kanpur, and we work only in real estate. Our clients are developers, builders, brokers and channel partners selling flats, plots, villas and commercial space. We don’t take clients from other industries.',
+      'Veloxis Global is a founder-led digital marketing agency based in Kanpur, and we work only in real estate. We work with developers, builders, brokers and channel partners selling flats, plots, villas and commercial space. We don’t take clients from other industries.',
       'Kanpur is a word-of-mouth market. Many buyers already know a broker or a relative in property, and they ask on WhatsApp before they ever fill a form. Speed and trust decide who gets the site visit. We give each project a clear landing page with price, size, location and UP RERA details, ads aimed at the localities buyers actually live in and search for, and an instant WhatsApp reply with the price sheet and a visit slot.',
       'Because we are in Kanpur, we know a buyer in Swaroop Nagar looks for something different from a buyer in Naubasta. Every project we promote must be UP RERA registered, and the registration number goes on every ad and page.',
     ],

@@ -59,8 +59,8 @@
     },
     {
       "question": "Do I need approved templates to message real estate leads?",
-      "answer": "Yes, for any message sent outside the 24-hour window that opens when a customer messages you. Meta reviews templates and charges for them by category, with marketing messages costing more than utility messages like reminders."
+      "answer": "Yes, for any message sent outside the 24-hour window that opens when a customer messages you. Meta reviews templates and charges per delivered message by category, with marketing messages costing more than utility messages like reminders. From 1 October 2026 service replies are also charged after 1,000 free a month per number."
     }
   ],
-  "updated": "2026-10-01"
+  "updated": "2026-10-23"
 }

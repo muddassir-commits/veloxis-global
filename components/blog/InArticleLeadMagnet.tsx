@@ -5,7 +5,7 @@ import { WhatsAppIcon } from '../ui/WhatsAppIcon';
 
 export const InArticleLeadMagnet: React.FC = () => {
   const whatsappUrl =
-    'https://wa.me/919194020727?text=Hi%20Veloxis%20Global%2C%20please%20share%20the%202026%20Real%20Estate%20Lead%20Benchmark%20Sheet';
+    'https://wa.me/919194020727?text=Hi%20Veloxis%20Global%2C%20please%20send%20me%20the%20free%20marketing%20audit';
 
   return (
     <aside
@@ -19,15 +19,15 @@ export const InArticleLeadMagnet: React.FC = () => {
       <div className="relative z-10 flex flex-col gap-4">
         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 text-emerald-400 text-xs font-bold tracking-wider uppercase w-fit border border-emerald-500/20">
           <FileText className="w-3.5 h-3.5" />
-          <span>Free Agency Resource</span>
+          <span>Free Marketing Audit</span>
         </div>
 
-        <h3 className="text-xl sm:text-2xl font-extrabold text-white tracking-tight leading-snug">
-          2026 Real Estate Ad Cost &amp; Lead Generation Benchmark Sheet
-        </h3>
+        <p className="text-xl sm:text-2xl font-extrabold text-white tracking-tight leading-snug">
+          Get a free check of your enquiry flow
+        </p>
 
         <p className="text-sm sm:text-base text-slate-300 leading-relaxed max-w-2xl">
-          Compare typical Cost Per Lead (CPL), Cost Per Site Visit, and conversion benchmarks across Meta and Google Search Ads in Lucknow, Kanpur, Noida and Delhi NCR.
+          Send us your project page or ad link and we will show you where enquiries are lost, in plain language. No fee, no obligation.
         </p>
 
         <div className="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-3">

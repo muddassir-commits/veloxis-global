@@ -1,24 +1,22 @@
 {
-  "title": "Real Estate Sales Scripts: Phone, WhatsApp & Cold Calling That Converts",
-  "seoTitle": "Real Estate Sales Scripts & Pitch Guide India (2026)",
-  "excerpt": "Word-for-word cold calling, objection handling, and WhatsApp follow-up scripts engineered for Indian property sales teams and channel partners.",
+  "title": "Real Estate Sales Scripts and Pitch Examples: Calls, WhatsApp, Site Visits and Objections",
+  "seoTitle": "Real Estate Sales Scripts & Pitch Examples (India)",
+  "excerpt": "Real estate sales pitch examples and scripts for India: calling a new lead, WhatsApp replies, site visit invitations, objection handling and cold calling rules.",
   "date": "2026-10-22",
   "category": "Growth Tips",
   "service": "ai-automation",
   "image": "/images/people/blog/leads-broker-calling-client.jpg",
-  "imageAlt": "Real estate sales consultant delivering an authoritative telephone pitch using a structured objection script",
+  "imageAlt": "A man in a suit talking on a desk phone in his office",
   "inlineImages": [
     {
-      "src": "/images/people/blog/channel-partner-advisor-with-clients.jpg",
-      "alt": "Channel partner advising residential property buyers during weekend sales discussion",
-      "caption": "Consultative objection handling turns skeptical prospects into confirmed site visits.",
-      "beforeHeading": "the-consultative-cold-calling-framework"
+      "src": "/images/people/blog/leads-broker-calling-client.jpg",
+      "alt": "A man in a suit talking on a desk phone in his office",
+      "beforeHeading": "new-lead-call"
     },
     {
-      "src": "/images/people/blog/eoi-couple-planning-budget.jpg",
-      "alt": "Couple reviewing property cost breakdown and payment schedule options",
-      "caption": "Transparent price comparisons eliminate price-resistance objections within the first 3 minutes.",
-      "beforeHeading": "mastering-the-top-5-indian-buyer-objections"
+      "src": "/images/people/blog/channel-partner-advisor-with-clients.jpg",
+      "alt": "A property advisor explaining figures on a printed sheet to a couple across a desk",
+      "beforeHeading": "objections"
     }
   ],
   "about": [
@@ -33,36 +31,37 @@
   ],
   "faqs": [
     {
-      "question": "What is the biggest mistake Indian real estate telecallers make?",
-      "answer": "Opening with 'Sir are you looking for a flat?' which triggers instant defensive resistance. Consultative scripts open by referencing the prospect's digital download and setting a strict 90-second time limit."
+      "question": "What is a sales script in real estate?",
+      "answer": "A planned outline of what to say at each stage, from the first call and WhatsApp reply to the site visit invitation, objections and follow-up, so every salesperson gives buyers clear and consistent answers. It is a structure, not something to read word for word."
     },
     {
-      "question": "How do you handle the objection 'Your price is too high'?",
-      "answer": "Never defend the sticker price. Frame the price against carpet area efficiency, RERA deliverable area, infrastructure appreciation, and construction-linked payment savings."
+      "question": "How do you write a real estate sales script?",
+      "answer": "List the questions buyers ask most, write one factual answer to each, plan your own qualifying questions, end every conversation with a next step, and practise out loud. Update it whenever a new objection keeps coming up."
     },
     {
-      "question": "What is the optimal duration for a real estate qualification phone call?",
-      "answer": "A first qualification call should strictly last 3 to 5 minutes. The only goal of the call is confirming a physical weekend site visit, not closing a multi-crore property over the phone."
+      "question": "What should I say when calling a real estate lead?",
+      "answer": "Introduce yourself and the project, check it's a good time, ask about configuration, budget, purpose and timeline, suggest the options that fit, and offer two specific site visit times."
     },
     {
-      "question": "How should property sales teams follow up on WhatsApp after a phone call?",
-      "answer": "Within 2 minutes of hanging up, dispatch an automated summary card containing the site address, Google Maps GPS pin, floor plan PDF, and confirmed visit slot."
+      "question": "What is a good real estate sales pitch example?",
+      "answer": "\"From what you've told me, the 3 BHK in Tower B fits best. Photos only show so much. You'll get a better sense of the size and view on site, and I can take you through the payment plan there. Saturday 11 or Sunday 4?\""
     },
     {
-      "question": "What is the 3-Touch Follow-Up formula for un-responsive leads?",
-      "answer": "Touch 1 (Day 1): Floor plan PDF and pricing sheet. Touch 2 (Day 3): 20-second site construction progress video. Touch 3 (Day 7): Price escalation deadline warning."
+      "question": "How do you handle the price objection in real estate?",
+      "answer": "Ask what they're comparing with, then compare total cost and carpet area side by side, since differences often come from what's included. If it still doesn't fit, say so honestly rather than pushing."
     },
     {
-      "question": "How can developers train sales executives on objection handling effectively?",
-      "answer": "Conduct daily 15-minute roleplay sessions tackling the top 5 buyer objections: price resistance, location distance, possession delays, builder track record, and market slowdown."
+      "question": "Is cold calling allowed for real estate in India?",
+      "answer": "It is regulated. TRAI's rules on unsolicited commercial communication restrict promotional calls and messages to numbers on the DND registry, and the DPDP Act, 2023 requires a lawful basis, usually consent, to use personal data. Check TRAI's current rules and never use bought lists."
     },
     {
-      "question": "Does pre-warming leads on WhatsApp improve telecaller pickup rates?",
-      "answer": "Yes. Delivering a welcome brochure on WhatsApp before calling increases phone connection rates from 18% to over 54% because the buyer recognizes the brand name."
+      "question": "What is the goal of the first sales call?",
+      "answer": "To understand the buyer and book a site visit, not to close the sale on the phone. Few buyers book a home they haven't seen."
     },
     {
-      "question": "How does an alternate-choice close increase site visit commitments?",
-      "answer": "Instead of asking 'When will you visit?', providing two specific options ('Saturday 11:30 AM or Sunday 3:00 PM') forces a decision between times rather than a yes-or-no rejection."
+      "question": "What should a salesperson never say to a buyer?",
+      "answer": "Anything that isn't true or provable: guaranteed returns, possession dates that differ from the RERA filing, amenities not in the approved plans, or invented distances. These can create liability under the RERA Act."
     }
-  ]
+  ],
+  "updated": "2026-10-23"
 }
