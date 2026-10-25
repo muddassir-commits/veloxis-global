@@ -27,6 +27,7 @@ export const getSiteGraph = () => ({
       email: siteData.email,
       telephone: siteData.phoneRaw,
       founder: { '@id': FOUNDER_ID },
+      address: { '@type': 'PostalAddress', addressLocality: siteData.baseCity, addressRegion: 'Uttar Pradesh', addressCountry: 'IN' },
       areaServed,
       knowsAbout: [
         'Real estate marketing',

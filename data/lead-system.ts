@@ -223,6 +223,6 @@ export const leadSystemFaqs = [
   },
   {
     question: 'Which cities do you work in?',
-    answer: 'Kanpur, Lucknow, Noida, Greater Noida and Delhi NCR. The setup is done remotely, so other cities are possible too.',
+    answer: 'Noida, Greater Noida, Delhi NCR, Lucknow and Kanpur. The setup is done remotely, so other cities are possible too.',
   },
 ];

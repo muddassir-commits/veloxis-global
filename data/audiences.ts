@@ -99,7 +99,7 @@ export const audiences: Record<AudienceData['key'], AudienceData> = {
       { title: 'Numbers your sales head trusts', desc: 'Weekly reporting on leads, contact rate, site visits and cost per site visit, taken from your CRM rather than ad dashboards.' },
     ],
     local: {
-      heading: 'Real estate marketing in Kanpur, Lucknow, Noida and Delhi NCR',
+      heading: 'Real estate marketing in Noida, Delhi NCR, Lucknow and Kanpur',
       intro:
         'We work with developers and channel partners across Uttar Pradesh and Delhi NCR. Campaigns are planned locality by locality, because buyers search and compare by area, not by city.',
       areas: [
@@ -117,7 +117,7 @@ export const audiences: Record<AudienceData['key'], AudienceData> = {
       { question: 'Can you market a project before RERA registration?', answer: 'No. We only run ads and publish pages for projects that are RERA-registered, and every creative carries the registration number. For pre-launch interest we can collect expressions of interest in line with your legal advice.' },
       { question: 'How quickly can a launch campaign go live?', answer: 'Usually within one to two weeks: landing page, tracking, WhatsApp automation and campaigns built together. The timeline depends on how quickly price sheets, renders and approvals are ready.' },
       { question: 'Do you handle hoardings, print or events?', answer: 'No. We focus on digital lead generation — landing pages, Meta and Google ads, and WhatsApp automation — and make sure offline campaigns send people to a page and number we can track.' },
-      { question: 'Which cities do you work in?', answer: 'We work with developers in Kanpur, Lucknow, Noida, Greater Noida and the wider Delhi NCR, and can run campaigns for projects elsewhere in India.' },
+      { question: 'Which cities do you work in?', answer: 'We work with developers in Noida, Greater Noida, the wider Delhi NCR, Lucknow and Kanpur, and can run campaigns for projects elsewhere in India.' },
       { question: 'How do you report results to a developer?', answer: 'Weekly, in plain language: leads by campaign, how many were contacted, site visits booked and completed, and cost per site visit — taken from your CRM, not just the ad dashboards.' },
       { question: 'Can you help sell unsold or ready-to-move inventory?', answer: 'Yes. Ready-to-move inventory gets its own page and campaigns built around “ready to move” searches and retargeting of past enquiries, with a clear offer and site-visit booking.' },
     ],

@@ -16,7 +16,7 @@ export const servicesHubFaqs: PageFaq[] = [
   { question: 'How is the work scoped?', answer: 'After a free audit we recommend the services, pages and campaigns your project needs and share a written proposal. Ad spend is paid directly to Google and Meta from your own accounts.' },
   { question: 'How do you measure results?', answer: 'On leads, how many were contacted, site visits booked and completed, and cost per site visit — reported weekly. Clicks and impressions are available but aren’t the headline.' },
   { question: 'Is there a minimum contract?', answer: 'No. We work month-to-month with 30 days’ notice.' },
-  { question: 'Which cities do you cover?', answer: 'We work with clients in Kanpur, Lucknow, Noida, Greater Noida and the wider Delhi NCR, and can run campaigns for projects elsewhere in India.' },
+  { question: 'Which cities do you cover?', answer: 'We work with clients in Noida, Greater Noida, the wider Delhi NCR, Lucknow and Kanpur, and can run campaigns for projects elsewhere in India.' },
 ];
 
 export const contactFaqs: PageFaq[] = [
@@ -26,7 +26,7 @@ export const contactFaqs: PageFaq[] = [
   { question: 'What should I prepare before we talk?', answer: 'The project details (location, configurations, price band, RERA number), your current lead sources, rough monthly ad spend if any, and who follows up leads today.' },
   { question: 'Can I just message on WhatsApp instead of filling the form?', answer: `Yes. WhatsApp ${siteData.phone} (WhatsApp only, no calls), or email ${siteData.email}.` },
   { question: 'Can I book a video call?', answer: 'Yes. Use the “Book a call” button to pick a 30-minute slot.' },
-  { question: 'Do you have an office I can visit?', answer: 'No. Veloxis Global works remotely with clients across Kanpur, Lucknow, Noida and Delhi NCR, so there is no walk-in office.' },
+  { question: 'Do you have an office I can visit?', answer: 'No. Veloxis Global works remotely with clients across Noida, Delhi NCR, Lucknow and Kanpur, so there is no walk-in office.' },
 ];
 
 export const playbooksHubFaqs: PageFaq[] = [
@@ -52,7 +52,7 @@ export const blogIndexFaqs: PageFaq[] = [
 export const aboutFaqs = (years: number): PageFaq[] => [
   { question: 'Who founded Veloxis Global?', answer: `Veloxis Global was founded by Muddassir Ali, who has over ${years} years of experience in lead generation, landing page design, Meta and Google Ads, and sales automation.` },
   { question: 'What does Veloxis Global do?', answer: 'We build project landing pages, run Meta and Google ads for property leads, and set up WhatsApp chatbots and CRM automation for real estate developers, brokers and channel partners.' },
-  { question: 'Where does Veloxis Global work?', answer: 'With clients in Kanpur, Lucknow, Noida, Greater Noida and the wider Delhi NCR, and on campaigns for projects elsewhere in India. We work remotely and do not have a walk-in office.' },
+  { question: 'Where does Veloxis Global work?', answer: 'With clients in Noida, Greater Noida, the wider Delhi NCR, Lucknow and Kanpur, and on campaigns for projects elsewhere in India. We work remotely and do not have a walk-in office.' },
   { question: 'Why only real estate?', answer: 'Focusing on one industry means every campaign, page and automation is built around how property is actually sold — launches, RERA rules, site visits and channel partners — instead of generic lead generation.' },
   { question: 'Who will work on my account?', answer: 'Muddassir plans and oversees every account personally, working with a small network of landing page developers, ad specialists and automation engineers chosen for each project.' },
   { question: 'What makes you different from a general digital marketing agency?', answer: 'We work only in real estate, offer three connected services rather than everything, and report on site visits and cost per site visit instead of clicks and impressions.' },
