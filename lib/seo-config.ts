@@ -106,13 +106,13 @@ export const pageMeta = {
   kanpur: {
     title: 'Kanpur Digital Marketing Agency for Real Estate | Veloxis',
     description:
-      'Kanpur-based, real estate-only digital marketing agency for builders, brokers and CPs: project landing pages, Meta and Google ads, instant WhatsApp replies.',
+      'Real estate-only digital marketing agency for Kanpur builders, brokers and CPs: project landing pages, Meta and Google ads, instant WhatsApp replies.',
     path: '/digital-marketing-agency-kanpur',
   },
   noida: {
     title: 'Noida Digital Marketing Agency for Real Estate | Veloxis',
     description:
-      'Real estate-only digital marketing agency for Noida and Greater Noida builders, brokers and CPs: project pages, Meta and Google ads, instant WhatsApp replies.',
+      'Noida-based, real estate-only digital marketing agency for builders, brokers and CPs: project pages, Meta and Google ads, instant WhatsApp replies.',
     path: '/digital-marketing-agency-noida',
   },
   playbooks: {

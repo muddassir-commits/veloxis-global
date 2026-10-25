@@ -8,14 +8,16 @@ export const siteData = {
   whatsapp: "+919194020727",
   email: "info@veloxisglobal.com",
   // Shown wherever an address used to appear.
-  address: "Serving Kanpur, Lucknow, Noida & Delhi NCR",
-  areaServed: ["Kanpur", "Lucknow", "Noida", "Greater Noida", "Delhi NCR"],
+  address: "Based in Noida · Serving Delhi NCR, Lucknow & Kanpur",
+  // City we are based in (no street address: service-area business).
+  baseCity: "Noida",
+  areaServed: ["Noida", "Greater Noida", "Delhi NCR", "Lucknow", "Kanpur"],
   // Legal venue referenced in the Terms of Service.
   jurisdiction: "Kanpur, Uttar Pradesh",
   founder: "Muddassir Ali",
   // One definition used everywhere AI tools and search engines read about us (schema, llms.txt, About).
   definition:
-    "Veloxis Global is a real estate marketing agency in India that builds project landing pages, runs Meta and Google ads for property leads, and sets up WhatsApp automation that replies to every enquiry in seconds, for developers, brokers and channel partners in Kanpur, Lucknow, Noida, Greater Noida and Delhi NCR.",
+    "Veloxis Global is a Noida-based real estate marketing agency that builds project landing pages, runs Meta and Google ads for property leads, and sets up WhatsApp automation that replies to every enquiry in seconds, for developers, brokers and channel partners in Noida, Greater Noida, Delhi NCR, Lucknow and Kanpur.",
   // Kept apart from any similarly named company in search results.
   disambiguation: "Indian real estate marketing agency. Not related to Veloxis Pharmaceuticals or VXI Global.",
   booking: "https://calendly.com/veloxis-global/30min",

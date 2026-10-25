@@ -100,8 +100,8 @@ export default function AboutPage() {
               We don’t just run ads. We build the path from the ad to the site visit — and measure every step of it.
             </div>
             <p>
-              We work with developers and builders, channel partners and brokers across Kanpur, Lucknow, Noida, Greater
-              Noida and the wider Delhi NCR, and run campaigns for projects elsewhere in India.
+              We are based in Noida and work with developers and builders, channel partners and brokers across Noida,
+              Greater Noida, the wider Delhi NCR, Lucknow and Kanpur, and run campaigns for projects elsewhere in India.
             </p>
           </div>
 

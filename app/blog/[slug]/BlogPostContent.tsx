@@ -232,7 +232,7 @@ export default function BlogPostContent({ post, relatedPosts, service }: Props) 
                   <p className="text-lg font-extrabold text-slate-900">{post.author}</p>
                 </Link>
                 <p className="text-xs sm:text-sm text-slate-500 leading-relaxed">
-                  Founder of Veloxis Global, with {FOUNDER_YEARS}+ years in digital marketing. Works with builders, brokers and channel partners across Kanpur, Lucknow, Noida and Delhi NCR.
+                  Founder of Veloxis Global, with {FOUNDER_YEARS}+ years in digital marketing. Based in Noida. Works with builders, brokers and channel partners across Noida, Delhi NCR, Lucknow and Kanpur.
                 </p>
                 <div className="flex flex-wrap gap-x-4 gap-y-2 mt-2">
                   <Link href="https://www.linkedin.com/in/muddassir-alii/" target="_blank" rel="noopener noreferrer" className="text-xs font-bold text-royal-blue flex items-center gap-1 py-1.5 -my-1.5">

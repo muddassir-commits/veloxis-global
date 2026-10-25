@@ -28,7 +28,8 @@ const contact = `## Contact
 
 - Email: ${siteData.email}
 - WhatsApp: ${siteData.phone} (messages only, no calls)
-- Service area: ${siteData.areaServed.join(', ')} (service-area business; no walk-in office)
+- Based in: ${siteData.baseCity}, Uttar Pradesh, India (no walk-in office)
+- Service area: ${siteData.areaServed.join(', ')} (service-area business)
 - Book a call: ${siteData.booking}
 - Website: ${SITE_URL}`;
 

@@ -52,7 +52,7 @@ export const InArticleLeadMagnet: React.FC = () => {
 
         <div className="pt-3 border-t border-white/10 flex items-center gap-2 text-xs text-slate-400">
           <ShieldCheck className="w-4 h-4 text-emerald-400 shrink-0" />
-          <span>Veloxis Global · Real estate marketing agency · Serving Kanpur, Lucknow, Noida &amp; NCR</span>
+          <span>Veloxis Global · Real estate marketing agency · Serving Noida, NCR, Lucknow &amp; Kanpur</span>
         </div>
       </div>
     </aside>

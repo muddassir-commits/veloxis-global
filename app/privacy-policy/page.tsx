@@ -54,8 +54,8 @@ export default function PrivacyPolicyPage() {
 
             <h2 className={h2}>1. Who we are</h2>
             <p>
-              Veloxis Global is a real estate marketing agency serving builders, developers and channel partners in
-              Kanpur, Lucknow, Noida and Delhi NCR. For the personal data described here, we decide why and how it is
+              Veloxis Global is a Noida-based real estate marketing agency serving builders, developers and channel partners in
+              Noida, Delhi NCR, Lucknow and Kanpur. For the personal data described here, we decide why and how it is
               used, which makes us the “Data Fiduciary” under the DPDP Act. You can reach us at{' '}
               <a href={`mailto:${siteData.email}`} className={link}>{siteData.email}</a> or{' '}
               <a href={siteData.whatsappLink} className={link} target="_blank" rel="noopener noreferrer">WhatsApp {siteData.phone}</a>.

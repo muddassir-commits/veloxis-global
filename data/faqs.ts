@@ -18,7 +18,7 @@ export const faqs: FAQItem[] = [
   {
     question: 'Who do you work with?',
     answer:
-      'Residential developers and builders, channel partners mandated on projects, and brokers or property consultants. Most clients are in Kanpur, Lucknow, Noida, Greater Noida and the wider Delhi NCR, and we can run campaigns for projects elsewhere in India.',
+      'Residential developers and builders, channel partners mandated on projects, and brokers or property consultants. Most clients are in Noida, Greater Noida, the wider Delhi NCR, Lucknow and Kanpur, and we can run campaigns for projects elsewhere in India.',
   },
   {
     question: 'How soon can campaigns start producing leads?',
@@ -43,7 +43,7 @@ export const faqs: FAQItem[] = [
   {
     question: 'Which cities do you work in?',
     answer:
-      'Kanpur, Lucknow, Noida, Greater Noida and the wider Delhi NCR. Most of the work is done remotely, so we can also run campaigns for projects elsewhere in India.',
+      'Noida, Greater Noida, the wider Delhi NCR, Lucknow and Kanpur. Most of the work is done remotely, so we can also run campaigns for projects elsewhere in India.',
   },
   {
     question: 'Do you offer a free audit?',
