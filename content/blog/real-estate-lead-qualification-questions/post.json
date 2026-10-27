@@ -1,0 +1,27 @@
+{
+  "title": "Real Estate Lead Qualification Questions: What to Ask Buyers on the First Call",
+  "seoTitle": "Real Estate Lead Qualification Questions to Ask Buyers",
+  "excerpt": "The 10 questions that tell you if a real estate lead is ready to buy: purpose, budget, home loan, timeline and decision makers, with a simple scoring system.",
+  "date": "2026-10-25",
+  "category": "Growth Tips",
+  "service": "ai-automation",
+  "image": "/images/people/blog/lq-woman-phone-call.jpg",
+  "imageAlt": "A woman in glasses talking on the phone and holding an open notebook",
+  "inlineImages": [
+    { "src": "/images/people/blog/lq-taking-notes.jpg", "alt": "A woman on a phone call writing notes in a notebook next to her laptop", "beforeHeading": "core-questions", "caption": "Write the answers down straight after the call." },
+    { "src": "/images/people/blog/lq-couple-laptop.jpg", "alt": "A couple sitting on a sofa and looking at a laptop together", "beforeHeading": "budget-and-loan" },
+    { "src": "/images/people/blog/lq-realtor-explaining.jpg", "alt": "A property agent explaining something to an older man in a suit inside a home", "beforeHeading": "timeline-and-decision" },
+    { "src": "/images/people/blog/lq-checklist-clipboard.jpg", "alt": "A home buyer's checklist on a clipboard held over a table", "beforeHeading": "scoring-leads" },
+    { "src": "/images/people/blog/lq-phone-call-desk.jpg", "alt": "A woman talking on her phone at a desk with a laptop and a plant", "beforeHeading": "forms-and-whatsapp" }
+  ],
+  "faqs": [
+    { "question": "What does lead qualification mean in real estate?", "answer": "It means finding out, in the first one or two conversations, whether a buyer can buy, wants to buy, and when, by asking about purpose, budget, funding, configuration, location, timeline and who decides." },
+    { "question": "What are the most important questions to ask a real estate lead?", "answer": "Purpose (own use or investment), budget range, buying timeline and who else is part of the decision tell you most of what you need. Configuration, location, home loan plans and current situation can follow over WhatsApp or at the site visit." },
+    { "question": "How do I ask about budget without putting buyers off?", "answer": "Give a range, such as the price band for 3 BHK units, and ask whether it fits. Then ask how much they plan to put in themselves for the down payment and registration." },
+    { "question": "How much home loan can a buyer get in India?", "answer": "Under RBI loan-to-value limits, banks can lend up to 90% of the property value for loans up to Rs 30 lakh, 80% for loans above Rs 30 lakh and up to Rs 75 lakh, and 75% above Rs 75 lakh. The buyer pays the rest plus stamp duty and registration." },
+    { "question": "How should I score real estate leads?", "answer": "Use four labels: hot (fits and buying within about three months), warm (fits but later), cold (researching or no reply) and not a fit. Record the reason for every not-a-fit lead so you can improve your ads." },
+    { "question": "Can I qualify leads before calling them?", "answer": "Yes. Add one or two multiple-choice questions to Meta lead forms, show the price range and possession date on the landing page, and ask one qualifying question in the first WhatsApp reply." },
+    { "question": "Which questions should I never ask a home buyer?", "answer": "Never ask about religion, caste, community or diet, never ask for exact salary or bank balance on a first call, avoid pressure questions about paying today, and never promise or ask about guaranteed returns." },
+    { "question": "Should qualifying delay the first call to a new lead?", "answer": "No. A Harvard Business Review study found firms that contacted online leads within an hour were nearly seven times as likely to qualify them. Call quickly and qualify during the call." }
+  ]
+}

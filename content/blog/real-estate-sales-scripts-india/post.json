@@ -5,17 +5,17 @@
   "date": "2026-10-22",
   "category": "Growth Tips",
   "service": "ai-automation",
-  "image": "/images/people/blog/leads-broker-calling-client.jpg",
-  "imageAlt": "A man in a suit talking on a desk phone in his office",
+  "image": "/images/people/blog/ss-woman-headset.jpg",
+  "imageAlt": "A woman with a headset taking a call at her desk",
   "inlineImages": [
     {
-      "src": "/images/people/blog/leads-broker-calling-client.jpg",
-      "alt": "A man in a suit talking on a desk phone in his office",
+      "src": "/images/people/blog/ss-person-headset.jpg",
+      "alt": "Close-up of a person holding a headset with a microphone",
       "beforeHeading": "new-lead-call"
     },
     {
-      "src": "/images/people/blog/channel-partner-advisor-with-clients.jpg",
-      "alt": "A property advisor explaining figures on a printed sheet to a couple across a desk",
+      "src": "/images/people/blog/fx-agent-elderly-couple.jpg",
+      "alt": "A smiling agent sitting on a staircase talking to an older couple",
       "beforeHeading": "objections"
     }
   ],

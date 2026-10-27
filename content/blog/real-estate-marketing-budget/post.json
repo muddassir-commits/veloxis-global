@@ -5,19 +5,18 @@
   "date": "2026-10-23",
   "category": "Paid Ads",
   "service": "paid-ads",
-  "image": "/images/people/blog/google-ads-analyst-reviewing-data.jpg",
-  "imageAlt": "A person marking printed charts with a pen next to a laptop",
+  "image": "/images/people/blog/bud-monthly-budget.jpg",
+  "imageAlt": "A monthly budget sheet with a chart, a calculator and highlighter pens",
   "inlineImages": [
     {
-      "src": "/images/people/blog/google-meta-reviewing-report.jpg",
-      "alt": "A woman reading a printed chart in an office while a colleague uses his phone",
+      "src": "/images/people/blog/bud-calculator-paper.jpg",
+      "alt": "A calculator on top of a printed chart",
       "beforeHeading": "how-much-to-spend"
     },
     {
-      "src": "/images/people/blog/social-team-reviewing-results.jpg",
-      "alt": "A marketing team gathered around a laptop reviewing results, with charts on a board behind them",
-      "beforeHeading": "channel-split",
-      "caption": "Compare channels on cost per site visit, not cost per lead."
+      "src": "/images/people/blog/bud-using-calculator.jpg",
+      "alt": "A person using a calculator next to an open notebook and a pen",
+      "beforeHeading": "channel-split"
     }
   ],
   "about": [

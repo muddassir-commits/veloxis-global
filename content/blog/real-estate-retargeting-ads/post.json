@@ -1,0 +1,30 @@
+{
+  "title": "Real Estate Retargeting Ads: How to Win Back Buyers Who Didn't Enquire",
+  "seoTitle": "Real Estate Retargeting Ads on Meta and Google: A Guide",
+  "excerpt": "How real estate retargeting works on Meta and Google: the audiences to build, what to show each one, budget and frequency, and the privacy rules to follow.",
+  "date": "2026-10-26",
+  "category": "Paid Ads",
+  "service": "paid-ads",
+  "image": "/images/people/blog/rt-woman-browsing-phone.jpg",
+  "imageAlt": "Close-up of a woman's hands scrolling through a page on her smartphone",
+  "inlineImages": [
+    { "src": "/images/people/blog/rt-laptop-closeup.jpg", "alt": "A laptop on a desk showing an analytics dashboard with a line chart", "beforeHeading": "audiences-to-build" },
+    { "src": "/images/people/blog/rt-phone-closeup.jpg", "alt": "A hand holding a smartphone with a web page open", "beforeHeading": "meta-retargeting" },
+    { "src": "/images/people/blog/rt-woman-laptop.jpg", "alt": "A person typing on a laptop that shows an image editing page", "beforeHeading": "google-retargeting" },
+    { "src": "/images/people/blog/rt-couple-laptop.jpg", "alt": "A man and a woman sitting together and looking at a laptop screen", "beforeHeading": "what-to-show", "caption": "Answer the question that stopped them last time." },
+    { "src": "/images/people/blog/rt-woman-shopping-online.jpg", "alt": "A woman browsing a website on a laptop at home", "beforeHeading": "privacy-rules" }
+  ],
+  "about": [
+    { "name": "Behavioral retargeting", "sameAs": "https://en.wikipedia.org/wiki/Behavioral_retargeting" }
+  ],
+  "faqs": [
+    { "question": "What are retargeting ads in real estate?", "answer": "Ads shown again to people who already showed interest in your project, such as visiting your landing page, watching your video or opening your lead form, but who did not book a site visit." },
+    { "question": "Which retargeting audiences should a real estate project build?", "answer": "Video viewers, Facebook and Instagram engagers, landing page visitors, floor plan or price page visitors, lead form openers who did not submit, and leads who have not visited yet. Exclude people who already booked." },
+    { "question": "How far back can Meta retarget website visitors?", "answer": "According to Meta's help centre, website Custom Audiences can include people from up to the last 180 days. Choose a window that matches your buying cycle, shorter for a launch." },
+    { "question": "How long can Google Ads remarket to visitors?", "answer": "Google Ads data segments (formerly remarketing lists) allow a membership duration of up to 540 days. Pick a duration that suits how long buyers take to decide on your project." },
+    { "question": "What should I show in real estate retargeting ads?", "answer": "Something new that answers the question that stopped them: a sample flat walkthrough for viewers, RERA and loan details for page visitors, specific units or a site visit invite for price page visitors, and an easier way to enquire for form openers." },
+    { "question": "How much budget do real estate retargeting ads need?", "answer": "Retargeting audiences are small, so they usually need only a modest share of the budget. Watch frequency and audience size, and judge results by cost per site visit, not only cost per lead." },
+    { "question": "Do I need consent for retargeting in India?", "answer": "Tell visitors in your privacy policy that you use cookies and pixels for advertising, and upload customer lists only of people who agreed to hear from you, in line with the Digital Personal Data Protection Act, 2023. Check current rules with your lawyer." },
+    { "question": "Can retargeting replace sales follow-up?", "answer": "No. Someone who submitted a form needs a call and a WhatsApp message first. Retargeting ads support follow-up; they do not replace it." }
+  ]
+}

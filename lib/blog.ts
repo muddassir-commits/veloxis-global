@@ -70,6 +70,8 @@ export interface LoadResult {
   skipped: { slug: string; problems: string[] }[];
   /** Unpublished drafts, with what is still missing (empty = ready to publish). */
   drafts: { slug: string; problems: string[] }[];
+  /** Valid posts dated in the future; hidden until their day. */
+  scheduled: string[];
 }
 
 const toIso = (day: string) => `${day}T00:00:00+05:30`;
@@ -151,10 +153,15 @@ function loadOne(slug: string): { post?: Post; draft?: boolean; problems: string
 
 let cache: LoadResult | null = null;
 
+/** Today's date in India (YYYY-MM-DD), so a post dated today goes live at 00:00 IST. */
+function todayIst(): string {
+  return new Date(Date.now() + 5.5 * 3600 * 1000).toISOString().slice(0, 10);
+}
+
 /** Loads and validates every post. Never throws. */
 export function loadPosts(): LoadResult {
   if (cache) return cache;
-  const result: LoadResult = { posts: [], skipped: [], drafts: [] };
+  const result: LoadResult = { posts: [], skipped: [], drafts: [], scheduled: [] };
 
   let slugs: string[] = [];
   try {
@@ -174,6 +181,9 @@ export function loadPosts(): LoadResult {
       } else if (!post) {
         result.skipped.push({ slug, problems });
         console.warn(`[blog] skipped "${slug}":\n  - ${problems.join('\n  - ')}`);
+      } else if (post.isoDate.slice(0, 10) > todayIst()) {
+        // Scheduled: dated in the future, goes live on the first build on or after that day (IST).
+        result.scheduled.push(slug);
       } else {
         result.posts.push(post);
       }

@@ -5,17 +5,17 @@
   "date": "2026-10-21",
   "category": "Paid Ads",
   "service": "paid-ads",
-  "image": "/images/people/blog/google-meta-reviewing-report.jpg",
-  "imageAlt": "A woman reading a printed chart in an office while a colleague uses his phone",
+  "image": "/images/people/blog/np-man-reading-newspaper.jpg",
+  "imageAlt": "A man reading a printed newspaper on a train",
   "inlineImages": [
     {
-      "src": "/images/people/blog/google-meta-marketer-phone-desktop.jpg",
-      "alt": "A man using his phone at a desk in front of a desktop monitor",
+      "src": "/images/people/blog/np-elderly-man-newspaper.jpg",
+      "alt": "An older man reading a newspaper on a bench outside a shop",
       "beforeHeading": "tracking"
     },
     {
-      "src": "/images/people/blog/leads-couple-site-visit.jpg",
-      "alt": "A property advisor going through papers with a young couple inside an apartment",
+      "src": "/images/people/blog/fx-hand-smartphone.jpg",
+      "alt": "A woman holding a smartphone with chat bubbles around it and a mug in the other hand",
       "beforeHeading": "combining"
     }
   ],

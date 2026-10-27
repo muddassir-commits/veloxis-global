@@ -5,17 +5,17 @@
   "date": "2026-10-21",
   "category": "AI Automation",
   "service": "ai-automation",
-  "image": "/images/people/blog/whatsapp-man-messaging-phone.jpg",
-  "imageAlt": "A young man reading a message on his smartphone at home",
+  "image": "/images/people/blog/fx-woman-badge-phone.jpg",
+  "imageAlt": "A woman with an ID badge reading a message on her phone",
   "inlineImages": [
     {
-      "src": "/images/people/blog/whatsapp-office-sales-call.jpg",
-      "alt": "A man on a desk phone talking while a colleague listens in an office",
+      "src": "/images/people/blog/wapi-woman-typing-laptop.jpg",
+      "alt": "A woman with a headset smiling and typing on a laptop",
       "beforeHeading": "whatsapp-flow"
     },
     {
-      "src": "/images/people/blog/ai-real-estate-team-reviewing-screen.jpg",
-      "alt": "A woman pointing at a computer screen with a pencil while a colleague looks on",
+      "src": "/images/people/blog/fx-woman-plaid-phone.jpg",
+      "alt": "A woman in a grey blazer smiling at her phone",
       "beforeHeading": "no-shows"
     }
   ],

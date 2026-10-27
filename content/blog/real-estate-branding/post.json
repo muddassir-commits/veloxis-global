@@ -5,19 +5,18 @@
   "date": "2026-10-18",
   "category": "Growth Tips",
   "service": "paid-ads",
-  "image": "/images/people/blog/slogans-team-at-ideas-wall.jpg",
-  "imageAlt": "Three colleagues discussing ideas in front of a wall of sticky notes",
+  "image": "/images/people/blog/brand-design-workspace.jpg",
+  "imageAlt": "Font samples, Pantone colour cards, a colour wheel and pencils on a white desk",
   "inlineImages": [
     {
-      "src": "/images/people/blog/slogans-writing-sticky-notes.jpg",
-      "alt": "A hand writing ideas on colourful sticky notes stuck to a wall",
+      "src": "/images/people/blog/brand-colleagues-sketching.jpg",
+      "alt": "Two people sketching logo ideas on paper with coloured markers on a wooden table",
       "beforeHeading": "build-a-brand"
     },
     {
-      "src": "/images/people/blog/leads-couple-site-visit.jpg",
-      "alt": "A property advisor going through papers with a young couple inside an apartment",
-      "beforeHeading": "developer-vs-broker-branding",
-      "caption": "Buyers judge a builder by delivery and a broker by local knowledge."
+      "src": "/images/people/blog/brand-doodling-booklet.jpg",
+      "alt": "A hand drawing a detailed pencil sketch in a notebook",
+      "beforeHeading": "developer-vs-broker-branding"
     }
   ],
   "about": [

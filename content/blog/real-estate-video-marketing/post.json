@@ -5,17 +5,17 @@
   "date": "2026-10-23",
   "category": "Landing Pages",
   "service": "high-converting-landing-pages",
-  "image": "/images/people/blog/social-creator-filming-gimbal.jpg",
-  "imageAlt": "A man setting up a smartphone on a gimbal to record himself indoors",
+  "image": "/images/people/blog/vid-gimbal.jpg",
+  "imageAlt": "A person filming with a smartphone on a gimbal in a forest",
   "inlineImages": [
     {
-      "src": "/images/people/blog/reels-instagram-phone-on-tripod.jpg",
-      "alt": "A smartphone showing the Instagram logo, held upright in a tripod clamp",
+      "src": "/images/people/blog/vid-camera-tripod.jpg",
+      "alt": "A camera on a stabiliser rig on a table",
       "beforeHeading": "types-of-video"
     },
     {
-      "src": "/images/people/blog/reels-agent-showing-flat-to-couple.jpg",
-      "alt": "A real estate agent with a clipboard showing an unfinished flat to a young couple",
+      "src": "/images/people/blog/vid-smartphone-rig.jpg",
+      "alt": "A hand holding a smartphone on a gimbal showing the camera screen",
       "beforeHeading": "reels-and-shorts"
     }
   ],

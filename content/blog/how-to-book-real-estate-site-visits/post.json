@@ -5,17 +5,17 @@
   "date": "2026-10-19",
   "category": "Landing Pages",
   "service": "high-converting-landing-pages",
-  "image": "/images/people/blog/leads-couple-site-visit.jpg",
-  "imageAlt": "A property advisor going through papers with a young couple inside an apartment",
+  "image": "/images/people/blog/sv-couple-viewing-home.jpg",
+  "imageAlt": "A young couple talking with a property agent who holds a clipboard inside a flat",
   "inlineImages": [
     {
-      "src": "/images/people/blog/ad-examples-marketer-reviewing-phone.jpg",
-      "alt": "A man in a blazer smiling at his phone at a desk with a laptop",
+      "src": "/images/people/blog/sv-agent-showing-flat.jpg",
+      "alt": "A property agent showing a couple around a bright living room",
       "beforeHeading": "booking-steps"
     },
     {
-      "src": "/images/people/blog/channel-partner-advisor-with-clients.jpg",
-      "alt": "A property advisor explaining figures on a printed sheet to a couple across a desk",
+      "src": "/images/people/blog/sv-couple-with-realtor.jpg",
+      "alt": "A couple standing in a living room listening to an agent",
       "beforeHeading": "scripts"
     }
   ],
