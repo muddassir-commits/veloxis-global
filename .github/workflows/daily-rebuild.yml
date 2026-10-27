@@ -1,0 +1,20 @@
+# Scheduled blog posts (dated in the future) go live on the first build on or after their date.
+# This triggers a Vercel production build every day at 00:10 IST (18:40 UTC).
+# Needs the repo secret VERCEL_DEPLOY_HOOK_URL (Vercel project > Settings > Git > Deploy Hooks, branch main).
+name: Daily rebuild
+
+on:
+  schedule:
+    - cron: '40 18 * * *'
+  workflow_dispatch:
+
+jobs:
+  rebuild:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger Vercel build
+        env:
+          HOOK: ${{ secrets.VERCEL_DEPLOY_HOOK_URL }}
+        run: |
+          if [ -z "$HOOK" ]; then echo "VERCEL_DEPLOY_HOOK_URL not set"; exit 1; fi
+          curl -fsS -X POST "$HOOK"

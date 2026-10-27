@@ -3,10 +3,12 @@
 // Exit code 1 if any post has problems (those posts would be skipped on the live site).
 import { loadPosts } from '../../lib/blog.ts';
 
-const { posts, skipped, drafts } = loadPosts();
+const { posts, skipped, drafts, scheduled } = loadPosts();
 
 console.log(`\nPublished posts (${posts.length}), newest first:`);
 for (const p of posts) console.log(`  ✓ ${p.displayDate.padEnd(20)} ${p.slug}`);
+if (scheduled.length) console.log(`
+Scheduled (hidden until their date, IST): ${scheduled.join(', ')}`);
 if (drafts.length) {
   console.log(`\nDrafts (not published):`);
   for (const d of drafts) {
