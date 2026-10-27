@@ -5,18 +5,17 @@
   "date": "2026-10-18",
   "category": "AI Automation",
   "service": "ai-automation",
-  "image": "/images/people/blog/leads-broker-calling-client.jpg",
-  "imageAlt": "A man in a suit talking on a desk phone in his office",
+  "image": "/images/people/blog/fx-businessman-call.jpg",
+  "imageAlt": "A smiling man in a suit talking on his phone at his desk while taking notes",
   "inlineImages": [
     {
-      "src": "/images/people/blog/whatsapp-man-messaging-phone.jpg",
-      "alt": "A young man reading a message on his smartphone at home",
-      "beforeHeading": "reply-speed",
-      "caption": "A buyer who enquires at 10 pm has usually enquired elsewhere too."
+      "src": "/images/people/blog/lm-laptop-screen-data.jpg",
+      "alt": "A laptop screen showing a task board with cards sorted into columns",
+      "beforeHeading": "reply-speed"
     },
     {
-      "src": "/images/people/blog/channel-partner-office-discussion.jpg",
-      "alt": "Three colleagues discussing documents in an office",
+      "src": "/images/people/blog/lm-woman-working-laptop.jpg",
+      "alt": "A woman typing on a laptop in a bright office",
       "beforeHeading": "what-is-a-crm"
     }
   ],

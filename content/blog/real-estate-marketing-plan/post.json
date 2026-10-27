@@ -5,17 +5,17 @@
   "date": "2026-10-20",
   "category": "Guides",
   "service": "paid-ads",
-  "image": "/images/people/blog/google-meta-reviewing-report.jpg",
-  "imageAlt": "A woman reading a printed chart in an office while a colleague uses his phone",
+  "image": "/images/people/blog/mp-whiteboard-planning.jpg",
+  "imageAlt": "Two colleagues writing on a whiteboard in an office",
   "inlineImages": [
     {
-      "src": "/images/people/blog/social-content-calendar-whiteboard.jpg",
-      "alt": "A whiteboard with a weekly social media content calendar above a laptop on a meeting table",
+      "src": "/images/people/blog/mp-conference-room.jpg",
+      "alt": "A team in a meeting room looking at charts on a whiteboard",
       "beforeHeading": "template"
     },
     {
-      "src": "/images/people/blog/meta-ads-marketer-planning-campaign.jpg",
-      "alt": "Close-up of a woman writing notes in a notebook beside her laptop",
+      "src": "/images/people/blog/fx-man-woman-laptop.jpg",
+      "alt": "A man and a woman looking at a laptop together in their kitchen",
       "beforeHeading": "example"
     }
   ],

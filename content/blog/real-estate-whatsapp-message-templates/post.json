@@ -1,0 +1,31 @@
+{
+  "title": "Real Estate WhatsApp Message Templates: First Reply, Site Visits and Follow-Ups",
+  "seoTitle": "Real Estate WhatsApp Message Templates (Copy & Use)",
+  "excerpt": "Copy-ready real estate WhatsApp templates for first replies, brochures, site visit reminders, follow-ups and bookings, plus the rules that keep your number safe.",
+  "date": "2026-10-24",
+  "category": "AI Automation",
+  "service": "ai-automation",
+  "image": "/images/people/blog/wat-man-smiling-messaging.jpg",
+  "imageAlt": "A smiling man in a turban typing a message on his phone at home",
+  "inlineImages": [
+    { "src": "/images/people/blog/wat-messaging-app-screen.jpg", "alt": "Close-up of a phone screen showing messaging app icons", "beforeHeading": "first-reply-templates" },
+    { "src": "/images/people/blog/wat-woman-office-texting.jpg", "alt": "A woman in a headscarf sitting at an office desk and reading a message on her phone", "beforeHeading": "sharing-details-templates" },
+    { "src": "/images/people/blog/wat-agent-with-couple.jpg", "alt": "A property advisor at a desk talking with a couple about a flat", "beforeHeading": "site-visit-templates", "caption": "Ask whether the family is coming: visits with the decision makers present matter most." },
+    { "src": "/images/people/blog/wat-man-texting-phone.jpg", "alt": "A man in a white shirt smiling as he types on his phone", "beforeHeading": "follow-up-templates" },
+    { "src": "/images/people/blog/wat-woman-texting.jpg", "alt": "A woman in a headscarf sitting in an office chair and typing on her phone", "beforeHeading": "business-app-vs-api" }
+  ],
+  "about": [
+    { "name": "WhatsApp", "sameAs": "https://en.wikipedia.org/wiki/WhatsApp" },
+    { "name": "Real Estate (Regulation and Development) Act, 2016", "sameAs": "https://en.wikipedia.org/wiki/Real_Estate_(Regulation_and_Development)_Act,_2016" }
+  ],
+  "faqs": [
+    { "question": "What is a good first WhatsApp message to a real estate lead?", "answer": "Introduce yourself and your company, thank them for asking about the specific project, and end with one easy question, such as whether they want a 2 or 3 BHK for themselves or as an investment. Send it as soon as the lead arrives." },
+    { "question": "Can I send WhatsApp messages to people who have not contacted me?", "answer": "No. The WhatsApp Business Messaging Policy allows messages only to people who gave you their number and agreed to hear from you. Cold messages to bought lists get reported, and reports can restrict your account." },
+    { "question": "Do WhatsApp messages about a project need the RERA number?", "answer": "Section 11(2) of the RERA Act requires every advertisement for a registered project to show its registration number and the RERA website address. Treat any WhatsApp broadcast that promotes a project as an advertisement and include both." },
+    { "question": "How many follow-up messages should I send on WhatsApp?", "answer": "Plan three follow-ups spaced a few days apart, each adding something new: useful information, then an answer to a common worry, then a polite message asking whether to close the enquiry. Stop at once if the buyer says no." },
+    { "question": "What should a site visit reminder message say?", "answer": "Send a confirmation right after the buyer agrees, a reminder the evening before that asks whether the family is joining, and a short message on the morning of the visit with the time, parking point and your number." },
+    { "question": "Can I use these templates in the free WhatsApp Business app?", "answer": "Yes. Save them as quick replies (type / in a chat to insert one), set a greeting message and an away message, and use labels such as New lead, Visit booked and Booked to track each buyer." },
+    { "question": "What is the 24-hour window in the WhatsApp Business API?", "answer": "When a buyer messages you, you can reply freely for 24 hours. To message them after that window, for example a follow-up three days later, you must use a message template approved by Meta." },
+    { "question": "What are the most common WhatsApp mistakes in real estate sales?", "answer": "Replying the next day, sending long paragraphs or voice notes to new leads, copy-paste blasts that start with Dear Sir/Madam, claims you cannot prove such as guaranteed returns, and keeping replies only on one salesperson's phone." }
+  ]
+}

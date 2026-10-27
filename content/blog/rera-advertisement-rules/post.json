@@ -5,18 +5,17 @@
   "date": "2026-10-19",
   "category": "Guides",
   "service": "paid-ads",
-  "image": "/images/people/blog/rera-architects-checking-plans.jpg",
-  "imageAlt": "Two men reading building plans spread on a car bonnet beside a construction site",
+  "image": "/images/people/blog/rad-empty-billboard.jpg",
+  "imageAlt": "An empty billboard frame against the sky, in black and white",
   "inlineImages": [
     {
-      "src": "/images/people/blog/rera-blank-billboard.jpg",
-      "alt": "A large blank billboard on a steel frame against a blue sky",
-      "beforeHeading": "what-ads-must-show",
-      "caption": "On a hoarding, the RERA number has to be readable from the road."
+      "src": "/images/people/blog/rad-man-signing-documents.jpg",
+      "alt": "A man in a suit signing a printed document with a pen",
+      "beforeHeading": "what-ads-must-show"
     },
     {
-      "src": "/images/people/blog/rera-agent-reading-contract.jpg",
-      "alt": "A man in a navy suit reading a document at his desk",
+      "src": "/images/people/blog/rad-woman-filling-form.jpg",
+      "alt": "A person filling in a printed form with a pen, in black and white",
       "beforeHeading": "agents-and-cps"
     }
   ],

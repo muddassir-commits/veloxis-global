@@ -5,17 +5,17 @@
   "date": "2026-10-22",
   "category": "AI Automation",
   "service": "ai-automation",
-  "image": "/images/people/blog/ai-real-estate-agent-laptop.jpg",
-  "imageAlt": "A woman talking on her phone while typing on a laptop at an office desk",
+  "image": "/images/people/blog/ait-man-chatgpt-laptop.jpg",
+  "imageAlt": "A man typing into an AI chat assistant on a laptop",
   "inlineImages": [
     {
-      "src": "/images/people/blog/geo-chatgpt-on-laptop.jpg",
-      "alt": "A laptop on a desk showing the ChatGPT introduction page on a green screen",
+      "src": "/images/people/blog/ait-laptop-chat-screen.jpg",
+      "alt": "A laptop on a stone counter showing an AI chat assistant web page",
       "beforeHeading": "tools"
     },
     {
-      "src": "/images/people/blog/geo-analytics-dashboard-laptop.jpg",
-      "alt": "A laptop on a sofa showing an analytics dashboard with charts and a map",
+      "src": "/images/people/blog/ait-woman-laptop.jpg",
+      "alt": "Two colleagues with headsets working on laptops in an office",
       "beforeHeading": "chatgpt-prompts"
     }
   ],

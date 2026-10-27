@@ -5,17 +5,17 @@
   "date": "2026-10-20",
   "category": "Growth Tips",
   "service": "paid-ads",
-  "image": "/images/people/blog/eoi-buyers-reviewing-booking-papers.jpg",
-  "imageAlt": "A property executive going over paperwork with a young couple at a kitchen counter",
+  "image": "/images/people/blog/pl-crane-new-building.jpg",
+  "imageAlt": "A tower crane next to a concrete building under construction",
   "inlineImages": [
     {
-      "src": "/images/people/blog/eoi-couple-planning-budget.jpg",
-      "alt": "A couple working out their budget with a calculator and notebook at home",
+      "src": "/images/people/blog/pl-construction-site-city.jpg",
+      "alt": "A cleared construction site with machines in front of tall city buildings",
       "beforeHeading": "eoi-phase"
     },
     {
-      "src": "/images/people/blog/channel-partner-office-discussion.jpg",
-      "alt": "Three colleagues discussing documents in an office",
+      "src": "/images/people/blog/fx-couple-agent-standing.jpg",
+      "alt": "An agent with a folder standing with an older couple inside a home",
       "beforeHeading": "channel-partners"
     }
   ],

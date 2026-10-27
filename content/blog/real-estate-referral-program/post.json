@@ -1,0 +1,31 @@
+{
+  "title": "Real Estate Referral Program: How to Get More Buyers From Happy Clients",
+  "seoTitle": "Real Estate Referral Program: Rewards, RERA and Tracking",
+  "excerpt": "How to run a real estate referral program in India: who to ask, when to ask, rewards and payout rules, RERA and tax points to check, and how to track referrals.",
+  "date": "2026-10-27",
+  "category": "Growth Tips",
+  "service": "ai-automation",
+  "image": "/images/people/blog/ref-couple-new-apartment.jpg",
+  "imageAlt": "A smiling couple carrying moving boxes and a potted plant into their new home",
+  "inlineImages": [
+    { "src": "/images/people/blog/ref-woman-coffee-talking.jpg", "alt": "Two friends holding coffee cups and chatting outdoors", "beforeHeading": "who-can-refer" },
+    { "src": "/images/people/blog/ref-new-homeowners.jpg", "alt": "A family carrying boxes into a new home with a staircase", "beforeHeading": "when-to-ask", "caption": "Ask when buyers are happiest, such as at key handover." },
+    { "src": "/images/people/blog/ref-boxes-greeting-card.jpg", "alt": "A thank you card standing next to flowers on a table", "beforeHeading": "rewards" },
+    { "src": "/images/people/blog/ref-men-shaking-hands.jpg", "alt": "Two men shaking hands in front of a house with a sold sign", "beforeHeading": "rera-and-tax" },
+    { "src": "/images/people/blog/ref-agent-young-couple.jpg", "alt": "A property agent shaking hands with a client while a young man looks on in a bright room", "beforeHeading": "tracking" }
+  ],
+  "about": [
+    { "name": "Referral marketing", "sameAs": "https://en.wikipedia.org/wiki/Referral_marketing" },
+    { "name": "Real Estate (Regulation and Development) Act, 2016", "sameAs": "https://en.wikipedia.org/wiki/Real_Estate_(Regulation_and_Development)_Act,_2016" }
+  ],
+  "faqs": [
+    { "question": "What is a real estate referral program?", "answer": "A written promise that when someone sends you a buyer who books, you thank them in a way agreed in advance, such as a discount, a gift or, for professionals, a commission." },
+    { "question": "Who are the best people to ask for real estate referrals?", "answer": "Happy past buyers and residents, current buyers in under-construction projects, channel partners and brokers, local professionals such as CAs and interior designers, and your own team's networks." },
+    { "question": "When should I ask a buyer for a referral?", "answer": "When they are happiest: right after booking, when the home loan is approved or the agreement for sale is registered, at key handover, or after you solve a problem well." },
+    { "question": "What rewards work for real estate referrals?", "answer": "A discount or credit on payments or maintenance, a gift such as appliances or furniture vouchers, a benefit for the new buyer too, or for professionals a commission under a written agreement." },
+    { "question": "When should a referral reward be paid?", "answer": "Usually once the referred buyer's agreement for sale is registered, or after a set number of payments, so you do not pay for cancelled bookings. Then pay within a fixed number of days, every time." },
+    { "question": "Does someone who refers buyers need RERA registration?", "answer": "Section 2(zm) of the RERA Act defines an agent as someone who acts in a sale for commission, and Section 9 requires agents to register. A one-off thank-you gift differs from regular referrals for a fee. Check with your state RERA or lawyer." },
+    { "question": "Is TDS deducted on referral commission?", "answer": "Commission is subject to TDS under Section 194H of the Income Tax Act, at 2% from 1 October 2024, above a yearly threshold set in the Act. Brokerage generally attracts 18% GST if the provider is registered. Confirm with your CA." },
+    { "question": "How do I track real estate referrals?", "answer": "Add a referred-by field to every lead, ask every new lead how they heard about you, give referrers an easy way to share, update the referrer on progress, and review referrals, visits, bookings and rewards monthly." }
+  ]
+}
