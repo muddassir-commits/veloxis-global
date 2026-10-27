@@ -1,20 +1,30 @@
-# Scheduled blog posts (dated in the future) go live on the first build on or after their date.
-# This triggers a Vercel production build every day at 00:10 IST (18:40 UTC).
-# Needs the repo secret VERCEL_DEPLOY_HOOK_URL (Vercel project > Settings > Git > Deploy Hooks, branch main).
-name: Daily rebuild
+# Scheduled blog posts (dated in the future) go live on their date.
+# Every day at 00:10 IST this lists the posts that are due in content/blog/published.txt;
+# if a new one is due, it commits that file to main and Vercel deploys as usual. No secrets needed.
+name: Publish scheduled posts
 
 on:
   schedule:
     - cron: '40 18 * * *'
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
-  rebuild:
+  publish:
     runs-on: ubuntu-latest
     steps:
-      - name: Trigger Vercel build
-        env:
-          HOOK: ${{ secrets.VERCEL_DEPLOY_HOOK_URL }}
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Commit newly due posts
         run: |
-          if [ -z "$HOOK" ]; then echo "VERCEL_DEPLOY_HOOK_URL not set"; exit 1; fi
-          curl -fsS -X POST "$HOOK"
+          added=$(node scripts/blog/publish-due.mjs)
+          if git diff --quiet; then echo "No post due today"; exit 0; fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898900+github-actions[bot]@users.noreply.github.com"
+          git add content/blog/published.txt
+          git commit -m "Publish scheduled post: $added"
+          git push
