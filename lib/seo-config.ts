@@ -124,7 +124,7 @@ export const pageMeta = {
   freeAudit: {
     title: 'Free Real Estate Marketing Audit | Veloxis Global',
     description:
-      'Free audit of your real estate landing page, Meta and Google ads and WhatsApp lead follow-up. A founder-led review with the fixes to make first. No obligation.',
+      'Free audit of your real estate landing page, Meta and Google ads and WhatsApp lead follow-up. A personal review with the fixes to make first. No obligation.',
     path: '/free-audit',
   },
   leadSystem: {
@@ -134,9 +134,9 @@ export const pageMeta = {
     path: '/real-estate-lead-system',
   },
   about: {
-    title: 'About Veloxis Global & Founder Muddassir Ali',
+    title: 'About Veloxis Global | Digital Marketing Agency, Noida',
     description:
-      'Veloxis Global is a founder-led real estate marketing agency run by Muddassir Ali, working with builders, brokers and channel partners across UP and Delhi NCR.',
+      'Veloxis Global is a Noida digital marketing agency for real estate, D2C brands and local businesses: landing pages, Meta and Google ads, WhatsApp follow-up.',
     path: '/about',
   },
   contact: {
@@ -177,4 +177,3 @@ export const pageMeta = {
   },
 };
 
-export const FOUNDER_YEARS = 4;

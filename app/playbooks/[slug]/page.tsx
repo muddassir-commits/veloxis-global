@@ -79,7 +79,7 @@ export default async function PlaybookPage({ params }: PageProps) {
           </span>
           <h1 className="text-3xl sm:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight mt-3 mb-4">{pb.title}</h1>
           <p className="text-sm text-slate-500 mb-6">
-            By <Link href="/about" className="font-semibold text-slate-700 hover:text-royal-blue">{siteData.founder}</Link>, founder of Veloxis Global
+            By <Link href="/about" className="font-semibold text-slate-700 hover:text-royal-blue">the {siteData.name} team</Link>
             {' · '}Updated{' '}
             <time dateTime={pb.updated}>
               {new Date(pb.updated).toLocaleDateString('en-IN', { day: 'numeric', month: 'long', year: 'numeric' })}

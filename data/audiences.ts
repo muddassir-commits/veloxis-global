@@ -112,7 +112,7 @@ export const audiences: Record<AudienceData['key'], AudienceData> = {
     relatedPlaybooks: ['new-launch-meta-google-ads-plan', 'project-landing-page-blueprint'],
     relatedPosts: ['what-is-eoi-in-real-estate', 'meta-ads-for-real-estate-india', 'ai-for-real-estate-india', 'google-ads-vs-meta-ads-real-estate-india'],
     faqs: [
-      { question: 'Do you work with small and mid-size developers?', answer: 'Yes. Most of our work is with developers running one to a few projects at a time, where the founder or sales head wants direct control over lead generation instead of depending only on portals and CPs.' },
+      { question: 'Do you work with small and mid-size developers?', answer: 'Yes. Most of our work is with developers running one to a few projects at a time, where the owner or sales head wants direct control over lead generation instead of depending only on portals and CPs.' },
       { question: 'Will this replace our channel partners?', answer: 'No. CPs remain an important sales channel. Our work gives you a direct lead source alongside them, and we can give your CPs tagged pages and links so their leads are tracked fairly.' },
       { question: 'Can you market a project before RERA registration?', answer: 'No. We only run ads and publish pages for projects that are RERA-registered, and every creative carries the registration number. For pre-launch interest we can collect expressions of interest in line with your legal advice.' },
       { question: 'How quickly can a launch campaign go live?', answer: 'Usually within one to two weeks: landing page, tracking, WhatsApp automation and campaigns built together. The timeline depends on how quickly price sheets, renders and approvals are ready.' },
@@ -246,20 +246,20 @@ export const audiences: Record<AudienceData['key'], AudienceData> = {
       resources: { src: '/images/people/nri-buyers/dubai-aerial-skyline.jpg', alt: 'Aerial view of the Dubai skyline with the Burj Khalifa and highway interchanges' },
     },
   },
-  // City pages live on the old city URLs, which already had search history. Real estate only;
-  // no office is claimed (service-area business, founder based in Noida, hometown Kanpur).
+  // City pages live on the old city URLs, which already had search history. Real estate pages;
+  // no office is claimed (service-area business based in Noida).
   lucknow: {
     key: 'lucknow',
     path: '/digital-marketing-agency-lucknow',
     breadcrumb: 'Lucknow',
-    eyebrow: 'Lucknow · real estate only',
+    eyebrow: 'Lucknow · real estate marketing',
     h1: 'Digital marketing agency in Lucknow for real estate',
     lead:
       'For builders, developers, brokers and channel partners in Lucknow: project landing pages, Meta and Google ads for property leads, and WhatsApp replies that reach every enquiry in seconds.',
     intro: [
-      'Veloxis Global is a digital marketing agency for real estate only. We work with developers, builders, brokers and channel partners selling projects in Lucknow, and we don’t take clients from other industries. If you sell flats, villas, plots or commercial space in Lucknow, everything we build is aimed at one number: site visits.',
+      'Veloxis Global is a digital marketing agency whose main focus is real estate. We work with developers, builders, brokers and channel partners selling projects in Lucknow. If you sell flats, villas, plots or commercial space in Lucknow, everything we build is aimed at one number: site visits.',
       'Lucknow buyers rarely search for “property in Lucknow”. They search by corridor and locality: Gomti Nagar Extension, Sushant Golf City, Shaheed Path, Sultanpur Road, Raebareli Road, Faizabad Road, IIM Road or Jankipuram. So we plan each project locality by locality: a landing page for the project, ads shown to people searching for and living near that area, and an instant WhatsApp reply with the price sheet and a site-visit slot.',
-      'We are a founder-led team based in Noida, and the founder’s hometown is Kanpur, so we know Uttar Pradesh buyers, Lucknow included. Every project we promote must be UP RERA registered, and the registration number goes on every ad and page.',
+      'We are a team based in Noida with roots in Kanpur, so we know Uttar Pradesh buyers, Lucknow included. Every project we promote must be UP RERA registered, and the registration number goes on every ad and page.',
     ],
     introLink: { text: 'Want to see the full setup?', label: 'See the Real Estate Lead System', href: '/real-estate-lead-system' },
     painsHeading: 'What slows real estate sales in Lucknow',
@@ -297,7 +297,7 @@ export const audiences: Record<AudienceData['key'], AudienceData> = {
     relatedPosts: ['real-estate-local-seo-ncr', 'meta-ads-for-real-estate-india', 'rera-number-check', 'how-to-generate-real-estate-leads'],
     faqs: [
       { question: 'Do you work only with real estate businesses in Lucknow?', answer: 'Yes. We are a real estate-only digital marketing agency. In Lucknow we work with developers, builders, brokers and channel partners, and we don’t take clients from other industries.' },
-      { question: 'Do you have an office in Lucknow?', answer: 'No. We are a founder-led team based in Noida and work with Lucknow clients on WhatsApp, phone and video calls. Your ads, pages and leads are all set up in accounts you own.' },
+      { question: 'Do you have an office in Lucknow?', answer: 'No. We are a team based in Noida and work with Lucknow clients on WhatsApp, phone and video calls. Your ads, pages and leads are all set up in accounts you own.' },
       { question: 'Which digital marketing services do you offer in Lucknow?', answer: 'Three things that work together: a landing page for each project, Meta (Facebook and Instagram) and Google ads for property leads, and WhatsApp automation that replies to every enquiry in seconds and books site visits.' },
       { question: 'How much ad budget does a Lucknow project need?', answer: 'You pay the ad spend directly to Meta and Google. We recommend at least ₹15,000 a month per project to get enough enquiries to learn from, and more for a launch. Our own fee is separate and quoted after a free audit.' },
       { question: 'Can you promote a project that is not UP RERA registered?', answer: 'No. We only advertise projects that are registered with UP RERA, and the registration number appears on every ad and landing page.' },
@@ -322,14 +322,14 @@ export const audiences: Record<AudienceData['key'], AudienceData> = {
     key: 'kanpur',
     path: '/digital-marketing-agency-kanpur',
     breadcrumb: 'Kanpur',
-    eyebrow: 'Kanpur · real estate only',
+    eyebrow: 'Kanpur · real estate marketing',
     h1: 'Digital marketing agency in Kanpur for real estate',
     lead:
       'For builders, developers, brokers and channel partners in Kanpur: project landing pages, Meta and Google ads for property leads, and WhatsApp replies that reach every enquiry in seconds.',
     intro: [
-      'Veloxis Global is a founder-led digital marketing agency for real estate only. Our founder’s hometown is Kanpur, and the team is based in Noida. We work with developers, builders, brokers and channel partners selling flats, plots, villas and commercial space. We don’t take clients from other industries.',
+      'Veloxis Global is a digital marketing agency whose main focus is real estate. We have roots in Kanpur, and the team is based in Noida. We work with developers, builders, brokers and channel partners selling flats, plots, villas and commercial space.',
       'Kanpur is a word-of-mouth market. Many buyers already know a broker or a relative in property, and they ask on WhatsApp before they ever fill a form. Speed and trust decide who gets the site visit. We give each project a clear landing page with price, size, location and UP RERA details, ads aimed at the localities buyers actually live in and search for, and an instant WhatsApp reply with the price sheet and a visit slot.',
-      'Because Kanpur is home for our founder, we know a buyer in Swaroop Nagar looks for something different from a buyer in Naubasta. Every project we promote must be UP RERA registered, and the registration number goes on every ad and page.',
+      'Because Kanpur is home for us, we know a buyer in Swaroop Nagar looks for something different from a buyer in Naubasta. Every project we promote must be UP RERA registered, and the registration number goes on every ad and page.',
     ],
     introLink: { text: 'Want to see the full setup?', label: 'See the Real Estate Lead System', href: '/real-estate-lead-system' },
     painsHeading: 'What slows real estate sales in Kanpur',
@@ -347,7 +347,7 @@ export const audiences: Record<AudienceData['key'], AudienceData> = {
     ],
     extraHeading: 'Why a real estate-only agency with Kanpur roots',
     extra: [
-      { title: 'Local and founder-led', desc: 'You work directly with the founder, whose hometown is Kanpur, not with an account manager you never meet.' },
+      { title: 'Local and hands-on', desc: 'You work directly with a team that has roots in Kanpur, not with an account manager you never meet.' },
       { title: 'One industry, one goal', desc: 'Our pages, ads and WhatsApp flows are built only for property sales and measured on site visits.' },
       { title: 'UP RERA compliance built in', desc: 'Registration numbers on every ad and page, and no promises about price, possession or returns the project can’t back up.' },
       { title: 'You own everything', desc: 'Ads run from your own Meta and Google accounts, leads go to your sheet or CRM, and you pay the ad spend directly.' },
@@ -366,7 +366,7 @@ export const audiences: Record<AudienceData['key'], AudienceData> = {
     relatedPlaybooks: ['project-landing-page-blueprint', 'whatsapp-lead-response-flow'],
     relatedPosts: ['whatsapp-automation-for-real-estate-leads', 'google-ads-for-real-estate-india', 'real-estate-brochure', 'how-to-generate-real-estate-leads'],
     faqs: [
-      { question: 'Are you a Kanpur agency?', answer: 'Veloxis Global is a founder-led agency run by Muddassir Ali, whose hometown is Kanpur. We are based in Noida and work with Kanpur clients on WhatsApp, phone and video calls. We don’t have a public walk-in office.' },
+      { question: 'Are you a Kanpur agency?', answer: 'Veloxis Global has roots in Kanpur. We are based in Noida and work with Kanpur clients on WhatsApp, phone and video calls. We don’t have a public walk-in office.' },
       { question: 'Do you work only with real estate businesses?', answer: 'Yes. We are a real estate-only digital marketing agency. In Kanpur we work with developers, builders, brokers and channel partners, and we don’t take clients from other industries.' },
       { question: 'Which digital marketing services do you offer in Kanpur?', answer: 'Three things that work together: a landing page for each project, Meta (Facebook and Instagram) and Google ads for property leads, and WhatsApp automation that replies to every enquiry in seconds and books site visits.' },
       { question: 'How much ad budget does a Kanpur project need?', answer: 'You pay the ad spend directly to Meta and Google. We recommend at least ₹15,000 a month per project to start, and more for a launch. Our own fee is separate and quoted after a free audit.' },
@@ -390,12 +390,12 @@ export const audiences: Record<AudienceData['key'], AudienceData> = {
     key: 'noida',
     path: '/digital-marketing-agency-noida',
     breadcrumb: 'Noida & Greater Noida',
-    eyebrow: 'Noida & Greater Noida · real estate only',
+    eyebrow: 'Noida & Greater Noida · real estate marketing',
     h1: 'Digital marketing agency in Noida for real estate',
     lead:
       'For builders, developers, brokers and channel partners in Noida, Greater Noida and Greater Noida West: project landing pages, Meta and Google ads for property leads, and WhatsApp replies in seconds.',
     intro: [
-      'Veloxis Global is a digital marketing agency for real estate only, based in Noida. We work with developers, builders, brokers and channel partners selling projects in Noida, Greater Noida, Greater Noida West (Noida Extension) and along the Yamuna Expressway, and we don’t take clients from other industries.',
+      'Veloxis Global is a Noida-based digital marketing agency whose main focus is real estate. We work with developers, builders, brokers and channel partners selling projects in Noida, Greater Noida, Greater Noida West (Noida Extension) and along the Yamuna Expressway.',
       'Noida is one of the most crowded property ad markets in North India. Many projects compete for the same buyers in the same sectors, portals sell the same enquiry to several brokers, and buyers compare three or four projects before they book a visit. In a market like this, reach matters less than three things: exclusive leads, how fast you reply, and the cost of each site visit.',
       'So we plan by sector and corridor, not by city: a landing page for each project, Google ads on project-name and sector searches, Meta ads for people living and working nearby, and an instant WhatsApp reply with the price sheet and a visit slot. Every project we promote must be UP RERA registered, and the registration number goes on every ad and page.',
     ],
@@ -435,7 +435,7 @@ export const audiences: Record<AudienceData['key'], AudienceData> = {
     relatedPosts: ['google-ads-vs-meta-ads-real-estate-india', 'channel-partner-in-real-estate', 'what-is-eoi-in-real-estate', 'real-estate-local-seo-ncr'],
     faqs: [
       { question: 'Do you work only with real estate businesses in Noida?', answer: 'Yes. We are a real estate-only digital marketing agency. In Noida and Greater Noida we work with developers, builders, brokers and channel partners, and we don’t take clients from other industries.' },
-      { question: 'Are you based in Noida?', answer: 'Yes. Veloxis Global is a founder-led team based in Noida. We don’t have a public walk-in office: we work with clients on WhatsApp, phone and video calls, and can meet in person in Noida and Greater Noida. Your ads, pages and leads are all set up in accounts you own.' },
+      { question: 'Are you based in Noida?', answer: 'Yes. Veloxis Global is a team based in Noida. We don’t have a public walk-in office: we work with clients on WhatsApp, phone and video calls, and can meet in person in Noida and Greater Noida. Your ads, pages and leads are all set up in accounts you own.' },
       { question: 'Which digital marketing services do you offer in Noida?', answer: 'Three things that work together: a landing page for each project, Meta (Facebook and Instagram) and Google ads for property leads, and WhatsApp automation that replies to every enquiry in seconds and books site visits.' },
       { question: 'How much ad budget does a Noida project need?', answer: 'You pay the ad spend directly to Meta and Google. We recommend at least ₹15,000 a month per project to start; Noida is a competitive market, so launches usually need more. Our own fee is separate and quoted after a free audit.' },
       { question: 'Do you cover Greater Noida West and the Yamuna Expressway?', answer: 'Yes. We plan campaigns for projects across Noida, Greater Noida, Greater Noida West (Noida Extension) and the Yamuna Expressway corridor, sector by sector.' },

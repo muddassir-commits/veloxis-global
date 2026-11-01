@@ -7,7 +7,7 @@ import { playbooks } from '../data/playbooks';
 import { getAllPosts } from './blog';
 import { faqs } from '../data/faqs';
 import { freeAuditFaqs } from '../data/free-audit';
-import { SITE_URL, FOUNDER_YEARS } from './seo-config';
+import { SITE_URL } from './seo-config';
 import { playbookFaqs } from '../data/playbook-faqs';
 import {
   MIN_AD_BUDGET, leadSystemFaqs, leadSystemIncluded, leadSystemMetrics, leadSystemNri, leadSystemProblems, leadSystemSteps,
@@ -36,8 +36,7 @@ const contact = `## Contact
 
 const facts = `## Key facts
 
-- Founder: ${siteData.founder} (${FOUNDER_YEARS}+ years in digital marketing) — ${SITE_URL}/about
-- Industry focus: real estate only
+- Industries: real estate (main focus), D2C brands (${SITE_URL}/d2c) and local businesses (${SITE_URL}/local-business)
 - Services: landing pages & project microsites; Meta (Facebook & Instagram) & Google ads for real estate lead generation; AI chatbot, WhatsApp & CRM automation
 - Terms: month-to-month with 30 days' notice; ad spend is paid directly to Google and Meta by the client
 - Playbooks on this site are example plans for hypothetical projects, not client case studies
@@ -55,8 +54,10 @@ export function buildLlmsTxt(): string {
     '## Core offer',
     '',
     `- [Real Estate Lead System](${SITE_URL}/real-estate-lead-system): ${leadSystemSummary}`,
-    `- [Free marketing audit](${SITE_URL}/free-audit): a free review of a project's landing page, ads and lead follow-up with the founder.`,
-    `- [About Veloxis Global and founder ${siteData.founder}](${SITE_URL}/about)`,
+    `- [Free marketing audit](${SITE_URL}/free-audit): a free review of a project's landing page, ads and lead follow-up.`,
+    `- [About Veloxis Global](${SITE_URL}/about)`,
+    `- [Marketing for D2C brands](${SITE_URL}/d2c): Meta ads, store pages and WhatsApp and email follow-ups for online brands.`,
+    `- [Websites and SEO for local businesses](${SITE_URL}/local-business): websites, local SEO and Google Business Profile for clinics, salons, trades and shops.`,
     `- [Contact](${SITE_URL}/contact): WhatsApp ${siteData.phone} (messages only, no calls), email ${siteData.email}.`,
     '',
     '## Services',

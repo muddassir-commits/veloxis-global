@@ -22,7 +22,7 @@ const PAGE_IMAGE_DIRS: Record<string, string[]> = {
   '/digital-marketing-agency-kanpur': ['kanpur'],
   '/digital-marketing-agency-noida': ['noida'],
   '/free-audit': ['free-audit'],
-  '/about': ['about', '../../profiles'],
+  '/about': ['about'],
   '/contact': ['contact'],
 };
 
@@ -50,6 +50,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/industries/real-estate',
     '/industries/real-estate/nri-buyers',
     '/channel-partners',
+    '/d2c',
+    '/local-business',
     '/digital-marketing-agency-lucknow',
     '/digital-marketing-agency-kanpur',
     '/digital-marketing-agency-noida',

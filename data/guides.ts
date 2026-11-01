@@ -141,7 +141,7 @@ export const guidesHubFaqs = [
   },
   {
     question: 'Who writes the guides?',
-    answer: 'Muddassir Ali, founder of Veloxis Global, writes and updates every guide.',
+    answer: 'The Veloxis Global team writes and updates every guide.',
   },
   {
     question: 'How often are new guides added?',
@@ -155,6 +155,6 @@ export const guidesHubFaqs = [
   {
     question: 'Do you offer help putting a guide into practice?',
     answer:
-      'Yes. Ask for a free marketing audit and Muddassir will review your pages, ads and lead follow-up personally and tell you what to fix first.',
+      'Yes. Ask for a free marketing audit and we will review your pages, ads and lead follow-up personally and tell you what to fix first.',
   },
 ];

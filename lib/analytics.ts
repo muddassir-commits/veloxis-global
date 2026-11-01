@@ -16,6 +16,7 @@ const metaEvents: Record<string, { type: 'track' | 'trackCustom'; name: string }
   generate_lead: { type: 'track', name: 'Lead' },
   whatsapp_click: { type: 'track', name: 'Contact' },
   phone_click: { type: 'track', name: 'Contact' },
+  email_click: { type: 'track', name: 'Contact' },
   booking_click: { type: 'trackCustom', name: 'BookingClick' },
   newsletter_signup: { type: 'trackCustom', name: 'NewsletterSignup' },
 };
@@ -33,7 +34,7 @@ export function trackEvent(name: string, params: Params = {}) {
   // Meta Pixel: only defined once marketing consent is given.
   const meta = metaEvents[name];
   if (meta && window.fbq) {
-    const channel = name === 'whatsapp_click' ? 'whatsapp' : name === 'phone_click' ? 'phone' : undefined;
+    const channel = name === 'whatsapp_click' ? 'whatsapp' : name === 'phone_click' ? 'phone' : name === 'email_click' ? 'email' : undefined;
     window.fbq(meta.type, meta.name, {
       source_page: String(params.source_page ?? 'unknown'),
       ...(params.form_name ? { content_name: String(params.form_name) } : {}),
@@ -52,6 +53,7 @@ export const events = {
   ctaClick: (location: string, cta: string) => trackEvent('cta_click', { location, cta }),
   phoneClick: (sourcePage: string) => trackEvent('phone_click', { source_page: sourcePage }),
   whatsappClick: (sourcePage: string) => trackEvent('whatsapp_click', { source_page: sourcePage }),
+  emailClick: (sourcePage: string) => trackEvent('email_click', { source_page: sourcePage }),
   bookingClick: (sourcePage: string) => trackEvent('booking_click', { source_page: sourcePage }),
   scrollDepth: (depth: number) => trackEvent('scroll_depth', { percent: depth }),
 };

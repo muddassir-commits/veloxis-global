@@ -26,7 +26,7 @@ const BADGE_COLORS: Record<Category, 'teal' | 'orange' | 'indigo' | 'blue'> = {
   'Growth Tips': 'teal',
 };
 
-const AUTHOR = { name: 'Muddassir Ali', photo: '/images/profiles/muddassir.jpg' };
+const AUTHOR = { name: 'Veloxis Global Team', photo: '/images/logos/logo-square.png' };
 const SERVICES = ['high-converting-landing-pages', 'paid-ads', 'ai-automation'] as const;
 
 const isoDay = z.string().regex(/^\d{4}-\d{2}-\d{2}$/, 'use YYYY-MM-DD');

@@ -14,17 +14,13 @@ export const siteData = {
   areaServed: ["Noida", "Greater Noida", "Delhi NCR", "Lucknow", "Kanpur"],
   // Legal venue referenced in the Terms of Service.
   jurisdiction: "Kanpur, Uttar Pradesh",
-  founder: "Muddassir Ali",
   // One definition used everywhere AI tools and search engines read about us (schema, llms.txt, About).
   definition:
-    "Veloxis Global is a Noida-based real estate marketing agency that builds project landing pages, runs Meta and Google ads for property leads, and sets up WhatsApp automation that replies to every enquiry in seconds, for developers, brokers and channel partners in Noida, Greater Noida, Delhi NCR, Lucknow and Kanpur.",
+    "Veloxis Global is a Noida-based digital marketing agency for real estate, D2C brands and local businesses. It builds landing pages and websites, runs Meta and Google ads, and sets up WhatsApp and email follow-ups, with real estate work for developers, brokers and channel partners in Noida, Greater Noida, Delhi NCR, Lucknow and Kanpur.",
   // Kept apart from any similarly named company in search results.
-  disambiguation: "Indian real estate marketing agency. Not related to Veloxis Pharmaceuticals or VXI Global.",
+  disambiguation: "Indian digital marketing agency (real estate, D2C brands, local businesses). Not related to Veloxis Pharmaceuticals or VXI Global.",
   booking: "https://calendly.com/veloxis-global/30min",
   whatsappLink: "https://wa.me/919194020727?text=Hi%20Veloxis%20Global%2C%20I%27d%20like%20a%20free%20marketing%20audit",
-  founderLinkedIn: "https://www.linkedin.com/in/muddassir-alii/",
-  founderX: "https://x.com/muddassir_alii",
-  founderPortfolio: "https://muddassirali.com",
   logo: "https://www.veloxisglobal.com/images/logos/logo.png",
   // Square version for Google's logo and knowledge panel (wide logos get cropped or skipped).
   logoSquare: "https://www.veloxisglobal.com/images/logos/logo-square.png",

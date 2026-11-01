@@ -7,6 +7,7 @@ import { HeroSection } from '../components/sections/HeroSection';
 // SSR stays on so their text is in the server-rendered HTML.
 // Organization / WebSite schema is emitted once in app/layout.tsx.
 const ServicesGrid = dynamic(() => import('../components/sections/ServicesGrid').then((m) => ({ default: m.ServicesGrid })));
+const IndustriesStrip = dynamic(() => import('../components/sections/IndustriesStrip').then((m) => ({ default: m.IndustriesStrip })));
 const AudienceSplit = dynamic(() => import('../components/sections/AudienceSplit').then((m) => ({ default: m.AudienceSplit })));
 const ProcessTimeline = dynamic(() => import('../components/sections/ProcessTimeline').then((m) => ({ default: m.ProcessTimeline })));
 const PlaybooksPreview = dynamic(() => import('../components/sections/PlaybooksPreview').then((m) => ({ default: m.PlaybooksPreview })));
@@ -25,6 +26,7 @@ export default function Home() {
       <HeroSection />
       <ServicesGrid />
       <LeadSystemCallout className="bg-slate-50" />
+      <IndustriesStrip />
       <AudienceSplit />
       <ProcessTimeline />
       <PlaybooksPreview />

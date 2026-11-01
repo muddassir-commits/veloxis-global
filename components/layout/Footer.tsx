@@ -30,6 +30,8 @@ const footerColumns = [
       { label: 'Developers & Builders', href: '/industries/real-estate' },
       { label: 'Channel Partners & Brokers', href: '/channel-partners' },
       { label: 'NRI Buyer Campaigns', href: '/industries/real-estate/nri-buyers' },
+      { label: 'D2C Brands', href: '/d2c' },
+      { label: 'Local Businesses', href: '/local-business' },
       { label: 'Real Estate Marketing in Noida', href: '/digital-marketing-agency-noida' },
       { label: 'Real Estate Marketing in Lucknow', href: '/digital-marketing-agency-lucknow' },
       { label: 'Real Estate Marketing in Kanpur', href: '/digital-marketing-agency-kanpur' },
@@ -123,14 +125,14 @@ export const Footer: React.FC = () => {
               />
             </Link>
             <p className="text-[15px] sm:text-[16px] text-slate-400 leading-relaxed max-w-lg">
-              A real estate marketing agency for builders, brokers and channel partners. We build project landing pages, run Meta and Google ads, and set up WhatsApp automation — measured on site visits.
+              A digital marketing agency for real estate, D2C brands and local businesses. We build landing pages and websites, run Meta and Google ads, and set up WhatsApp follow-ups, measured on enquiries and orders.
             </p>
             <div className="flex flex-wrap gap-2">
               <span className="text-xs font-bold tracking-wider uppercase bg-white/5 border border-white/10 px-2.5 py-1 rounded-full text-slate-400">
-                Real estate only
+                Real estate · D2C · Local
               </span>
               <span className="text-xs font-bold tracking-wider uppercase bg-white/5 border border-white/10 px-2.5 py-1 rounded-full text-slate-400">
-                Founder-led
+                Month-to-month
               </span>
             </div>
           </div>
@@ -143,7 +145,7 @@ export const Footer: React.FC = () => {
                 <span className="text-xs font-black tracking-widest text-blue-300 uppercase">FREE MARKETING AUDIT</span>
                 <p className="text-lg sm:text-xl font-extrabold text-white">Want more site visits from your ad budget?</p>
                 <p className="text-xs sm:text-sm text-slate-400 leading-relaxed">
-                  Book a free audit call with the founder. We&apos;ll review your pages, ads and lead follow-up and show you what to fix first.
+                  Book a free audit call with our team. We&apos;ll review your pages, ads and lead follow-up and show you what to fix first.
                 </p>
               </div>
               <div className="shrink-0 w-full sm:w-auto text-center">
@@ -331,9 +333,6 @@ export const Footer: React.FC = () => {
             <button type="button" onClick={openCookieSettings} className="inline-block py-2 -my-2 hover:text-white transition-colors duration-300">
               Cookie settings
             </button>
-            <span className="text-slate-400 font-normal">
-              Founded & run by Muddassir Ali
-            </span>
           </div>
 
           {/* Interactive Scroll to Top Button */}

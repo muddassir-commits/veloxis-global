@@ -20,7 +20,7 @@ export const servicesHubFaqs: PageFaq[] = [
 ];
 
 export const contactFaqs: PageFaq[] = [
-  { question: 'What happens after I send the form?', answer: 'Muddassir reads it personally and replies by phone, WhatsApp or email to understand your project and current lead flow, then shares what he would change first.' },
+  { question: 'What happens after I send the form?', answer: 'Our team reads it personally and replies by phone, WhatsApp or email to understand your project and current lead flow, then shares what we would change first.' },
   { question: 'What is included in the free marketing audit?', answer: 'A review of your project landing page or website, your Google and Meta ad accounts if you run ads, and how quickly enquiries are answered today — with the changes we would make first.' },
   { question: 'Is the audit really free, with no obligation?', answer: 'Yes. You can use the recommendations yourself or with another agency. There is no obligation to work with us.' },
   { question: 'What should I prepare before we talk?', answer: 'The project details (location, configurations, price band, RERA number), your current lead sources, rough monthly ad spend if any, and who follows up leads today.' },
@@ -41,7 +41,7 @@ export const playbooksHubFaqs: PageFaq[] = [
 
 export const blogIndexFaqs: PageFaq[] = [
   { question: 'Who is this blog for?', answer: 'Real estate developers, builders, brokers and channel partners in India who run or plan marketing for property projects.' },
-  { question: 'Who writes the articles?', answer: 'Muddassir Ali, founder of Veloxis Global, who has worked in digital marketing for over four years with a focus on lead generation, landing pages, Meta and Google Ads, and sales automation.' },
+  { question: 'Who writes the articles?', answer: 'The Veloxis Global team, who work daily on lead generation, landing pages, Meta and Google Ads, and sales automation.' },
   { question: 'What topics does the blog cover?', answer: 'Meta and Google ads for property, project landing pages, WhatsApp follow-up and automation, channel partner programmes, EOI and launch marketing, and local search for agents.' },
   { question: 'Are the statistics in the articles verified?', answer: 'We only cite figures with a source, and we explain general practice where no reliable data exists. Legal and tax topics include a note that they are not professional advice.' },
   { question: 'How often are articles updated?', answer: 'When rules or platforms change. Each article shows the date it was last updated.' },
@@ -49,13 +49,12 @@ export const blogIndexFaqs: PageFaq[] = [
   { question: 'Where can I see how you would apply this to my project?', answer: 'Read the playbooks for example plans, or ask for a free marketing audit of your current pages, ads and lead follow-up.' },
 ];
 
-export const aboutFaqs = (years: number): PageFaq[] => [
-  { question: 'Who founded Veloxis Global?', answer: `Veloxis Global was founded by Muddassir Ali, who has over ${years} years of experience in lead generation, landing page design, Meta and Google Ads, and sales automation.` },
-  { question: 'What does Veloxis Global do?', answer: 'We build project landing pages, run Meta and Google ads for property leads, and set up WhatsApp chatbots and CRM automation for real estate developers, brokers and channel partners.' },
+export const aboutFaqs: PageFaq[] = [
+  { question: 'What does Veloxis Global do?', answer: 'We build landing pages and websites, run Meta and Google ads, and set up WhatsApp and email follow-ups. Our main focus is real estate developers, brokers and channel partners, and we also work with D2C brands and local businesses.' },
   { question: 'Where does Veloxis Global work?', answer: 'With clients in Noida, Greater Noida, the wider Delhi NCR, Lucknow and Kanpur, and on campaigns for projects elsewhere in India. We work remotely and do not have a walk-in office.' },
-  { question: 'Why only real estate?', answer: 'Focusing on one industry means every campaign, page and automation is built around how property is actually sold — launches, RERA rules, site visits and channel partners — instead of generic lead generation.' },
-  { question: 'Who will work on my account?', answer: 'Muddassir plans and oversees every account personally, working with a small network of landing page developers, ad specialists and automation engineers chosen for each project.' },
-  { question: 'What makes you different from a general digital marketing agency?', answer: 'We work only in real estate, offer three connected services rather than everything, and report on site visits and cost per site visit instead of clicks and impressions.' },
+  { question: 'Which industries do you work with?', answer: 'Three: real estate (our main focus), D2C brands that sell from their own website, and local businesses such as clinics, salons and trades. Keeping to three means every campaign is built around how that industry actually sells.' },
+  { question: 'Who will work on my account?', answer: 'Our core team plans and oversees every account directly, working with a small network of landing page developers, ad specialists and automation engineers chosen for each project.' },
+  { question: 'What makes you different from a general digital marketing agency?', answer: 'We work in only three industries, offer a few connected services rather than everything, and report on enquiries, site visits and orders instead of clicks and impressions.' },
   { question: 'Can I see how you would plan my project before hiring you?', answer: 'Yes. Our playbooks show how we plan launches, landing pages, lead follow-up and channel partner registration, and the free marketing audit reviews your own pages, ads and follow-up with the changes we would make.' },
 ];
 
@@ -67,7 +66,7 @@ export const privacyFaqs: PageFaq[] = [
   { question: 'Where is my form data stored?', answer: 'In a Supabase database on servers in Mumbai, India, and in our email inbox. We do not sell it.' },
   { question: 'How long do you keep my details?', answer: 'Enquiries are deleted within 24 months of our last contact unless you become a client. Newsletter emails are kept until you unsubscribe.' },
   { question: 'How can I see, correct or delete my data?', answer: `Email ${siteData.email}. We aim to respond within 30 days, and you can complain to the Data Protection Board of India if you are not satisfied.` },
-  { question: 'Who do I contact about privacy questions?', answer: `Our grievance officer, Muddassir Ali, at ${siteData.email} or ${siteData.phone}.` },
+  { question: 'Who do I contact about privacy questions?', answer: `Our grievance officer, at ${siteData.email} or ${siteData.phone}.` },
 ];
 
 export const termsFaqs: PageFaq[] = [

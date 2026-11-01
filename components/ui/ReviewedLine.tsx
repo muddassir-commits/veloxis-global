@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { CONTENT_REVIEWED } from '../../lib/seo-config';
 import { siteData } from '../../data/site';
 
-// Visible freshness + authorship line for evergreen pages (offer, services, audiences).
+// Visible freshness line for evergreen pages (offer, services, audiences).
 export const ReviewedLine: React.FC<{ className?: string }> = ({ className = 'text-slate-400' }) => (
   <p className={`text-xs ${className}`}>
     Last reviewed{' '}
@@ -12,7 +12,7 @@ export const ReviewedLine: React.FC<{ className?: string }> = ({ className = 'te
     </time>{' '}
     by{' '}
     <Link href="/about" className="underline-offset-2 hover:underline">
-      {siteData.founder}
+      the {siteData.name} team
     </Link>
   </p>
 );

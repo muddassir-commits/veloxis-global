@@ -9,7 +9,6 @@ import { Button } from '../../../components/ui/Button';
 import { Linkedin } from '../../../components/ui/BrandIcons';
 import { ImageFrame } from '../../../components/ui/ImageFrame';
 import { InArticleLeadMagnet } from '../../../components/blog/InArticleLeadMagnet';
-import { FOUNDER_YEARS } from '../../../lib/seo-config';
 
 import type { Post, PostCard } from '../../../lib/blog';
 
@@ -232,17 +231,9 @@ export default function BlogPostContent({ post, relatedPosts, service }: Props) 
                   <p className="text-lg font-extrabold text-slate-900">{post.author}</p>
                 </Link>
                 <p className="text-xs sm:text-sm text-slate-500 leading-relaxed">
-                  Founder of Veloxis Global, with {FOUNDER_YEARS}+ years in digital marketing. Based in Noida. Works with builders, brokers and channel partners across Noida, Delhi NCR, Lucknow and Kanpur.
+                  The Veloxis Global team writes and updates every guide on this blog. We are a Noida-based digital marketing agency working on landing pages, Meta and Google ads and WhatsApp follow-up, mainly for real estate.
                 </p>
                 <div className="flex flex-wrap gap-x-4 gap-y-2 mt-2">
-                  <Link href="https://www.linkedin.com/in/muddassir-alii/" target="_blank" rel="noopener noreferrer" className="text-xs font-bold text-royal-blue flex items-center gap-1 py-1.5 -my-1.5">
-                    <span>LinkedIn Profile</span>
-                    <ChevronRight className="w-3 h-3" />
-                  </Link>
-                  <Link href="https://muddassirali.com" target="_blank" rel="noopener noreferrer" className="text-xs font-bold text-royal-blue flex items-center gap-1 py-1.5 -my-1.5">
-                    <span>Founder Portfolio</span>
-                    <ChevronRight className="w-3 h-3" />
-                  </Link>
                   <a href="https://www.google.com/preferences/source?q=veloxisglobal.com" target="_blank" rel="noopener noreferrer" className="text-xs font-bold text-royal-blue flex items-center gap-1 py-1.5 -my-1.5">
                     <span>Add us as a preferred source on Google</span>
                     <ChevronRight className="w-3 h-3" />

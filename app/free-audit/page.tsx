@@ -52,7 +52,7 @@ export default function FreeAuditPage() {
               Free real estate marketing audit
             </h1>
             <p className="text-lg sm:text-xl text-slate-300 leading-relaxed max-w-2xl">
-              Send us your project or current campaigns. Muddassir personally reviews your landing page, ads and lead
+              Send us your project or current campaigns. We personally review your landing page, ads and lead
               follow-up, and tells you what to fix first — whether or not you work with us.
             </p>
             <div className="mt-2 flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
@@ -158,7 +158,7 @@ export default function FreeAuditPage() {
               <span className="border-beam border-beam-light" aria-hidden="true" />
               <h3 className="text-lg font-bold mb-2">Ready when you are</h3>
               <p className="text-sm text-slate-300 leading-relaxed mb-5">
-                Tell us about your project and current lead flow. Muddassir replies personally.
+                Tell us about your project and current lead flow. We reply personally.
               </p>
               <Button id="free-audit-steps-btn" href="/contact" variant="white" className="w-full sm:w-auto">
                 Request your free audit →
