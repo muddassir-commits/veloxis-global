@@ -1,0 +1,24 @@
+{
+  "title": "Real Estate Website Examples: What the Best Property Websites Do",
+  "seoTitle": "Real Estate Website Examples: What Good Sites Do in India",
+  "excerpt": "What good real estate websites in India share: key facts first, honest photos, location, floor plans, fast mobile pages, tracking, and mistakes to avoid.",
+  "date": "2026-10-29",
+  "category": "Landing Pages",
+  "service": "high-converting-landing-pages",
+  "image": "/images/people/blog/web-laptop-website-desk.jpg",
+  "imageAlt": "A laptop showing a website on a wooden desk next to a phone and notebook",
+  "inlineImages": [
+    { "src": "/images/people/blog/web-man-phone-website.jpg", "alt": "A man at a desk browsing a website on his smartphone", "beforeHeading": "mobile-and-speed", "caption": "Test your page on a phone using mobile data, not office Wi-Fi." },
+    { "src": "/images/people/blog/web-desk-monitor-notes.jpg", "alt": "A person writing notes at a desk in front of a computer monitor", "beforeHeading": "tracking" }
+  ],
+  "faqs": [
+    { "question": "What makes a good real estate website?", "answer": "It loads fast on a phone, shows the project's location, configuration, price band, possession date and RERA number early, has real photos and floor plans with carpet area, and makes it one tap to WhatsApp or book a site visit." },
+    { "question": "What types of real estate websites are there?", "answer": "A developer brand site, a project microsite or landing page for each project, a broker or channel partner site, and portal listings on sites such as 99acres and MagicBricks." },
+    { "question": "What sections should a project page have?", "answer": "A hero with the key facts and one button, highlights, floor plans and prices, location, amenities, construction status, about the developer, FAQs and a short enquiry form with a WhatsApp option." },
+    { "question": "Should a real estate website show prices?", "answer": "Showing at least a price band helps. It filters out buyers who can't afford the project and saves your sales team time. You can offer the full price sheet on WhatsApp." },
+    { "question": "How fast should a real estate landing page load?", "answer": "Google's Core Web Vitals suggest the main content should appear within 2.5 seconds. Compress images, avoid autoplay videos and sliders at the top, and test on a mid-range phone on mobile data." },
+    { "question": "Does a real estate website need the RERA number?", "answer": "Yes, for registered projects. Pages and ads for a registered project should show its RERA registration number and the state RERA website address." },
+    { "question": "How do I track leads from my real estate website?", "answer": "Install Google Analytics 4 and the Meta Pixel after cookie consent, mark form submissions and WhatsApp clicks as conversions, and save the UTM source with every lead so you can judge ads on cost per site visit." },
+    { "question": "What are the most common real estate website mistakes?", "answer": "Hiding the price completely, long forms, sending every ad to the homepage, missing RERA numbers, stock photos instead of the real site, and nobody replying to enquiries the same hour." }
+  ]
+}
