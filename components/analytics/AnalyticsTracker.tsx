@@ -19,7 +19,7 @@ export default function AnalyticsTracker() {
   }, [pathname]);
 
   // 3. One click listener for the whole site, so each click sends exactly one event.
-  //    Priority: phone > WhatsApp > Calendly > CTA (any <Button>, or any link to /contact).
+  //    Priority: phone > WhatsApp > email > Calendly > CTA (any <Button>, or any link to /contact).
   useEffect(() => {
     const handleGlobalClick = (e: MouseEvent) => {
       const target = e.target as HTMLElement | null;
@@ -30,6 +30,7 @@ export default function AnalyticsTracker() {
 
       if (href.startsWith('tel:')) return events.phoneClick(page);
       if (href.includes('wa.me') || href.includes('api.whatsapp.com/send')) return events.whatsappClick(page);
+      if (href.startsWith('mailto:')) return events.emailClick(page);
       if (href.includes('calendly.com')) return events.bookingClick(page);
 
       const cta = target.closest<HTMLElement>('[data-cta]');

@@ -74,7 +74,7 @@ export const HeroSection: React.FC = () => {
           <div className="hero-fade-in flex flex-wrap items-center gap-6 text-sm text-white/60" style={{ animationDelay: '0.35s' }}>
             <div className="flex items-center gap-1.5">
               <CheckCircle className="w-4 h-4 text-emerald-400" aria-hidden="true" />
-              <span>Real estate only</span>
+              <span>Real estate specialists</span>
             </div>
             <div className="flex items-center gap-1.5">
               <CheckCircle className="w-4 h-4 text-emerald-400" aria-hidden="true" />

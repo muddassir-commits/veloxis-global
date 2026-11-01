@@ -74,7 +74,7 @@ export const CtaBanner: React.FC<CtaBannerProps> = ({ title, description, showAu
           <div className="flex flex-wrap justify-center items-center gap-6 mt-10 text-xs font-bold uppercase tracking-wider text-white">
             <div className="flex items-center gap-1.5">
               <CheckCircle className="w-4 h-4 text-teal-accent" aria-hidden="true" />
-              <span>Real estate only</span>
+              <span>Real estate specialists</span>
             </div>
             <div className="flex items-center gap-1.5">
               <CheckCircle className="w-4 h-4 text-teal-accent" aria-hidden="true" />

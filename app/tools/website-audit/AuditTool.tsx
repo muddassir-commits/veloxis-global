@@ -141,7 +141,7 @@ export default function AuditTool() {
             <h2 className="text-xl font-bold">Want a person to go through it with you?</h2>
             <p className="text-slate-300 mt-2">
               This tool reads one page. A free marketing audit covers your pages, ads and lead follow-up together, reviewed
-              personally by Muddassir, with the fixes in order.
+              personally by our team, with the fixes in order.
             </p>
             <div className="mt-5 flex flex-col sm:flex-row gap-3">
               <Link href="/free-audit" className="inline-flex items-center justify-center gap-2 rounded-xl bg-emerald-400 px-5 py-3 font-bold text-slate-900 hover:bg-emerald-300">

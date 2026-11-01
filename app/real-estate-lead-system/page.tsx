@@ -79,19 +79,6 @@ export default function LeadSystemPage() {
                 </li>
               ))}
             </ul>
-            {/* Google Certified Founder Credential Badges */}
-            <div className="flex flex-wrap items-center gap-2.5 pt-1">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 border border-white/20 text-xs font-semibold text-white backdrop-blur-md">
-                <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-                <span>Google Certified Founder</span>
-                <span className="text-emerald-300 font-mono text-[11px] font-bold">Skillshop Verified</span>
-              </div>
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 border border-white/20 text-xs font-semibold text-white backdrop-blur-md">
-                <span className="w-2 h-2 rounded-full bg-blue-400" />
-                <span>Meta Certified Associate</span>
-                <span className="text-blue-300 font-mono text-[11px] font-bold">Verified</span>
-              </div>
-            </div>
             <ReviewedLine />
             <div className="mt-2 flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
               <Button id="lead-system-hero-btn" href="#enquire" variant="primary" size="lg" className="w-full sm:w-auto">
@@ -312,10 +299,10 @@ export default function LeadSystemPage() {
             <div className="lg:col-span-7 section-reveal">
               <span className="text-xs font-bold text-royal-blue uppercase tracking-widest block mb-3">Why Veloxis</span>
               <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight mb-4">
-                Built for property sales, run by the founder
+                Built for property sales, run by specialists
               </h2>
               <p className="text-slate-600 leading-relaxed max-w-xl">
-                You get one person accountable for the ads, the page and the follow-up, and every account stays in
+                You get one team accountable for the ads, the page and the follow-up, and every account stays in
                 your name from day one.
               </p>
             </div>
@@ -344,18 +331,18 @@ export default function LeadSystemPage() {
             })}
           </div>
 
-          {/* Founder Credentials & Google/Meta Certifications Wall */}
+          {/* Google certifications wall */}
           <div className="mt-12 bg-slate-900 text-white rounded-3xl p-8 sm:p-10 border border-slate-800 shadow-xl">
             <div className="max-w-2xl mb-8">
               <span className="text-xs font-bold text-blue-400 uppercase tracking-widest block mb-2">Verified Professional Credentials</span>
               <h3 className="text-2xl sm:text-3xl font-extrabold text-white">
-                Google Certified &amp; Founder-Operated Performance Infrastructure
+                Google certified, hands-on campaign management
               </h3>
               <p className="text-slate-300 mt-2 text-sm sm:text-base leading-relaxed">
-                Your ad campaigns are not delegated to junior interns. Founder Muddassir Ali holds verified industry certifications across Google Ads, App Campaigns, and Meta, managing production funnels with zero outsourced agency markup.
+                Your campaigns are not handed to interns. They are planned by a team holding Google Ads Search, Google Ads Apps and Google Analytics certifications.
               </p>
             </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
               <div className="bg-white/5 border border-white/10 rounded-2xl p-5 flex flex-col justify-between hover:bg-white/[0.08] transition-colors">
                 <div>
                   <div className="w-8 h-8 rounded-lg bg-blue-500/20 text-blue-400 flex items-center justify-center font-bold text-xs mb-3">G</div>
@@ -371,14 +358,6 @@ export default function LeadSystemPage() {
                   <p className="text-xs text-slate-400 mt-1">High-intent property search keywords, bidding algorithms &amp; Quality Score.</p>
                 </div>
                 <span className="inline-block mt-4 text-[11px] font-bold text-emerald-400">Skillshop Verified ✓</span>
-              </div>
-              <div className="bg-white/5 border border-white/10 rounded-2xl p-5 flex flex-col justify-between hover:bg-white/[0.08] transition-colors">
-                <div>
-                  <div className="w-8 h-8 rounded-lg bg-indigo-500/20 text-indigo-400 flex items-center justify-center font-bold text-xs mb-3">M</div>
-                  <h4 className="font-bold text-white text-sm">Meta Certified Associate</h4>
-                  <p className="text-xs text-slate-400 mt-1">Facebook &amp; Instagram ad architectures, CAPI server-side &amp; WhatsApp routing.</p>
-                </div>
-                <span className="inline-block mt-4 text-[11px] font-bold text-indigo-300">Meta Certified ✓</span>
               </div>
               <div className="bg-white/5 border border-white/10 rounded-2xl p-5 flex flex-col justify-between hover:bg-white/[0.08] transition-colors">
                 <div>
@@ -442,7 +421,7 @@ export default function LeadSystemPage() {
               15 minutes, no obligation
             </h2>
             <p className="text-slate-600 leading-relaxed mb-8">
-              Muddassir looks at your project and your current lead flow, tells you what he would change, and gives
+              We look at your project and your current lead flow, tell you what we would change, and give
               you a realistic lead range and a written quote. Use the advice with or without us.
             </p>
             <h3 className="font-extrabold text-slate-900 mb-4">What we’ll need if you go ahead</h3>

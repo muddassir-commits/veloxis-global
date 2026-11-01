@@ -52,10 +52,10 @@ export default function ContactPage() {
 
             <div className="flex items-center gap-4 bg-white p-4 rounded-xl border border-slate-100 shadow-sm w-full">
               <div className="relative w-12 h-12 rounded-full border border-slate-200 overflow-hidden shrink-0">
-                <Image src="/images/profiles/muddassir.jpg" alt="Muddassir Ali" fill sizes="48px" className="object-cover" />
+                <Image src="/images/logos/logo-square.png" alt="Veloxis Global" fill sizes="48px" className="object-contain p-1.5" />
               </div>
               <p className="text-sm sm:text-base text-on-surface-variant leading-relaxed">
-                Messages come straight to me, Muddassir. I reply personally — no call-centre follow-up, no sales pressure.
+                Messages come straight to our team, not a call centre. We reply personally, with no sales pressure.
               </p>
             </div>
 
@@ -126,7 +126,7 @@ export default function ContactPage() {
               </div>
               <h2 className="font-bold text-lg">Prefer a video call?</h2>
               <p className="text-sm text-slate-300 leading-relaxed max-w-xs">
-                Pick a 30-minute slot to walk through your project and current lead flow with Muddassir.
+                Pick a 30-minute slot to walk through your project and current lead flow with our team.
               </p>
               <Button id="contact-calendly-btn" href={siteData.booking} target="_blank" variant="white" className="w-full mt-2">
                 Book a call →

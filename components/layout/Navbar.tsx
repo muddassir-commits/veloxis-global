@@ -239,7 +239,7 @@ export const Navbar: React.FC = () => {
                 <div className="bg-slate-50 border-t border-slate-100 px-7 py-4 flex items-center justify-between">
                   <span className="inline-flex items-center gap-1.5 text-[12px] font-semibold text-slate-500">
                     <ShieldCheck className="w-3.5 h-3.5 text-teal-accent shrink-0" />
-                    Real estate only · Month-to-month, no lock-in
+                    Real estate specialists · Month-to-month, no lock-in
                   </span>
                   <Link
                     href="/services"

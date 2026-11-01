@@ -26,7 +26,7 @@ const faqs = [
   { question: 'Why does it say my tracking is missing when I have it installed?', answer: 'If your tags load only after a visitor accepts cookies, or are added by a plugin after the page loads, they may not be in the raw HTML the tool reads. Check in Google Tag Assistant to be sure.' },
   { question: 'Do you store my website or results?', answer: 'No. The page is fetched once, checked and the result is shown to you. Nothing is saved.' },
   { question: 'Which page should I check?', answer: 'Start with the page your ads or Google Business Profile send people to, usually the homepage or a landing page. Then check your most important service or project page.' },
-  { question: 'Can someone go through the results with me?', answer: 'Yes. Ask for a free marketing audit and Muddassir Ali, the founder, will review your pages, ads and lead follow-up personally and walk you through the fixes.' },
+  { question: 'Can someone go through the results with me?', answer: 'Yes. Ask for a free marketing audit and our team will review your pages, ads and lead follow-up personally and walk you through the fixes.' },
 ];
 
 export default function WebsiteAuditPage() {

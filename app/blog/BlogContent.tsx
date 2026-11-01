@@ -57,7 +57,7 @@ export default function BlogContent({ posts }: { posts: PostCard[] }) {
               Real estate marketing blog for builders, brokers and CPs
             </h1>
             <p className="text-slate-500 mt-2 text-sm sm:text-base leading-relaxed">
-              Practical guides on Meta and Google ads for property, project landing pages, WhatsApp follow-up, EOI and channel partner programmes — written by Muddassir Ali.
+              Practical guides on Meta and Google ads for property, project landing pages, WhatsApp follow-up, EOI and channel partner programmes — written by the Veloxis Global team.
             </p>
           </div>
 

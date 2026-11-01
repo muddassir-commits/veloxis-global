@@ -1,6 +1,6 @@
 // Free audit page content — shared by the visible page, its FAQPage schema and llms-full.txt.
 // Replaces the old pricing page: the site no longer publishes fees. Answers must only state
-// facts the site already stands behind (founder-led, free, no obligation, month-to-month).
+// facts the site already stands behind (personal review, free, no obligation, month-to-month).
 
 export const auditAreas = [
   {
@@ -25,12 +25,12 @@ export const auditDeliverables = [
   'Plain-language notes on what is working and what isn’t',
   'The changes we would make first, in order of impact',
   'An outline of a 90-day plan if you want to go further',
-  'A 30-minute call with Muddassir to walk through it',
+  'A 30-minute call with our team to walk through it',
 ];
 
 export const auditSteps = [
   { title: 'Send your project', desc: 'Use the contact form or WhatsApp. Share the project, your current lead sources and who follows up leads today.' },
-  { title: 'We review it', desc: 'Muddassir personally reviews your pages, ads and lead follow-up — no junior analyst and no automated report.' },
+  { title: 'We review it', desc: 'We personally review your pages, ads and lead follow-up — no junior analyst and no automated report.' },
   { title: 'Walk through the fixes', desc: 'You get the findings and the first fixes. Use them yourself, with your current agency, or with us.' },
 ];
 
@@ -49,7 +49,7 @@ export const freeAuditFaqs = [
   },
   {
     question: 'Who does the audit?',
-    answer: 'Muddassir Ali, the founder, reviews every audit personally.',
+    answer: 'Our core team reviews every audit personally, not a junior analyst or an automated tool.',
   },
   {
     question: 'Can a channel partner or broker ask for one?',

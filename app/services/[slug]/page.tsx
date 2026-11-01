@@ -251,7 +251,7 @@ export default async function ServicePage({ params }: PageProps) {
               <span className="border-beam" aria-hidden="true" />
               <h2 className="font-bold text-slate-900 mb-2 text-lg">Start with a free audit</h2>
               <p className="text-sm text-slate-600 leading-relaxed">
-                Muddassir reviews your current page, ads and lead follow-up and tells you what to fix first — free, with no obligation.
+                We review your current page, ads and lead follow-up and tells you what to fix first — free, with no obligation.
               </p>
               <p className="text-sm text-slate-500 mt-3">Month-to-month, 30 days’ notice, no lock-in.</p>
               <Link href="/free-audit" className="group inline-flex items-center gap-1 mt-4 text-sm font-bold text-royal-blue hover:underline">

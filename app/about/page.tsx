@@ -1,16 +1,14 @@
 import React from 'react';
 import { Metadata } from 'next';
-import Image from 'next/image';
 import Link from 'next/link';
 
 import { Breadcrumb } from '../../components/ui/Breadcrumb';
 import { ImageFrame } from '../../components/ui/ImageFrame';
 import { SchemaMarkup } from '../../components/ui/SchemaMarkup';
-import { Target, Eye, Users, ExternalLink, CheckCircle, MapPin } from 'lucide-react';
-import { Linkedin } from '../../components/ui/BrandIcons';
-import { constructMetadata, pageMeta, FOUNDER_YEARS } from '../../lib/seo-config';
+import { Target, Eye, Users, CheckCircle, MapPin } from 'lucide-react';
+import { constructMetadata, pageMeta } from '../../lib/seo-config';
 import { FaqAccordion } from '../../components/sections/FaqAccordion';
-import { getWebPageSchema, FOUNDER_ID } from '../../lib/schema';
+import { getWebPageSchema } from '../../lib/schema';
 import { servicesData } from '../../data/services-data';
 import { siteData } from '../../data/site';
 import { aboutFaqs } from '../../data/page-faqs';
@@ -18,10 +16,10 @@ import { aboutFaqs } from '../../data/page-faqs';
 export const metadata: Metadata = constructMetadata(pageMeta.about);
 
 const values = [
-  { icon: <Target className="w-5 h-5 text-royal-blue" />, title: 'Site visits, not clicks', desc: 'Every campaign is reported on leads, site visits and cost per site visit — the numbers your sales team cares about.' },
+  { icon: <Target className="w-5 h-5 text-royal-blue" />, title: 'Results, not clicks', desc: 'Every campaign is reported on enquiries, site visits or orders — the numbers your sales team cares about.' },
   { icon: <Eye className="w-5 h-5 text-royal-blue" />, title: 'Your accounts, your data', desc: 'Ads run from your own Google and Meta accounts, and lead data stays in your CRM or sheet.' },
-  { icon: <Users className="w-5 h-5 text-royal-blue" />, title: 'Founder on every account', desc: 'You work directly with the person planning your campaigns, not a rotating account manager.' },
-  { icon: <MapPin className="w-5 h-5 text-royal-blue" />, title: 'Real estate only', desc: 'We don’t split attention across industries. Launches, inventory, RERA, CP programmes — it’s all we work on.' },
+  { icon: <Users className="w-5 h-5 text-royal-blue" />, title: 'No middlemen', desc: 'You work directly with the people planning your campaigns, not a rotating account manager.' },
+  { icon: <MapPin className="w-5 h-5 text-royal-blue" />, title: 'Three industries, not thirty', desc: 'Real estate first, plus D2C brands and local businesses. We stay in industries we know well instead of taking everyone.' },
 ];
 
 const steps = [
@@ -41,7 +39,6 @@ export default function AboutPage() {
           name: 'About Veloxis Global',
           description: pageMeta.about.description,
           path: '/about',
-          mentions: FOUNDER_ID,
         })}
       />
 
@@ -64,18 +61,23 @@ export default function AboutPage() {
               About Veloxis Global
             </span>
             <h1 className="text-4xl sm:text-5xl lg:text-[56px] font-extrabold tracking-tight leading-[1.1] text-white">
-              A founder-led real estate marketing agency
+              Digital marketing judged on results, not clicks
             </h1>
             <p className="text-base sm:text-lg text-slate-200 leading-relaxed max-w-2xl">{siteData.definition}</p>
             <p className="text-lg sm:text-xl text-slate-300 leading-relaxed max-w-2xl">
-              I’m Muddassir Ali. I started Veloxis Global to give builders, brokers and channel partners one thing most
-              agencies don’t: marketing that’s judged on site visits and bookings, not impressions.
+              We started Veloxis Global to give businesses one thing most agencies don’t: marketing that’s judged on
+              enquiries, site visits and orders, not impressions.
             </p>
           </div>
-          <div className="lg:col-span-4 flex justify-center lg:justify-end">
-            <div className="relative w-48 h-48 sm:w-64 sm:h-64 rounded-full border-4 border-slate-800 shadow-2xl overflow-hidden ring-1 ring-royal-blue/40 ring-offset-8 ring-offset-slate-900 transition-transform duration-700 hover:scale-[1.03]">
-              <Image src="/images/profiles/muddassir.jpg" alt="Muddassir Ali, founder of Veloxis Global" fill priority sizes="256px" className="object-cover object-top" />
-            </div>
+          <div className="lg:col-span-4 w-full max-w-sm mx-auto lg:max-w-none">
+            <ImageFrame
+              src="/images/people/about/campaign-planning-session.jpg"
+              alt="Two people planning a marketing campaign together at a laptop"
+              ratio="4/3"
+              sizes="(max-width: 1024px) 384px, 30vw"
+              priority
+              className="shadow-2xl border border-slate-800"
+            />
           </div>
         </div>
       </section>
@@ -94,14 +96,17 @@ export default function AboutPage() {
             <p>
               The fix isn’t just more leads. It’s a connected system: a page built for the project, ads that bring
               exclusive enquiries, and follow-up that happens in seconds instead of hours. That is what Veloxis Global
-              builds — only for real estate, and only as three services that work together.
+              builds, mainly for real estate, as three services that work together.
             </p>
             <div className="border-l-4 border-royal-blue pl-4 py-2 my-2 italic text-slate-900 font-semibold bg-slate-50">
               We don’t just run ads. We build the path from the ad to the site visit — and measure every step of it.
             </div>
             <p>
               We are based in Noida and work with developers and builders, channel partners and brokers across Noida,
-              Greater Noida, the wider Delhi NCR, Lucknow and Kanpur, and run campaigns for projects elsewhere in India.
+              Greater Noida, the wider Delhi NCR, Lucknow and Kanpur. We also work with{' '}
+              <Link href="/d2c" className="font-semibold text-royal-blue hover:underline">D2C brands</Link> and{' '}
+              <Link href="/local-business" className="font-semibold text-royal-blue hover:underline">local businesses</Link>{' '}
+              in India and abroad.
             </p>
           </div>
 
@@ -119,12 +124,12 @@ export default function AboutPage() {
             </div>
             <div className="grid grid-cols-2 gap-4 stagger-reveal">
               <div className="spotlight spotlight-dark bg-slate-900 text-white p-5 rounded-2xl text-left">
-                <span className="text-2xl sm:text-3xl font-black text-royal-blue block">{FOUNDER_YEARS}+ yrs</span>
-                <span className="text-xs font-bold text-slate-300 uppercase tracking-wider block mt-1">Founder experience</span>
+                <span className="text-2xl sm:text-3xl font-black text-royal-blue block">3</span>
+                <span className="text-xs font-bold text-slate-300 uppercase tracking-wider block mt-1">Google certifications</span>
               </div>
               <div className="spotlight spotlight-dark bg-slate-900 text-white p-5 rounded-2xl text-left">
-                <span className="text-2xl sm:text-3xl font-black text-teal-accent block">1</span>
-                <span className="text-xs font-bold text-slate-300 uppercase tracking-wider block mt-1">Industry: real estate</span>
+                <span className="text-2xl sm:text-3xl font-black text-teal-accent block">3</span>
+                <span className="text-xs font-bold text-slate-300 uppercase tracking-wider block mt-1">Industries we serve</span>
               </div>
             </div>
             <ImageFrame
@@ -177,7 +182,7 @@ export default function AboutPage() {
           <span className="text-xs font-bold text-royal-blue uppercase tracking-wider">How the agency is set up</span>
           <h2 className="text-3xl font-extrabold text-slate-900 tracking-tight">Lean by design</h2>
           <p className="text-lg text-slate-700 leading-relaxed">
-            Veloxis Global is a lean, founder-led agency. I plan and oversee every account myself, and work with a small
+            Veloxis Global is a lean agency. Our core team plans and oversees every account, and works with a small
             network of landing page developers, ad specialists and automation engineers, bringing in the right people for
             each project. No bloated retainer, and no junior account manager between you and the person doing the work.
           </p>
@@ -218,46 +223,12 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Founder */}
-      <section className="py-20 bg-white text-left" id="founder">
-        <div className="max-w-container-max mx-auto px-gutter grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-          <div className="lg:col-span-5 flex flex-col items-center">
-            <div data-reveal="left" className="w-full relative rounded-3xl overflow-hidden shadow-2xl border border-slate-100 max-w-[380px] mx-auto bg-slate-100 aspect-[3/4]">
-              <Image src="/images/profiles/Muddassir_Ali.webp" alt="Portrait of Muddassir Ali" fill sizes="(max-width: 420px) 100vw, 380px" className="object-cover object-top" />
-            </div>
-          </div>
-          <div className="lg:col-span-7 flex flex-col gap-6 text-slate-700 text-base leading-relaxed section-reveal">
-            <span className="text-xs font-bold text-royal-blue uppercase tracking-wider">Meet the founder</span>
-            <h2 className="text-3xl font-extrabold text-slate-900 tracking-tight">Muddassir Ali</h2>
-            <span className="text-sm font-bold text-slate-500 -mt-4 uppercase tracking-widest block">Founder, Veloxis Global</span>
-            <p>
-              Muddassir has worked in digital marketing for over {FOUNDER_YEARS} years, focusing on lead generation, landing
-              pages, Meta and Google Ads, and sales automation. Working with developers, brokers and channel partners, he kept
-              seeing the same pattern: money spent on ads, and leads lost to slow or missing follow-up.
-            </p>
-            <p>
-              He started Veloxis Global to fix that with one connected system for real estate — landing pages, ads and
-              WhatsApp automation — and still plans and oversees every client account personally.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 mt-2 w-full sm:w-auto">
-              <Link href="https://www.linkedin.com/in/muddassir-alii/" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 bg-royal-blue hover:bg-royal-blue/90 transition-colors px-6 py-3 rounded-xl text-xs font-bold text-white">
-                <span>Connect on LinkedIn ↗</span>
-                <Linkedin className="w-4 h-4 text-white" />
-              </Link>
-              <Link href="https://muddassirali.com" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 border border-slate-200 hover:bg-white transition-colors px-6 py-3 rounded-xl text-xs font-bold text-slate-700">
-                <span>Founder portfolio ↗</span>
-                <ExternalLink className="w-4 h-4 text-slate-500" aria-hidden="true" />
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
 
       <FaqAccordion
         title="About Veloxis Global"
         badgeText="FAQ"
         description="Quick answers about who we are and how we work."
-        customFaqs={aboutFaqs(FOUNDER_YEARS)}
+        customFaqs={aboutFaqs}
       />
 
       {/* CTA */}
@@ -268,7 +239,7 @@ export default function AboutPage() {
         </div>
         <div className="max-w-container-max mx-auto px-gutter relative z-10">
           <div className="max-w-2xl mx-auto flex flex-col items-center gap-6 section-reveal">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight">Talk to Muddassir directly</h2>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight">Talk to us directly</h2>
             <p className="text-slate-300 text-base">
               Book a 30-minute call to walk through your project, your current lead flow and what we would change first.
             </p>

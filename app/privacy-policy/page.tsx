@@ -187,8 +187,8 @@ export default function PrivacyPolicyPage() {
 
             <h2 className={h2}>12. Contact and grievance officer</h2>
             <p>
-              For any privacy question, request or complaint, contact our grievance officer: Muddassir Ali, Founder,
-              Veloxis Global — <a href={`mailto:${PRIVACY_EMAIL}`} className={link}>{PRIVACY_EMAIL}</a>,{' '}
+              For any privacy question, request or complaint, contact the grievance officer of
+              Veloxis Global: <a href={`mailto:${PRIVACY_EMAIL}`} className={link}>{PRIVACY_EMAIL}</a>,{' '}
               <a href={siteData.whatsappLink} className={link} target="_blank" rel="noopener noreferrer">WhatsApp {siteData.phone}</a>.
             </p>
           </div>

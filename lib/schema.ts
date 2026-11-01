@@ -1,11 +1,10 @@
-// JSON-LD generators. The site-wide Organization / WebSite / founder Person graph is
+// JSON-LD generators. The site-wide Organization / WebSite graph is
 // emitted once in app/layout.tsx; page-level schema references those nodes by @id.
 import { siteData } from '../data/site';
 
 const BASE = siteData.url;
 export const ORG_ID = `${BASE}/#organization`;
 export const WEBSITE_ID = `${BASE}/#website`;
-export const FOUNDER_ID = `${BASE}/about#founder`;
 
 const areaServed = siteData.areaServed.map((name) => ({ '@type': 'City', name }));
 
@@ -26,7 +25,6 @@ export const getSiteGraph = () => ({
       slogan: 'Real estate marketing measured on site visits, not clicks.',
       email: siteData.email,
       telephone: siteData.phoneRaw,
-      founder: { '@id': FOUNDER_ID },
       address: { '@type': 'PostalAddress', addressLocality: siteData.baseCity, addressRegion: 'Uttar Pradesh', addressCountry: 'IN' },
       areaServed,
       knowsAbout: [
@@ -40,6 +38,9 @@ export const getSiteGraph = () => ({
         'Channel partner marketing',
         'NRI real estate marketing',
         'Real estate lead generation system',
+        'D2C brand marketing',
+        'Website design for small businesses',
+        'Local SEO and Google Business Profile',
       ],
       sameAs: [...siteData.socials, ...siteData.profiles],
       contactPoint: {
@@ -58,18 +59,6 @@ export const getSiteGraph = () => ({
       name: siteData.name,
       inLanguage: 'en-IN',
       publisher: { '@id': ORG_ID },
-    },
-    {
-      '@type': 'Person',
-      '@id': FOUNDER_ID,
-      name: siteData.founder,
-      jobTitle: 'Founder',
-      url: `${BASE}/about`,
-      image: `${BASE}/images/profiles/muddassir.jpg`,
-      description: 'Founder of Veloxis Global, a real estate marketing agency in India.',
-      worksFor: { '@id': ORG_ID },
-      knowsAbout: ['Real estate marketing', 'Meta ads', 'Google Ads', 'WhatsApp automation'],
-      sameAs: [siteData.founderLinkedIn, siteData.founderPortfolio, siteData.founderX],
     },
   ],
 });
@@ -154,7 +143,7 @@ export const getArticleSchema = ({
   datePublished,
   dateModified: dateModified || datePublished,
   inLanguage: 'en-IN',
-  author: { '@type': 'Person', '@id': FOUNDER_ID, name: siteData.founder, url: `${BASE}/about` },
+  author: { '@type': 'Organization', '@id': ORG_ID, name: siteData.name, url: `${BASE}/about` },
   publisher: { '@id': ORG_ID },
   ...(about?.length ? { about: about.map((a) => ({ '@type': 'Thing', name: a.name, sameAs: a.sameAs })) } : {}),
 });
@@ -171,7 +160,7 @@ export const getWebPageSchema = ({
   name: string;
   description: string;
   path: string;
-  /** @id of a node the page is about besides the organisation, e.g. the founder */
+  /** @id of a node the page is about besides the organisation, e.g. a service */
   mentions?: string;
   dateModified?: string;
 }) => ({
@@ -219,6 +208,6 @@ export const getVideoSchema = ({
   ...(transcript ? { transcript } : {}),
   inLanguage: ['hi-IN', 'en-IN'],
   publisher: { '@id': ORG_ID },
-  author: { '@type': 'Person', '@id': FOUNDER_ID, name: siteData.founder },
+  author: { '@type': 'Organization', '@id': ORG_ID, name: siteData.name },
 });
 

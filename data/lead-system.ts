@@ -91,7 +91,7 @@ export const leadSystemIncluded = [
       'Every lead in one Google Sheet, with its source',
       'Instant lead alert to you or your sales team',
       'Weekly report with the numbers below',
-      'Monthly review call with Muddassir',
+      'Monthly review call with your account lead',
     ],
   },
 ];
@@ -113,8 +113,8 @@ export const leadSystemMetrics = [
 
 export const leadSystemReasons = [
   {
-    title: 'Real estate only',
-    desc: 'We don’t do restaurants one day and real estate the next. Every page, ad and message is written for property buyers.',
+    title: 'Built for property',
+    desc: 'This system was designed around how property is sold: launches, RERA, site visits and channel partners. Every page, ad and message is written for property buyers.',
   },
   {
     title: 'One team for all three',
@@ -125,8 +125,8 @@ export const leadSystemReasons = [
     desc: 'Your ad account, your WhatsApp number, your landing page and your lead data. If you leave, it all stays with you.',
   },
   {
-    title: 'Founder-led',
-    desc: 'Muddassir runs your account personally. You talk to the person doing the work, not an account manager.',
+    title: 'Hands-on, no middlemen',
+    desc: 'You talk directly to the people doing the work, not a rotating account manager.',
   },
   {
     title: 'Judged on site visits',
