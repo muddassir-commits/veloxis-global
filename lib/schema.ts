@@ -41,7 +41,7 @@ export const getSiteGraph = () => ({
         'NRI real estate marketing',
         'Real estate lead generation system',
       ],
-      sameAs: siteData.socials,
+      sameAs: [...siteData.socials, ...siteData.profiles],
       contactPoint: {
         '@type': 'ContactPoint',
         telephone: siteData.phoneRaw,

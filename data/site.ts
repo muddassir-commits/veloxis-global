@@ -33,5 +33,13 @@ export const siteData = {
     "https://www.linkedin.com/company/111872222/",
     "https://www.facebook.com/veloxisglobal/",
     "https://x.com/veloxisglobal",
+    "https://www.youtube.com/@veloxisglobal",
+    "https://www.pinterest.com/veloxisglobal/",
+  ],
+  // Third-party listings that describe the agency. Joined to the socials in sameAs and listed in llms.txt
+  // so search engines and AI tools can match every profile to one entity.
+  profiles: [
+    "https://clutch.co/profile/veloxis-global",
+    "https://www.goodfirms.co/company/veloxis-global",
   ],
 };
