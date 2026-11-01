@@ -31,7 +31,8 @@ const contact = `## Contact
 - Based in: ${siteData.baseCity}, Uttar Pradesh, India (no walk-in office)
 - Service area: ${siteData.areaServed.join(', ')} (service-area business)
 - Book a call: ${siteData.booking}
-- Website: ${SITE_URL}`;
+- Website: ${SITE_URL}
+- Official profiles: ${[...siteData.socials, ...siteData.profiles].join(', ')}`;
 
 const facts = `## Key facts
 

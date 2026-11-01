@@ -98,7 +98,8 @@ const metas = (h, attr, name) => [...h.matchAll(new RegExp(`<meta ${attr}="${nam
     if (!org) add('FAIL', 'schema-org', route, 'Organization missing');
     else {
       for (const k of ['name', 'url', 'logo', 'email', 'telephone', 'sameAs', 'areaServed']) if (!org[k]) add('FAIL', 'schema-org', route, `Organization.${k} missing`);
-      if (org.address) add('FAIL', 'schema-org', route, 'Organization has an address (service-area business)');
+      // Service-area business: city/region is fine, a street address is not.
+      if (org.address?.streetAddress || org.address?.postalCode) add('FAIL', 'schema-org', route, 'Organization has a street address (service-area business)');
       if (org.aggregateRating || org.review) add('FAIL', 'schema-org', route, 'Self-rated review markup present');
     }
     if (!nodes.find((n) => n['@type'] === 'WebSite')) add('FAIL', 'schema-website', route, 'WebSite missing');
