@@ -20,44 +20,52 @@ function isInternalDevice() {
   }
 }
 
-// Loads each tracker only after the visitor has allowed its category.
-// Consent is only ever widened within a page view; withdrawing it takes effect on the next load.
+// Google Consent Mode v2, advanced mode:
+// - GTM and GA4 load for every visitor (except internal devices). The consent-default script in
+//   app/layout.tsx has already set ad_storage, analytics_storage, ad_user_data and ad_personalization
+//   to 'denied', so until the visitor accepts, Google receives cookieless pings only (no cookies are
+//   set) and models the missing visits. Accepting sends gtag('consent','update', granted) (lib/consent.ts).
+// - Microsoft Clarity loads only with analytics consent; Meta Pixel only with marketing consent.
+// Consent is only ever widened within a page view; withdrawing it takes effect on the next load
+// (the Google consent update to 'denied' applies at once).
 export default function ConsentScripts() {
-  const [consent, setConsent] = useState<Consent | null>(null);
+  const [internal, setInternal] = useState<boolean | null>(null);
+  const [consent, setConsent] = useState<Consent>({ analytics: false, marketing: false });
 
   useEffect(() => {
-    if (isInternalDevice()) return;
+    const isInternal = isInternalDevice();
+    setInternal(isInternal);
+    if (isInternal) return;
     const merge = (c: Consent | null) =>
-      setConsent((prev) => (c ? { analytics: !!prev?.analytics || c.analytics, marketing: !!prev?.marketing || c.marketing } : prev));
+      setConsent((prev) => (c ? { analytics: prev.analytics || c.analytics, marketing: prev.marketing || c.marketing } : prev));
     merge(readConsent());
     const onChange = (e: Event) => merge((e as CustomEvent<Consent>).detail);
     window.addEventListener(CONSENT_EVENT, onChange);
     return () => window.removeEventListener(CONSENT_EVENT, onChange);
   }, []);
 
-  if (!consent || (!consent.analytics && !consent.marketing)) return null;
+  // null = not checked yet (server render / first paint); true = team device, load nothing.
+  if (internal !== false) return null;
 
   return (
     <>
       <GoogleTagManager gtmId={GTM_ID} />
+      <GoogleAnalytics gaId={GA_ID} />
 
       {consent.analytics && (
-        <>
-          <GoogleAnalytics gaId={GA_ID} />
-          <Script
-            id="microsoft-clarity"
-            strategy="lazyOnload"
-            dangerouslySetInnerHTML={{
-              __html: `
-                (function(c,l,a,r,i,t,y){
-                    c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-                    t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-                    y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-                })(window,document,"clarity","script","${CLARITY_ID}");
-              `,
-            }}
-          />
-        </>
+        <Script
+          id="microsoft-clarity"
+          strategy="lazyOnload"
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function(c,l,a,r,i,t,y){
+                  c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+                  t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+                  y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+              })(window,document,"clarity","script","${CLARITY_ID}");
+            `,
+          }}
+        />
       )}
 
       {consent.marketing && (

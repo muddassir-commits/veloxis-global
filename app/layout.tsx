@@ -63,10 +63,12 @@ export default function RootLayout({
         {/* Client-side trackers (scroll depth, PageView, click interception) */}
         <AnalyticsTracker />
 
-        {/* GTM, GA4, Clarity and Meta Pixel load only after cookie consent */}
+        {/* GTM + GA4 load for everyone in Consent Mode v2 (advanced, all denied until Accept);
+            Clarity and Meta Pixel load only after cookie consent */}
         <ConsentScripts />
 
-        {/* Google Consent Mode defaults: everything denied until the visitor chooses */}
+        {/* Google Consent Mode v2 defaults: everything denied until the visitor accepts.
+            With storage denied, GA4 sends cookieless pings only; ad data is redacted. */}
         <Script
           id="consent-default"
           strategy="beforeInteractive"
@@ -74,6 +76,7 @@ export default function RootLayout({
             __html: `
               window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}window.gtag=gtag;
               gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:'denied'});
+              gtag('set','ads_data_redaction',true);
               try{var c=JSON.parse(localStorage.getItem('cookie-consent-v2')||'null');
               if(!c&&localStorage.getItem('cookie-consent')==='accepted'){c={analytics:true,marketing:true};}
               if(c){var m=c.marketing?'granted':'denied';gtag('consent','update',{analytics_storage:c.analytics?'granted':'denied',ad_storage:m,ad_user_data:m,ad_personalization:m});}}catch(e){}
