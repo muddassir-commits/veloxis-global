@@ -1,16 +1,26 @@
-# Scheduled blog posts (dated in the future) go live on their date.
-# Every day at 00:10 IST this lists the posts that are due in content/blog/published.txt;
-# if a new one is due, it commits that file to main and Vercel deploys as usual. No secrets needed.
+# Scheduled blog posts (dated in the future) go live on their date. Runs in GitHub's cloud: no PC needed.
+# Every day this lists the posts that are due in content/blog/published.txt; if a new one is due,
+# it commits that file to main and Vercel deploys as usual.
+# Optional secret VERCEL_DEPLOY_HOOK_URL (Vercel → Project → Settings → Git → Deploy Hooks):
+# if set, the Action also calls it, so the post goes live even if Vercel skips the bot's commit.
+# It also checks the queue: if fewer than 3 posts are scheduled ahead, it opens a GitHub issue
+# "Blog queue running low" (GitHub emails the owner), so publishing never silently stops again.
 # Can also be run by hand: Actions → Publish scheduled posts → Run workflow.
 name: Publish scheduled posts
 
 on:
   schedule:
-    - cron: '40 18 * * *'
+    - cron: '40 18 * * *' # 00:10 IST
+    - cron: '30 0 * * *' # 06:00 IST backup (GitHub often delays scheduled runs by hours)
   workflow_dispatch:
 
 permissions:
   contents: write
+  issues: write
+
+concurrency:
+  group: publish-scheduled-posts
+  cancel-in-progress: false
 
 jobs:
   publish:
@@ -21,11 +31,31 @@ jobs:
         with:
           node-version: 22
       - name: Commit newly due posts
+        id: due
         run: |
           added=$(node scripts/blog/publish-due.mjs)
-          if git diff --quiet; then echo "No post due today"; exit 0; fi
+          if git diff --quiet; then echo "No post due today"; echo "added=" >> "$GITHUB_OUTPUT"; exit 0; fi
           git config user.name "github-actions[bot]"
           git config user.email "41898900+github-actions[bot]@users.noreply.github.com"
           git add content/blog/published.txt
           git commit -m "Publish scheduled post: $added"
-          git push
+          for i in 1 2 3; do git push && break; git pull --rebase; done
+          echo "added=$added" >> "$GITHUB_OUTPUT"
+      - name: Trigger Vercel deploy hook (optional)
+        if: steps.due.outputs.added != ''
+        env:
+          HOOK: ${{ secrets.VERCEL_DEPLOY_HOOK_URL }}
+        run: |
+          if [ -z "$HOOK" ]; then echo "No VERCEL_DEPLOY_HOOK_URL secret; relying on Vercel's Git deploy of the commit"; exit 0; fi
+          curl -fsS -X POST "$HOOK" > /dev/null && echo "Deploy hook called"
+      - name: Warn when the queue runs low
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          ahead=$(node scripts/blog/queue-status.mjs --count)
+          echo "Posts scheduled ahead: $ahead"
+          title="Blog queue running low"
+          open=$(gh issue list --state open --search "$title in:title" --json number --jq 'length')
+          if [ "$ahead" -lt 3 ] && [ "$open" = "0" ]; then
+            gh issue create --title "$title" --body "Only $ahead post(s) are scheduled after today. Merge the open 'Blog:' pull requests (the daily writer opens one per day), or ask Claude to write more. Details: \`node scripts/blog/queue-status.mjs\`."
+          fi

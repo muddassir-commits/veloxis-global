@@ -1,0 +1,28 @@
+{
+  "title": "Google Business Profile Checklist: How Local Businesses Rank on Maps",
+  "seoTitle": "Google Business Profile Checklist for Local Businesses",
+  "excerpt": "A Google Business Profile checklist for local businesses: setup, Google's naming and address rules, categories, reviews, photos and a monthly routine.",
+  "date": "2026-11-06",
+  "category": "Guides",
+  "service": "high-converting-landing-pages",
+  "image": "/images/people/blog/gbp-phone-map-search.jpg",
+  "imageAlt": "A hand holding a smartphone showing a map search with location pins",
+  "inlineImages": [
+    { "src": "/images/people/blog/gbp-salon-interior.jpg", "alt": "An empty hair salon with black chairs, mirrors and styling trolleys", "beforeHeading": "google-rules", "caption": "Real photos of the inside of your business help people choose you." },
+    { "src": "/images/people/blog/gbp-dental-clinic.jpg", "alt": "A dentist in gloves examining a young patient in a dental chair", "beforeHeading": "reviews" }
+  ],
+  "about": [
+    { "name": "Google Business Profile", "sameAs": "https://en.wikipedia.org/wiki/Google_Business_Profile" },
+    { "name": "Local search engine optimisation", "sameAs": "https://en.wikipedia.org/wiki/Local_search_engine_optimisation" }
+  ],
+  "faqs": [
+    { "question": "How do I rank higher on Google Maps?", "answer": "Make your Google Business Profile complete and accurate, choose the most specific primary category, set the correct address or service area, add real photos and services, and earn genuine reviews you reply to. Google ranks local results on relevance, distance and prominence." },
+    { "question": "Can I add keywords to my Google Business Profile name?", "answer": "No. Google's guidelines say unnecessary information in the business name, such as taglines, service descriptions or locations, isn't permitted and can lead to suspension. Use the exact name on your signboard." },
+    { "question": "Should a service-area business show its address?", "answer": "No. If you serve customers at their location, such as a plumber or home tutor, Google says you should hide your address and set a service area instead." },
+    { "question": "How many categories should I choose?", "answer": "As few as possible. Pick the most specific primary category that completes the sentence 'This business IS a…', then add only the secondary categories that describe other core parts of the business." },
+    { "question": "Can I offer a discount for Google reviews?", "answer": "No. Google says offering incentives such as free or discounted goods or services in exchange for reviews is strictly prohibited. Ask every customer with a review link or QR code, and offer nothing in return." },
+    { "question": "Should I reply to negative reviews?", "answer": "Yes. Reply promptly and politely, apologise where appropriate, keep the customer's private details out of the reply and offer a way to talk offline. Calm replies show other customers how you handle problems." },
+    { "question": "How often should I update my Google Business Profile?", "answer": "Check it at least monthly: add a few new real photos, post one update, reply to every review, correct any suggested edits and review your calls and direction requests. Update hours before every holiday." },
+    { "question": "Does my website affect my Google Business Profile ranking?", "answer": "It helps. Google looks at information across the web, so your site should show the same name, address and phone as your profile and have a page for each main service and location." }
+  ]
+}

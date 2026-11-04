@@ -1,0 +1,28 @@
+{
+  "title": "Real Estate CRM in India: How to Choose and Set One Up",
+  "seoTitle": "Real Estate CRM in India: How to Choose and Set It Up",
+  "excerpt": "How builders and brokers in India choose a real estate CRM: must-have features, pipeline stages and fields, lead flow, a vendor checklist and consent rules.",
+  "date": "2026-11-05",
+  "category": "AI Automation",
+  "service": "ai-automation",
+  "image": "/images/people/blog/crm-laptop-charts.jpg",
+  "imageAlt": "A laptop showing sales charts and numbers next to an open notebook",
+  "inlineImages": [
+    { "src": "/images/people/blog/crm-desk-phone-laptop.jpg", "alt": "Hands holding a phone above a laptop keyboard on a wooden desk", "beforeHeading": "features-that-matter", "caption": "Salespeople update the CRM from their phones, so the mobile app matters." },
+    { "src": "/images/people/blog/crm-team-meeting.jpg", "alt": "A sales team around a table with laptops while one person presents", "beforeHeading": "how-to-choose" }
+  ],
+  "about": [
+    { "name": "Customer relationship management", "sameAs": "https://en.wikipedia.org/wiki/Customer_relationship_management" },
+    { "name": "Real estate", "sameAs": "https://en.wikipedia.org/wiki/Real_estate" }
+  ],
+  "faqs": [
+    { "question": "What is a real estate CRM?", "answer": "Software that keeps every buyer enquiry and every conversation in one place: source, calls, WhatsApp chats, site visits and the next follow-up date. It stops leads being forgotten when a salesperson is busy, on leave or leaves the company." },
+    { "question": "Which is the best real estate CRM in India?", "answer": "There is no single best one. The right CRM pulls leads in automatically from your sources, has official WhatsApp built in, works well on your team's phones and lets you export your data. Test two or three with your own leads for two weeks before deciding." },
+    { "question": "Do small brokers need a CRM?", "answer": "Not always. A shared sheet works while one or two people handle a few enquiries a day from one source. Move to a CRM when leads come from several channels, three or more people follow up, or leads go cold because nobody called back." },
+    { "question": "What features should a real estate CRM have?", "answer": "Automatic lead capture from Meta, Google, portals and your website; WhatsApp through the official API; click-to-call with call logging; follow-up tasks with due dates; site visit scheduling; and reports by source and campaign down to site visits and bookings." },
+    { "question": "What stages should a real estate sales pipeline have?", "answer": "Keep it to about seven: New, Contacted, Qualified, Visit booked, Visited, Negotiation, and Booked or Lost with a reason. Every lead should always have a next action and a date." },
+    { "question": "Can Meta lead ads go straight into a CRM?", "answer": "Yes. Meta lets lead ads send leads to a CRM through partner integrations, a custom integration or webhooks, so a new lead can reach your CRM within seconds instead of being downloaded by hand." },
+    { "question": "Is it legal to store buyer phone numbers in a CRM?", "answer": "Yes, if the person shared them with you and you use them for what they expect. India's DPDP Act, 2023 requires a lawful basis such as consent. Record the source and date, never import bought lists, and honour opt-out requests. Ask your lawyer for specifics." },
+    { "question": "How long does it take to set up a real estate CRM?", "answer": "A basic set-up with lead capture, stages, users and WhatsApp templates can be ready in days. Getting the team to update it after every call takes longer, so name one owner who checks every morning that each lead has a next action." }
+  ]
+}
