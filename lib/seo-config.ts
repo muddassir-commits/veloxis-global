@@ -128,9 +128,9 @@ export const pageMeta = {
     path: '/free-audit',
   },
   leadSystem: {
-    title: 'Real Estate Lead Generation for Builders & Agents | Veloxis',
+    title: 'Real Estate Lead Generation System for Builders & Brokers',
     description:
-      'Meta ads, a project landing page and instant WhatsApp replies, run as one system for real estate agents and builders. Setup fee plus monthly, no lock-in.',
+      'A real estate lead generation system: Meta ads, a project landing page and instant WhatsApp replies, run as one for builders and brokers. No lock-in.',
     path: '/real-estate-lead-system',
   },
   about: {

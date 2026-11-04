@@ -62,14 +62,14 @@ export default function LeadSystemPage() {
         <div className="max-w-container-max mx-auto px-gutter relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           <div className="lg:col-span-7 flex flex-col items-start gap-6">
             <span className="inline-flex items-center gap-2 bg-royal-blue/20 border border-royal-blue/30 px-3 py-1 rounded-full text-xs font-bold text-blue-300 uppercase tracking-wider">
-              Real estate lead generation system
+              For builders, brokers and channel partners
             </span>
             <h1 className="text-4xl sm:text-5xl lg:text-[56px] font-extrabold tracking-tight leading-[1.1] text-white">
-              Genuine buyer enquiries on your WhatsApp, every day
+              Real estate lead generation that puts buyer enquiries on your WhatsApp
             </h1>
             <p className="text-lg sm:text-xl text-slate-300 leading-relaxed max-w-2xl">
-              Meta ads, a landing page for your project and an instant WhatsApp reply, set up and run as one
-              system for real estate agents, brokers and builders.
+              A real estate lead generation system: Meta ads, a landing page for your project and an instant
+              WhatsApp reply, set up and run as one system for real estate agents, brokers and builders.
             </p>
             <ul className="flex flex-col sm:flex-row sm:flex-wrap gap-x-6 gap-y-2 text-sm font-semibold text-slate-200">
               {['Exclusive leads, not shared', 'Reply within seconds, 24×7', 'Month-to-month after setup'].map((t) => (
