@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useSyncExternalStore } from 'react';
 import Script from 'next/script';
 import { GoogleAnalytics, GoogleTagManager } from '@next/third-parties/google';
 import { Consent, CONSENT_EVENT, readConsent } from '../../lib/consent';
@@ -28,14 +28,15 @@ function isInternalDevice() {
 // - Microsoft Clarity loads only with analytics consent; Meta Pixel only with marketing consent.
 // Consent is only ever widened within a page view; withdrawing it takes effect on the next load
 // (the Google consent update to 'denied' applies at once).
+const noSubscribe = () => () => {};
+
 export default function ConsentScripts() {
-  const [internal, setInternal] = useState<boolean | null>(null);
+  // Server render: treat as internal (render nothing); the client reads the real flag.
+  const internal = useSyncExternalStore(noSubscribe, isInternalDevice, () => true);
   const [consent, setConsent] = useState<Consent>({ analytics: false, marketing: false });
 
   useEffect(() => {
-    const isInternal = isInternalDevice();
-    setInternal(isInternal);
-    if (isInternal) return;
+    if (isInternalDevice()) return;
     const merge = (c: Consent | null) =>
       setConsent((prev) => (c ? { analytics: prev.analytics || c.analytics, marketing: prev.marketing || c.marketing } : prev));
     merge(readConsent());
@@ -44,8 +45,7 @@ export default function ConsentScripts() {
     return () => window.removeEventListener(CONSENT_EVENT, onChange);
   }, []);
 
-  // null = not checked yet (server render / first paint); true = team device, load nothing.
-  if (internal !== false) return null;
+  if (internal) return null;
 
   return (
     <>

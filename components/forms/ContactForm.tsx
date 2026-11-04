@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import * as z from 'zod';
@@ -31,6 +31,18 @@ const serviceOptions = [
   { value: 'Other', label: 'Other' },
 ];
 
+// Time-to-submit for the spam check: measured from the first focus inside the form (a person has
+// to tap or click a field). Scripts that post without touching the form send 0 and are dropped.
+function markFirstFocus(e: React.FocusEvent<HTMLFormElement>) {
+  if (!e.currentTarget.dataset.start) e.currentTarget.dataset.start = String(Date.now());
+}
+
+function msSinceFirstFocus(event?: React.BaseSyntheticEvent) {
+  const form = event?.target as HTMLFormElement | undefined;
+  const start = Number(form?.dataset?.start || 0);
+  return start ? Date.now() - start : 0;
+}
+
 export const ContactForm: React.FC<{ defaultService?: string }> = ({ defaultService = '' }) => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState<boolean | null>(null);
@@ -55,11 +67,7 @@ export const ContactForm: React.FC<{ defaultService?: string }> = ({ defaultServ
     }
   });
 
-  // When the form appeared; the server drops submissions sent in under 3 seconds (bots).
-  const shownAt = useRef(0);
-  useEffect(() => {
-    shownAt.current = Date.now();
-  }, []);
+
 
   // Links like /contact?service=NRI%20buyer%20campaigns preselect an option. Read on the client
   // so pages with the form stay static.
@@ -68,7 +76,7 @@ export const ContactForm: React.FC<{ defaultService?: string }> = ({ defaultServ
     if (wanted && serviceOptions.some((o) => o.value === wanted)) setValue('service', wanted);
   }, [setValue]);
 
-  const onSubmit = async (data: ContactFormData) => {
+  const onSubmit = async (data: ContactFormData, event?: React.BaseSyntheticEvent) => {
     setIsSubmitting(true);
     setSubmitSuccess(null);
     setLimitMessage(null);
@@ -76,7 +84,7 @@ export const ContactForm: React.FC<{ defaultService?: string }> = ({ defaultServ
       const response = await fetch('/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ ...data, _elapsed: shownAt.current ? Date.now() - shownAt.current : 0 }),
+        body: JSON.stringify({ ...data, _elapsed: msSinceFirstFocus(event) }),
       });
 
       if (response.ok) {
@@ -120,7 +128,7 @@ export const ContactForm: React.FC<{ defaultService?: string }> = ({ defaultServ
           </div>
         </div>
       ) : (
-        <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-5 bg-white p-6 sm:p-8 rounded-xl border border-slate-100 shadow-sm relative">
+        <form onSubmit={handleSubmit(onSubmit)} onFocusCapture={markFirstFocus} className="flex flex-col gap-5 bg-white p-6 sm:p-8 rounded-xl border border-slate-100 shadow-sm relative">
           {/* Honeypot fields: off-screen (not display:none, which many bots skip), never seen by people */}
           <div className="absolute -left-[10000px] top-auto w-px h-px overflow-hidden" aria-hidden="true">
             <label htmlFor="company_website">Company website</label>

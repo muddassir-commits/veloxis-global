@@ -19,10 +19,8 @@ export function BlogStickyCta() {
 
   useEffect(() => {
     try {
-      if (sessionStorage.getItem(DISMISS_KEY) === '1') {
-        setClosed(true);
-        return;
-      }
+      // Closed earlier in this visit: never start showing it (it stays hidden and inert).
+      if (sessionStorage.getItem(DISMISS_KEY) === '1') return;
     } catch {
       // Storage blocked: the CTA can still be closed for this page view.
     }
