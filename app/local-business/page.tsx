@@ -6,6 +6,7 @@ import { Button } from '../../components/ui/Button';
 import { ImageFrame } from '../../components/ui/ImageFrame';
 import { SchemaMarkup } from '../../components/ui/SchemaMarkup';
 import { FaqAccordion } from '../../components/sections/FaqAccordion';
+import { Breadcrumb } from '../../components/ui/Breadcrumb';
 import { constructMetadata } from '../../lib/seo-config';
 import { getServiceSchema } from '../../lib/schema';
 import { siteData } from '../../data/site';
@@ -89,6 +90,16 @@ const faqs = [
     answer:
       'Not yet published. We would rather show you a free audit of your own website and profile than claim results we cannot show.',
   },
+  {
+    question: 'Can you get my business to the top of Google Maps?',
+    answer:
+      'Nobody can honestly promise a top position on Google Maps. We set up and keep your profile complete and accurate the way Google’s own guidelines describe, and show you each month what changed.',
+  },
+  {
+    question: 'Can you fix my current website instead of building a new one?',
+    answer:
+      'Often, yes. If your site can be edited, the free audit lists what to fix first. We suggest a new site only when fixing the old one is not worth the effort.',
+  },
 ];
 
 export default function LocalBusinessPage() {
@@ -104,8 +115,14 @@ export default function LocalBusinessPage() {
         })}
       />
 
+      <section className="bg-slate-50 pt-16 lg:pt-[72px] border-b border-slate-100">
+        <div className="max-w-container-max mx-auto px-gutter">
+          <Breadcrumb items={[{ name: 'Local businesses', href: '/local-business' }]} />
+        </div>
+      </section>
+
       {/* Hero */}
-      <section className="bg-slate-900 text-white relative pt-28 pb-20 lg:pt-36 lg:pb-28 overflow-hidden text-left">
+      <section className="bg-slate-900 text-white relative py-20 lg:py-28 overflow-hidden text-left">
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#1e293b_1px,transparent_1px),linear-gradient(to_bottom,#1e293b_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-40" aria-hidden="true" />
         <div className="absolute inset-0 overflow-hidden" aria-hidden="true">
           <div className="aurora-blob -top-40 -right-40 w-96 h-96 bg-[rgba(37,99,235,0.3)]" />

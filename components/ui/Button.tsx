@@ -15,10 +15,12 @@ export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElemen
   rel?: string;
   /** Set false for non-marketing buttons (cookie banner, menus). Clicks are tracked by AnalyticsTracker. */
   track?: boolean;
+  /** Stable name sent as the GA4 `cta` parameter (defaults to the button text). */
+  cta?: string;
 }
 
 export const Button = React.forwardRef<HTMLButtonElement | HTMLAnchorElement, ButtonProps>(
-  ({ variant = 'primary', size = 'md', href, className = '', children, track = true, ...props }, ref) => {
+  ({ variant = 'primary', size = 'md', href, className = '', children, track = true, cta, ...props }, ref) => {
     // Base styles: transition: all 300ms ease
     const baseStyles = 'inline-flex items-center justify-center font-bold rounded-md transition-all duration-300 ease-in-out focus:outline-none focus-visible:ring-2 focus-visible:ring-royal-blue focus-visible:ring-offset-2';
     
@@ -51,7 +53,7 @@ export const Button = React.forwardRef<HTMLButtonElement | HTMLAnchorElement, Bu
         <MotionLink
           href={href}
           className={combinedClassName}
-          data-cta={track ? '' : undefined}
+          data-cta={track ? cta ?? '' : undefined}
           {...motionProps}
           {...(props as any)}
         >
@@ -64,7 +66,7 @@ export const Button = React.forwardRef<HTMLButtonElement | HTMLAnchorElement, Bu
       <motion.button
         ref={ref as React.Ref<HTMLButtonElement>}
         className={combinedClassName}
-        data-cta={track ? '' : undefined}
+        data-cta={track ? cta ?? '' : undefined}
         {...motionProps}
         {...(props as any)}
       >

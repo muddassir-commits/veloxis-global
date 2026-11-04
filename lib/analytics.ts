@@ -52,7 +52,8 @@ export const events = {
   newsletterSignup: (sourcePage: string) => trackEvent('newsletter_signup', { source_page: sourcePage }),
   ctaClick: (location: string, cta: string) => trackEvent('cta_click', { location, cta }),
   phoneClick: (sourcePage: string) => trackEvent('phone_click', { source_page: sourcePage }),
-  whatsappClick: (sourcePage: string) => trackEvent('whatsapp_click', { source_page: sourcePage }),
+  whatsappClick: (sourcePage: string, cta?: string) =>
+    trackEvent('whatsapp_click', cta ? { source_page: sourcePage, cta } : { source_page: sourcePage }),
   emailClick: (sourcePage: string) => trackEvent('email_click', { source_page: sourcePage }),
   bookingClick: (sourcePage: string) => trackEvent('booking_click', { source_page: sourcePage }),
   scrollDepth: (depth: number) => trackEvent('scroll_depth', { percent: depth }),

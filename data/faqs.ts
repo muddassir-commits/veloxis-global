@@ -8,7 +8,7 @@ export const faqs: FAQItem[] = [
   {
     question: 'What does Veloxis Global do?',
     answer:
-      'We are a real estate marketing agency. We build project landing pages, run Meta (Facebook and Instagram) and Google ads for property leads, and set up AI WhatsApp chatbots and CRM automation so every enquiry gets a reply within seconds. We work only with real estate developers, builders, brokers and channel partners.',
+      'We are a real estate marketing agency. We build project landing pages, run Meta (Facebook and Instagram) and Google ads for property leads, and set up AI WhatsApp chatbots and CRM automation so every enquiry gets a reply within seconds. Real estate developers, builders, brokers and channel partners are our main focus; we also work with D2C brands and local businesses.',
   },
   {
     question: 'How is a real estate digital marketing agency different from a general one?',

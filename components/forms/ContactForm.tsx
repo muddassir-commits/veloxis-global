@@ -16,6 +16,7 @@ const contactSchema = z.object({
   service: z.string().min(1, { message: 'Please select a service.' }),
   message: z.string().optional(),
   _honey: z.string().optional(),
+  company_website: z.string().optional(),
 });
 
 type ContactFormData = z.infer<typeof contactSchema>;
@@ -29,6 +30,18 @@ const serviceOptions = [
   { value: 'NRI buyer campaigns', label: 'NRI buyer campaigns' },
   { value: 'Other', label: 'Other' },
 ];
+
+// Time-to-submit for the spam check: measured from the first focus inside the form (a person has
+// to tap or click a field). Scripts that post without touching the form send 0 and are dropped.
+function markFirstFocus(e: React.FocusEvent<HTMLFormElement>) {
+  if (!e.currentTarget.dataset.start) e.currentTarget.dataset.start = String(Date.now());
+}
+
+function msSinceFirstFocus(event?: React.BaseSyntheticEvent) {
+  const form = event?.target as HTMLFormElement | undefined;
+  const start = Number(form?.dataset?.start || 0);
+  return start ? Date.now() - start : 0;
+}
 
 export const ContactForm: React.FC<{ defaultService?: string }> = ({ defaultService = '' }) => {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -50,8 +63,11 @@ export const ContactForm: React.FC<{ defaultService?: string }> = ({ defaultServ
       service: defaultService,
       message: '',
       _honey: '',
+      company_website: '',
     }
   });
+
+
 
   // Links like /contact?service=NRI%20buyer%20campaigns preselect an option. Read on the client
   // so pages with the form stay static.
@@ -60,7 +76,7 @@ export const ContactForm: React.FC<{ defaultService?: string }> = ({ defaultServ
     if (wanted && serviceOptions.some((o) => o.value === wanted)) setValue('service', wanted);
   }, [setValue]);
 
-  const onSubmit = async (data: ContactFormData) => {
+  const onSubmit = async (data: ContactFormData, event?: React.BaseSyntheticEvent) => {
     setIsSubmitting(true);
     setSubmitSuccess(null);
     setLimitMessage(null);
@@ -68,11 +84,13 @@ export const ContactForm: React.FC<{ defaultService?: string }> = ({ defaultServ
       const response = await fetch('/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(data),
+        body: JSON.stringify({ ...data, _elapsed: msSinceFirstFocus(event) }),
       });
 
       if (response.ok) {
-        if (typeof window !== 'undefined') {
+        const result = await response.json().catch(() => null);
+        // generate_lead only for submissions the server accepted as real (spam is dropped silently).
+        if (result?.lead === true) {
           events.leadSubmit('ContactForm', window.location.pathname);
         }
         setSubmitSuccess(true);
@@ -110,9 +128,17 @@ export const ContactForm: React.FC<{ defaultService?: string }> = ({ defaultServ
           </div>
         </div>
       ) : (
-        <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-5 bg-white p-6 sm:p-8 rounded-xl border border-slate-100 shadow-sm relative">
-          {/* Honeypot field - visually hidden */}
-          <div className="hidden" aria-hidden="true">
+        <form onSubmit={handleSubmit(onSubmit)} onFocusCapture={markFirstFocus} className="flex flex-col gap-5 bg-white p-6 sm:p-8 rounded-xl border border-slate-100 shadow-sm relative">
+          {/* Honeypot fields: off-screen (not display:none, which many bots skip), never seen by people */}
+          <div className="absolute -left-[10000px] top-auto w-px h-px overflow-hidden" aria-hidden="true">
+            <label htmlFor="company_website">Company website</label>
+            <input
+              id="company_website"
+              type="text"
+              tabIndex={-1}
+              autoComplete="off"
+              {...register('company_website')}
+            />
             <input
               id="honeypot-input"
               type="text"

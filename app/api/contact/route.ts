@@ -3,6 +3,7 @@ import * as z from 'zod';
 import { insertRow, escapeHtml } from '../../../lib/db';
 import { withinDailyLimit } from '../../../lib/rateLimit';
 import { sendEmail } from '../../../lib/mail';
+import { spamReason } from '../../../lib/spamGuard';
 
 const contactSchema = z.object({
   name: z.string().min(2),
@@ -10,17 +11,13 @@ const contactSchema = z.object({
   service: z.string().min(1),
   message: z.string().optional(),
   _honey: z.string().optional(),
+  company_website: z.string().optional(),
+  _elapsed: z.number().optional(),
 });
 
 export async function POST(request: Request) {
   try {
     const body = await request.json();
-
-    // 1. Validate honeypot (reject if filled)
-    if (body._honey && body._honey.trim() !== '') {
-      console.warn('Contact form spam submission blocked by honeypot.');
-      return NextResponse.json({ success: false, error: 'Spam detected' }, { status: 400 });
-    }
 
     // 2. Validate with Zod
     const parsedData = contactSchema.safeParse(body);
@@ -31,7 +28,15 @@ export async function POST(request: Request) {
       );
     }
 
-    const { _honey, ...formData } = parsedData.data;
+    const { _honey, company_website, _elapsed, ...formData } = parsedData.data;
+
+    // Spam (honeypot, filled in under 3 s, link-building pitch): answer "success" so the sender
+    // learns nothing, but save nothing, email nothing and tell the browser it was not a lead.
+    const spam = spamReason({ honeypots: [_honey, company_website], elapsedMs: _elapsed, message: formData.message });
+    if (spam) {
+      console.warn(`Contact form submission dropped as spam (${spam}).`);
+      return NextResponse.json({ success: true, lead: false, message: 'Contact request received successfully' });
+    }
 
     // Max 3 submissions per visitor per day (reset at midnight IST).
     if (!(await withinDailyLimit(request, 'contact'))) {
@@ -68,7 +73,7 @@ export async function POST(request: Request) {
       return NextResponse.json({ success: false, error: 'Could not submit right now. Please try WhatsApp.' }, { status: 502 });
     }
 
-    return NextResponse.json({ success: true, message: 'Contact request received successfully' });
+    return NextResponse.json({ success: true, lead: true, message: 'Contact request received successfully' });
   } catch (error: any) {
     console.error('Error handling contact request:', error);
     return NextResponse.json({ success: false, error: error.message || 'Internal server error' }, { status: 500 });

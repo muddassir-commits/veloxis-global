@@ -5,13 +5,14 @@ import { Megaphone, LayoutTemplate, MessageCircle, LineChart, CheckCircle } from
 import { Button } from '../../components/ui/Button';
 import { ImageFrame } from '../../components/ui/ImageFrame';
 import { FaqAccordion } from '../../components/sections/FaqAccordion';
+import { Breadcrumb } from '../../components/ui/Breadcrumb';
 import { constructMetadata } from '../../lib/seo-config';
 import { siteData } from '../../data/site';
 
 // D2C offer page (public since Nov 2026): linked from the homepage industries strip, footer, About,
 // llms.txt and the D2C follow-up emails.
 export const metadata: Metadata = constructMetadata({
-  title: 'Growth for D2C Brands: Meta Ads, Store Pages, Follow-ups | Veloxis',
+  title: 'D2C Marketing Agency: Meta Ads & Store Pages | Veloxis',
   description:
     'Meta ads, store pages that convert and WhatsApp and email follow-ups for Indian D2C brands, run by a small hands-on team and judged on orders, not clicks.',
   path: '/d2c',
@@ -94,8 +95,14 @@ const faqs = [
 export default function D2CPage() {
   return (
     <>
+      <section className="bg-slate-50 pt-16 lg:pt-[72px] border-b border-slate-100">
+        <div className="max-w-container-max mx-auto px-gutter">
+          <Breadcrumb items={[{ name: 'D2C brands', href: '/d2c' }]} />
+        </div>
+      </section>
+
       {/* Hero */}
-      <section className="bg-slate-900 text-white relative pt-28 pb-20 lg:pt-36 lg:pb-28 overflow-hidden text-left">
+      <section className="bg-slate-900 text-white relative py-20 lg:py-28 overflow-hidden text-left">
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#1e293b_1px,transparent_1px),linear-gradient(to_bottom,#1e293b_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-40" aria-hidden="true" />
         <div className="absolute inset-0 overflow-hidden" aria-hidden="true">
           <div className="aurora-blob -top-40 -right-40 w-96 h-96 bg-[rgba(37,99,235,0.3)]" />

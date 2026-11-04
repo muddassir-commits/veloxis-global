@@ -33,6 +33,7 @@ export const InArticleLeadMagnet: React.FC = () => {
         <div className="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
           <a
             href={whatsappUrl}
+            data-cta="blog_inline_whatsapp"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center gap-2.5 px-5 py-3 rounded-xl bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 text-white font-bold text-sm shadow-lg shadow-emerald-950/40 transition-all duration-300 hover:scale-[1.02]"
@@ -43,12 +44,25 @@ export const InArticleLeadMagnet: React.FC = () => {
 
           <Link
             href="/free-audit"
+            data-cta="blog_inline_free_audit"
             className="inline-flex items-center justify-center gap-1.5 px-5 py-3 rounded-xl bg-white/10 hover:bg-white/15 text-white font-semibold text-sm border border-white/15 transition-all text-center"
           >
             <span>Request a Free Marketing Audit</span>
             <ArrowRight className="w-4 h-4" />
           </Link>
         </div>
+
+        <p className="text-sm text-slate-300">
+          Or check your own site in a minute with our{' '}
+          <Link
+            href="/tools/website-audit"
+            data-cta="blog_inline_audit_tool"
+            className="font-bold text-white underline decoration-white/40 underline-offset-4 hover:text-emerald-300"
+          >
+            free website audit tool
+          </Link>
+          .
+        </p>
 
         <div className="pt-3 border-t border-white/10 flex items-center gap-2 text-xs text-slate-400">
           <ShieldCheck className="w-4 h-4 text-emerald-400 shrink-0" />

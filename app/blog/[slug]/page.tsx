@@ -7,6 +7,7 @@ import { Breadcrumb } from '../../../components/ui/Breadcrumb';
 import { getArticleSchema } from '../../../lib/schema';
 import { CtaBanner } from '../../../components/sections/CtaBanner';
 import BlogPostContent from './BlogPostContent';
+import { BlogStickyCta } from '../../../components/blog/BlogStickyCta';
 import { FaqAccordion } from '../../../components/sections/FaqAccordion';
 import { constructMetadata } from '../../../lib/seo-config';
 import { getAllPosts, getPostBySlug, toCard } from '../../../lib/blog';
@@ -86,6 +87,7 @@ export default async function SingleBlogPostPage({ params }: Params) {
       <FaqAccordion customFaqs={post.faqs} title="Frequently asked questions" badgeText="FAQ" description="Quick answers from this guide." />
 
       <CtaBanner />
+      <BlogStickyCta />
     </>
   );
 }
