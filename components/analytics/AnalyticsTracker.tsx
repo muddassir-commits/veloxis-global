@@ -37,7 +37,9 @@ export default function AnalyticsTracker() {
       const href = anchor?.getAttribute('href') || '';
 
       if (href.startsWith('tel:')) return events.phoneClick(page);
-      if (href.includes('wa.me') || href.includes('api.whatsapp.com/send')) return events.whatsappClick(page);
+      // A named WhatsApp button (data-cta) also sends its name, so each placement can be compared.
+      if (href.includes('wa.me') || href.includes('api.whatsapp.com/send'))
+        return events.whatsappClick(page, anchor?.dataset.cta || undefined);
       if (href.startsWith('mailto:')) return events.emailClick(page);
       if (href.includes('calendly.com')) return events.bookingClick(page);
 
