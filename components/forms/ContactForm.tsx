@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import * as z from 'zod';
@@ -16,6 +16,7 @@ const contactSchema = z.object({
   service: z.string().min(1, { message: 'Please select a service.' }),
   message: z.string().optional(),
   _honey: z.string().optional(),
+  company_website: z.string().optional(),
 });
 
 type ContactFormData = z.infer<typeof contactSchema>;
@@ -50,8 +51,15 @@ export const ContactForm: React.FC<{ defaultService?: string }> = ({ defaultServ
       service: defaultService,
       message: '',
       _honey: '',
+      company_website: '',
     }
   });
+
+  // When the form appeared; the server drops submissions sent in under 3 seconds (bots).
+  const shownAt = useRef(0);
+  useEffect(() => {
+    shownAt.current = Date.now();
+  }, []);
 
   // Links like /contact?service=NRI%20buyer%20campaigns preselect an option. Read on the client
   // so pages with the form stay static.
@@ -68,11 +76,13 @@ export const ContactForm: React.FC<{ defaultService?: string }> = ({ defaultServ
       const response = await fetch('/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(data),
+        body: JSON.stringify({ ...data, _elapsed: shownAt.current ? Date.now() - shownAt.current : 0 }),
       });
 
       if (response.ok) {
-        if (typeof window !== 'undefined') {
+        const result = await response.json().catch(() => null);
+        // generate_lead only for submissions the server accepted as real (spam is dropped silently).
+        if (result?.lead === true) {
           events.leadSubmit('ContactForm', window.location.pathname);
         }
         setSubmitSuccess(true);
@@ -111,8 +121,16 @@ export const ContactForm: React.FC<{ defaultService?: string }> = ({ defaultServ
         </div>
       ) : (
         <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-5 bg-white p-6 sm:p-8 rounded-xl border border-slate-100 shadow-sm relative">
-          {/* Honeypot field - visually hidden */}
-          <div className="hidden" aria-hidden="true">
+          {/* Honeypot fields: off-screen (not display:none, which many bots skip), never seen by people */}
+          <div className="absolute -left-[10000px] top-auto w-px h-px overflow-hidden" aria-hidden="true">
+            <label htmlFor="company_website">Company website</label>
+            <input
+              id="company_website"
+              type="text"
+              tabIndex={-1}
+              autoComplete="off"
+              {...register('company_website')}
+            />
             <input
               id="honeypot-input"
               type="text"
