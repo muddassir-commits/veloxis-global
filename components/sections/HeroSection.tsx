@@ -51,7 +51,7 @@ export const HeroSection: React.FC = () => {
           </p>
 
           {/* CTA Buttons */}
-          <div className="hero-fade-in flex flex-wrap items-center gap-4 mb-10" style={{ animationDelay: '0.2s' }}>
+          <div className="hero-fade-in flex flex-wrap items-center gap-4 mb-4" style={{ animationDelay: '0.2s' }}>
             <Button
               id="hero-free-audit-btn"
               variant="primary"
@@ -63,12 +63,25 @@ export const HeroSection: React.FC = () => {
             </Button>
             <Link
               href="/real-estate-lead-system"
+              data-cta=""
               className="group inline-flex items-center gap-1.5 text-[15px] font-bold text-white/80 hover:text-white transition-all px-4 py-3 border border-white/20 rounded-xl hover:bg-white/10 hover:border-white/40 backdrop-blur-sm"
             >
               How the Lead System works
               <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" aria-hidden="true" />
             </Link>
           </div>
+
+          {/* Self-serve option: the free website audit tool */}
+          <p className="hero-fade-in text-sm text-white/70 mb-10" style={{ animationDelay: '0.28s' }}>
+            Prefer to check it yourself?{' '}
+            <Link
+              href="/tools/website-audit"
+              data-cta="hero_audit_tool"
+              className="font-bold text-white underline decoration-white/40 underline-offset-4 hover:decoration-emerald-400 hover:text-emerald-400 transition-colors"
+            >
+              Run the free website audit tool
+            </Link>
+          </p>
 
           {/* Trust Indicators */}
           <div className="hero-fade-in flex flex-wrap items-center gap-6 text-sm text-white/60" style={{ animationDelay: '0.35s' }}>
