@@ -1,0 +1,103 @@
+<p><strong>The right real estate CRM for an Indian builder or broker is the one your sales team will update every day: it pulls every enquiry from Meta, Google, portals and WhatsApp into one list, assigns it in seconds, reminds the caller to follow up, and tracks each lead from enquiry to site visit to booking.</strong> Features matter less than daily use.</p>
+<p>This guide is for developers, brokers and channel partners choosing their first CRM or replacing one nobody uses. It covers what a real estate CRM does, the features that matter in India, the stages and fields to set up, how leads should flow in, a neutral checklist to compare vendors, and the consent rules to follow. We don't rank products: most "top 10 CRM" lists are written by CRM companies, and they put themselves first.</p>
+
+<h2 id="what-is-a-real-estate-crm">What is a real estate CRM?</h2>
+<p><strong>A real estate CRM (customer relationship management system) is software that stores every buyer enquiry and every conversation with that buyer in one place</strong>, so nobody is forgotten when a salesperson is busy, on leave or leaves the company.</p>
+<p>In practice it replaces three things most property teams run on today: the Excel sheet of leads, the WhatsApp chats on personal phones, and the memory of the best salesperson. A CRM answers simple questions that are surprisingly hard without one: Who called this buyer last? What did they say about budget? Did they visit the site? Which campaign brought them?</p>
+<p>If you are new to the idea, read our guide to <a href="/blog/real-estate-lead-management">real estate lead management</a> first. A CRM is the tool; lead management is the process the tool has to follow.</p>
+
+<h2 id="do-you-need-one">Do you need a CRM, or is a spreadsheet enough?</h2>
+<p><strong>A shared spreadsheet is enough while one or two people handle a few enquiries a day.</strong> You need a CRM when leads arrive from more than one source, more than two people follow up, or you cannot say which campaign produced last month's bookings.</p>
+<table>
+  <thead><tr><th>Sign</th><th>Spreadsheet still fine</th><th>Time for a CRM</th></tr></thead>
+  <tbody>
+    <tr><td>Lead sources</td><td>One (for example, walk-ins and calls)</td><td>Meta, Google, portals, website, WhatsApp, CPs</td></tr>
+    <tr><td>People following up</td><td>One or two</td><td>Three or more, or a call centre</td></tr>
+    <tr><td>Follow-up reminders</td><td>You remember them</td><td>Leads go cold because nobody called back</td></tr>
+    <tr><td>Reporting</td><td>Rough counts are enough</td><td>You need cost per site visit and per booking by campaign</td></tr>
+    <tr><td>Staff changes</td><td>Rare</td><td>Leads and chats leave with the person who leaves</td></tr>
+  </tbody>
+</table>
+
+<h2 id="features-that-matter">Which real estate CRM features matter in India?</h2>
+<p><strong>Six features decide whether a CRM works for Indian property sales: automatic lead capture, WhatsApp, calling, follow-up tasks, site visit tracking and source reporting.</strong> Everything else is a bonus.</p>
+<ol>
+  <li><strong>Automatic lead capture.</strong> Meta lead forms, Google Ads forms, your website form and portal enquiries should land in the CRM without anyone copying them. Meta, for example, lets lead ads send leads <a href="https://developers.facebook.com/docs/marketing-api/guides/lead-ads/" target="_blank" rel="noopener">straight to a CRM through partner integrations or webhooks</a>.</li>
+  <li><strong>WhatsApp inside the CRM.</strong> Most property buyers in India expect the first reply on WhatsApp, not by email. The CRM should send the first reply and the brochure, and keep the chat history on the lead, not on a salesperson's phone. This usually needs the <a href="/blog/whatsapp-business-api-for-real-estate">WhatsApp Business API</a>, not the free app.</li>
+  <li><strong>Click-to-call and call logging.</strong> Calls are still how most site visits get booked. The CRM should log each call, its outcome and ideally the recording.</li>
+  <li><strong>Follow-up tasks with due dates.</strong> Every lead should always have a next action and a date. A lead with no next action is a lead you have lost.</li>
+  <li><strong>Site visit scheduling.</strong> Booking, reminders, the visit result and the after-visit follow-up. See <a href="/blog/how-to-book-real-estate-site-visits">how to book real estate site visits</a>.</li>
+  <li><strong>Source and campaign reporting.</strong> Leads, site visits and bookings by source and campaign, so you can stop paying for channels that only produce enquiries.</li>
+</ol>
+<p>Useful extras for builders: inventory and unit blocking, payment-milestone reminders, channel partner registration (so two CPs don't claim the same buyer) and a buyer app. Useful extras for brokers: listings matched to buyer requirements and portal posting.</p>
+
+<h2 id="stages-and-fields">What stages and fields should you set up?</h2>
+<p><strong>Keep the pipeline short: seven stages from new enquiry to booking, plus a lost reason.</strong> Long pipelines with fifteen stages are never updated correctly.</p>
+<table>
+  <thead><tr><th>Stage</th><th>What it means</th><th>Next action</th></tr></thead>
+  <tbody>
+    <tr><td>New</td><td>Enquiry received, not yet contacted</td><td>WhatsApp reply and call within minutes</td></tr>
+    <tr><td>Contacted</td><td>You have spoken or chatted</td><td>Ask the qualifying questions</td></tr>
+    <tr><td>Qualified</td><td>Budget, timeline and purpose fit the project</td><td>Offer two site visit slots</td></tr>
+    <tr><td>Visit booked</td><td>Date and time agreed</td><td>Reminder the day before and two hours before</td></tr>
+    <tr><td>Visited</td><td>Buyer came to the site or sample flat</td><td>Price sheet and follow-up within 24 hours</td></tr>
+    <tr><td>Negotiation</td><td>Discussing unit, price or payment plan</td><td>Second visit or family meeting</td></tr>
+    <tr><td>Booked / Lost</td><td>Booking amount paid, or the lead is closed</td><td>Record the lost reason</td></tr>
+  </tbody>
+</table>
+<p>The fields worth making compulsory: name, phone, source, campaign, budget band, configuration wanted (for example 2 BHK or a 200 sq yd plot), timeline, purpose (own use or investment), home loan needed, assigned salesperson, next action date and lost reason. Our list of <a href="/blog/real-estate-lead-qualification-questions">lead qualification questions</a> gives you the wording for each one.</p>
+
+<h2 id="how-leads-should-flow">How should leads flow into the CRM?</h2>
+<p><strong>Every enquiry should reach the CRM automatically, get an instant WhatsApp reply and be assigned to a person, all within a minute.</strong> Speed matters: in a study published in <a href="https://hbr.org/2011/03/the-short-life-of-online-sales-leads" target="_blank" rel="noopener">Harvard Business Review</a> (2011), firms that contacted online leads within an hour were nearly seven times as likely to qualify them as firms that waited longer. The study covered US companies, not Indian property, so check the pattern in your own data.</p>
+<ol>
+  <li>Buyer fills a Meta form, a Google form, your landing page form or sends a portal enquiry.</li>
+  <li>The lead lands in the CRM with its source and campaign.</li>
+  <li>The CRM sends an approved WhatsApp template with the brochure and one question.</li>
+  <li>The lead is assigned by round robin, project or language, and the salesperson gets an alert.</li>
+  <li>The salesperson calls, updates the stage and sets the next action date.</li>
+  <li>Reminders fire for every follow-up and site visit until the lead is booked or closed.</li>
+</ol>
+<p>This flow is the core of our <a href="/real-estate-lead-system">Real Estate Lead System</a>, and you can build it on most CRMs. For the automation side, see <a href="/blog/whatsapp-automation-for-real-estate-leads">WhatsApp automation for real estate leads</a>.</p>
+
+<h2 id="how-to-choose">How to choose a real estate CRM: a neutral checklist</h2>
+<p><strong>Ask every vendor the same questions and test with your own leads before you sign.</strong> A two-week trial with real enquiries tells you more than any demo.</p>
+<table>
+  <thead><tr><th>Question to ask</th><th>Why it matters</th></tr></thead>
+  <tbody>
+    <tr><td>Can it pull leads from Meta, Google, our website and the portals we use, without manual upload?</td><td>Manual copying is where leads get lost and delayed.</td></tr>
+    <tr><td>Is WhatsApp built in through the official Business API?</td><td>Unofficial tools can get your number blocked.</td></tr>
+    <tr><td>Does the mobile app work well on the phones our team uses?</td><td>Salespeople update the CRM from the site, not a desk.</td></tr>
+    <tr><td>Can we export all our data at any time, in a standard format?</td><td>Your leads are your asset; you should never be locked in.</td></tr>
+    <tr><td>What is the full cost over two years, including setup, users, WhatsApp messages and integrations?</td><td>The monthly per-user price is rarely the whole bill.</td></tr>
+    <tr><td>Who does onboarding, and in which language is training?</td><td>A CRM nobody is trained on is a CRM nobody uses.</td></tr>
+    <tr><td>Where is the data stored, and how do access rights work when someone leaves?</td><td>Buyer data is personal data under Indian law.</td></tr>
+  </tbody>
+</table>
+
+<h2 id="consent-and-data">What do DPDP and WhatsApp rules mean for your CRM?</h2>
+<p><strong>Store only buyers who gave you their details, record where and when they did, and stop messaging anyone who asks you to.</strong> India's <a href="https://www.meity.gov.in/data-protection-framework" target="_blank" rel="noopener">Digital Personal Data Protection Act, 2023</a> requires a lawful basis, usually consent, for using personal data, and its rules are being phased in. WhatsApp separately requires businesses to <a href="https://developers.facebook.com/docs/whatsapp/overview/getting-opt-in/" target="_blank" rel="noopener">get opt-in</a> that names your business before messaging people.</p>
+<ul>
+  <li>Add a "consent source" field (form name, date) and fill it automatically.</li>
+  <li>Never import bought databases into the CRM.</li>
+  <li>Give each person access only to the leads they handle, and remove access the day someone leaves.</li>
+  <li>Keep a "do not contact" status that blocks WhatsApp, calls and email.</li>
+</ul>
+<p><em>This is general information, checked in November 2026, not legal advice. Ask your lawyer about your exact obligations.</em></p>
+
+<h2 id="mistakes">Common real estate CRM mistakes</h2>
+<ul>
+  <li><strong>Buying for features, not use.</strong> The best CRM is the one updated after every call.</li>
+  <li><strong>No owner.</strong> One person must check every morning that each lead has a next action.</li>
+  <li><strong>Too many stages and fields.</strong> Start with seven stages and add only what you report on.</li>
+  <li><strong>WhatsApp outside the CRM.</strong> If chats live on personal phones, the history leaves with the phone.</li>
+  <li><strong>Judging campaigns by lead count.</strong> Report cost per site visit and per booking, as our <a href="/blog/real-estate-marketing-budget">marketing budget guide</a> explains.</li>
+</ul>
+<p>Not sure whether your current set-up is losing leads? Our <a href="/free-audit">free marketing audit</a> checks how fast your enquiries get a reply and where they go missing.</p>
+
+<h2 id="sources">Sources</h2>
+<ul>
+  <li><a href="https://developers.facebook.com/docs/marketing-api/guides/lead-ads/" target="_blank" rel="noopener">Meta for Developers: Lead Ads (retrieving leads, CRM integration, webhooks)</a></li>
+  <li><a href="https://developers.facebook.com/docs/whatsapp/overview/getting-opt-in/" target="_blank" rel="noopener">Meta for Developers: Get opt-in for WhatsApp</a></li>
+  <li><a href="https://hbr.org/2011/03/the-short-life-of-online-sales-leads" target="_blank" rel="noopener">Harvard Business Review: The Short Life of Online Sales Leads (2011)</a></li>
+  <li><a href="https://www.meity.gov.in/data-protection-framework" target="_blank" rel="noopener">Ministry of Electronics and IT: Data protection framework (DPDP Act, 2023)</a></li>
+</ul>

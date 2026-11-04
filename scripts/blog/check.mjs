@@ -16,6 +16,20 @@ if (drafts.length) {
     for (const p of d.problems) console.log(`      - ${p}`);
   }
 }
+// Links between posts: a live post must not link to a post that is scheduled, a draft or missing
+// (that page is a 404 until its date). Add such links once the target post is live.
+const live = new Set(posts.map((p) => p.slug));
+const badLinks = [];
+for (const p of posts) {
+  for (const m of p.htmlContent.matchAll(/href="\/blog\/([a-z0-9-]+)\/?(?:#[^"]*)?"/g)) {
+    if (!live.has(m[1])) badLinks.push(`${p.slug} links to /blog/${m[1]}, which is not live`);
+  }
+}
+if (badLinks.length) {
+  console.log(`\nBROKEN LINKS — live posts linking to posts that are not live yet:`);
+  for (const b of badLinks) console.log(`  ✗ ${b}`);
+  process.exit(1);
+}
 if (skipped.length) {
   console.log(`\nPROBLEMS — these posts will NOT appear on the site until fixed:`);
   for (const s of skipped) console.log(`  ✗ ${s.slug}\n      - ${s.problems.join('\n      - ')}`);

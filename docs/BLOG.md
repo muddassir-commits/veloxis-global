@@ -36,3 +36,10 @@ and `app/blog/[slug]/error.tsx` contain any runtime error inside the blog sectio
 
 Nothing else needs editing: the blog page, homepage preview, related posts, sitemap, `llms.txt`
 and Article/FAQ schema all read from `content/blog` automatically.
+
+## Automatic writing and publishing (since 5 Nov 2026)
+
+- **Publishing** runs in GitHub's cloud: `.github/workflows/daily-rebuild.yml` ("Publish scheduled posts", 00:10 and 06:00 IST) commits newly due posts so Vercel deploys them. It opens a GitHub issue "Blog queue running low" when fewer than 3 posts are scheduled ahead. Optional secret `VERCEL_DEPLOY_HOOK_URL` also triggers a deploy.
+- **Writing:** a scheduled Claude cloud agent follows `scripts/blog/WRITER.md`: next topic from `content/blog-queue.json`, research of what ranks, one post, checks, a "Blog: <title>" PR for the owner to merge. Posts are dated ahead, so merged PRs publish one per day.
+- **Refreshing:** a weekly agent follows `scripts/blog/REFRESH.md` using `node scripts/seo/gsc-refresh.mjs` (Search Console: high impressions, low CTR, position 8–20).
+- Helpers: `node scripts/blog/queue-status.mjs` (what's scheduled, next free date), `node scripts/images/fetch-pixabay.mjs` (unique photos), and `npm run blog:check` now fails if a live post links to a post that isn't live yet.
