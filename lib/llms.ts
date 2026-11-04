@@ -16,7 +16,7 @@ import {
 
 const qa = (list: { question: string; answer: string }[] = []) => list.flatMap((f) => [`Q: ${f.question}`, `A: ${f.answer}`, '']);
 
-const intro = `> ${siteData.definition} It works only in real estate and reports on site visits and cost per site visit.`;
+const intro = `> ${siteData.definition} Real estate is its main focus; it also works with D2C brands and local businesses, and reports on enquiries, site visits and orders rather than clicks.`;
 
 // Build date: the llms routes are static, so this is when the content was last published.
 const updated = `Last updated: ${new Date().toISOString().slice(0, 10)}`;

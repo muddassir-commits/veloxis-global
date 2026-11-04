@@ -100,19 +100,19 @@ export const pageMeta = {
   lucknow: {
     title: 'Digital Marketing Agency in Lucknow for Real Estate | Veloxis',
     description:
-      'Real estate-only digital marketing agency for Lucknow builders, brokers and CPs: project landing pages, Meta and Google ads, and instant WhatsApp replies.',
+      'Real estate-focused digital marketing agency for Lucknow builders, brokers and CPs: project landing pages, Meta and Google ads, and instant WhatsApp replies.',
     path: '/digital-marketing-agency-lucknow',
   },
   kanpur: {
     title: 'Kanpur Digital Marketing Agency for Real Estate | Veloxis',
     description:
-      'Real estate-only digital marketing agency for Kanpur builders, brokers and CPs: project landing pages, Meta and Google ads, instant WhatsApp replies.',
+      'Real estate-focused digital marketing agency for Kanpur builders, brokers and CPs: project landing pages, Meta and Google ads, instant WhatsApp replies.',
     path: '/digital-marketing-agency-kanpur',
   },
   noida: {
-    title: 'Noida Digital Marketing Agency for Real Estate | Veloxis',
+    title: 'Real Estate Digital Marketing Agency in Noida | Veloxis',
     description:
-      'Noida-based, real estate-only digital marketing agency for builders, brokers and CPs: project pages, Meta and Google ads, instant WhatsApp replies.',
+      'Real estate digital marketing agency in Noida for builders, brokers and CPs: project landing pages, Meta and Google ads, and instant WhatsApp replies.',
     path: '/digital-marketing-agency-noida',
   },
   playbooks: {
