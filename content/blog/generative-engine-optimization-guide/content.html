@@ -1,149 +1,159 @@
-<p><strong>Generative engine optimization (GEO) is the work of getting your business named and cited in AI answers from ChatGPT, Perplexity, Gemini, Copilot and Google's AI Overviews.</strong> It rests on good SEO plus pages that answer questions directly, clear facts with sources, consistent business details across the web, and mentions on sites AI tools already trust.</p>
-<p>More and more people now get answers from ChatGPT, Gemini, Perplexity, Copilot and Google’s AI Overviews instead of clicking through ten blue links. When someone asks “best real estate agency in Lucknow” or “is this project RERA approved?”, the AI writes one answer and names a handful of sources. If your business isn’t one of them, you’re invisible for that question. Generative engine optimization (GEO) is the work of becoming one of those sources. This guide explains what GEO and AEO are, how AI tools choose what to quote, the six steps that actually move the needle, how to measure it for free, and a worked example from Indian real estate. No tricks: most of it is good SEO done thoroughly, plus a few things that matter more for AI than they did for Google alone.</p>
+<p><strong>Generative engine optimization (GEO) is the work of getting your business found, quoted and named in AI answers from ChatGPT, Perplexity, Gemini, Claude, Grok, Copilot and Google's AI Overviews.</strong> In practice it means letting AI crawlers read your site, getting indexed in both Google and Bing, writing answer-first pages with specific facts, and being described the same way on other trusted websites.</p>
+<p>This guide is for Indian business owners and marketers, with a real estate section at the end. It explains how each AI engine finds its sources (with links to each company's own documentation), the robots.txt lines to check, what llms.txt is and isn't, how to write pages that get quoted, and how to measure AI visibility for free.</p>
 
 <h2 id="what-is-geo">What is generative engine optimization (GEO)?</h2>
-<p><strong>Generative engine optimization (GEO)</strong> means making your content easy for AI tools to find, trust and quote when they write an answer. The “generative engines” are ChatGPT, Gemini, Perplexity, Microsoft Copilot, Claude and Google’s AI Overviews and AI Mode.</p>
-<p>You will see several names for the same family of work:</p>
+<p><strong>GEO means making your content easy for AI tools to find, trust and cite when they write an answer.</strong> The term comes from a research paper, <a href="https://arxiv.org/abs/2311.09735">"GEO: Generative Engine Optimization"</a> by researchers including teams from Princeton University and IIT Delhi, accepted at the KDD 2024 conference. They tested content changes on a benchmark of queries and reported that the best methods (such as adding citations, quotations and statistics) raised a source's visibility in generative answers by up to 40%, with results varying by subject.</p>
+<p>Related names you will see:</p>
 <table>
   <thead><tr><th>Term</th><th>What it usually means</th></tr></thead>
   <tbody>
-    <tr><td>GEO (generative engine optimization)</td><td>Getting cited or mentioned in AI-written answers</td></tr>
-    <tr><td>AEO (answer engine optimization)</td><td>Writing pages that answer one question directly, so search features and assistants can lift the answer as it is</td></tr>
-    <tr><td>AI SEO / LLM SEO</td><td>Umbrella terms for both, used loosely</td></tr>
-    <tr><td>SEO (search engine optimization)</td><td>Ranking in normal search results; still the foundation for all of the above</td></tr>
+    <tr><td>GEO (generative engine optimization)</td><td>Getting cited or named in AI-written answers</td></tr>
+    <tr><td>AEO (answer engine optimization)</td><td>Writing each answer so search features and assistants can lift it as it is</td></tr>
+    <tr><td>LLM SEO / AI SEO</td><td>Loose umbrella terms for both</td></tr>
+    <tr><td>SEO (search engine optimization)</td><td>Ranking in normal search; still the foundation for all of the above</td></tr>
   </tbody>
 </table>
 <p>The short version: <strong>SEO gets you into the index, AEO makes your answer easy to lift, and GEO makes the AI trust you enough to name you.</strong> For the classic SEO side, start with our guide to <a href="/blog/real-estate-seo-india">real estate SEO in India</a>.</p>
 
-<h2 id="why-it-matters">Why it matters now</h2>
-<p>Three things have changed:</p>
-<ul>
-  <li><strong>The answer comes before the links.</strong> Google shows AI Overviews above the normal results for many questions, and AI Mode answers in a chat. Fewer people scroll to the tenth result, and many never click at all.</li>
-  <li><strong>People ask longer, more specific questions.</strong> Instead of “flats Noida”, they type or say “3 BHK under 80 lakh near a metro station in Noida Extension, ready to move”. Those long questions are where small businesses can win, because big portals rarely have a page that answers them exactly.</li>
-  <li><strong>Visitors from AI answers arrive warmer.</strong> Someone who clicks your link inside an AI answer has usually already read a summary that mentions you. They are further along in deciding.</li>
-</ul>
-<p>Normal search still sends most traffic to most websites, and it still matters. GEO is not a replacement. It’s the part of search that is growing.</p>
+<h2 id="geo-vs-seo">Is GEO different from SEO?</h2>
+<p><strong>Mostly no: GEO is SEO done thoroughly, plus a few things that matter more when an AI writes the answer.</strong> Google's own <a href="https://developers.google.com/search/docs/fundamentals/ai-optimization-guide">guide to optimizing for generative AI features</a> (published May 2026) says these features rely on the same core Search systems, that original, non-commodity content matters more than any other tactic, and that you don't need to split pages into chunks or rewrite them in a special "AI style".</p>
+<p>What GEO adds is attention to engines beyond Google (several rely on Bing or their own crawlers), to how consistently other websites describe your business, and to measuring mentions in AI answers rather than only rankings.</p>
 
-<h2 id="how-ai-picks-sources">How AI tools choose what to quote</h2>
-<p>AI assistants answer in two ways. Some answers come from what the model learned during training. Answers about current, local or commercial topics usually come from a <strong>live web search</strong> that the tool runs in the background, then summarises. That second path is the one you can influence quickly.</p>
+<h2 id="how-ai-picks-sources">How do ChatGPT, Gemini, Perplexity, Claude, Grok and Copilot find sources?</h2>
+<p><strong>Each AI engine answers current or local questions by running a live web search and then summarising what it finds, but each uses a different index or crawler.</strong> That is the part you can influence. Answers from training data alone change slowly and are hard to affect.</p>
 <table>
-  <thead><tr><th>AI tool</th><th>Where its live answers come from</th><th>What that means for you</th></tr></thead>
+  <thead><tr><th>AI engine</th><th>Where live answers come from</th><th>What to do</th></tr></thead>
   <tbody>
-    <tr><td>Google AI Overviews and AI Mode</td><td>Google’s normal search index</td><td>Normal Google SEO and indexing come first</td></tr>
-    <tr><td>Gemini</td><td>Google Search</td><td>Same as above</td></tr>
-    <tr><td>ChatGPT search</td><td>Its own crawler (OAI-SearchBot) plus search partners, including Bing</td><td>Allow OAI-SearchBot and get indexed in Bing</td></tr>
-    <tr><td>Microsoft Copilot</td><td>Bing</td><td>Bing Webmaster Tools matters</td></tr>
-    <tr><td>Perplexity</td><td>Its own crawler (PerplexityBot) and index</td><td>Allow PerplexityBot</td></tr>
+    <tr><td>Google AI Overviews and AI Mode</td><td>Google's normal search index (<a href="https://developers.google.com/search/docs/appearance/ai-features">Google</a>)</td><td>Be indexed and eligible for a snippet in Google</td></tr>
+    <tr><td>Gemini app</td><td>Grounding with Google Search, controlled by the Google-Extended token (<a href="https://developers.google.com/crawling/docs/crawlers-fetchers/google-common-crawlers">Google</a>)</td><td>Don't disallow Google-Extended if you want to be cited in Gemini</td></tr>
+    <tr><td>ChatGPT search</td><td>OpenAI's OAI-SearchBot (<a href="https://developers.openai.com/api/docs/bots">OpenAI</a>) plus search partners; Bing's index is widely reported as one of them (<a href="https://searchengineland.com/chatgpt-search-microsoft-bing-seo-448019">Search Engine Land</a>)</td><td>Allow OAI-SearchBot and get indexed in Bing</td></tr>
+    <tr><td>Microsoft Copilot</td><td>Bing; citations show in Bing Webmaster Tools (<a href="https://blogs.bing.com/webmaster/2026/2/Introducing-AI-Performance-in-Bing-Webmaster-Tools-Public-Preview/">Bing</a>)</td><td>Verify the site in Bing Webmaster Tools</td></tr>
+    <tr><td>Perplexity</td><td>Its own PerplexityBot index, plus Perplexity-User fetches during a question (<a href="https://docs.perplexity.ai/guides/bots">Perplexity</a>)</td><td>Allow PerplexityBot</td></tr>
+    <tr><td>Claude</td><td>Claude-SearchBot for search and Claude-User for fetches a user asks for (<a href="https://support.claude.com/en/articles/8896518-does-anthropic-crawl-data-from-the-web-and-how-can-site-owners-block-the-crawler">Anthropic</a>)</td><td>Allow Claude-SearchBot and Claude-User</td></tr>
+    <tr><td>Grok</td><td>Live web search plus search of posts on X (<a href="https://docs.x.ai/developers/tools/web-search">xAI web search</a>, <a href="https://docs.x.ai/developers/tools/x-search">xAI X search</a>)</td><td>Be crawlable, and be active and discussed on X</td></tr>
   </tbody>
 </table>
-<p>Across all of them, the pages that get quoted tend to share the same traits: the answer is stated clearly near the top, the facts are specific (numbers, places, dates), the source looks trustworthy, and other websites say the same thing about the business. AI tools also like to cite “best of” lists, review sites, directories, forums and YouTube, so what <em>other people</em> publish about you counts as much as your own site.</p>
+<p>Google also notes that AI Overviews and AI Mode may use "query fan-out": several related searches across subtopics to build one answer (<a href="https://developers.google.com/search/docs/appearance/ai-features">Google</a>). So a page that answers the follow-up questions around a topic has more chances to be picked up than a page that answers only the headline question.</p>
 
-<h2 id="step-1-crawlable">Step 1: Let AI crawlers in and make your text readable</h2>
-<p>Nothing else matters if the AI can’t read your pages.</p>
+<h2 id="step-1-crawlable">Step 1: How do I allow AI crawlers in robots.txt?</h2>
+<p><strong>Open <code>yourdomain.com/robots.txt</code> and make sure the search crawlers of each AI engine are not blocked.</strong> Many sites block them by accident through a copied robots.txt, a security plugin or a firewall setting. The key distinction is between bots that power search answers (which you want) and bots that collect training data (your choice).</p>
+<table>
+  <thead><tr><th>User agent</th><th>Company</th><th>Used for</th><th>Block it?</th></tr></thead>
+  <tbody>
+    <tr><td><code>OAI-SearchBot</code></td><td>OpenAI</td><td>Showing sites in ChatGPT search answers</td><td>No, if you want ChatGPT citations</td></tr>
+    <tr><td><code>GPTBot</code></td><td>OpenAI</td><td>Training data for future models</td><td>Your choice; separate from search</td></tr>
+    <tr><td><code>PerplexityBot</code></td><td>Perplexity</td><td>Perplexity search results (not training)</td><td>No</td></tr>
+    <tr><td><code>Claude-SearchBot</code></td><td>Anthropic</td><td>Claude search result quality</td><td>No</td></tr>
+    <tr><td><code>ClaudeBot</code></td><td>Anthropic</td><td>Training data</td><td>Your choice</td></tr>
+    <tr><td><code>Google-Extended</code></td><td>Google</td><td>Gemini training and grounding; not Google Search ranking</td><td>Your choice; blocking may cost Gemini citations</td></tr>
+    <tr><td><code>Bingbot</code></td><td>Microsoft</td><td>Bing index (feeds Copilot)</td><td>No</td></tr>
+  </tbody>
+</table>
+<p>OpenAI says sites that opt out of OAI-SearchBot "will not be shown in ChatGPT search answers" and that robots.txt changes take about 24 hours to apply (<a href="https://developers.openai.com/api/docs/bots">OpenAI</a>). Perplexity gives the same 24-hour estimate (<a href="https://docs.perplexity.ai/guides/bots">Perplexity</a>). Google-Extended has no effect on inclusion or ranking in Google Search (<a href="https://developers.google.com/crawling/docs/crawlers-fetchers/google-common-crawlers">Google</a>).</p>
+<p>Three more technical checks:</p>
 <ol>
-  <li><strong>Check robots.txt.</strong> Open <code>yourdomain.com/robots.txt</code>. Make sure it does not block <code>OAI-SearchBot</code>, <code>GPTBot</code>, <code>PerplexityBot</code>, <code>ClaudeBot</code> or <code>Bingbot</code>. Some security plugins and firewalls block AI bots by default; check those settings too.</li>
-  <li><strong>Make sure your text is in the HTML.</strong> Most AI crawlers do not run JavaScript. If your page is built so that text appears only after scripts load, the crawler may see an almost empty page. Right-click → View page source and search for a sentence from your page; if it’s not there, ask your developer about server-side rendering.</li>
-  <li><strong>Get indexed in Bing as well as Google.</strong> Add your site to Bing Webmaster Tools (you can import it from Google Search Console in a few clicks) and submit your sitemap. Turn on IndexNow if your platform supports it, so Bing hears about new pages within minutes.</li>
-  <li><strong>Don’t block snippets.</strong> A <code>nosnippet</code> or <code>max-snippet:0</code> robots tag stops Google from quoting the page in AI Overviews.</li>
+  <li><strong>Your text must be in the HTML.</strong> Right-click a page, choose View page source and search for a sentence from it. If it isn't there, the content loads only through JavaScript and some crawlers may see an empty page. Ask your developer about server-side rendering.</li>
+  <li><strong>Don't block snippets.</strong> Google lists <code>nosnippet</code>, <code>data-nosnippet</code>, <code>max-snippet</code> and <code>noindex</code> as the controls that limit what appears in AI features (<a href="https://developers.google.com/search/docs/appearance/ai-features">Google</a>). Check that none is set by mistake.</li>
+  <li><strong>Keep key facts as text</strong>, not only inside images or PDF brochures.</li>
 </ol>
-<p>Our free <a href="/tools/website-audit">Website Audit</a> checks all four of these on any page in under a minute.</p>
+<p>Our free <a href="/tools/website-audit">Website Audit</a> checks robots.txt, indexability and page basics on any URL.</p>
 
-<h2 id="step-2-entity">Step 2: Make your business one clear “entity”</h2>
-<p>AI tools think in <strong>entities</strong>: a specific business, person or place, with facts attached. If your business name, description, phone number and website differ from one profile to the next, the AI can’t be sure they are the same business, so it leaves you out or mixes you up with someone else.</p>
+<h2 id="bing-indexnow">Step 2: Why do Bing Webmaster Tools and IndexNow matter for GEO?</h2>
+<p><strong>Because Copilot runs on Bing and ChatGPT search draws on Bing's index, a site that Bing hasn't indexed is at a disadvantage in two major AI engines.</strong> Many Indian businesses set up Google Search Console and never open Bing Webmaster Tools.</p>
+<ol>
+  <li>Sign in at Bing Webmaster Tools and add your site; you can import it from Google Search Console.</li>
+  <li>Submit your XML sitemap.</li>
+  <li>Turn on <a href="https://www.indexnow.org/">IndexNow</a> if your platform supports it. It lets your site notify participating search engines (Bing, Naver, Seznam, Yandex and Yep) the moment a page is added, updated or deleted.</li>
+  <li>Open the AI Performance report. Since February 2026 it shows how often your pages are cited in Copilot and Bing's AI summaries (<a href="https://blogs.bing.com/webmaster/2026/2/Introducing-AI-Performance-in-Bing-Webmaster-Tools-Public-Preview/">Bing Webmaster Blog</a>), and in June 2026 Bing added intent, topic and citation-share views (<a href="https://blogs.bing.com/search/June-2026/New-AI-Visibility-Insights-in-Bing-Webmaster-Tools-Intents-Topics-Citation-Share-Compare">Bing</a>).</li>
+</ol>
+
+<h2 id="step-2-entity">Step 3: How do I make my business one clear entity?</h2>
+<p><strong>Describe your business in exactly the same words, with the same name, phone number and website, everywhere it appears online.</strong> AI tools connect facts to entities (a specific business, person or place). If your details differ between profiles, the AI can't be sure they are the same business and may leave you out or mix you up with another one.</p>
 <ul>
-  <li><strong>Write one definition sentence</strong> and use it everywhere: website About page, Google Business Profile, LinkedIn, Instagram, Facebook, directories. For example: “[Name] is a [what] in [where] that [does what] for [whom].”</li>
-  <li><strong>Keep name, phone, email and website identical</strong> on every profile. One old phone number on one directory is enough to create doubt.</li>
-  <li><strong>Add Organization schema</strong> (structured data) to your site with your name, logo, URL, contact details, area served and a <code>sameAs</code> list of all your official profiles.</li>
-  <li><strong>Claim and complete your Google Business Profile</strong> if you serve customers locally. Our guide to <a href="/blog/real-estate-local-seo-ncr">local SEO for real estate in Delhi NCR</a> walks through it.</li>
-  <li><strong>If your name is shared with another company</strong>, say clearly what you are and what you are not, on your About page and in your schema. AI tools confuse similarly named businesses more often than you’d expect.</li>
+  <li><strong>Write one definition sentence</strong> and reuse it: "[Name] is a [what] in [city] that [does what] for [whom]." Put it on your About page, Google Business Profile, LinkedIn, Instagram, Facebook and directories.</li>
+  <li><strong>Keep name, phone, email and URL identical</strong>. One old number on one directory creates doubt.</li>
+  <li><strong>Add Organization or LocalBusiness schema</strong> with your logo, contact details, area served and a <code>sameAs</code> list of your official profiles.</li>
+  <li><strong>Complete your Google Business Profile.</strong> Google's AI guide says Business Profiles can help your services appear in AI responses as well as normal results (<a href="https://developers.google.com/search/docs/fundamentals/ai-optimization-guide">Google</a>). Our guide to <a href="/blog/real-estate-local-seo-ncr">Google Business Profile for real estate agents</a> walks through it.</li>
 </ul>
 
-<h2 id="step-3-answers">Step 3: Write answer-first pages</h2>
-<p>This is the AEO part. AI tools quote passages, not whole pages. Make each passage easy to lift:</p>
+<h2 id="step-3-answers">Step 4: How do I write content that AI tools quote?</h2>
+<p><strong>Put a direct, specific answer right under a heading phrased as the question, then back it with sources and original facts.</strong> AI answers quote passages, so each passage should make sense on its own.</p>
 <ol>
-  <li><strong>Use the question as the heading.</strong> “How much does a project landing page cost?” rather than “Pricing”.</li>
-  <li><strong>Answer in the first 40–60 words under it</strong>, in plain language, then explain. Don’t make the reader (or the AI) wade through an introduction.</li>
-  <li><strong>Be specific.</strong> Numbers, places, dates, names of laws and tools. “Most clients see results quickly” is useless to an AI; “site visits usually start in the second or third week of a campaign” is quotable.</li>
-  <li><strong>Use tables and lists</strong> for comparisons, steps and costs. They are easy to extract.</li>
-  <li><strong>Publish something original.</strong> A small survey, a study of public data, a price comparison you collected yourself. Original facts get cited because nobody else has them. For example, we checked 749 real estate websites in 26 cities and found that <a href="/blog/real-estate-landing-page-conversion-hacks#what-sites-miss">56% had no tracking and 60% had no WhatsApp link</a>; numbers like that are what AI answers like to quote.</li>
-  <li><strong>Show who wrote it and when.</strong> An author with a real profile and a visible “updated” date both signal that the page can be trusted.</li>
-  <li><strong>Add a short FAQ</strong> at the end with the follow-up questions people ask, each answered in two or three sentences.</li>
+  <li><strong>Use the question as the heading:</strong> "Is this project RERA registered?" rather than "Approvals".</li>
+  <li><strong>Answer in the first 40–60 words</strong>, plainly, then explain.</li>
+  <li><strong>Be specific:</strong> places, dates, laws and official sources.</li>
+  <li><strong>Cite your sources with links.</strong> Adding citations and quotations was among the strongest methods in the <a href="https://arxiv.org/abs/2311.09735">GEO study</a>.</li>
+  <li><strong>Publish something original:</strong> first-hand experience, a checklist from real work, or a study of public data. Google's guide puts original, non-commodity content first (<a href="https://developers.google.com/search/docs/fundamentals/ai-optimization-guide">Google</a>).</li>
+  <li><strong>Use tables and lists</strong> for comparisons and steps.</li>
+  <li><strong>Show the author and updated date, and end with a short FAQ</strong> of real follow-up questions.</li>
 </ol>
-<p>What not to do: mass-produce thin AI-written pages for every keyword. Google treats scaled, low-value content as spam, and AI answers ignore pages that say nothing new.</p>
+<p>What not to do: mass-produce thin AI-written pages for every keyword. Google's <a href="https://developers.google.com/search/docs/essentials/spam-policies#scaled-content">spam policies</a> cover scaled content made mainly to rank, and such pages add nothing an AI would want to cite.</p>
 
-<h2 id="step-4-mentions">Step 4: Get mentioned on other websites</h2>
-<p>When an AI tool decides whether to recommend you, it looks at what the rest of the web says. One website praising itself is weak evidence; ten independent sources agreeing is strong. Places that tend to be cited:</p>
+<h2 id="step-4-mentions">Step 5: How do I get mentioned on other websites?</h2>
+<p><strong>Earn genuine mentions on the sites AI engines already cite for your topic: directories, review platforms, community answers, industry media and "best of" lists.</strong> One website praising itself is weak evidence; several independent sources saying the same thing is strong.</p>
 <ul>
   <li><strong>Directories and listings</strong> in your industry and city, with identical details.</li>
-  <li><strong>“Best X in [city]” articles.</strong> Find the ones that AI answers already cite for your main questions, and ask the authors to consider you, with a real reason why.</li>
-  <li><strong>Reviews</strong> on Google and industry platforms. Ask every happy customer; never buy or fake them.</li>
-  <li><strong>Local news and industry publications.</strong> Original data (Step 3) is the easiest way in.</li>
-  <li><strong>Q&amp;A sites, forums and communities</strong> such as Quora and Reddit, where you answer questions helpfully under your own name, without spamming links.</li>
-  <li><strong>YouTube.</strong> Video answers to common questions are frequently shown and cited.</li>
-  <li><strong>LinkedIn articles and posts</strong> by the founder, which build the person entity behind the business.</li>
+  <li><strong>Reviews</strong> on Google and industry platforms from real customers. Never buy or fake them.</li>
+  <li><strong>Reddit and Quora:</strong> helpful answers under your real name, without link spam. Grok also searches X posts directly (<a href="https://docs.x.ai/developers/tools/x-search">xAI</a>), so active X accounts matter for that engine.</li>
+  <li><strong>LinkedIn articles, YouTube answers and local or trade media</strong>, easiest to reach with original data.</li>
 </ul>
+<p>Keep it real. Google's guide warns that artificial efforts to collect mentions "aren't as useful as they seem" (<a href="https://developers.google.com/search/docs/fundamentals/ai-optimization-guide">Google</a>).</p>
 
-<h2 id="step-5-schema">Step 5: Add structured data</h2>
-<p>Structured data (schema) is code that tells machines what a page is about. Google says there is no special markup needed for AI Overviews, and that normal SEO best practice applies. Schema still helps every system read your pages correctly, and it’s cheap to add. The useful types for most businesses:</p>
-<table>
-  <thead><tr><th>Schema type</th><th>Where</th><th>Why</th></tr></thead>
-  <tbody>
-    <tr><td>Organization or LocalBusiness</td><td>Every page (once, site-wide)</td><td>Defines your business entity, logo and profiles</td></tr>
-    <tr><td>Article or BlogPosting</td><td>Guides and blog posts</td><td>Author, dates and cover image</td></tr>
-    <tr><td>FAQPage</td><td>Pages with a visible FAQ</td><td>Marks up question-and-answer pairs</td></tr>
-    <tr><td>Service</td><td>Service pages</td><td>What you offer and where</td></tr>
-    <tr><td>BreadcrumbList</td><td>Every inner page</td><td>Shows where the page sits on the site</td></tr>
-  </tbody>
-</table>
-<p>The markup must match what is visible on the page. Test it with Google’s Rich Results Test before you publish.</p>
-<p>What about <strong>llms.txt</strong>? It’s a proposed plain-text summary of a site for AI tools. It is quick to add and does no harm, but Google has said it does not use it, and there is little evidence other tools rely on it yet. Treat it as optional.</p>
+<h2 id="step-5-schema">Step 6: Do schema and llms.txt help GEO?</h2>
+<p><strong>Schema helps machines read your pages but is not required for AI features; llms.txt is an optional proposal, not a standard, and Google Search does not use it.</strong> Google says you don't need new machine-readable files, AI text files or special markup to appear in AI Overviews or AI Mode (<a href="https://developers.google.com/search/docs/appearance/ai-features">Google</a>), though structured data can still make you eligible for rich results.</p>
+<p>The useful types for most businesses are Organization or LocalBusiness (site-wide), Article on guides, FAQPage where a FAQ is visible, Service on service pages and BreadcrumbList on inner pages. Markup must match what is visible on the page. <strong>llms.txt</strong> is <a href="https://llmstxt.org/">a proposal by Jeremy Howard</a> (September 2024) for a plain-text file that helps AI agents use a website. Google's AI guide lists it among things you don't need for Search, adding that it may be useful for other services (<a href="https://developers.google.com/search/docs/fundamentals/ai-optimization-guide">Google</a>). Add one if it's easy; don't expect it to move rankings.</p>
 
-<h2 id="measure">Step 6: Measure your AI visibility for free</h2>
-<p>There is no “AI Search Console” yet, but you can track progress without paid tools:</p>
+<h2 id="measure">Step 7: How do I measure AI visibility for free?</h2>
+<p><strong>Track three things monthly: whether you appear for a fixed set of customer prompts, AI citations in Search Console and Bing Webmaster Tools, and visits from AI tools in Google Analytics 4.</strong></p>
 <ol>
-  <li><strong>Write 20 prompts</strong> your customers would actually ask, from broad (“best digital marketing agency in Kanpur”) to specific (“who can set up WhatsApp auto-replies for a builder in Lucknow”).</li>
-  <li><strong>Ask them once a month</strong> in ChatGPT, Gemini, Perplexity and Copilot, in a logged-out or private window. Note whether you are mentioned, whether you are linked, and which sources are cited instead.</li>
-  <li><strong>Check AI referrals in Google Analytics 4.</strong> In Reports → Acquisition → Traffic acquisition, look at session source for <code>chatgpt.com</code>, <code>perplexity.ai</code>, <code>gemini.google.com</code> and <code>copilot.microsoft.com</code>. ChatGPT also adds <code>utm_source=chatgpt.com</code> to many of its links.</li>
-  <li><strong>Watch Google Search Console.</strong> Clicks and impressions from AI Overviews and AI Mode are counted inside the normal Performance report. Rising impressions on long, question-style queries are a good sign.</li>
-  <li><strong>Study the cited sources.</strong> The pages AI tools cite instead of you are your to-do list: get listed there, or publish something better on the same question.</li>
+  <li><strong>Write 20 prompts</strong> your customers would ask, from broad ("best real estate marketing agency in Lucknow") to specific ("who can set up WhatsApp auto-replies for a builder in Noida").</li>
+  <li><strong>Ask them monthly</strong> in ChatGPT, Gemini, Perplexity, Claude, Grok and Copilot in a private window. Note whether you are named, linked, and who is cited instead.</li>
+  <li><strong>Google Search Console:</strong> Google points site owners to a Generative AI performance report for AI features (<a href="https://developers.google.com/search/docs/fundamentals/ai-optimization-guide">Google</a>); AI feature traffic is also counted in the normal Performance report under "Web" (<a href="https://developers.google.com/search/docs/appearance/ai-features">Google</a>).</li>
+  <li><strong>Bing Webmaster Tools:</strong> the AI Performance report shows Copilot citations by page and grounding query.</li>
+  <li><strong>GA4:</strong> in Reports → Acquisition → Traffic acquisition, filter session source for <code>chatgpt.com</code>, <code>perplexity.ai</code>, <code>gemini.google.com</code>, <code>claude.ai</code> and <code>copilot.microsoft.com</code>.</li>
+  <li><strong>Study the sources cited instead of you.</strong> They are your to-do list: get listed there, or publish a better answer.</li>
 </ol>
+<p>Be careful with paid "AI rank" tools that promise insider data. Google says no third-party tool has access to its internal systems (<a href="https://developers.google.com/search/docs/fundamentals/ai-optimization-guide">Google</a>).</p>
 
-<h2 id="real-estate-example">A worked example: a real estate business in Noida</h2>
-<p>Imagine a channel partner in Noida who wants to appear when buyers ask AI tools about flats in Noida Extension. Here is what the six steps look like in practice:</p>
+<h2 id="real-estate-example">How does GEO work for real estate in India?</h2>
+<p><strong>For a developer, broker or channel partner, GEO means making every project fact (RERA number, location, configurations, possession date) readable as text and consistent across your site, portals and profiles.</strong> Buyers increasingly ask AI tools questions like "is this project RERA approved" or "ready-to-move 3 BHK near a metro in Noida Extension". Imagine a channel partner in Noida working through the steps:</p>
 <ul>
-  <li><strong>Crawlable:</strong> robots.txt allows the AI bots, the site is server-rendered, and it’s verified in both Google Search Console and Bing Webmaster Tools.</li>
-  <li><strong>Entity:</strong> one definition (“[Name] is a RERA-registered real estate channel partner in Noida that helps families buy ready-to-move and under-construction flats in Noida Extension”) on the website, Google Business Profile, LinkedIn and Instagram, all with the same WhatsApp number.</li>
-  <li><strong>Answer-first pages:</strong> one page per project with the RERA number, carpet areas, price band, possession date and distance to the metro as plain text, not only inside a PDF brochure; plus guides such as “carpet area vs super built-up area” and a <a href="/services/high-converting-landing-pages">real estate landing page</a> for each launch.</li>
-  <li><strong>Mentions:</strong> listed on property portals and local directories with the same details, reviews from real buyers on Google, a few helpful answers on Quora, and walkthrough videos on YouTube.</li>
-  <li><strong>Schema:</strong> Organization site-wide, FAQPage on project pages, BlogPosting on guides.</li>
-  <li><strong>Measure:</strong> 20 buyer prompts checked monthly, AI referrals tracked in GA4.</li>
+  <li><strong>Crawlable:</strong> robots.txt allows the search bots, the site is server-rendered, and it's verified in Google Search Console and Bing Webmaster Tools.</li>
+  <li><strong>Entity:</strong> one definition ("[Name] is a RERA-registered channel partner in Noida helping families buy flats in Noida Extension") on the site, Google Business Profile, LinkedIn and Instagram, with the same WhatsApp number.</li>
+  <li><strong>Answer-first pages:</strong> one page per project with the RERA number, carpet areas, price band, possession date and metro distance as text, not only in a brochure PDF; guides that answer buyer questions; and a <a href="/services/high-converting-landing-pages">landing page</a> for each launch.</li>
+  <li><strong>Mentions:</strong> the same details on property portals and directories, real buyer reviews, helpful Quora and Reddit answers, and walkthrough videos.</li>
 </ul>
-<p>None of this needs a big budget. It needs the facts to be written down clearly, in the same way, in many places. For more on where AI already helps property businesses day to day, see <a href="/blog/ai-for-real-estate-india">AI for real estate in India</a>.</p>
-
-<h2 id="mistakes">Common GEO mistakes</h2>
-<ul>
-  <li><strong>Blocking AI crawlers</strong> by accident through a firewall, plugin or copied robots.txt.</li>
-  <li><strong>Key facts only in images or PDFs.</strong> AI tools read text. Prices, sizes, addresses and RERA numbers must be on the page as text.</li>
-  <li><strong>Inconsistent details</strong> across profiles: old phone numbers, different business names, outdated descriptions.</li>
-  <li><strong>Publishing hundreds of thin AI-written pages.</strong> It risks a spam penalty and doesn’t get cited.</li>
-  <li><strong>Fake reviews or made-up statistics.</strong> They can be checked, and AI tools increasingly cross-check sources.</li>
-  <li><strong>Only checking Google.</strong> ChatGPT and Copilot lean on Bing; ignoring Bing leaves those answers to your competitors.</li>
-  <li><strong>Expecting results in a week.</strong> Indexing, mentions and trust build over months. Measure monthly, not daily.</li>
-</ul>
+<p>Keep RERA rules in mind: every public claim must match the registered project. For the wider picture, see <a href="/blog/ai-for-real-estate-india">AI for real estate in India</a> and <a href="/blog/real-estate-website-examples">what the best property websites include</a>.</p>
 
 <h2 id="checklist">GEO checklist</h2>
 <ol>
-  <li>robots.txt allows OAI-SearchBot, GPTBot, PerplexityBot, ClaudeBot and Bingbot.</li>
-  <li>Main text is visible in the page source without JavaScript.</li>
-  <li>Site verified and sitemap submitted in Google Search Console and Bing Webmaster Tools.</li>
-  <li>One definition sentence used on the site and every profile.</li>
-  <li>Same name, phone, email and URL everywhere.</li>
+  <li>robots.txt allows OAI-SearchBot, PerplexityBot, Claude-SearchBot and Bingbot.</li>
+  <li>Training bots (GPTBot, ClaudeBot, Google-Extended) set by choice, not by accident.</li>
+  <li>Main text visible in page source without JavaScript; no accidental nosnippet.</li>
+  <li>Site verified in Google Search Console and Bing Webmaster Tools; sitemap submitted; IndexNow on.</li>
+  <li>One definition sentence, and the same name, phone, email and URL everywhere.</li>
   <li>Organization schema with logo and sameAs links.</li>
-  <li>Question headings with 40–60 word direct answers.</li>
-  <li>At least one piece of original data or research.</li>
-  <li>Author name and updated date on every guide.</li>
-  <li>FAQ with FAQPage schema on key pages.</li>
-  <li>Listed in relevant directories, with real reviews.</li>
-  <li>20 customer prompts checked monthly; AI referrals tracked in GA4.</li>
+  <li>Question headings with 40–60 word direct answers and source links.</li>
+  <li>At least one original piece of data or first-hand guidance.</li>
+  <li>Real reviews and listings on the sites AI engines already cite.</li>
+  <li>20 prompts checked monthly; AI referrals tracked in GA4 and Bing.</li>
 </ol>
-<p>Run your homepage through the free <a href="/tools/website-audit">Website Audit</a> to see where you stand on the technical items, and browse the <a href="/guides">guides</a> for the rest. If you’d like a person to review your site, profiles and ads together, ask for a <a href="/free-audit">free marketing audit</a>.</p>
+<p>Run your homepage through the free <a href="/tools/website-audit">Website Audit</a> to check the technical items. If you'd like someone to review your site, profiles and listings together, ask for a <a href="/free-audit">free marketing audit</a>.</p>
+
+<h2 id="sources">Sources</h2>
+<ul>
+  <li><a href="https://arxiv.org/abs/2311.09735">Aggarwal et al., "GEO: Generative Engine Optimization", KDD 2024 (arXiv)</a></li>
+  <li><a href="https://developers.google.com/search/docs/fundamentals/ai-optimization-guide">Google Search Central: Optimizing your website for generative AI features</a></li>
+  <li><a href="https://developers.google.com/search/docs/appearance/ai-features">Google Search Central: AI features and your website</a></li>
+  <li><a href="https://developers.google.com/crawling/docs/crawlers-fetchers/google-common-crawlers">Google: common crawlers (Google-Extended)</a></li>
+  <li><a href="https://developers.google.com/search/docs/essentials/spam-policies#scaled-content">Google: spam policies, scaled content abuse</a></li>
+  <li><a href="https://developers.openai.com/api/docs/bots">OpenAI: overview of OpenAI crawlers</a></li>
+  <li><a href="https://searchengineland.com/chatgpt-search-microsoft-bing-seo-448019">Search Engine Land: ChatGPT search makes Microsoft Bing an SEO priority</a></li>
+  <li><a href="https://docs.perplexity.ai/guides/bots">Perplexity: Perplexity crawlers</a></li>
+  <li><a href="https://support.claude.com/en/articles/8896518-does-anthropic-crawl-data-from-the-web-and-how-can-site-owners-block-the-crawler">Anthropic: crawlers and how to block them</a></li>
+  <li><a href="https://docs.x.ai/developers/tools/web-search">xAI: Web Search tool</a> and <a href="https://docs.x.ai/developers/tools/x-search">X Search tool</a></li>
+  <li><a href="https://blogs.bing.com/webmaster/2026/2/Introducing-AI-Performance-in-Bing-Webmaster-Tools-Public-Preview/">Bing Webmaster Blog: AI Performance in Bing Webmaster Tools</a></li>
+  <li><a href="https://blogs.bing.com/search/June-2026/New-AI-Visibility-Insights-in-Bing-Webmaster-Tools-Intents-Topics-Citation-Share-Compare">Bing: new AI visibility insights (June 2026)</a></li>
+  <li><a href="https://www.indexnow.org/">IndexNow.org</a></li>
+  <li><a href="https://llmstxt.org/">llmstxt.org: the /llms.txt proposal</a></li>
+</ul>

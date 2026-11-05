@@ -1,7 +1,7 @@
 {
-  "title": "How to Book Real Estate Site Visits: Steps, Scripts, Site Visit Form and Report",
-  "seoTitle": "How to Book Real Estate Site Visits (Form + Scripts)",
-  "excerpt": "How to turn property enquiries into site visits: a 7-step process, WhatsApp and call scripts, a site visit form, a report example and no-show fixes.",
+  "title": "How to Book Real Estate Site Visits: Steps, Scripts, Form and Report",
+  "seoTitle": "How to Book Real Estate Site Visits (Scripts + Form)",
+  "excerpt": "How to turn property enquiries into site visits: a 7-step booking process, WhatsApp and call scripts, a site visit form, report example and no-show fixes.",
   "date": "2026-10-19",
   "category": "Landing Pages",
   "service": "high-converting-landing-pages",
@@ -36,7 +36,7 @@
     },
     {
       "question": "How do I book more site visits from online leads?",
-      "answer": "Reply within minutes on WhatsApp, ask two or three qualifying questions, call with context, offer two specific visit times, confirm with the location pin and the host's number, send reminders, and follow up after the visit."
+      "answer": "Reply within minutes on WhatsApp, ask two or three qualifying questions, call with context, offer two specific visit times, confirm with the location pin and the host's number, send reminders, and follow up after the visit. Book only qualified leads, so the visit is worth their trip."
     },
     {
       "question": "What should a real estate site visit form include?",
@@ -44,11 +44,11 @@
     },
     {
       "question": "What is a site visit report?",
-      "answer": "A short note written after each visit: who came, what they need, what they saw, what they liked, their concerns, which other projects they're considering, and the agreed next step. It keeps the follow-up specific."
+      "answer": "A short note written after each visit: who came, what they need, what they saw, what they liked, their concerns, which other projects they're considering, and the agreed next step. It keeps the follow-up specific. Store it with the lead in your CRM or sheet so anyone on the team can pick up the follow-up."
     },
     {
       "question": "How do I reduce site visit no-shows?",
-      "answer": "Book only qualified leads, fix a specific time, remind the evening before and the morning of the visit with the location pin, make rescheduling easy, and call no-shows the same day with two new slots."
+      "answer": "Book only qualified leads, fix a specific time, remind the evening before and the morning of the visit with the location pin, make rescheduling easy, and call no-shows the same day with two new slots. A rescheduled visit is better than a no-show."
     },
     {
       "question": "What is a good site visit conversion rate?",
@@ -56,12 +56,16 @@
     },
     {
       "question": "What should I say to get a buyer to visit the site?",
-      "answer": "Refer to what they told you, suggest the units that fit, explain why seeing the site helps them decide, and offer two specific times, for example: \"Would Saturday at 11 or Sunday at 4 work better for you?\""
+      "answer": "Refer to what they told you, suggest the units that fit, explain why seeing the site helps them decide, and offer two specific times, for example: \"Would Saturday at 11 or Sunday at 4 work better for you?\" Never pressure them to pay on the call."
     },
     {
-      "question": "Should site visit confirmations be automated?",
-      "answer": "Yes. Confirmations, location pins and reminders are easy to automate on WhatsApp with approved templates. Qualifying the buyer and agreeing the visit time work better with a person."
+      "question": "How should I follow up after a site visit?",
+      "answer": "Send a thank-you with the cost sheet the same evening, answer the buyer's main concern the next day, invite any missing decision maker for a second visit within the week, then share only useful updates until they book or say no. Record the reason if they decline."
+    },
+    {
+      "question": "Can a real estate site visit be done virtually?",
+      "answer": "Yes, for buyers who can't travel, such as NRIs. A live video call walking the actual unit and approach road works better than a recorded film. Book it at a fixed time in their time zone and send a written summary. Many buyers still want someone to see the site in person."
     }
   ],
-  "updated": "2026-10-23"
+  "updated": "2026-11-05"
 }

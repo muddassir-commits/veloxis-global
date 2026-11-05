@@ -1,7 +1,7 @@
 {
-  "title": "RERA Advertisement Rules: What Every Real Estate Ad Must Show (2026 Checklist)",
-  "seoTitle": "RERA Advertisement Rules: Checklist for Real Estate Ads",
-  "excerpt": "RERA advertisement rules: no ads before registration, the registration number and website in every ad, UP RERA's QR code, CP duties and penalties.",
+  "title": "RERA Advertisement Rules: What Every Real Estate Ad Must Show (2026)",
+  "seoTitle": "RERA Advertisement Rules 2026: Checklist for Property Ads",
+  "excerpt": "RERA advertisement rules: no ads before registration, RERA number and website in every ad, UP RERA and MahaRERA QR codes, CP duties and penalties.",
   "date": "2026-10-19",
   "category": "Guides",
   "service": "paid-ads",
@@ -25,8 +25,8 @@
       "sameAs": "https://en.wikipedia.org/wiki/Real_Estate_(Regulation_and_Development)_Act,_2016"
     },
     {
-      "name": "UP RERA",
-      "sameAs": "https://up-rera.in"
+      "name": "Advertising Standards Council of India",
+      "sameAs": "https://en.wikipedia.org/wiki/Advertising_Standards_Council_of_India"
     }
   ],
   "faqs": [
@@ -36,11 +36,15 @@
     },
     {
       "question": "Is the RERA number mandatory in social media ads?",
-      "answer": "Yes. RERA's definition of advertisement covers publicity in any medium, so Facebook, Instagram, Google and YouTube ads, WhatsApp broadcasts and posts by channel partners all need the project's registration number and the authority's website address."
+      "answer": "Yes. RERA's definition of advertisement covers publicity in any medium, so Facebook, Instagram, Google and YouTube ads, WhatsApp broadcasts and posts by channel partners all need the project's registration number and the authority's website address, shown where people can read it, plus the QR code in states that require one."
     },
     {
       "question": "Is a QR code mandatory in UP RERA advertisements?",
-      "answer": "Yes. Since July 2024 UP RERA assigns each project a unique QR code and requires promoters to print it in brochures and advertisements and on documents given to buyers, such as booking forms, allotment letters and builder-buyer agreements."
+      "answer": "Yes. Since July 2024 UP RERA assigns each project a unique QR code and requires promoters to print it in brochures and advertisements and on documents given to buyers, such as booking forms, allotment letters and builder-buyer agreements. In January 2025 it reminded promoters this covers print, outdoor, TV, digital and social media."
+    },
+    {
+      "question": "Is a QR code mandatory in MahaRERA advertisements?",
+      "answer": "Yes. MahaRERA has required a project QR code in advertisements since August 2023, and its April 2025 directions require a scannable QR code at the top right of every ad, with registration details in a large enough font. They apply to promoters and agents, with penalties of up to ₹50,000."
     },
     {
       "question": "Can a builder advertise a project before RERA registration?",
@@ -60,8 +64,8 @@
     },
     {
       "question": "Does RERA apply to commercial property ads?",
-      "answer": "Yes. The Act's definition of apartment includes offices, shops, showrooms and godowns, so commercial projects above the size limits must register and follow the same advertising rules as residential ones."
+      "answer": "Yes. The Act's definition of apartment includes offices, shops, showrooms and godowns, so commercial projects above the size limits must register and follow the same advertising rules as residential ones: no ads before registration, and the registration number and authority website in every ad."
     }
   ],
-  "updated": "2026-10-23"
+  "updated": "2026-11-05"
 }

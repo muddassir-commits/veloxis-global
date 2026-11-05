@@ -1,29 +1,77 @@
 {
   "title": "NRI Real Estate Marketing: How to Get NRI Clients for Your Project",
-  "seoTitle": "How to Get NRI Clients for Real Estate: Ads and Rules",
-  "excerpt": "How to get NRI clients for real estate: who NRI buyers are, FEMA rules to explain, where to advertise abroad, the landing page they need and follow-up.",
+  "seoTitle": "How to Get NRI Clients for Real Estate: Ads, FEMA Rules",
+  "excerpt": "How to get NRI clients for real estate: where NRIs live, RBI and FEMA rules to explain, Meta and Google ads abroad, the landing page, time-zone follow-up.",
   "date": "2026-10-30",
+  "updated": "2026-11-05",
   "category": "Paid Ads",
   "service": "paid-ads",
   "image": "/images/people/blog/nri-dubai-burj-night.jpg",
   "imageAlt": "Dubai's skyline at night with the Burj Khalifa lit up",
   "inlineImages": [
-    { "src": "/images/people/blog/nri-london-thames-skyline.jpg", "alt": "London's skyline along the River Thames at dusk", "beforeHeading": "where-to-reach" },
-    { "src": "/images/people/blog/nri-video-call-laptop.jpg", "alt": "A man on a video call with a woman shown on his laptop screen", "beforeHeading": "time-zones", "caption": "Offer video site visits and call slots in the buyer's own time zone." },
-    { "src": "/images/people/blog/nri-family-airport.jpg", "alt": "A smiling girl holding a passport at an airport, with her parents and suitcases behind her", "beforeHeading": "checklist" }
+    {
+      "src": "/images/people/blog/nri-london-thames-skyline.jpg",
+      "alt": "London's skyline along the River Thames at dusk",
+      "beforeHeading": "where-to-reach"
+    },
+    {
+      "src": "/images/people/blog/nri-video-call-laptop.jpg",
+      "alt": "A man on a video call with a woman shown on his laptop screen",
+      "beforeHeading": "time-zones",
+      "caption": "Offer video site visits and call slots in the buyer's own time zone."
+    },
+    {
+      "src": "/images/people/blog/nri-family-airport.jpg",
+      "alt": "A smiling girl holding a passport at an airport, with her parents and suitcases behind her",
+      "beforeHeading": "checklist"
+    }
   ],
   "about": [
-    { "name": "Non-resident Indian and person of Indian origin", "sameAs": "https://en.wikipedia.org/wiki/Non-resident_Indian_and_person_of_Indian_origin" },
-    { "name": "Foreign Exchange Management Act", "sameAs": "https://en.wikipedia.org/wiki/Foreign_Exchange_Management_Act" }
+    {
+      "name": "Non-resident Indian and person of Indian origin",
+      "sameAs": "https://en.wikipedia.org/wiki/Non-resident_Indian_and_person_of_Indian_origin"
+    },
+    {
+      "name": "Foreign Exchange Management Act",
+      "sameAs": "https://en.wikipedia.org/wiki/Foreign_Exchange_Management_Act"
+    }
   ],
   "faqs": [
-    { "question": "How do I get NRI clients for real estate?", "answer": "Run Meta and Google ads aimed at Indians in the cities where they live, send them to a page with an NRI FAQ and a recent video walk-through, and reply on WhatsApp instantly with call slots in their own time zone." },
-    { "question": "Can NRIs buy property in India?", "answer": "Yes. Under FEMA, NRIs can buy residential and commercial property in India. They cannot buy agricultural land, plantation property or farmhouses except by inheritance. Buyers should confirm details with their bank or CA." },
-    { "question": "How do NRIs pay for property in India?", "answer": "Through normal banking channels, typically inward remittance or NRE, NRO or FCNR accounts in India. Cash or foreign currency notes are not allowed." },
-    { "question": "Can NRIs get a home loan in India?", "answer": "Yes. Indian banks offer home loans to NRIs, subject to their own eligibility and documentation rules." },
-    { "question": "How can an NRI buy property without travelling to India?", "answer": "Many sign a power of attorney so a family member in India can sign and register the property for them, and use video calls for site visits." },
-    { "question": "Which ads work best for NRI buyers?", "answer": "Meta ads targeted by country or city with separate ad sets per region, Google Search ads for searches such as 'flats in Noida for NRI', and YouTube walk-through videos." },
-    { "question": "When should I call NRI leads?", "answer": "In their own working hours. Dubai is 1 hour 30 minutes behind India, London 4 hours 30 minutes or 5 hours 30 minutes behind, and New York about 9 hours 30 minutes or 10 hours 30 minutes behind." },
-    { "question": "What should an NRI landing page include?", "answer": "The usual project facts plus an NRI FAQ on eligibility, payments, loans and power of attorney, a dated video walk-through, WhatsApp as the main button and call slots in the buyer's time zone." }
+    {
+      "question": "How do I get NRI clients for real estate?",
+      "answer": "Run Meta and Google ads aimed at Indians in the countries and cities where they live, send them to a page with an NRI FAQ and a dated video walk-through, and reply on WhatsApp instantly with call slots in their own time zone. Then send monthly construction updates."
+    },
+    {
+      "question": "Where do most NRIs live?",
+      "answer": "According to the Ministry of External Affairs (data as of January 2026), India has about 1.78 crore NRIs. The largest groups live in the UAE (about 43 lakh), Saudi Arabia (about 27 lakh) and the USA (about 23 lakh), followed by Canada and Kuwait."
+    },
+    {
+      "question": "Can NRIs buy property in India?",
+      "answer": "Yes. Under the RBI's FEMA Master Direction, NRIs and OCIs can buy residential and commercial property in India without RBI permission. They cannot buy agricultural land, plantation property or farm houses, though inheritance is allowed. Buyers should confirm details with their bank or a chartered accountant."
+    },
+    {
+      "question": "How do NRIs pay for property in India?",
+      "answer": "Through banking channels: inward remittance from abroad, or a debit to an NRE, FCNR(B) or NRO account in India. The RBI Master Direction says payment cannot be made by traveller's cheque or foreign currency notes, so cash and foreign notes are not an option."
+    },
+    {
+      "question": "Can NRIs take property sale money back abroad?",
+      "answer": "Yes, subject to conditions in the RBI Master Direction, such as the property having been bought under the foreign exchange rules of the time through banking channels. For residential property, repatriation of sale proceeds is limited to not more than two properties."
+    },
+    {
+      "question": "How can an NRI buy property without travelling to India?",
+      "answer": "Many NRIs give a family member in India a power of attorney to sign and register the property for them, pay through NRE, FCNR(B) or NRO accounts, and use live video calls with the sales team for site visits. A home loan from an Indian bank is also possible."
+    },
+    {
+      "question": "Which ads work best for NRI buyers?",
+      "answer": "Meta ads targeted by country or city with separate ad sets per region, Google Search ads for searches such as 'flats in Noida for NRI', and YouTube walk-through videos. For audiences in the US, Canada and some European countries, Meta requires the housing Special Ad Category."
+    },
+    {
+      "question": "When should I call NRI leads?",
+      "answer": "In their own working hours. Dubai is 1 hour 30 minutes behind India, Riyadh and Doha 2 hours 30 minutes behind, Singapore 2 hours 30 minutes ahead, London 4 hours 30 minutes or 5 hours 30 minutes behind, and New York 9 hours 30 minutes or 10 hours 30 minutes behind."
+    },
+    {
+      "question": "What should an NRI landing page include?",
+      "answer": "The usual project facts plus an NRI FAQ on eligibility, payments, home loans and power of attorney, a dated video walk-through, WhatsApp as the main button, call slots shown in the buyer's time zone, and the RERA number with the developer's completed projects."
+    }
   ]
 }

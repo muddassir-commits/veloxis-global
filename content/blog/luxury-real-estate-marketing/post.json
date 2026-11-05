@@ -1,28 +1,73 @@
 {
   "title": "Luxury Real Estate Marketing: How to Sell Premium Homes in India",
-  "seoTitle": "Luxury Real Estate Marketing: 7 Ps, Channels and Leads",
-  "excerpt": "How to market luxury real estate in India: what counts as luxury, the 7 Ps for premium homes, visuals, channels that reach HNI buyers, enquiry handling.",
+  "seoTitle": "Luxury Real Estate Marketing in India: 7 Ps and Channels",
+  "excerpt": "Luxury real estate marketing in India: what counts as luxury, the 7 Ps, visuals, channels that reach HNI buyers, a launch plan and enquiry handling.",
   "date": "2026-10-31",
+  "updated": "2026-11-05",
   "category": "Growth Tips",
   "service": "paid-ads",
   "image": "/images/people/blog/lux-modern-villa-dusk.jpg",
   "imageAlt": "A modern two-storey villa with large lit windows and a pool at dusk",
   "inlineImages": [
-    { "src": "/images/people/blog/lux-bathtub-window-view.jpg", "alt": "A freestanding bathtub beside floor-to-ceiling windows with a hillside view", "beforeHeading": "brand-and-content", "caption": "In luxury, the photography is part of the product." },
-    { "src": "/images/people/blog/lux-city-night-from-above.jpg", "alt": "A city lit up at night seen from a high-rise", "beforeHeading": "channels" },
-    { "src": "/images/people/blog/lux-living-room-sofas.jpg", "alt": "A bright living room with cream sofas, a glass table and shelves", "beforeHeading": "handling-enquiries" }
+    {
+      "src": "/images/people/blog/lux-bathtub-window-view.jpg",
+      "alt": "A freestanding bathtub beside floor-to-ceiling windows with a hillside view",
+      "beforeHeading": "brand-and-content",
+      "caption": "In luxury, the photography is part of the product."
+    },
+    {
+      "src": "/images/people/blog/lux-city-night-from-above.jpg",
+      "alt": "A city lit up at night seen from a high-rise",
+      "beforeHeading": "channels"
+    },
+    {
+      "src": "/images/people/blog/lux-living-room-sofas.jpg",
+      "alt": "A bright living room with cream sofas, a glass table and shelves",
+      "beforeHeading": "handling-enquiries"
+    }
   ],
   "about": [
-    { "name": "Marketing mix", "sameAs": "https://en.wikipedia.org/wiki/Marketing_mix" }
+    {
+      "name": "Marketing mix",
+      "sameAs": "https://en.wikipedia.org/wiki/Marketing_mix"
+    }
   ],
   "faqs": [
-    { "question": "What is luxury real estate marketing?", "answer": "Marketing that sells a way of living rather than square feet: reaching a small number of qualified buyers through private and personal channels, with exceptional visuals and a senior, unhurried response to every enquiry." },
-    { "question": "What counts as luxury in real estate?", "answer": "There is no single price cut-off, as it varies by city. Luxury homes usually have a prime or rare location, low density, larger units, high-end specifications, a strong architect or brand and services such as concierge or club facilities." },
-    { "question": "What are the 7 Ps of luxury marketing?", "answer": "Product, price, place, promotion, people, process and physical evidence. For luxury homes this means rare features, value-signalling prices, a strong location story, selective promotion, senior sales staff, a smooth process and premium touchpoints." },
-    { "question": "How do you reach high-net-worth home buyers?", "answer": "Through private previews and events, wealth managers, CAs, architects and interior designers, luxury-focused channel partners, targeted Google and Meta ads, NRI markets and referrals from existing owners." },
-    { "question": "Do Meta and Google ads work for luxury projects?", "answer": "Yes, if they are targeted: Google Search for high-intent luxury queries and Meta ads aimed at premium localities, retargeting and lookalikes. Expect a higher cost per lead and judge them on qualified site visits." },
-    { "question": "Should luxury projects offer discounts in ads?", "answer": "Usually not. Discount-led messaging can cheapen a luxury brand and attract the wrong buyers. Any offers are better made privately." },
-    { "question": "How should luxury enquiries be handled?", "answer": "Acknowledge instantly, then have a named relationship manager follow up within the hour, qualify gently, offer a private viewing at the buyer's convenience and keep in touch with meaningful updates." },
-    { "question": "How do you measure a luxury real estate campaign?", "answer": "Track qualified enquiries, private viewings, second visits, bookings and cost per viewing by channel, and ask every buyer how they first heard about the project." }
+    {
+      "question": "What is luxury real estate marketing?",
+      "answer": "Luxury real estate marketing sells a way of living rather than square feet. It reaches a small number of qualified buyers through private and personal channels, presents the home with exceptional photography and film, and gives every enquiry a senior, unhurried response instead of mass lead forms and discounts."
+    },
+    {
+      "question": "What counts as luxury real estate in India?",
+      "answer": "There is no single price cut-off, because it varies by city and locality. Luxury homes usually have a prime or rare location, low density, larger units, high-end specifications, a strong architect or developer brand, and services such as concierge, club facilities or managed maintenance."
+    },
+    {
+      "question": "What are the 7 Ps of luxury real estate marketing?",
+      "answer": "Product, price, place, promotion, people, process and physical evidence. For luxury homes this means genuinely rare features, prices that signal value, a strong location story, selective promotion, senior sales staff, a smooth enquiry-to-viewing process and premium touchpoints such as the sales gallery and brochure."
+    },
+    {
+      "question": "How is luxury marketing different from mid-segment marketing?",
+      "answer": "Luxury marketing targets a smaller, wealthier audience with messages about design, rarity, privacy and the developer's record rather than price and offers. It relies on private previews, advisers and select partners, uses a named relationship manager, and is judged on qualified viewings rather than lead volume."
+    },
+    {
+      "question": "How do you reach high-net-worth home buyers?",
+      "answer": "Through private previews and events, wealth managers, chartered accountants, architects and interior designers, a small group of luxury-focused channel partners, targeted search ads, Customer Match and retargeting, NRI markets, and referrals from existing owners who move in the same circles."
+    },
+    {
+      "question": "Do Meta and Google ads work for luxury projects?",
+      "answer": "Yes, if they are targeted. Use Google Search for high-intent luxury queries, Customer Match and Meta custom audiences built from consenting contacts, and retargeting of people who watched your film. Expect a higher cost per lead and judge campaigns on qualified viewings."
+    },
+    {
+      "question": "Should luxury projects offer discounts in ads?",
+      "answer": "Usually not. Discount-led messaging can cheapen a luxury brand and attract buyers who are shopping on price. If there is an offer, it is better made privately during a viewing or to an existing relationship than advertised publicly. Lead with design, location and delivery record instead."
+    },
+    {
+      "question": "How should luxury enquiries be handled?",
+      "answer": "Acknowledge instantly on WhatsApp, then have a named relationship manager follow up within the hour. Qualify gently by asking about their current home and who will live in the new one, offer a private viewing at their convenience, and keep in touch with meaningful updates."
+    },
+    {
+      "question": "How do you measure a luxury real estate campaign?",
+      "answer": "Track qualified enquiries, private viewings, second visits, bookings and cost per viewing by channel, rather than lead count. Ask every buyer how they first heard about the project and record it, because referrals and events rarely appear in ad dashboards."
+    }
   ]
 }

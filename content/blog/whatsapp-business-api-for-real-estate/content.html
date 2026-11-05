@@ -1,64 +1,121 @@
-<p><strong>The WhatsApp Business API (officially the WhatsApp Business Platform) lets a real estate business connect WhatsApp to its ads, website and CRM, so every enquiry gets an instant reply, buyers are qualified automatically, and site visit confirmations and reminders go out without anyone typing them.</strong> It is not free: Meta charges per delivered message by category. And it is not a licence to bulk-message people who never asked to hear from you.</p>
-<p>This guide explains how the API differs from the WhatsApp Business app, what it costs under Meta's current pricing, what a real estate WhatsApp flow looks like, how chatbots fit in, and the rules on templates, opt-in and bulk messages.</p>
+<p><strong>The WhatsApp Business API (officially the WhatsApp Business Platform) lets a real estate business connect WhatsApp to its ads, website and CRM, so every enquiry gets an instant reply, buyers are qualified automatically, and site visit confirmations and reminders go out without anyone typing them.</strong> It is not free, and it only allows messaging people who opted in.</p>
+<p>This guide explains how the API differs from the WhatsApp Business app, what it costs under Meta's current pricing (checked 5 November 2026), messaging limits, what a real estate WhatsApp flow looks like, how chatbots fit in, how to choose a provider, and the rules on templates, opt-in and bulk messages.</p>
 
-<h2 id="app-vs-api">WhatsApp Business app vs WhatsApp Business API</h2>
+<h2 id="app-vs-api">What is the difference between the WhatsApp Business app and the API?</h2>
+<p>The app is a free phone app for one person or a small team; the API is a platform that connects WhatsApp to your systems and lets a team work from one number.</p>
 <table>
   <thead><tr><th></th><th>WhatsApp Business app</th><th>WhatsApp Business Platform (API)</th></tr></thead>
   <tbody>
     <tr><td>Who uses it</td><td>One person or a small team on a phone</td><td>A team, through a provider's dashboard or your CRM</td></tr>
-    <tr><td>Automation</td><td>Greeting and away messages, quick replies</td><td>Full flows: instant replies, questions, buttons, routing to salespeople, reminders</td></tr>
+    <tr><td>Automation</td><td>Greeting and away messages, quick replies, labels</td><td>Full flows: instant replies, questions, buttons, routing to salespeople, reminders</td></tr>
     <tr><td>Connects to ads and CRM</td><td>Click-to-WhatsApp ads, but chats stay on the phone</td><td>Leads from ads, website and forms go straight into the CRM</td></tr>
     <tr><td>Messaging people first</td><td>Manual</td><td>Only with Meta-approved templates, to people who opted in</td></tr>
     <tr><td>Cost</td><td>Free app</td><td>Meta charges per delivered message; the provider charges for its platform</td></tr>
   </tbody>
 </table>
-<p>The app is fine for a broker handling a few chats a day. Once leads arrive from ads in volume, or several salespeople share them, the API is what stops enquiries getting lost. Our guide to <a href="/blog/whatsapp-automation-for-real-estate-leads">WhatsApp automation for real estate leads</a> covers that decision in more detail.</p>
+<p>The app is fine for a broker handling a few chats a day; Meta describes its features on the <a href="https://business.whatsapp.com/products/business-app" target="_blank" rel="noopener">WhatsApp Business app page</a>. Once leads arrive from ads in volume, or several salespeople share them, the API is what stops enquiries getting lost. Our guide to <a href="/blog/whatsapp-automation-for-real-estate-leads">WhatsApp automation for real estate leads</a> covers that decision in more detail.</p>
 
-<h2 id="pricing">Is the WhatsApp Business API free?</h2>
-<p>No. According to <a href="https://developers.facebook.com/docs/whatsapp/pricing/" target="_blank" rel="noopener">Meta's pricing documentation</a>:</p>
+<h2 id="pricing">How much does the WhatsApp Business API cost in India?</h2>
+<p>Meta charges per delivered message, based on the message category and the recipient's country, and the provider adds its own fee. According to <a href="https://developers.facebook.com/docs/whatsapp/pricing/" target="_blank" rel="noopener">Meta's pricing documentation</a>, checked on 5 November 2026:</p>
 <ul>
-  <li>Meta charges <strong>per delivered message</strong>, based on the message category (marketing, utility, authentication, service) and the recipient's country.</li>
-  <li><strong>Messages from users to your business are not charged.</strong></li>
-  <li>From <strong>1 October 2026</strong>, <strong>service messages</strong> (your free-form replies inside the 24-hour customer service window) are charged, with the first <strong>1,000 delivered service messages per business phone number per month free</strong>. Utility messages sent within an open service window are also charged from that date.</li>
-  <li>Messages sent within a <strong>free entry point window</strong>, opened when a user messages you from a click-to-WhatsApp ad or a Facebook Page call-to-action button, are not charged.</li>
-  <li>Marketing messages cost the most.</li>
+  <li><strong>Per-message pricing</strong> has applied since 1 July 2025. You pay only for delivered messages.</li>
+  <li><strong>Categories:</strong> template messages are marketing, utility or authentication; non-template replies are service messages. Marketing messages cost the most.</li>
+  <li><strong>Messages from buyers to you are free.</strong></li>
+  <li><strong>Free service tier:</strong> every business phone number gets 1,000 free service messages a month. From 1 October 2026, service messages beyond that, and utility messages sent inside an open customer service window, are charged.</li>
+  <li><strong>Free entry point window:</strong> when a buyer messages you from a click-to-WhatsApp ad, a window opens for up to 7 days in which marketing, utility, authentication and service messages are not charged.</li>
+  <li><strong>AI replies:</strong> Meta lists "Meta Business Agent" messages, introduced on 1 July 2026, as a separate category charged per token.</li>
+  <li><strong>India billing:</strong> billing in rupees launched on 1 January 2026 for eligible businesses billed in India, which must move their accounts to INR by 31 December 2026.</li>
 </ul>
-<p>On top of Meta's charges, the business solution provider (the company whose dashboard you use) charges its own fee. Check Meta's current rate card for India before budgeting, because rates and rules change.</p>
+<p>Rates for India change from time to time, so download Meta's current rate card before you budget, and ask providers to show their markup on top of Meta's rates separately.</p>
+<table>
+  <thead><tr><th>Real estate message</th><th>Typical category</th><th>Charged?</th></tr></thead>
+  <tbody>
+    <tr><td>Buyer asks a question; you reply within 24 hours</td><td>Service</td><td>Free up to 1,000 a month per number, then charged</td></tr>
+    <tr><td>Visit confirmation or reminder template</td><td>Utility</td><td>Charged</td></tr>
+    <tr><td>New launch, offer or "still interested?" template</td><td>Marketing</td><td>Charged, highest rate</td></tr>
+    <tr><td>Any message within a click-to-WhatsApp free entry window</td><td>Any template or service</td><td>Not charged</td></tr>
+  </tbody>
+</table>
 
-<h2 id="whatsapp-flow">A real estate WhatsApp flow, step by step</h2>
+<h2 id="limits">What are WhatsApp API messaging limits?</h2>
+<p>Messaging limits cap how many different people you can message with templates outside a customer service window in a rolling 24 hours. Per <a href="https://developers.facebook.com/docs/whatsapp/messaging-limits" target="_blank" rel="noopener">Meta's messaging limits page</a>, they apply to your whole business portfolio, new portfolios start at 250, and the next tiers are 2,000, 10,000, 100,000 and unlimited. Verifying your business is one path to 2,000. After that Meta raises the limit automatically if your messages are high quality and you used at least half of your current limit in the last 7 days.</p>
+<p>For a real estate team the lesson is practical: verify the business early, warm up with messages people want (replies, confirmations, reminders), and don't spend your limit on cold broadcasts that get blocked.</p>
+
+<h2 id="whatsapp-flow">What does a real estate WhatsApp API flow look like?</h2>
 <ol>
   <li><strong>Enquiry arrives</strong> from a Meta lead form, a Google ad, the website form or a click-to-WhatsApp ad.</li>
   <li><strong>Instant reply:</strong> the project name, the brochure, the price band and a question with buttons: "2 BHK / 3 BHK?"</li>
-  <li><strong>Qualifying questions:</strong> budget range, timeline and purpose, each a tap rather than typing.</li>
+  <li><strong>Qualifying questions:</strong> budget range, timeline and purpose, each a tap rather than typing. Meta's <a href="https://developers.facebook.com/docs/whatsapp/flows" target="_blank" rel="noopener">WhatsApp Flows</a> can show these as a short form inside the chat.</li>
   <li><strong>Visit slots:</strong> two specific times offered as buttons.</li>
   <li><strong>Handover to a person:</strong> the salesperson gets an alert with the answers and calls with context.</li>
-  <li><strong>Confirmation and reminders:</strong> location pin and host's number on booking, a reminder the day before and the morning of the visit.</li>
+  <li><strong>Confirmation and reminders:</strong> location pin and host's number on booking, a reminder the evening before and the morning of the visit.</li>
   <li><strong>After the visit:</strong> thanks, the cost sheet for the unit they liked, and the next step.</li>
 </ol>
 <p>Each step outside a 24-hour window opened by the buyer needs an approved template. Write templates that name the project and the buyer and give useful information. "Sir, you enquired about our project?" gives no reason to reply.</p>
 
+<h2 id="templates">Which WhatsApp templates does a real estate business need?</h2>
+<p>Most real estate teams need five to seven templates, submitted and approved before launch:</p>
+<ul>
+  <li><strong>Welcome:</strong> thanks, brochure, one question.</li>
+  <li><strong>Visit confirmation:</strong> date, time, map pin, host's name.</li>
+  <li><strong>Visit reminder:</strong> with confirm and reschedule buttons.</li>
+  <li><strong>No-show:</strong> a friendly message with two new slots.</li>
+  <li><strong>After-visit follow-up:</strong> the cost sheet and an offer to answer questions.</li>
+  <li><strong>Close the loop:</strong> asks politely whether to keep the enquiry open.</li>
+  <li><strong>Updates for opted-in buyers:</strong> construction progress, new tower, site event.</li>
+</ul>
+<p>Meta reviews each template against its <a href="https://developers.facebook.com/docs/whatsapp/message-templates/guidelines" target="_blank" rel="noopener">template guidelines</a> and decides its category. Copy-ready wording for every stage is in our <a href="/blog/real-estate-whatsapp-message-templates">real estate WhatsApp message templates</a>.</p>
+
 <h2 id="chatbots">Can WhatsApp chatbots be used for real estate?</h2>
-<p>Yes. A WhatsApp chatbot for real estate can answer common questions (price band, configurations, location, amenities, RERA number), send brochures and floor plans, collect qualifying answers and book visits, at any hour. What it shouldn't do is invent: a bot must only answer from approved project information, and should hand over to a person for anything about pricing negotiations, legal questions or complaints. Our guide to <a href="/blog/ai-for-real-estate-india">AI for real estate in India</a> covers where AI helps and where it creates risk, including RERA's rule that the promoter is liable for false statements in advertising.</p>
+<p>Yes. A WhatsApp chatbot for real estate can answer common questions (price band, configurations, location, amenities, RERA number), send brochures and floor plans, collect qualifying answers and book visits, at any hour. What it shouldn't do is invent: a bot must only answer from approved project information, and should hand over to a person for pricing negotiations, legal questions or complaints. Under Section 12 of the <a href="https://www.indiacode.nic.in/handle/123456789/2158" target="_blank" rel="noopener">RERA Act, 2016</a>, the promoter is liable for false statements in advertising, whoever wrote them. Our guide to <a href="/blog/ai-for-real-estate-india">AI in real estate in India</a> covers where AI helps and where it creates risk.</p>
 
 <h2 id="bulk-messages">Can you send bulk WhatsApp messages to property buyers?</h2>
-<p>Only to people who opted in to hear from you on WhatsApp. The <a href="https://business.whatsapp.com/policy" target="_blank" rel="noopener">WhatsApp Business Messaging Policy</a> requires opt-in before you message people, and business-initiated messages must use approved templates. Meta also sets <a href="https://developers.facebook.com/docs/whatsapp/messaging-limits" target="_blank" rel="noopener">messaging limits</a> and a quality rating for every number. If many recipients block or report you, your limits and eventually the number itself are restricted.</p>
-<p>So a bought list of phone numbers is a fast way to lose a WhatsApp number. It also conflicts with India's <a href="https://www.meity.gov.in/data-protection-framework" target="_blank" rel="noopener">Digital Personal Data Protection Act, 2023</a>, which requires a lawful basis, usually consent, to use someone's personal data. Broadcasts work when they go to past enquirers and buyers who agreed to updates, and carry real news: construction progress, a new tower, a site event.</p>
+<p>Only to people who opted in to hear from you. Meta's <a href="https://developers.facebook.com/docs/whatsapp/overview/getting-opt-in" target="_blank" rel="noopener">opt-in rules</a> require that the person gave you their number and agreed to receive messages, that the opt-in names your business, and that you follow applicable law. The <a href="https://business.whatsapp.com/policy" target="_blank" rel="noopener">WhatsApp Business Messaging Policy</a> sets the wider rules, and business-initiated messages must use approved templates.</p>
+<p>A bought list of phone numbers is a fast way to lose a WhatsApp number. It also conflicts with India's Digital Personal Data Protection Act, 2023: under the DPDP Rules notified on 14 November 2025, every business must give a clear consent notice explaining the specific purpose for which personal data is used, with an <a href="https://static.pib.gov.in/WriteReadData/specificdocs/documents/2025/nov/doc20251117695301.pdf" target="_blank" rel="noopener">eighteen-month phased compliance period</a> (PIB). Broadcasts work when they go to past enquirers and buyers who agreed to updates, and carry real news.</p>
+<p><em>General information, not legal advice. Rules checked on 5 November 2026.</em></p>
 
-<h2 id="no-shows">Using WhatsApp to reduce site visit no-shows</h2>
+<h2 id="no-shows">How can WhatsApp reduce site visit no-shows?</h2>
 <ul>
   <li>Confirm the visit immediately with the date, time, location pin and the host's name and number.</li>
   <li>Send a reminder the evening before and on the morning of the visit, with buttons to confirm or change the time.</li>
+  <li>Ask whether the family or co-buyer is coming, so the visit includes the decision makers.</li>
   <li>If they don't show, send a friendly message the same day with two new slots.</li>
 </ul>
 <p>More on this in <a href="/blog/how-to-book-real-estate-site-visits">how to book real estate site visits</a>.</p>
 
-<h2 id="setup">How to set up the WhatsApp Business API</h2>
+<h2 id="provider">How do you choose a WhatsApp API provider?</h2>
+<p>Choose a provider from <a href="https://developers.facebook.com/docs/whatsapp/solution-providers" target="_blank" rel="noopener">Meta's solution provider list</a>, or use Meta's <a href="https://developers.facebook.com/docs/whatsapp/cloud-api/get-started" target="_blank" rel="noopener">Cloud API</a> directly if you have a developer. Compare on these points:</p>
+<ul>
+  <li>Meta's message charges shown separately from the provider's fee.</li>
+  <li>A shared team inbox with lead assignment and notes.</li>
+  <li>Ready connections to Meta lead forms, your website and your CRM.</li>
+  <li>A chatbot builder with buttons, Flows and human handover.</li>
+  <li>Reports on reply time, template delivery and blocks.</li>
+  <li>Data export, so your lead history isn't locked in.</li>
+</ul>
+
+<h2 id="setup">How do you set up the WhatsApp Business API?</h2>
 <ol>
-  <li>Choose a business solution provider (or use Meta's Cloud API directly if you have a developer).</li>
-  <li>Verify your business in Meta Business Manager.</li>
-  <li>Register a phone number that isn't already active on the WhatsApp app (or migrate it).</li>
+  <li>Choose a solution provider, or Meta's Cloud API directly.</li>
+  <li>Create or use your Meta business portfolio and verify the business.</li>
+  <li>Register a phone number for the business (or migrate one you use in the app) and set the display name and profile.</li>
   <li>Submit message templates for approval: welcome, visit confirmation, reminder, follow-up.</li>
+  <li>Add opt-in wording to every form that names your business and mentions WhatsApp.</li>
   <li>Connect lead sources (Meta lead forms, website, Google ads) and your CRM.</li>
-  <li>Build the flow, test it end to end, and train the sales team on the handover.</li>
+  <li>Build the flow, test it end to end from every source, and train the sales team on the handover.</li>
 </ol>
 <p>We set up WhatsApp automation for developers, brokers and channel partners as part of our <a href="/services/ai-automation">AI automation service</a>, usually together with <a href="/services/paid-ads">Meta and Google ads</a>. A <a href="/free-audit">free marketing audit</a> will show how fast your enquiries are answered today.</p>
+
+<h2 id="sources">Sources</h2>
+<ul>
+  <li><a href="https://developers.facebook.com/docs/whatsapp/pricing/" target="_blank" rel="noopener">Meta: Pricing on the WhatsApp Business Platform (checked 5 November 2026)</a></li>
+  <li><a href="https://developers.facebook.com/docs/whatsapp/messaging-limits" target="_blank" rel="noopener">Meta: Messaging limits</a></li>
+  <li><a href="https://developers.facebook.com/docs/whatsapp/overview/getting-opt-in" target="_blank" rel="noopener">Meta: Getting opt-in for WhatsApp</a></li>
+  <li><a href="https://business.whatsapp.com/policy" target="_blank" rel="noopener">WhatsApp Business Messaging Policy</a></li>
+  <li><a href="https://developers.facebook.com/docs/whatsapp/message-templates/guidelines" target="_blank" rel="noopener">Meta: Template guidelines</a></li>
+  <li><a href="https://developers.facebook.com/docs/whatsapp/flows" target="_blank" rel="noopener">Meta: WhatsApp Flows</a></li>
+  <li><a href="https://developers.facebook.com/docs/whatsapp/solution-providers" target="_blank" rel="noopener">Meta: Solution providers</a></li>
+  <li><a href="https://business.whatsapp.com/products/business-app" target="_blank" rel="noopener">WhatsApp Business app</a></li>
+  <li><a href="https://www.indiacode.nic.in/handle/123456789/2158" target="_blank" rel="noopener">Real Estate (Regulation and Development) Act, 2016</a></li>
+  <li><a href="https://static.pib.gov.in/WriteReadData/specificdocs/documents/2025/nov/doc20251117695301.pdf" target="_blank" rel="noopener">PIB: DPDP Rules, 2025 Notified (17 November 2025)</a></li>
+</ul>

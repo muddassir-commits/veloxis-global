@@ -1,7 +1,7 @@
 {
-  "title": "Real Estate Marketing Budget: How to Calculate It From Cost per Lead, Visit and Booking",
-  "seoTitle": "Real Estate Marketing Budget: How to Calculate It",
-  "excerpt": "How to set a real estate marketing budget from your own numbers: cost per lead, site visit and booking, channel split, test budget and costly mistakes.",
+  "title": "Real Estate Marketing Budget: How to Set It From Cost per Booking",
+  "seoTitle": "Real Estate Marketing Budget: How Much to Spend and Split",
+  "excerpt": "How to set a real estate development marketing budget: work back from cost per booking, plan it by phase, split channels and test before scaling.",
   "date": "2026-10-23",
   "category": "Paid Ads",
   "service": "paid-ads",
@@ -32,36 +32,40 @@
   "faqs": [
     {
       "question": "How much should a builder spend on real estate marketing?",
-      "answer": "Work backwards: bookings needed × your cost per booking, plus creative, tools and fees, then check it against the margin per unit. We haven't found a reliable published percentage-of-revenue benchmark for Indian projects, so your own numbers are the best guide."
+      "answer": "Work backwards: bookings needed multiplied by your cost per booking, plus creative, tools, events and fees, then check it against the margin per unit. We haven't found a reliable published percentage-of-revenue benchmark for Indian projects, so your own cost per booking is the best guide."
+    },
+    {
+      "question": "What goes into a real estate development marketing budget?",
+      "answer": "More than ads. Pre-launch covers branding, brochure, renders, landing page, CRM and an EOI campaign; launch covers ads, hoardings, print and events; sustenance covers search ads, retargeting, progress videos and portals; the last phase covers ready-to-move ads and offers on remaining units."
+    },
+    {
+      "question": "Is there a standard percentage of revenue for real estate marketing?",
+      "answer": "Not one we can source for India. Quoted figures use different bases, such as project cost or sales revenue, so they can't be compared. For context, listed developers' annual reports often show advertisement and sales promotion expenses, which you can divide by revenue for one company's ratio."
     },
     {
       "question": "How do you calculate cost per lead in real estate?",
-      "answer": "Divide ad spend by the number of leads. For example, ₹1,00,000 spent for 250 leads is a cost per lead of ₹400. Also calculate cost per qualified lead, per site visit and per booking, because cheap leads are often not buyers."
+      "answer": "Divide ad spend by the number of leads. For example, ₹1,00,000 spent for 250 leads is a cost per lead of ₹400. Also calculate cost per qualified lead, per site visit and per booking, because cheap leads are often not buyers and can make a weak channel look good."
     },
     {
       "question": "What is a reasonable cost per lead for real estate in India?",
-      "answer": "There is no single honest figure: it depends on city, price segment, platform, ad, landing page, form type and season. Set your own baseline in the first month and improve against it. Judge channels on cost per site visit and per booking."
-    },
-    {
-      "question": "What is customer acquisition cost in real estate?",
-      "answer": "The total marketing spend divided by the number of bookings it produced: what it costs to sell one unit. Compare it with your margin per unit to see whether a channel is worth scaling."
+      "answer": "There is no single honest figure: it depends on city, price segment, platform, ad, landing page, form type and season, and we found no sourced Indian benchmark. Set your own baseline in the first month and improve against it, judging channels on cost per site visit and per booking."
     },
     {
       "question": "How should a real estate marketing budget be split?",
-      "answer": "By job: Google search to capture existing demand, Meta ads to create demand, hoardings and print for local launch awareness, channel partners and portals, and lasting assets like the landing page and video. Then move money monthly towards the lowest cost per visit."
+      "answer": "By job: Google search to capture existing demand, Meta ads to create demand, hoardings and print for local launch awareness, channel partners and portals, a fixed share for retargeting, and lasting assets like the landing page and video. Then move money monthly towards the lowest cost per visit."
     },
     {
-      "question": "What is the minimum ad budget for a real estate project?",
-      "answer": "We recommend at least ₹15,000 a month per project on ads as a starting point, more for a launch or a competitive market. Run it for four to six weeks and set the full budget from the results."
+      "question": "How much should I spend on a test campaign?",
+      "answer": "Work it out: decide how many leads you need to judge which ads and audiences bring visits, multiply by an early cost per lead from the first week, and run the test for four to six weeks. Change one thing at a time and set the full budget from cost per site visit."
     },
     {
       "question": "What are the biggest real estate marketing budget mistakes?",
-      "answer": "Judging channels by cost per lead, slow follow-up, no tracking, sending ads to a homepage, spreading money over too many channels, and spending everything at launch with nothing left for retargeting."
+      "answer": "Judging channels by cost per lead, slow follow-up, no tracking, sending ads to a homepage, spreading money over too many channels, spending everything at launch with nothing left for sustenance and retargeting, and having to reprint creatives that lack the RERA number."
     },
     {
       "question": "What should a monthly marketing report for a builder show?",
-      "answer": "One row per channel with spend, leads, qualified leads, site visits, bookings, cost per visit and cost per booking, plus a one-line decision on where money moves next month."
+      "answer": "One row per channel with spend, leads, qualified leads, site visits, bookings, cost per visit and cost per booking, plus a one-line decision on where money moves next month. Every number should come from the CRM, where each lead's source is recorded through to booking."
     }
   ],
-  "updated": "2026-10-23"
+  "updated": "2026-11-05"
 }

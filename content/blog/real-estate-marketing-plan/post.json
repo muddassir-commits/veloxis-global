@@ -1,8 +1,9 @@
 {
-  "title": "Real Estate Marketing Plan: 7 Steps, a One-Page Template and an Example",
-  "seoTitle": "Real Estate Marketing Plan: 7 Steps and a Free Template",
-  "excerpt": "How to write a real estate marketing plan in 7 steps: goal, buyer, positioning, channels, budget, follow-up and measurement, with a template and example.",
+  "title": "Real Estate Marketing Plan: 7 Steps, One-Page Template and Example",
+  "seoTitle": "Real Estate Marketing Plan: 7 Steps + One-Page Template",
+  "excerpt": "How to write a real estate marketing plan in 7 steps, with a one-page template, a worked example, a 90-day calendar and RERA points to cover.",
   "date": "2026-10-20",
+  "updated": "2026-11-05",
   "category": "Guides",
   "service": "paid-ads",
   "image": "/images/people/blog/mp-whiteboard-planning.jpg",
@@ -32,36 +33,39 @@
   "faqs": [
     {
       "question": "What is a real estate marketing plan?",
-      "answer": "A short written plan, usually for one project or one quarter, that sets out the goal, the buyer, the positioning, the channels, the budget, how enquiries will be handled and how results will be measured."
+      "answer": "A real estate marketing plan is a short written plan, usually for one project or one quarter, that sets out the sales goal, the buyer, the positioning, the channels, the budget, how enquiries will be handled and how results will be measured. Two or three pages are enough."
     },
     {
       "question": "What are the 7 steps of a real estate marketing plan?",
-      "answer": "1) Set the goal in bookings, 2) define the buyer, 3) write the positioning, 4) choose the channels, 5) set the budget, 6) plan the follow-up, 7) decide what to measure and when to review."
+      "answer": "Set the goal in bookings, define the buyer, write the positioning, choose the channels, set the budget, plan the follow-up, and decide what to measure and when to review it. Each step is a decision made before money is spent, which is where the plan earns its value."
     },
     {
       "question": "How do I write a marketing plan for a real estate project?",
-      "answer": "Start from the sales target and work back to the visits and leads needed, describe the most likely buyer, write one positioning sentence with proof, give each channel a job and a budget, plan the follow-up, and review the numbers weekly."
+      "answer": "Start from the booking target and work back to the visits and leads needed using your own history, describe the most likely buyer, write one positioning sentence with proof, give each channel a job and a budget, plan the follow-up, and review the numbers every week."
+    },
+    {
+      "question": "Is there a one-page real estate marketing plan template?",
+      "answer": "Yes. A one-page table with rows for project facts, goal, buyer, competition, positioning, offer, channels, creative, follow-up, calendar, measurement and compliance works for most projects. Fill in each row; any empty row is a decision that hasn't been made yet."
     },
     {
       "question": "Which channels should a real estate marketing plan include?",
-      "answer": "Usually a mix of Meta ads, Google search ads, property portals, channel partners, hoardings or print, and organic channels like social media and Google Business Profile. With a small budget, run two channels properly rather than many badly."
+      "answer": "Usually a mix of Meta ads, Google search ads, property portals, channel partners, hoardings or print, and owned channels such as social media, Google Business Profile, WhatsApp updates and referrals. With a small budget, run two channels properly rather than many badly."
+    },
+    {
+      "question": "What should the first 90 days of a real estate marketing plan include?",
+      "answer": "Weeks 1 to 2 for the landing page, brochure, WhatsApp replies and tracking; weeks 3 to 6 to launch two or three channels at test budgets; weeks 7 to 10 to cut weak ads and add retargeting; weeks 11 to 13 to move budget to the channels with the best cost per visit."
     },
     {
       "question": "What should a real estate agent's marketing plan include?",
-      "answer": "One or two localities to specialise in, a complete Google Business Profile and RERA number on everything, weekly posts and videos, one paid source to test, same-day follow-up on every enquiry, and a habit of asking for reviews and referrals."
-    },
-    {
-      "question": "How long should a real estate marketing plan be?",
-      "answer": "Two or three pages is enough. A one-page table covering goal, buyer, positioning, offer, channels, creative, follow-up, calendar, measurement and compliance works for most projects."
+      "answer": "One or two localities to specialise in, a complete Google Business Profile and RERA agent number on everything, weekly posts and short videos, one paid source to test with cost per deal tracked, same-day follow-up on every enquiry, and a habit of asking happy clients for reviews and referrals."
     },
     {
       "question": "How often should a real estate marketing plan be reviewed?",
-      "answer": "Look at leads, visits and bookings by source every week, and move budget between channels at a monthly review based on cost per site visit and per booking."
+      "answer": "Look at leads, qualified leads, site visits and bookings by source every week, and hold a monthly review where budget moves from the weakest channel to the strongest based on cost per site visit and per booking. Rewrite the plan each quarter from real numbers."
     },
     {
       "question": "Does a real estate marketing plan need to cover RERA?",
-      "answer": "Yes. Every ad must carry the project's RERA registration number and the authority's website (plus the QR code in UP), and every claim must match the approved plans and RERA filing."
+      "answer": "Yes. Under Section 11 of the RERA Act every ad must carry the project's registration number and the authority's website, some states such as UP have also required a QR code, and every claim must match the approved plans, because Section 12 makes the promoter liable for false statements."
     }
-  ],
-  "updated": "2026-10-23"
+  ]
 }

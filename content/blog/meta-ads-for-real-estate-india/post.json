@@ -1,7 +1,7 @@
 {
-  "title": "Meta Ads for Real Estate in India: Targeting, Lead Forms and Lead Quality",
-  "seoTitle": "Real Estate Facebook Ads (Meta Ads): A Guide for India",
-  "excerpt": "How to run Facebook and Instagram (Meta) ads for real estate in India: campaign types, targeting, lead forms that filter junk leads, creatives, tracking.",
+  "title": "Meta Ads for Real Estate in India: Facebook Ads That Bring Site Visits",
+  "seoTitle": "Meta Ads for Real Estate: Facebook Ads Guide for India",
+  "excerpt": "Meta (Facebook) ads for real estate in India: campaign types, housing ad rules, targeting, lead forms that filter junk, creatives, cost and setup steps.",
   "date": "2026-09-26",
   "category": "Paid Ads",
   "service": "paid-ads",
@@ -18,40 +18,48 @@
     {
       "name": "Meta Platforms",
       "sameAs": "https://en.wikipedia.org/wiki/Meta_Platforms"
+    },
+    {
+      "name": "Facebook",
+      "sameAs": "https://en.wikipedia.org/wiki/Facebook"
     }
   ],
   "faqs": [
     {
       "question": "Do Facebook ads work for real estate in India?",
-      "answer": "Yes, especially for new launches, EOI drives and retargeting, because Meta reaches buyers before they search. They work poorly when judged only on cheap leads, since instant forms also attract curious scrollers."
+      "answer": "Yes, especially for new launches, EOI drives, NRI buyers and retargeting, because Meta reaches people before they search. They work poorly when judged only on cost per lead, since instant forms also attract curious scrollers. Judge them on site visits recorded in your CRM, and follow up every lead within minutes."
     },
     {
       "question": "Are Meta ads and Facebook ads the same thing?",
-      "answer": "Yes. Meta is the company that owns Facebook, Instagram and WhatsApp, and Meta ads run across Facebook and Instagram from one Ads Manager account."
+      "answer": "Yes. Meta is the company that owns Facebook, Instagram and WhatsApp, and one Ads Manager account runs ads across Facebook and Instagram, including click-to-WhatsApp ads. People search for both names, but the campaign setup, targeting and lead forms are the same whichever name you use."
     },
     {
-      "question": "How do I get better quality leads from Meta ads?",
-      "answer": "Use the higher-intent form type, add 2–3 qualifying questions, show the price band, reply on WhatsApp within seconds, and send qualified-lead and site-visit data back to Meta through the Conversions API."
+      "question": "Does Meta's Special Ad Category for housing apply in India?",
+      "answer": "Only if your ads reach the US, Canada or Europe, according to Meta's documentation. Ads shown only in India may opt in or out. NRI campaigns reaching those regions must declare housing, which fixes age at 18 to 65+, removes gender and lookalike targeting and requires broader locations."
+    },
+    {
+      "question": "How do I get better quality leads from Facebook ads?",
+      "answer": "Use the higher-intent form type, show the price band on the intro screen, ask two or three qualifying questions, reply on WhatsApp at once, and send qualified-lead and site-visit stages back to Meta through the Conversions API for CRM, so it optimises for conversion leads instead of form fills."
     },
     {
       "question": "Should I use lead forms or send people to a landing page?",
-      "answer": "Lead forms produce more, cheaper leads; landing pages produce fewer, more informed ones. Many projects use forms for launches and a landing page for retargeting and higher-intent buyers, and compare both on cost per site visit."
+      "answer": "Lead forms produce more leads with less effort; a landing page produces fewer, better-informed ones. Many projects use forms for launches and a landing page for retargeting and higher-intent buyers. Compare both on cost per site visit from your CRM, not on cost per lead in Ads Manager."
     },
     {
-      "question": "What is the Special Ad Category for housing?",
-      "answer": "A Meta ad category for housing-related ads that limits targeting by age, gender and detailed interests and broadens location targeting. Check whether it applies to your ads; if it does, the creative and form have to do more of the filtering."
+      "question": "How much do Facebook ads cost for real estate in India?",
+      "answer": "There is no fixed price, because Meta runs an auction and costs depend on city, audience, season, creative and form type. We have not found a sourced public benchmark for Indian real estate. Run a test for a few weeks and calculate spend divided by leads, qualified leads and site visits."
     },
     {
       "question": "Do click-to-WhatsApp ads work for property?",
-      "answer": "They can, because buyers are comfortable chatting on WhatsApp. They only work if someone or a chatbot replies instantly, sends the brochure and asks the qualifying questions."
+      "answer": "They can, because Indian buyers are comfortable chatting on WhatsApp. They only work if a person or a bot replies at once, day and night, sends the brochure and price sheet, asks the qualifying questions and offers site-visit slots. Slow replies waste the click you paid for."
     },
     {
-      "question": "What creatives work best for real estate on Instagram?",
-      "answer": "Short walkthrough reels from the sample flat, commute videos from the nearest metro or expressway, price-band statics and monthly construction progress — each with the RERA number."
+      "question": "What creatives work best for real estate on Instagram and Facebook?",
+      "answer": "Short walkthrough reels from the sample flat, commute videos from the nearest metro or expressway, price-band statics, floor plan carousels and monthly construction progress. Each must show the RERA registration number and state RERA website, plus the QR code in states such as UP that require it."
     },
     {
-      "question": "How should I measure Meta ads for real estate?",
-      "answer": "On cost per site visit from your CRM, not cost per lead in Ads Manager. Cut campaigns that bring enquiries but no visits, however cheap their leads look."
+      "question": "What should I ask a real estate Facebook ads agency?",
+      "answer": "Ask whether the ad account and Pixel stay in your name, whether they report site visits and bookings by campaign, how fast leads are contacted, and how they handle RERA details and the Special Ad Category. Be wary of anyone guaranteeing a lead count or cost per lead in advance."
     }
   ],
   "updated": "2026-11-05"

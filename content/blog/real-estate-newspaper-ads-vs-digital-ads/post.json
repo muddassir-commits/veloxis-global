@@ -1,7 +1,7 @@
 {
-  "title": "Real Estate Newspaper Ads vs Digital Ads: When Each Works and How to Measure Both",
-  "seoTitle": "Real Estate Newspaper Ads vs Digital Ads: Which to Use",
-  "excerpt": "Real estate newspaper ads vs Meta and Google ads: what each is good at, newspaper ad formats, what RERA requires in print, how to track print enquiries.",
+  "title": "Real Estate Newspaper Ads vs Digital Ads: Which Works, How to Measure",
+  "seoTitle": "Newspaper Ads vs Digital Ads for Real Estate: Which Works?",
+  "excerpt": "Real estate newspaper ads vs Meta and Google ads: what each does best, print formats, RERA rules for print, tracking print enquiries and comparing cost.",
   "date": "2026-10-21",
   "category": "Paid Ads",
   "service": "paid-ads",
@@ -32,36 +32,40 @@
   "faqs": [
     {
       "question": "Are newspaper ads still effective for real estate?",
-      "answer": "For some jobs, yes: fast local awareness on a launch day, reaching older buyers and family decision-makers, and signalling an established developer. They are weaker for steady lead flow and testing, where Meta and Google ads are better."
+      "answer": "For some jobs, yes: fast local awareness on a launch day, reaching older buyers and family decision-makers, and signalling an established developer. They are weaker for steady lead flow, testing messages and reaching NRI or recently arrived buyers, where Meta and Google ads usually do better."
     },
     {
       "question": "What is the difference between newspaper ads and digital ads?",
-      "answer": "Newspaper ads reach everyone reading an edition on one day, with limited targeting and no built-in measurement. Digital ads target specific people, run continuously, report results automatically and can retarget people who showed interest."
+      "answer": "Newspaper ads reach everyone reading an edition on one day, with limited targeting and no built-in measurement. Digital ads target specific people, run continuously, can be changed or paused any time, report results automatically and can retarget people who already showed interest in the project."
     },
     {
       "question": "What should a real estate newspaper ad include?",
-      "answer": "The project's RERA registration number and state RERA website, shown prominently (Section 11(2)), the QR code in UP, one main message, a real picture, the location with a landmark, the price band with the asterisk explained, and one clear action."
+      "answer": "The project's RERA registration number and state RERA website shown prominently under Section 11(2), the QR code in states such as Maharashtra and Uttar Pradesh, one main message, one real picture, the location with a landmark, the price band with the asterisk explained, and one clear action."
     },
     {
       "question": "How do I track enquiries from a newspaper ad?",
-      "answer": "Use a QR code to a tagged landing page or WhatsApp chat, a phone number used only in that ad, a short separate web address, a source question for every walk-in, and watch branded Google searches after the print date."
+      "answer": "Use a QR code to a landing page or WhatsApp chat tagged with campaign URL parameters, a phone number used only in that ad, a short separate web address, a source question for every walk-in, and watch project-name searches in Search Console after the print date."
     },
     {
       "question": "What are the main newspaper ad formats for real estate?",
-      "answer": "Front-page jackets and full pages for launches, half and quarter pages in the property section, weekend property supplements, classifieds for resale and rentals, and inserts delivered in chosen areas."
+      "answer": "Front-page jackets and full pages for big launches, half and quarter pages in the main paper or property section, weekend property supplements read by active buyers, classifieds for resale, rentals and brokers, and inserts delivered with papers in chosen areas around the project."
     },
     {
       "question": "How much does a real estate newspaper ad cost?",
-      "answer": "It depends on the publication, edition, page, size, colour and day. Get a current rate card from the newspaper or a media agency for your city, then judge the result by cost per site visit and per booking."
+      "answer": "It depends on the publication, edition, page, size, colour and day, and rates change, so get a current rate card from the newspaper or a media agency for your city. Then judge the result by cost per site visit and per booking, the same way you judge digital ads."
+    },
+    {
+      "question": "How do I compare newspaper and digital ads fairly?",
+      "answer": "Use the same numbers for every channel: spend divided by enquiries, site visits and bookings. Reach and impressions don't compare across print and digital, but visits and bookings do. Record every lead's source in your CRM, including walk-ins who name the newspaper."
     },
     {
       "question": "Should a builder use newspaper and digital ads together?",
-      "answer": "Often, yes. Run digital before the print date, add a QR code and dedicated number to the print ad, raise Google search budget on the project name on print day, retarget landing page visitors afterwards and record every visitor's source."
+      "answer": "Often, yes. Run digital before the print date, add a QR code and dedicated number to the print ad, raise Google search budget on the project name on print day, retarget landing page visitors afterwards and record every site visitor's source to plan the next launch."
     },
     {
       "question": "Do RERA rules apply to newspaper ads?",
-      "answer": "Yes. Any advertisement for a registered project, in print or online, must show the registration number and the authority's website prominently, and projects that must be registered can't be advertised before registration."
+      "answer": "Yes. Any advertisement for a registered project, in print or online, must show the registration number and the authority's website prominently, and projects that must be registered can't be advertised before registration. ASCI named real estate the most violative ad sector in its 2024-25 half-year report."
     }
   ],
-  "updated": "2026-10-23"
+  "updated": "2026-11-05"
 }

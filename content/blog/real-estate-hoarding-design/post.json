@@ -1,7 +1,7 @@
 {
-  "title": "Real Estate Hoarding Design: 12 Ideas, What to Put On It and RERA Rules",
-  "seoTitle": "Real Estate Hoarding Design: 12 Ideas, Text and RERA Rules",
-  "excerpt": "Real estate hoarding design: what to write on the board, sizes, a readable RERA number, QR codes, 12 ideas and how to track which board brings leads.",
+  "title": "Real Estate Hoarding Design: What to Write, 12 Ideas and RERA Rules",
+  "seoTitle": "Real Estate Hoarding Design: Text, 12 Ideas, RERA Rules",
+  "excerpt": "Real estate hoarding design that gets read: what to write, types of hoardings, 12 ideas, RERA number and QR rules, and how to track leads per board.",
   "date": "2026-10-06",
   "category": "Landing Pages",
   "service": "high-converting-landing-pages",
@@ -49,28 +49,32 @@
   ],
   "faqs": [
     {
+      "question": "What is a real estate hoarding?",
+      "answer": "A real estate hoarding is a large outdoor advertising board that promotes a property project or broker. It can stand on a roadside, a junction unipole, a building wall or the project's own boundary. Its job is to make passers-by remember the project name and know how to enquire."
+    },
+    {
       "question": "What should a real estate hoarding include?",
-      "answer": "Five things: one headline of about six or seven words, one strong image, the project name and logo, one call to action such as a large WhatsApp number or short web address, and the RERA registration number with the authority website. Everything else belongs on the project page and brochure."
+      "answer": "Five things: one headline of about seven words or fewer, one strong image, the project name and logo, one call to action such as a large WhatsApp number or short web address, and the RERA registration number with the authority's website, plus a QR code where the state requires one."
     },
     {
       "question": "How many words should a hoarding have?",
-      "answer": "As few as possible. A common rule of thumb for outdoor ads is about seven words for the headline, because drivers see the board for only a few seconds."
+      "answer": "As few as possible. Outdoor advertising guides commonly recommend seven words or fewer for the main message, because drivers see a board for only a few seconds. Faster roads need even fewer words, so test the design by reading it aloud in about three seconds."
     },
     {
       "question": "Is the RERA number mandatory on a property hoarding?",
-      "answer": "Yes. Section 11(2) of the RERA Act, 2016 says every advertisement by a promoter must prominently mention the RERA authority's website address and include the project's registration number. A hoarding is an advertisement, so the number must be on it and readable."
+      "answer": "Yes. Section 11(2) of the RERA Act, 2016 says every advertisement by a promoter must prominently mention the RERA authority's website and include the project's registration number. A hoarding is an advertisement, so the number must be on it and readable from where people see it."
+    },
+    {
+      "question": "Is a QR code required on real estate hoardings?",
+      "answer": "In some states, yes. UP RERA has required each project's QR code in advertisements since July 2024, and MahaRERA requires a scannable QR code on all ads, including hoardings, placed at the top right. Check your state authority's current directions before printing."
     },
     {
       "question": "What are the common types of real estate hoarding?",
-      "answer": "Roadside hoardings and billboards, unipoles at junctions, site hoardings on the boundary wall, directional boards that guide visitors to the site, wall branding in nearby localities, and panels at bus shelters, metro stations and malls."
-    },
-    {
-      "question": "Should I put a QR code on a hoarding?",
-      "answer": "Only where people stand still, such as bus shelters, metro stations and mall panels, or where your state RERA authority requires one. On a roadside board seen from a moving car, a large WhatsApp number or short web address works better."
+      "answer": "Roadside hoardings and billboards, unipoles at junctions, site hoardings on the boundary wall, directional boards that guide visitors to the site, wall branding in nearby localities, and panels at bus shelters, metro stations and malls where people wait and have time to read."
     },
     {
       "question": "How do I know which hoarding brings leads?",
-      "answer": "Give each board its own way to respond: a separate WhatsApp number or pre-filled message, or a tagged short link or QR code. Then compare enquiries and site visits per board after a month and move budget to the locations that work."
+      "answer": "Give each board its own way to respond: a separate WhatsApp number or pre-filled message, or a tagged short link or QR code. Send people to a matching project page, then compare enquiries and site visits per board after a month and move budget to the locations that work."
     },
     {
       "question": "Do hoardings need permission?",
@@ -78,11 +82,8 @@
     },
     {
       "question": "What are the most common hoarding design mistakes?",
-      "answer": "Too many words, an unreadable RERA number, several phone numbers, a render that does not match the site, no way to track enquiries per board, and old launch boards left up long after the offer has ended."
-    },
-    {
-      "question": "What size is a real estate hoarding?",
-      "answer": "Roadside hoardings in India commonly come in sizes such as 20×10, 30×20 and 40×20 feet, and unipoles and site boundary hoardings vary by location. Pick the size from the viewing distance and road speed, then keep the headline short enough to read at that distance."
+      "answer": "Too many words, an unreadable RERA number or missing QR code, several phone numbers, a render that does not match the site, no way to track enquiries per board, and old launch boards left up long after the offer has ended."
     }
-  ]
+  ],
+  "updated": "2026-11-05"
 }

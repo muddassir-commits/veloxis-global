@@ -1,8 +1,9 @@
 {
-  "title": "Real Estate Branding: How Builders, Projects and Brokers Build a Brand Buyers Trust",
-  "seoTitle": "Real Estate Branding: A Guide for Builders and Brokers",
-  "excerpt": "Real estate branding explained: developer, project and broker brands, 6 steps to build one, picking a project name, the 3-7-27 rule and measuring it.",
+  "title": "Real Estate Branding: How Builders and Brokers Build a Trusted Brand",
+  "seoTitle": "Real Estate Branding: 7 Steps for Builders and Brokers",
+  "excerpt": "Real estate branding for builders, projects and brokers in India: 7 steps, identity elements, naming, personal branding for agents and RERA limits.",
   "date": "2026-10-18",
+  "updated": "2026-11-05",
   "category": "Growth Tips",
   "service": "paid-ads",
   "image": "/images/people/blog/brand-design-workspace.jpg",
@@ -32,36 +33,39 @@
   "faqs": [
     {
       "question": "What is branding in real estate?",
-      "answer": "What buyers think and feel when they hear your company or project name: whether they trust you to deliver, what kind of homes they expect and why they'd choose you. It is built mostly by delivering what you promise and presenting it consistently everywhere."
+      "answer": "Real estate branding is what buyers think and feel when they hear your company, project or agency name: whether they trust you to deliver, what homes they expect and why they would choose you. It is built mostly by keeping promises and presenting them consistently in ads, brochures, the site office and WhatsApp."
     },
     {
       "question": "How do I build a real estate brand?",
-      "answer": "Pick one buyer, choose one promise you can prove, collect the proof (delivered projects, RERA details, real construction), write your positioning and tagline once, use the same look everywhere, and keep publishing updates between launches."
+      "answer": "Pick one buyer, choose one promise you can prove, collect the proof such as delivered projects and RERA details, write your positioning and tagline once, design a simple identity, use it the same way everywhere, and keep publishing construction updates and useful content between launches."
+    },
+    {
+      "question": "What does a real estate brand identity include?",
+      "answer": "A name, a logo with small and one-colour versions, two or three colours, one or two fonts, a positioning line and tagline, a tone of voice, a photo and video style, and templates for ads, updates and price sheets, all written into a short brand guide that partners can follow."
+    },
+    {
+      "question": "How do real estate agents build a personal brand?",
+      "answer": "Agents build a personal brand by owning one or two localities, completing their Google Business Profile, collecting genuine reviews, showing their RERA agent number everywhere, posting useful locality content and replying to every enquiry quickly and honestly. For a broker, the first WhatsApp reply is the brand."
     },
     {
       "question": "What is the 3-7-27 rule in real estate?",
-      "answer": "A marketing rule of thumb saying people need about 3 seconds to notice a brand, 7 contacts to remember it and 27 exposures to act. We found no published study behind the numbers, but the underlying idea, that buyers need repeated, consistent exposure, is sound."
+      "answer": "It is a marketing rule of thumb saying people need about 3 seconds to notice a brand, 7 contacts to remember it and 27 exposures to act. We found no published study behind those numbers, but the idea underneath, that buyers need repeated, consistent exposure before acting, is sound."
     },
     {
       "question": "How is broker branding different from developer branding?",
-      "answer": "Buyers judge developers on delivery record, quality and approvals, and brokers on local knowledge, honesty and speed of reply. Brokers build their brand mainly through their Google Business Profile, WhatsApp, Instagram, reviews and referrals."
+      "answer": "Buyers judge developers on delivery record, construction quality and approvals, and brokers on local knowledge, honesty and speed of reply. Developers build their brand through delivered projects, hoardings and project websites; brokers through Google Business Profile, reviews, WhatsApp, Instagram and referrals."
     },
     {
       "question": "How do I choose a real estate project name?",
-      "answer": "Make it easy to say and spell, not similar to another project in your city, available as a domain and social handle, checked on the IP India trade marks register, suited to the buyer, and free of promises the project can't keep."
+      "answer": "Choose a name that is easy to say and spell, not similar to another project in your city, available as a domain and social handle, clear on the IP India trade marks register, suited to the buyer, and free of promises the project cannot keep, such as 'Riverside' without a river."
     },
     {
-      "question": "How is luxury real estate branded?",
-      "answer": "With a higher standard: professional photography and film of real spaces, restrained design, named designers where true, private site visits, a sales team that knows the product deeply, and fewer, better placements instead of superlatives."
-    },
-    {
-      "question": "How do I know if my real estate brand is working?",
-      "answer": "Track branded searches in Google Search Console, direct enquiries that didn't come from an ad, the share of leads who already know the project, referral bookings, and your Google reviews over time."
+      "question": "Can a real estate brand make any claim in its ads?",
+      "answer": "No. Every claim must be true and match the registered project. Under Section 12 of the RERA Act, a buyer who suffers loss from false information in an advertisement or prospectus can be compensated by the promoter, so avoid unprovable distances, 'world-class' superlatives and assured returns."
     },
     {
       "question": "Does a small builder need branding?",
-      "answer": "Yes, but it can be simple: one clear promise, proof from completed work, consistent design across hoardings, brochure, website and WhatsApp, and regular construction updates. Consistency matters more than budget."
+      "answer": "Yes, but it can be simple: one clear promise, proof from completed work, the same design on hoardings, brochure, website and WhatsApp, and regular construction updates. For a small builder, consistency and honest delivery matter far more than budget or an expensive logo."
     }
-  ],
-  "updated": "2026-10-23"
+  ]
 }

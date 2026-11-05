@@ -1,9 +1,9 @@
 {
-  "title": "Real Estate Ads: 12 Examples and Ideas for Indian Projects",
-  "seoTitle": "Real Estate Ads Examples: 12 Creative Ad Ideas for India",
-  "excerpt": "12 real estate ad examples for Meta, Instagram and Google: walkthrough reels, location maps, price-band creatives and search ads, plus RERA rules.",
+  "title": "Real Estate Ads Examples: 24 Ad Ideas for Indian Projects",
+  "seoTitle": "Real Estate Ads Examples: 24 Creative Ad Ideas for India",
+  "excerpt": "24 real estate ad examples for India: Meta lead ads, reel hooks, Google search ads, hoardings, newspaper, WhatsApp and portal listings, with RERA rules.",
   "date": "2026-09-10",
-  "updated": "2026-10-13",
+  "updated": "2026-11-05",
   "category": "Paid Ads",
   "service": "paid-ads",
   "image": "/images/people/blog/ad-examples-marketer-reviewing-phone.jpg",
@@ -18,35 +18,45 @@
   "faqs": [
     {
       "question": "What makes a good real estate ad?",
-      "answer": "It answers the buyer’s real questions — where, how much, how far and can I trust this builder — and ends with one clear action, like getting the price sheet on WhatsApp."
+      "answer": "It answers the buyer's real questions, where is it, how much, how far and can I trust the builder, with something real such as site footage, and ends with one clear action like getting the price sheet on WhatsApp. It also shows the RERA registration number where buyers can read it."
+    },
+    {
+      "question": "What are some real estate ad examples in India?",
+      "answer": "Common formats are Meta lead ads with the price band, Instagram reels of the sample flat or commute, Google search ads on project and locality names, distance hoardings, launch-day newspaper ads, WhatsApp replies with the price sheet, and portal listings with specific titles and real photos."
     },
     {
       "question": "Do real estate ads need a RERA number?",
-      "answer": "Ads for registered projects should carry the project’s RERA registration number, and the QR code where the state requires it. CPs should also add their RERA agent number."
+      "answer": "Yes. Under Section 11(2) of the RERA Act, ads for registered projects must prominently show the RERA registration number and the state RERA website. Maharashtra and Uttar Pradesh also ask for the project QR code, and agents should add their own RERA agent number on every ad."
     },
     {
-      "question": "Which video ads work best for property?",
-      "answer": "A 30-second sample-flat walkthrough, a commute video from the nearest metro or expressway, monthly construction progress, and a salesperson inviting viewers for a site visit."
+      "question": "What are creative real estate agent ads in India?",
+      "answer": "Agents do well with helpful reels such as a checklist of what to verify before booking, specific portal listings, locality explainer videos and click-to-WhatsApp ads offering a shortlist. Every ad should carry the agent's RERA registration number and the project's number when a specific project is shown."
+    },
+    {
+      "question": "What should a Google search ad for a property project say?",
+      "answer": "It should match the search: the project name with configurations, price band and RERA Registered; a locality ad with the nearest metro and possession year; or a ready-to-move ad mentioning the occupancy certificate only if received. Send each ad to a matching project landing page."
     },
     {
       "question": "Should property ads show the price?",
-      "answer": "Yes, at least a starting price or band. It filters out buyers outside your budget before they enquire."
+      "answer": "Yes, at least a starting price or a price band with the asterisk explained on the landing page. Showing the price filters out buyers outside your budget before they enquire, so your sales team spends its time on people who can actually afford the project."
     },
     {
-      "question": "What should a Google search ad for a project say?",
-      "answer": "Match the search: the project name with configurations, price and “RERA registered”; the locality with nearby landmarks and possession year; or “ready to move” for inventory with OC."
-    },
-    {
-      "question": "Where should real estate ads send people?",
-      "answer": "To a project landing page that repeats the ad’s promise, not to the homepage or a generic page."
+      "question": "Where can I see real estate ads other projects are running?",
+      "answer": "Search Meta's public Ad Library and Google's Ads Transparency Center by advertiser name to see live ads on Facebook, Instagram, Search and YouTube. Use them to study formats, offers and how often projects change creatives, but never copy another project's wording, photos or design."
     },
     {
       "question": "What are common real estate ad mistakes?",
-      "answer": "Renders only with no real site photos, “price on request”, ten amenities and nothing about location, one generic page for every ad, and judging ads on clicks instead of site visits."
+      "answer": "Renders only with no real site photos, price on request, ten amenities and nothing about location, a missing or tiny RERA number, claims the RERA filing doesn't support, one generic page for every ad, and judging ads on clicks instead of site visits."
+    }
+  ],
+  "about": [
+    {
+      "name": "Advertising",
+      "sameAs": "https://en.wikipedia.org/wiki/Advertising"
     },
     {
-      "question": "How does Meta’s housing ad category affect creatives?",
-      "answer": "If the Special Ad Category for housing applies, age, gender and precise location targeting are limited, so the creative has to do more of the work of reaching the right buyers."
+      "name": "Real estate",
+      "sameAs": "https://en.wikipedia.org/wiki/Real_estate"
     }
   ]
 }

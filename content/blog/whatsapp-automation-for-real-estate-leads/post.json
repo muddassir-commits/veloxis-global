@@ -1,7 +1,7 @@
 {
-  "title": "How to Automate Real Estate Lead Follow-Up on WhatsApp",
-  "seoTitle": "WhatsApp Automation for Real Estate Leads: How to Set Up",
-  "excerpt": "Why property leads go cold, and how to set up WhatsApp automation that replies instantly, qualifies buyers, books site visits and routes every lead.",
+  "title": "WhatsApp Automation for Real Estate: Set Up Instant Lead Follow-Up",
+  "seoTitle": "WhatsApp Automation for Real Estate Leads: Setup Guide",
+  "excerpt": "Set up WhatsApp automation for real estate: instant replies, buyer qualification, site visit reminders, routing, Meta's message costs and opt-in rules.",
   "date": "2026-08-20",
   "category": "AI Automation",
   "service": "ai-automation",
@@ -26,41 +26,37 @@
   ],
   "faqs": [
     {
-      "question": "Why do real estate leads go cold?",
-      "answer": "Late replies after office hours, a single call attempt, leads scattered across portals, forms and phones, and buyers ignoring calls from unknown numbers."
+      "question": "What is WhatsApp automation for real estate?",
+      "answer": "It is a setup where every new property enquiry gets an instant WhatsApp reply with the brochure and a question, the buyer answers qualifying questions with buttons, hot leads go to a salesperson, and visit confirmations, reminders and follow-ups are sent automatically through approved templates."
     },
     {
       "question": "Can I automate WhatsApp with the free WhatsApp Business app?",
-      "answer": "No. Automation, chatbots and CRM connections need the WhatsApp Business API, set up through an official Business Solution Provider."
+      "answer": "Only partly. The free app offers greeting and away messages, quick replies and labels. Instant replies to ad and website leads, chatbot questions, routing, reminders and CRM sync need the WhatsApp Business Platform (API), through Meta's Cloud API or a solution provider."
     },
     {
-      "question": "Do I need approved templates for WhatsApp messages?",
-      "answer": "Yes. WhatsApp requires approved templates for messages sent outside a 24-hour conversation window, such as the first message, reminders and follow-ups."
+      "question": "Why do real estate leads go cold?",
+      "answer": "Mostly because of slow follow-up, not bad ads: late replies after office hours, a single call attempt, leads scattered across portals, forms and phones, buyers ignoring unknown numbers, and first messages that give no useful information or easy question to answer."
     },
     {
-      "question": "What should an automated real estate WhatsApp flow do?",
-      "answer": "Reply instantly with the brochure, ask budget and timeline, hand qualified buyers to a salesperson, book the site visit, send reminders, and follow up with leads who go quiet."
+      "question": "Do I need approved templates for WhatsApp messages to leads?",
+      "answer": "Yes, for any message sent outside the 24-hour customer service window that opens when a buyer messages you. That covers most first messages to form leads, reminders and follow-ups. Meta reviews each template and assigns it a marketing, utility or authentication category."
+    },
+    {
+      "question": "How much does WhatsApp automation cost for real estate?",
+      "answer": "Meta charges per delivered message by category and country, and messages from buyers are free. Each number gets 1,000 free service messages a month; from 1 October 2026 service messages beyond that are charged. Your provider or developer charges separately for the platform and setup."
     },
     {
       "question": "How should leads be routed to sales and channel partners?",
-      "answer": "By project, location or rotation, agreed before automating, with the time each lead arrived and was assigned recorded."
+      "answer": "Agree the rules before automating: by project, location or rotation. Record when each lead arrived and was assigned, tag CP-sourced leads to that CP, send returning buyers to their previous salesperson, and reassign leads that are not picked up within a set time."
     },
     {
-      "question": "Can I message leads who didn’t ask to be contacted?",
-      "answer": "No. Only message people who shared their number with you, and let them opt out."
+      "question": "Can I message leads who didn't ask to be contacted?",
+      "answer": "No. Meta's opt-in rules require that the person gave you their number and agreed to receive messages from your named business. Bought lists don't qualify, and blocks and reports from cold messages lower your quality and can restrict your messaging limits."
     },
     {
-      "question": "What should I measure after automating?",
-      "answer": "Time to first reply, share of leads answering the first question, site visits booked and completed, and leads with no human contact after 24 hours — which should be zero."
-    },
-    {
-      "question": "What is the difference between the WhatsApp Business app and the API?",
-      "answer": "The free app suits one person handling a few chats. The WhatsApp Business API connects to ad forms, landing pages and a CRM, runs chatbot flows and reminders, and lets several salespeople share one number."
-    },
-    {
-      "question": "Do I need approved templates to message real estate leads?",
-      "answer": "Yes, for any message sent outside the 24-hour window that opens when a customer messages you. Meta reviews templates and charges per delivered message by category, with marketing messages costing more than utility messages like reminders. From 1 October 2026 service replies are also charged after 1,000 free a month per number."
+      "question": "What should I measure after automating WhatsApp?",
+      "answer": "Time to first reply, the share of leads answering the first question, site visits booked and completed, leads with no human contact after 24 hours (aim for zero), and cost per site visit by lead source once visits are linked to the original ad."
     }
   ],
-  "updated": "2026-10-23"
+  "updated": "2026-11-05"
 }

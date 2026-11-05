@@ -1,7 +1,7 @@
 {
-  "title": "Instagram Reels Marketing: A Step-by-Step Guide, With Real Estate Examples",
-  "seoTitle": "Instagram Reels Marketing Guide (With Real Estate Examples)",
-  "excerpt": "How to use Instagram Reels for business: account setup, 15 Reel ideas, filming on a phone, hooks, posting times and turning views into enquiries.",
+  "title": "Instagram Reels Marketing: Ideas, Reel Ads and Real Estate Examples",
+  "seoTitle": "Instagram Reels Marketing and Reel Ads for Real Estate",
+  "excerpt": "Instagram Reels marketing step by step: real estate Reel ideas, hooks, filming on a phone, Instagram Reel ads, RERA rules and turning views into leads.",
   "date": "2026-10-12",
   "category": "Growth Tips",
   "service": "paid-ads",
@@ -39,7 +39,7 @@
   ],
   "about": [
     {
-      "name": "Instagram Reels",
+      "name": "Instagram",
       "sameAs": "https://en.wikipedia.org/wiki/Instagram"
     },
     {
@@ -50,35 +50,39 @@
   "faqs": [
     {
       "question": "How long should an Instagram Reel be?",
-      "answer": "Instagram allows Reels of up to three minutes. For property, keep it as short as the idea allows and put the main point in the first two seconds."
+      "answer": "Instagram allows Reels of up to three minutes, a limit raised from 90 seconds in January 2025. For property, keep each Reel as short as the idea allows, put the main point in the first two seconds, and split longer walkthroughs into a series rather than one long video viewers abandon."
     },
     {
-      "question": "How often should a business post Reels?",
-      "answer": "Three Reels a week, every week, is a good rhythm for a small team. Consistency over two to three months matters more than posting a lot in one week."
+      "question": "How does Instagram decide who sees a Reel?",
+      "answer": "Instagram ranks Reels using the viewer's activity, their history with the poster, information about the Reel such as audio and visuals, and information about the poster. It says the likelihood of resharing is one of the most important predictions, and that watermarked, low-resolution, muted or bordered Reels are shown less."
     },
     {
       "question": "What are good Reel ideas for real estate?",
-      "answer": "Unedited 20-second walkthroughs, \"what ₹X gets you in this locality\", monthly construction progress, the view from a high floor, explainers such as carpet area vs super built-up area, total cost breakdowns, locality tours and replies to buyers' comments."
+      "answer": "Unedited 20-second walkthroughs, \"what this budget gets you in this locality\", monthly construction progress from the same spot, high-floor views at sunset, explainers such as carpet area vs super built-up area, total cost breakdowns, honest locality tours with drive times, and video replies to buyers' comments."
+    },
+    {
+      "question": "How do Instagram Reel ads work?",
+      "answer": "Instagram Reel ads are paid vertical videos shown between organic Reels in the full-screen Reels viewer. You can boost an organic Reel from the app or choose the Reels placement in Meta Ads Manager, with goals such as lead forms, WhatsApp messages or website visits. Keep text inside the safe zone."
+    },
+    {
+      "question": "Should I boost a Reel or create a Reel ad in Ads Manager?",
+      "answer": "Boost a Reel when an organic video is already performing and you want quick extra reach. Use Ads Manager when you need lead forms, click-to-WhatsApp, testing several videos or retargeting people who watched your Reels. Real estate lead campaigns usually work better from Ads Manager, judged on cost per site visit."
     },
     {
       "question": "Do property Reels need a RERA number?",
-      "answer": "Yes. A Reel that promotes a specific project is an advertisement, so it should show the project's RERA registration number, and the agent's number if you are a broker. Some states, such as Maharashtra, also require a QR code."
+      "answer": "Yes. A Reel that promotes a specific project is an advertisement, so it should show the project's RERA registration number, and your agent registration number if you are a broker. In Maharashtra, MahaRERA has also required a QR code in project advertisements since August 2023. Check your state authority's rules."
     },
     {
       "question": "Can business accounts use trending music on Reels?",
-      "answer": "Only sounds licensed for commercial use. Use Instagram's commercial sound library or royalty-free music; a copyrighted film song can get the Reel muted or removed."
+      "answer": "Only sounds licensed for commercial use. Business accounts should use licensed audio such as Meta's royalty-free Sound Collection or properly licensed music. A copyrighted film song on a business Reel can get it muted or removed, which wastes the effort and can limit the account's reach."
     },
     {
-      "question": "What makes a good Reel hook?",
-      "answer": "Say the result first, ask the question your buyer is asking, or start in the middle of the action. Put the hook in on-screen text as well, because many people watch with the sound off."
+      "question": "How do I turn Reel views into real estate leads?",
+      "answer": "End every Reel with one clear action such as \"WhatsApp FLAT\", reply to comments and DMs within minutes, move the conversation to WhatsApp and offer two site-visit times, put ad budget behind Reels that already work, retarget people who watched your Reels, and record the source of every enquiry."
     },
     {
-      "question": "How do I turn Reel views into leads?",
-      "answer": "End every Reel with one clear action such as \"WhatsApp FLAT\", reply to comments and DMs instantly, move the conversation to WhatsApp to book a site visit, boost Reels that already perform well, and retarget people who watched your Reels with ads."
-    },
-    {
-      "question": "Which Reel numbers should I track?",
-      "answer": "Accounts reached and the share of non-followers, average watch time, shares and saves, profile visits and WhatsApp taps, and the enquiries and site visits that mention the Reel."
+      "question": "Which Reel metrics should I track?",
+      "answer": "Track accounts reached and the share of non-followers, average watch time and skip rate, shares and saves, profile visits, follows and WhatsApp taps, and the enquiries and site visits that mention each Reel. After a month, sort Reels by enquiries rather than views and make more of the best formats."
     }
   ],
   "updated": "2026-11-05"

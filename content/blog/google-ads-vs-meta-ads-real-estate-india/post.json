@@ -1,7 +1,7 @@
 {
-  "title": "Google Ads vs Meta Ads for Real Estate Leads in India",
-  "seoTitle": "Google Ads vs Meta Ads for Real Estate: Which Is Better?",
-  "excerpt": "Google Search catches buyers already looking; Meta creates demand for new launches. How each works for Indian real estate and how to split the budget.",
+  "title": "Google Ads vs Meta Ads for Real Estate in India: Leads, CPL and Budget",
+  "seoTitle": "Google Ads vs Meta Ads for Real Estate: CPL and Budget",
+  "excerpt": "Google Ads vs Meta ads for real estate in India: which to lead with, what CPL benchmarks exist, how to calculate your own and how to split the budget.",
   "date": "2026-09-03",
   "category": "Paid Ads",
   "service": "paid-ads",
@@ -27,40 +27,40 @@
   "faqs": [
     {
       "question": "Is Google Ads or Meta better for real estate?",
-      "answer": "They do different jobs. Google Search reaches people already searching for a project, locality or configuration; Meta reaches people before they search. Most projects need both in different proportions."
+      "answer": "They do different jobs. Google Search reaches people already searching for a project, locality or configuration; Meta reaches people before they search, which suits launches and retargeting. Most projects need both in different proportions, compared on cost per site visit rather than cost per lead."
+    },
+    {
+      "question": "What is the real estate CPL benchmark for Google and Meta ads in India?",
+      "answer": "We have not found a public India benchmark with a stated sample and method as of November 2026. The best-known benchmark is LocaliQ's US data, a median search cost per lead of $102.51 for 2025 to 2026. Calculate your own from a few weeks of tagged leads instead."
     },
     {
       "question": "Why do Meta leads look cheaper than Google leads?",
-      "answer": "Instant forms make enquiring very easy, so you get more leads, including curious scrollers. Fewer of them visit, which is why cost per lead is a misleading comparison."
+      "answer": "Instant forms make enquiring very easy, so you get more leads, including curious scrollers who never planned to buy. Fewer of them pick up or visit, which is why cost per lead is a misleading comparison. Compare the two channels on cost per qualified lead and cost per site visit."
+    },
+    {
+      "question": "How do I calculate my own cost per lead?",
+      "answer": "Tag every lead with its source in your CRM, run each channel for a few weeks, then divide spend by leads, qualified leads, site visits and bookings for each channel. Use the first month as your baseline and judge every later change against it rather than figures from other markets."
     },
     {
       "question": "When should a project lead with Google Ads?",
-      "answer": "When there is existing search demand: an established locality, a known project name, or ready-to-move inventory."
+      "answer": "When there is existing search demand: an established locality, a known project or builder name, or ready-to-move inventory. Search campaigns on project-name, locality and configuration keywords then catch buyers at the moment they look, while Meta handles retargeting and offers."
     },
     {
-      "question": "When should a project lead with Meta?",
-      "answer": "For new launches, EOI drives and awareness, and to build a retargeting audience of people who already saw the project."
-    },
-    {
-      "question": "What should a channel partner with a small budget run?",
-      "answer": "Google on the specific projects they are mandated on, plus Meta retargeting of their own page visitors."
-    },
-    {
-      "question": "How do I improve Meta lead quality?",
-      "answer": "Qualifying questions on the form, faster follow-up, and sending site-visit data back to Meta so it learns what a good lead looks like."
-    },
-    {
-      "question": "How should I compare the two channels?",
-      "answer": "On cost per site visit from your CRM, not on cost per lead from the ad dashboards, and move budget weekly towards the cheaper source of visits."
+      "question": "When should a project lead with Meta ads?",
+      "answer": "For new launches, EOI drives and awareness, when few people search for the project yet, and to build a retargeting audience of people who already saw it. Use qualifying questions on the form and instant WhatsApp follow-up, because Meta leads need more filtering than search leads."
     },
     {
       "question": "How should I split my budget between Google and Meta?",
-      "answer": "Start with more on Meta for a launch with little awareness (our launch plan assumes roughly 60% Meta and 40% Google) and more on Google for a known project. Then move budget weekly towards whichever produces site visits more cheaply."
+      "answer": "Start with more on Meta for a launch with little awareness and more on Google for a known project; our example launch plan assumes roughly 60% Meta and 40% Google as a starting point. Then move budget weekly, in small steps, towards whichever produces site visits more cheaply."
     },
     {
       "question": "Do Google and Meta ads work together?",
-      "answer": "Yes. Meta ads create project-name searches that Google campaigns capture, and Google visitors who didn’t enquire can be retargeted on Meta. Both should send buyers to the same landing page and the same instant WhatsApp follow-up."
+      "answer": "Yes. Meta ads create project-name searches that Google campaigns capture, and Google visitors who didn't enquire can be retargeted on Instagram and Facebook. Both should send buyers to the same landing page and the same instant WhatsApp follow-up, and both should receive site-visit data back."
+    },
+    {
+      "question": "What should a channel partner with a small budget run?",
+      "answer": "Google Search on the specific projects you are mandated on, using project-name and locality keywords with strong negative keywords, plus Meta retargeting of people who visited your pages. Record your RERA agent number on every ad and track which channel brings site visits."
     }
   ],
-  "updated": "2026-10-01"
+  "updated": "2026-11-05"
 }
