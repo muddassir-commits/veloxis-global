@@ -1,0 +1,29 @@
+{
+  "title": "Real Estate Chatbot: What It Should Do (and Never Do)",
+  "seoTitle": "Real Estate Chatbot: What It Should Do and Never Do",
+  "excerpt": "What a real estate chatbot on WhatsApp or your website should do: a ready script, human hand-off rules, and the WhatsApp and RERA limits on bot replies.",
+  "date": "2026-11-07",
+  "category": "AI Automation",
+  "service": "ai-automation",
+  "image": "/images/people/blog/real-estate-chatbot-cover.jpg",
+  "imageAlt": "A man in a dark striped shirt smiling as he reads a message on his smartphone",
+  "inlineImages": [
+    { "src": "/images/people/blog/real-estate-chatbot-1.jpg", "alt": "An apartment building facade with blue window frames and balconies with plants and chairs", "beforeHeading": "conversation-script", "caption": "The bot shares approved project facts; the sales team handles everything else." },
+    { "src": "/images/people/blog/real-estate-chatbot-2.jpg", "alt": "A support agent wearing a headset in an office with colleagues at desks behind her", "beforeHeading": "human-handoff" }
+  ],
+  "about": [
+    { "name": "Chatbot", "sameAs": "https://en.wikipedia.org/wiki/Chatbot" },
+    { "name": "WhatsApp", "sameAs": "https://en.wikipedia.org/wiki/WhatsApp" },
+    { "name": "Real estate", "sameAs": "https://en.wikipedia.org/wiki/Real_estate" }
+  ],
+  "faqs": [
+    { "question": "What is a real estate chatbot?", "answer": "Software that answers property enquiries automatically on WhatsApp, a website chat or Instagram. It greets the buyer, asks a few qualifying questions, shares approved brochures and floor plans, books a site visit and hands qualified buyers to a salesperson. It is the front desk, not the salesperson." },
+    { "question": "What should a real estate chatbot do?", "answer": "Reply to every enquiry within seconds, ask four or five qualifying questions such as budget, configuration and timeline, share approved project facts and the RERA number, book a site visit, save everything to your CRM, and hand the buyer to a person when they ask or show strong intent." },
+    { "question": "What should a real estate chatbot never say?", "answer": "It should never quote a final price, promise a possession date, guarantee returns or rental yield, advertise an unregistered project, pretend to be human, or ask for Aadhaar, PAN or bank details in chat. If a reply wouldn't belong in a signed advertisement, the bot shouldn't send it." },
+    { "question": "Is it allowed to use a chatbot on WhatsApp for real estate?", "answer": "Yes, on the official WhatsApp Business Platform. Buyers must opt in, the bot replies freely only within 24 hours of the buyer's last message, follow-ups need approved templates, and WhatsApp's policy requires a clear escalation path to a human. Keep the bot focused on your projects." },
+    { "question": "When should a chatbot hand a lead to a salesperson?", "answer": "When the buyer asks for a person, shows strong intent such as buying within three months with a matching budget, asks about price, payment plans, loans, title or possession, raises a complaint, or when the bot fails to understand them twice in a row." },
+    { "question": "Does RERA apply to chatbot messages?", "answer": "A chatbot message that promotes a project is advertising, so RERA applies. The Act requires the project's registration number and the regulator's website in advertisements, and MahaRERA's April 2025 circular names WhatsApp and messaging services. Include both in the bot's first message. This is general information, not legal advice." },
+    { "question": "Website chatbot or WhatsApp chatbot: which is better for property?", "answer": "For most Indian buyers, WhatsApp. The thread stays on the buyer's phone with your brochure and visit details, and you can follow up with approved templates. A website chat works best when it asks one or two questions and then offers to continue on WhatsApp with clear opt-in." },
+    { "question": "How do I set up a real estate chatbot?", "answer": "Write an approved fact sheet, pick WhatsApp through an official Business Solution Provider, build a short button-based script with a fallback and hand-off, connect it to your CRM, get follow-up templates approved, test on real phones, and review chat transcripts every week." }
+  ]
+}
