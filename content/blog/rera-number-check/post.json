@@ -1,7 +1,7 @@
 {
-  "title": "RERA Number Check: What It Is, How to Verify It, and Where It Must Appear",
-  "seoTitle": "RERA Number Check: How to Verify a RERA Number Online",
-  "excerpt": "How to check a RERA number on your state RERA website, what project and agent number formats look like, and where builders and CPs must show it.",
+  "title": "RERA Number Check: How to Verify a RERA Registration Number Online",
+  "seoTitle": "RERA Number Check: Verify a RERA Number Online (All States)",
+  "excerpt": "How to check a RERA number or registration number online: state-wise official RERA websites, Gujarat search steps, sample formats and what to verify.",
   "date": "2026-09-28",
   "category": "Guides",
   "service": "high-converting-landing-pages",
@@ -46,35 +46,39 @@
   "faqs": [
     {
       "question": "What is a RERA number?",
-      "answer": "It is the registration number a state Real Estate Regulatory Authority gives to a project or an agent under the RERA Act, 2016. A project number shows the project is on public record; an agent number shows the agent is registered in that state."
+      "answer": "It is the registration number a state Real Estate Regulatory Authority gives to a project or an agent under the RERA Act, 2016. A project number shows the project is on public record with its plans and completion date; an agent number shows the broker is registered in that state."
     },
     {
-      "question": "How do I check a RERA number?",
-      "answer": "Go to the RERA website of the state where the project is located, open the registered projects search, and search by the registration number. Then check that the promoter, project name, address and registration validity match what you were told."
+      "question": "How do I check a RERA number online?",
+      "answer": "Open the official RERA website of the state where the project is, go to the registered projects search, and enter the registration number exactly as printed. Then check that the promoter, project name, address and validity match what the seller told you. Use the agents search to check a broker."
     },
     {
-      "question": "What does a RERA number look like?",
-      "answer": "There is no national format. UP RERA project numbers start with UPRERAPRJ and agent numbers with UPRERAAGT; MahaRERA project numbers start with P and agent numbers with A. The only reliable test is searching the number on the state authority’s website."
+      "question": "Where can I check a RERA registration number?",
+      "answer": "Only on the official website of the state's RERA authority, for example up-rera.in for Uttar Pradesh, maharera.maharashtra.gov.in for Maharashtra and gujrera.gujarat.gov.in for Gujarat. The Ministry of Housing and Urban Affairs RERA portal links to the other states' authorities."
     },
     {
-      "question": "Is RERA registration mandatory for every project?",
-      "answer": "It is mandatory unless the land doesn’t exceed 500 square metres or the project has no more than eight apartments, including all phases. States can lower these thresholds. Plotted and commercial projects are covered too."
+      "question": "How do I find the RERA registration number of a project in Gujarat?",
+      "answer": "Search the project or promoter name on gujrera.gujarat.gov.in and open the record. Gujarat project numbers start with PR/GJ/ followed by location segments; agent numbers start with AG/GJ/. For a resale or second home, the original project's record still shows its number."
+    },
+    {
+      "question": "What does a sample RERA number look like?",
+      "answer": "There is no national format. UP project numbers start with UPRERAPRJ and agent numbers with UPRERAAGT; MahaRERA uses P for projects and A for agents; Gujarat uses PR/GJ/ and AG/GJ/. The only reliable test is searching the number on the state authority's website."
+    },
+    {
+      "question": "How can I tell if a RERA number is valid?",
+      "answer": "It is valid only if the official state search returns a record whose promoter, project name and address match the project being sold, and whose registration period hasn't expired. A number that looks right but doesn't appear in the search, or shows different details, should not be trusted."
     },
     {
       "question": "Where must a builder show the RERA number?",
-      "answer": "Section 11(2) of the Act requires every advertisement or prospectus to include the registration number and the authority’s website address. In practice that means landing pages, ads, brochures, hoardings, newspaper ads and social creatives."
-    },
-    {
-      "question": "What is the 70/30 rule in RERA?",
-      "answer": "Section 4(2)(l)(D) requires promoters to deposit 70% of the money collected from buyers in a separate bank account and use it only for the land and construction costs of that project."
+      "answer": "Section 11(2) of the RERA Act requires every advertisement or prospectus to include the registration number and the authority's website address. That means landing pages, ads, brochures, hoardings, newspaper ads and social creatives. Some states, including Maharashtra and UP, also require a project QR code."
     },
     {
       "question": "Do real estate agents need a RERA number?",
-      "answer": "Yes. Section 9 of the Act requires agents to register with the state authority before they facilitate the sale of any plot, apartment or building in a registered project."
+      "answer": "Yes. Section 9 of the Act requires agents to register with the state authority before they facilitate the sale of any plot, apartment or building in a registered project. You can check an agent's number in the registered agents search on the same state website."
     },
     {
-      "question": "What is the penalty for not registering a project under RERA?",
-      "answer": "Under Section 59, a penalty of up to 10% of the estimated project cost. If the promoter keeps ignoring orders, imprisonment of up to three years, a further fine of up to 10%, or both."
+      "question": "What is the 70/30 rule in RERA?",
+      "answer": "Section 4(2)(l)(D) requires promoters to deposit 70% of the money collected from buyers in a separate bank account and use it only for the land and construction costs of that project. The remaining 30% is not restricted in the same way."
     }
   ],
   "updated": "2026-11-05"

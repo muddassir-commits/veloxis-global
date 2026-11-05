@@ -1,7 +1,7 @@
 {
-  "title": "Real Estate SEO in India: Keywords, Project Pages and Local SEO for Builders and Agents",
-  "seoTitle": "Real Estate SEO in India: A Guide for Builders & Agents",
-  "excerpt": "Real estate SEO in India: keywords worth targeting, project and locality pages that rank, local SEO for agents and CPs, AI search, and how to measure it.",
+  "title": "Real Estate SEO in India: Keywords, Project Pages and Local SEO",
+  "seoTitle": "Real Estate SEO in India: Local SEO for Brokers & Agents",
+  "excerpt": "Real estate SEO in India for builders, brokers and agents: keywords to target, project pages, local SEO on Google Maps, and how to choose SEO services.",
   "date": "2026-10-08",
   "updated": "2026-11-05",
   "category": "Guides",
@@ -42,40 +42,52 @@
     {
       "name": "Search engine optimization",
       "sameAs": "https://en.wikipedia.org/wiki/Search_engine_optimization"
+    },
+    {
+      "name": "Local search engine optimisation",
+      "sameAs": "https://en.wikipedia.org/wiki/Local_search_engine_optimisation"
+    },
+    {
+      "name": "Real estate broker",
+      "sameAs": "https://en.wikipedia.org/wiki/Real_estate_broker"
     }
   ],
   "faqs": [
     {
       "question": "What is real estate SEO?",
-      "answer": "Real estate SEO means setting up your website and online presence so Google shows your pages when buyers search for the projects, localities and services you sell. It brings enquiries without paying per click, for as long as the page ranks."
+      "answer": "Real estate SEO is setting up your website and online profiles so Google shows them when buyers search for the projects, localities and services you sell. It focuses on project-name, locality and agent searches that portals don't serve well, and brings enquiries without paying per click for as long as the pages rank."
     },
     {
-      "question": "What are the four types of SEO?",
-      "answer": "On-page SEO (the content and structure of each page), technical SEO (how easily Google can crawl and load the site), local SEO (showing up for searches with a place in them and on Google Maps) and off-page SEO (signals from other websites, mainly links)."
+      "question": "How does SEO for brokers work?",
+      "answer": "SEO for brokers is mostly local SEO plus a small original website. Verify a Google Business Profile with the right category, build one page per locality you cover, write your own pages for the projects you sell instead of copying the developer, show your RERA agent number, and collect genuine reviews from every satisfied client."
+    },
+    {
+      "question": "What is local SEO for real estate agents?",
+      "answer": "Local SEO for real estate agents means getting your Google Business Profile and website into map and \"near me\" results for your areas. Google ranks local results by relevance, distance and prominence, and says you cannot pay for a better local ranking. A complete, verified profile, consistent details and real reviews matter most."
     },
     {
       "question": "Which real estate keywords should a builder target first?",
-      "answer": "The project and builder names, because people searching them are already interested. Then locality plus configuration searches such as “3 BHK in Gomti Nagar Extension”, and the questions buyers ask before they buy."
+      "answer": "Start with your project and builder names, because people searching them are already interested and your own page should rank first. Next, target locality plus configuration searches such as \"3 BHK in Gomti Nagar Extension\", then agent searches won through Google Maps, and finally the questions buyers ask before they buy."
     },
     {
-      "question": "Can a small builder outrank property portals?",
-      "answer": "Rarely for broad searches such as “flats in Noida”, where portals have years of authority. But a small builder can win project-name, builder-name and specific locality searches with good, separate pages for each project and area."
+      "question": "Can a small builder or broker outrank property portals?",
+      "answer": "Rarely for broad searches such as \"flats in Noida\", where portals have years of authority. But a small builder or broker can win project-name, builder-name, specific locality and \"property dealer in [area]\" searches with separate, original pages for each project and area and a strong Google Business Profile."
+    },
+    {
+      "question": "How do I choose real estate SEO services in India?",
+      "answer": "Pick a provider that works on project, locality and agent searches, sets up Search Console and your Business Profile in your own name, builds links honestly, and reports enquiries and site visits rather than only traffic. Avoid anyone who guarantees rankings; Google says no one can guarantee a number one position."
     },
     {
       "question": "Is SEO being replaced by AI?",
-      "answer": "No, but it is changing. Google's AI summaries and assistants like ChatGPT build their answers from web pages and often cite them. Clear, factual pages with plain-text answers and FAQs are more likely to be quoted, and searches with intent to buy still send people to websites."
+      "answer": "No, but it is changing. Google's AI Overviews and AI Mode use Google's normal index, and ChatGPT, Perplexity and Copilot build answers from web pages they cite. Clear pages with plain-text facts, FAQs and consistent business details are more likely to be quoted, and buying-intent searches still send people to websites."
     },
     {
       "question": "How long does real estate SEO take?",
-      "answer": "Weeks for a new page to be indexed and months to settle into a stable position, longer for a new website. Most builders run ads for a launch and build SEO alongside it."
+      "answer": "Weeks for a new page to be indexed and months for positions to settle, longer for a brand-new website. Most builders run ads for a launch and build SEO alongside it, so organic enquiries take a growing share over time. Track progress monthly in Google Search Console and your lead sheet."
     },
     {
       "question": "Should a channel partner copy the developer's project page?",
-      "answer": "No. Google tends to show only one version of duplicate content, usually the developer's. Write your own page with your own details, your RERA agent number and what you add for the buyer."
-    },
-    {
-      "question": "What should happen to a project page when the project sells out?",
-      "answer": "Keep it with a sold-out note and links to newer projects, or redirect it to the closest live page. Deleting it throws away the rankings and links it had earned."
+      "answer": "No. Google usually shows only one version of duplicate content, and it is often the developer's. Write your own page with your own details, your RERA agent number, site-visit help, comparisons with nearby projects and anything else you add for the buyer that the developer's page doesn't cover."
     }
   ]
 }

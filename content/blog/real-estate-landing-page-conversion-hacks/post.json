@@ -1,7 +1,7 @@
 {
   "title": "Real Estate Landing Page Best Practices: 9 Fixes for More Enquiries",
-  "seoTitle": "Real Estate Landing Page Best Practices: 9 Fixes",
-  "excerpt": "Nine practical fixes for real estate landing pages: what to show above the fold, how to handle price and RERA details, form design, speed and tracking.",
+  "seoTitle": "Real Estate Landing Page: 9 Best Practices That Convert",
+  "excerpt": "Real estate landing page best practices: what to show above the fold, price and RERA details, form and WhatsApp, Core Web Vitals, sections and tracking.",
   "date": "2026-08-27",
   "category": "Landing Pages",
   "service": "high-converting-landing-pages",
@@ -18,45 +18,49 @@
     {
       "name": "Landing page",
       "sameAs": "https://en.wikipedia.org/wiki/Landing_page"
+    },
+    {
+      "name": "Conversion rate optimization",
+      "sameAs": "https://en.wikipedia.org/wiki/Conversion_rate_optimization"
     }
   ],
   "faqs": [
     {
+      "question": "What is a real estate landing page?",
+      "answer": "A real estate landing page is a single page built for one project, configuration or offer, where visitors arrive from an ad, email or QR code and are asked to take one action, such as getting the price sheet or booking a site visit. It has no menus to other projects, unlike a company website."
+    },
+    {
       "question": "Why do real estate ads get clicks but few enquiries?",
-      "answer": "Usually the page: ads land on a corporate site or generic page, price and RERA details are hidden, the form is long, or the page is slow on a phone."
+      "answer": "Usually because of the page. Ads land on a corporate site or generic page, the price and RERA details are hidden, the form is long, there is no WhatsApp option, or the page is slow on a phone. A dedicated project page that repeats the ad's promise fixes most of these problems."
     },
     {
-      "question": "Should each project have its own landing page?",
-      "answer": "Yes. One page per project, tower or phase, with each ad sent to the page that matches it."
+      "question": "What should a buyer see first on a property landing page?",
+      "answer": "The first phone screen should show where the project is, the configurations, the starting price, the RERA registration number and a clear button such as \"Get price sheet on WhatsApp\". If someone can't recall the locality, configurations and price after five seconds, the first screen needs work."
     },
     {
-      "question": "What should a buyer see first on the page?",
-      "answer": "Where the project is, the configurations, the starting price, whether it is RERA registered, and a button to get the price sheet on WhatsApp."
+      "question": "Should a real estate landing page show the price?",
+      "answer": "Yes. Show a starting price or price band rather than \"price on request\". Buyers use price to decide whether a project is worth their time, so showing it filters out people outside the budget. Send the full cost sheet after they share their number, and label what the price includes."
     },
     {
-      "question": "Should a landing page say “price on request”?",
-      "answer": "No. A starting price or band brings more serious enquiries; the full cost sheet can be sent after the buyer shares their number."
-    },
-    {
-      "question": "How short should the form be?",
-      "answer": "Name, mobile number, configuration and budget — plus a sticky WhatsApp button on mobile for buyers who prefer to chat."
+      "question": "How short should a real estate enquiry form be?",
+      "answer": "Ask for four things or fewer: name, mobile number, configuration and budget, using tap-to-choose buttons for the last two. Add a sticky WhatsApp click-to-chat button on mobile for buyers who prefer to chat, and make sure every enquiry gets an instant reply rather than a call hours later."
     },
     {
       "question": "How fast should a real estate landing page load?",
-      "answer": "Aim for Google’s “good” Core Web Vitals: main content visible within 2.5 seconds and no layout jumping. Test on a mid-range Android phone over 4G."
+      "answer": "Aim for Google's \"good\" Core Web Vitals on mobile: largest content visible within 2.5 seconds, responses to taps within 200 milliseconds and layout shift of 0.1 or less, measured at the 75th percentile of visits. Test with PageSpeed Insights and on a mid-range Android phone over mobile data."
     },
     {
-      "question": "How do I know which ad produced a site visit?",
-      "answer": "Track form submits, WhatsApp clicks and calls as conversions, give each campaign and CP a tagged link, and feed site-visit outcomes from the CRM back to Google and Meta."
+      "question": "Does landing page quality affect Google Ads costs?",
+      "answer": "Yes. Google Ads lists the quality of your ads and landing page, including relevance and ease of navigation, among the factors in Ad Rank, and says higher-quality ads can often lead to lower costs per click. A relevant, well-organised page that matches the search helps both cost and conversions."
     },
     {
       "question": "What sections should a real estate landing page have?",
-      "answer": "A hero with locality, configurations, starting price and RERA number; reasons to choose the project; location with travel times; floor plans; amenities; construction progress and track record; payment plan; FAQs; and a final call to action."
+      "answer": "A hero with locality, configurations, starting price and RERA number; three reasons to choose the project; location with travel times; floor plans; amenities; construction progress and track record; payment plan; FAQs; and a final call to action with form, WhatsApp and site-visit timings. Repeat the call to action every few sections."
     },
     {
-      "question": "Does landing page speed affect ad costs?",
-      "answer": "Yes. Google Ads considers landing page experience when deciding how often ads show and what you pay per click, and Meta shows fewer ads to people it expects to abandon slow pages."
+      "question": "How do I know which ad produced a site visit?",
+      "answer": "Track form submits, WhatsApp clicks and calls as conversions, give each campaign and channel partner a UTM-tagged link, record the source in your CRM, and upload site-visit and booking outcomes back to Google Ads and Meta's Conversions API so the platforms optimise for visits, not cheap form fills."
     }
   ],
-  "updated": "2026-10-05"
+  "updated": "2026-11-05"
 }

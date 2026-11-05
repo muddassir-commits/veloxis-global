@@ -1,7 +1,7 @@
 {
-  "title": "Pre-Launch Real Estate Marketing: What It Means After RERA and How to Run One",
-  "seoTitle": "Pre-Launch Real Estate Marketing: A RERA-Safe Plan",
-  "excerpt": "What pre-launch means in real estate after RERA, what you can and can't do before registration, a week-by-week EOI campaign plan and a buyer checklist.",
+  "title": "Pre-Launch Real Estate Marketing: RERA Rules and How to Run One",
+  "seoTitle": "Pre-Launch Real Estate Marketing: RERA Rules + Plan",
+  "excerpt": "What pre-launch means in real estate after RERA, what you can and can't do before registration, a step-by-step EOI campaign plan and a buyer checklist.",
   "date": "2026-10-20",
   "category": "Growth Tips",
   "service": "paid-ads",
@@ -44,11 +44,11 @@
     },
     {
       "question": "What is the penalty for marketing a project before RERA registration?",
-      "answer": "Up to 10% of the estimated project cost under Section 59(1). If the promoter keeps breaking the rule or ignores orders, Section 59(2) allows imprisonment up to three years, a further fine up to 10%, or both."
+      "answer": "Up to 10% of the estimated project cost under Section 59(1) of the RERA Act. If the promoter keeps breaking the rule or ignores the authority's orders, Section 59(2) allows imprisonment of up to three years, a further fine of up to 10%, or both. State authorities can also order the ads to stop."
     },
     {
-      "question": "Are pre-launch prices really lower?",
-      "answer": "Developers often offer early buyers a launch price or priority, but there is no rule that pre-launch prices are lower, and no guarantee of appreciation. Compare the offer with similar registered projects nearby and read the written terms."
+      "question": "Are 'Coming Soon' ads allowed before RERA registration?",
+      "answer": "Regulators treat them as advertising. In 2026 Bihar RERA treated 'Coming Soon' posters for an unregistered project as advertising and imposed ₹1 lakh in costs on the developer. Under Section 3, wait for the registration number before any teaser, banner or 'register interest' ad goes public."
     },
     {
       "question": "Is a pre-launch EOI refundable?",
@@ -56,12 +56,16 @@
     },
     {
       "question": "How should a pre-launch campaign be planned?",
-      "answer": "Build everything 4–6 weeks before registration and keep it paused. On registration day add the RERA details, publish the landing page and switch on Meta and Google ads. Reply to every enquiry within minutes, run the EOI window, then allot units and move ads to site visits after launch."
+      "answer": "Build creative, the landing page, WhatsApp replies, CRM and paused ad campaigns before registration. On registration day add the RERA details, publish the page and switch ads on. Reply to every enquiry within minutes during the EOI window, then allot units and move ads to site visits after launch."
     },
     {
       "question": "What should buyers check before paying for a pre-launch offer?",
       "answer": "The project's RERA registration number on the state RERA website, written EOI terms, payment to the developer's account with a receipt, an advance within 10% until an agreement for sale is registered, and a possession date that matches the RERA filing."
+    },
+    {
+      "question": "Which channels work best for pre-launch real estate marketing?",
+      "answer": "Meta ads and lead forms in the project's catchment, Google search ads for the locality and builder name, a project landing page with RERA details, instant WhatsApp replies, briefed channel partners and hoardings near the site. Measure site visits and EOIs by source, not just enquiries."
     }
   ],
-  "updated": "2026-10-23"
+  "updated": "2026-11-05"
 }

@@ -1,7 +1,7 @@
 {
-  "title": "Real Estate Brochure: What to Include, How to Design It, and How to Send It",
-  "seoTitle": "Real Estate Brochure: What to Include, Terms & Design Tips",
-  "excerpt": "What to include in a real estate brochure, the order buyers read in, area terms, Hindi and Gujarati brochures, design tips and sending it on WhatsApp.",
+  "title": "Real Estate Brochure: What to Include, Design Tips, Gujarati Terms",
+  "seoTitle": "Real Estate Brochure: Content, Design, Gujarati Terms, PDF",
+  "excerpt": "What a real estate brochure must include, design tips, Gujarati and Hindi property terms, and how to compress the brochure PDF to send on WhatsApp.",
   "date": "2026-09-30",
   "updated": "2026-11-05",
   "category": "Landing Pages",
@@ -41,35 +41,39 @@
   "faqs": [
     {
       "question": "What should a real estate brochure include?",
-      "answer": "The project name and locality, RERA registration number and authority website, configurations and possession timeline, a location map with real distances, floor plans with carpet area, amenities, specifications, developer background, a clear next step and a disclaimer."
-    },
-    {
-      "question": "Should the price be in the brochure?",
-      "answer": "Many developers keep prices in a separate price sheet because prices change more often than the brochure is reprinted. If you do, give the price sheet the same project name and RERA number and send both together."
+      "answer": "The project name and locality, RERA registration number and authority website, configurations and possession timeline, a location map with real distances, floor plans with carpet area, amenities in the approved plan, specifications, the developer's background, a clear next step such as a WhatsApp number, and a disclaimer."
     },
     {
       "question": "How should a real estate brochure be structured?",
-      "answer": "In the order buyers ask questions: cover, the project at a glance, location, floor plans, amenities, specifications, the developer, and a clear call to visit. Long brochures benefit from a one-page summary at the front."
+      "answer": "In the order buyers ask questions: cover, the project at a glance, location, floor plans, amenities, specifications, the developer, and a clear call to visit. Long brochures benefit from a one-page summary at the front, which sales teams can also send as a single image on WhatsApp."
+    },
+    {
+      "question": "What are the best real estate brochure design tips?",
+      "answer": "Keep one idea per spread, use real photos and label renders as artistic impressions, make body text readable on a phone, use the same colours and fonts as your ads and hoardings, make numbers big and adjectives small, and write specifications in plain words a buyer would use."
     },
     {
       "question": "Does a brochure need a RERA number?",
-      "answer": "Yes. The RERA Act treats a prospectus as an advertisement, so it must carry the project’s registration number and the website address of the state authority."
+      "answer": "Yes. Section 11(2) of the RERA Act requires every advertisement or prospectus to carry the project's registration number and the website address of the state authority. Put both on the cover and with the disclaimer, and make sure the price sheet sent with the brochure carries them too."
     },
     {
-      "question": "Which area should the floor plans show?",
-      "answer": "Lead with carpet area, because apartments are sold on carpet area under RERA. If you also show built-up or super area, label each figure clearly, and add room dimensions."
+      "question": "Which area should brochure floor plans show?",
+      "answer": "Lead with carpet area, which the RERA Act defines and on which apartments are sold under RERA. If you also show built-up or super built-up area, label each figure clearly, add room dimensions, mark furniture as indicative and include a key plan showing the unit's position and facing."
     },
     {
-      "question": "What is the difference between a print and a digital brochure?",
-      "answer": "Print brochures are for the site office, expos and CP meetings, where paper and finish matter. Digital brochures are for WhatsApp and email, where file size, loading speed and readability on a phone matter most."
+      "question": "How do I compress a real estate brochure PDF for WhatsApp?",
+      "answer": "Export a separate screen version from the design file with a small-file preset, downsample images, flatten heavy effects, then run a PDF optimiser and check that plans and the RERA number stay sharp. For automated sending, Meta's WhatsApp Business Platform allows PDF documents up to 100 MB."
     },
     {
-      "question": "Can ChatGPT design a real estate brochure?",
-      "answer": "AI tools can draft copy, simplify specifications and suggest layouts, but floor plans, areas, distances, dates, amenities and legal text must come from approved documents and be checked by a person."
+      "question": "What terms are used in Gujarati real estate brochures?",
+      "answer": "Common terms are કાર્પેટ એરિયા (carpet area), સુપર બિલ્ટ-અપ એરિયા (super built-up area), પઝેશન or કબજો (possession), સુવિધાઓ (amenities), ચોરસ વાર (square yard), બી.યુ. પરમિશન (occupancy permission in Gujarat), દસ્તાવેજ (sale deed), જંત્રી (government valuation rate) and રેરા રજિસ્ટ્રેશન નંબર."
+    },
+    {
+      "question": "Should a brochure be translated into Hindi or Gujarati?",
+      "answer": "Often yes, as a two-language brochure or a regional one-page summary. Translate the story and benefits fully, keep standard property terms in their familiar form in the local script, make every number match the English version, show the RERA number and state authority website, and have a native speaker proofread it."
     },
     {
       "question": "How fast should the brochure be sent after an enquiry?",
-      "answer": "Within seconds if possible. Buyers often enquire with several projects the same evening, and the first to reply with the brochure, price sheet and a visit slot usually gets the visit. WhatsApp automation makes this possible day and night."
+      "answer": "Within minutes, ideally instantly. Buyers often enquire with several projects at once, and the first project to reply with the brochure, price sheet and a visit slot has the best chance of the visit. WhatsApp automation makes an instant reply possible day and night."
     }
   ]
 }

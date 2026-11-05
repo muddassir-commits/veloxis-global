@@ -1,7 +1,7 @@
 {
-  "title": "RERA Registration for Agents: Documents, Fees and Online Process (UP, Delhi, Haryana)",
-  "seoTitle": "RERA Agent Registration: Documents, Fees, Online Process",
-  "excerpt": "How to get RERA registration as a real estate agent in UP, Delhi and Haryana: who needs it, documents, fees, the online steps, your duties and the penalty.",
+  "title": "RERA Agent Registration: Documents, Fees and Online Process by State",
+  "seoTitle": "RERA Agent Registration: Documents, Fees & Online Steps",
+  "excerpt": "Documents required for RERA agent registration, fees and renewal in UP, Haryana and Maharashtra, the online process, training rules and penalties.",
   "date": "2026-10-04",
   "category": "Guides",
   "service": "paid-ads",
@@ -45,36 +45,40 @@
   ],
   "faqs": [
     {
+      "question": "What documents are required for RERA agent registration?",
+      "answer": "Usually a photograph, an authenticated PAN copy, authenticated address proof of your place of business, income tax returns for the three preceding years (or a declaration if exempt) and business details. Firms add their partnership deed, LLP agreement or MOA/AOA and partners' photos. UP and Maharashtra also need a training certificate."
+    },
+    {
       "question": "Is RERA registration mandatory for real estate agents?",
-      "answer": "Yes. Section 9(1) of the RERA Act, 2016 says no agent may facilitate the sale or purchase of any plot, apartment or building in a project that must be registered, unless the agent is registered with the state RERA authority."
+      "answer": "Yes. Section 9(1) of the RERA Act, 2016 says no agent may facilitate the sale or purchase of any plot, apartment or building in a project that must be registered unless the agent is registered with that state's RERA authority. Registration is state-wise and not transferable between states."
     },
     {
-      "question": "How do I become a real estate agent in India?",
-      "answer": "There is no national licence or exam. Choose your market and model (resale broker, brokerage or channel partner), register with your state RERA authority, sort out GST registration if your turnover crosses the threshold, get empanelled with developers and build a lead source of your own."
+      "question": "How do I apply for RERA agent registration online?",
+      "answer": "Finish any training your state requires, open the state RERA portal, sign up as an individual or firm, fill the agent form, upload documents, pay the fee, answer any queries and download your certificate. HARERA Gurugram also asks for one printed set of the form and documents."
     },
     {
-      "question": "What is the RERA agent registration fee in UP?",
-      "answer": "The fee published for UP RERA is ₹25,000 for an individual agent and ₹2,50,000 for a firm or company. Haryana RERA lists the same amounts, and Delhi RERA lists ₹10,000 and ₹50,000. Confirm the current fee on the state portal before paying."
+      "question": "What is the RERA agent registration fee?",
+      "answer": "It depends on the state. The UP RERA rules set ₹25,000 for individuals and ₹2,50,000 for others. HARERA Gurugram lists ₹50,000 and ₹2,50,000. MahaRERA lists ₹10,000 and ₹1,00,000 plus GST. Confirm the current fee on your state portal before paying."
     },
     {
-      "question": "What documents are needed for RERA agent registration?",
-      "answer": "For an individual: a photograph, PAN, Aadhaar, authenticated address proof of the place of business and income tax returns for the three preceding years where filed. Firms also add their registration documents, the firm's PAN and the details of directors or partners."
+      "question": "How long is RERA agent registration valid and how is it renewed?",
+      "answer": "MahaRERA registration is valid for five years. The UP rules as published give ten years for the first registration and five for each renewal, and ask you to apply at least three months before expiry, with a ₹5,000 renewal fee for individuals. Follow the dates on your certificate."
     },
     {
-      "question": "Can I register as a RERA agent online?",
-      "answer": "Yes. UP, Delhi and Haryana RERA take agent applications online: create a login on the state portal, fill in the form, upload documents, pay the fee online, answer any queries and download your registration certificate once approved."
+      "question": "Do I need training before RERA agent registration?",
+      "answer": "In some states. UP RERA runs a four-day training programme with an exam, and its registration form opens only after the training certificate is uploaded. MahaRERA requires a Certificate of Competency for new registration and renewal. Check your own state portal's notices."
     },
     {
-      "question": "Does one RERA registration work in every state?",
-      "answer": "No. Registration is state-wise. A UP RERA number covers Noida, Greater Noida, Lucknow and Kanpur, but selling a project in Gurugram needs Haryana RERA registration and one in Delhi needs Delhi RERA registration."
+      "question": "What are the advantages of RERA registration for an agent?",
+      "answer": "You can legally sell registered projects and claim commission, developers will empanel you, your name appears on the authority's public list of agents, buyers can verify you, and you avoid the daily penalty for working unregistered under Section 62 of the Act."
     },
     {
       "question": "What is the penalty for an agent working without RERA registration?",
-      "answer": "Under Section 62, up to ₹10,000 for every day the default continues, which can add up to 5% of the cost of the plot, apartment or building whose sale was facilitated."
+      "answer": "Under Section 62 of the RERA Act, up to ₹10,000 for every day of default, which can add up to 5% of the cost of the plot, apartment or building whose sale was facilitated. Ignoring later orders brings further penalties under Sections 65 and 66."
     },
     {
-      "question": "How much do real estate agents earn in India?",
-      "answer": "There is no fixed salary. Agents earn commission: a percentage of the deal value in resale, agreed in writing, or the commission set in a developer's channel partner agreement for new projects. Income depends mainly on how many site visits an agent generates and closes."
+      "question": "Does one RERA agent registration work in every state?",
+      "answer": "No. Each state or union territory registers agents separately. A UP RERA number covers Noida, Greater Noida, Lucknow and Kanpur, but selling a Gurugram project needs Haryana RERA registration and a Delhi project needs Delhi RERA registration."
     }
   ],
   "updated": "2026-11-05"

@@ -1,7 +1,7 @@
 {
-  "title": "Real Estate Lead Management: Stages, Speed, CRM and Follow-Up That Gets Site Visits",
-  "seoTitle": "Real Estate Lead Management: Stages, CRM & Follow-Up",
-  "excerpt": "Real estate lead management explained: types of leads, how fast to reply, a 7-stage system, follow-up rules, what a real estate CRM does, what to track.",
+  "title": "Real Estate Lead Management: Process, Stages, CRM and Follow-Up",
+  "seoTitle": "Real Estate Lead Management: 7-Step Process & CRM Guide",
+  "excerpt": "Real estate lead management step by step: lead types, how fast to reply, lead stages, follow-up rules, what a real estate CRM should do and what to track.",
   "date": "2026-10-18",
   "category": "AI Automation",
   "service": "ai-automation",
@@ -32,36 +32,36 @@
   "faqs": [
     {
       "question": "What is real estate lead management?",
-      "answer": "It is the process of capturing every enquiry in one place, replying fast, qualifying buyers, following up until each lead books a site visit or says no, and measuring which sources bring bookings."
+      "answer": "It is the process of capturing every property enquiry in one place, replying within minutes, qualifying the buyer, following up until each lead books a site visit or says no, and measuring which sources bring site visits and bookings, not just enquiries."
     },
     {
-      "question": "What is a real estate lead?",
-      "answer": "A person who has shared their contact details and shown interest in buying, selling or renting property, by filling a form, sending a WhatsApp message, calling, enquiring on a portal or visiting a site office. A lead is not yet a buyer."
+      "question": "What are the steps in real estate lead management?",
+      "answer": "Capture every enquiry with its source, acknowledge it instantly, assign it to one salesperson, call and qualify, book a site visit with two time options, follow up with a next action and date, and measure results by source every week, sending outcomes back to the ad platforms."
     },
     {
       "question": "What are the main types of real estate leads?",
-      "answer": "By source: Meta lead forms, Google search ads, website forms, WhatsApp click-to-chat, property portals, channel partners, and referrals and walk-ins. By readiness: hot, warm, cold and closed."
+      "answer": "By source: Meta lead forms, Google search ads, website forms, WhatsApp click-to-chat, property portals, channel partners, and referrals and walk-ins. By readiness: hot, warm, cold and closed. Each source behaves differently, so record it on every lead and compare sources by site visits, not volume."
     },
     {
       "question": "How quickly should I respond to a real estate lead?",
-      "answer": "Within minutes if possible. A 2011 Harvard Business Review study found firms that contacted online leads within an hour were nearly seven times as likely to qualify them as firms that waited longer. An instant WhatsApp reply plus a call from a person is the practical answer."
+      "answer": "Within minutes if possible, and within an hour at most. A 2011 Harvard Business Review study found firms that contacted online leads within an hour were nearly seven times as likely to qualify them as firms that waited longer. An instant WhatsApp reply plus a call from a person works well."
     },
     {
       "question": "What is a CRM in real estate?",
-      "answer": "Software that stores every lead with its source, stage, notes, calls, messages and next action, and reminds the team what to do each day. It also reports which sources produce site visits and bookings."
+      "answer": "Software that stores every lead with its source, stage, notes, calls, messages and next action, and reminds the team what to do each day. A good real estate CRM also schedules site visits, reports by source and salesperson, and sends qualified leads and visits back to Meta and Google."
     },
     {
-      "question": "What should real estate lead management software do?",
-      "answer": "Pull leads in automatically from ads, website, WhatsApp and portals, send an instant acknowledgement, assign leads, track stages and next actions, schedule site visits, report by source, and send qualified leads and visits back to Meta and Google."
+      "question": "Can I manage real estate leads in Excel or Google Sheets?",
+      "answer": "Yes, to start. A shared sheet with columns for source, stage, next action, next date and owner works for a small broker. Once leads arrive from several sources or more than two or three people handle them, a CRM with automatic capture and reminders stops leads getting lost."
     },
     {
-      "question": "How do you qualify a property buyer?",
-      "answer": "Ask four questions early, ideally in the first WhatsApp reply: which configuration, what budget range, when they plan to buy, and whether it's for living or investment."
+      "question": "What lead stages should a real estate team use?",
+      "answer": "New, contacted, qualified, visit booked, visit done, negotiation or EOI, and booked or closed with a reason. Every lead should sit in exactly one stage with a next action and a date, so the team always knows what to do today."
     },
     {
       "question": "What should a real estate sales team measure?",
-      "answer": "Time to first reply, leads with no contact after 24 hours, conversion from lead to qualified to visit to booking by source, cost per site visit and per booking, and the reasons leads were closed."
+      "answer": "Time to first reply, leads with no contact after 24 hours, conversion from lead to qualified to site visit to booking by source, cost per site visit and per booking for each campaign, and the reasons leads were closed, so you can fix targeting."
     }
   ],
-  "updated": "2026-10-23"
+  "updated": "2026-11-05"
 }

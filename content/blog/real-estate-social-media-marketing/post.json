@@ -1,7 +1,7 @@
 {
-  "title": "Real Estate Social Media Marketing: What to Post, Where, and How to Get Leads",
-  "seoTitle": "Real Estate Social Media: What to Post & Get Leads",
-  "excerpt": "Real estate social media that works: which platforms matter, post ideas, the 5-3-1 rule, RERA rules for posts, and turning comments and DMs into visits.",
+  "title": "Real Estate Social Media Marketing: What to Post, Ads and Leads",
+  "seoTitle": "Real Estate Social Media Marketing: Posts, Ads and Leads",
+  "excerpt": "Real estate social media marketing in India: best platforms, post ideas, the 5-3-1 rule, social media advertising, RERA rules and turning DMs into visits.",
   "date": "2026-10-02",
   "category": "Paid Ads",
   "service": "paid-ads",
@@ -40,35 +40,50 @@
   "faqs": [
     {
       "question": "How do you do social media marketing for real estate?",
-      "answer": "Pick two or three platforms your buyers use, set up a clear profile with your RERA details and one action, post content that answers buyer questions on a steady weekly calendar, reply to comments and DMs quickly, move conversations to WhatsApp, and put paid budget behind the posts that bring enquiries."
+      "answer": "Pick two or three platforms your buyers use, set up a clear profile with your RERA details and one action, post content that answers buyer questions on a steady weekly calendar, reply to comments and DMs within minutes, move conversations to WhatsApp, and put paid budget behind the posts that bring enquiries."
     },
     {
       "question": "Which social media platform is best for real estate in India?",
-      "answer": "For most builders, brokers and channel partners, Instagram and Facebook cover first contact, YouTube suits buyers researching in depth and NRI buyers, LinkedIn suits commercial property, and WhatsApp is where the follow-up happens."
+      "answer": "For most builders, brokers and channel partners, Instagram and Facebook cover first contact and most paid lead generation, YouTube suits buyers researching in depth and NRI buyers, LinkedIn suits commercial property and developer branding, and WhatsApp is where follow-up and site-visit booking actually happen."
+    },
+    {
+      "question": "What is real estate social media advertising?",
+      "answer": "It means paying Facebook, Instagram, YouTube or LinkedIn to show your posts or ads to chosen audiences, usually with a lead form, click-to-WhatsApp chat or project landing page as the goal. Start by boosting posts that already work organically, follow housing ad rules, retarget viewers, and judge results by cost per site visit."
     },
     {
       "question": "What is the 5-3-1 rule in social media?",
-      "answer": "It is an informal rule of thumb with several versions. For real estate, a useful version is: out of every nine posts, five give value, three build connection and one sells. It keeps an account from only posting ads."
-    },
-    {
-      "question": "What should a real estate Facebook page or Instagram profile include?",
-      "answer": "A searchable name, a clean logo or face, a one-line bio saying what you sell and where, the RERA registration number and authority website, one clear action such as a WhatsApp button, and pinned posts or highlights covering location, floor plans, progress and FAQs."
+      "answer": "It is an informal rule of thumb with several versions, not an official standard. For real estate, a useful version is: out of every nine posts, five give value, three build connection and one sells. It keeps an account from posting only ads, which people ignore, while still asking for enquiries."
     },
     {
       "question": "What are good real estate post ideas?",
-      "answer": "Sample flat walkthroughs, monthly construction updates, real drive times to the metro and schools, explainers on carpet area and cost sheets, meet-the-team posts, possession day photos shared with permission, and site visit weekend announcements."
+      "answer": "Sample flat walkthroughs, monthly construction updates from the same spot, real drive times to the metro and schools, explainers on carpet area and cost sheets, meet-the-team posts, possession-day photos shared with permission, and site-visit weekend announcements that always carry the project's RERA number."
     },
     {
       "question": "Do social media posts need a RERA number?",
-      "answer": "Yes, if they promote a project. Section 11(2) of the RERA Act requires advertisements to carry the registration number and the state authority’s website. Put the number on the creative itself, because images get forwarded without captions. This is not legal advice."
+      "answer": "Yes, if they promote a project. Section 11(2) of the RERA Act requires advertisements to prominently mention the project's registration details and the authority's website. Put the number on the creative itself because images are forwarded without captions; MahaRERA and UP RERA also require a project QR code. This is not legal advice."
     },
     {
       "question": "Can organic social media alone generate real estate leads?",
-      "answer": "Rarely at a steady rate. Organic posts build proof, keep you remembered and create warm audiences, but reach is limited. Most teams use organic content as the base and paid ads to scale the posts that already work."
+      "answer": "Rarely at a steady rate. Organic posts build proof, keep you remembered over a long buying cycle and create warm audiences, but reach is limited and many followers aren't buyers. Most teams use organic content as the base and paid ads to scale the posts that already bring enquiries."
     },
     {
       "question": "How should you reply to real estate enquiries on social media?",
-      "answer": "Quickly, from one inbox in Meta Business Suite. Answer briefly in public, move the conversation to WhatsApp with the price sheet and floor plans, ask two qualifying questions, offer a specific visit slot, and log which post the lead came from."
+      "answer": "Reply within minutes from one inbox in Meta Business Suite. Give a short public answer, move the conversation to WhatsApp with the price sheet and floor plans, ask two qualifying questions, offer a specific site-visit slot, and log which post or Reel the lead came from in your CRM."
+    },
+    {
+      "question": "How do you measure real estate social media marketing?",
+      "answer": "Measure enquiries and site visits that came from social media, not likes or follower counts. Each month, also track saves and shares, profile visits and link clicks, and which posts produced enquiries. Then make more of those formats and put ad budget behind the proven posts."
+    }
+  ],
+  "updated": "2026-11-05",
+  "about": [
+    {
+      "name": "Social media marketing",
+      "sameAs": "https://en.wikipedia.org/wiki/Social_media_marketing"
+    },
+    {
+      "name": "Real estate",
+      "sameAs": "https://en.wikipedia.org/wiki/Real_estate"
     }
   ]
 }

@@ -1,7 +1,7 @@
 {
-  "title": "WhatsApp Business API for Real Estate: Pricing, Chatbots, Templates and Setup (2026)",
+  "title": "WhatsApp Business API for Real Estate: Cost, Limits, Chatbots, Setup",
   "seoTitle": "WhatsApp Business API for Real Estate: Cost & Setup",
-  "excerpt": "WhatsApp Business API for real estate: app vs API, Meta's per-message pricing, a lead-to-site-visit flow, chatbots, bulk message rules and setup steps.",
+  "excerpt": "WhatsApp Business API for real estate in India: app vs API, Meta's per-message pricing, messaging limits, chatbots, templates, opt-in rules and setup.",
   "date": "2026-10-21",
   "category": "AI Automation",
   "service": "ai-automation",
@@ -32,15 +32,19 @@
   "faqs": [
     {
       "question": "What is the WhatsApp Business API?",
-      "answer": "Meta's WhatsApp Business Platform, which lets a business connect WhatsApp to its ads, website and CRM, automate replies and flows, and let a team handle chats from a dashboard instead of one phone."
+      "answer": "It is Meta's WhatsApp Business Platform, which lets a business connect WhatsApp to its ads, website and CRM, automate replies and flows with approved templates, and let a team handle chats from one number through a dashboard instead of a single phone."
     },
     {
       "question": "Is the WhatsApp Business API free?",
-      "answer": "No. Meta charges per delivered message by category and country; messages from users to you are free. From 1 October 2026 service replies are charged after the first 1,000 free per number per month, and the provider charges its own platform fee."
+      "answer": "No. Meta charges per delivered message by category and country, while messages from users to you are free. Each number gets 1,000 free service messages a month; from 1 October 2026 service messages beyond that are charged. The provider charges its own platform fee."
     },
     {
       "question": "What is the difference between the WhatsApp Business app and the API?",
-      "answer": "The app is a free phone app for one person or a small team with basic auto-replies. The API supports full automation, CRM and ad integration and team inboxes, and charges per message."
+      "answer": "The app is a free phone app for one person or a small team with greeting messages, quick replies and labels. The API supports full automation, ad and CRM connections and shared team inboxes, needs approved templates to message people first, and charges per message."
+    },
+    {
+      "question": "What are WhatsApp API messaging limits?",
+      "answer": "They cap how many different people you can message with templates outside a service window in 24 hours. Per Meta, new business portfolios start at 250, verification is one path to 2,000, and higher tiers unlock automatically when message quality is high and you use your limit."
     },
     {
       "question": "Can WhatsApp chatbots be used for real estate?",
@@ -48,20 +52,16 @@
     },
     {
       "question": "Can I send bulk WhatsApp messages to property buyers?",
-      "answer": "Only to people who opted in. WhatsApp's Business Messaging Policy requires opt-in and approved templates for business-initiated messages, and numbers that get blocked or reported have their messaging limits cut. Bought lists also conflict with the DPDP Act, 2023."
+      "answer": "Only to people who opted in. Meta requires that the person gave you their number and agreed to receive messages from your named business, and business-initiated messages must use approved templates. Bought lists break these rules and conflict with the DPDP Act, 2023."
     },
     {
       "question": "What is the 24-hour window on WhatsApp?",
-      "answer": "When a user messages your business, a 24-hour customer service window opens in which you can reply with free-form messages. Outside it, you can only send approved template messages."
+      "answer": "When a user messages your business, a 24-hour customer service window opens in which you can reply with free-form messages. Each new message from the user resets the 24 hours. Outside the window, you can only send Meta-approved template messages."
     },
     {
       "question": "How long does WhatsApp Business API setup take?",
-      "answer": "It depends on business verification and template approval by Meta. The steps are: choose a provider, verify the business, register a number, get templates approved, connect lead sources and CRM, then build and test the flow."
-    },
-    {
-      "question": "Which WhatsApp templates does a real estate business need?",
-      "answer": "At least a welcome message with the brochure and a question, a site visit confirmation, a visit reminder, a no-show follow-up and an after-visit follow-up. Name the project and the buyer and include useful information in each."
+      "answer": "It depends mainly on Meta's business verification and template approval. The steps are: choose a provider or the Cloud API, verify the business, register a number, get templates approved, add opt-in wording to forms, connect lead sources and the CRM, then build and test the flow."
     }
   ],
-  "updated": "2026-10-23"
+  "updated": "2026-11-05"
 }

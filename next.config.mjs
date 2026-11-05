@@ -113,8 +113,9 @@ const nextConfig = {
 
       // Blog
       '/blog/google-ads-vs-meta-ads-roi-india': '/blog/google-ads-vs-meta-ads-real-estate-india',
-      '/blog/seo-in-2026-whats-changed-for-indian-businesses': '/blog',
-      '/blog/how-to-optimize-google-business-profile-2026': '/blog',
+      '/blog/seo-in-2026-whats-changed-for-indian-businesses': '/blog/real-estate-seo-india',
+      '/blog/how-to-optimize-google-business-profile-2026': '/blog/google-business-profile-checklist',
+      '/blog/real-extate-slogans-taglines': '/blog/real-estate-slogans-taglines',
       '/blog/content-marketing-eeat-framework': '/blog',
       '/blog/instagram-reels-funnel-local-brands': '/blog',
       '/blog/meta-performance-max-best-practices': '/blog',

@@ -1,7 +1,7 @@
 {
-  "title": "AI Tools for Real Estate Agents: What to Use and 6 ChatGPT Prompts That Work",
-  "seoTitle": "AI Tools for Real Estate Agents + ChatGPT Prompts",
-  "excerpt": "The AI tools real estate agents in India need, what AI does well and badly, 6 copy-paste ChatGPT prompts for listings, ads and WhatsApp, and the rules.",
+  "title": "AI Assistant for Real Estate Agents: Best Tools, Prompts and Rules",
+  "seoTitle": "AI Assistant for Real Estate Agents: Tools & Prompts",
+  "excerpt": "What an AI assistant for real estate agents does, the best AI tools and chatbots by job, 8 ChatGPT prompts, and how to keep buyer data safe in India.",
   "date": "2026-10-22",
   "category": "AI Automation",
   "service": "ai-automation",
@@ -31,37 +31,37 @@
   ],
   "faqs": [
     {
+      "question": "What is an AI assistant for real estate agents?",
+      "answer": "It is a chat tool such as ChatGPT, Claude, Gemini or Copilot that drafts listings, ads, WhatsApp replies and scripts, and summarises brochures and documents. It works like a fast junior colleague: quick first drafts, but it only knows the facts you give it, so every number needs checking."
+    },
+    {
       "question": "What is the best AI tool for real estate agents?",
-      "answer": "A general AI assistant such as ChatGPT, Claude or Gemini is the most useful single tool: it drafts listings, ads, captions, scripts and replies, and summarises brochures. Add a design or video tool like Canva or CapCut, and WhatsApp automation for lead replies."
+      "answer": "A general AI assistant is the most useful single tool, because it covers listings, ads, captions, scripts and summaries. Choose the one your team will open daily, that handles Hindi and Hinglish, reads PDFs, and has data settings you are comfortable with. Add Canva or CapCut for design and video."
+    },
+    {
+      "question": "What is the best AI chatbot for real estate?",
+      "answer": "The best chatbot for Indian real estate runs on the official WhatsApp Business Platform, answers only from your approved project facts, hands the chat to a named salesperson with the answers so far, connects to your lead forms and saves every conversation to your CRM."
     },
     {
       "question": "How can real estate agents use ChatGPT?",
-      "answer": "To draft property listings, ad copy, WhatsApp replies, Reel scripts and objection responses, and to summarise brochures. Give it the real project facts in the prompt, then check every fact before using the output."
+      "answer": "Use it to draft property listings, Meta ad copy, first WhatsApp replies, Reel scripts, objection answers and CRM notes, and to summarise brochures. Give it the real project facts, the audience and the limits in the prompt, then check every fact before using the output."
     },
     {
-      "question": "What are good ChatGPT prompts for real estate?",
-      "answer": "Prompts that give the facts and the constraints, for example: \"Write a 120-word listing using only these facts: [details]. Audience: first-time buyers. No exaggeration. Include the RERA number and end with a site visit invitation.\""
+      "question": "How do I use AI as a real estate agent without risk?",
+      "answer": "Use AI for drafts, not facts. Paste in the approved project details, remove buyer names and phone numbers, check every figure against the RERA filing and price list, label AI images as artist's impressions, and keep people in charge of calls, visits and negotiation."
     },
     {
-      "question": "Can AI write real estate ads?",
-      "answer": "It can write good drafts, but it can also invent facts. Under Section 12 of the RERA Act, the promoter is liable for false statements in advertisements, so every AI-written ad must be checked against the approved plans and RERA filing, and must carry the RERA number."
+      "question": "Can AI write real estate ads in India?",
+      "answer": "It can write good drafts, but it can invent facts. Under Section 12 of the RERA Act, the promoter is liable for false statements in advertisements, so every AI-written ad must be checked against the approved plans and RERA filing, and must carry the RERA number."
     },
     {
-      "question": "Is virtual staging allowed in real estate ads?",
-      "answer": "It can be used, but the image must not mislead buyers about what they will get. Label virtually staged or AI-generated images clearly, for example as \"artist's impression\" or \"virtually staged\"."
-    },
-    {
-      "question": "Should agents put buyer data into AI tools?",
-      "answer": "Be careful. Check how the tool stores data before pasting names, phone numbers or documents. India's DPDP Act, 2023 requires personal data to be used for its stated purpose and protected."
+      "question": "Is it safe to put buyer data into AI tools?",
+      "answer": "Only with care. The DPDP Act, 2023 requires personal data to be used for its stated purpose and protected. Remove names, numbers and ID details before pasting, read each tool's data settings, and never upload agreements or ID documents to a personal AI account."
     },
     {
       "question": "Will AI replace real estate agents?",
-      "answer": "AI is replacing repetitive work like first replies, drafts and summaries, not the conversations that decide a sale: understanding the buyer, the site visit, negotiation and legal steps. Agents who use AI for the routine work have more time for those."
-    },
-    {
-      "question": "How do agents appear in ChatGPT or Google AI answers?",
-      "answer": "AI tools build answers from web pages. Clear, factual pages, a complete Google Business Profile, consistent contact details and genuine reviews make an agent more likely to be mentioned."
+      "answer": "No. AI is taking over repetitive work such as first replies, drafts and summaries, not the conversations that decide a sale: understanding the family, the site visit, negotiation and legal steps. Agents who use AI for the routine work gain more time for those conversations."
     }
   ],
-  "updated": "2026-10-23"
+  "updated": "2026-11-05"
 }

@@ -1,28 +1,68 @@
 {
-  "title": "Real Estate Email Marketing: Emails Every Builder and Broker Should Send",
-  "seoTitle": "Real Estate Email Marketing in India: Emails, Setup, Rules",
-  "excerpt": "Real estate email marketing for builders and brokers in India: which emails to send, how to write them, SPF, DKIM and DMARC setup, consent, automation.",
+  "title": "Email Marketing for Real Estate: Emails, Sequences and Setup for India",
+  "seoTitle": "Email Marketing for Real Estate: Emails, Setup, Rules",
+  "excerpt": "Email marketing for real estate in India: the emails to send, a follow-up sequence, subject lines, DPDP consent, SPF/DKIM/DMARC setup, tools and metrics.",
   "date": "2026-11-01",
   "category": "AI Automation",
   "service": "ai-automation",
   "image": "/images/people/blog/email-laptop-inbox.jpg",
   "imageAlt": "Envelope icons flying out of an open laptop screen",
   "inlineImages": [
-    { "src": "/images/people/blog/email-woman-phone-coffee.jpg", "alt": "Hands holding a phone next to a cup of coffee", "beforeHeading": "writing-emails", "caption": "Most people read emails on their phones, so keep them short." },
-    { "src": "/images/people/blog/email-man-laptop-office.jpg", "alt": "A man writing notes beside his laptop at a desk", "beforeHeading": "automation" }
+    {
+      "src": "/images/people/blog/email-woman-phone-coffee.jpg",
+      "alt": "Hands holding a phone next to a cup of coffee",
+      "beforeHeading": "writing-emails",
+      "caption": "Most people read emails on their phones, so keep them short."
+    },
+    {
+      "src": "/images/people/blog/email-man-laptop-office.jpg",
+      "alt": "A man writing notes beside his laptop at a desk",
+      "beforeHeading": "automation"
+    }
   ],
   "about": [
-    { "name": "Email marketing", "sameAs": "https://en.wikipedia.org/wiki/Email_marketing" },
-    { "name": "DMARC", "sameAs": "https://en.wikipedia.org/wiki/DMARC" }
+    {
+      "name": "Email marketing",
+      "sameAs": "https://en.wikipedia.org/wiki/Email_marketing"
+    },
+    {
+      "name": "DMARC",
+      "sameAs": "https://en.wikipedia.org/wiki/DMARC"
+    }
   ],
   "faqs": [
-    { "question": "Does email marketing work for real estate in India?", "answer": "Yes, as a follow-up channel. WhatsApp gets the first reply, but email carries the detail buyers save and forward, such as brochures, payment plans and construction updates, which keeps long buying decisions warm." },
-    { "question": "What emails should a real estate business send?", "answer": "An enquiry follow-up with the brochure, site-visit confirmations and reminders, an after-visit email with the price sheet, monthly construction updates, new launch emails to past buyers, and payment and possession updates." },
-    { "question": "How do I stop my real estate emails going to spam?", "answer": "Send from your own domain, set up SPF, DKIM and DMARC, add a clear unsubscribe link, keep spam complaints below 0.3%, use a proper email platform and remove bounced addresses after each send." },
-    { "question": "Can I buy an email list of property buyers?", "answer": "No. Bought lists damage your sender reputation and may break data protection law. Only email people who gave you their address and expect to hear from you." },
-    { "question": "What does India's DPDP Act mean for email marketing?", "answer": "The Digital Personal Data Protection Act, 2023 requires consent for using personal data, with detailed rules phased in from November 2025. Record where and when people shared their details and honour unsubscribe and deletion requests. Check exact obligations with your lawyer." },
-    { "question": "What makes a good real estate email subject line?", "answer": "Specific and plain, such as 'Tower B slab work done: October photos' or 'Your site visit on Saturday at 11 am'. Avoid all caps, 'URGENT' and pushy offers." },
-    { "question": "Should real estate emails show the RERA number?", "answer": "Yes. Any email that advertises a registered project should show its RERA registration number, as with other real estate ads." },
-    { "question": "What should I measure in real estate email marketing?", "answer": "Clicks, replies, site visits booked from email, bounces and unsubscribes. Open rates are less reliable because some email apps load images automatically." }
-  ]
+    {
+      "question": "Does email marketing work for real estate in India?",
+      "answer": "Yes, as a follow-up channel. WhatsApp gets the first reply, but email carries the detail buyers save and forward, such as brochures, price sheets, payment plans and construction updates. That keeps long buying decisions warm and suits NRI buyers in other time zones."
+    },
+    {
+      "question": "What emails should a real estate business send?",
+      "answer": "An enquiry follow-up with the brochure, site-visit confirmations and reminders, an after-visit email with the price sheet, monthly construction updates, new launch emails to past buyers who opted in, and payment and possession updates for existing buyers. Each email should have one main action."
+    },
+    {
+      "question": "What is a good real estate email follow-up sequence?",
+      "answer": "Send the brochure and visit link within minutes, answers to common worries on day 2, a walkthrough video on day 5, a locality guide on day 9, and a 'should I keep your enquiry open?' email on day 14. Then send monthly updates. Stop when the buyer replies."
+    },
+    {
+      "question": "How do I stop my real estate emails going to spam?",
+      "answer": "Send from your own domain, set up SPF, DKIM and DMARC, add a visible unsubscribe link with one-click unsubscribe, and keep spam complaints low. Google asks bulk senders to stay below a 0.30% spam rate, ideally below 0.10%. Remove bounced addresses after every send."
+    },
+    {
+      "question": "Can I buy an email list of property buyers?",
+      "answer": "No. Bought lists damage your sender reputation and conflict with India's DPDP Act, 2023, which centres on consent for a clear purpose. Only email people who gave you their address through a form, site visit register or purchase, and who expect to hear from you."
+    },
+    {
+      "question": "What does India's DPDP Act mean for email marketing?",
+      "answer": "The DPDP Act, 2023 and the DPDP Rules notified in November 2025 require a clear consent notice explaining why data is used, let people withdraw consent at any time, and give businesses an eighteen-month phased compliance period. Record consent and honour unsubscribe requests quickly."
+    },
+    {
+      "question": "What makes a good real estate email subject line?",
+      "answer": "Specific and plain, such as 'Tower B slab work done: October photos' or 'Your site visit on Saturday at 11 am: map and parking'. Say exactly what is inside. Avoid all caps, 'URGENT' and pushy offers, which hurt trust and can trigger spam filters."
+    },
+    {
+      "question": "What should I measure in real estate email marketing?",
+      "answer": "Clicks, replies, site visits booked from email, bounces, unsubscribes and spam complaints. Open rates are less reliable because Apple's Mail Privacy Protection loads email content in the background, which can count an email as opened even when nobody read it."
+    }
+  ],
+  "updated": "2026-11-05"
 }

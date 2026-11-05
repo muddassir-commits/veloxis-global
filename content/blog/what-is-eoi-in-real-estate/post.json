@@ -1,7 +1,7 @@
 {
-  "title": "EOI in Real Estate: Meaning, Full Form, EOI Amount, Cheque and Refund Rules",
-  "seoTitle": "EOI Meaning in Real Estate: Full Form, Cheque and Refund",
-  "excerpt": "EOI in real estate means Expression of Interest: a form and payment that reserves your priority at a launch. EOI cheque, refund rules and what to check.",
+  "title": "EOI Meaning in Real Estate: Full Form, EOI Amount and Refund Rules",
+  "seoTitle": "EOI Meaning in Real Estate: Full Form, Amount, Refund",
+  "excerpt": "EOI meaning in real estate: Expression of Interest, a payment for launch priority, not a booking. EOI amount, cheque, refund and RERA rules.",
   "date": "2026-09-24",
   "category": "Guides",
   "service": "high-converting-landing-pages",
@@ -19,45 +19,49 @@
     {
       "name": "Real Estate (Regulation and Development) Act, 2016",
       "sameAs": "https://en.wikipedia.org/wiki/Real_Estate_(Regulation_and_Development)_Act,_2016"
+    },
+    {
+      "name": "Expression of interest",
+      "sameAs": "https://en.wikipedia.org/wiki/Expression_of_interest"
     }
   ],
   "faqs": [
     {
-      "question": "What is EOI in real estate?",
-      "answer": "EOI stands for Expression of Interest: a written request, usually with a payment, telling a developer you want to buy in a project about to launch. It gives you priority to choose a unit, not a specific flat."
+      "question": "What is the meaning of EOI in real estate?",
+      "answer": "EOI in real estate means Expression of Interest: a form plus a payment that tells a developer you want to buy in a project about to launch. It gives you priority to choose a unit when inventory is released. It is not a booking, and no specific flat is allotted to you yet."
     },
     {
       "question": "What is the full form of EOI?",
-      "answer": "EOI stands for Expression of Interest. In real estate it is a form plus a payment that gives a buyer priority to choose a unit at a project launch. In tenders, jobs and business deals it means a first, usually non-binding, statement of interest."
+      "answer": "EOI stands for Expression of Interest. In real estate it is a form and payment that gives a buyer priority at a project launch. In tenders, jobs and business deals it means a first, usually non-binding, statement of interest made before any final contract is signed."
     },
     {
       "question": "What is an EOI cheque or EOI payment?",
-      "answer": "It is the EOI amount paid to the developer, by cheque or bank transfer, along with the EOI form. It secures your priority in the launch and is usually adjusted against the booking amount if you go ahead. Never pay it in cash, and get a receipt naming the project."
+      "answer": "It is the EOI amount paid to the developer, by cheque or bank transfer, with the EOI form. It secures your priority in the launch and is usually adjusted against the booking amount if you go ahead. Make it out to the developer's company, never in cash, and get a receipt naming the project."
     },
     {
       "question": "Is EOI the same as booking a flat?",
-      "answer": "No. With an EOI you haven’t been allotted a unit and there is no agreement for sale. Booking comes later, when you select and confirm a unit."
+      "answer": "No. With an EOI you have not been allotted a unit and there is no agreement for sale. Booking comes later, when you select a specific unit and pay the booking amount. Many EOI terms let you take a refund if you don't find a suitable unit at allotment."
     },
     {
       "question": "What is the difference between EOI, token amount and booking amount?",
-      "answer": "EOI is paid before or at launch for priority. A token holds a selected unit for a short time while paperwork is done. The booking amount confirms the purchase and leads to allotment and the agreement for sale."
+      "answer": "EOI is paid before or at launch for priority. A token holds a selected unit for a short time while paperwork is done. The booking amount confirms the purchase and leads to allotment and the agreement for sale. Developers use the words loosely, so read the receipt and form."
     },
     {
       "question": "Is EOI refundable?",
-      "answer": "Often, but only on the conditions written in the EOI terms. A common pattern is a full refund if you don’t get a suitable unit, and a deduction if you withdraw after selecting one. Get the terms in writing."
+      "answer": "Often, but only on the conditions written in the EOI terms. A common pattern is a full refund if you don't get a suitable unit and a deduction if you withdraw after selecting one. Get the refund conditions, the timeline and any deductions in writing before you pay the EOI amount."
     },
     {
       "question": "How much is a typical EOI amount?",
-      "answer": "There is no standard figure. It varies widely by project and city, so compare it with the project’s pricing and the written terms."
+      "answer": "There is no standard EOI amount. Developers set it per project, often as a fixed sum per configuration, higher for larger units. Compare it with the unit price and the refund terms. Once you book, RERA Section 13 caps the advance at 10% of the unit cost before a registered agreement for sale."
     },
     {
       "question": "Can a developer collect EOI before RERA registration?",
-      "answer": "Section 3 of the RERA Act bars promoters from advertising, marketing, booking or selling units in a project that must be registered before it is registered, so collecting money for an unregistered project is risky for both sides."
+      "answer": "It is risky and widely seen as a breach. Section 3 of the RERA Act bars promoters from advertising, booking, selling or inviting people to purchase units in a project that must be registered until it is registered. Penalties under Section 59 reach 10% of the project cost. Buyers should check the RERA number first."
     },
     {
       "question": "What should I check before paying an EOI?",
-      "answer": "The project’s RERA number on the state RERA website, written refund terms, payment by cheque or bank transfer (never cash), a receipt naming the project and amount, and how allotment will work."
+      "answer": "Check the project's RERA number on the state RERA website, written refund terms and timelines, that payment goes by cheque or bank transfer to the developer's company account, a receipt naming the project and amount, and how allotment will work: first-come, draw or floor-wise release."
     }
   ],
-  "updated": "2026-10-23"
+  "updated": "2026-11-05"
 }

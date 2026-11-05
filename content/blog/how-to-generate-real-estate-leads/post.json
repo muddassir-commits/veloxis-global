@@ -1,7 +1,7 @@
 {
-  "title": "How to Generate Real Estate Leads in India (Without the Junk Leads)",
+  "title": "How to Generate Real Estate Leads in India: Free and Paid Methods",
   "seoTitle": "How to Generate Real Estate Leads in India (Free & Paid)",
-  "excerpt": "Free and paid ways to generate real estate leads in India: portals, Meta and Google ads, channel partners and referrals, and how to stop junk leads.",
+  "excerpt": "How to generate real estate leads in India for free and with ads: Google Business Profile, portals, referrals, Meta and Google ads, and fixing junk leads.",
   "date": "2026-09-26",
   "category": "Guides",
   "service": "paid-ads",
@@ -17,35 +17,46 @@
   "faqs": [
     {
       "question": "How can I generate real estate leads in India?",
-      "answer": "Combine a few sources: property portals, your own Meta and Google ads sent to a project landing page, channel partners, referrals and a Google Business Profile. Then judge each source on cost per site visit rather than the number of enquiries."
+      "answer": "Combine free sources such as a Google Business Profile, referrals, portal listings and walkthrough videos with paid sources such as Google search ads and Meta ads sent to a project landing page. Then compare every source on cost per site visit rather than the number of enquiries."
     },
     {
-      "question": "How do I get real estate leads for free?",
-      "answer": "Set up a Google Business Profile, ask every past buyer for referrals, post walkthrough and locality videos with your WhatsApp number, work with developers as a registered channel partner, and reply instantly to every enquiry you already receive."
+      "question": "How do I generate real estate leads for free in India?",
+      "answer": "Complete your Google Business Profile and ask happy clients for reviews, list on property portals, ask every past buyer for referrals, post walkthrough and locality videos with your WhatsApp number, register with RERA and work with developers as a channel partner, and reply instantly to every enquiry."
+    },
+    {
+      "question": "What are the best paid ways to get real estate leads?",
+      "answer": "Google search ads for people already searching a locality or project, Meta ads for launches, EOI drives and retargeting, and paid portal plans for visibility. Send ads to a project landing page, track each lead to its ad, and judge every channel on site visits."
+    },
+    {
+      "question": "Does Google have a lead generation program for real estate in India?",
+      "answer": "Google doesn't sell leads. It offers Google Ads, including search ads, lead form assets and Performance Max, plus a free Google Business Profile for local visibility. The leads come from how well you target, what your landing page shows and how fast you follow up."
     },
     {
       "question": "Why are my real estate leads junk?",
-      "answer": "Usually because forms are too easy to submit, the ad doesn’t show the price band, the platforms are optimising for form fills, Google ads match irrelevant searches, or the lead was called too late. Each has a fix: qualifying questions, visible prices, sending site-visit data back to the platforms, negative keywords and instant WhatsApp replies."
-    },
-    {
-      "question": "Are Facebook leads fake?",
-      "answer": "Mostly not. Many are real people who submitted an instant form with little thought, or were not contacted quickly. Higher-intent forms, qualifying questions and a reply within seconds usually improve Meta lead quality."
-    },
-    {
-      "question": "Where do real estate agents get the most leads?",
-      "answer": "In India, most brokers rely on portals, developer-shared leads and referrals. Portal leads are often shared with other brokers, so more agents now add their own ads and project pages to get leads nobody else receives."
+      "answer": "Usually because forms are too easy to submit, the ad hides the price band, the platforms optimise for form fills, Google ads match irrelevant searches, or the lead was called too late. Fix it with qualifying questions, visible prices, conversion data sent back, negative keywords and instant WhatsApp replies."
     },
     {
       "question": "Should I buy real estate leads or phone number databases?",
-      "answer": "Avoid bought number lists: the people never agreed to be contacted, promotional calls to DND numbers can breach TRAI rules, and the DPDP Act, 2023 requires consent. Pay-per-lead services that run their own ads are different, but ask if leads are exclusive and judge them on site visits."
+      "answer": "Avoid bought number lists. The people never agreed to be contacted, TRAI's 2025 amendments speed up action against spam senders, and the DPDP Act, 2023 requires consent for a clear purpose. Pay-per-lead services that run their own ads are different, but check exclusivity and site visits."
     },
     {
       "question": "How quickly should I respond to a property lead?",
-      "answer": "Within minutes, ideally seconds. Buyers enquire with several projects the same evening, and the first to reply with the price sheet and a visit slot usually gets the visit. A WhatsApp chatbot makes that possible at any hour."
+      "answer": "Within minutes, ideally seconds. Buyers often enquire with several projects the same evening, and the first to reply with the price sheet and a visit slot is well placed to get the visit. A WhatsApp chatbot on the official Business Platform makes that possible at any hour."
     },
     {
       "question": "How should I measure real estate lead generation?",
-      "answer": "Track spend, enquiries, contacted, qualified, site visits and bookings for every source, and compare sources on cost per site visit. Move budget monthly towards the cheapest source of visits."
+      "answer": "Track spend, enquiries, contacted, qualified, site visits and bookings for every source in one monthly table, and compare sources on cost per site visit. Move budget towards the cheapest source of visits and cut the rest, however good their lead counts look."
     }
-  ]
+  ],
+  "about": [
+    {
+      "name": "Lead generation",
+      "sameAs": "https://en.wikipedia.org/wiki/Lead_generation"
+    },
+    {
+      "name": "Real estate broker",
+      "sameAs": "https://en.wikipedia.org/wiki/Real_estate_broker"
+    }
+  ],
+  "updated": "2026-11-05"
 }

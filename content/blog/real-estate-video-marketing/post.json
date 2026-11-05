@@ -1,8 +1,9 @@
 {
-  "title": "Real Estate Video Marketing: Walkthroughs, Virtual Tours, Drone Rules and Reels",
-  "seoTitle": "Real Estate Video Marketing: Walkthroughs to Drone Rules",
-  "excerpt": "Real estate video marketing: which videos work where, a simple phone kit, shooting a walkthrough, virtual tours, India's drone rules, YouTube and Reels.",
+  "title": "Real Estate Video Marketing: Services, Walkthroughs, Drones, Reels",
+  "seoTitle": "Real Estate Video Marketing: Services, Drones and Reels",
+  "excerpt": "Real estate video marketing: video types, what video services include, a phone kit, walkthroughs, virtual tours, India's drone rules, YouTube and Reels.",
   "date": "2026-10-23",
+  "updated": "2026-11-05",
   "category": "Landing Pages",
   "service": "high-converting-landing-pages",
   "image": "/images/people/blog/vid-gimbal.jpg",
@@ -32,36 +33,39 @@
   "faqs": [
     {
       "question": "What is real estate video marketing?",
-      "answer": "Using video, such as walkthroughs, location tours, construction updates, virtual tours, drone shots and short Reels, to show buyers what photos and brochures can't, and to turn that interest into enquiries and site visits."
+      "answer": "Real estate video marketing is using video, such as walkthroughs, location tours, construction updates, virtual tours, drone shots and short Reels, to show buyers what photos and brochures can't, and then turning that interest into enquiries and site visits through landing pages, WhatsApp and ads."
+    },
+    {
+      "question": "What do real estate video marketing services include?",
+      "answer": "Usually planning and shot lists, filming walkthroughs, location tours and drone footage with a certified pilot, editing with captions and regional-language versions, vertical and horizontal cuts, YouTube and Reels uploads, video ads, and tracking which videos bring enquiries and site visits rather than just views."
+    },
+    {
+      "question": "Should I hire a video service or shoot property videos myself?",
+      "answer": "Shoot construction updates, Reels and simple explainers in-house with a phone, gimbal and mic. Hire professionals for the main project film, polished walkthroughs, 360° tours on larger projects and drone footage, unless you have a registered drone and a certified pilot of your own."
     },
     {
       "question": "What types of video work best for real estate?",
-      "answer": "Sample flat walkthroughs, location and commute tours, monthly construction updates, explainers (carpet area, payment plans, RERA checks), virtual tours for remote buyers, drone footage of the surroundings, and handover videos with buyers' permission."
+      "answer": "Sample flat walkthroughs, location and commute tours, regular construction updates, explainers on carpet area, payment plans and RERA checks, virtual tours for remote buyers, drone footage of the surroundings, and handover videos made with buyers' written permission. Walkthroughs and location tours answer the most buyer questions."
     },
     {
       "question": "What equipment do I need for real estate videos?",
-      "answer": "A recent smartphone that records 1080p or 4K, a phone gimbal, a wireless clip-on microphone, a tripod, good daylight or a small LED light, and a phone editor with auto-captions."
-    },
-    {
-      "question": "What is a virtual tour in real estate?",
-      "answer": "A 360° tour that lets buyers look around a property themselves on a phone or laptop. It is most useful for NRI and out-of-town buyers and as a filter before a site visit."
+      "answer": "A recent smartphone that records 1080p or 4K, a phone gimbal for smooth walking shots, a wireless clip-on microphone, a tripod, good daylight or a small LED light, and a phone editor with auto-captions. Start with the phone, mic and gimbal and add the rest later."
     },
     {
       "question": "Do I need permission to fly a drone for a real estate shoot in India?",
-      "answer": "Under the Drone Rules, 2021 the drone must be registered on Digital Sky, the pilot needs a remote pilot certificate for commercial use of drones above nano size, and the airspace map must be checked; yellow and red zones need permission or are off limits. Hiring a certified operator is simplest."
+      "answer": "Under the Drone Rules, 2021, no permission is needed in green zones, while yellow and red zones need permission or are off limits; check the Digital Sky map before every flight. A builder's shoot is commercial, so use a registered drone and a certified pilot. Hiring a certified operator is simplest."
     },
     {
       "question": "How long should a real estate Reel be?",
-      "answer": "Instagram allows Reels of up to three minutes and YouTube Shorts can also run up to three minutes, but for property short and specific usually works best: one flat, one view or one question answered, with captions and a clear call to action."
+      "answer": "Instagram Reels and YouTube Shorts can both run up to three minutes, but for property short and specific usually works best: one flat, one view or one question answered. Open with the strongest shot, add captions for silent viewers, and end with one clear call to action."
     },
     {
       "question": "Can I use 3D renders in real estate video ads?",
-      "answer": "Yes, but label them as artist's impressions and make sure they don't show finishes, views or amenities buyers won't get. Under Section 12 of the RERA Act, the promoter can be liable for false statements in advertisements."
+      "answer": "Yes, but label them as artist's impressions and make sure they don't show finishes, views or amenities buyers won't get. Under Section 12 of the RERA Act, the promoter can be liable to compensate buyers for false statements in advertisements, and a video ad counts."
     },
     {
       "question": "How do I get enquiries from property videos?",
-      "answer": "Place a walkthrough on the landing page next to the form and WhatsApp button, send it on WhatsApp after each enquiry, run your best videos as Meta ads and retarget viewers, and tag each video's link so you can see which brings enquiries."
+      "answer": "Place a short walkthrough on the landing page next to the form and WhatsApp button, send it on WhatsApp after each enquiry, run your best videos as Meta ads and retarget viewers, and tag each video's link or WhatsApp message so you can see which ones bring enquiries."
     }
-  ],
-  "updated": "2026-10-23"
+  ]
 }

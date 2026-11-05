@@ -1,27 +1,68 @@
 {
   "title": "How to Sell Plots Online: A Practical Guide for Plot Developers",
-  "seoTitle": "How to Sell Plots Online in India: Layouts, Ads, Follow-up",
-  "excerpt": "How to sell plots online in India: what to show for every plot, drone and walk-through videos, where to advertise, RERA points and WhatsApp follow-up.",
+  "seoTitle": "How to Sell Plots Online in India: Listings, RERA, Ads",
+  "excerpt": "How to sell plots online in India: what every plot listing needs, RERA and land rules, drone video, where to advertise and WhatsApp follow-up.",
   "date": "2026-10-28",
+  "updated": "2026-11-05",
   "category": "Growth Tips",
   "service": "paid-ads",
   "image": "/images/people/blog/plots-aerial-farmland.jpg",
   "imageAlt": "Aerial view of land divided into rectangular plots with a house at one corner",
   "inlineImages": [
-    { "src": "/images/people/blog/plots-drone-over-trees.jpg", "alt": "A white camera drone flying over green trees", "beforeHeading": "photos-and-video", "caption": "Check the Digital Sky zone map before flying a drone over a site." },
-    { "src": "/images/people/blog/plots-surveyor-road.jpg", "alt": "A surveyor in a hat using a survey instrument beside a new road", "beforeHeading": "site-visit" }
+    {
+      "src": "/images/people/blog/plots-drone-over-trees.jpg",
+      "alt": "A white camera drone flying over green trees",
+      "beforeHeading": "photos-and-video",
+      "caption": "Check the Digital Sky zone map before flying a drone over a site."
+    },
+    {
+      "src": "/images/people/blog/plots-surveyor-road.jpg",
+      "alt": "A surveyor in a hat using a survey instrument beside a new road",
+      "beforeHeading": "site-visit"
+    }
   ],
   "about": [
-    { "name": "Real Estate (Regulation and Development) Act, 2016", "sameAs": "https://en.wikipedia.org/wiki/Real_Estate_(Regulation_and_Development)_Act,_2016" }
+    {
+      "name": "Real Estate (Regulation and Development) Act, 2016",
+      "sameAs": "https://en.wikipedia.org/wiki/Real_Estate_(Regulation_and_Development)_Act,_2016"
+    }
   ],
   "faqs": [
-    { "question": "How do I sell my plot faster online?", "answer": "Show the layout plan with sizes, facing and road widths, share approvals and the RERA number up front, add drone and walk-through videos, and reply to every enquiry on WhatsApp within minutes with the layout, location pin and two site-visit slots." },
-    { "question": "What should a plot listing include?", "answer": "Plot number and size, facing, road width, availability, approvals and RERA number, a Google Maps pin, travel times to key places, amenities that exist today, and a price band or payment plan." },
-    { "question": "Do plotted projects need RERA registration?", "answer": "Most do. The RERA Act exempts only very small projects, with land up to 500 square metres or up to eight units. Check with your state RERA authority before you advertise." },
-    { "question": "Where should I advertise plots online?", "answer": "Google Search for people already searching for plots in your area, Meta ads for investors and families, property portals such as 99acres and MagicBricks, YouTube for drone and walk-through videos, and your own landing page." },
-    { "question": "Can I use a drone to film my plot project?", "answer": "Yes, under India's Drone Rules, 2021. Check the Digital Sky airspace map first: green zones need no permission for small drones, while yellow and red zones, such as areas near airports, need permission or are off limits." },
-    { "question": "How should I follow up on a plot enquiry?", "answer": "Reply on WhatsApp within minutes with the layout PDF, location pin, drone video and two visit slots, ask about plot size and purpose, then follow up on day 2 and day 5 with something new." },
-    { "question": "Should I promise returns when selling plots?", "answer": "No. Promising returns attracts the wrong buyers and advertising assured returns can break RERA and consumer protection rules. Show facts such as approved infrastructure and travel times instead." },
-    { "question": "Who buys plots?", "answer": "End users planning to build a home, investors expecting appreciation, and NRIs or buyers from other cities. All of them worry about title, approvals, access roads and whether the plot matches the brochure." }
+    {
+      "question": "How do I sell my plot faster online?",
+      "answer": "Show the layout plan with sizes, facing and road widths, share approvals and the RERA number up front, add drone and walk-through videos, and reply to every enquiry on WhatsApp within minutes with the layout, a location pin and two site-visit slots."
+    },
+    {
+      "question": "What should a plot listing include?",
+      "answer": "Plot number and size in square yards or square metres, facing, road width, availability updated weekly, approvals and the RERA number, a Google Maps pin, travel times to key places, development that exists today, and a price band per square yard with the payment plan."
+    },
+    {
+      "question": "Do plotted projects need RERA registration?",
+      "answer": "Most do. Section 3 of the RERA Act requires registration before advertising or selling, and exempts only projects where the land does not exceed 500 square metres or apartments do not exceed eight; states can set a lower threshold. Check with your state RERA authority before advertising."
+    },
+    {
+      "question": "Can NRIs buy plots in India?",
+      "answer": "NRIs can buy residential and commercial plots, but under the RBI's FEMA Master Direction they cannot buy agricultural land, plantation property or farm houses. So market only non-agricultural plots to NRIs, and ask buyers to confirm details with their bank or a chartered accountant."
+    },
+    {
+      "question": "Where should I advertise plots online?",
+      "answer": "Google Search for people already searching for plots in your area, Meta ads for investors and families, property portals such as 99acres and MagicBricks, YouTube for drone and walk-through videos, Google Business Profile for the site office, channel partners, and your own landing page."
+    },
+    {
+      "question": "Can I use a drone to film my plot project?",
+      "answer": "Yes, under India's Drone Rules, 2021. No permission is needed in green zones, while yellow zones within 12 km of an airport and red zones need permission or are off limits. Check the Digital Sky map first and use a registered drone with a certified pilot."
+    },
+    {
+      "question": "How should I follow up on a plot enquiry?",
+      "answer": "Reply on WhatsApp within minutes with the layout PDF, location pin, drone video and two visit slots, and ask about plot size and purpose. Then follow up a couple of days later and again later in the week with something new, such as a progress update."
+    },
+    {
+      "question": "Should I promise returns when selling plots?",
+      "answer": "No. Promising returns attracts the wrong buyers, and advertising assured returns can break RERA and consumer protection rules. Show verifiable facts instead, such as approved infrastructure with an official source, travel times and the development already done on the site."
+    },
+    {
+      "question": "Who buys plots?",
+      "answer": "End users planning to build a home, investors expecting appreciation, and NRIs or buyers from other cities. All of them worry about title, approvals, access roads, encroachment and whether the plot matches the brochure, so your listing should answer those doubts first."
+    }
   ]
 }

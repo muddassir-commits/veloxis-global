@@ -1,7 +1,7 @@
 {
-  "title": "Real Estate Broker Commission in India: Rates, Who Pays, RERA, GST and TDS",
-  "seoTitle": "Real Estate Broker Commission Rates in India: Who Pays",
-  "excerpt": "Broker commission rates in India: no fixed national rate, who pays in resale vs new projects, Haryana's 1% cap, CP payouts, RERA, 18% GST and 2% TDS.",
+  "title": "Broker Commission Rates in India: Who Pays, Land, RERA, GST and TDS",
+  "seoTitle": "Real Estate Broker Commission Rates in India (2026)",
+  "excerpt": "Broker commission rates in India: no national rate, Haryana's 1% rule, land broker commission, who pays on resale vs new projects, RERA, GST and TDS.",
   "date": "2026-10-17",
   "category": "Growth Tips",
   "service": "paid-ads",
@@ -47,8 +47,12 @@
   ],
   "faqs": [
     {
-      "question": "How much commission does a real estate broker charge in India?",
-      "answer": "There is no national fixed rate. In resale and rentals the fee is agreed in writing between the broker and the buyer, seller or tenant, usually as a percentage of the price or a share of the rent. In new projects the developer pays the channel partner under its CP agreement. Haryana is an exception: its property dealer rules allow 1% of the agreed price, half from each side."
+      "question": "What are real estate broker commission rates in India?",
+      "answer": "There is no national fixed rate. In resale, rental and land deals the fee is agreed in writing between the broker and the buyer, seller or tenant, usually as a percentage of the price or linked to rent. On new projects the developer pays the channel partner. Haryana's rules allow 1% of the agreed price, half from each side."
+    },
+    {
+      "question": "How much is land broker commission in India?",
+      "answer": "Land broker commission is a negotiated percentage of the sale price, with no national rate. It is usually paid by the buyer, the seller or both on registration of the sale deed, sometimes in stages. Agree the rate, payer, stages and the work included, such as title and land-record checks, in writing."
     },
     {
       "question": "Who pays the broker commission on a new project flat?",
@@ -56,7 +60,7 @@
     },
     {
       "question": "Does RERA fix broker commission?",
-      "answer": "No. The RERA Act, 2016 does not set commission rates. It requires agents to register with the state RERA authority (Section 9), sets their duties (Section 10) and penalises breaches with up to ₹10,000 a day, up to 5% of the property's cost (Section 62)."
+      "answer": "No. The RERA Act, 2016 does not set commission rates. It requires agents to register with the state RERA authority (Section 9), sets their duties (Section 10) and penalises breaches with up to ₹10,000 a day, up to 5% of the unit's cost (Section 62)."
     },
     {
       "question": "Is there a legal cap on brokerage in Haryana?",
@@ -64,7 +68,7 @@
     },
     {
       "question": "Is GST charged on real estate brokerage?",
-      "answer": "Yes. Brokerage is a taxable service at 18% GST. A broker must register for GST once yearly turnover crosses ₹20 lakh for services in most states (₹10 lakh in special category states) and then adds GST to the invoice."
+      "answer": "Yes. Brokerage is a taxable service charged at 18% GST. A broker must register for GST once yearly turnover crosses ₹20 lakh for services in most states (₹10 lakh in special category states) and then adds GST to the invoice. Check current rates on the CBIC GST portal before invoicing."
     },
     {
       "question": "What is the TDS rate on brokerage and commission?",
@@ -79,5 +83,5 @@
       "answer": "At the milestone written in the CP agreement, for example after the buyer has paid a set share of the price or after the agreement for sale is registered. The agreement should also say how buyers are registered to a CP and what happens to commission if a booking is cancelled."
     }
   ],
-  "updated": "2026-10-23"
+  "updated": "2026-11-05"
 }

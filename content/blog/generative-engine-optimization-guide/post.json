@@ -1,7 +1,7 @@
 {
-  "title": "Generative Engine Optimization (GEO): How to Get Your Business Into ChatGPT, Gemini and Google’s AI Answers",
-  "seoTitle": "Generative Engine Optimization (GEO): A Practical Guide",
-  "excerpt": "Generative engine optimization (GEO) and AEO explained: how AI tools pick sources, six steps to get cited in ChatGPT and AI Overviews, and free tracking.",
+  "title": "Generative Engine Optimization (GEO): How to Get Cited by AI Search",
+  "seoTitle": "GEO Optimization: Generative Engine Optimization Guide",
+  "excerpt": "GEO optimization explained: how ChatGPT, Gemini, Perplexity, Claude and Copilot pick sources, which AI bots to allow, and how to measure AI visibility.",
   "date": "2026-10-12",
   "updated": "2026-11-05",
   "category": "Guides",
@@ -38,41 +38,55 @@
     }
   ],
   "about": [
-    { "name": "Generative engine optimization", "sameAs": "https://en.wikipedia.org/wiki/Generative_engine_optimization" },
-    { "name": "Search engine optimization", "sameAs": "https://en.wikipedia.org/wiki/Search_engine_optimization" }
+    {
+      "name": "Generative engine optimization",
+      "sameAs": "https://en.wikipedia.org/wiki/Generative_engine_optimization"
+    },
+    {
+      "name": "Search engine optimization",
+      "sameAs": "https://en.wikipedia.org/wiki/Search_engine_optimization"
+    },
+    {
+      "name": "Large language model",
+      "sameAs": "https://en.wikipedia.org/wiki/Large_language_model"
+    }
   ],
   "faqs": [
     {
       "question": "What is generative engine optimization (GEO)?",
-      "answer": "GEO means making your content easy for AI tools such as ChatGPT, Gemini, Perplexity, Copilot and Google's AI Overviews to find, trust and quote when they write an answer."
+      "answer": "GEO is the work of getting your business found, quoted and named in AI answers from ChatGPT, Gemini, Perplexity, Claude, Grok, Copilot and Google's AI Overviews. It combines solid SEO with answer-first pages, specific sourced facts, consistent business details across the web and genuine mentions on sites that AI engines already trust."
     },
     {
       "question": "What is the difference between GEO, AEO and SEO?",
-      "answer": "SEO gets your pages into search indexes and normal results. AEO (answer engine optimization) makes each answer on a page easy to lift. GEO makes AI tools trust your business enough to name or cite it in their answers."
+      "answer": "SEO gets your pages indexed and ranked in normal search. AEO (answer engine optimization) makes each answer on a page short and direct enough to lift. GEO makes AI engines trust your business enough to cite or name it. They overlap heavily, and Google says optimizing for its AI features is still SEO."
     },
     {
-      "question": "Is GEO replacing SEO?",
-      "answer": "No. Google's AI Overviews and AI Mode are built on Google's normal index, and ChatGPT and Copilot use search indexes including Bing. Good SEO is the foundation; GEO adds entity consistency, answer-first writing and mentions on other websites."
+      "question": "How do I optimize for ChatGPT search?",
+      "answer": "Allow OAI-SearchBot in robots.txt, because OpenAI says sites that block it are not shown in ChatGPT search answers. Get indexed in Bing too, since its index is widely reported to feed ChatGPT search. Then write answer-first pages with specific facts and earn real mentions on directories, review sites and community answers."
     },
     {
-      "question": "How do I get my business mentioned in ChatGPT?",
-      "answer": "Allow OAI-SearchBot in robots.txt, get indexed in Bing, use one consistent business description everywhere, write answer-first pages with specific facts, and get listed and reviewed on the third-party sites that ChatGPT already cites for your topic."
+      "question": "Which AI crawlers should I allow in robots.txt?",
+      "answer": "Allow the search crawlers: OAI-SearchBot (ChatGPT search), PerplexityBot, Claude-SearchBot and Bingbot. Training crawlers such as GPTBot, ClaudeBot and the Google-Extended token are a separate choice. Blocking Google-Extended does not affect Google Search, but it can stop Gemini apps from citing your pages through grounding."
+    },
+    {
+      "question": "Does llms.txt help with GEO?",
+      "answer": "Not much for search today. llms.txt is a proposal published by Jeremy Howard in 2024, not an official standard. Google says Google Search does not use it and you don't need it for AI Overviews or AI Mode, though it may help other AI services. Add one if it is easy, but don't expect rankings to change."
     },
     {
       "question": "Do I need special schema for AI Overviews?",
-      "answer": "Google says no special markup is needed. Organization, Article, FAQPage and Service schema still help systems read your pages correctly, as long as the markup matches what is visible."
-    },
-    {
-      "question": "Does llms.txt help with AI search?",
-      "answer": "It is optional. llms.txt is a proposed summary file for AI tools; Google has said it does not use it, and there is little evidence other tools rely on it yet."
+      "answer": "No. Google says no special markup or AI files are needed to appear in AI Overviews or AI Mode; the page only has to be indexed and eligible for a snippet. Organization, Article, FAQPage and Service schema still help machines read your pages and can earn rich results, as long as markup matches the visible page."
     },
     {
       "question": "How can I measure AI visibility for free?",
-      "answer": "Check 20 customer prompts monthly in ChatGPT, Gemini, Perplexity and Copilot, track referrals from chatgpt.com and perplexity.ai in Google Analytics 4, and watch impressions on question-style queries in Google Search Console."
+      "answer": "Check a fixed list of about 20 customer prompts each month in ChatGPT, Gemini, Perplexity, Claude, Grok and Copilot. Use the AI Performance report in Bing Webmaster Tools for Copilot citations, Google Search Console for AI feature traffic, and GA4 session sources such as chatgpt.com and perplexity.ai for visits."
+    },
+    {
+      "question": "How does generative engine optimization work for real estate?",
+      "answer": "For builders, brokers and channel partners, GEO means publishing each project's RERA number, location, configurations, price band and possession date as plain text, keeping those facts identical on your site, portals and Google Business Profile, answering buyer questions on dedicated pages, and earning real reviews and listings that AI tools can cite."
     },
     {
       "question": "How long does GEO take to work?",
-      "answer": "Months rather than days. Indexing, mentions on other sites and trust build over time, so measure monthly."
+      "answer": "Usually months rather than days. Google says recrawling can take several days to several months, and mentions on other sites, reviews and trust build gradually. Change robots.txt and Bing setup first, since those apply within about a day for OpenAI and Perplexity, then measure your prompts monthly."
     }
   ]
 }
