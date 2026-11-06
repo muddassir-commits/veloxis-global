@@ -5,6 +5,7 @@ import { Badge } from '../../components/ui/Badge';
 import { FaqAccordion } from '../../components/sections/FaqAccordion';
 import { constructMetadata, pageMeta } from '../../lib/seo-config';
 import { siteData } from '../../data/site';
+import { WhatsAppLink } from '../../components/ui/WhatsAppLink';
 import { privacyFaqs } from '../../data/page-faqs';
 
 export const metadata: Metadata = constructMetadata(pageMeta.privacy);
@@ -58,7 +59,7 @@ export default function PrivacyPolicyPage() {
               Noida, Delhi NCR, Lucknow and Kanpur. For the personal data described here, we decide why and how it is
               used, which makes us the “Data Fiduciary” under the DPDP Act. You can reach us at{' '}
               <a href={`mailto:${siteData.email}`} className={link}>{siteData.email}</a> or{' '}
-              <a href={siteData.whatsappLink} className={link} target="_blank" rel="noopener noreferrer">WhatsApp {siteData.phone}</a>.
+              <WhatsAppLink placement="legal" className={link}>WhatsApp {siteData.phone}</WhatsAppLink>.
             </p>
 
             <h2 className={h2}>2. What we collect</h2>
@@ -193,7 +194,7 @@ export default function PrivacyPolicyPage() {
             <p>
               For any privacy question, request or complaint, contact the grievance officer of
               Veloxis Global: <a href={`mailto:${PRIVACY_EMAIL}`} className={link}>{PRIVACY_EMAIL}</a>,{' '}
-              <a href={siteData.whatsappLink} className={link} target="_blank" rel="noopener noreferrer">WhatsApp {siteData.phone}</a>.
+              <WhatsAppLink placement="grievance" className={link}>WhatsApp {siteData.phone}</WhatsAppLink>.
             </p>
           </div>
         </div>

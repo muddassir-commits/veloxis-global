@@ -7,6 +7,7 @@ import { openCookieSettings } from '../../lib/consent';
 import { Facebook, Instagram, Linkedin, XLogo } from '../ui/BrandIcons';
 import { Button } from '../ui/Button';
 import { WhatsAppIcon } from '../ui/WhatsAppIcon';
+import { WhatsAppLink } from '../ui/WhatsAppLink';
 import { ChevronDown, ChevronUp, ArrowUp, Mail, MapPin, CheckCircle2 } from 'lucide-react';
 import { siteData } from '../../data/site';
 
@@ -168,23 +169,21 @@ export const Footer: React.FC = () => {
           {/* Contact + service area (always open) */}
           <div className="md:col-span-2 lg:col-span-4 flex flex-col gap-4 pb-6 md:pb-0 border-b border-white/5 md:border-b-0">
             <span className="text-[12px] tracking-[0.08em] uppercase text-slate-200 font-black">GET IN TOUCH</span>
-            <a href={siteData.whatsappLink} target="_blank" rel="noopener noreferrer" className="text-[15px] text-slate-200 hover:text-white transition-colors flex items-center gap-2.5 w-fit min-h-[28px]">
+            <WhatsAppLink placement="footer" className="text-[15px] text-slate-200 hover:text-white transition-colors flex items-center gap-2.5 w-fit min-h-[28px]">
               <WhatsAppIcon className="w-4 h-4 shrink-0" />
               <span>WhatsApp {siteData.phone}</span>
-            </a>
+            </WhatsAppLink>
             <a href={`mailto:${siteData.email}`} className="text-[15px] text-slate-200 hover:text-white transition-colors flex items-center gap-2.5 w-fit min-h-[28px] break-all">
               <Mail className="w-4 h-4 text-royal-blue shrink-0" aria-hidden="true" />
               <span>{siteData.email}</span>
             </a>
-            <a
-              href={siteData.whatsappLink}
-              target="_blank"
-              rel="noopener noreferrer"
+            <WhatsAppLink
+              placement="footer-btn"
               className="bg-[#25D366] hover:bg-[#20ba5a] text-slate-900 py-2.5 px-4 rounded-xl font-bold text-xs inline-flex items-center justify-center gap-2 transition-all duration-300 w-full sm:w-fit shadow-md shadow-emerald-950/20"
             >
               <WhatsAppIcon variant="current" className="w-4 h-4 shrink-0" />
               <span>Chat on WhatsApp</span>
-            </a>
+            </WhatsAppLink>
             <div className="mt-2">
               <p className="text-[12px] tracking-[0.08em] uppercase text-slate-200 font-black mb-3 flex items-center gap-2">
                 <MapPin className="w-3.5 h-3.5 text-royal-blue" aria-hidden="true" />

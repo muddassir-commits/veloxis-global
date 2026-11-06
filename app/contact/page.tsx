@@ -16,6 +16,7 @@ import { FaqAccordion } from '../../components/sections/FaqAccordion';
 import { contactFaqs } from '../../data/page-faqs';
 import { Mail, Calendar, MapPin } from 'lucide-react';
 import { WhatsAppIcon } from '../../components/ui/WhatsAppIcon';
+import { WhatsAppLink } from '../../components/ui/WhatsAppLink';
 
 export const metadata: Metadata = constructMetadata(pageMeta.contact);
 
@@ -98,7 +99,7 @@ export default function ContactPage() {
                   </div>
                 </a>
 
-                <a href={siteData.whatsappLink} target="_blank" rel="noopener noreferrer" className="flex items-start gap-4 p-4 sm:p-6 rounded-2xl bg-white border border-slate-100 hover:border-teal-accent/40 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 group">
+                <WhatsAppLink placement="card" className="flex items-start gap-4 p-4 sm:p-6 rounded-2xl bg-white border border-slate-100 hover:border-teal-accent/40 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 group">
                   <div className="w-10 h-10 rounded-lg bg-[#25D366]/10 flex items-center justify-center shrink-0 transition-transform duration-300 group-hover:scale-110 group-hover:-rotate-6" aria-hidden="true">
                     <WhatsAppIcon className="w-5 h-5" />
                   </div>
@@ -106,7 +107,7 @@ export default function ContactPage() {
                     <span className="text-xs font-bold text-slate-500 uppercase tracking-wider block">WhatsApp</span>
                     <span className="font-extrabold text-slate-900 text-base sm:text-lg block mt-0.5 group-hover:text-teal-accent transition-colors">{siteData.phone}</span>
                   </div>
-                </a>
+                </WhatsAppLink>
               </div>
 
               <hr className="border-slate-100" />

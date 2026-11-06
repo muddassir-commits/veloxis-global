@@ -143,6 +143,9 @@ export default function BlogPostContent({ post, relatedPosts, service }: Props) 
                   href={shareUrls.whatsapp}
                   target="_blank"
                   rel="noopener noreferrer"
+                  data-cta="blog_share_whatsapp"
+                  data-cta-type="share"
+                  data-cta-location="share"
                   aria-label="Share on WhatsApp"
                   className="w-7 h-7 bg-slate-50 hover:bg-teal-600 hover:text-white transition-colors rounded-full flex items-center justify-center text-slate-500"
                 >
@@ -185,7 +188,7 @@ export default function BlogPostContent({ post, relatedPosts, service }: Props) 
                       </figure>
                     )}
                     <div className="article-body" dangerouslySetInnerHTML={{ __html: part.html }} />
-                    {i === leadMagnetIndex && <InArticleLeadMagnet />}
+                    {i === leadMagnetIndex && <InArticleLeadMagnet postTitle={post.title} />}
                   </React.Fragment>
                 ));
               })()}

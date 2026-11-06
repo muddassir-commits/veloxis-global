@@ -6,6 +6,7 @@ import { Button } from '../components/ui/Button';
 import { ArrowRight, Home } from 'lucide-react';
 import { siteData } from '../data/site';
 import { WhatsAppIcon } from '../components/ui/WhatsAppIcon';
+import { WhatsAppLink } from '../components/ui/WhatsAppLink';
 
 export default function NotFound() {
   const serviceLinks = [
@@ -61,15 +62,14 @@ export default function NotFound() {
             <span className="text-xs font-medium text-slate-400">
               Need immediate assistance?
             </span>
-            <a
-              href={siteData.whatsappLink}
-              target="_blank"
-              rel="noopener noreferrer"
+            <WhatsAppLink
+              placement="help"
+              page="notFound"
               className="inline-flex items-center gap-2 text-sm font-extrabold text-slate-900 hover:text-royal-blue transition-colors"
             >
               <WhatsAppIcon className="w-4 h-4" />
               WhatsApp {siteData.phone}
-            </a>
+            </WhatsAppLink>
           </div>
         </div>
 

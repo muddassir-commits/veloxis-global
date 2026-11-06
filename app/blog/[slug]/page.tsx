@@ -86,8 +86,8 @@ export default async function SingleBlogPostPage({ params }: Params) {
 
       <FaqAccordion customFaqs={post.faqs} title="Frequently asked questions" badgeText="FAQ" description="Quick answers from this guide." />
 
-      <CtaBanner />
-      <BlogStickyCta />
+      <CtaBanner whatsappTitle={post.title} />
+      <BlogStickyCta postTitle={post.title} />
     </>
   );
 }

@@ -2,7 +2,7 @@ import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { Megaphone, LayoutTemplate, MessageCircle, LineChart, CheckCircle } from 'lucide-react';
-import { Button } from '../../components/ui/Button';
+import { WhatsAppLink } from '../../components/ui/WhatsAppLink';
 import { ImageFrame } from '../../components/ui/ImageFrame';
 import { FaqAccordion } from '../../components/sections/FaqAccordion';
 import { Breadcrumb } from '../../components/ui/Breadcrumb';
@@ -17,8 +17,6 @@ export const metadata: Metadata = constructMetadata({
     'Meta ads, store pages that convert and WhatsApp and email follow-ups for Indian D2C brands, run by a small hands-on team and judged on orders, not clicks.',
   path: '/d2c',
 });
-
-const WHATSAPP = 'https://wa.me/919194020727?text=Hi%20Veloxis%20Global%2C%20I%27d%20like%20a%20free%20store%20audit';
 
 const services = [
   {
@@ -122,9 +120,9 @@ export default function D2CPage() {
               hands-on team, judged on orders, not clicks.
             </p>
             <div className="mt-2 flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
-              <Button id="d2c-hero-btn" href={WHATSAPP} variant="primary" size="lg" className="w-full sm:w-auto">
+              <WhatsAppLink id="d2c-hero-btn" placement="hero" button={{ variant: 'primary', size: 'lg' }} className="w-full sm:w-auto">
                 Get a free store audit →
-              </Button>
+              </WhatsAppLink>
               <Link
                 id="d2c-hero-email"
                 href={`mailto:${siteData.email}?subject=Free%20store%20audit`}
@@ -215,9 +213,9 @@ export default function D2CPage() {
               <p className="text-sm text-slate-300 leading-relaxed mb-5">
                 Send your website on WhatsApp or email. We reply personally with the first changes we would make.
               </p>
-              <Button id="d2c-steps-btn" href={WHATSAPP} variant="white" className="w-full sm:w-auto">
+              <WhatsAppLink id="d2c-steps-btn" placement="steps" button={{ variant: 'white' }} className="w-full sm:w-auto">
                 Message on WhatsApp →
-              </Button>
+              </WhatsAppLink>
             </div>
           </div>
         </div>

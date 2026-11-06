@@ -4,16 +4,14 @@ import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { ArrowRight, X } from 'lucide-react';
 import { WhatsAppIcon } from '../ui/WhatsAppIcon';
-
-const WHATSAPP_URL =
-  'https://wa.me/919194020727?text=Hi%20Veloxis%20Global%2C%20I%20was%20reading%20your%20blog%20and%20would%20like%20a%20free%20marketing%20audit';
+import { WhatsAppLink } from '../ui/WhatsAppLink';
 const DISMISS_KEY = 'vg-blog-cta-closed';
 
 // Small CTA that appears once a reader passes ~30% of a blog post and hides again near the end
 // (where the full CTA banner sits). Desktop: a card bottom-left (the WhatsApp bubble is bottom-right).
 // Mobile: a slim strip just above the existing quick-actions bar. Closing it hides it for the rest of
 // the visit. Clicks are tracked by AnalyticsTracker through the data-cta names below.
-export function BlogStickyCta() {
+export function BlogStickyCta({ postTitle }: { postTitle?: string }) {
   const [show, setShow] = useState(false);
   const [closed, setClosed] = useState(false);
 
@@ -106,16 +104,14 @@ export function BlogStickyCta() {
               Free website audit
               <ArrowRight className="w-4 h-4" aria-hidden="true" />
             </Link>
-            <a
-              href={WHATSAPP_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              data-cta="blog_sticky_whatsapp"
+            <WhatsAppLink
+              placement="sticky"
+              title={postTitle}
               className="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-white/10 hover:bg-white/15 border border-white/15 text-white font-semibold text-sm transition-colors"
             >
               <WhatsAppIcon variant="current" className="w-4 h-4" />
               Chat on WhatsApp
-            </a>
+            </WhatsAppLink>
           </div>
         </div>
       </div>

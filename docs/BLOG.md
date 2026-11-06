@@ -31,6 +31,9 @@ and `app/blog/[slug]/error.tsx` contain any runtime error inside the blog sectio
    **Without Word:** copy `content/blog/_template/` to `content/blog/<slug>/` and fill it in.
 2. Add a 1600×1000 cover photo (and optional inline photos) under `public/images/people/blog/`.
 3. Complete `post.json` (SEO title under 60 characters, excerpt, category, 7–9 FAQs from the article).
+   Add the post's WhatsApp message to `BLOG_MESSAGES` in `data/whatsapp-messages.ts` (one line in the
+   visitor's voice about the topic, plus a short unique `ref` like `blog-eoi`). `blog:check` lists posts
+   without one; until then the WhatsApp buttons use a message built from the post title.
 4. `npm run blog:check` — fix anything listed, then remove `"draft": true`.
 5. `npm run build`, open the post locally, then PR → Vercel preview → merge.
 

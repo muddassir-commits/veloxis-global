@@ -2,7 +2,7 @@ import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { Globe, MapPin, Star, MessageCircle, CheckCircle } from 'lucide-react';
-import { Button } from '../../components/ui/Button';
+import { WhatsAppLink } from '../../components/ui/WhatsAppLink';
 import { ImageFrame } from '../../components/ui/ImageFrame';
 import { SchemaMarkup } from '../../components/ui/SchemaMarkup';
 import { FaqAccordion } from '../../components/sections/FaqAccordion';
@@ -21,8 +21,6 @@ export const metadata: Metadata = constructMetadata({
   description: DESCRIPTION,
   path: '/local-business',
 });
-
-const WHATSAPP = 'https://wa.me/919194020727?text=Hi%20Veloxis%20Global%2C%20I%27d%20like%20a%20free%20website%20audit';
 
 const services = [
   {
@@ -142,9 +140,9 @@ export default function LocalBusinessPage() {
               For clinics, salons, trades and shops in India, the UK and the US.
             </p>
             <div className="mt-2 flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
-              <Button id="local-hero-btn" href={WHATSAPP} variant="primary" size="lg" className="w-full sm:w-auto">
+              <WhatsAppLink id="local-hero-btn" placement="hero" button={{ variant: 'primary', size: 'lg' }} className="w-full sm:w-auto">
                 Get a free website audit →
-              </Button>
+              </WhatsAppLink>
               <Link
                 id="local-hero-email"
                 href={`mailto:${siteData.email}?subject=Free%20website%20audit`}
@@ -241,9 +239,9 @@ export default function LocalBusinessPage() {
                 Send your website or Google profile link on WhatsApp or email. We reply personally with the first changes
                 we would make.
               </p>
-              <Button id="local-steps-btn" href={WHATSAPP} variant="white" className="w-full sm:w-auto">
+              <WhatsAppLink id="local-steps-btn" placement="steps" button={{ variant: 'white' }} className="w-full sm:w-auto">
                 Message on WhatsApp →
-              </Button>
+              </WhatsAppLink>
             </div>
           </div>
         </div>
