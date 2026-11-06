@@ -1,0 +1,110 @@
+<p><strong>Meta ads for D2C brands work best when tracking comes first: the Meta pixel plus the Conversions API, a clean product catalog, then a simple account with one Advantage+ sales campaign, a steady creative testing routine and purchase data that reflects delivered orders, not just placed ones.</strong> Most wasted spend comes from bad data, not bad targeting.</p>
+<p>This guide is for founders and marketers of Indian D2C and e-commerce brands selling on Shopify or WooCommerce. It covers tracking, catalogs, campaign structure, creative testing, cash on delivery (COD) and return-to-origin (RTO) orders, attribution windows, budget split and the rules on ad claims. It promises no ROAS figure, because no honest guide can.</p>
+
+<h2 id="do-meta-ads-work-for-d2c">Do Meta ads work for D2C brands in India?</h2>
+<p>Yes, for products people buy on impulse or discover by seeing them: apparel, beauty, food, home and accessories. Facebook and Instagram are where many shoppers first see a new brand, and Meta's ad system can show your products to people likely to buy once it gets enough purchase data.</p>
+<p>They work less well when the product needs a long search before purchase, or when the margin after shipping, payment fees and returns is too thin to pay for a first order. Check your unit economics before you scale. If buyers already search for your category by name, compare with search ads too; our <a href="/blog/google-ads-vs-meta-ads-real-estate-india">Google Ads vs Meta Ads comparison</a> explains how the two channels differ, even though its examples come from property.</p>
+<p>Real estate works differently: it runs on lead forms and site visits rather than checkout. If that is your business, read <a href="/blog/meta-ads-for-real-estate-india">Meta ads for real estate in India</a> instead.</p>
+
+<h2 id="pixel-and-conversions-api">How do you set up the Meta pixel and Conversions API?</h2>
+<p>Install both, and make sure they share event IDs. The pixel tracks actions in the shopper's browser, while the <a href="https://www.facebook.com/business/help/2041148702652965">Conversions API (Meta Business Help Center)</a> sends the same events from your store's server, so ad blockers and browser limits lose less data. Meta's developer documentation <a href="https://developers.facebook.com/docs/marketing-api/conversions-api/deduplicate-pixel-and-server-events">recommends running the two together</a> and removes duplicates when the event name and event ID match, for events received within 48 hours of the first one.</p>
+<table>
+  <thead><tr><th>Platform</th><th>How to connect</th><th>What to check</th></tr></thead>
+  <tbody>
+    <tr><td>Shopify</td><td>Facebook &amp; Instagram app; choose the Enhanced or Maximum <a href="https://help.shopify.com/en/manual/promoting-marketing/analyze-marketing/meta-data-sharing">data-sharing level</a> (both add the Conversions API; Standard is pixel only)</td><td>Purchase, AddToCart and InitiateCheckout appear in Events Manager from both browser and server</td></tr>
+    <tr><td>WooCommerce</td><td>Meta's official <a href="https://wordpress.org/plugins/facebook-for-woocommerce/">Facebook for WooCommerce plugin</a>, which also syncs the catalog</td><td>No second pixel added by your theme or another plugin (double counting)</td></tr>
+    <tr><td>Custom store</td><td>Pixel code plus a server-side Conversions API integration</td><td>Same event_id on browser and server events</td></tr>
+  </tbody>
+</table>
+<p>After setup, open Events Manager and look at the <a href="https://www.facebook.com/business/help/765081237991954">Event Match Quality score</a> for your Purchase event. It shows how well the customer details you send (email, phone, name, city) help Meta match orders to Facebook and Instagram accounts. Collect only what your privacy policy and checkout consent cover.</p>
+
+<h2 id="product-catalog">Why does a D2C brand need a product catalog?</h2>
+<p>A catalog lets Meta pick which product to show to which person. Meta's documentation describes a <a href="https://developers.facebook.com/docs/marketing-api/catalog">catalog</a> as a container for your product information, used by Advantage+ catalog ads to show products dynamically as personalised ads.</p>
+<p>Keep the feed accurate, because a wrong price or an out-of-stock item in an ad wastes clicks and breaks trust:</p>
+<ul>
+  <li><strong>Sync automatically</strong> from Shopify or WooCommerce rather than uploading spreadsheets by hand.</li>
+  <li><strong>Use clean photos</strong>: the product on a plain background as the main image, with lifestyle shots as extra images.</li>
+  <li><strong>Write plain titles</strong>: product type, key attribute and size or colour, not marketing slogans.</li>
+  <li><strong>Make sure product IDs match</strong> the content IDs your pixel sends, or catalog ads cannot connect a view to a product.</li>
+  <li><strong>Group products into sets</strong> such as bestsellers, new arrivals or high-margin items, so you can advertise each group separately.</li>
+</ul>
+
+<h2 id="campaign-structure">How should you structure Meta campaigns for a D2C brand?</h2>
+<p>Keep it simple: fewer campaigns with more data each learn faster than many small ones. Meta renamed Advantage+ shopping campaigns to <a href="https://www.facebook.com/business/help/1362234537597370">Advantage+ sales campaigns</a> in February 2025, <a href="https://www.socialmediatoday.com/news/meta-advantage-plus-ad-updates-february-2025/739472/">as Social Media Today reported</a>. These campaigns automate audience, placement and budget across your ads, and they are the usual core for an e-commerce account.</p>
+<table>
+  <thead><tr><th>Campaign</th><th>Job</th><th>What goes in</th></tr></thead>
+  <tbody>
+    <tr><td>Advantage+ sales (main)</td><td>Find new buyers and bring back warm ones</td><td>Your proven ads plus catalog ads; optimise for Purchase</td></tr>
+    <tr><td>Creative testing</td><td>Find the next winning ads</td><td>New concepts, each in its own ad set or test</td></tr>
+    <tr><td>Retargeting (optional)</td><td>Remind cart and checkout abandoners</td><td>Catalog ads of viewed products, reviews, delivery and return policy</td></tr>
+  </tbody>
+</table>
+<p>Each ad set needs enough purchases in a week to leave Meta's <a href="https://www.facebook.com/business/help/112167992830700">learning phase</a>. If your store gets few orders, combine ad sets instead of splitting them by age, city or interest. For retargeting ideas you can adapt, see our <a href="/blog/real-estate-retargeting-ads">retargeting ads guide</a>.</p>
+
+<h2 id="creative-testing">How do you test ad creatives without wasting budget?</h2>
+<p>Test one idea at a time, judge on purchases rather than likes, and keep a written log. With broad targeting and automated delivery, the creative now does most of the targeting: the ad itself tells Meta who it is for.</p>
+<ol>
+  <li><strong>Write down 3–5 concepts</strong>, each built on one reason to buy: a problem solved, an ingredient, a comparison, how it is made, or a customer's own words (with permission).</li>
+  <li><strong>Make each concept in two formats</strong>: a short vertical video for Reels and Stories, and a static image or carousel for Feed.</li>
+  <li><strong>Put the hook in the first seconds</strong>: show the product in use and the outcome, not your logo. Our <a href="/blog/instagram-reels-marketing">Instagram Reels guide</a> covers hooks and filming on a phone.</li>
+  <li><strong>Run the test</strong> in a separate testing campaign or with Meta's <a href="https://www.facebook.com/business/help/1738164643098669">A/B testing tool</a>, giving each concept a similar budget.</li>
+  <li><strong>Judge on cost per purchase and purchase value</strong> after enough spend for a fair read, not on click-through rate alone.</li>
+  <li><strong>Move winners</strong> into the main Advantage+ sales campaign, and turn off ads that have stopped working rather than editing them.</li>
+  <li><strong>Log every result</strong>: concept, format, hook, outcome. The log shows which reasons to buy work, and that knowledge outlasts any single ad.</li>
+</ol>
+
+<h2 id="cod-and-rto">How do COD orders and RTO change your Meta setup?</h2>
+<p>A COD order fires a Purchase event when it is placed, but the money arrives only on delivery. If many COD orders are refused or returned to origin, Meta keeps optimising towards people who order but don't pay, and your reported results look better than your bank account.</p>
+<ul>
+  <li><strong>Confirm COD orders</strong> by WhatsApp or a call before you ship, and cancel the ones nobody confirms.</li>
+  <li><strong>Send a second, cleaner signal</strong>: a custom event for prepaid or delivered orders, sent through the Conversions API once delivery is confirmed. Test it before you optimise any campaign for it.</li>
+  <li><strong>Encourage prepaid payment</strong> with honest reasons, such as faster dispatch, and state any COD fee clearly at checkout.</li>
+  <li><strong>Watch PIN codes and products</strong> with repeated RTO, and fix the cause: wrong sizing information, slow delivery or product photos that oversell.</li>
+  <li><strong>Report on delivered revenue</strong>, not placed orders, when you judge whether ads are paying for themselves.</li>
+</ul>
+
+<h2 id="attribution-windows">Which attribution window should you use?</h2>
+<p>For most D2C brands, the default works: Meta's standard attribution setting counts a purchase within 7 days of a click or 1 day of viewing an ad, as <a href="https://www.jonloomer.com/meta-ads-attribution-setting-a-complete-guide/">Jon Loomer's attribution guide</a> explains, and the setting also shapes who Meta shows ads to. Meta's <a href="https://www.facebook.com/business/help/2198119873776795">help page on attribution settings</a> lists the options.</p>
+<p>Longer view windows are gone from reporting: from 12 January 2026, Meta's Ads Insights API stopped returning 7-day view and 28-day view data, <a href="https://ppc.land/meta-restricts-attribution-windows-and-data-retention-in-ads-insights-api/">PPC Land reported</a>. Old reports that used those windows will not match new ones.</p>
+<p>Meta's numbers are one view. Compare them each week with orders in Shopify or WooCommerce, delivered revenue and new versus repeat customers. If total store sales don't move when ad spend goes up, the ads may be claiming credit for orders that would have happened anyway.</p>
+
+<h2 id="budget-split">How should a D2C brand split its Meta budget?</h2>
+<p>Most of the budget goes to the main campaign with proven ads, and a smaller, fixed share goes to testing new creatives. There is no correct ratio for every brand, so set yours from your margin and how many new ads you can make each month.</p>
+<ul>
+  <li><strong>Start from what you can afford to lose</strong> while Meta learns, not from a target ROAS someone promised.</li>
+  <li><strong>Keep testing money fixed</strong>, so a good week doesn't swallow it and a bad week doesn't cancel it.</li>
+  <li><strong>Raise budgets in steps</strong> and give each change time to settle, instead of doubling overnight.</li>
+  <li><strong>Leave room for COD costs and returns</strong> in your break-even maths, because Meta's purchase value does not subtract them.</li>
+</ul>
+<p>Be wary of anyone quoting a fixed CPM or ROAS for your category. Costs change with season, competition and your own creative, so the only reliable benchmark is your own account over time.</p>
+
+<h2 id="ad-claims-and-policy">What claims can D2C ads make under ASCI and Meta rules?</h2>
+<p>Only claims you can prove. The <a href="https://www.ascionline.in/the-asci-code/">ASCI Code</a> says ads must be truthful, claims about verifiable facts must be capable of substantiation, and ads must not mislead through implication or omission. That covers "best", "clinically proven", "100% natural" and price comparisons.</p>
+<ul>
+  <li><strong>Meta's Advertising Standards</strong> restrict <a href="https://transparency.meta.com/policies/ad-standards/">health and wellness claims</a>, ads that assert personal attributes such as "Are you overweight?", and misleading commercial practices. Check the current policy before running weight-loss, skin or supplement ads.</li>
+  <li><strong>India's dark patterns guidelines</strong>, notified by the Central Consumer Protection Authority in 2023 under the Consumer Protection Act, 2019, ban practices such as false urgency and basket sneaking (<a href="https://www.ahlawatassociates.com/news/guidelines-for-prevention-and-regulations-of-dark-patterns">summary by Ahlawat &amp; Associates</a>). "Only 2 left" must be true.</li>
+  <li><strong>Influencer and creator ads</strong> need a clear disclosure label, and creators should say only what they have actually experienced.</li>
+</ul>
+<p><em>General information, not legal advice. Rules and policies checked on 7 November 2026.</em></p>
+
+<p>If you want a second pair of eyes on your tracking, catalog and store before you spend more, see <a href="/d2c">how we work with D2C brands</a>, our <a href="/services/paid-ads">paid ads service</a>, or request a <a href="/free-audit">free audit</a>.</p>
+
+<h2 id="sources">Sources</h2>
+<ul>
+  <li><a href="https://www.facebook.com/business/help/2041148702652965">Meta Business Help Center: About Conversions API</a></li>
+  <li><a href="https://www.facebook.com/business/help/765081237991954">Meta Business Help Center: About Event Match Quality</a></li>
+  <li><a href="https://www.facebook.com/business/help/1362234537597370">Meta Business Help Center: About Advantage+ sales campaigns</a></li>
+  <li><a href="https://www.facebook.com/business/help/112167992830700">Meta Business Help Center: About the learning phase</a></li>
+  <li><a href="https://www.facebook.com/business/help/1738164643098669">Meta Business Help Center: About A/B testing</a></li>
+  <li><a href="https://www.facebook.com/business/help/2198119873776795">Meta Business Help Center: About attribution models and attribution settings</a></li>
+  <li><a href="https://developers.facebook.com/docs/marketing-api/conversions-api/deduplicate-pixel-and-server-events">Meta for Developers: Handling duplicate pixel and Conversions API events</a></li>
+  <li><a href="https://developers.facebook.com/docs/marketing-api/catalog">Meta for Developers: Catalog</a></li>
+  <li><a href="https://transparency.meta.com/policies/ad-standards/">Meta Transparency Center: Advertising Standards</a></li>
+  <li><a href="https://help.shopify.com/en/manual/promoting-marketing/analyze-marketing/meta-data-sharing">Shopify Help Center: Facebook data sharing</a></li>
+  <li><a href="https://wordpress.org/plugins/facebook-for-woocommerce/">WordPress.org: Facebook for WooCommerce plugin</a></li>
+  <li><a href="https://www.socialmediatoday.com/news/meta-advantage-plus-ad-updates-february-2025/739472/">Social Media Today: Meta Advantage+ updates (6 February 2025)</a></li>
+  <li><a href="https://ppc.land/meta-restricts-attribution-windows-and-data-retention-in-ads-insights-api/">PPC Land: Meta restricts attribution windows in Ads Insights API</a></li>
+  <li><a href="https://www.jonloomer.com/meta-ads-attribution-setting-a-complete-guide/">Jon Loomer: Meta Ads attribution setting guide</a></li>
+  <li><a href="https://www.ascionline.in/the-asci-code/">Advertising Standards Council of India: The ASCI Code</a></li>
+  <li><a href="https://www.ahlawatassociates.com/news/guidelines-for-prevention-and-regulations-of-dark-patterns">Ahlawat &amp; Associates: Guidelines for Prevention and Regulation of Dark Patterns, 2023</a></li>
+</ul>
