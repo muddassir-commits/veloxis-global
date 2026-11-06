@@ -201,6 +201,69 @@ function robotsBlocks(robots: string, bot: string): boolean {
   return disallowRoot && !allowRoot;
 }
 
+// ---------- tags inside script bundles ----------
+
+export interface TagHits {
+  ga4: boolean;
+  gtm: boolean;
+  pixel: boolean;
+}
+
+/**
+ * Finds Google Analytics 4, Google Tag Manager and Meta Pixel in a piece of HTML or JavaScript.
+ * IDs alone are not enough inside a script bundle (a random "G-ABC123" string could be anything), so
+ * there an ID only counts when the bundle also loads the matching Google or Meta script.
+ * Also matches IDs inside JSON-escaped strings (\"G-XXXX\"), as found in React/Next.js payloads.
+ */
+export function findTags(src: string, mode: 'html' | 'bundle'): TagHits {
+  const q = String.raw`\\?['"${'`'}]`; // a quote, optionally JSON-escaped
+  const gaId = new RegExp(String.raw`${q}G-[A-Z0-9]{6,}${q}`);
+  const gtmId = new RegExp(String.raw`${q}GTM-[A-Z0-9]{4,}${q}`);
+  const gtagLib = /googletagmanager\.com\/gtag\/js/;
+  const gtmLib = /googletagmanager\.com\/gtm\.js/;
+  const pixelLib = /connect\.facebook\.net\/[^"'`\s]*fbevents\.js/;
+  if (mode === 'html') {
+    return {
+      ga4: /gtag\/js\?id=G-/.test(src) || gaId.test(src),
+      gtm: gtmLib.test(src) || /GTM-[A-Z0-9]{4,}/.test(src),
+      pixel: pixelLib.test(src) || /fbq\(\s*['"]init/.test(src),
+    };
+  }
+  const google = /googletagmanager\.com/.test(src);
+  return {
+    ga4: /gtag\/js\?id=G-/.test(src) || (google && (gtagLib.test(src) || gtmLib.test(src)) && gaId.test(src)),
+    gtm: google && gtmLib.test(src) && gtmId.test(src),
+    pixel: pixelLib.test(src) && /fbq\(\s*['"`]init/.test(src),
+  };
+}
+
+/**
+ * Many modern sites (Next.js, React, page builders) add their tags from their own script files, so
+ * the IDs never appear in the HTML. Reads up to 15 same-site script files and looks for tags there.
+ */
+async function findTagsInScripts(html: string, pageUrl: URL): Promise<TagHits> {
+  const srcs = [...html.matchAll(/<script\b[^>]*\bsrc=["']([^"']+)["']/gi)]
+    .map((m) => {
+      try {
+        return new URL(decode(m[1]), pageUrl);
+      } catch {
+        return null;
+      }
+    })
+    .filter((u): u is URL => !!u && u.hostname === pageUrl.hostname)
+    .slice(0, 15);
+  const bodies = await Promise.all(srcs.map((u) => tryFetch(u.toString())));
+  const hits: TagHits = { ga4: false, gtm: false, pixel: false };
+  for (const f of bodies) {
+    if (!f || f.status !== 200) continue;
+    const t = findTags(f.body, 'bundle');
+    hits.ga4 ||= t.ga4;
+    hits.gtm ||= t.gtm;
+    hits.pixel ||= t.pixel;
+  }
+  return hits;
+}
+
 // ---------- the audit ----------
 
 export async function runAudit(input: string): Promise<AuditResult> {
@@ -452,15 +515,18 @@ export async function runAudit(input: string): Promise<AuditResult> {
   });
 
   // ---- Tracking ----
-  const ga4 = has(/gtag\/js\?id=G-|['"]G-[A-Z0-9]{6,}['"]/);
-  const gtm = has(/googletagmanager\.com\/gtm\.js|GTM-[A-Z0-9]{4,}/);
-  const pixel = has(/connect\.facebook\.net\/[^"']*fbevents\.js|fbq\(\s*['"]init/);
+  // HTML first; only when Google Analytics/Tag Manager is not there, also read the site's own scripts.
+  const inHtml = findTags(html, 'html');
+  const inScripts = inHtml.ga4 || inHtml.gtm ? { ga4: false, gtm: false, pixel: false } : await findTagsInScripts(html, final);
+  const ga4 = inHtml.ga4 || inScripts.ga4;
+  const gtm = inHtml.gtm || inScripts.gtm;
+  const pixel = inHtml.pixel || inScripts.pixel;
   const gads = has(/AW-\d{6,}/);
   const clarity = has(/clarity\.ms\/tag/);
   add({
     id: 'track-analytics', category: 'tracking', label: 'Analytics installed', weight: 3,
     status: ga4 || gtm ? 'pass' : 'fail',
-    detail: [ga4 && 'Google Analytics 4', gtm && 'Google Tag Manager', clarity && 'Microsoft Clarity'].filter(Boolean).join(', ') || 'No Google Analytics or Tag Manager found in the HTML.',
+    detail: [ga4 && 'Google Analytics 4', gtm && 'Google Tag Manager', clarity && 'Microsoft Clarity'].filter(Boolean).join(', ') || 'No Google Analytics or Tag Manager found in the HTML or the site’s own script files.',
     fix: 'Install Google Analytics 4 (through Google Tag Manager) so you can see visits and which sources bring enquiries.',
     priority: 1,
   });
