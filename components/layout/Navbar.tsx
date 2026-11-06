@@ -113,6 +113,13 @@ export const Navbar: React.FC = () => {
     if (normHref === '/') return normPath === '/';
     return normPath === normHref || normPath.startsWith(normHref + '/');
   };
+  // Literal class names here (not in data/), so Tailwind sees and generates them.
+  const desktopShow: Record<NavbarLink['desktop'], string> = {
+    always: 'inline-block',
+    xl: 'hidden xl:inline-block',
+    '2xl': 'hidden 2xl:inline-block',
+    'mobile-only': 'hidden',
+  };
   const linkActive = (link: NavbarLink) =>
     (isActive(link.href) && !(link.exclude ?? []).some(isActive)) || (link.activeAlso ?? []).some(isActive);
 
@@ -258,7 +265,7 @@ export const Navbar: React.FC = () => {
               <Link
                 key={link.href}
                 href={link.href}
-                className={`font-sans font-semibold transition-all duration-300 rounded-full whitespace-nowrap shrink-0 ${link.desktop} ${
+                className={`font-sans font-semibold transition-all duration-300 rounded-full whitespace-nowrap shrink-0 ${desktopShow[link.desktop]} ${
                   scrolled
                     ? 'px-2.5 py-1 text-[13px]'
                     : 'px-3.5 py-1.5 text-[14px]'
