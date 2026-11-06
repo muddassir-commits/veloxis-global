@@ -12,6 +12,7 @@ import { SITE_URL, DEFAULT_OG_IMAGE } from '../lib/seo-config';
 import { SchemaMarkup } from '../components/ui/SchemaMarkup';
 import { getSiteGraph } from '../lib/schema';
 import { GA_ID, GTM_ID } from '../lib/tag-ids';
+import { preload } from 'react-dom';
 import './globals.css';
 
 // Site-wide defaults only. Every page sets its own title, description and canonical; anything that
@@ -43,11 +44,13 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  // One preload for the site font. A <link rel="preload"> written in <head> came out twice (React
+  // hoists it and Next also kept the original tag), so it is requested through React's preload() API.
+  preload('/fonts/PlusJakartaSans.woff2', { as: 'font', type: 'font/woff2', crossOrigin: 'anonymous' });
   return (
     <html lang="en-IN" className="scroll-smooth">
       <head>
         <meta name="google-site-verification" content={process.env.NEXT_PUBLIC_GSC_TOKEN || "CVRVYJuDB29ung6LskjcSWvfZwi1q4L4b21cJxpbcX8"} />
-        <link rel="preload" href="/fonts/PlusJakartaSans.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
         <SchemaMarkup schema={getSiteGraph()} />
       </head>
       <body className="font-sans bg-slate-50 text-on-surface antialiased">
