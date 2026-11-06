@@ -129,7 +129,7 @@ export default function ContactPage() {
               <p className="text-sm text-slate-300 leading-relaxed max-w-xs">
                 Pick a 30-minute slot to walk through your project and current lead flow with our team.
               </p>
-              <Button id="contact-calendly-btn" href={siteData.booking} target="_blank" variant="white" className="w-full mt-2">
+              <Button id="contact-calendly-btn" href={siteData.booking} target="_blank" rel="noopener" variant="white" className="w-full mt-2">
                 Book a call →
               </Button>
             </Card>

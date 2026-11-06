@@ -72,7 +72,7 @@ export const WhatsAppFlowMockup: React.FC<WhatsAppFlowMockupProps> = ({ classNam
           {/* 1. Buyer Message */}
           <div className="self-end max-w-[85%] rounded-2xl rounded-tr-none bg-[#DCF8C6] px-3.5 py-2 text-[12.5px] leading-snug text-slate-900 shadow-sm">
             <p>Hi, I saw your ad on Facebook. Interested in the 3 BHK flat details.</p>
-            <div className="flex items-center justify-end gap-1 text-[10px] text-slate-500 mt-1">
+            <div className="flex items-center justify-end gap-1 text-[10px] text-slate-600 mt-1">
               <span>10:02 PM</span>
               <CheckCheck className="w-3.5 h-3.5 text-sky-500" />
             </div>
@@ -91,14 +91,14 @@ export const WhatsAppFlowMockup: React.FC<WhatsAppFlowMockupProps> = ({ classNam
               <p className="text-emerald-700 font-bold mt-1">✓ Digital Brochure Sent</p>
             </div>
             <p className="mt-1">To connect you with the project lead, what is your preferred budget range?</p>
-            <div className="flex items-center justify-end text-[10px] text-slate-400 mt-1">
+            <div className="flex items-center justify-end text-[10px] text-slate-600 mt-1">
               <span>10:02 PM</span>
             </div>
           </div>
 
           {/* 3. Interactive Budget Selector Pills */}
           <div className="self-start w-full my-1 flex flex-col gap-1.5">
-            <span className="text-[10px] font-bold uppercase tracking-wider text-slate-500 px-1">Interactive Selection Demo:</span>
+            <span className="text-[10px] font-bold uppercase tracking-wider text-slate-600 px-1">Interactive Selection Demo:</span>
             <div className="flex flex-wrap gap-1.5">
               {[
                 { label: '1️⃣ Under ₹70 L', val: 'Under ₹70 L' },
@@ -125,7 +125,7 @@ export const WhatsAppFlowMockup: React.FC<WhatsAppFlowMockupProps> = ({ classNam
           {selectedBudget && (
             <div className="self-end max-w-[85%] rounded-2xl rounded-tr-none bg-[#DCF8C6] px-3.5 py-2 text-[12.5px] leading-snug text-slate-900 shadow-sm animate-in fade-in duration-200">
               <p>{selectedBudget}</p>
-              <div className="flex items-center justify-end gap-1 text-[10px] text-slate-500 mt-1">
+              <div className="flex items-center justify-end gap-1 text-[10px] text-slate-600 mt-1">
                 <span>10:03 PM</span>
                 <CheckCheck className="w-3.5 h-3.5 text-sky-500" />
               </div>
@@ -134,7 +134,7 @@ export const WhatsAppFlowMockup: React.FC<WhatsAppFlowMockupProps> = ({ classNam
 
           {/* Typing Indicator */}
           {isTyping && (
-            <div className="self-start rounded-full bg-white px-3 py-1 text-[11px] text-slate-400 shadow-sm flex items-center gap-1">
+            <div className="self-start rounded-full bg-white px-3 py-1 text-[11px] text-slate-600 shadow-sm flex items-center gap-1">
               <span className="w-1.5 h-1.5 rounded-full bg-slate-400 animate-bounce" />
               <span className="w-1.5 h-1.5 rounded-full bg-slate-400 animate-bounce [animation-delay:0.2s]" />
               <span className="w-1.5 h-1.5 rounded-full bg-slate-400 animate-bounce [animation-delay:0.4s]" />
@@ -152,7 +152,7 @@ export const WhatsAppFlowMockup: React.FC<WhatsAppFlowMockupProps> = ({ classNam
               </p>
               <div className="mt-2 pt-2 border-t border-slate-100 flex items-center justify-between text-[11px] text-emerald-700 font-bold">
                 <span>📅 Priority Slot Reserved</span>
-                <span className="text-[10px] text-slate-400">10:03 PM</span>
+                <span className="text-[10px] text-slate-600">10:03 PM</span>
               </div>
             </div>
           )}
@@ -163,7 +163,7 @@ export const WhatsAppFlowMockup: React.FC<WhatsAppFlowMockupProps> = ({ classNam
         <div className="bg-[#F0F2F5] px-3 py-2 flex items-center gap-2 border-t border-slate-200">
           <Smile className="w-5 h-5 text-slate-500 shrink-0" />
           <Paperclip className="w-5 h-5 text-slate-500 shrink-0" />
-          <div className="flex-grow bg-white rounded-full px-3 py-1 text-xs text-slate-400 border border-slate-200 truncate">
+          <div className="flex-grow bg-white rounded-full px-3 py-1 text-xs text-slate-600 border border-slate-200 truncate">
             Type your reply...
           </div>
           <div className="w-8 h-8 rounded-full bg-[#00A884] flex items-center justify-center text-white shrink-0 shadow-sm">
