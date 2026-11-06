@@ -1,0 +1,30 @@
+{
+  "title": "Local SEO for Dentists: How Dental Clinics Rank on Google Maps",
+  "seoTitle": "Local SEO for Dentists: Rank Your Clinic on Google Maps",
+  "excerpt": "Local SEO for dentists in India: Google profile setup, treatment pages, review rules and the Dental Council's advertising ethics, step by step.",
+  "date": "2026-11-10",
+  "category": "Guides",
+  "service": "high-converting-landing-pages",
+  "image": "/images/people/blog/local-seo-for-dentists-cover.jpg",
+  "imageAlt": "An empty dental treatment room with a green dental chair, overhead lamp, cabinets and a computer",
+  "inlineImages": [
+    { "src": "/images/people/blog/local-seo-for-dentists-1.jpg", "alt": "A set of stainless steel dental examination instruments in an open red and black case", "beforeHeading": "treatment-pages", "caption": "Patients search by treatment, so give each treatment its own page." },
+    { "src": "/images/people/blog/local-seo-for-dentists-2.jpg", "alt": "A dental model of upper and lower teeth on a white surface", "beforeHeading": "advertising-rules" }
+  ],
+  "about": [
+    { "name": "Local search engine optimisation", "sameAs": "https://en.wikipedia.org/wiki/Local_search_engine_optimisation" },
+    { "name": "Google Business Profile", "sameAs": "https://en.wikipedia.org/wiki/Google_Business_Profile" },
+    { "name": "Dentistry", "sameAs": "https://en.wikipedia.org/wiki/Dentistry" }
+  ],
+  "faqs": [
+    { "question": "How can a dental clinic rank higher on Google Maps?", "answer": "Complete and verify your Google Business Profile, choose Dentist as the primary category, list every treatment, upload real clinic photos and ask every patient for a genuine review. Google ranks local results on relevance, distance and prominence, so focus on matching searches and becoming well known locally." },
+    { "question": "Can each dentist in a clinic have their own Google profile?", "answer": "Yes, if they are public-facing and can be contacted at the verified location during stated hours. Google says the clinic should then have its own separate profile, the practitioner's profile should carry only their name, and support staff should not have profiles of their own." },
+    { "question": "Can a dental clinic offer a discount for Google reviews?", "answer": "No. Google's contribution policy bans reviews posted because of an incentive, including payment, discounts and free goods or services. It also bans asking only happy patients. Share the review link or QR code with every patient and offer nothing in return for a review." },
+    { "question": "How should a dentist reply to a negative Google review?", "answer": "Reply politely and briefly, without confirming the reviewer is a patient or mentioning any treatment. The Dental Council of India's ethics code says patient confidences should never be revealed unless the law requires it. Invite the person to call the clinic so the issue is handled privately." },
+    { "question": "Are dentists allowed to advertise in India?", "answer": "Yes, within limits. The Revised Dentists (Code of Ethics) Regulations, 2014 allow factual advertising, websites and directory listings, but treat false promises, boasting about cures, claims of being the best and disproportionately large signboards as unethical. State Dental Councils may add their own rules, so check with yours." },
+    { "question": "Can a dental clinic post before-and-after photos online?", "answer": "It is risky in India. In October 2026 the National Dental Commission's ethics board warned dentists against patient testimonials, before-and-after photographs and broadcasting procedures, citing clauses 8.1 to 8.3 of the 2014 ethics code. Use photos of your clinic and equipment instead, and seek advice from your State Dental Council." },
+    { "question": "Should a dental clinic website have a page for each treatment?", "answer": "Yes. Patients search for a treatment plus an area, such as root canal treatment near a locality, and a separate page lets Google match your clinic to each search. Explain the treatment, the visits, who performs it and how to book, using only factual claims." },
+    { "question": "Which schema should a dental clinic website use?", "answer": "Use the schema.org Dentist type. Google's local business structured data guide says to use the most specific LocalBusiness type possible, and it requires the name and address. Add phone, opening hours and a map link, and keep these identical to your Google Business Profile." },
+    { "question": "Can a dental clinic use remarketing ads on Google?", "answer": "Only in a limited way. Google's personalised advertising policy treats health as a sensitive interest category, so ads in that area cannot use your own data segments for remarketing. Search ads for treatments in your area remain the simpler option for most clinics." }
+  ]
+}
