@@ -44,6 +44,7 @@ const footerColumns = [
     title: 'Blog & Articles',
     links: [
       { label: 'All Blog Posts', href: '/blog' },
+      { label: 'Marketing Guides by Topic', href: '/guides' },
       { label: 'Free Website Audit Tool', href: '/tools/website-audit' },
       { label: 'How to Get Real Estate Leads', href: '/blog/how-to-generate-real-estate-leads' },
       { label: 'Meta Ads for Real Estate', href: '/blog/meta-ads-for-real-estate-india' },

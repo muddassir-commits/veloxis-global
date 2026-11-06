@@ -6,7 +6,7 @@ import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { Menu, X, ChevronDown, Zap, Target, Bot, ArrowRight, ShieldCheck } from 'lucide-react';
 import { Button } from '../ui/Button';
-import { servicesGroups } from '../../data/navbar-data';
+import { servicesGroups, primaryLinks, type NavbarLink } from '../../data/navbar-data';
 import { WhatsAppIcon } from '../ui/WhatsAppIcon';
 import { WhatsAppLink } from '../ui/WhatsAppLink';
 import { siteData } from '../../data/site';
@@ -113,8 +113,15 @@ export const Navbar: React.FC = () => {
     if (normHref === '/') return normPath === '/';
     return normPath === normHref || normPath.startsWith(normHref + '/');
   };
-  // The NRI page sits under /industries/real-estate but has its own nav link.
-  const developersActive = isActive('/industries/real-estate') && !isActive('/industries/real-estate/nri-buyers');
+  // Literal class names here (not in data/), so Tailwind sees and generates them.
+  const desktopShow: Record<NavbarLink['desktop'], string> = {
+    always: 'inline-block',
+    xl: 'hidden xl:inline-block',
+    '2xl': 'hidden 2xl:inline-block',
+    'mobile-only': 'hidden',
+  };
+  const linkActive = (link: NavbarLink) =>
+    (isActive(link.href) && !(link.exclude ?? []).some(isActive)) || (link.activeAlso ?? []).some(isActive);
 
   return (
     <>
@@ -253,71 +260,22 @@ export const Navbar: React.FC = () => {
               </div>
             </div>
 
-            {/* 2. Audience links */}
-            <Link
-              href="/industries/real-estate"
-              className={`font-sans font-semibold transition-all duration-300 rounded-full whitespace-nowrap shrink-0 ${
-                scrolled
-                  ? 'px-2.5 py-1 text-[13px]'
-                  : 'px-3.5 py-1.5 text-[14px]'
-              } ${
-                developersActive ? 'bg-royal-blue text-white shadow-sm shadow-royal-blue/15' : 'text-slate-700 hover:bg-slate-100/80 hover:text-royal-blue'
-              }`}
-            >
-              Developers
-            </Link>
-
-            <Link
-              href="/channel-partners"
-              className={`font-sans font-semibold transition-all duration-300 rounded-full whitespace-nowrap shrink-0 hidden xl:inline-block ${
-                scrolled
-                  ? 'px-2.5 py-1 text-[13px]'
-                  : 'px-3.5 py-1.5 text-[14px]'
-              } ${
-                isActive('/channel-partners') ? 'bg-royal-blue text-white shadow-sm shadow-royal-blue/15' : 'text-slate-700 hover:bg-slate-100/80 hover:text-royal-blue'
-              }`}
-            >
-              Channel Partners
-            </Link>
-
-            <Link
-              href="/industries/real-estate/nri-buyers"
-              className={`font-sans font-semibold transition-all duration-300 rounded-full whitespace-nowrap shrink-0 hidden 2xl:inline-block ${
-                scrolled
-                  ? 'px-2.5 py-1 text-[13px]'
-                  : 'px-3.5 py-1.5 text-[14px]'
-              } ${
-                isActive('/industries/real-estate/nri-buyers') ? 'bg-royal-blue text-white shadow-sm shadow-royal-blue/15' : 'text-slate-700 hover:bg-slate-100/80 hover:text-royal-blue'
-              }`}
-            >
-              NRI Buyers
-            </Link>
-
-            <Link
-              href="/about"
-              className={`font-sans font-semibold transition-all duration-300 rounded-full whitespace-nowrap shrink-0 ${
-                scrolled
-                  ? 'px-2.5 py-1 text-[13px]'
-                  : 'px-3.5 py-1.5 text-[14px]'
-              } ${
-                isActive('/about') ? 'bg-royal-blue text-white shadow-sm shadow-royal-blue/15' : 'text-slate-700 hover:bg-slate-100/80 hover:text-royal-blue'
-              }`}
-            >
-              About
-            </Link>
-
-            <Link
-              href="/blog"
-              className={`font-sans font-semibold transition-all duration-300 rounded-full whitespace-nowrap shrink-0 ${
-                scrolled
-                  ? 'px-2.5 py-1 text-[13px]'
-                  : 'px-3.5 py-1.5 text-[14px]'
-              } ${
-                (isActive('/blog') || isActive('/guides') || isActive('/playbooks')) ? 'bg-royal-blue text-white shadow-sm shadow-royal-blue/15' : 'text-slate-700 hover:bg-slate-100/80 hover:text-royal-blue'
-              }`}
-            >
-              Blog
-            </Link>
+            {/* 2. Audience and content links (data/navbar-data.ts) */}
+            {primaryLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className={`font-sans font-semibold transition-all duration-300 rounded-full whitespace-nowrap shrink-0 ${desktopShow[link.desktop]} ${
+                  scrolled
+                    ? 'px-2.5 py-1 text-[13px]'
+                    : 'px-3.5 py-1.5 text-[14px]'
+                } ${
+                  linkActive(link) ? 'bg-royal-blue text-white shadow-sm shadow-royal-blue/15' : 'text-slate-700 hover:bg-slate-100/80 hover:text-royal-blue'
+                }`}
+              >
+                {link.title}
+              </Link>
+            ))}
           </nav>
 
           {/* Right: Desktop CTA & WhatsApp */}
@@ -467,57 +425,19 @@ export const Navbar: React.FC = () => {
               </div>
             </div>
 
-            {/* 2. Audience links */}
-            <Link
-              href="/industries/real-estate"
-              onClick={() => setIsOpen(false)}
-              className={`font-bold text-[16px] py-3 border-b border-slate-100 transition-colors duration-300 ${
-                developersActive ? 'text-royal-blue font-bold' : 'text-slate-900 hover:text-royal-blue'
-              }`}
-            >
-              For Developers
-            </Link>
-
-            <Link
-              href="/channel-partners"
-              onClick={() => setIsOpen(false)}
-              className={`font-bold text-[16px] py-3 border-b border-slate-100 transition-colors duration-300 ${
-                isActive('/channel-partners') ? 'text-royal-blue font-bold' : 'text-slate-900 hover:text-royal-blue'
-              }`}
-            >
-              For Channel Partners
-            </Link>
-
-            <Link
-              href="/industries/real-estate/nri-buyers"
-              onClick={() => setIsOpen(false)}
-              className={`font-bold text-[16px] py-3 border-b border-slate-100 transition-colors duration-300 ${
-                isActive('/industries/real-estate/nri-buyers') ? 'text-royal-blue font-bold' : 'text-slate-900 hover:text-royal-blue'
-              }`}
-            >
-              For NRI Buyer Campaigns
-            </Link>
-
-            {/* Core Stacked Links */}
-            <Link
-              href="/about"
-              onClick={() => setIsOpen(false)}
-              className={`font-bold text-[16px] py-3 border-b border-slate-100 transition-colors duration-300 ${
-                isActive('/about') ? 'text-royal-blue font-bold' : 'text-slate-900 hover:text-royal-blue'
-              }`}
-            >
-              About
-            </Link>
-
-            <Link
-              href="/blog"
-              onClick={() => setIsOpen(false)}
-              className={`font-bold text-[16px] py-3 border-b border-slate-100 transition-colors duration-300 ${
-                (isActive('/blog') || isActive('/guides') || isActive('/playbooks')) ? 'text-royal-blue font-bold' : 'text-slate-900 hover:text-royal-blue'
-              }`}
-            >
-              Blog
-            </Link>
+            {/* 2. Audience and content links (data/navbar-data.ts) */}
+            {primaryLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                onClick={() => setIsOpen(false)}
+                className={`font-bold text-[16px] py-3 border-b border-slate-100 transition-colors duration-300 ${
+                  linkActive(link) ? 'text-royal-blue font-bold' : 'text-slate-900 hover:text-royal-blue'
+                }`}
+              >
+                {link.mobileTitle}
+              </Link>
+            ))}
           </nav>
         </div>
 

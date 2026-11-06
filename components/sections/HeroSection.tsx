@@ -18,6 +18,7 @@ export const HeroSection: React.FC = () => {
         alt=""
         fill
         priority
+        fetchPriority="high"
         sizes="100vw"
         className="object-cover object-center hero-kenburns"
         quality={85}

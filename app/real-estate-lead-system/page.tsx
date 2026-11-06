@@ -333,12 +333,12 @@ export default function LeadSystemPage() {
           {/* Google certifications wall */}
           <div className="mt-12 bg-slate-900 text-white rounded-3xl p-8 sm:p-10 border border-slate-800 shadow-xl">
             <div className="max-w-2xl mb-8">
-              <span className="text-xs font-bold text-blue-400 uppercase tracking-widest block mb-2">Verified Professional Credentials</span>
+              <span className="text-xs font-bold text-blue-400 uppercase tracking-widest block mb-2">Professional credentials</span>
               <h3 className="text-2xl sm:text-3xl font-extrabold text-white">
                 Google certified, hands-on campaign management
               </h3>
               <p className="text-slate-300 mt-2 text-sm sm:text-base leading-relaxed">
-                Your campaigns are not handed to interns. They are planned by a team holding Google Ads Search, Google Ads Apps and Google Analytics certifications.
+                Your campaigns are not handed to interns. They are planned by a Google-certified specialist (Google Ads Search, Google Ads Apps and Google Analytics certifications from Google Skillshop).
               </p>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
@@ -348,7 +348,7 @@ export default function LeadSystemPage() {
                   <h4 className="font-bold text-white text-sm">Google Ads Apps Certification</h4>
                   <p className="text-xs text-slate-400 mt-1">Universal App Campaigns (UAC), deep-linking &amp; in-app telemetry.</p>
                 </div>
-                <span className="inline-block mt-4 text-[11px] font-bold text-emerald-400">Skillshop Verified ✓</span>
+                <span className="inline-block mt-4 text-[11px] font-bold text-emerald-400">Google Skillshop certificate</span>
               </div>
               <div className="bg-white/5 border border-white/10 rounded-2xl p-5 flex flex-col justify-between hover:bg-white/[0.08] transition-colors">
                 <div>
@@ -356,15 +356,15 @@ export default function LeadSystemPage() {
                   <h4 className="font-bold text-white text-sm">Google Ads Search Certification</h4>
                   <p className="text-xs text-slate-400 mt-1">High-intent property search keywords, bidding algorithms &amp; Quality Score.</p>
                 </div>
-                <span className="inline-block mt-4 text-[11px] font-bold text-emerald-400">Skillshop Verified ✓</span>
+                <span className="inline-block mt-4 text-[11px] font-bold text-emerald-400">Google Skillshop certificate</span>
               </div>
               <div className="bg-white/5 border border-white/10 rounded-2xl p-5 flex flex-col justify-between hover:bg-white/[0.08] transition-colors">
                 <div>
                   <div className="w-8 h-8 rounded-lg bg-amber-500/20 text-amber-400 flex items-center justify-center font-bold text-xs mb-3">GA</div>
-                  <h4 className="font-bold text-white text-sm">Google Analytics 4 (GA4)</h4>
+                  <h4 className="font-bold text-white text-sm">Google Analytics Certification</h4>
                   <p className="text-xs text-slate-400 mt-1">Custom dimensions, attribution modeling &amp; non-inflated conversion telemetry.</p>
                 </div>
-                <span className="inline-block mt-4 text-[11px] font-bold text-amber-300">Analytics Verified ✓</span>
+                <span className="inline-block mt-4 text-[11px] font-bold text-amber-300">Google Skillshop certificate</span>
               </div>
             </div>
           </div>

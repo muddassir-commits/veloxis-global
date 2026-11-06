@@ -18,7 +18,7 @@ export default function BlogContent({ posts }: { posts: PostCard[] }) {
   const [currentPage, setCurrentPage] = useState<number>(1);
 
   const categories = ['All', 'Guides', 'Landing Pages', 'Paid Ads', 'AI Automation', 'Growth Tips'];
-  const POSTS_PER_PAGE = 9; // keep every article linked in the server-rendered HTML
+  const POSTS_PER_PAGE = 9; // every article is also linked in the server-rendered list below (app/blog/page.tsx)
 
   // Filter posts by category and search query
   const filteredPosts = allPostsData.filter((post) => {
@@ -58,6 +58,10 @@ export default function BlogContent({ posts }: { posts: PostCard[] }) {
             </h1>
             <p className="text-slate-500 mt-2 text-sm sm:text-base leading-relaxed">
               Practical guides on Meta and Google ads for property, project landing pages, WhatsApp follow-up, EOI and channel partner programmes — written by the Veloxis Global team.
+              {' '}Prefer to browse by topic? See the{' '}
+              <Link href="/guides" className="font-semibold text-royal-blue hover:underline">marketing guides hub</Link>
+              {' '}or the{' '}
+              <a href="#all-articles" className="font-semibold text-royal-blue hover:underline">full list of articles</a>.
             </p>
           </div>
 
@@ -242,9 +246,10 @@ export default function BlogContent({ posts }: { posts: PostCard[] }) {
                   id="blog-prev-page-btn"
                   onClick={() => setCurrentPage(prev => Math.max(prev - 1, 1))}
                   disabled={currentPage === 1}
+                  aria-label="Previous page"
                   className="w-10 h-10 rounded-lg bg-white border border-slate-200 flex items-center justify-center hover:bg-slate-50 transition-colors disabled:opacity-50"
                 >
-                  <ChevronLeft className="w-5 h-5 text-slate-500" />
+                  <ChevronLeft className="w-5 h-5 text-slate-500" aria-hidden="true" />
                 </button>
                 <span className="text-xs font-extrabold uppercase text-slate-500 tracking-wider">
                   Page {currentPage} of {totalPages}
@@ -253,9 +258,10 @@ export default function BlogContent({ posts }: { posts: PostCard[] }) {
                   id="blog-next-page-btn"
                   onClick={() => setCurrentPage(prev => Math.min(prev + 1, totalPages))}
                   disabled={currentPage === totalPages}
+                  aria-label="Next page"
                   className="w-10 h-10 rounded-lg bg-white border border-slate-200 flex items-center justify-center hover:bg-slate-50 transition-colors disabled:opacity-50"
                 >
-                  <ChevronRight className="w-5 h-5 text-slate-500" />
+                  <ChevronRight className="w-5 h-5 text-slate-500" aria-hidden="true" />
                 </button>
               </div>
             )}

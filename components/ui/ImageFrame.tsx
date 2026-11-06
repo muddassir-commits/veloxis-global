@@ -39,14 +39,16 @@ export const ImageFrame: React.FC<ImageFrameProps> = ({
   imageClassName = '',
   children,
 }) => (
-  // data-reveal: photos below the fold fade in as they scroll into view (components/ui/MotionEffects.tsx)
-  <div data-reveal="image" className={`relative w-full overflow-hidden rounded-2xl bg-slate-100 ${RATIOS[ratio]} ${className}`}>
+  // data-reveal: photos below the fold fade in as they scroll into view (components/ui/MotionEffects.tsx).
+  // Priority (hero/LCP) photos never take part, so they are never hidden while they load.
+  <div data-reveal={priority ? undefined : 'image'} className={`relative w-full overflow-hidden rounded-2xl bg-slate-100 ${RATIOS[ratio]} ${className}`}>
     <Image
       src={src}
       alt={alt}
       fill
       sizes={sizes}
       priority={priority}
+      fetchPriority={priority ? 'high' : undefined}
       quality={80}
       className={`object-cover ${imageClassName}`}
       style={{ objectPosition: position }}

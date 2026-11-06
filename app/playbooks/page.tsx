@@ -13,6 +13,7 @@ import { CtaBanner } from '../../components/sections/CtaBanner';
 import { FaqAccordion } from '../../components/sections/FaqAccordion';
 import { playbooksHubFaqs } from '../../data/page-faqs';
 import { ArrowRight, Info } from 'lucide-react';
+import { ReviewedLine } from '../../components/ui/ReviewedLine';
 
 export const metadata: Metadata = constructMetadata(pageMeta.playbooks);
 
@@ -43,6 +44,7 @@ export default function PlaybooksPage() {
             These are the working plans we start from — the research, campaign structure, bidding, page layout and WhatsApp
             flows — written out so you can see exactly how we would approach your project before you speak to us.
           </p>
+          <ReviewedLine className="text-slate-500 mt-3" />
           <p className="mt-6 flex items-start gap-2 text-sm text-slate-600 bg-amber-50 border border-amber-200 rounded-xl p-4">
             <Info className="w-4 h-4 text-amber-600 shrink-0 mt-0.5" aria-hidden="true" />
             <span>

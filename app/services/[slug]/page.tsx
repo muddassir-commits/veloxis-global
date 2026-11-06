@@ -105,7 +105,7 @@ export default async function ServicePage({ params }: PageProps) {
 
       {/* Hero */}
       <section className="relative py-20 lg:py-28 overflow-hidden text-left">
-        <Image src={hero.src} alt="" fill priority sizes="100vw" className="object-cover object-center hero-kenburns" quality={80} />
+        <Image src={hero.src} alt="" fill priority fetchPriority="high" sizes="100vw" className="object-cover object-center hero-kenburns" quality={80} />
         <div className="absolute inset-0 bg-gradient-to-r from-[rgba(15,23,42,0.92)] via-[rgba(15,23,42,0.8)] to-[rgba(15,23,42,0.5)]" aria-hidden="true" />
         <div className="absolute inset-0 overflow-hidden" aria-hidden="true">
           <div className="aurora-blob -left-24 top-0 h-[380px] w-[380px] bg-[rgba(37,99,235,0.32)]" />

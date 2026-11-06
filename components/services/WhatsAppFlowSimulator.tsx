@@ -41,7 +41,7 @@ export const WhatsAppFlowSimulator: React.FC = () => {
           {/* Buyer Message 1 */}
           <div className="self-end bg-[#DCF8C6] text-slate-900 p-3 rounded-xl rounded-tr-none max-w-[80%] shadow-sm">
             <p>Hi, I saw your 3 BHK project ad on Instagram. Please send the brochure and price list.</p>
-            <span className="text-[10px] text-slate-500 float-right mt-1 ml-2">11:15 PM · Delivered</span>
+            <span className="text-[10px] text-slate-600 float-right mt-1 ml-2">11:15 PM · Delivered</span>
           </div>
 
           {/* Bot Message 1 */}
@@ -58,13 +58,13 @@ export const WhatsAppFlowSimulator: React.FC = () => {
               <span className="px-2.5 py-1 bg-emerald-600 text-white rounded-full font-semibold text-xs">3 BHK (₹82L+) ✓</span>
               <span className="px-2.5 py-1 bg-emerald-50 text-emerald-800 rounded-full border border-emerald-200 font-semibold text-xs">4 BHK Luxury</span>
             </div>
-            <span className="text-[10px] text-slate-400 float-right mt-1">11:15 PM · Sent</span>
+            <span className="text-[10px] text-slate-600 float-right mt-1">11:15 PM · Sent</span>
           </div>
 
           {/* Buyer Message 2 */}
           <div className="self-end bg-[#DCF8C6] text-slate-900 p-3 rounded-xl rounded-tr-none max-w-[80%] shadow-sm">
             <p>3 BHK. We want to visit the site this weekend.</p>
-            <span className="text-[10px] text-slate-500 float-right mt-1 ml-2">11:16 PM · Delivered</span>
+            <span className="text-[10px] text-slate-600 float-right mt-1 ml-2">11:16 PM · Delivered</span>
           </div>
 
           {/* Bot Message 2 */}
@@ -80,11 +80,11 @@ export const WhatsAppFlowSimulator: React.FC = () => {
               </div>
             </div>
             <p className="text-slate-600">Here is the site location pin and a short sample flat walkthrough video.</p>
-            <div className="mt-2 pt-2 border-t border-slate-100 text-[11px] text-slate-500 flex items-center gap-1.5">
+            <div className="mt-2 pt-2 border-t border-slate-100 text-[11px] text-slate-600 flex items-center gap-1.5">
               <Zap className="w-3.5 h-3.5 text-amber-500" />
               <span>Lead instantly synchronized to CRM with CP/Ad attribution source.</span>
             </div>
-            <span className="text-[10px] text-slate-400 float-right mt-1">11:16 PM · Sent</span>
+            <span className="text-[10px] text-slate-600 float-right mt-1">11:16 PM · Sent</span>
           </div>
         </div>
       </div>

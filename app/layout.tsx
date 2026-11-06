@@ -11,6 +11,8 @@ import AnalyticsTracker from '../components/analytics/AnalyticsTracker';
 import { SITE_URL, DEFAULT_OG_IMAGE } from '../lib/seo-config';
 import { SchemaMarkup } from '../components/ui/SchemaMarkup';
 import { getSiteGraph } from '../lib/schema';
+import { GA_ID, GTM_ID } from '../lib/tag-ids';
+import { preload } from 'react-dom';
 import './globals.css';
 
 // Site-wide defaults only. Every page sets its own title, description and canonical; anything that
@@ -42,11 +44,13 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  // One preload for the site font. A <link rel="preload"> written in <head> came out twice (React
+  // hoists it and Next also kept the original tag), so it is requested through React's preload() API.
+  preload('/fonts/PlusJakartaSans.woff2', { as: 'font', type: 'font/woff2', crossOrigin: 'anonymous' });
   return (
     <html lang="en-IN" className="scroll-smooth">
       <head>
         <meta name="google-site-verification" content={process.env.NEXT_PUBLIC_GSC_TOKEN || "CVRVYJuDB29ung6LskjcSWvfZwi1q4L4b21cJxpbcX8"} />
-        <link rel="preload" href="/fonts/PlusJakartaSans.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
         <SchemaMarkup schema={getSiteGraph()} />
       </head>
       <body className="font-sans bg-slate-50 text-on-surface antialiased">
@@ -68,7 +72,11 @@ export default function RootLayout({
         <ConsentScripts />
 
         {/* Google Consent Mode v2 defaults: everything denied until the visitor accepts.
-            With storage denied, GA4 sends cookieless pings only; ad data is redacted. */}
+            With storage denied, GA4 sends cookieless pings only; ad data is redacted.
+            Then GA4 config and the GTM start event are queued (after the consent commands, so every
+            tag sees the consent state first). The libraries that read this queue load later, from
+            components/analytics/ConsentScripts.tsx; internal devices never load them, so for them
+            this queue is never sent anywhere. */}
         <Script
           id="consent-default"
           strategy="beforeInteractive"
@@ -83,6 +91,8 @@ export default function RootLayout({
               try{var q=new URLSearchParams(location.search).get('internal');
               if(q==='1')localStorage.setItem('vg-internal','1');else if(q==='0')localStorage.removeItem('vg-internal');
               if(localStorage.getItem('vg-internal')==='1')gtag('set',{traffic_type:'internal'});}catch(e){}
+              gtag('js',new Date());gtag('config','${GA_ID}');
+              dataLayer.push({'gtm.start':new Date().getTime(),event:'gtm.js'});/* ${GTM_ID} */
             `,
           }}
         />

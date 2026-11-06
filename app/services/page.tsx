@@ -15,6 +15,7 @@ import { CtaBanner } from '../../components/sections/CtaBanner';
 import { LeadSystemCallout } from '../../components/sections/LeadSystemCallout';
 import { FaqAccordion } from '../../components/sections/FaqAccordion';
 import { servicesHubFaqs } from '../../data/page-faqs';
+import { ReviewedLine } from '../../components/ui/ReviewedLine';
 
 export const metadata: Metadata = constructMetadata(pageMeta.services);
 
@@ -72,13 +73,14 @@ export default function ServicesPage() {
             ads that bring exclusive leads, and WhatsApp automation that answers every enquiry in seconds. Take one, or all
             three together.
           </p>
+          <ReviewedLine className="text-slate-500 mt-4" />
         </div>
       </section>
 
       <section className="bg-slate-50 py-16">
         <div className="max-w-container-max mx-auto px-gutter">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 stagger-reveal">
-            {servicesData.map((service) => {
+            {servicesData.map((service, i) => {
               const IconComponent = iconMap[service.icon] || Target;
               const href = `/services/${service.slug}`;
               const photo = serviceImages[service.slug] || serviceImages['high-converting-landing-pages'];
@@ -90,6 +92,7 @@ export default function ServicesPage() {
                     alt={photo.alt}
                     ratio="16/10"
                     sizes="(min-width: 1280px) 400px, (min-width: 1024px) 31vw, (min-width: 768px) 46vw, 100vw"
+                    priority={i === 0}
                     className="!rounded-none"
                     imageClassName="transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.05]"
                   />

@@ -12,6 +12,7 @@ import { SchemaMarkup } from '../../components/ui/SchemaMarkup';
 import { getWebPageSchema } from '../../lib/schema';
 import { CtaBanner } from '../../components/sections/CtaBanner';
 import { FaqAccordion } from '../../components/sections/FaqAccordion';
+import { ReviewedLine } from '../../components/ui/ReviewedLine';
 
 export const metadata: Metadata = constructMetadata(pageMeta.guides);
 
@@ -21,7 +22,15 @@ const chip =
 export default function GuidesPage() {
   const bySlug = new Map(getAllPosts().map((p) => [p.slug, p]));
   // Only published guides are shown; a topic with nothing published yet is hidden.
-  const topics = guideTopics
+  const listed = new Set(guideTopics.flatMap((t) => t.slugs));
+  // Any live post not yet placed in a topic still gets listed, so every post is reachable from here.
+  const more = {
+    id: 'more-guides',
+    title: 'More guides',
+    intro: 'Newer guides that have not been sorted into a topic yet.',
+    slugs: [...bySlug.keys()].filter((s) => !listed.has(s)),
+  };
+  const topics = [...guideTopics, more]
     .map((t) => ({ ...t, guides: t.slugs.flatMap((s) => (bySlug.has(s) ? [bySlug.get(s)!] : [])) }))
     .filter((t) => t.guides.length);
 
@@ -72,6 +81,7 @@ export default function GuidesPage() {
             Reels and landing pages. Each topic is explained in general terms first. The examples come from Indian real estate,
             the industry we specialise in, and the steps work for any business that sells through enquiries.
           </p>
+          <ReviewedLine className="text-slate-500 mt-3" />
           <nav aria-label="Guide topics" className="mt-8 flex flex-wrap gap-2">
             {topics.map((t) => (
               <a key={t.id} href={`#${t.id}`} className={chip}>{t.title}</a>

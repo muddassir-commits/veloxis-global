@@ -36,6 +36,7 @@ export const AudiencePageTemplate: React.FC<{ audience: AudienceData }> = ({ aud
           alt={img.hero.alt}
           fill
           priority
+          fetchPriority="high"
           sizes="100vw"
           className="object-cover hero-kenburns"
           style={{ objectPosition: img.hero.position ?? 'center' }}

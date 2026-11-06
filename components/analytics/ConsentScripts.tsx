@@ -2,11 +2,9 @@
 
 import { useEffect, useState, useSyncExternalStore } from 'react';
 import Script from 'next/script';
-import { GoogleAnalytics, GoogleTagManager } from '@next/third-parties/google';
 import { Consent, CONSENT_EVENT, readConsent } from '../../lib/consent';
 
-const GA_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || 'G-LC9XWNSGCF';
-const GTM_ID = 'GTM-5LS7XH76';
+import { GA_ID, GTM_ID } from '../../lib/tag-ids';
 const PIXEL_ID = process.env.NEXT_PUBLIC_META_PIXEL_ID || '1484475786790290';
 const CLARITY_ID = process.env.NEXT_PUBLIC_CLARITY_ID || 'wvclr1xtkt';
 
@@ -26,6 +24,11 @@ function isInternalDevice() {
 //   to 'denied', so until the visitor accepts, Google receives cookieless pings only (no cookies are
 //   set) and models the missing visits. Accepting sends gtag('consent','update', granted) (lib/consent.ts).
 // - Microsoft Clarity loads only with analytics consent; Meta Pixel only with marketing consent.
+// Speed: the consent defaults, gtag('js'/'config') for GA4 and the GTM start event are all queued in
+// dataLayer by the inline consent-default script in app/layout.tsx (before any tag). The two Google
+// libraries below only read that queue, in order, so they load with lazyOnload (after the page has
+// finished loading, when the browser is idle) instead of competing with the page for the main thread.
+// Events sent before then (lib/analytics.ts) wait in dataLayer and go out when gtag.js arrives.
 // Consent is only ever widened within a page view; withdrawing it takes effect on the next load
 // (the Google consent update to 'denied' applies at once).
 const noSubscribe = () => () => {};
@@ -49,8 +52,8 @@ export default function ConsentScripts() {
 
   return (
     <>
-      <GoogleTagManager gtmId={GTM_ID} />
-      <GoogleAnalytics gaId={GA_ID} />
+      <Script id="gtag-lib" strategy="lazyOnload" src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`} />
+      <Script id="gtm-lib" strategy="lazyOnload" src={`https://www.googletagmanager.com/gtm.js?id=${GTM_ID}`} />
 
       {consent.analytics && (
         <Script

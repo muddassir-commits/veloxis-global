@@ -6,15 +6,21 @@ import { WhatsAppLink } from '../../components/ui/WhatsAppLink';
 import { ImageFrame } from '../../components/ui/ImageFrame';
 import { FaqAccordion } from '../../components/sections/FaqAccordion';
 import { Breadcrumb } from '../../components/ui/Breadcrumb';
+import { SchemaMarkup } from '../../components/ui/SchemaMarkup';
+import { ReviewedLine } from '../../components/ui/ReviewedLine';
 import { constructMetadata } from '../../lib/seo-config';
+import { getServiceSchema } from '../../lib/schema';
+import { getPostBySlug } from '../../lib/blog';
 import { siteData } from '../../data/site';
 
 // D2C offer page (public since Nov 2026): linked from the homepage industries strip, footer, About,
 // llms.txt and the D2C follow-up emails.
+const DESCRIPTION =
+  'Meta ads, store pages that convert and WhatsApp and email follow-ups for Indian D2C brands, run by a small hands-on team and judged on orders, not clicks.';
+
 export const metadata: Metadata = constructMetadata({
   title: 'D2C Marketing Agency: Meta Ads & Store Pages | Veloxis',
-  description:
-    'Meta ads, store pages that convert and WhatsApp and email follow-ups for Indian D2C brands, run by a small hands-on team and judged on orders, not clicks.',
+  description: DESCRIPTION,
   path: '/d2c',
 });
 
@@ -38,6 +44,34 @@ const services = [
     icon: LineChart,
     title: 'Tracking and reporting',
     desc: 'Meta pixel, Conversions API and GA4 set up properly, and a weekly report on orders and cost per order.',
+  },
+];
+
+// What the free store audit looks at first. General checks, no promised numbers.
+const auditChecks = [
+  {
+    title: 'Tracking you can trust',
+    desc: 'Is the Meta pixel firing on add to cart, checkout and purchase? Is the Conversions API sending the same orders from the server, without counting them twice? If the numbers in Ads Manager and in your store do not roughly agree, every budget decision is a guess.',
+  },
+  {
+    title: 'The page each ad sends people to',
+    desc: 'An ad for one product should land on that product, not the homepage. We check the first phone screen: price, delivery time, return policy, reviews you actually have, and a buy button that is visible without scrolling.',
+  },
+  {
+    title: 'Speed on a mid-range phone',
+    desc: 'Large images, many apps and pop-ups slow a store down on mobile data. We list the heaviest items on your key pages and what can be removed or compressed.',
+  },
+  {
+    title: 'Checkout friction',
+    desc: 'Forced account creation, surprise shipping charges at the last step and missing payment options (UPI, or cash on delivery where you offer it) are common reasons carts are left behind.',
+  },
+  {
+    title: 'Follow-up after a visit',
+    desc: 'Do shoppers who add to cart and leave get a WhatsApp or email reminder? Do first-time buyers hear from you again before they need to reorder? We check what is set up today and what each message says.',
+  },
+  {
+    title: 'Ad account structure',
+    desc: 'Too many small campaigns split the budget so thin that Meta cannot learn. We check how campaigns, audiences and creatives are organised and where the spend is actually going.',
   },
 ];
 
@@ -86,13 +120,24 @@ const faqs = [
   {
     question: 'Who will work on my account?',
     answer:
-      'A small team that plans and reviews every account directly, with Google Ads Search, Google Ads Apps and Google Analytics certifications. No junior account managers.',
+      'A small team that plans and reviews every account directly. Campaigns are planned by a Google-certified specialist (Google Ads Search, Google Ads Apps and Google Analytics). No junior account managers.',
   },
 ];
 
 export default function D2CPage() {
+  // Link the D2C Meta ads guide only once it is published (posts can be scheduled).
+  const d2cGuide = getPostBySlug('meta-ads-for-d2c-brands');
   return (
     <>
+      <SchemaMarkup
+        schema={getServiceSchema({
+          name: 'D2C marketing: Meta ads, store pages and follow-ups',
+          description: DESCRIPTION,
+          path: '/d2c',
+          serviceType: 'D2C ecommerce marketing',
+          audience: 'Direct-to-consumer (D2C) brands selling on their own website',
+        })}
+      />
       <section className="bg-slate-50 pt-16 lg:pt-[72px] border-b border-slate-100">
         <div className="max-w-container-max mx-auto px-gutter">
           <Breadcrumb items={[{ name: 'D2C brands', href: '/d2c' }]} />
@@ -113,12 +158,15 @@ export default function D2CPage() {
               For D2C brands
             </span>
             <h1 className="text-4xl sm:text-5xl lg:text-[56px] font-extrabold tracking-tight leading-[1.1] text-white">
+              <span className="block text-xl sm:text-2xl font-bold text-blue-300 tracking-normal mb-3">D2C marketing agency</span>
               More orders from your own website
             </h1>
             <p className="text-lg sm:text-xl text-slate-300 leading-relaxed max-w-2xl">
-              Meta ads, store pages that convert, and WhatsApp and email follow-ups for shoppers who didn’t buy. One
-              hands-on team, judged on orders, not clicks.
+              Veloxis Global is a digital marketing agency based in Noida, India, that runs Meta ads, store pages that
+              convert, and WhatsApp and email follow-ups for Indian D2C brands. One hands-on team, judged on orders, not
+              clicks.
             </p>
+            <ReviewedLine className="text-white/60" />
             <div className="mt-2 flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
               <WhatsAppLink id="d2c-hero-btn" placement="hero" button={{ variant: 'primary', size: 'lg' }} className="w-full sm:w-auto">
                 Get a free store audit →
@@ -171,6 +219,42 @@ export default function D2CPage() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* What the audit checks */}
+      <section className="py-20 bg-slate-50 border-t border-slate-100">
+        <div className="max-w-container-max mx-auto px-gutter">
+          <div className="max-w-3xl mb-10 section-reveal">
+            <span className="text-xs font-bold text-royal-blue uppercase tracking-widest block mb-3">The free store audit</span>
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">What we look at first in a D2C store</h2>
+            <p className="text-slate-600 mt-4 leading-relaxed">
+              Before changing any ad, we check whether the store can turn the traffic it already gets into orders, and
+              whether the numbers can be trusted. These six checks come first, because a problem in any one of them
+              makes more ad spend less useful.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 stagger-reveal">
+            {auditChecks.map((c) => (
+              <div key={c.title} className="bg-white border border-slate-200 rounded-2xl p-6">
+                <h3 className="font-extrabold text-slate-900 mb-2">{c.title}</h3>
+                <p className="text-sm text-slate-600 leading-relaxed">{c.desc}</p>
+              </div>
+            ))}
+          </div>
+          <p className="text-slate-600 mt-8 leading-relaxed max-w-3xl">
+            You get the findings in plain language, with the two or three changes we would make first. If you would
+            rather make the changes yourself, you are free to.
+            {d2cGuide && (
+              <>
+                {' '}For the ads side in more detail, read our guide to{' '}
+                <Link href={`/blog/${d2cGuide.slug}`} className="font-semibold text-royal-blue hover:underline">
+                  Meta ads for D2C brands
+                </Link>
+                .
+              </>
+            )}
+          </p>
         </div>
       </section>
 
