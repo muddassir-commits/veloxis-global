@@ -539,7 +539,7 @@ export async function runAudit(input: string): Promise<AuditResult> {
   });
   add({
     id: 'track-note', category: 'tracking', label: 'Note', weight: 0, status: 'info',
-    detail: 'Tags loaded only after cookie consent may not show up here. If you know a tag is installed this way, ignore a fail above.',
+    detail: 'Tags loaded only after cookie consent, or added later from another domain, may not show up here. If you know a tag is installed this way, ignore a fail above.',
   });
 
   // ---- Speed (from the server's point of view) ----
