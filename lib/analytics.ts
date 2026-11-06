@@ -38,6 +38,9 @@ export function trackEvent(name: string, params: Params = {}) {
     window.fbq(meta.type, meta.name, {
       source_page: String(params.source_page ?? 'unknown'),
       ...(params.form_name ? { content_name: String(params.form_name) } : {}),
+      // WhatsApp: which page ref and which button (e.g. content_name "blog-eoi", content_category "sticky").
+      ...(params.wa_ref ? { content_name: String(params.wa_ref).split('/')[0] } : {}),
+      ...(params.cta_location ? { content_category: String(params.cta_location) } : {}),
       ...(channel ? { contact_method: channel } : {}),
     });
   }
@@ -52,8 +55,16 @@ export const events = {
   newsletterSignup: (sourcePage: string) => trackEvent('newsletter_signup', { source_page: sourcePage }),
   ctaClick: (location: string, cta: string) => trackEvent('cta_click', { location, cta }),
   phoneClick: (sourcePage: string) => trackEvent('phone_click', { source_page: sourcePage }),
-  whatsappClick: (sourcePage: string, cta?: string) =>
-    trackEvent('whatsapp_click', cta ? { source_page: sourcePage, cta } : { source_page: sourcePage }),
+  // WhatsApp chat button (wa.me to our number). Extra details come from the button's data-* attributes:
+  // cta (button name), cta_location (placement), page_type, wa_ref (e.g. "blog-eoi/sticky", also in the message).
+  whatsappClick: (sourcePage: string, details: { cta?: string; cta_location?: string; page_type?: string; wa_ref?: string } = {}) => {
+    const params: Params = { source_page: sourcePage };
+    for (const [k, v] of Object.entries(details)) if (v) params[k] = v;
+    trackEvent('whatsapp_click', params);
+  },
+  // "Share on WhatsApp" of a blog post: a share, not a lead. GA4 recommended `share` event; never sent to Meta.
+  share: (sourcePage: string, method: string) =>
+    trackEvent('share', { method, content_type: 'article', item_id: sourcePage }),
   emailClick: (sourcePage: string) => trackEvent('email_click', { source_page: sourcePage }),
   bookingClick: (sourcePage: string) => trackEvent('booking_click', { source_page: sourcePage }),
   scrollDepth: (depth: number) => trackEvent('scroll_depth', { percent: depth }),

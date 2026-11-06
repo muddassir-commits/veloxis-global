@@ -38,8 +38,17 @@ export default function AnalyticsTracker() {
 
       if (href.startsWith('tel:')) return events.phoneClick(page);
       // A named WhatsApp button (data-cta) also sends its name, so each placement can be compared.
-      if (href.includes('wa.me') || href.includes('api.whatsapp.com/send'))
-        return events.whatsappClick(page, anchor?.dataset.cta || undefined);
+      // Sharing a post on WhatsApp is a share, not a lead: it must not count as whatsapp_click (key event / Meta Contact).
+      if (anchor?.dataset.ctaType === 'share') return events.share(page, 'whatsapp');
+      if (href.includes('wa.me') || href.includes('api.whatsapp.com/send')) {
+        const d = anchor?.dataset ?? {};
+        return events.whatsappClick(page, {
+          cta: d.cta,
+          cta_location: d.ctaLocation,
+          page_type: d.pageType,
+          wa_ref: d.ref,
+        });
+      }
       if (href.startsWith('mailto:')) return events.emailClick(page);
       if (href.includes('calendly.com')) return events.bookingClick(page);
 
