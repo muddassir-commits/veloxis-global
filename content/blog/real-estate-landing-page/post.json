@@ -1,0 +1,29 @@
+{
+  "title": "Real Estate Landing Page Template for Indian Projects",
+  "seoTitle": "Real Estate Landing Page Template for Indian Projects",
+  "excerpt": "A real estate landing page template for Indian projects: the 8 sections, RERA and QR block, consent text, WhatsApp tracking, Hindi pages and speed.",
+  "date": "2026-11-08",
+  "category": "Landing Pages",
+  "service": "high-converting-landing-pages",
+  "image": "/images/people/blog/real-estate-landing-page-cover.jpg",
+  "imageAlt": "Two hands holding a white smartphone and tapping its blank screen against a grey background",
+  "inlineImages": [
+    { "src": "/images/people/blog/real-estate-landing-page-1.jpg", "alt": "Printed apartment floor plans showing a dining table, kitchen and bathroom layout with room dimensions", "beforeHeading": "sections", "caption": "Plan the page like a floor plan: every section has one job." },
+    { "src": "/images/people/blog/real-estate-landing-page-2.jpg", "alt": "Facade of a residential tower under construction with two workers on a suspended platform", "beforeHeading": "rera" }
+  ],
+  "about": [
+    { "name": "Landing page", "sameAs": "https://en.wikipedia.org/wiki/Landing_page" },
+    { "name": "Real Estate (Regulation and Development) Act, 2016", "sameAs": "https://en.wikipedia.org/wiki/Real_Estate_(Regulation_and_Development)_Act,_2016" },
+    { "name": "Real estate", "sameAs": "https://en.wikipedia.org/wiki/Real_estate" }
+  ],
+  "faqs": [
+    { "question": "What should a real estate landing page include?", "answer": "Eight sections in the order buyers ask questions: a first screen with locality, configurations, starting price and RERA number; a RERA block with the authority website and QR code; location; floor plans in carpet area; price and payment plan; proof; FAQs; and a final form with a WhatsApp button." },
+    { "question": "What should be on the first screen of a property landing page?", "answer": "The project name, locality, available configurations, a starting price or band, the RERA registration number and one clear button such as \"Get price sheet on WhatsApp\". The headline should repeat the promise of the ad that sent the visitor, so buyers know at once they are in the right place." },
+    { "question": "Is the RERA number mandatory on a real estate landing page?", "answer": "For a registered project, yes. A project landing page is an advertisement, and Section 11(2) of the RERA Act requires the registration number and the authority's website in a promoter's ads. Some states, such as Maharashtra, also require a QR code. This is general information, not legal advice." },
+    { "question": "Should a real estate landing page show the price?", "answer": "Show a starting price or price band from your current approved price list, and offer the full cost sheet on request. The starting price filters out buyers who cannot afford the project, and the cost sheet gives serious buyers a reason to share their number. Say clearly what the starting price includes." },
+    { "question": "What consent text should a property enquiry form have?", "answer": "One plain line saying who will contact the buyer, how (call, SMS, WhatsApp) and why, that they can ask you to stop, plus a link to your privacy policy. India's DPDP Act expects data to be used for the purpose it was given for. This is general information, not legal advice." },
+    { "question": "How do I track which ad a WhatsApp lead came from?", "answer": "Use a click-to-chat link in the format wa.me/number?text=message, and put a short source code such as \"Ref: GS-3BHK\" in the pre-filled message for each page or ad. Also mark WhatsApp clicks as conversions and use UTM-tagged links, so GA4 and your CRM record the source." },
+    { "question": "Should a real estate landing page be in Hindi or English?", "answer": "Use the language of the ad. If you advertise in both, build one page per language with its own URL, link them with hreflang and a visible language switch, and avoid automatic redirects, as Google recommends. Keep the RERA number, carpet areas and prices identical in both versions." },
+    { "question": "How fast should a real estate landing page load?", "answer": "Aim for Google's good Core Web Vitals: Largest Contentful Paint within 2.5 seconds, Interaction to Next Paint within 200 milliseconds and layout shift of 0.1 or less, for at least 75 percent of visits. Compress the hero image, never lazy-load it, and avoid sliders and autoplay video." }
+  ]
+}
