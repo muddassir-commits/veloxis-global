@@ -12,6 +12,7 @@ import { getWebPageSchema } from '../../lib/schema';
 import { servicesData } from '../../data/services-data';
 import { siteData } from '../../data/site';
 import { aboutFaqs } from '../../data/page-faqs';
+import { ReviewedLine } from '../../components/ui/ReviewedLine';
 
 export const metadata: Metadata = constructMetadata(pageMeta.about);
 
@@ -68,6 +69,7 @@ export default function AboutPage() {
               We started Veloxis Global to give businesses one thing most agencies don’t: marketing that’s judged on
               enquiries, site visits and orders, not impressions.
             </p>
+            <ReviewedLine className="text-white/60" />
           </div>
           <div className="lg:col-span-4 w-full max-w-sm mx-auto lg:max-w-none">
             <ImageFrame

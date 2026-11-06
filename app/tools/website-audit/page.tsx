@@ -7,6 +7,7 @@ import { SchemaMarkup } from '../../../components/ui/SchemaMarkup';
 import { FaqAccordion } from '../../../components/sections/FaqAccordion';
 import { ORG_ID } from '../../../lib/schema';
 import AuditTool from './AuditTool';
+import { ReviewedLine } from '../../../components/ui/ReviewedLine';
 
 export const metadata: Metadata = constructMetadata(pageMeta.websiteAudit);
 
@@ -78,6 +79,7 @@ export default function WebsiteAuditPage() {
             Enter any web page for a free SEO audit and website performance check. In under a minute you get a score for AI search
             readiness, SEO basics, lead capture, tracking, speed and trust, with a plain-English fix for every problem and the five to do first.
           </p>
+          <ReviewedLine className="text-slate-500 mt-3" />
           <div className="mt-8">
             <AuditTool />
           </div>

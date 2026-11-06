@@ -17,6 +17,7 @@ import { contactFaqs } from '../../data/page-faqs';
 import { Mail, Calendar, MapPin } from 'lucide-react';
 import { WhatsAppIcon } from '../../components/ui/WhatsAppIcon';
 import { WhatsAppLink } from '../../components/ui/WhatsAppLink';
+import { ReviewedLine } from '../../components/ui/ReviewedLine';
 
 export const metadata: Metadata = constructMetadata(pageMeta.contact);
 
@@ -50,6 +51,7 @@ export default function ContactPage() {
               come back with what we would change first — free, with no obligation.{' '}
               <Link href="/free-audit" className="font-semibold text-royal-blue hover:underline">See what the audit covers</Link>.
             </p>
+            <ReviewedLine className="text-slate-500" />
 
             <div className="flex items-center gap-4 bg-white p-4 rounded-xl border border-slate-100 shadow-sm w-full">
               <div className="relative w-12 h-12 rounded-full border border-slate-200 overflow-hidden shrink-0">

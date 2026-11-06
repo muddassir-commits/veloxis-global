@@ -15,6 +15,7 @@ import { CtaBanner } from '../../components/sections/CtaBanner';
 import { LeadSystemCallout } from '../../components/sections/LeadSystemCallout';
 import { FaqAccordion } from '../../components/sections/FaqAccordion';
 import { servicesHubFaqs } from '../../data/page-faqs';
+import { ReviewedLine } from '../../components/ui/ReviewedLine';
 
 export const metadata: Metadata = constructMetadata(pageMeta.services);
 
@@ -72,6 +73,7 @@ export default function ServicesPage() {
             ads that bring exclusive leads, and WhatsApp automation that answers every enquiry in seconds. Take one, or all
             three together.
           </p>
+          <ReviewedLine className="text-slate-500 mt-4" />
         </div>
       </section>
 

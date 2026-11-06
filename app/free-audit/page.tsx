@@ -12,6 +12,7 @@ import { CtaBanner } from '../../components/sections/CtaBanner';
 import { getWebPageSchema } from '../../lib/schema';
 import { constructMetadata, pageMeta } from '../../lib/seo-config';
 import { auditAreas, auditDeliverables, auditSteps, freeAuditFaqs } from '../../data/free-audit';
+import { ReviewedLine } from '../../components/ui/ReviewedLine';
 
 export const metadata: Metadata = constructMetadata(pageMeta.freeAudit);
 
@@ -53,8 +54,9 @@ export default function FreeAuditPage() {
             </h1>
             <p className="text-lg sm:text-xl text-slate-300 leading-relaxed max-w-2xl">
               Send us your project or current campaigns. We personally review your landing page, ads and lead
-              follow-up, and tells you what to fix first — whether or not you work with us.
+              follow-up, and tell you what to fix first — whether or not you work with us.
             </p>
+            <ReviewedLine className="text-white/60" />
             <div className="mt-2 flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
               <Button id="free-audit-hero-btn" href="/contact" variant="primary" size="lg" className="w-full sm:w-auto">
                 Request your free audit →
