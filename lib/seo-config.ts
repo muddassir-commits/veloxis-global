@@ -104,7 +104,7 @@ export const pageMeta = {
     path: '/digital-marketing-agency-lucknow',
   },
   kanpur: {
-    title: 'Kanpur Digital Marketing Agency for Real Estate | Veloxis',
+    title: 'Digital Marketing Agency in Kanpur for Real Estate | Veloxis',
     description:
       'Real estate-focused digital marketing agency for Kanpur builders, brokers and CPs: project landing pages, Meta and Google ads, instant WhatsApp replies.',
     path: '/digital-marketing-agency-kanpur',
@@ -152,9 +152,9 @@ export const pageMeta = {
     path: '/guides',
   },
   websiteAudit: {
-    title: 'Free SEO & Website Audit Tool: Speed, AI Search | Veloxis',
+    title: 'Free Website Audit Tool (No Sign-up): SEO, Speed, AI Search',
     description:
-      'Free SEO audit and website performance audit in under a minute: SEO basics, speed, tracking, lead capture and AI search readiness (ChatGPT, Gemini, AI Overviews).',
+      'Free website audit tool, no sign-up: check any page for SEO basics, speed, tracking, lead capture and AI search readiness in under a minute, with fixes to make.',
     path: '/tools/website-audit',
   },
   blog: {
