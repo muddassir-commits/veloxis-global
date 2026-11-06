@@ -17,7 +17,7 @@ export const guideTopics: GuideTopic[] = [
     title: 'AI search, GEO and AEO',
     intro:
       'AI search is when people get an answer from ChatGPT, Gemini, Perplexity or Google’s AI Overviews instead of a list of links. Generative engine optimization (GEO) and answer engine optimization (AEO) are the work of making your business one of the sources those answers quote.',
-    slugs: ['generative-engine-optimization-guide', 'ai-for-real-estate-india'],
+    slugs: ['generative-engine-optimization-guide', 'ai-for-real-estate-india', 'ai-tools-for-real-estate-agents'],
   },
   {
     id: 'ads',
@@ -30,6 +30,10 @@ export const guideTopics: GuideTopic[] = [
       'google-ads-for-real-estate-india',
       'google-ads-vs-meta-ads-real-estate-india',
       'real-estate-ad-examples',
+      'real-estate-retargeting-ads',
+      'nri-real-estate-marketing',
+      'meta-ads-for-d2c-brands',
+      'real-estate-newspaper-ads-vs-digital-ads',
     ],
   },
   {
@@ -37,21 +41,35 @@ export const guideTopics: GuideTopic[] = [
     title: 'SEO and Google Business Profile',
     intro:
       'Search engine optimization (SEO) gets your pages found on Google without paying per click. Local SEO and a verified Google Business Profile decide whether you appear in the map results for searches in your city.',
-    slugs: ['real-estate-seo-india', 'real-estate-local-seo-ncr'],
+    slugs: [
+      'real-estate-seo-india',
+      'real-estate-local-seo-ncr',
+      'google-business-profile-checklist',
+      'real-estate-google-business-profile',
+      'local-seo-for-dentists',
+      'real-estate-website-examples',
+    ],
   },
   {
     id: 'whatsapp-automation',
     title: 'WhatsApp and AI automation',
     intro:
       'Automation answers every enquiry in seconds, asks the qualifying questions and follows up until the lead replies, so no lead goes cold while your team is busy.',
-    slugs: ['whatsapp-automation-for-real-estate-leads'],
+    slugs: [
+      'whatsapp-automation-for-real-estate-leads',
+      'whatsapp-business-api-for-real-estate',
+      'real-estate-whatsapp-message-templates',
+      'real-estate-chatbot',
+      'real-estate-crm-india',
+      'real-estate-email-marketing',
+    ],
   },
   {
     id: 'social-media',
     title: 'Social media and Reels',
     intro:
       'Organic social media builds trust before a buyer ever fills a form. Short video (Instagram Reels, YouTube Shorts) is now the format that reaches the most people for free.',
-    slugs: ['instagram-reels-marketing', 'real-estate-social-media-marketing'],
+    slugs: ['instagram-reels-marketing', 'real-estate-social-media-marketing', 'real-estate-video-marketing'],
   },
   {
     id: 'landing-pages-creative',
@@ -60,6 +78,8 @@ export const guideTopics: GuideTopic[] = [
       'A landing page is the single page an ad sends people to. Its only job is to turn a visitor into an enquiry. Brochures, hoardings and slogans support the same message offline.',
     slugs: [
       'real-estate-landing-page-conversion-hacks',
+      'real-estate-landing-page',
+      'real-estate-branding',
       'real-estate-brochure',
       'real-estate-hoarding-design',
       'real-estate-slogans-taglines',
@@ -70,7 +90,43 @@ export const guideTopics: GuideTopic[] = [
     title: 'RERA, brokers and channel partners',
     intro:
       'Rules and roles specific to Indian real estate: how RERA registration works, what must appear in ads, and how channel partners and expressions of interest fit into a launch.',
-    slugs: ['rera-number-check', 'rera-registration-for-agents', 'channel-partner-in-real-estate', 'what-is-eoi-in-real-estate'],
+    slugs: [
+      'rera-number-check',
+      'rera-registration-for-agents',
+      'rera-advertisement-rules',
+      'channel-partner-in-real-estate',
+      'channel-partner-registration',
+      'what-is-eoi-in-real-estate',
+      'real-estate-broker-commission-india',
+      '99acres-vs-magicbricks-property-portals',
+    ],
+  },
+  {
+    id: 'plans-budgets',
+    title: 'Marketing plans, budgets and launches',
+    intro:
+      'A marketing plan decides who you are selling to, which channels you use, how much you spend and how you will measure it. These guides cover the plan, the budget and how to run a launch from pre-launch to sales.',
+    slugs: [
+      'real-estate-marketing-plan',
+      'real-estate-marketing-budget',
+      'pre-launch-real-estate-marketing',
+      'luxury-real-estate-marketing',
+      'how-to-sell-plots-online',
+      'property-dealer-marketing-ideas',
+    ],
+  },
+  {
+    id: 'sales-follow-up',
+    title: 'Lead handling, sales and site visits',
+    intro:
+      'Leads only turn into bookings when someone answers fast, asks the right questions and books the visit. These guides cover lead management, qualification, sales scripts, site visits and referrals.',
+    slugs: [
+      'real-estate-lead-management',
+      'real-estate-lead-qualification-questions',
+      'real-estate-sales-scripts-india',
+      'how-to-book-real-estate-site-visits',
+      'real-estate-referral-program',
+    ],
   },
 ];
 

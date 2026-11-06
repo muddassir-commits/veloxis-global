@@ -21,7 +21,15 @@ const chip =
 export default function GuidesPage() {
   const bySlug = new Map(getAllPosts().map((p) => [p.slug, p]));
   // Only published guides are shown; a topic with nothing published yet is hidden.
-  const topics = guideTopics
+  const listed = new Set(guideTopics.flatMap((t) => t.slugs));
+  // Any live post not yet placed in a topic still gets listed, so every post is reachable from here.
+  const more = {
+    id: 'more-guides',
+    title: 'More guides',
+    intro: 'Newer guides that have not been sorted into a topic yet.',
+    slugs: [...bySlug.keys()].filter((s) => !listed.has(s)),
+  };
+  const topics = [...guideTopics, more]
     .map((t) => ({ ...t, guides: t.slugs.flatMap((s) => (bySlug.has(s) ? [bySlug.get(s)!] : [])) }))
     .filter((t) => t.guides.length);
 
