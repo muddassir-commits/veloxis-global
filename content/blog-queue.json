@@ -62,7 +62,8 @@
       ],
       "gaps": "Vendor pages list use cases but not the conversation script, the hand-off to a human, RERA wording in replies, or template/opt-in rules of the WhatsApp Business Platform.",
       "internalLinks": ["/blog/whatsapp-business-api-for-real-estate", "/blog/whatsapp-automation-for-real-estate-leads", "/blog/real-estate-whatsapp-message-templates", "/services/ai-automation"],
-      "status": "todo"
+      "status": "done",
+      "date": "2026-11-07"
     },
     {
       "slug": "real-estate-landing-page",
