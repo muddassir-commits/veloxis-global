@@ -7,16 +7,18 @@ import React from 'react';
 import Link from 'next/link';
 import { Button } from '../ui/Button';
 import { CheckCircle } from 'lucide-react';
-import { siteData } from '../../data/site';
+import { WhatsAppLink } from '../ui/WhatsAppLink';
 
 export interface CtaBannerProps {
   title?: string;
   description?: string;
   /** Show the "what the audit covers" link (off on the free audit page itself) */
   showAuditLink?: boolean;
+  /** Blog post title, so the WhatsApp message can name the topic if the post has no message of its own yet. */
+  whatsappTitle?: string;
 }
 
-export const CtaBanner: React.FC<CtaBannerProps> = ({ title, description, showAuditLink = true }) => {
+export const CtaBanner: React.FC<CtaBannerProps> = ({ title, description, showAuditLink = true, whatsappTitle }) => {
   const displayTitle = title || 'Get a free real estate marketing audit';
   const displayDescription =
     description ||
@@ -53,14 +55,15 @@ export const CtaBanner: React.FC<CtaBannerProps> = ({ title, description, showAu
             </div>
             {/* Ghost white border button */}
             <div className="w-full sm:w-auto rounded-full hero-cta-hover">
-              <Button
+              <WhatsAppLink
                 id="cta-banner-whatsapp-btn"
-                href={siteData.whatsappLink}
-                variant="outline"
+                placement="banner"
+                title={whatsappTitle}
+                button={{ variant: 'outline' }}
                 className="w-full sm:w-auto text-center border-white text-white hover:bg-white/10 hover:text-white"
               >
                 Chat on WhatsApp
-              </Button>
+              </WhatsAppLink>
             </div>
           </div>
 

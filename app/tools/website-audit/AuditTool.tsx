@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import { CheckCircle2, AlertTriangle, XCircle, Info, Loader2, Search, ArrowRight } from 'lucide-react';
 import { trackEvent } from '../../../lib/analytics';
-import { siteData } from '../../../data/site';
+import { WhatsAppLink } from '../../../components/ui/WhatsAppLink';
 import type { AuditResult, Check, Status } from '../../../lib/audit';
 
 const ICON: Record<Status, React.ReactNode> = {
@@ -12,6 +12,15 @@ const ICON: Record<Status, React.ReactNode> = {
   warn: <AlertTriangle className="w-5 h-5 text-amber-500 shrink-0" aria-label="Needs work" />,
   fail: <XCircle className="w-5 h-5 text-red-600 shrink-0" aria-label="Fail" />,
   info: <Info className="w-5 h-5 text-slate-400 shrink-0" aria-label="Info" />,
+};
+
+// Site name only (no path or query) for the WhatsApp message.
+const hostOf = (u: string) => {
+  try {
+    return new URL(u).hostname.replace(/^www\./, '');
+  } catch {
+    return u.slice(0, 60);
+  }
 };
 
 const scoreColor = (s: number) => (s >= 80 ? 'text-emerald-600' : s >= 50 ? 'text-amber-500' : 'text-red-600');
@@ -147,15 +156,14 @@ export default function AuditTool() {
               <Link href="/free-audit" className="inline-flex items-center justify-center gap-2 rounded-xl bg-emerald-400 px-5 py-3 font-bold text-slate-900 hover:bg-emerald-300">
                 Get a free marketing audit <ArrowRight className="w-4 h-4" aria-hidden="true" />
               </Link>
-              <a
-                href={siteData.whatsappLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={() => trackEvent('whatsapp_click', { source_page: '/tools/website-audit' })}
+              {/* No onClick tracking here: AnalyticsTracker already sends whatsapp_click (this button used to send it twice). */}
+              <WhatsAppLink
+                placement="result"
+                message={`I ran your website audit on ${hostOf(result.finalUrl || result.url)} and got ${result.score}/100. Can you help me fix the issues?`}
                 className="inline-flex items-center justify-center rounded-xl border border-white/30 px-5 py-3 font-bold text-white hover:bg-white/10"
               >
                 WhatsApp us
-              </a>
+              </WhatsAppLink>
             </div>
           </div>
         </div>

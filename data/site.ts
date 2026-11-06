@@ -20,6 +20,7 @@ export const siteData = {
   // Kept apart from any similarly named company in search results.
   disambiguation: "Indian digital marketing agency (real estate, D2C brands, local businesses). Not related to Veloxis Pharmaceuticals or VXI Global.",
   booking: "https://calendly.com/veloxis-global/30min",
+  // Generic link only. On-page WhatsApp buttons use components/ui/WhatsAppLink (page-specific message, data/whatsapp-messages.ts).
   whatsappLink: "https://wa.me/919194020727?text=Hi%20Veloxis%20Global%2C%20I%27d%20like%20a%20free%20marketing%20audit",
   logo: "https://www.veloxisglobal.com/images/logos/logo.png",
   // Square version for Google's logo and knowledge panel (wide logos get cropped or skipped).

@@ -8,6 +8,7 @@ import { Menu, X, ChevronDown, Zap, Target, Bot, ArrowRight, ShieldCheck } from 
 import { Button } from '../ui/Button';
 import { servicesGroups } from '../../data/navbar-data';
 import { WhatsAppIcon } from '../ui/WhatsAppIcon';
+import { WhatsAppLink } from '../ui/WhatsAppLink';
 import { siteData } from '../../data/site';
 
 const serviceIconMap: Record<string, React.ComponentType<{ className?: string }>> = {
@@ -331,11 +332,9 @@ export const Navbar: React.FC = () => {
                 Get Free Audit →
               </Button>
             </div>
-            <a
-              href={siteData.whatsappLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              title={`WhatsApp ${siteData.phone}`}
+            <WhatsAppLink
+              placement="nav"
+              tooltip={`WhatsApp ${siteData.phone}`}
               aria-label={`Chat on WhatsApp ${siteData.phone}`}
               className={`flex items-center justify-center rounded-full bg-[#25D366]/10 ring-1 ring-[#25D366]/25 hover:bg-[#25D366]/20 hover:ring-[#25D366]/50 transition-all duration-300 shrink-0 ${
                 scrolled
@@ -344,7 +343,7 @@ export const Navbar: React.FC = () => {
               }`}
             >
               <WhatsAppIcon className={`shrink-0 ${scrolled ? 'w-[18px] h-[18px]' : 'w-5 h-5'}`} />
-            </a>
+            </WhatsAppLink>
           </div>
 
           {/* Mobile: Hamburger Button */}
@@ -524,16 +523,14 @@ export const Navbar: React.FC = () => {
 
         {/* Bottom area with CTA and WhatsApp */}
         <div className="flex flex-col gap-4 border-t border-slate-100 pt-6 mt-6">
-          <a
-            href={siteData.whatsappLink}
-            target="_blank"
-            rel="noopener noreferrer"
+          <WhatsAppLink
+            placement="menu"
             onClick={() => setIsOpen(false)}
             className="flex items-center justify-center gap-2 font-sans text-[14px] font-bold text-slate-600 hover:text-royal-blue py-3"
           >
             <WhatsAppIcon className="w-[18px] h-[18px] shrink-0" />
             <span>WhatsApp {siteData.phone}</span>
-          </a>
+          </WhatsAppLink>
           <Button href="/contact" onClick={() => setIsOpen(false)} variant="primary" className="w-full text-center py-3 !rounded-full">
             Get Free Audit →
           </Button>

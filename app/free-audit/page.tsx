@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { Globe, Megaphone, MessageCircle, LineChart, CheckCircle, ArrowRight, Building2, Users } from 'lucide-react';
 import { Breadcrumb } from '../../components/ui/Breadcrumb';
 import { Button } from '../../components/ui/Button';
+import { WhatsAppLink } from '../../components/ui/WhatsAppLink';
 import { ImageFrame } from '../../components/ui/ImageFrame';
 import { SchemaMarkup } from '../../components/ui/SchemaMarkup';
 import { FaqAccordion } from '../../components/sections/FaqAccordion';
@@ -11,7 +12,6 @@ import { CtaBanner } from '../../components/sections/CtaBanner';
 import { getWebPageSchema } from '../../lib/schema';
 import { constructMetadata, pageMeta } from '../../lib/seo-config';
 import { auditAreas, auditDeliverables, auditSteps, freeAuditFaqs } from '../../data/free-audit';
-import { siteData } from '../../data/site';
 
 export const metadata: Metadata = constructMetadata(pageMeta.freeAudit);
 
@@ -59,14 +59,12 @@ export default function FreeAuditPage() {
               <Button id="free-audit-hero-btn" href="/contact" variant="primary" size="lg" className="w-full sm:w-auto">
                 Request your free audit →
               </Button>
-              <Link
-                href={siteData.whatsappLink}
-                target="_blank"
-                rel="noopener noreferrer"
+              <WhatsAppLink
+                placement="hero"
                 className="text-[15px] font-bold text-white/85 hover:text-white transition-colors px-5 py-3 border border-white/25 rounded-xl hover:bg-white/10 text-center"
               >
                 Ask on WhatsApp
-              </Link>
+              </WhatsAppLink>
             </div>
           </div>
           <div className="lg:col-span-5 w-full max-w-xl lg:max-w-none">

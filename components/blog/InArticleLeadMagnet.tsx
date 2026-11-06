@@ -2,11 +2,9 @@ import React from 'react';
 import Link from 'next/link';
 import { FileText, ArrowRight, ShieldCheck } from 'lucide-react';
 import { WhatsAppIcon } from '../ui/WhatsAppIcon';
+import { WhatsAppLink } from '../ui/WhatsAppLink';
 
-export const InArticleLeadMagnet: React.FC = () => {
-  const whatsappUrl =
-    'https://wa.me/919194020727?text=Hi%20Veloxis%20Global%2C%20please%20send%20me%20the%20free%20marketing%20audit';
-
+export const InArticleLeadMagnet: React.FC<{ postTitle?: string }> = ({ postTitle }) => {
   return (
     <aside
       aria-label="Lead generation resource"
@@ -31,16 +29,14 @@ export const InArticleLeadMagnet: React.FC = () => {
         </p>
 
         <div className="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
-          <a
-            href={whatsappUrl}
-            data-cta="blog_inline_whatsapp"
-            target="_blank"
-            rel="noopener noreferrer"
+          <WhatsAppLink
+            placement="inline"
+            title={postTitle}
             className="inline-flex items-center justify-center gap-2.5 px-5 py-3 rounded-xl bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 text-white font-bold text-sm shadow-lg shadow-emerald-950/40 transition-all duration-300 hover:scale-[1.02]"
           >
             <WhatsAppIcon variant="current" className="w-4 h-4" />
             <span>Chat with us on WhatsApp</span>
-          </a>
+          </WhatsAppLink>
 
           <Link
             href="/free-audit"

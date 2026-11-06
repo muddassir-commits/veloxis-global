@@ -7,6 +7,7 @@ import {
 } from 'lucide-react';
 import { Breadcrumb } from '../../components/ui/Breadcrumb';
 import { Button } from '../../components/ui/Button';
+import { WhatsAppLink } from '../../components/ui/WhatsAppLink';
 import { ImageFrame } from '../../components/ui/ImageFrame';
 import { SchemaMarkup } from '../../components/ui/SchemaMarkup';
 import { ContactForm } from '../../components/forms/ContactForm';
@@ -84,14 +85,12 @@ export default function LeadSystemPage() {
               <Button id="lead-system-hero-btn" href="#enquire" variant="primary" size="lg" className="w-full sm:w-auto">
                 Book a free audit call →
               </Button>
-              <Link
-                href={siteData.whatsappLink}
-                target="_blank"
-                rel="noopener noreferrer"
+              <WhatsAppLink
+                placement="hero"
                 className="text-[15px] font-bold text-white/85 hover:text-white transition-colors px-5 py-3 border border-white/25 rounded-xl hover:bg-white/10 text-center"
               >
                 Ask on WhatsApp
-              </Link>
+              </WhatsAppLink>
             </div>
           </div>
           <div className="lg:col-span-5 w-full max-w-xl lg:max-w-none">
@@ -433,14 +432,9 @@ export default function LeadSystemPage() {
                 </li>
               ))}
             </ul>
-            <Link
-              href={siteData.whatsappLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 font-bold text-royal-blue hover:underline"
-            >
+            <WhatsAppLink placement="form" className="inline-flex items-center gap-2 font-bold text-royal-blue hover:underline">
               Prefer WhatsApp? Message {siteData.phone} <ArrowRight className="w-4 h-4" aria-hidden="true" />
-            </Link>
+            </WhatsAppLink>
           </div>
           <ContactForm defaultService="Real Estate Lead System" />
         </div>

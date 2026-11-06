@@ -2,6 +2,7 @@
 // Usage: npm run blog:check
 // Exit code 1 if any post has problems (those posts would be skipped on the live site).
 import { loadPosts } from '../../lib/blog.ts';
+import { BLOG_MESSAGES } from '../../data/whatsapp-messages.ts';
 
 const { posts, skipped, drafts, scheduled } = loadPosts();
 
@@ -29,6 +30,22 @@ if (badLinks.length) {
   console.log(`\nBROKEN LINKS — live posts linking to posts that are not live yet:`);
   for (const b of badLinks) console.log(`  ✗ ${b}`);
   process.exit(1);
+}
+// WhatsApp buttons: every live post should have its own pre-filled message (data/whatsapp-messages.ts).
+// Not an error: a post without one gets a message built from its title.
+const noWa = posts.filter((p) => !BLOG_MESSAGES[p.slug]).map((p) => p.slug);
+if (noWa.length) {
+  console.log(`
+NOTE: no WhatsApp message yet in data/whatsapp-messages.ts (BLOG_MESSAGES) for: ${noWa.join(', ')}`);
+}
+const refs = new Map();
+for (const [slug, m] of Object.entries(BLOG_MESSAGES)) {
+  if (refs.has(m.ref)) {
+    console.log(`
+DUPLICATE WhatsApp ref "${m.ref}" in data/whatsapp-messages.ts: ${refs.get(m.ref)} and ${slug}`);
+    process.exit(1);
+  }
+  refs.set(m.ref, slug);
 }
 if (skipped.length) {
   console.log(`\nPROBLEMS — these posts will NOT appear on the site until fixed:`);
