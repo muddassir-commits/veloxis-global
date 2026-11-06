@@ -9,6 +9,7 @@ import { FaqAccordion } from '../../components/sections/FaqAccordion';
 import { Breadcrumb } from '../../components/ui/Breadcrumb';
 import { constructMetadata } from '../../lib/seo-config';
 import { getServiceSchema } from '../../lib/schema';
+import { ReviewedLine } from '../../components/ui/ReviewedLine';
 import { siteData } from '../../data/site';
 
 // Local business offer (Nov 2026): websites, local SEO and Google Business Profile for small
@@ -133,12 +134,15 @@ export default function LocalBusinessPage() {
               For local businesses
             </span>
             <h1 className="text-4xl sm:text-5xl lg:text-[56px] font-extrabold tracking-tight leading-[1.1] text-white">
+              <span className="block text-xl sm:text-2xl font-bold text-blue-300 tracking-normal mb-3">Websites and local SEO for local businesses</span>
               More calls from people searching nearby
             </h1>
             <p className="text-lg sm:text-xl text-slate-300 leading-relaxed max-w-2xl">
-              A website that turns visitors into calls, local SEO, and a Google Business Profile that shows up in Maps.
-              For clinics, salons, trades and shops in India, the UK and the US.
+              Veloxis Global is a digital marketing agency based in Noida, India, that builds websites, local SEO and
+              Google Business Profiles for local businesses: a website that turns visitors into calls and a profile that
+              shows up in Maps. For clinics, salons, trades and shops in India, the UK and the US.
             </p>
+            <ReviewedLine className="text-white/60" />
             <div className="mt-2 flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
               <WhatsAppLink id="local-hero-btn" placement="hero" button={{ variant: 'primary', size: 'lg' }} className="w-full sm:w-auto">
                 Get a free website audit →
