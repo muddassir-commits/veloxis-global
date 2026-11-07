@@ -22,6 +22,7 @@ real-estate-chatbot
 real-estate-crm-india
 real-estate-email-marketing
 real-estate-hoarding-design
+real-estate-landing-page
 real-estate-landing-page-conversion-hacks
 real-estate-lead-management
 real-estate-lead-qualification-questions
