@@ -22,9 +22,9 @@ export const Breadcrumb: React.FC<BreadcrumbProps> = ({ items }) => {
   ]);
 
   return (
-    <nav className="flex py-4 text-xs font-semibold text-on-surface-variant" aria-label="Breadcrumb">
+    <nav className="flex py-4 text-xs font-semibold text-on-surface-variant min-w-0 max-w-full" aria-label="Breadcrumb">
       <SchemaMarkup schema={schema} />
-      <ol className="inline-flex items-center space-x-1 md:space-x-2">
+      <ol className="flex flex-wrap items-center gap-y-1 min-w-0 max-w-full">
         <li className="inline-flex items-center">
           <Link href="/" className="inline-flex items-center hover:text-royal-blue transition-colors">
             <Home className="w-3.5 h-3.5 mr-1" aria-hidden="true" />
@@ -34,10 +34,10 @@ export const Breadcrumb: React.FC<BreadcrumbProps> = ({ items }) => {
         {items.map((item, index) => {
           const isLast = index === items.length - 1;
           return (
-            <li key={index} className="flex items-center">
+            <li key={index} className="flex items-center min-w-0">
               <ChevronRight className="w-3.5 h-3.5 mx-1 text-slate-400" aria-hidden="true" />
               {isLast || !item.href ? (
-                <span className="text-slate-900 font-bold max-w-[150px] sm:max-w-none truncate" aria-current="page">
+                <span className="text-slate-900 font-bold max-w-[200px] sm:max-w-none truncate" aria-current="page">
                   {item.name}
                 </span>
               ) : (

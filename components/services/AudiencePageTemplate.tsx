@@ -14,7 +14,8 @@ import { FaqAccordion } from '../sections/FaqAccordion';
 import { CtaBanner } from '../sections/CtaBanner';
 import { ReviewedLine } from '../ui/ReviewedLine';
 
-export const AudiencePageTemplate: React.FC<{ audience: AudienceData }> = ({ audience }) => {
+/** `beforeFaq` renders extra sections (e.g. the real estate hub links) between the resources and the FAQ. */
+export const AudiencePageTemplate: React.FC<{ audience: AudienceData; beforeFaq?: React.ReactNode }> = ({ audience, beforeFaq }) => {
   const playbooks = audience.relatedPlaybooks.map(getPlaybookBySlug).filter(Boolean);
   const posts = audience.relatedPosts.map((s) => getBlogPost(s)).filter(Boolean);
   const img = audience.images;
@@ -230,6 +231,8 @@ export const AudiencePageTemplate: React.FC<{ audience: AudienceData }> = ({ aud
           />
         </div>
       </section>
+
+      {beforeFaq}
 
       <FaqAccordion
         customFaqs={audience.faqs}

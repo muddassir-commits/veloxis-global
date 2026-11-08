@@ -1,64 +1,56 @@
+// Header menus (components/layout/Navbar.tsx). Kept deliberately small (owner, 8 Nov 2026):
+// Logo · Services ▾ · Industries ▾ · Blog · About · [Free Audit]. Real estate sub-pages (Lead System,
+// Channel Partners, NRI, Playbooks, city pages) are linked from /industries/real-estate and the footer.
+
+export type NavIcon = 'ads' | 'web' | 'seo' | 'automation' | 'ecommerce' | 'local' | 'realestate';
+
 export interface NavbarMenuItem {
   title: string;
   href: string;
-  emoji: string;
-  description?: string;
+  icon: NavIcon;
+  description: string;
 }
 
-export interface NavbarGroup {
+export interface NavbarMenu {
+  /** Button label in the header */
   title: string;
+  /** Section the button lights up for (pathname starts with it) */
+  activePrefix: string;
   items: NavbarMenuItem[];
+  /** "All services" / "All industries" link at the bottom of the panel */
+  all: { title: string; href: string };
 }
 
-export const servicesGroups: NavbarGroup[] = [
-  { 
-    title: "Real Estate Growth", 
-    items: [
-      {
-        title: "Landing Pages & Microsites",
-        href: "/services/high-converting-landing-pages",
-        emoji: "⚡",
-        description: "Project pages with RERA details and WhatsApp capture"
-      },
-      {
-        title: "Meta & Google Ads",
-        href: "/services/paid-ads",
-        emoji: "🎯",
-        description: "Exclusive property leads, measured on site visits"
-      },
-      {
-        title: "AI Chatbot & WhatsApp Automation",
-        href: "/services/ai-automation",
-        emoji: "🤖",
-        description: "Instant replies, qualification and visit booking"
-      }
-    ] 
-  }
+export const servicesMenu: NavbarMenu = {
+  title: 'Services',
+  activePrefix: '/services',
+  items: [
+    { title: 'Meta & Google Ads', href: '/services/paid-ads', icon: 'ads', description: 'Campaigns judged on leads and sales, not clicks' },
+    { title: 'Websites & Landing Pages', href: '/services/high-converting-landing-pages', icon: 'web', description: 'Fast pages and Shopify stores that turn visits into enquiries' },
+    { title: 'SEO & Local SEO', href: '/services/seo', icon: 'seo', description: 'Search, Google Business Profile and Maps visibility' },
+    { title: 'WhatsApp & AI Automation', href: '/services/ai-automation', icon: 'automation', description: 'Instant replies and follow-ups for every enquiry' },
+  ],
+  all: { title: 'All services', href: '/services' },
+};
+
+export const industriesMenu: NavbarMenu = {
+  title: 'Industries',
+  activePrefix: '/industries',
+  items: [
+    { title: 'E-commerce & D2C', href: '/industries/ecommerce', icon: 'ecommerce', description: 'More orders from your own online store' },
+    { title: 'Local Businesses', href: '/industries/local-business', icon: 'local', description: 'Clinics, dentists, salons and home services' },
+    { title: 'Real Estate', href: '/industries/real-estate', icon: 'realestate', description: 'Builders, brokers and channel partners' },
+  ],
+  all: { title: 'All industries', href: '/industries' },
+};
+
+export const navMenus: NavbarMenu[] = [servicesMenu, industriesMenu];
+
+/** Plain links after the two menus, in order. */
+export const primaryLinks: { title: string; href: string; activeAlso?: string[] }[] = [
+  { title: 'Blog', href: '/blog', activeAlso: ['/guides'] },
+  { title: 'About', href: '/about' },
 ];
 
-/**
- * Top-level links after the Services menu, in order. `desktop` says from which width a link shows in
- * the desktop bar (the bar only has room for all of them on very wide screens); the mobile drawer shows
- * every link with its `mobileTitle`. `activeAlso` lists extra paths that light the link up.
- */
-export interface NavbarLink {
-  title: string;
-  mobileTitle: string;
-  href: string;
-  /** From which screen width the link shows in the desktop bar (Navbar.tsx maps this to Tailwind classes). */
-  desktop: 'always' | 'xl' | '2xl' | 'mobile-only';
-  activeAlso?: string[];
-  /** Paths under href that belong to another link (the NRI page sits under /industries/real-estate). */
-  exclude?: string[];
-}
-
-export const primaryLinks: NavbarLink[] = [
-  { title: 'Developers', mobileTitle: 'For Developers', href: '/industries/real-estate', desktop: 'always', exclude: ['/industries/real-estate/nri-buyers'] },
-  { title: 'Channel Partners', mobileTitle: 'For Channel Partners', href: '/channel-partners', desktop: 'mobile-only' },
-  { title: 'NRI Buyers', mobileTitle: 'For NRI Buyer Campaigns', href: '/industries/real-estate/nri-buyers', desktop: 'mobile-only' },
-  { title: 'D2C', mobileTitle: 'For D2C Brands', href: '/d2c', desktop: 'always' },
-  { title: 'Local Business', mobileTitle: 'For Local Businesses', href: '/local-business', desktop: 'always' },
-  { title: 'About', mobileTitle: 'About', href: '/about', desktop: 'xl' },
-  { title: 'Blog', mobileTitle: 'Blog', href: '/blog', desktop: 'always', activeAlso: ['/playbooks'] },
-  { title: 'Guides', mobileTitle: 'Guides', href: '/guides', desktop: 'xl' },
-];
+/** The header's main button. /free-audit is the personal review page; the self-serve tool is /tools/website-audit. */
+export const freeAuditLink = { title: 'Free Audit', href: '/free-audit' };

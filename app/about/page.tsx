@@ -20,7 +20,7 @@ const values = [
   { icon: <Target className="w-5 h-5 text-royal-blue" />, title: 'Results, not clicks', desc: 'Every campaign is reported on enquiries, site visits or orders — the numbers your sales team cares about.' },
   { icon: <Eye className="w-5 h-5 text-royal-blue" />, title: 'Your accounts, your data', desc: 'Ads run from your own Google and Meta accounts, and lead data stays in your CRM or sheet.' },
   { icon: <Users className="w-5 h-5 text-royal-blue" />, title: 'No middlemen', desc: 'You work directly with the people planning your campaigns, not a rotating account manager.' },
-  { icon: <MapPin className="w-5 h-5 text-royal-blue" />, title: 'Three industries, not thirty', desc: 'Real estate first, plus D2C brands and local businesses. We stay in industries we know well instead of taking everyone.' },
+  { icon: <MapPin className="w-5 h-5 text-royal-blue" />, title: 'Three industries, not thirty', desc: 'E-commerce brands, local businesses and real estate. We stay in industries we know well instead of taking everyone.' },
 ];
 
 const steps = [
@@ -28,7 +28,7 @@ const steps = [
   { title: 'Plan', desc: 'A 90-day plan covering channels, campaign structure, budget split, pages and WhatsApp flows.' },
   { title: 'Build', desc: 'Landing page, tracking, WhatsApp automation and CRM connection, tested before launch.' },
   { title: 'Launch', desc: 'Meta and Google campaigns go live with every enquiry answered on WhatsApp in seconds.' },
-  { title: 'Optimise', desc: 'Weekly changes towards the campaigns producing site visits, with a plain-language report.' },
+  { title: 'Optimise', desc: 'Weekly changes towards the campaigns producing orders, bookings and qualified enquiries, with a plain-language report.' },
 ];
 
 export default function AboutPage() {
@@ -91,24 +91,24 @@ export default function AboutPage() {
             <span className="text-xs font-bold text-royal-blue uppercase tracking-wider">Why Veloxis Global exists</span>
             <h2 className="text-3xl font-extrabold text-slate-900 tracking-tight">Leads were never the whole problem</h2>
             <p>
-              Real estate businesses spend heavily on ads, portals and brokers, yet the same complaints come up again and
-              again: leads that don’t pick up, enquiries answered the next morning, and ad reports full of clicks that never
-              became site visits.
+              Businesses spend heavily on ads, yet the same complaints come up again and again: leads that don’t pick up,
+              enquiries answered the next morning, and ad reports full of clicks that never became orders, calls or site
+              visits.
             </p>
             <p>
-              The fix isn’t just more leads. It’s a connected system: a page built for the project, ads that bring
-              exclusive enquiries, and follow-up that happens in seconds instead of hours. That is what Veloxis Global
-              builds, mainly for real estate, as three services that work together.
+              The fix isn’t just more leads. It’s a connected system: a page built to convert, ads that bring the right
+              people, search visibility that keeps them coming, and follow-up that happens in seconds instead of hours.
+              That is what Veloxis Global builds for e-commerce brands, local businesses and real estate.
             </p>
             <div className="border-l-4 border-royal-blue pl-4 py-2 my-2 italic text-slate-900 font-semibold bg-slate-50">
-              We don’t just run ads. We build the path from the ad to the site visit — and measure every step of it.
+              We don’t just run ads. We build the path from the ad to the sale, and measure every step of it.
             </div>
             <p>
-              We are based in Noida and work with developers and builders, channel partners and brokers across Noida,
-              Greater Noida, the wider Delhi NCR, Lucknow and Kanpur. We also work with{' '}
-              <Link href="/d2c" className="font-semibold text-royal-blue hover:underline">D2C brands</Link> and{' '}
-              <Link href="/local-business" className="font-semibold text-royal-blue hover:underline">local businesses</Link>{' '}
-              in India and abroad.
+              We are based in Noida and work with{' '}
+              <Link href="/industries/ecommerce" className="font-semibold text-royal-blue hover:underline">e-commerce and D2C brands</Link>,{' '}
+              <Link href="/industries/local-business" className="font-semibold text-royal-blue hover:underline">local businesses and clinics</Link>{' '}
+              and <Link href="/industries/real-estate" className="font-semibold text-royal-blue hover:underline">real estate developers and brokers</Link>{' '}
+              across Noida, Greater Noida, the wider Delhi NCR, Lucknow and Kanpur, and with online brands elsewhere in India and abroad.
             </p>
           </div>
 
@@ -150,7 +150,7 @@ export default function AboutPage() {
         <div className="max-w-container-max mx-auto px-gutter">
           <div className="text-center max-w-2xl mx-auto mb-12 section-reveal">
             <span className="text-xs font-bold text-royal-blue uppercase tracking-widest block mb-3">How we work</span>
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">Five steps from audit to site visits</h2>
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">Five steps from audit to results</h2>
           </div>
           <ol className="grid grid-cols-1 md:grid-cols-5 gap-6 stagger-reveal">
             {steps.map((s, i) => (

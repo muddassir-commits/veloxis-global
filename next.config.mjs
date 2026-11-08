@@ -61,27 +61,27 @@ const nextConfig = {
       },
     ];
   },
-  // Every URL removed in the real estate repositioning 301s to its closest live match.
+  // Every removed or moved URL 301s to its closest live match.
   async redirects() {
     const map = {
       // Pricing is no longer published; the free audit page replaces it
       '/pricing': '/free-audit',
-      // Industries — only real estate survives
-      '/industries': '/industries/real-estate',
-      '/industries/saas': '/',
-      '/industries/healthcare': '/',
-      '/industries/coaching-consulting': '/',
-      '/industries/education': '/',
-      '/industries/restaurant-food': '/',
-      '/industries/ecommerce': '/',
-      '/industries/fitness-wellness': '/',
-      '/industries/msme-small-business': '/',
-      '/industries/non-profit': '/',
-      '/industries/travel-tourism': '/',
-      '/industries/legal-professional': '/',
+      // Industries (8 Nov 2026): /industries is a hub for three niches; old niche URLs go to the closest one
+      '/industries/saas': '/industries',
+      '/industries/healthcare': '/industries/local-business',
+      '/industries/coaching-consulting': '/industries',
+      '/industries/education': '/industries',
+      '/industries/restaurant-food': '/industries/local-business',
+      '/industries/fitness-wellness': '/industries/local-business',
+      '/industries/msme-small-business': '/industries/local-business',
+      '/industries/non-profit': '/industries',
+      '/industries/travel-tourism': '/industries',
+      '/industries/legal-professional': '/industries/local-business',
+      // Niche pages moved under /industries (8 Nov 2026)
+      '/d2c': '/industries/ecommerce',
+      '/local-business': '/industries/local-business',
 
-      // Legacy services → the three real estate services
-      '/services/seo': '/services',
+      // Legacy services → current services
       '/services/content-marketing': '/services/high-converting-landing-pages',
       '/services/web-design-development': '/services/high-converting-landing-pages',
       '/services/social-media-marketing': '/services/paid-ads',
@@ -98,7 +98,7 @@ const nextConfig = {
       '/services/training-education': '/about',
 
       // City pages and lead magnet
-      '/digital-marketing-agency-delhi': '/industries/real-estate',
+      '/digital-marketing-agency-delhi': '/digital-marketing-agency-noida',
       '/free-seo-audit': '/tools/website-audit',
       '/author/muddassir-ali': '/about',
 

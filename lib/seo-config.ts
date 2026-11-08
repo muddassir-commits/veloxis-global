@@ -5,7 +5,7 @@ export const SITE_URL = 'https://www.veloxisglobal.com';
 export const DEFAULT_OG_IMAGE = '/images/og/homepage-og.jpg';
 /** When the offer, service and audience pages were last checked for accuracy. Shown on those pages
  *  and used as the sitemap lastmod for static pages — bump it whenever they are reviewed. */
-export const CONTENT_REVIEWED = '2026-10-23';
+export const CONTENT_REVIEWED = '2026-11-08';
 
 export interface MetaProps {
   /** Rendered exactly as written — include the brand yourself. Keep it under ~60 characters. */
@@ -68,21 +68,39 @@ export function constructMetadata({
 // docs/SEO.md — keep one primary intent per page.
 export const pageMeta = {
   home: {
-    title: 'Real Estate Marketing Agency | Veloxis Global',
+    title: 'Performance Marketing Agency in India | Veloxis Global',
     description:
-      'Real estate digital marketing agency: project landing pages, Meta and Google ads for property leads, and AI WhatsApp automation for builders, brokers and CPs.',
+      'Performance marketing for e-commerce brands, local businesses and real estate: Meta & Google ads, websites, SEO and WhatsApp automation. Free audit.',
     path: '/',
   },
-  services: {
-    title: 'Real Estate Marketing Services | Veloxis Global',
+  industries: {
+    title: 'Industries: E-commerce, Local & Real Estate | Veloxis Global',
     description:
-      'Three real estate marketing services: project landing pages, Meta and Google ads for property leads, and WhatsApp chatbots that reply to every enquiry.',
+      'Veloxis Global works with e-commerce and D2C brands, local businesses and clinics, and real estate developers and brokers. See how we help each one grow.',
+    path: '/industries',
+  },
+  ecommerce: {
+    title: 'E-commerce Marketing Agency for D2C Brands | Veloxis Global',
+    description:
+      'Meta and Google ads, Shopify store pages that convert, and WhatsApp and email follow-ups for e-commerce and D2C brands. Judged on orders. Free audit.',
+    path: '/industries/ecommerce',
+  },
+  localBusiness: {
+    title: 'Digital Marketing for Local Businesses & Clinics | Veloxis',
+    description:
+      'Websites, local SEO, Google Business Profile and local ads for clinics, dentists, salons and home services in India, the UK and the US. Free website audit.',
+    path: '/industries/local-business',
+  },
+  services: {
+    title: 'Digital Marketing Services: Ads, SEO, Websites | Veloxis',
+    description:
+      'Meta and Google ads, websites and landing pages, SEO and local SEO, and WhatsApp automation for e-commerce brands, local businesses and real estate. Free audit.',
     path: '/services',
   },
   developers: {
-    title: 'Marketing for Real Estate Developers & Builders | Veloxis',
+    title: 'Real Estate Marketing Agency for Builders | Veloxis Global',
     description:
-      'Launch and inventory marketing for developers: RERA-compliant project pages, Meta and Google campaigns, and WhatsApp follow-up that books site visits.',
+      'Real estate marketing for builders, developers and brokers: RERA-compliant project pages, Meta and Google ads and WhatsApp follow-up that books visits.',
     path: '/industries/real-estate',
   },
   channelPartners: {
@@ -98,21 +116,21 @@ export const pageMeta = {
     path: '/industries/real-estate/nri-buyers',
   },
   lucknow: {
-    title: 'Digital Marketing Agency in Lucknow for Real Estate | Veloxis',
+    title: 'Digital Marketing Agency in Lucknow | Veloxis Global',
     description:
-      'Real estate-focused digital marketing agency for Lucknow builders, brokers and CPs: project landing pages, Meta and Google ads, and instant WhatsApp replies.',
+      'Digital marketing agency in Lucknow: Meta and Google ads, websites, SEO and WhatsApp automation for e-commerce, local businesses and real estate. Free audit.',
     path: '/digital-marketing-agency-lucknow',
   },
   kanpur: {
-    title: 'Digital Marketing Agency in Kanpur for Real Estate | Veloxis',
+    title: 'Digital Marketing Agency in Kanpur | Veloxis Global',
     description:
-      'Real estate-focused digital marketing agency for Kanpur builders, brokers and CPs: project landing pages, Meta and Google ads, instant WhatsApp replies.',
+      'Digital marketing agency in Kanpur: Meta and Google ads, websites, SEO and WhatsApp automation for e-commerce, local businesses and real estate. Free audit.',
     path: '/digital-marketing-agency-kanpur',
   },
   noida: {
-    title: 'Real Estate Digital Marketing Agency in Noida | Veloxis',
+    title: 'Digital Marketing Agency in Noida | Veloxis Global',
     description:
-      'Real estate digital marketing agency in Noida for builders, brokers and CPs: project landing pages, Meta and Google ads, and instant WhatsApp replies.',
+      'Digital marketing agency in Noida: Meta and Google ads, websites, SEO and WhatsApp automation for e-commerce, local businesses and real estate. Free audit.',
     path: '/digital-marketing-agency-noida',
   },
   playbooks: {
@@ -122,9 +140,9 @@ export const pageMeta = {
     path: '/playbooks',
   },
   freeAudit: {
-    title: 'Free Real Estate Marketing Audit | Veloxis Global',
+    title: 'Free Marketing Audit for Your Business | Veloxis Global',
     description:
-      'Free audit of your real estate landing page, Meta and Google ads and WhatsApp lead follow-up. A personal review with the fixes to make first. No obligation.',
+      'Free audit of your website or store, Meta and Google ads and lead follow-up, for e-commerce, local businesses and real estate. Personal review, no obligation.',
     path: '/free-audit',
   },
   leadSystem: {
@@ -140,9 +158,9 @@ export const pageMeta = {
     path: '/about',
   },
   contact: {
-    title: 'Contact Veloxis Global | Real Estate Marketing',
+    title: 'Contact Veloxis Global | Performance Marketing Agency',
     description:
-      'Talk to Veloxis Global about landing pages, property ads or WhatsApp automation. WhatsApp +91 91940 20727, or send the form for a free marketing audit.',
+      'Talk to Veloxis Global about ads, websites, SEO or WhatsApp automation. WhatsApp +91 91940 20727, or send the form for a free marketing audit.',
     path: '/contact',
   },
   guides: {
@@ -152,15 +170,15 @@ export const pageMeta = {
     path: '/guides',
   },
   websiteAudit: {
-    title: 'Free Website Audit Tool (No Sign-up): SEO, Speed, AI Search',
+    title: 'Free Website Audit Tool: SEO, Speed & Mobile Check',
     description:
-      'Free website audit tool, no sign-up: check any page for SEO basics, speed, tracking, lead capture and AI search readiness in under a minute, with fixes to make.',
+      'Audit your website online for free: check any page for SEO, speed, mobile, tracking and AI search readiness in under a minute, with a fix list. No sign-up.',
     path: '/tools/website-audit',
   },
   blog: {
-    title: 'Real Estate Marketing Blog | Veloxis Global',
+    title: 'Marketing Blog: E-commerce, Local & Real Estate | Veloxis',
     description:
-      'Guides for builders, brokers and CPs: real estate lead generation, Meta and Google ads, AI and WhatsApp follow-up, landing pages, EOI and CP programmes.',
+      'Practical marketing guides for e-commerce and D2C brands, local businesses and clinics, and real estate: Meta and Google ads, local SEO, landing pages.',
     path: '/blog',
   },
   privacy: {
@@ -172,7 +190,7 @@ export const pageMeta = {
   terms: {
     title: 'Terms of Service | Veloxis Global',
     description:
-      'Terms for using the Veloxis Global website and our real estate marketing services, including audits, month-to-month agreements and governing law.',
+      'Terms for using the Veloxis Global website and our marketing services, including audits, month-to-month agreements and governing law.',
     path: '/terms',
   },
 };

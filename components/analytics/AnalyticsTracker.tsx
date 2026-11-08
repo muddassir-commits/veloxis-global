@@ -47,7 +47,7 @@ export default function AnalyticsTracker() {
       const isContactLink = href === '/contact' || href.startsWith('/contact?') || href.startsWith('/contact#');
       if (cta || isContactLink) {
         const el = cta ?? anchor!;
-        events.ctaClick(page, ctaName(el, href));
+        events.ctaClick(page, ctaName(el, href), el.dataset.industry || undefined);
       }
     };
 

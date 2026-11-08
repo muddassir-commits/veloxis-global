@@ -1,108 +1,93 @@
 /**
- * ServicesGrid — Server Component (no client-side dependencies needed).
- * Clean gradient cards with emoji icons for real estate service focus.
+ * ServicesGrid — Server Component.
+ * The four services, for every niche (homepage).
  */
 import React from 'react';
 import Link from 'next/link';
-import { ArrowRight, Check } from 'lucide-react';
-import { servicesData as services } from '../../data/services-data';
-import { Card } from '../ui/Card';
+import { ArrowRight, Check, Target, LayoutTemplate, Search, Bot } from 'lucide-react';
 import { SectionLabel } from '../ui/SectionLabel';
-import { ImageFrame } from '../ui/ImageFrame';
 
-const serviceVisuals = [
+const services = [
   {
-    image: '/images/people/home/real-estate-landing-page-mockup.jpg',
-    alt: 'Sample real estate project landing page on a laptop and phone, with price, RERA number and site-visit form',
-    position: 'center',
-    accentBg: 'bg-blue-50',
-    accentText: 'text-blue-700',
+    icon: Target,
+    title: 'Meta & Google Ads',
+    href: '/services/paid-ads',
+    desc: 'Campaigns on Facebook, Instagram, Google Search, Shopping and YouTube, set up and tracked so you can see which rupee brought which lead or order.',
+    points: ['Conversion tracking done right', 'Weekly budget moves to what works', 'Ad accounts stay in your name'],
+    accent: 'bg-indigo-accent/10 text-indigo-accent',
   },
   {
-    image: '/images/people/home/team-reviewing-laptops.jpg',
-    alt: 'Team gathered around two laptops reviewing work at an office desk',
-    position: 'center 40%',
-    accentBg: 'bg-violet-50',
-    accentText: 'text-violet-700',
+    icon: LayoutTemplate,
+    title: 'Websites & Landing Pages',
+    href: '/services/high-converting-landing-pages',
+    desc: 'Fast, mobile-first websites, landing pages and Shopify store pages that answer the questions buyers ask and make the next step obvious.',
+    points: ['Built for phones first', 'Clear call, WhatsApp or buy button', 'Shopify and custom builds'],
+    accent: 'bg-teal-accent/10 text-teal-accent',
   },
   {
-    image: '/images/people/home/whatsapp-chatbot-mockup.jpg',
-    alt: 'Sample WhatsApp chatbot sending a brochure, asking the budget and booking a site visit, beside a lead inbox',
-    position: 'center',
-    accentBg: 'bg-emerald-50',
-    accentText: 'text-emerald-700',
+    icon: Search,
+    title: 'SEO & Local SEO',
+    href: '/services',
+    desc: 'On-page SEO, service and area pages, and Google Business Profile set-up so people find you on Google Search and Maps.',
+    points: ['Google Business Profile & Maps', 'Technical and on-page SEO', 'Pages ready for AI search'],
+    accent: 'bg-royal-blue/10 text-royal-blue',
+  },
+  {
+    icon: Bot,
+    title: 'WhatsApp & AI Automation',
+    href: '/services/ai-automation',
+    desc: 'Instant WhatsApp replies, follow-ups and reminders, so every enquiry, cart or booking request gets an answer in seconds.',
+    points: ['Instant first reply', 'Follow-ups that run themselves', 'Leads in one place (CRM)'],
+    accent: 'bg-sunset-orange/10 text-sunset-orange',
   },
 ];
 
-export const ServicesGrid: React.FC = () => {
-  return (
-    <section className="bg-white py-section-gap relative" id="services">
-      <div className="max-w-container-max mx-auto px-gutter">
-        {/* Section Header */}
-        <div className="text-center max-w-[700px] mx-auto mb-16 section-reveal">
-          <SectionLabel className="text-center">WHAT WE DO</SectionLabel>
-          <h2 className="text-headline-lg-mobile sm:text-headline-lg font-bold text-slate-900 tracking-tight leading-tight">
-            Three real estate marketing services that work as one system
-          </h2>
-          <p className="text-body-lg text-slate-500 max-w-[600px] mx-auto text-center mt-4">
-            A page that converts, ads that bring exclusive enquiries, and automation that replies to every lead — run together and judged on site visits.
-          </p>
-        </div>
-
-        {/* Services Grid — each card is a 5-row subgrid (image, title, description, points, link),
-            so every row lines up across the cards however the text wraps */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 stagger-reveal">
-          {services.map((service, idx) => {
-            const visual = serviceVisuals[idx] || serviceVisuals[0];
-            return (
-              <div key={service.id} className="grid grid-rows-subgrid row-span-5 gap-y-0">
-                <Link href={`/services/${service.slug}`} className="grid grid-rows-subgrid row-span-5 gap-y-0 group">
-                  <Card hover className="grid grid-rows-subgrid row-span-5 gap-y-0 text-left p-0 overflow-hidden">
-                    {/* Top image — fixed 16:10 box, photo cropped to the same ratio */}
-                    <ImageFrame
-                      src={visual.image}
-                      alt={visual.alt}
-                      ratio="16/10"
-                      position={visual.position}
-                      sizes="(max-width: 768px) calc(100vw - 32px), (max-width: 1024px) 50vw, 400px"
-                      className="!rounded-none"
-                      imageClassName="transition-transform duration-500 group-hover:scale-[1.04]"
-                    />
-
-                      {/* Title */}
-                      <h3 className="px-6 sm:px-8 pt-6 sm:pt-8 pb-3 text-xl font-bold text-slate-900 group-hover:text-royal-blue transition-colors duration-300">
-                        {service.title}
-                      </h3>
-
-                      {/* Description */}
-                      <p className="px-6 sm:px-8 pb-6 text-body-md text-slate-500 leading-relaxed">
-                        {service.shortDesc}
-                      </p>
-
-                      {/* Key points — one per line so they line up across the cards */}
-                      <ul className="mx-6 sm:mx-8 mb-6 flex flex-col gap-2.5 pt-5 border-t border-slate-100">
-                        {service.benefits.slice(0, 3).map((benefit) => (
-                          <li key={benefit} className="flex items-center gap-2.5 text-sm font-semibold text-slate-700">
-                            <span className={`w-5 h-5 rounded-full ${visual.accentBg} ${visual.accentText} flex items-center justify-center shrink-0`} aria-hidden="true">
-                              <Check className="w-3 h-3" strokeWidth={3} />
-                            </span>
-                            {benefit}
-                          </li>
-                        ))}
-                      </ul>
-
-                      {/* Explore Link */}
-                      <div className="px-6 sm:px-8 pb-6 sm:pb-8 flex items-start gap-1.5 font-bold text-sm text-royal-blue transition-colors duration-300">
-                        <span>{service.title}</span>
-                        <ArrowRight className="w-4 h-4 mt-0.5 shrink-0 transition-transform duration-300 group-hover:translate-x-1.5" />
-                      </div>
-                  </Card>
-                </Link>
-              </div>
-            );
-          })}
-        </div>
+export const ServicesGrid: React.FC = () => (
+  <section className="bg-slate-50 py-section-gap relative border-y border-slate-100" id="services">
+    <div className="max-w-container-max mx-auto px-gutter">
+      <div className="text-center max-w-[700px] mx-auto mb-14 section-reveal">
+        <SectionLabel className="text-center">WHAT WE DO</SectionLabel>
+        <h2 className="text-headline-lg-mobile sm:text-headline-lg font-bold text-slate-900 tracking-tight leading-tight">
+          Four services that work as one growth system
+        </h2>
+        <p className="text-body-lg text-slate-500 max-w-[600px] mx-auto text-center mt-4">
+          Ads bring the right people, the page turns them into enquiries or orders, SEO keeps them coming, and automation
+          makes sure nobody waits for a reply.
+        </p>
       </div>
-    </section>
-  );
-};
+
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 stagger-reveal">
+        {services.map(({ icon: Icon, title, href, desc, points, accent }) => (
+          <Link
+            key={title}
+            href={href}
+            className="group spotlight flex flex-col bg-white border border-slate-200 rounded-2xl p-6 transition-all duration-500 hover:shadow-lg hover:-translate-y-1"
+          >
+            <span className={`w-12 h-12 rounded-xl flex items-center justify-center mb-5 transition-transform duration-500 group-hover:scale-110 group-hover:-rotate-6 ${accent}`} aria-hidden="true">
+              <Icon className="w-6 h-6" />
+            </span>
+            <h3 className="text-lg font-extrabold text-slate-900 mb-2 group-hover:text-royal-blue transition-colors">{title}</h3>
+            <p className="text-sm text-slate-600 leading-relaxed mb-5">{desc}</p>
+            <ul className="flex flex-col gap-2 pt-4 border-t border-slate-100 mb-5 flex-grow">
+              {points.map((p) => (
+                <li key={p} className="flex items-start gap-2 text-[13px] font-semibold text-slate-700">
+                  <Check className="w-4 h-4 text-teal-600 shrink-0 mt-0.5" strokeWidth={3} aria-hidden="true" />
+                  {p}
+                </li>
+              ))}
+            </ul>
+            <span className="inline-flex items-center gap-1.5 text-sm font-bold text-royal-blue">
+              Learn more <span className="sr-only">about {title}</span>
+              <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true" />
+            </span>
+          </Link>
+        ))}
+      </div>
+      <p className="text-center mt-10 text-sm text-slate-600">
+        Not sure which you need?{' '}
+        <Link href="/services" className="font-bold text-royal-blue hover:underline">See all services</Link> or{' '}
+        <Link href="/free-audit" className="font-bold text-royal-blue hover:underline">ask for a free audit</Link>.
+      </p>
+    </div>
+  </section>
+);

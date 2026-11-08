@@ -8,10 +8,21 @@ import { Badge } from '../../components/ui/Badge';
 import { Card } from '../../components/ui/Card';
 import { ImageFrame } from '../../components/ui/ImageFrame';
 
+import { BLOG_TABS } from '../../data/blog-niches';
 import type { PostCard } from '../../lib/blog';
 
 // Posts arrive newest first from lib/blog; the newest is featured.
-export default function BlogContent({ posts }: { posts: PostCard[] }) {
+export default function BlogContent({
+  posts,
+  activeTab = 'all',
+  heading = 'Marketing guides for e-commerce, local businesses and real estate',
+  intro = 'Practical guides on Meta and Google ads, local SEO, store and landing pages, and WhatsApp follow-up, written by the Veloxis Global team.',
+}: {
+  posts: PostCard[];
+  activeTab?: string;
+  heading?: string;
+  intro?: string;
+}) {
   const allPostsData = posts.map((post, idx) => ({ ...post, featured: idx === 0 }));
   const [selectedCategory, setSelectedCategory] = useState<string>('All');
   const [searchQuery, setSearchQuery] = useState<string>('');
@@ -54,10 +65,10 @@ export default function BlogContent({ posts }: { posts: PostCard[] }) {
           <div className="max-w-xl">
             <Badge color="indigo" className="mb-3">KNOWLEDGE HUB</Badge>
             <h1 className="text-3xl sm:text-4xl lg:text-[46px] font-extrabold tracking-tight text-slate-900 leading-tight">
-              Real estate marketing blog for builders, brokers and CPs
+              {heading}
             </h1>
             <p className="text-slate-500 mt-2 text-sm sm:text-base leading-relaxed">
-              Practical guides on Meta and Google ads for property, project landing pages, WhatsApp follow-up, EOI and channel partner programmes — written by the Veloxis Global team.
+              {intro}
               {' '}Prefer to browse by topic? See the{' '}
               <Link href="/guides" className="font-semibold text-royal-blue hover:underline">marketing guides hub</Link>
               {' '}or the{' '}
@@ -80,6 +91,26 @@ export default function BlogContent({ posts }: { posts: PostCard[] }) {
           </div>
         </div>
       </section>
+
+      {/* Niche tabs: plain links to static pages, so crawlers follow them */}
+      <nav aria-label="Blog topics" className="bg-white border-b border-slate-200/60 py-3">
+        <div className="max-w-container-max mx-auto px-gutter flex items-center gap-2 overflow-x-auto no-scrollbar">
+          {BLOG_TABS.map((t) => (
+            <Link
+              key={t.key}
+              href={t.href}
+              data-cta="blog_tab"
+              data-industry={t.key}
+              aria-current={activeTab === t.key ? 'page' : undefined}
+              className={`px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider shrink-0 transition-colors ${
+                activeTab === t.key ? 'bg-slate-900 text-white' : 'bg-slate-50 text-slate-600 hover:bg-slate-100 hover:text-slate-900'
+              }`}
+            >
+              {t.label}
+            </Link>
+          ))}
+        </div>
+      </nav>
 
       {/* Category Tabs */}
       <section className="bg-white sticky top-16 md:top-[72px] z-40 border-b border-slate-200/60 shadow-sm py-4">

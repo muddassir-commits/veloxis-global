@@ -6,7 +6,10 @@ const BASE = siteData.url;
 export const ORG_ID = `${BASE}/#organization`;
 export const WEBSITE_ID = `${BASE}/#website`;
 
-const areaServed = siteData.areaServed.map((name) => ({ '@type': 'City', name }));
+const areaServed = [
+  ...siteData.areaServed.map((name) => ({ '@type': 'City', name })),
+  ...siteData.countriesServed.map((name) => ({ '@type': 'Country', name })),
+];
 
 export const getSiteGraph = () => ({
   '@context': 'https://schema.org',
@@ -16,31 +19,34 @@ export const getSiteGraph = () => ({
       '@type': ['Organization', 'ProfessionalService'],
       '@id': ORG_ID,
       name: siteData.name,
-      alternateName: ['Veloxis Global Real Estate Marketing', 'veloxisglobal.com'],
+      alternateName: ['Veloxis Global Performance Marketing', 'veloxisglobal.com'],
       url: BASE,
       logo: { '@type': 'ImageObject', '@id': `${BASE}/#logo`, url: siteData.logoSquare, contentUrl: siteData.logoSquare, width: 512, height: 512, caption: siteData.name },
       image: [siteData.logoSquare, siteData.logo, `${BASE}/images/og/homepage-og.jpg`],
       description: siteData.definition,
       disambiguatingDescription: siteData.disambiguation,
-      slogan: 'Real estate marketing measured on site visits, not clicks.',
+      slogan: 'Performance marketing measured on leads and sales, not clicks.',
       email: siteData.email,
       telephone: siteData.phoneRaw,
       address: { '@type': 'PostalAddress', addressLocality: siteData.baseCity, addressRegion: 'Uttar Pradesh', addressCountry: 'IN' },
       areaServed,
       knowsAbout: [
+        'Performance marketing',
+        'E-commerce marketing',
+        'D2C brand marketing',
+        'Shopify stores',
+        'Local SEO',
+        'Google Business Profile',
+        'Clinic and dental marketing',
         'Real estate marketing',
         'Real estate lead generation',
-        'Real estate landing pages',
-        'Meta ads for real estate',
-        'Google Ads for real estate',
+        'Meta ads',
+        'Google Ads',
+        'Landing pages',
+        'Website design',
+        'Search engine optimization',
         'WhatsApp automation',
-        'Real estate chatbots',
-        'Channel partner marketing',
-        'NRI real estate marketing',
-        'Real estate lead generation system',
-        'D2C brand marketing',
-        'Website design for small businesses',
-        'Local SEO and Google Business Profile',
+        'AI chatbots',
       ],
       sameAs: [...siteData.socials, ...siteData.profiles],
       contactPoint: {
@@ -48,7 +54,7 @@ export const getSiteGraph = () => ({
         telephone: siteData.phoneRaw,
         email: siteData.email,
         contactType: 'sales',
-        areaServed: 'IN',
+        areaServed: ['IN', 'US', 'GB'],
         availableLanguage: ['en', 'hi'],
       },
     },

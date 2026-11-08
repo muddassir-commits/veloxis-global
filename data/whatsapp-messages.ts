@@ -84,12 +84,17 @@ export const PAGE_MESSAGES: Record<string, WaPage> = {
   '/services/high-converting-landing-pages': {
     type: 'service',
     ref: 'svc-landing',
-    message: 'I need a landing page for my project. Can you look at what I have now and suggest a plan?',
+    message: 'I need a better website or landing page for my business. Can you look at what I have now and suggest a plan?',
   },
   '/services/paid-ads': {
     type: 'service',
     ref: 'svc-ads',
     message: 'I want to run Meta and Google ads for my business. Can you check my current setup and suggest a plan?',
+  },
+  '/services/seo': {
+    type: 'service',
+    ref: 'svc-seo',
+    message: 'I want to show up better on Google and Maps. Can you check my website and suggest an SEO plan?',
   },
   '/services/ai-automation': {
     type: 'service',
@@ -103,6 +108,11 @@ export const PAGE_MESSAGES: Record<string, WaPage> = {
   },
 
   // Industries and audiences
+  '/industries': {
+    type: 'industry',
+    ref: 'industries',
+    message: "I'm looking at the industries you work with and would like a free marketing audit for my business.",
+  },
   '/industries/real-estate': {
     type: 'industry',
     ref: 'ind-realestate',
@@ -118,12 +128,13 @@ export const PAGE_MESSAGES: Record<string, WaPage> = {
     ref: 'cp',
     message: "I'm a channel partner and want more genuine buyer leads for the projects I sell. Can you help?",
   },
-  '/d2c': {
+  // Niche pages moved from /d2c and /local-business on 8 Nov 2026; refs kept so reports line up.
+  '/industries/ecommerce': {
     type: 'industry',
     ref: 'd2c',
-    message: 'I run a D2C brand and would like a free store audit of my ads, store pages and follow-ups.',
+    message: 'I run an online store / D2C brand and would like a free store audit of my ads, store pages and follow-ups.',
   },
-  '/local-business': {
+  '/industries/local-business': {
     type: 'industry',
     ref: 'local',
     message: 'I run a local business and would like a free audit of my website, Google Maps listing and local SEO.',

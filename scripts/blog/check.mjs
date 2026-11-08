@@ -8,6 +8,12 @@ const { posts, skipped, drafts, scheduled } = loadPosts();
 
 console.log(`\nPublished posts (${posts.length}), newest first:`);
 for (const p of posts) console.log(`  ✓ ${p.displayDate.padEnd(20)} ${p.slug}`);
+const byNiche = {};
+for (const p of posts) byNiche[p.industry ?? 'general'] = (byNiche[p.industry ?? 'general'] ?? 0) + 1;
+console.log(`
+Posts by industry: ${JSON.stringify(byNiche)}`);
+const noIndustry = posts.filter((p) => !p.industry).map((p) => p.slug);
+if (noIndustry.length) console.log(`NOTE: no "industry" set (counts as general): ${noIndustry.join(', ')}`);
 if (scheduled.length) console.log(`
 Scheduled (hidden until their date, IST): ${scheduled.join(', ')}`);
 if (drafts.length) {

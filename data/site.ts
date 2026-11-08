@@ -8,17 +8,19 @@ export const siteData = {
   whatsapp: "+919194020727",
   email: "info@veloxisglobal.com",
   // Shown wherever an address used to appear.
-  address: "Based in Noida · Serving Delhi NCR, Lucknow & Kanpur",
+  address: "Based in Noida · Serving India, the UK & the US",
   // City we are based in (no street address: service-area business).
   baseCity: "Noida",
   areaServed: ["Noida", "Greater Noida", "Delhi NCR", "Lucknow", "Kanpur"],
+  // Countries we take work from (schema areaServed). Local businesses and online brands in the UK and US are served remotely.
+  countriesServed: ["India", "United States", "United Kingdom"],
   // Legal venue referenced in the Terms of Service.
   jurisdiction: "Kanpur, Uttar Pradesh",
   // One definition used everywhere AI tools and search engines read about us (schema, llms.txt, About).
   definition:
-    "Veloxis Global is a Noida-based digital marketing agency for real estate, D2C brands and local businesses. It builds landing pages and websites, runs Meta and Google ads, and sets up WhatsApp and email follow-ups, with real estate work for developers, brokers and channel partners in Noida, Greater Noida, Delhi NCR, Lucknow and Kanpur.",
+    "Veloxis Global is a Noida-based performance marketing agency for e-commerce and D2C brands, local businesses and clinics, and real estate. It runs Meta and Google ads, builds websites, landing pages and Shopify stores, improves SEO and Google Business Profiles, and sets up WhatsApp and AI automation, measured on leads and sales rather than clicks.",
   // Kept apart from any similarly named company in search results.
-  disambiguation: "Indian digital marketing agency (real estate, D2C brands, local businesses). Not related to Veloxis Pharmaceuticals or VXI Global.",
+  disambiguation: "Indian performance marketing agency (e-commerce, local businesses, real estate). Not related to Veloxis Pharmaceuticals or VXI Global.",
   booking: "https://calendly.com/veloxis-global/30min",
   // Generic link only. On-page WhatsApp buttons use components/ui/WhatsAppLink (page-specific message, data/whatsapp-messages.ts).
   whatsappLink: "https://wa.me/919194020727?text=Hi%20Veloxis%20Global%2C%20I%27d%20like%20a%20free%20marketing%20audit",
