@@ -71,7 +71,8 @@ export async function POST(request: Request) {
 
     const emailed = mailed.success && !('mock' in mailed);
     if (!saved.ok && !emailed) {
-      console.error('Contact lead could not be stored or emailed:', formData);
+      // No personal data in logs: the visitor is told to use WhatsApp instead.
+      console.error('Contact lead could not be stored or emailed (service:', formData.service, ')');
       return NextResponse.json({ success: false, error: 'Could not submit right now. Please try WhatsApp.' }, { status: 502 });
     }
 
