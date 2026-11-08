@@ -157,6 +157,27 @@ export const PAGE_MESSAGES: Record<string, WaPage> = {
 
   // Learning pages
   '/blog': { type: 'blog_index', ref: 'blog', message: "I was reading your blog and would like a free marketing audit for my business." },
+  // Niche blog indexes (added 8 Nov 2026).
+  '/blog/industry/ecommerce': {
+    type: 'blog_index',
+    ref: 'blog-ecom',
+    message: 'I was reading your e-commerce guides and would like a free audit of my store, ads and follow-ups.',
+  },
+  '/blog/industry/local-business': {
+    type: 'blog_index',
+    ref: 'blog-local',
+    message: 'I was reading your local business guides and would like a free audit of my website and Google Maps listing.',
+  },
+  '/blog/industry/real-estate': {
+    type: 'blog_index',
+    ref: 'blog-re',
+    message: 'I was reading your real estate guides and would like a free audit of my ads, landing page and lead follow-up.',
+  },
+  '/blog/industry/general': {
+    type: 'blog_index',
+    ref: 'blog-general',
+    message: 'I was reading your marketing guides and would like a free marketing audit for my business.',
+  },
   '/guides': { type: 'guides', ref: 'guides', message: 'I was going through your guides and want help applying them to my business.' },
   '/playbooks': { type: 'playbooks', ref: 'playbooks', message: 'I was looking at your playbooks and want a plan like this for my project.' },
   '/playbooks/new-launch-meta-google-ads-plan': {

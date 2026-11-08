@@ -86,3 +86,10 @@ its date (the "Publish scheduled posts" GitHub Action). Read `docs/BLOG.md` once
     plain-English body: the question it answers, target keyword, publish date, what the top results miss
     that we cover, sources, the posts that now link to it. End the body with the Claude Code line.
 12. **Report** in 5 lines: PR link, publish date, topic, posts scheduled ahead, anything the owner must do.
+
+## WhatsApp message (required for every post)
+Every post needs one entry in `BLOG_MESSAGES` in `data/whatsapp-messages.ts`, keyed by the post folder name:
+`'<slug>': { ref: 'blog-<short-unique-code>', message: '<1-2 short lines>' }`.
+- Write it as the reader, first person, matching the post's `industry` (e-commerce store, local business or clinic, real estate project).
+- No prices, no results, no names, no numbers. Do not write "Hi Veloxis Global" or "ref:" (added automatically).
+- The `ref` code must be unique; never reuse an old one. `npm run blog:check` lists posts that still have no entry.
