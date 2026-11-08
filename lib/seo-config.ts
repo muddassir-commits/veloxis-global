@@ -178,7 +178,7 @@ export const pageMeta = {
   blog: {
     title: 'Marketing Blog: E-commerce, Local & Real Estate | Veloxis',
     description:
-      'Practical marketing guides for e-commerce and D2C brands, local businesses and clinics, and real estate: Meta and Google ads, local SEO, landing pages, WhatsApp.',
+      'Practical marketing guides for e-commerce and D2C brands, local businesses and clinics, and real estate: Meta and Google ads, local SEO, landing pages.',
     path: '/blog',
   },
   privacy: {

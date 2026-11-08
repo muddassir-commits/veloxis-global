@@ -4,13 +4,14 @@
  */
 import React from 'react';
 import Link from 'next/link';
-import { ArrowRight, Gauge, Search, LineChart, MousePointerClick, Sparkles } from 'lucide-react';
+import { ArrowRight, Gauge, Search, LineChart, MousePointerClick, Sparkles, Smartphone } from 'lucide-react';
 
 const checks = [
   { icon: Search, label: 'SEO basics' },
   { icon: Gauge, label: 'Page speed' },
   { icon: LineChart, label: 'Tracking tags' },
   { icon: MousePointerClick, label: 'Lead capture' },
+  { icon: Smartphone, label: 'Mobile layout' },
   { icon: Sparkles, label: 'AI search readiness' },
 ];
 

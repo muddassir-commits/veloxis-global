@@ -98,7 +98,7 @@ const nextConfig = {
       '/services/training-education': '/about',
 
       // City pages and lead magnet
-      '/digital-marketing-agency-delhi': '/industries/real-estate',
+      '/digital-marketing-agency-delhi': '/digital-marketing-agency-noida',
       '/free-seo-audit': '/tools/website-audit',
       '/author/muddassir-ali': '/about',
 
