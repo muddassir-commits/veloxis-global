@@ -22,7 +22,7 @@ export function useScrollDepth() {
       thresholds.forEach((threshold) => {
         if (scrollPercent >= threshold && !triggered.has(threshold)) {
           triggered.add(threshold);
-          events.scrollDepth(threshold);
+          events.scrollDepth(threshold, window.location.pathname);
         }
       });
     };

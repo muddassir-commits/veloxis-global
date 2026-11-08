@@ -1,4 +1,5 @@
-import { NextResponse } from 'next/server';
+import { NextResponse, after } from 'next/server';
+import { metaFieldsSchema, sameSiteUrl, sendCapiEvent } from '../../../lib/metaCapi';
 import * as z from 'zod';
 import { insertRow, escapeHtml } from '../../../lib/db';
 import { withinDailyLimit } from '../../../lib/rateLimit';
@@ -7,6 +8,7 @@ import { sendEmail } from '../../../lib/mail';
 const newsletterSchema = z.object({
   email: z.string().email(),
   _honey: z.string().optional(),
+  _meta: metaFieldsSchema,
 });
 
 export async function POST(request: Request) {
@@ -28,7 +30,7 @@ export async function POST(request: Request) {
       );
     }
 
-    const { _honey, ...formData } = parsedData.data;
+    const { _honey, _meta, ...formData } = parsedData.data;
 
     // Max 3 submissions per visitor per day (reset at midnight IST).
     if (!(await withinDailyLimit(request, 'newsletter'))) {
@@ -58,6 +60,21 @@ export async function POST(request: Request) {
     if (!saved.ok && !emailed) {
       console.error('Newsletter subscriber could not be stored or emailed:', formData.email);
       return NextResponse.json({ success: false, error: 'Could not subscribe right now. Please try again later.' }, { status: 502 });
+    }
+
+    // Meta Conversions API: server copy of the browser's NewsletterSignup (same event_id). Consent only.
+    if (_meta?.consent === true) {
+      after(() =>
+        sendCapiEvent({
+          eventName: 'NewsletterSignup',
+          eventId: _meta.event_id,
+          eventSourceUrl: sameSiteUrl(request, request.headers.get('referer')),
+          request,
+          email: formData.email,
+          fbp: _meta.fbp,
+          fbc: _meta.fbc,
+        }),
+      );
     }
 
     return NextResponse.json({ success: true, message: 'Subscription received successfully' });

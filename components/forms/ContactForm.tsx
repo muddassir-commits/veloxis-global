@@ -7,7 +7,7 @@ import * as z from 'zod';
 import { Input, Textarea } from '../ui/Input';
 import { Button } from '../ui/Button';
 import { CheckCircle } from 'lucide-react';
-import { events } from '../../lib/analytics';
+import { events, metaFormFields, newEventId } from '../../lib/analytics';
 import { siteData } from '../../data/site';
 
 const contactSchema = z.object({
@@ -34,8 +34,12 @@ const serviceOptions = [
 
 // Time-to-submit for the spam check: measured from the first focus inside the form (a person has
 // to tap or click a field). Scripts that post without touching the form send 0 and are dropped.
+// The first focus also sends GA4 form_start (feeds the "Started form, no lead" audience).
 function markFirstFocus(e: React.FocusEvent<HTMLFormElement>) {
-  if (!e.currentTarget.dataset.start) e.currentTarget.dataset.start = String(Date.now());
+  if (!e.currentTarget.dataset.start) {
+    e.currentTarget.dataset.start = String(Date.now());
+    events.formStart('ContactForm', window.location.pathname);
+  }
 }
 
 function msSinceFirstFocus(event?: React.BaseSyntheticEvent) {
@@ -81,18 +85,20 @@ export const ContactForm: React.FC<{ defaultService?: string }> = ({ defaultServ
     setIsSubmitting(true);
     setSubmitSuccess(null);
     setLimitMessage(null);
+    // One id for the browser Pixel Lead and the server CAPI Lead, so Meta counts the lead once.
+    const eventId = newEventId();
     try {
       const response = await fetch('/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ ...data, _elapsed: msSinceFirstFocus(event) }),
+        body: JSON.stringify({ ...data, _elapsed: msSinceFirstFocus(event), ...metaFormFields(eventId) }),
       });
 
       if (response.ok) {
         const result = await response.json().catch(() => null);
         // generate_lead only for submissions the server accepted as real (spam is dropped silently).
         if (result?.lead === true) {
-          events.leadSubmit('ContactForm', window.location.pathname);
+          events.leadSubmit('ContactForm', window.location.pathname, eventId);
         }
         setSubmitSuccess(true);
         reset();
@@ -206,6 +212,7 @@ export const ContactForm: React.FC<{ defaultService?: string }> = ({ defaultServ
           <Button
             id="contact-submit-btn"
             type="submit"
+            track={false}
             variant="primary"
             disabled={isSubmitting}
             className="w-full sm:w-auto self-start flex items-center justify-center gap-2"

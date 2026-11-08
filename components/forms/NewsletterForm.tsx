@@ -5,7 +5,7 @@ import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import * as z from 'zod';
 import { Button } from '../ui/Button';
-import { events } from '../../lib/analytics';
+import { events, metaFormFields, newEventId } from '../../lib/analytics';
 
 const newsletterSchema = z.object({
   email: z.string().email({ message: 'Please enter a valid email address.' }),
@@ -37,16 +37,17 @@ export const NewsletterForm: React.FC = () => {
     setIsSubmitting(true);
     setSubmitSuccess(null);
     setLimitMessage(null);
+    const eventId = newEventId();
     try {
       const response = await fetch('/api/newsletter', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(data),
+        body: JSON.stringify({ ...data, ...metaFormFields(eventId) }),
       });
 
       if (response.ok) {
         if (typeof window !== 'undefined') {
-          events.newsletterSignup(window.location.pathname);
+          events.newsletterSignup(window.location.pathname, eventId);
         }
         setSubmitSuccess(true);
         reset();
@@ -96,6 +97,7 @@ export const NewsletterForm: React.FC = () => {
             </div>
             <Button
               type="submit"
+              track={false}
               variant="primary"
               disabled={isSubmitting}
               className="py-3 px-6 text-sm shrink-0 whitespace-nowrap flex items-center justify-center gap-2"

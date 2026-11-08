@@ -1,9 +1,10 @@
-import { NextResponse } from 'next/server';
+import { NextResponse, after } from 'next/server';
 import * as z from 'zod';
 import { insertRow, escapeHtml } from '../../../lib/db';
 import { withinDailyLimit } from '../../../lib/rateLimit';
 import { sendEmail } from '../../../lib/mail';
 import { spamReason } from '../../../lib/spamGuard';
+import { metaFieldsSchema, sameSiteUrl, sendCapiEvent } from '../../../lib/metaCapi';
 
 const contactSchema = z.object({
   name: z.string().min(2),
@@ -13,6 +14,7 @@ const contactSchema = z.object({
   _honey: z.string().optional(),
   company_website: z.string().optional(),
   _elapsed: z.number().optional(),
+  _meta: metaFieldsSchema,
 });
 
 export async function POST(request: Request) {
@@ -28,7 +30,7 @@ export async function POST(request: Request) {
       );
     }
 
-    const { _honey, company_website, _elapsed, ...formData } = parsedData.data;
+    const { _honey, company_website, _elapsed, _meta, ...formData } = parsedData.data;
 
     // Spam (honeypot, filled in under 3 s, link-building pitch): answer "success" so the sender
     // learns nothing, but save nothing, email nothing and tell the browser it was not a lead.
@@ -71,6 +73,25 @@ export async function POST(request: Request) {
     if (!saved.ok && !emailed) {
       console.error('Contact lead could not be stored or emailed:', formData);
       return NextResponse.json({ success: false, error: 'Could not submit right now. Please try WhatsApp.' }, { status: 502 });
+    }
+
+    // Meta Conversions API: server copy of the browser's Lead (same event_id, so Meta counts it once).
+    // Only with marketing consent; off until the META_* env vars are set. Runs after the response.
+    if (_meta?.consent === true) {
+      after(() =>
+        sendCapiEvent({
+          eventName: 'Lead',
+          eventId: _meta.event_id,
+          eventSourceUrl: sameSiteUrl(request, request.headers.get('referer')),
+          request,
+          phone: formData.phone,
+          name: formData.name,
+          country: 'in',
+          fbp: _meta.fbp,
+          fbc: _meta.fbc,
+          customData: { content_name: 'ContactForm' },
+        }),
+      );
     }
 
     return NextResponse.json({ success: true, lead: true, message: 'Contact request received successfully' });
