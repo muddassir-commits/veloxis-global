@@ -153,9 +153,10 @@ function loadOne(slug: string): { post?: Post; draft?: boolean; problems: string
 
 let cache: LoadResult | null = null;
 
-/** Today's date in India (YYYY-MM-DD), so a post dated today goes live at 00:00 IST. */
+/** The publishing day in India (YYYY-MM-DD). It flips at 07:00 IST, so a post dated today goes live at 7 AM IST
+ *  (IST = UTC+5:30, minus 7 hours = UTC-1:30). Keep in sync with scripts/blog/publish-due.mjs and queue-status.mjs. */
 function todayIst(): string {
-  return new Date(Date.now() + 5.5 * 3600 * 1000).toISOString().slice(0, 10);
+  return new Date(Date.now() - 1.5 * 3600 * 1000).toISOString().slice(0, 10);
 }
 
 /** Loads and validates every post. Never throws. */

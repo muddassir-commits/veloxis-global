@@ -1,4 +1,4 @@
-# Scheduled blog posts (dated in the future) go live on their date. Runs in GitHub's cloud: no PC needed.
+# Scheduled blog posts (dated in the future) go live on their date at 7:00 AM IST. Runs in GitHub's cloud: no PC needed.
 # Every day this lists the posts that are due in content/blog/published.txt; if a new one is due,
 # it commits that file to main and Vercel deploys as usual.
 # Optional secret VERCEL_DEPLOY_HOOK_URL (Vercel → Project → Settings → Git → Deploy Hooks):
@@ -10,8 +10,8 @@ name: Publish scheduled posts
 
 on:
   schedule:
-    - cron: '40 18 * * *' # 00:10 IST
-    - cron: '30 0 * * *' # 06:00 IST backup (GitHub often delays scheduled runs by hours)
+    - cron: '31 1 * * *' # 07:01 IST: posts dated today go live at 7 AM IST
+    - cron: '0 3 * * *' # 08:30 IST backup (GitHub sometimes delays scheduled runs)
   workflow_dispatch:
 
 permissions:
