@@ -6,7 +6,8 @@
 import { readdirSync, readFileSync, existsSync } from 'node:fs';
 
 const dir = 'content/blog';
-const today = new Date(Date.now() + 5.5 * 3600 * 1000).toISOString().slice(0, 10);
+// Publishing day flips at 07:00 IST (UTC+5:30 minus 7 h = UTC-1:30), same as lib/blog.ts.
+const today = new Date(Date.now() - 1.5 * 3600 * 1000).toISOString().slice(0, 10);
 
 const posts = readdirSync(dir, { withFileTypes: true })
   .filter((d) => d.isDirectory() && !d.name.startsWith('_'))
