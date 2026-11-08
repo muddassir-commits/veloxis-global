@@ -3,7 +3,7 @@
 import { useEffect } from 'react';
 import { usePathname } from 'next/navigation';
 import { useScrollDepth } from '../../lib/useScrollDepth';
-import { events } from '../../lib/analytics';
+import { events, industryFromPath, type ClickContext } from '../../lib/analytics';
 
 // The GA4 `cta` parameter: an explicit data-cta value, else the aria-label, else the visible text
 // (arrows and extra spaces removed), else the link target. Never empty, so no "(not set)".
@@ -36,18 +36,30 @@ export default function AnalyticsTracker() {
       const anchor = target.closest('a');
       const href = anchor?.getAttribute('href') || '';
 
-      if (href.startsWith('tel:')) return events.phoneClick(page);
+      // Context from the link's data-* attributes (WhatsAppLink, NicheCta...), else the page URL.
+      const tagged = target.closest<HTMLElement>('[data-cta], [data-industry], [data-cta-location]');
+      const ds = anchor?.dataset ?? tagged?.dataset ?? {};
+      const industry =
+        ds.industry || target.closest<HTMLElement>('[data-industry]')?.dataset.industry || industryFromPath(page);
+      const ctx: ClickContext = {
+        cta: ds.cta || undefined,
+        ctaLocation: ds.ctaLocation || undefined,
+        pageType: ds.pageType || undefined,
+        waRef: ds.ref || undefined,
+        industry,
+      };
+
+      if (href.startsWith('tel:')) return events.phoneClick(page, ctx);
       // A named WhatsApp button (data-cta) also sends its name, so each placement can be compared.
-      if (href.includes('wa.me') || href.includes('api.whatsapp.com/send'))
-        return events.whatsappClick(page, anchor?.dataset.cta || undefined);
-      if (href.startsWith('mailto:')) return events.emailClick(page);
-      if (href.includes('calendly.com')) return events.bookingClick(page);
+      if (href.includes('wa.me') || href.includes('api.whatsapp.com/send')) return events.whatsappClick(page, ctx);
+      if (href.startsWith('mailto:')) return events.emailClick(page, ctx);
+      if (href.includes('calendly.com')) return events.bookingClick(page, ctx);
 
       const cta = target.closest<HTMLElement>('[data-cta]');
       const isContactLink = href === '/contact' || href.startsWith('/contact?') || href.startsWith('/contact#');
       if (cta || isContactLink) {
         const el = cta ?? anchor!;
-        events.ctaClick(page, ctaName(el, href), el.dataset.industry || undefined);
+        events.ctaClick(page, ctaName(el, href), el.dataset.industry || industry, el.dataset.ctaLocation || undefined);
       }
     };
 
