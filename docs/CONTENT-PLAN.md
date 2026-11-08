@@ -1,5 +1,11 @@
 # 60-day blog plan — 30 posts, one every 2 days
 
+> **History (real estate era).** This plan was made on 1 Oct 2026, when Veloxis Global was a real estate marketing
+> agency. Since the 8 Nov 2026 rebrand Veloxis is a multi-niche performance marketing agency (e-commerce & D2C,
+> local businesses & clinics, real estate, equal weight). New topics come from `content/blog-queue.json` (written by
+> the agent in `scripts/blog/WRITER.md`, every post tagged with `industry`), not from this file. The rules below still
+> apply to real estate posts; for all posts the current rules are in `docs/BLOG.md` and `scripts/blog/WRITER.md`.
+
 Plan created on 2026-10-01. It runs from **28 Sep to 25 Nov 2026**. Posts 1–2 are backdated and live first.
 
 **Where the numbers come from:**

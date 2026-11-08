@@ -17,7 +17,9 @@ ours, never push to main, never merge).
    - First paragraph: a 40–60 word direct answer to the main query, starting with `<p><strong>`.
    - Add a missing section or H2 for a real query the post doesn't answer; make H2s match the question.
    - FAQs: 7–9, replace weak ones with real queries from step 2; answers 40–60 words.
-   - Internal links: add links to newer related posts and the matching money page.
+   - Internal links: add links to newer related posts and the matching money page (the post's niche page
+     `/industries/ecommerce`, `/industries/local-business` or `/industries/real-estate`, plus a `/services/<slug>`
+     page). Check `industry` in `post.json` is set and right; never link the old `/d2c` or `/local-business` URLs.
    - Remove or source any unsourced number. Fix dead external links.
 5. Set `"updated"` to today ONLY if the article body really changed (not for title/meta/link-only edits).
 6. Checks: `npm run blog:check`, `npx tsc --noEmit`, `npm run lint`, `npm run build`.
