@@ -1,6 +1,11 @@
 # SEO guide — veloxisglobal.com
 
 How SEO is set up on this site, which page targets which search, and the rules that keep it working.
+
+**Since 8 Nov 2026 (rebrand, PR #67)** Veloxis Global is a multi-niche performance marketing agency with three equal
+niches: e-commerce & D2C, local businesses & clinics, real estate. The homepage, services, city pages and
+`/industries` are generic; the real estate keywords below now belong to the real estate pages and posts only.
+Rows marked "volume not checked" have no researched search volume yet: research them before quoting numbers.
 Search volumes are Google Ads data for India via DataForSEO (September 2026).
 
 ## Keyword map
@@ -10,15 +15,21 @@ Volumes refreshed 2026-09-26 (research in `research/kw-free-2026-09/KEYWORD-MAP.
 
 | Page | Primary keyword (monthly searches) | Secondary keywords | Intent |
 |---|---|---|---|
-| `/` | real estate marketing agency (880) | real estate digital marketing agency (720), real estate marketing company (320) | Commercial — choosing an agency |
-| `/services` | real estate marketing services | real estate digital marketing services | Commercial — comparing services |
-| `/services/high-converting-landing-pages` | real estate landing page (390) | real estate website design (590, SERP is mostly design galleries), project microsite | Commercial |
-| `/services/paid-ads` | real estate lead generation (1,300) | facebook ads for real estate (320), google ads for real estate (260), meta ads for real estate (90, ×3 in a year), real estate lead generation agency (110), real estate lead generation services (90) | Commercial |
-| `/services/ai-automation` | real estate chatbot (480, rising) | real estate AI chatbot, ai chatbot for real estate (40, ×7), real estate automation (50), whatsapp marketing for real estate (40) | Commercial |
-| `/industries/real-estate` | marketing for real estate developers | builder marketing | Commercial — developers |
+| `/` | performance marketing agency in india (volume not checked) | digital marketing agency, performance marketing agency | Commercial — choosing an agency |
+| `/services` | digital marketing services (volume not checked) | ads, SEO and website services | Commercial — comparing services |
+| `/services/high-converting-landing-pages` | website and landing page design (volume not checked) | shopify store design, landing page design, real estate landing page (390) | Commercial |
+| `/services/paid-ads` | meta and google ads management (volume not checked) | facebook/instagram ads agency, google ads agency, real estate lead generation (1,300) | Commercial |
+| `/services/seo` | seo services (volume not checked) | local seo services, google business profile optimisation | Commercial |
+| `/services/ai-automation` | whatsapp automation (volume not checked) | ai chatbot for business, real estate chatbot (480, rising), whatsapp marketing for real estate (40) | Commercial |
+| `/industries` | marketing for e-commerce, local businesses and real estate | industries we serve | Commercial — hub |
+| `/industries/ecommerce` | ecommerce marketing agency (volume not checked) | d2c marketing agency, shopify marketing (old `/d2c` 301s here) | Commercial — online stores |
+| `/industries/local-business` | digital marketing for local businesses (volume not checked) | marketing for clinics, dentists and salons, local seo (old `/local-business` 301s here) | Commercial — local businesses |
+| `/industries/real-estate` | real estate marketing agency (880) | real estate digital marketing agency (720), marketing for real estate developers, builder marketing | Commercial — real estate |
+| `/real-estate-lead-system` | real estate lead generation system | real estate lead generation services (90) | Commercial — real estate offer |
+| `/tools/website-audit` | free website audit (volume not checked) | website seo checker, website speed and mobile check | Tool |
 | `/channel-partners` | channel partner marketing | digital marketing for real estate agents (260), marketing for brokers | Commercial — CPs and brokers |
 | `/playbooks` | real estate marketing strategies (320) | real estate marketing ideas (140), real estate marketing plan | Informational → commercial |
-| `/free-audit` | free real estate marketing audit | real estate marketing review, lead flow audit | Commercial — conversion |
+| `/free-audit` | free marketing audit | free website audit, lead flow audit | Commercial — conversion |
 | `/blog/ai-for-real-estate-india` | ai for real estate (1,000, fastest-rising) | ai in real estate marketing, ai for real estate agents (70), ai in real estate india (40) | Informational |
 | `/blog/how-to-generate-real-estate-leads` | how to generate real estate leads (480) | how to get clients in real estate (90 × several variants), real estate leads free (90), junk/fake leads | Informational |
 | `/blog/meta-ads-for-real-estate-india` | meta ads for real estate (90) | facebook ads for real estate (as a guide), instagram ads for real estate (40) | Informational |
@@ -37,24 +48,24 @@ Volumes refreshed 2026-09-26 (research in `research/kw-free-2026-09/KEYWORD-MAP.
 | `/blog/real-estate-hoarding-design` | real estate hoarding (390) | real estate hoarding design (320), hoarding ideas (40), hoarding ads (30), wall branding (30) | Informational |
 | `/blog/real-estate-seo-india` | real estate seo (480) | real estate seo agency (90), seo india (50), real estate agent seo (50) | Informational |
 | `/blog/real-estate-slogans-taglines` | real estate slogans (390) | real estate taglines (210), company slogans (90), slogan ideas (70), catchy slogans (70), agent tagline (70) | Informational |
-| `/digital-marketing-agency-lucknow` | digital marketing agency in lucknow | real estate marketing agency lucknow, real estate digital marketing lucknow | Commercial (local) |
-| `/digital-marketing-agency-kanpur` | digital marketing agency in kanpur | real estate marketing agency kanpur, real estate digital marketing kanpur | Commercial (local) |
-| `/digital-marketing-agency-noida` | digital marketing agency in noida | real estate marketing agency noida, greater noida west, yamuna expressway | Commercial (local) |
+| `/digital-marketing-agency-lucknow` | digital marketing agency in lucknow | performance marketing agency lucknow, seo company lucknow | Commercial (local) |
+| `/digital-marketing-agency-kanpur` | digital marketing agency in kanpur | performance marketing agency kanpur, seo company kanpur | Commercial (local) |
+| `/digital-marketing-agency-noida` | digital marketing agency in noida | performance marketing agency noida, greater noida | Commercial (local) |
 
-The remaining 27 posts of the 60-day plan, with keywords, dates and internal links, are in `docs/CONTENT-PLAN.md`. Add each row here when its post is published. Volumes are from DataForSEO, India, 2026-10-01.
+The blog rows above are the October real estate posts. Since 8 Nov new topics come from `content/blog-queue.json` across the three niches (each post has an `industry` tag); its `keyword` field is the post's primary keyword. Before writing, check that no live page already targets it. The October 60-day plan stays in `docs/CONTENT-PLAN.md` for history. Volumes are from DataForSEO, India, 2026-10-01.
 
-Service page vs guide on the same topic: the service page targets the commercial phrase ("real estate lead generation", "real estate chatbot"); the guide targets the how-to / what-is phrase. Always link guide → service page.
+Service or niche page vs guide on the same topic: the service/niche page targets the commercial phrase ("ecommerce marketing agency", "local seo services", "real estate lead generation"); the guide targets the how-to / what-is phrase. Always link guide → its niche page (`/industries/<niche>`) and the matching service page.
 
 Copy rules from the research:
 - Write "Meta (Facebook and Instagram) ads", not only "Facebook ads" — in India "meta ads" is now searched more than "facebook ads" (Google Trends, 2026).
-- Lead with lead **quality** (junk leads, site visits, follow-up speed) — that is what builders and brokers complain about.
+- Lead with the outcome each niche cares about: orders and cost per order (e-commerce), calls and bookings (local), lead **quality**, site visits and follow-up speed (real estate).
 
 Deliberately **not** targeted:
 - **real estate crm (2,400)** — Google shows CRM software vendors and "top 10 CRM" lists.
 - **builder website (60,500)** — means website-builder tools, not property builders.
 - **channel partner meaning (1,300)** — generic business definition.
 - **how to sell property / flat fast (210–260)** — homeowners, not our clients.
-- **real estate + city** (e.g. "real estate marketing agency lucknow") — 0–40 searches a month, so the city pages target "digital marketing agency in lucknow/kanpur" (GSC, Sept–Oct 2026: 486 and 260 impressions on the old city URLs) and qualify the visitor as real estate only. Pages restored on the old URLs on 7 Oct 2026.
+- **real estate + city** (e.g. "real estate marketing agency lucknow") — 0–40 searches a month, so the city pages target "digital marketing agency in lucknow/kanpur" (GSC, Sept–Oct 2026: 486 and 260 impressions on the old city URLs) and, since 8 Nov 2026, are generic for all three niches (template + `data/cities.ts`). Pages restored on the old URLs on 7 Oct 2026.
 
 ## Where things live
 
@@ -67,9 +78,12 @@ Deliberately **not** targeted:
 | Breadcrumb schema | Automatic — rendered by `components/ui/Breadcrumb.tsx` |
 | FAQs + FAQ schema | Automatic — rendered by `components/sections/FaqAccordion.tsx` (`withSchema={false}` to turn off) |
 | Service pages | `data/services-data.ts` |
-| Developer and channel partner pages | `data/audiences.ts` |
+| Niches (hub cards, homepage strip) | `data/industries.ts`; pages in `app/industries/<niche>/page.tsx` (`components/industries/NichePage.tsx`) |
+| Blog niche labels, tabs and CTA text | `data/blog-niches.ts` |
+| City pages | `data/cities.ts` |
+| Real estate developer and channel partner pages | `data/audiences.ts` |
 | Playbooks (example plans) | `data/playbooks.ts` |
-| Blog posts | `data/blog-posts.ts` |
+| Blog posts | `content/blog/<slug>/` (`post.json` + `content.html`), loaded by `lib/blog.ts` |
 | Sitemap / robots / llms.txt | `app/sitemap.ts`, `app/robots.ts`, `lib/llms.ts` (generated from the data files) |
 | Redirects | `next.config.mjs` → `redirects()` |
 
@@ -81,8 +95,8 @@ Deliberately **not** targeted:
 4. **No address.** Veloxis Global is a service-area business; don't publish a street address in copy or schema.
 5. **No self-rated reviews** in structured data (`aggregateRating`, `Review`).
 6. **Removing a URL?** Add a single-hop 301/308 in `next.config.mjs` to the closest live page, and update internal links.
-7. **New blog post?** Add it to `data/blog-posts.ts` with `seoTitle`, a 140–160 character `excerpt`, `isoDate`, `modifiedIso`, `service` and a descriptive `imageAlt`. It appears in the sitemap, blog index, related posts and llms.txt automatically. Link to at least one service page from the article body.
-8. When static page content changes, bump `SITE_CONTENT_UPDATED` in `app/sitemap.ts`.
+7. **New blog post?** Add a folder in `content/blog/<slug>/` (see `docs/BLOG.md`) with `seoTitle`, an `excerpt`, `date`, `industry`, `service` and a descriptive `imageAlt`. It appears in the sitemap, blog index, related posts and llms.txt automatically. Link to at least one service page from the article body.
+8. When static page content changes, bump `CONTENT_REVIEWED` in `lib/seo-config.ts` (it sets `SITE_CONTENT_UPDATED` in `app/sitemap.ts`).
 9. **Every page shows 7–9 FAQs with answers visible** (no collapsed panels), using `components/sections/FaqAccordion.tsx`. FAQ text lives in the page’s data file, or in `data/page-faqs.ts`, `data/blog-faqs.ts` and `data/playbook-faqs.ts`. Answers may only state facts the page already supports. `scripts/seo/crawl.js` fails any page with fewer than 7.
 
 ## Checks
