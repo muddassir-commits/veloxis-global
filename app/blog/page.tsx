@@ -22,7 +22,7 @@ export default function BlogPage() {
       <SchemaMarkup
         schema={getWebPageSchema({
           type: 'CollectionPage',
-          name: 'Veloxis Global real estate marketing blog',
+          name: 'Veloxis Global marketing blog',
           description: pageMeta.blog.description,
           path: '/blog',
         })}

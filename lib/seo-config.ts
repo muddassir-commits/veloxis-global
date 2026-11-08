@@ -176,9 +176,9 @@ export const pageMeta = {
     path: '/tools/website-audit',
   },
   blog: {
-    title: 'Real Estate Marketing Blog | Veloxis Global',
+    title: 'Marketing Blog: E-commerce, Local & Real Estate | Veloxis',
     description:
-      'Guides for builders, brokers and CPs: real estate lead generation, Meta and Google ads, AI and WhatsApp follow-up, landing pages, EOI and CP programmes.',
+      'Practical marketing guides for e-commerce and D2C brands, local businesses and clinics, and real estate: Meta and Google ads, local SEO, landing pages, WhatsApp.',
     path: '/blog',
   },
   privacy: {

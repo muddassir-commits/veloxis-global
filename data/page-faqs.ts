@@ -40,9 +40,9 @@ export const playbooksHubFaqs: PageFaq[] = [
 ];
 
 export const blogIndexFaqs: PageFaq[] = [
-  { question: 'Who is this blog for?', answer: 'Real estate developers, builders, brokers and channel partners in India who run or plan marketing for property projects.' },
+  { question: 'Who is this blog for?', answer: 'Owners and marketers of e-commerce and D2C brands, local businesses and clinics, and real estate developers, brokers and channel partners.' },
   { question: 'Who writes the articles?', answer: 'The Veloxis Global team, who work daily on lead generation, landing pages, Meta and Google Ads, and sales automation.' },
-  { question: 'What topics does the blog cover?', answer: 'Meta and Google ads for property, project landing pages, WhatsApp follow-up and automation, channel partner programmes, EOI and launch marketing, and local search for agents.' },
+  { question: 'What topics does the blog cover?', answer: 'Meta and Google ads, store and landing pages, local SEO and Google Business Profile, WhatsApp follow-up and automation, and real estate topics such as channel partner programmes, EOI and launch marketing.' },
   { question: 'Are the statistics in the articles verified?', answer: 'We only cite figures with a source, and we explain general practice where no reliable data exists. Legal and tax topics include a note that they are not professional advice.' },
   { question: 'How often are articles updated?', answer: 'When rules or platforms change. Each article shows the date it was last updated.' },
   { question: 'Can I suggest a topic?', answer: `Yes — email ${siteData.email} or message us on WhatsApp with the question you want answered.` },

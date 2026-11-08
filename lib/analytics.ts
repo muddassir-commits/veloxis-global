@@ -50,7 +50,8 @@ export const events = {
     trackEvent('generate_lead', { form_name: formName, source_page: sourcePage });
   },
   newsletterSignup: (sourcePage: string) => trackEvent('newsletter_signup', { source_page: sourcePage }),
-  ctaClick: (location: string, cta: string) => trackEvent('cta_click', { location, cta }),
+  ctaClick: (location: string, cta: string, industry?: string) =>
+    trackEvent('cta_click', industry ? { location, cta, industry } : { location, cta }),
   phoneClick: (sourcePage: string) => trackEvent('phone_click', { source_page: sourcePage }),
   whatsappClick: (sourcePage: string, cta?: string) =>
     trackEvent('whatsapp_click', cta ? { source_page: sourcePage, cta } : { source_page: sourcePage }),

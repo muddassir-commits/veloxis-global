@@ -5,13 +5,16 @@ import Link from 'next/link';
 import { ArrowRight, X } from 'lucide-react';
 import { WhatsAppIcon } from '../ui/WhatsAppIcon';
 import { WhatsAppLink } from '../ui/WhatsAppLink';
+import { BLOG_NICHES } from '../../data/blog-niches';
+import type { PostIndustry } from '../../lib/blog';
 const DISMISS_KEY = 'vg-blog-cta-closed';
 
 // Small CTA that appears once a reader passes ~30% of a blog post and hides again near the end
 // (where the full CTA banner sits). Desktop: a card bottom-left (the WhatsApp bubble is bottom-right).
 // Mobile: a slim strip just above the existing quick-actions bar. Closing it hides it for the rest of
 // the visit. Clicks are tracked by AnalyticsTracker through the data-cta names below.
-export function BlogStickyCta({ postTitle }: { postTitle?: string }) {
+export function BlogStickyCta({ postTitle, industry = 'general' }: { postTitle?: string; industry?: PostIndustry }) {
+  const niche = BLOG_NICHES[industry];
   const [show, setShow] = useState(false);
   const [closed, setClosed] = useState(false);
 
@@ -57,14 +60,16 @@ export function BlogStickyCta({ postTitle }: { postTitle?: string }) {
   return (
     <aside aria-label="Free audit offer" inert={!show} aria-hidden={!show}>
       {/* Mobile: slim strip above the quick-actions bar (WhatsApp is already in that bar) */}
-      <div className={`md:hidden fixed left-2 right-2 bottom-[68px] z-40 ${motion} ${state}`}>
+      <div className={`md:hidden fixed left-2 right-2 bottom-[calc(68px+env(safe-area-inset-bottom))] z-40 ${motion} ${state}`}>
         <div className="flex items-center gap-2 rounded-xl bg-slate-900 text-white shadow-lg pl-3 pr-1 py-1.5">
           <Link
-            href="/tools/website-audit"
-            data-cta="blog_sticky_audit_tool"
+            href={niche.href}
+            data-cta="blog_to_niche"
+            data-industry={industry}
+            data-cta-location="blog_sticky_mobile"
             className="flex-1 flex items-center gap-1.5 text-xs font-bold leading-tight py-1.5"
           >
-            <span>Is your site losing enquiries? Run the free website audit</span>
+            <span>{niche.barText}</span>
             <ArrowRight className="w-3.5 h-3.5 shrink-0 text-emerald-400" aria-hidden="true" />
           </Link>
           <button

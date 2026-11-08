@@ -4,7 +4,7 @@ Every post is a folder in `content/blog/<slug>/` (the slug is the URL: `/blog/<s
 
 | File | What it holds |
 |---|---|
-| `post.json` | title, SEO title, excerpt, **date** (`YYYY-MM-DD`), optional `updated`, category, related service, cover image, inline images, 7–9 FAQs |
+| `post.json` | title, SEO title, excerpt, **date** (`YYYY-MM-DD`), optional `updated`, category, `industry` (ecommerce, local-business, real-estate or general; missing = general), related service, cover image, inline images, 7–9 FAQs |
 | `content.html` | the article body; every `<h2 id="...">` becomes a table-of-contents entry |
 
 Categories: `Guides`, `Landing Pages`, `Paid Ads`, `AI Automation`, `Growth Tips`.

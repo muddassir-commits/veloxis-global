@@ -10,8 +10,9 @@ import BlogPostContent from './BlogPostContent';
 import { BlogStickyCta } from '../../../components/blog/BlogStickyCta';
 import { FaqAccordion } from '../../../components/sections/FaqAccordion';
 import { constructMetadata } from '../../../lib/seo-config';
-import { getAllPosts, getPostBySlug, toCard } from '../../../lib/blog';
+import { getAllPosts, getPostBySlug, toCard, industryOf } from '../../../lib/blog';
 import { getServiceBySlug } from '../../../data/services-data';
+import { BLOG_NICHES } from '../../../data/blog-niches';
 
 interface Params {
   params: Promise<{ slug: string }>;
@@ -48,10 +49,12 @@ export default async function SingleBlogPostPage({ params }: Params) {
   if (!post) notFound();
 
   const path = `/blog/${post.slug}`;
-  // Related: same service first, then same category, then newest.
+  const industry = industryOf(post);
+  const niche = BLOG_NICHES[industry];
+  // Related: same niche first, then same service, then same category, then newest.
   const relatedPosts = getAllPosts()
     .filter((p) => p.slug !== post.slug)
-    .map((p) => ({ p, score: (post.service && p.service === post.service ? 2 : 0) + (p.category === post.category ? 1 : 0) }))
+    .map((p) => ({ p, score: (industryOf(p) === industry ? 4 : 0) + (post.service && p.service === post.service ? 2 : 0) + (p.category === post.category ? 1 : 0) }))
     .sort((a, b) => b.score - a.score || b.p.isoDate.localeCompare(a.p.isoDate))
     .slice(0, 3)
     .map(({ p }) => toCard(p));
@@ -74,20 +77,24 @@ export default async function SingleBlogPostPage({ params }: Params) {
       <ScrollProgress />
       <section className="bg-slate-50 pt-16 lg:pt-[72px] border-b border-slate-100">
         <div className="max-w-container-max mx-auto px-gutter">
-          <Breadcrumb items={[{ name: 'Blog', href: '/blog' }, { name: post.title, href: path }]} />
+          <Breadcrumb items={[{ name: 'Blog', href: '/blog' },
+              ...(industry !== 'general' ? [{ name: niche.name, href: niche.href }] : []),
+              { name: post.title, href: path },
+            ]} />
         </div>
       </section>
 
       <BlogPostContent
         post={post}
         relatedPosts={relatedPosts}
+        industry={industry}
         service={service ? { slug: service.slug, title: service.title, shortDesc: service.shortDesc } : undefined}
       />
 
       <FaqAccordion customFaqs={post.faqs} title="Frequently asked questions" badgeText="FAQ" description="Quick answers from this guide." />
 
       <CtaBanner whatsappTitle={post.title} />
-      <BlogStickyCta postTitle={post.title} />
+      <BlogStickyCta postTitle={post.title} industry={industry} />
     </>
   );
 }

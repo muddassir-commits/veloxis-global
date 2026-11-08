@@ -71,6 +71,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     return { url: `${SITE_URL}${route}`, lastModified: SITE_CONTENT_UPDATED, ...(images.length ? { images } : {}) };
   });
 
+  const blogNiches = ['ecommerce', 'local-business', 'real-estate', 'general']
+    .filter((n) => getAllPosts().some((p) => (p.industry ?? 'general') === n))
+    .map((n) => ({ url: `${SITE_URL}/blog/industry/${n}`, lastModified: SITE_CONTENT_UPDATED }));
+
   const services = servicesData.map((s) => ({
     url: `${SITE_URL}/services/${s.slug}`,
     lastModified: SITE_CONTENT_UPDATED,
@@ -88,5 +92,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     images: [post.image, ...(post.inlineImages ?? []).map((i) => i.src)].map(abs),
   }));
 
-  return [...staticRoutes, ...services, ...playbookPages, ...posts];
+  return [...staticRoutes, ...blogNiches, ...services, ...playbookPages, ...posts];
 }

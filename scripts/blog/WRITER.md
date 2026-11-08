@@ -24,16 +24,16 @@ its date (the "Publish scheduled posts" GitHub Action). Read `docs/BLOG.md` once
    in the open Blog PRs (`gh pr diff <n> | grep '"date"'`): your post must be dated after it.
 2. **Pick the topic.** First topic in `content/blog-queue.json` with `"status": "todo"` whose slug is not
    already a folder in `content/blog/` and not in an open Blog PR (`gh pr list --state open --search "Blog: in:title" --json headRefName`
-   gives branches `blog/<slug>`). Respect the mix rule in the file.
+   gives branches `blog/<slug>`). Respect the mix rule in the file (three equal niches; the queue is already ordered ecommerce, local, ecommerce, local, real-estate).
 3. **Research what ranks (15 minutes max).** WebSearch the `keyword` (and 1–2 close variants). Open the top
    5 organic results (WebFetch). Note for each: headings, questions answered, what's missing, outdated or
    unsourced. Also search the question as a person would ask ChatGPT/Perplexity and note which sources get
    cited. Find 3–6 authoritative sources to cite (official/regulator/platform docs first).
 4. **Plan.** Title (≤ 70 chars, keyword near the start), `seoTitle` ≤ 60 chars (the site adds
    " | Veloxis Global"), `excerpt` 120–155 chars with the keyword and a reason to click. 6–9 question-style
-   or task-style H2s that together beat the top results. 7–9 FAQs taken from "People also ask" style
+   or task-style H2s that together beat the top results. 7–9 FAQs (always 7 to 9) taken from "People also ask" style
    questions and the research.
-5. **Write** `content/blog/<slug>/content.html` (1,300–2,000 words, plain English, short paragraphs):
+5. **Write** `content/blog/<slug>/content.html` (deep SEO post: **2,000+ words**, plain English, short paragraphs; cover every question the top results answer plus what they miss):
    - **First paragraph = direct answer in 40–60 words**, starting with `<p><strong>` and the answer itself
      (AEO: this is what answer engines lift). Second paragraph: who it's for and what the guide covers.
    - H2s as `<h2 id="kebab-id">` (ids unique, lowercase), phrased as the questions people search where
@@ -43,16 +43,23 @@ its date (the "Publish scheduled posts" GitHub Action). Read `docs/BLOG.md` once
      No h1, no scripts, styles, iframes or inline handlers, no empty tags.
    - **Cite sources inline** with `<a href="https://...">source name</a>` and end with
      `<h2 id="sources">Sources</h2>` + a `<ul>` of every external source used.
-   - **Internal links:** 3–6 links to related posts (`/blog/<slug>`) and the right money page
-     (`/real-estate-lead-system`, `/d2c`, `/local-business`, `/services/<slug>`, `/free-audit`,
-     `/tools/website-audit`). Use the topic's `internalLinks` and add others that truly fit.
+   - **Internal links (at least 3 to money pages, plus related posts):** link the post's niche page at least
+     once in the body (`/industries/ecommerce`, `/industries/local-business` or `/industries/real-estate`;
+     general posts: `/industries`), at least 2 relevant `/services/<slug>` pages, and 2-4 related posts
+     (`/blog/<slug>`, live ones only). Also fine: `/real-estate-lead-system` (real estate), `/free-audit`,
+     `/tools/website-audit`. Never use the old `/d2c` or `/local-business` URLs. Use the topic's
+     `internalLinks` and add others that truly fit. The post template adds niche call-to-action boxes by
+     itself from `industry`; do not paste them into content.html.
    - Last paragraph: one soft call to action to the free audit or the matching page. No hype.
    - For legal topics (RERA, DPDP, Google/Meta policy) add an italic "general information, not legal advice"
      line and the date the rules were checked.
 6. **`post.json`**: copy the shape of a recent post (e.g. `content/blog/real-estate-email-marketing/post.json`):
-   title, seoTitle, excerpt, `date` = the later of `node scripts/blog/queue-status.mjs --next-date` and the
+   title, seoTitle, excerpt, **`industry`**, `date` = the later of `node scripts/blog/queue-status.mjs --next-date` and the
    day after the latest date in open Blog PRs (step 1), category
-   (one of Guides, Landing Pages, Paid Ads, AI Automation, Growth Tips), service if it fits, image, imageAlt,
+   (one of Guides, Landing Pages, Paid Ads, AI Automation, Growth Tips), service if it fits,
+   **`industry` = the topic's `industry` in the queue: `ecommerce`, `local-business` or `real-estate`, or `general`
+   for a cross-niche post (REQUIRED on every post: it drives the breadcrumb, the niche call-to-action boxes,
+   the "more guides" list and the /blog/industry/<niche> pages)**, image, imageAlt,
    2 inlineImages (`beforeHeading` = an H2 id), `about` (1–3 Wikipedia `sameAs` entities), 7–9 FAQs whose
    answers match the article (40–60 words each, direct first sentence).
 7. **Photos** (unique per post): `node scripts/images/fetch-pixabay.mjs "<words>" --list` then

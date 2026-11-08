@@ -9,8 +9,10 @@ import { Button } from '../../../components/ui/Button';
 import { Linkedin } from '../../../components/ui/BrandIcons';
 import { ImageFrame } from '../../../components/ui/ImageFrame';
 import { InArticleLeadMagnet } from '../../../components/blog/InArticleLeadMagnet';
+import { NicheCta } from '../../../components/blog/NicheCta';
+import { BLOG_NICHES } from '../../../data/blog-niches';
 
-import type { Post, PostCard } from '../../../lib/blog';
+import type { Post, PostCard, PostIndustry } from '../../../lib/blog';
 
 type InlineImage = NonNullable<Post['inlineImages']>[number];
 
@@ -37,10 +39,12 @@ const formatDate = (iso: string) =>
 interface Props {
   post: Post;
   relatedPosts: PostCard[];
+  industry: PostIndustry;
   service?: { slug: string; title: string; shortDesc: string };
 }
 
-export default function BlogPostContent({ post, relatedPosts, service }: Props) {
+export default function BlogPostContent({ post, relatedPosts, industry, service }: Props) {
+  const niche = BLOG_NICHES[industry];
   const [scrollProgress, setScrollProgress] = useState(0);
   const [activeHeading, setActiveHeading] = useState('');
 
@@ -187,12 +191,23 @@ export default function BlogPostContent({ post, relatedPosts, service }: Props) 
                         )}
                       </figure>
                     )}
-                    <div className="article-body" dangerouslySetInnerHTML={{ __html: part.html }} />
+                    {i === 0 && part.html.indexOf('<h2') > 0 ? (
+                      <>
+                        {/* Niche CTA after the intro: split at the first <h2>, content.html stays untouched */}
+                        <div className="article-body" dangerouslySetInnerHTML={{ __html: part.html.slice(0, part.html.indexOf('<h2')) }} />
+                        <NicheCta industry={industry} variant="inline" />
+                        <div className="article-body" dangerouslySetInnerHTML={{ __html: part.html.slice(part.html.indexOf('<h2')) }} />
+                      </>
+                    ) : (
+                      <div className="article-body" dangerouslySetInnerHTML={{ __html: part.html }} />
+                    )}
                     {i === leadMagnetIndex && <InArticleLeadMagnet postTitle={post.title} />}
                   </React.Fragment>
                 ));
               })()}
             </div>
+
+            <NicheCta industry={industry} variant="end" />
 
             {/* In-Article Service Bridge (Direct Link to Service) */}
             {service && (
@@ -248,7 +263,7 @@ export default function BlogPostContent({ post, relatedPosts, service }: Props) 
             {/* Related Posts */}
             <div className="w-full mt-16">
               <h2 className="text-xl font-extrabold text-slate-900 mb-6 border-b border-slate-100 pb-3">
-                Related articles
+                {niche.moreTitle}
               </h2>
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
                 {relatedPosts.map((rel) => (
@@ -268,6 +283,14 @@ export default function BlogPostContent({ post, relatedPosts, service }: Props) 
                   </Link>
                 ))}
               </div>
+              {industry !== 'general' && (
+                <Link
+                  href={`/blog/industry/${industry}`}
+                  className="inline-flex items-center gap-1 mt-6 text-sm font-bold text-royal-blue hover:underline"
+                >
+                  All {niche.name} guides →
+                </Link>
+              )}
             </div>
           </article>
 

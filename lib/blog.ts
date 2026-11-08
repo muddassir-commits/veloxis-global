@@ -31,6 +31,10 @@ const SERVICES = ['high-converting-landing-pages', 'paid-ads', 'ai-automation'] 
 /** Niche a post belongs to (optional). Niche pages list posts by this; posts without it are matched by slug words. */
 export const INDUSTRIES = ['ecommerce', 'local-business', 'real-estate'] as const;
 
+/** What a post's `industry` may be. 'general' (or a missing value) = not tied to one niche. */
+export const POST_INDUSTRIES = [...INDUSTRIES, 'general'] as const;
+export type PostIndustry = (typeof POST_INDUSTRIES)[number];
+
 const isoDay = z.string().regex(/^\d{4}-\d{2}-\d{2}$/, 'use YYYY-MM-DD');
 const localImage = z.string().regex(/^\/images\/.+\.(jpg|jpeg|png|webp)$/i, 'must be a /images/... jpg, png or webp path');
 
@@ -42,7 +46,7 @@ const PostMetaSchema = z.object({
   updated: isoDay.optional(),
   category: z.enum(CATEGORIES),
   service: z.enum(SERVICES).optional(),
-  industry: z.enum(INDUSTRIES).optional(),
+  industry: z.enum(POST_INDUSTRIES).optional(),
   image: localImage,
   imageAlt: z.string().min(5),
   inlineImages: z
@@ -226,4 +230,12 @@ export function getPostsForIndustry(industry: (typeof INDUSTRIES)[number], slugK
   return [...tagged, ...byKeyword.filter((p) => !tagged.includes(p))]
     .sort((a, b) => b.isoDate.localeCompare(a.isoDate))
     .slice(0, limit);
+}
+
+/** A post's niche; posts without an `industry` count as 'general'. */
+export const industryOf = (p: { industry?: PostIndustry }): PostIndustry => p.industry ?? 'general';
+
+/** Every live post of a niche (or of 'general'), newest first. Posts are already sorted newest first. */
+export function getPostsByIndustry(industry: PostIndustry): Post[] {
+  return getAllPosts().filter((p) => industryOf(p) === industry);
 }
