@@ -280,6 +280,14 @@ export const BLOG_MESSAGES: Record<string, { ref: string; message: string }> = {
     ref: 'blog-chatbot',
     message: 'I read your post on real estate chatbots. I want a WhatsApp chatbot for my enquiries. How would it work?',
   },
+  'real-estate-landing-page': {
+    ref: 'blog-re-landing',
+    message: 'I read your post on real estate landing pages. Can you build a project page that turns my ad clicks into site visits?',
+  },
+  'real-estate-content-ideas': {
+    ref: 'blog-content-ideas',
+    message: 'I read your post on real estate content ideas. Can you help me plan and make content for my project?',
+  },
   'real-estate-crm-india': {
     ref: 'blog-crm',
     message: 'I read your post on real estate CRMs. Can you help me set up a CRM and lead follow-up?',
