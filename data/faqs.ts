@@ -62,7 +62,7 @@ export const realEstateFaqs: FAQItem[] = [
   {
     question: 'Which real estate businesses do you work with?',
     answer:
-      'Residential developers and builders, channel partners mandated on projects, and brokers or property consultants. Most clients are in Noida, Greater Noida, the wider Delhi NCR, Lucknow and Kanpur, and we can run campaigns for projects elsewhere in India.',
+      'Residential developers and builders, channel partners mandated on projects, and brokers or property consultants. We focus on Noida, Greater Noida, the wider Delhi NCR, Lucknow and Kanpur, and we can run campaigns for projects elsewhere in India.',
   },
   {
     question: 'How soon can campaigns start producing leads?',

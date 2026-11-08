@@ -67,7 +67,7 @@ export const cities: Record<CityKey, CityData> = {
     intro: [
       'Veloxis Global is a digital marketing agency based in Noida. We help businesses in Noida, Greater Noida and the wider Delhi NCR get more orders, bookings and qualified enquiries, and we also work with online brands that sell across India.',
       'We work with three kinds of business: e-commerce and D2C brands, local businesses and clinics, and real estate developers, brokers and channel partners. Each gets its own plan, because a store, a dental clinic and a property launch measure success in different ways.',
-      'Everything starts with a free audit of your website or store, ads and lead follow-up. You keep ownership of your ad accounts, pay ad spend directly to Google and Meta, and work with us month-to-month. We are a service-area business: we meet clients on WhatsApp, phone and video, and in person in Noida and Greater Noida when it helps.',
+      'Everything starts with a free audit of your website or store, ads and lead follow-up. You keep ownership of your ad accounts, pay ad spend directly to Google and Meta, and work with us month-to-month. We are a service-area business: we work on WhatsApp, email and video calls, and meet in person in Noida and Greater Noida when it helps.',
     ],
     areasServed: {
       heading: 'Areas we serve around Noida',
@@ -85,11 +85,11 @@ export const cities: Record<CityKey, CityData> = {
     },
     faqs: [
       { question: 'Which digital marketing services do you offer in Noida?', answer: 'Four services that work together: Meta and Google ads management, websites and landing pages, SEO and local SEO (including Google Business Profile), and WhatsApp and AI automation that replies to every enquiry in seconds.' },
-      { question: 'Are you based in Noida?', answer: 'Yes. Veloxis Global is a team based in Noida. We don’t have a public walk-in office: we work with clients on WhatsApp, phone and video calls, and can meet in person in Noida and Greater Noida. Your ads, pages and leads are all set up in accounts you own.' },
+      { question: 'Are you based in Noida?', answer: 'Yes. Veloxis Global is a team based in Noida. We don’t have a public walk-in office: we work on WhatsApp, email and video calls, and can meet in person in Noida and Greater Noida. Your ads, pages and leads are all set up in accounts you own.' },
       { question: 'What kinds of businesses do you work with in Noida?', answer: 'E-commerce and D2C brands, local businesses and clinics, and real estate developers, builders, brokers and channel partners. We don’t take on every industry, so the plans can be specific.' },
       { question: 'How much does a digital marketing agency in Noida cost?', answer: 'It depends on the services and the size of the business, so we quote after a free audit. There is no lock-in: we work month-to-month with 30 days’ notice. Ad spend is paid by you directly to Google and Meta and is separate from our fee.' },
       { question: 'Can you help my local business in Noida show up on Google Maps?', answer: 'Yes. We set up and optimise your Google Business Profile, improve your website for local search and help you collect genuine reviews. We can’t promise a ranking, but we fix what is holding you back first.' },
-      { question: 'Do you cover Greater Noida, Greater Noida West and the rest of NCR?', answer: 'Yes. We work with businesses across Noida, Greater Noida, Greater Noida West, Ghaziabad, Delhi, Gurugram and Faridabad, and we run campaigns for clients elsewhere in India too.' },
+      { question: 'Do you cover Greater Noida, Greater Noida West and the rest of NCR?', answer: 'Yes. We work with businesses across Noida, Greater Noida, Greater Noida West, Ghaziabad, Delhi, Gurugram and Faridabad, and we can run campaigns for businesses elsewhere in India too.' },
       { question: 'How much ad budget does a Noida business need?', answer: 'You pay ad spend directly to Meta and Google. The right budget depends on your market and average order or customer value, and we recommend one after the audit. For real estate projects we suggest at least ₹15,000 a month per project, and launches usually need more.' },
       { question: 'Can you promote a real estate project that is not UP RERA registered?', answer: 'No. We only advertise projects that are registered with UP RERA, and the registration number appears on every ad and landing page.' },
     ],
@@ -110,7 +110,7 @@ export const cities: Record<CityKey, CityData> = {
     intro: [
       'Veloxis Global is a digital marketing agency working with businesses in Lucknow. We help e-commerce and D2C brands, local businesses and clinics, and real estate developers, brokers and channel partners turn ad spend and search visibility into orders, bookings and qualified enquiries.',
       'Lucknow customers search by area: a dentist in Gomti Nagar, a coaching centre near Aliganj, flats on Sultanpur Road. So we plan around localities, not just the city name: pages and ads aimed at the areas your customers live in, a complete Google Business Profile, and an instant WhatsApp reply to every enquiry.',
-      'We are a team based in Noida with roots in Kanpur, so we know Uttar Pradesh customers, Lucknow included. We work with Lucknow clients on WhatsApp, phone and video calls, without a walk-in office, and every account and lead stays in your name. We work month-to-month and start with a free audit.',
+      'We are a team based in Noida with roots in Kanpur, so we know Uttar Pradesh customers, Lucknow included. We work with Lucknow businesses on WhatsApp, email and video calls, without a walk-in office, and every account and lead stays in your name. We work month-to-month and start with a free audit.',
     ],
     areasServed: {
       heading: 'Lucknow areas we work with',
@@ -128,7 +128,7 @@ export const cities: Record<CityKey, CityData> = {
     },
     faqs: [
       { question: 'Which digital marketing services do you offer in Lucknow?', answer: 'Four services that work together: Meta and Google ads management, websites and landing pages, SEO and local SEO (including Google Business Profile), and WhatsApp and AI automation that replies to every enquiry in seconds.' },
-      { question: 'Do you have an office in Lucknow?', answer: 'No. We are a team based in Noida and work with Lucknow clients on WhatsApp, phone and video calls. Your ads, pages and leads are all set up in accounts you own.' },
+      { question: 'Do you have an office in Lucknow?', answer: 'No. We are a team based in Noida and work with Lucknow businesses on WhatsApp, email and video calls. Your ads, pages and leads are all set up in accounts you own.' },
       { question: 'What kinds of businesses do you work with in Lucknow?', answer: 'E-commerce and D2C brands, local businesses and clinics, and real estate developers, builders, brokers and channel partners.' },
       { question: 'How do I choose a digital marketing agency in Lucknow?', answer: 'Ask three things: will they report on orders, bookings or qualified enquiries rather than likes and clicks, will the ad accounts and data be in your name, and is there a lock-in. At Veloxis Global you own the accounts, reports are on outcomes, and we work month-to-month with 30 days’ notice.' },
       { question: 'Can you help my clinic or shop in Lucknow rank on Google Maps?', answer: 'Yes. We set up and optimise your Google Business Profile, improve your website for local search and help you collect genuine reviews. We can’t promise a ranking, but we fix what is holding you back first.' },
@@ -153,7 +153,7 @@ export const cities: Record<CityKey, CityData> = {
     intro: [
       'Veloxis Global is a digital marketing agency with roots in Kanpur and a team based in Noida. We help Kanpur e-commerce and D2C brands, local businesses and clinics, and real estate developers, brokers and channel partners get more orders, bookings and qualified enquiries.',
       'Kanpur is a word-of-mouth market. Many customers already know someone in your trade, and they message on WhatsApp before they ever fill a form. Speed and trust decide who wins: a clear page with real details, a complete Google Business Profile with genuine reviews, and a quick, polite reply on WhatsApp.',
-      'We work with Kanpur clients on WhatsApp, phone and video calls, without a walk-in office. Your ad accounts, pages and leads stay in your name, we work month-to-month, and we start with a free audit.',
+      'We work with Kanpur businesses on WhatsApp, email and video calls, without a walk-in office. Your ad accounts, pages and leads stay in your name, we work month-to-month, and we start with a free audit.',
     ],
     areasServed: {
       heading: 'Kanpur areas we work with',
@@ -170,7 +170,7 @@ export const cities: Record<CityKey, CityData> = {
       areas: audiences.kanpur.local!.areas,
     },
     faqs: [
-      { question: 'Are you a Kanpur agency?', answer: 'Veloxis Global has roots in Kanpur. We are based in Noida and work with Kanpur clients on WhatsApp, phone and video calls. We don’t have a public walk-in office.' },
+      { question: 'Are you a Kanpur agency?', answer: 'Veloxis Global has roots in Kanpur. We are based in Noida and work with Kanpur businesses on WhatsApp, email and video calls. We don’t have a public walk-in office.' },
       { question: 'Which digital marketing services do you offer in Kanpur?', answer: 'Four services that work together: Meta and Google ads management, websites and landing pages, SEO and local SEO (including Google Business Profile), and WhatsApp and AI automation that replies to every enquiry in seconds.' },
       { question: 'What kinds of businesses do you work with in Kanpur?', answer: 'E-commerce and D2C brands, local businesses and clinics, and real estate developers, builders, brokers and channel partners.' },
       { question: 'Can online marketing work in a word-of-mouth market like Kanpur?', answer: 'Yes, when it is narrow and quick. Ads aimed at the right areas, a page that answers price and trust questions, a complete Google Business Profile and an instant WhatsApp reply add a steady source of new customers next to referrals.' },
