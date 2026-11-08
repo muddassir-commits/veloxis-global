@@ -67,11 +67,13 @@ export default function RootLayout({
         {/* Client-side trackers (scroll depth, PageView, click interception) */}
         <AnalyticsTracker />
 
-        {/* GTM + GA4 load for everyone in Consent Mode v2 (advanced, all denied until Accept);
-            Clarity and Meta Pixel load only after cookie consent */}
+        {/* GTM + GA4 load for everyone in Consent Mode v2 (advanced); Clarity and Meta Pixel load only
+            with consent (on by default outside the EEA/UK/Switzerland, opt-in inside it) */}
         <ConsentScripts />
 
-        {/* Google Consent Mode v2 defaults: everything denied until the visitor accepts.
+        {/* Google Consent Mode v2 defaults by region (cookie `veloxis_region` set by proxy.ts):
+            'other' (outside the EEA/UK/Switzerland) = all granted; 'eea' or no cookie = all denied until
+            the visitor accepts. A saved choice (Cookie settings / banner) then overrides the default.
             With storage denied, GA4 sends cookieless pings only; ad data is redacted.
             Then GA4 config and the GTM start event are queued (after the consent commands, so every
             tag sees the consent state first). The libraries that read this queue load later, from
@@ -83,7 +85,8 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{
             __html: `
               window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}window.gtag=gtag;
-              gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:'denied'});
+              var d='denied';try{if(/(?:^|; )veloxis_region=other(?:;|$)/.test(document.cookie))d='granted';}catch(e){}
+              gtag('consent','default',{ad_storage:d,ad_user_data:d,ad_personalization:d,analytics_storage:d});
               gtag('set','ads_data_redaction',true);
               try{var c=JSON.parse(localStorage.getItem('cookie-consent-v2')||'null');
               if(!c&&localStorage.getItem('cookie-consent')==='accepted'){c={analytics:true,marketing:true};}

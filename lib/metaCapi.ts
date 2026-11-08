@@ -1,7 +1,8 @@
 // Meta Conversions API (server-side events). Server-only.
 // Off unless META_PIXEL_ID and META_CAPI_ACCESS_TOKEN are set (Vercel env). With
 // META_CAPI_TEST_EVENT_CODE set, every event goes to Events Manager > Test events only.
-// Callers must only send events for visitors who granted marketing consent.
+// Callers must only send events when the browser reports marketing consent in force (`consent: true`:
+// the default outside the EEA/UK/Switzerland, or accepted in the banner; see lib/consent.ts).
 // Never log personal data here: only event names and HTTP status codes.
 import { createHash } from 'node:crypto';
 import * as z from 'zod';

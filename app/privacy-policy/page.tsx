@@ -10,7 +10,7 @@ import { privacyFaqs } from '../../data/page-faqs';
 
 export const metadata: Metadata = constructMetadata(pageMeta.privacy);
 
-const LAST_UPDATED = '5 November 2026';
+const LAST_UPDATED = '8 November 2026';
 const PRIVACY_EMAIL = siteData.email;
 
 // Services that receive data from this site. Keep in sync with app/layout.tsx and lib/.
@@ -92,8 +92,9 @@ export default function PrivacyPolicyPage() {
             <p>
               We use your data because you gave it to us for these purposes (your consent), or where the DPDP Act allows
               it for a legitimate use such as complying with the law. When a form is sent, our site tells Google Analytics that an enquiry happened (without cookies
-              unless you allowed analytics cookies), and tells Meta only if you allowed marketing cookies; your name, phone number and message are not included in that
-              event. We do not sell your personal data.
+              if analytics cookies are off for you), and tells Meta only if marketing cookies are on for you (see section 5); when it does, our server may also send Meta
+              the same event with your browser details (IP address, browser type) and, in hashed (scrambled, one-way) form only, your phone number and first name
+              (contact form) or email address (newsletter), so Meta can match it to an ad. Your message and any of these details in plain text are never sent. We do not sell your personal data.
             </p>
 
             <h2 className={h2}>4. Who we share it with</h2>
@@ -125,21 +126,37 @@ export default function PrivacyPolicyPage() {
 
             <h2 className={h2}>5. Cookies and tracking</h2>
             <p>
-              Cookies are small files stored in your browser. We use Google Consent Mode: Google Analytics and Google Tag
-              Manager load on every visit, but until you click “Accept all” (or allow a category) they are told that
-              consent is denied, so they set no cookies and send only basic, cookie-free signals (for example that a page
-              was viewed, with device type and approximate location), which Google uses to estimate visit counts.
-              Microsoft Clarity and Meta Pixel do not load at all until you allow them. If you click “Reject all”, or have
-              not chosen yet, no analytics or marketing cookies are set.
+              Cookies are small files stored in your browser. What happens depends on where you are visiting from. We
+              read your country from your IP address (our hosting provider, Vercel, supplies it) and store only the result,
+              “eea” or “other”, in a cookie for one day.
             </p>
             <ul className={list}>
-              <li><strong>Essential (always on):</strong> remembers your cookie choice in your browser.</li>
-              <li><strong>Analytics (cookies only with your consent):</strong> Google Analytics and Google Tag Manager count visits and show which pages lead to enquiries; Microsoft Clarity records clicks, scrolling and mouse movement as heatmaps and session recordings, and by default masks what you type into form fields.</li>
-              <li><strong>Marketing (only with your consent):</strong> Meta Pixel and Google ads measurement show which ads bring enquiries and let us show ads to people who visited the site.</li>
+              <li>
+                <strong>Outside the European Economic Area (EEA), the UK and Switzerland</strong> (for example India and
+                the United States): analytics and marketing cookies are <strong>on by default</strong> and no cookie banner
+                is shown. Google Analytics, Google Tag Manager, Microsoft Clarity and Meta Pixel load and may set cookies
+                from your first visit. You can turn them off at any time with <strong>Cookie settings</strong> at the
+                bottom of every page; we remember that choice in your browser and respect it on later visits.
+              </li>
+              <li>
+                <strong>In the EEA, the UK and Switzerland</strong> (or if we cannot tell where you are): we ask first. Google
+                Analytics and Google Tag Manager load, but until you click “Accept all” (or allow a category) they are told
+                that consent is denied, so they set no cookies and send only basic, cookie-free signals (for example that a
+                page was viewed, with device type and approximate location), which Google uses to estimate visit counts.
+                Microsoft Clarity and Meta Pixel do not load at all until you allow them. If you click “Reject all”, or have
+                not chosen yet, no analytics or marketing cookies are set.
+              </li>
+            </ul>
+            <p>The categories are:</p>
+            <ul className={list}>
+              <li><strong>Essential (always on):</strong> remembers your cookie choice and your region (“eea” or “other”) in your browser.</li>
+              <li><strong>Analytics:</strong> Google Analytics and Google Tag Manager count visits and show which pages lead to enquiries; Microsoft Clarity records clicks, scrolling and mouse movement as heatmaps and session recordings, and by default masks what you type into form fields.</li>
+              <li><strong>Marketing:</strong> Meta Pixel (plus the matching server-side events described in section 3) and Google ads measurement show which ads bring enquiries and let us show ads to people who visited the site.</li>
             </ul>
             <p>
               You can change or withdraw your choice at any time using <strong>Cookie settings</strong> at the bottom of
-              every page. You can also block or delete cookies in your browser settings, or change your{' '}
+              every page; turning a category off stops it from that moment or, for Microsoft Clarity, from the next page you
+              open. You can also block or delete cookies in your browser settings, or change your{' '}
               <a href="https://www.facebook.com/adpreferences" target="_blank" rel="noopener noreferrer" className={link}>Meta ad preferences</a>.
             </p>
 

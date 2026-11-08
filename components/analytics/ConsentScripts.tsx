@@ -2,7 +2,7 @@
 
 import { useEffect, useState, useSyncExternalStore } from 'react';
 import Script from 'next/script';
-import { Consent, CONSENT_EVENT, readConsent } from '../../lib/consent';
+import { Consent, CONSENT_EVENT, effectiveConsent } from '../../lib/consent';
 
 import { GA_ID, GTM_ID } from '../../lib/tag-ids';
 const PIXEL_ID = process.env.NEXT_PUBLIC_META_PIXEL_ID || '1484475786790290';
@@ -18,19 +18,23 @@ function isInternalDevice() {
   }
 }
 
-// Google Consent Mode v2, advanced mode:
+// Google Consent Mode v2, advanced mode, with a default that depends on the visitor's region
+// (proxy.ts sets the `veloxis_region` cookie; rule in lib/consent.ts):
 // - GTM and GA4 load for every visitor (except internal devices). The consent-default script in
-//   app/layout.tsx has already set ad_storage, analytics_storage, ad_user_data and ad_personalization
-//   to 'denied', so until the visitor accepts, Google receives cookieless pings only (no cookies are
-//   set) and models the missing visits. Accepting sends gtag('consent','update', granted) (lib/consent.ts).
-// - Microsoft Clarity loads only with analytics consent; Meta Pixel only with marketing consent.
+//   app/layout.tsx sets ad_storage, analytics_storage, ad_user_data and ad_personalization to
+//   'granted' for visitors outside the EEA/UK/Switzerland and to 'denied' inside it (or when the
+//   country is unknown), then applies any saved choice. With 'denied', Google receives cookieless
+//   pings only and models the missing visits. A banner/settings choice sends gtag('consent','update').
+// - Microsoft Clarity loads only with analytics consent; Meta Pixel only with marketing consent
+//   (default-granted outside the EEA/UK/Switzerland, so both load there unless the visitor turned them off).
 // Speed: the consent defaults, gtag('js'/'config') for GA4 and the GTM start event are all queued in
 // dataLayer by the inline consent-default script in app/layout.tsx (before any tag). The two Google
 // libraries below only read that queue, in order, so they load with lazyOnload (after the page has
 // finished loading, when the browser is idle) instead of competing with the page for the main thread.
 // Events sent before then (lib/analytics.ts) wait in dataLayer and go out when gtag.js arrives.
-// Consent is only ever widened within a page view; withdrawing it takes effect on the next load
-// (the Google consent update to 'denied' applies at once).
+// Scripts are only ever added within a page view. Withdrawing consent applies at once to Google
+// (consent update 'denied') and the Meta Pixel (fbq consent revoke, lib/consent.ts); Clarity stops
+// on the next page load.
 const noSubscribe = () => () => {};
 
 export default function ConsentScripts() {
@@ -42,7 +46,7 @@ export default function ConsentScripts() {
     if (isInternalDevice()) return;
     const merge = (c: Consent | null) =>
       setConsent((prev) => (c ? { analytics: prev.analytics || c.analytics, marketing: prev.marketing || c.marketing } : prev));
-    merge(readConsent());
+    merge(effectiveConsent());
     const onChange = (e: Event) => merge((e as CustomEvent<Consent>).detail);
     window.addEventListener(CONSENT_EVENT, onChange);
     return () => window.removeEventListener(CONSENT_EVENT, onChange);
