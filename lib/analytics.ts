@@ -1,7 +1,7 @@
 // Google Analytics 4, GTM dataLayer, Meta Pixel and Meta Conversions API (CAPI) event tracking.
 // Spec: VELOXIS_GTM_MARKETING_TRACKING_SPEC.md (private business workspace, foundation/website-docs), section 4.
 
-import { readConsent } from './consent';
+import { effectiveConsent } from './consent';
 
 declare global {
   interface Window {
@@ -44,10 +44,14 @@ function isInternalDevice(): boolean {
   }
 }
 
-/** true only when the visitor accepted marketing cookies (and this is not one of our own devices). */
+/**
+ * true when marketing consent is in force: the default outside the EEA/UK/Switzerland, or accepted in
+ * the banner; false after the visitor turned marketing off, before an EEA visitor accepts, and always
+ * on our own devices (?internal=1).
+ */
 export function hasMarketingConsent(): boolean {
   if (typeof window === 'undefined' || isInternalDevice()) return false;
-  return readConsent()?.marketing === true;
+  return effectiveConsent()?.marketing === true;
 }
 
 function readCookie(name: string): string | undefined {
@@ -100,7 +104,7 @@ export function trackEvent(name: string, params: Params = {}, opts: { eventId?: 
   // This does not create a GA4 hit: GA4 is only fed by the gtag() call above.
   window.dataLayer?.push({ event: name, ...params });
 
-  // Meta Pixel (only defined once marketing consent is given) + server-side copy via CAPI.
+  // Meta Pixel (only defined once marketing consent is in force) + server-side copy via CAPI.
   const meta = metaEvents[name];
   if (!meta) return;
   const eventId = opts.eventId ?? newEventId();

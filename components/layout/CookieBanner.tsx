@@ -3,7 +3,7 @@
 import React, { useEffect, useState, useSyncExternalStore } from 'react';
 import Link from 'next/link';
 import { Button } from '../ui/Button';
-import { Consent, CONSENT_EVENT, OPEN_SETTINGS_EVENT, readConsent, saveConsent } from '../../lib/consent';
+import { ALL_DENIED, Consent, CONSENT_EVENT, effectiveConsent, needsBanner, OPEN_SETTINGS_EVENT, saveConsent } from '../../lib/consent';
 
 const categories: { key: keyof Consent; title: string; desc: string }[] = [
   { key: 'analytics', title: 'Analytics', desc: 'Google Analytics and Microsoft Clarity: which pages are visited and where people get stuck.' },
@@ -11,13 +11,15 @@ const categories: { key: keyof Consent; title: string; desc: string }[] = [
 ];
 
 export const CookieBanner: React.FC = () => {
-  // True until the visitor has made a choice (read from localStorage; false during server render).
+  // True only for visitors who must opt in (EEA/UK/Switzerland or unknown country, see lib/consent.ts)
+  // until they make a choice. Everyone else never sees the banner; they can still open the settings
+  // from the footer "Cookie settings" link. Always false during server render, so static HTML has no banner.
   const needsChoice = useSyncExternalStore(
     (onChange) => {
       window.addEventListener(CONSENT_EVENT, onChange);
       return () => window.removeEventListener(CONSENT_EVENT, onChange);
     },
-    () => readConsent() === null,
+    needsBanner,
     () => false,
   );
   const [reopened, setReopened] = useState(false);
@@ -27,10 +29,10 @@ export const CookieBanner: React.FC = () => {
   const [choice, setChoice] = useState<Consent>({ analytics: false, marketing: false });
   const visible = (needsChoice && !dismissed) || reopened;
 
-  // Footer "Cookie settings" reopens the banner with the current choice.
+  // Footer "Cookie settings" opens the panel with the consent in force (saved choice or regional default).
   useEffect(() => {
     const open = () => {
-      setChoice(readConsent() ?? { analytics: false, marketing: false });
+      setChoice(effectiveConsent() ?? ALL_DENIED);
       setManaging(true);
       setReopened(true);
     };

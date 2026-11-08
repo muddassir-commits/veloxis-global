@@ -4,7 +4,9 @@ import { capiEnabled, clientIp, sameSiteUrl, sendCapiEvent } from '../../../lib/
 
 // Browser -> Meta Conversions API relay for click events (lib/analytics.ts, relayToCapi).
 // Lead and NewsletterSignup are NOT accepted here: the form routes send them server-side.
-// The browser calls this only after marketing consent; we also refuse anything without consent: true.
+// The browser calls this only while marketing consent is in force (default outside the EEA/UK/
+// Switzerland, or accepted in the banner; never after the visitor turned marketing off, see
+// hasMarketingConsent in lib/analytics.ts). We also refuse (403) anything without consent: true.
 // Feature is off (204, nothing sent) until META_PIXEL_ID + META_CAPI_ACCESS_TOKEN are set.
 
 const MAX_BODY = 4096;
