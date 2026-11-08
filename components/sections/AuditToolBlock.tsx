@@ -25,7 +25,7 @@ export const AuditToolBlock: React.FC = () => (
           <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight leading-tight">Audit your website in under a minute</h2>
           <p className="text-slate-300 leading-relaxed mt-4 max-w-xl">
             Paste any page address and our free website audit tool checks the basics that decide whether visitors turn into
-            enquiries or orders, then lists what to fix first. Works for stores, clinic and business websites and property pages.
+            enquiries or orders, then lists what to fix first. Works for stores, clinic and business websites, and property pages.
           </p>
           <div className="mt-8 flex flex-col sm:flex-row gap-3">
             <Link

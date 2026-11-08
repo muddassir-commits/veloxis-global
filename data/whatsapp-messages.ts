@@ -84,12 +84,17 @@ export const PAGE_MESSAGES: Record<string, WaPage> = {
   '/services/high-converting-landing-pages': {
     type: 'service',
     ref: 'svc-landing',
-    message: 'I need a landing page for my project. Can you look at what I have now and suggest a plan?',
+    message: 'I need a better website or landing page for my business. Can you look at what I have now and suggest a plan?',
   },
   '/services/paid-ads': {
     type: 'service',
     ref: 'svc-ads',
     message: 'I want to run Meta and Google ads for my business. Can you check my current setup and suggest a plan?',
+  },
+  '/services/seo': {
+    type: 'service',
+    ref: 'svc-seo',
+    message: 'I want to show up better on Google and Maps. Can you check my website and suggest an SEO plan?',
   },
   '/services/ai-automation': {
     type: 'service',

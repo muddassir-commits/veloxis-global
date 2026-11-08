@@ -9,14 +9,14 @@ export interface PageFaq {
 }
 
 export const servicesHubFaqs: PageFaq[] = [
-  { question: 'What real estate marketing services does Veloxis Global offer?', answer: 'Three: project landing pages and microsites, Meta and Google ads for property lead generation, and WhatsApp chatbot and CRM automation that replies to every enquiry. We don’t offer SEO retainers, social media management or branding.' },
-  { question: 'Do I have to take all three services?', answer: 'No. You can start with one — for example, WhatsApp automation for leads you already get from portals. Most clients combine all three because each makes the others work better, but it isn’t required.' },
-  { question: 'Which service should I start with?', answer: 'If you get leads but struggle to reach them, start with automation. If you run ads but get few enquiries, start with a landing page. If you have no direct lead source at all, start with ads and a landing page together. The free audit tells you which gap is biggest.' },
-  { question: 'Do you work with builders, brokers or channel partners?', answer: 'All three. Developers and builders use us for launches and inventory; channel partners and brokers use us to get leads of their own for the projects they are mandated on.' },
-  { question: 'How is the work scoped?', answer: 'After a free audit we recommend the services, pages and campaigns your project needs and share a written proposal. Ad spend is paid directly to Google and Meta from your own accounts.' },
-  { question: 'How do you measure results?', answer: 'On leads, how many were contacted, site visits booked and completed, and cost per site visit — reported weekly. Clicks and impressions are available but aren’t the headline.' },
-  { question: 'Is there a minimum contract?', answer: 'No. We work month-to-month with 30 days’ notice.' },
-  { question: 'Which cities do you cover?', answer: 'We work with clients in Noida, Greater Noida, the wider Delhi NCR, Lucknow and Kanpur, and can run campaigns for projects elsewhere in India.' },
+  { question: 'What services does Veloxis Global offer?', answer: 'Four: Meta and Google ads management, websites and landing pages, SEO and local SEO (including Google Business Profile and AI search visibility), and WhatsApp and AI automation. We work with e-commerce and D2C brands, local businesses and clinics, and real estate developers and brokers.' },
+  { question: 'Do I have to take all the services?', answer: 'No. You can start with one, for example WhatsApp automation for leads you already get, or a landing page for ads you already run. Most clients combine two or more because each makes the others work better, but it isn’t required.' },
+  { question: 'Which service should I start with?', answer: 'If you get leads but struggle to reach them, start with automation. If you run ads but get few enquiries or orders, start with a landing page or store fixes. If you depend on search or Google Maps, start with SEO and your Google Business Profile. The free audit tells you which gap is biggest.' },
+  { question: 'Which kinds of businesses do you work with?', answer: 'E-commerce and D2C brands, local businesses and clinics, and real estate developers, builders, brokers and channel partners.' },
+  { question: 'How is the work scoped?', answer: 'After a free audit we recommend the services, pages and campaigns your business needs and share a written proposal. Ad spend is paid directly to Google and Meta from your own accounts.' },
+  { question: 'How do you measure results?', answer: 'On the outcome that matters to your business, reported weekly or monthly: orders and cost per order for stores, calls and bookings for local businesses, qualified leads and site visits for real estate. Clicks and impressions are available but aren’t the headline.' },
+  { question: 'Is there a minimum contract?', answer: 'No. We work month-to-month with 30 days’ notice, and you own your ad accounts and data.' },
+  { question: 'Which cities do you cover?', answer: 'We are based in Noida and work with clients across Noida, Greater Noida, Delhi NCR, Lucknow and Kanpur, and can run campaigns for businesses elsewhere in India.' },
 ];
 
 export const contactFaqs: PageFaq[] = [

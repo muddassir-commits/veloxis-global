@@ -28,7 +28,7 @@ const steps = [
   { title: 'Plan', desc: 'A 90-day plan covering channels, campaign structure, budget split, pages and WhatsApp flows.' },
   { title: 'Build', desc: 'Landing page, tracking, WhatsApp automation and CRM connection, tested before launch.' },
   { title: 'Launch', desc: 'Meta and Google campaigns go live with every enquiry answered on WhatsApp in seconds.' },
-  { title: 'Optimise', desc: 'Weekly changes towards the campaigns producing site visits, with a plain-language report.' },
+  { title: 'Optimise', desc: 'Weekly changes towards the campaigns producing orders, bookings and qualified enquiries, with a plain-language report.' },
 ];
 
 export default function AboutPage() {
@@ -104,11 +104,11 @@ export default function AboutPage() {
               We don’t just run ads. We build the path from the ad to the sale, and measure every step of it.
             </div>
             <p>
-              We are based in Noida and work with developers and builders, channel partners and brokers across Noida,
-              Greater Noida, the wider Delhi NCR, Lucknow and Kanpur. We also work with{' '}
-              <Link href="/industries/ecommerce" className="font-semibold text-royal-blue hover:underline">D2C brands</Link> and{' '}
-              <Link href="/industries/local-business" className="font-semibold text-royal-blue hover:underline">local businesses</Link>{' '}
-              in India and abroad.
+              We are based in Noida and work with{' '}
+              <Link href="/industries/ecommerce" className="font-semibold text-royal-blue hover:underline">e-commerce and D2C brands</Link>,{' '}
+              <Link href="/industries/local-business" className="font-semibold text-royal-blue hover:underline">local businesses and clinics</Link>{' '}
+              and <Link href="/industries/real-estate" className="font-semibold text-royal-blue hover:underline">real estate developers and brokers</Link>{' '}
+              across Noida, Greater Noida, the wider Delhi NCR, Lucknow and Kanpur, and with online brands elsewhere in India and abroad.
             </p>
           </div>
 
@@ -150,7 +150,7 @@ export default function AboutPage() {
         <div className="max-w-container-max mx-auto px-gutter">
           <div className="text-center max-w-2xl mx-auto mb-12 section-reveal">
             <span className="text-xs font-bold text-royal-blue uppercase tracking-widest block mb-3">How we work</span>
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">Five steps from audit to site visits</h2>
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">Five steps from audit to results</h2>
           </div>
           <ol className="grid grid-cols-1 md:grid-cols-5 gap-6 stagger-reveal">
             {steps.map((s, i) => (

@@ -10,9 +10,8 @@ import { Breadcrumb } from '../../components/ui/Breadcrumb';
 import { SchemaMarkup } from '../../components/ui/SchemaMarkup';
 import { getWebPageSchema } from '../../lib/schema';
 import { servicesData } from '../../data/services-data';
-import { Target, Code, Zap, ArrowRight, Check } from 'lucide-react';
+import { Target, Code, Zap, Search, ArrowRight, Check } from 'lucide-react';
 import { CtaBanner } from '../../components/sections/CtaBanner';
-import { LeadSystemCallout } from '../../components/sections/LeadSystemCallout';
 import { FaqAccordion } from '../../components/sections/FaqAccordion';
 import { servicesHubFaqs } from '../../data/page-faqs';
 import { ReviewedLine } from '../../components/ui/ReviewedLine';
@@ -24,7 +23,11 @@ export const metadata: Metadata = constructMetadata(pageMeta.services);
 const serviceImages: Record<string, { src: string; alt: string }> = {
   'high-converting-landing-pages': {
     src: '/images/people/home/real-estate-landing-page-mockup.jpg',
-    alt: 'Sample real estate project landing page on a laptop and phone, with price, RERA number and site-visit form',
+    alt: 'Sample landing page mockup on a laptop and phone, with price, trust points and an enquiry form',
+  },
+  seo: {
+    src: '/images/people/services/hub-team-reviewing-charts.jpg',
+    alt: 'Four colleagues reviewing printed charts around a laptop',
   },
   'paid-ads': {
     src: '/images/people/services/hub-team-reviewing-charts.jpg',
@@ -32,11 +35,11 @@ const serviceImages: Record<string, { src: string; alt: string }> = {
   },
   'ai-automation': {
     src: '/images/people/home/whatsapp-chatbot-mockup.jpg',
-    alt: 'Sample WhatsApp chatbot sending a brochure, asking the budget and booking a site visit, beside a lead inbox',
+    alt: 'Sample WhatsApp chatbot sending a brochure, asking the budget and booking a visit, beside a lead inbox',
   },
 };
 
-const iconMap: Record<string, React.ComponentType<{ className?: string }>> = { Target, Code, Zap };
+const iconMap: Record<string, React.ComponentType<{ className?: string }>> = { Target, Code, Zap, Search };
 
 const accentColors: Record<string, string> = {
   teal: 'bg-teal-500/10 text-teal-600 border-teal-200/50',
@@ -50,7 +53,7 @@ export default function ServicesPage() {
       <SchemaMarkup
         schema={getWebPageSchema({
           type: 'CollectionPage',
-          name: 'Real estate marketing services',
+          name: 'Digital marketing services',
           description: pageMeta.services.description,
           path: '/services',
         })}
@@ -66,12 +69,12 @@ export default function ServicesPage() {
         <div className="max-w-container-max mx-auto px-gutter">
           <Badge variant="teal" className="mb-4">WHAT WE DO</Badge>
           <h1 className="text-4xl sm:text-headline-lg font-extrabold text-slate-900 tracking-tight mb-4">
-            Real estate marketing services
+            Digital Marketing Services for Leads and Sales
           </h1>
           <p className="text-base sm:text-body-md text-on-surface-variant max-w-2xl mx-auto leading-relaxed">
-            Three services that work as one lead engine: a project page that turns clicks into enquiries, Meta and Google
-            ads that bring exclusive leads, and WhatsApp automation that answers every enquiry in seconds. Take one, or all
-            three together.
+            Four services that work as one growth engine for e-commerce brands, local businesses and real estate: Meta and
+            Google ads that bring people in, pages that turn visits into enquiries and orders, SEO that gets you found, and
+            WhatsApp automation that answers every enquiry in seconds. Take one, or combine them.
           </p>
           <ReviewedLine className="text-slate-500 mt-4" />
         </div>
@@ -79,7 +82,7 @@ export default function ServicesPage() {
 
       <section className="bg-slate-50 py-16">
         <div className="max-w-container-max mx-auto px-gutter">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 stagger-reveal">
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8 stagger-reveal">
             {servicesData.map((service, i) => {
               const IconComponent = iconMap[service.icon] || Target;
               const href = `/services/${service.slug}`;
@@ -96,7 +99,7 @@ export default function ServicesPage() {
                     className="!rounded-none"
                     imageClassName="transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.05]"
                   />
-                  <div className="px-8 pt-8 pb-3">
+                  <div className="px-6 pt-8 pb-3">
                     <div className={`w-12 h-12 rounded-2xl flex items-center justify-center mb-6 border transition-transform duration-500 group-hover:scale-110 group-hover:-rotate-6 ${accentColors[service.accentColor]}`}>
                       <IconComponent className="w-6 h-6" />
                     </div>
@@ -104,8 +107,8 @@ export default function ServicesPage() {
                       <Link href={href} className="hover:text-royal-blue transition-colors">{service.title}</Link>
                     </h2>
                   </div>
-                  <p className="px-8 pb-6 text-sm text-on-surface-variant leading-relaxed">{service.shortDesc}</p>
-                  <ul className="mx-8 mb-6 flex flex-col gap-2.5 text-sm text-slate-700 font-semibold pt-5 border-t border-slate-100">
+                  <p className="px-6 pb-6 text-sm text-on-surface-variant leading-relaxed">{service.shortDesc}</p>
+                  <ul className="mx-6 mb-6 flex flex-col gap-2.5 text-sm text-slate-700 font-semibold pt-5 border-t border-slate-100">
                       {service.benefits.map((b) => (
                         <li key={b} className="flex items-center gap-2.5">
                           <span className="w-5 h-5 rounded-full bg-teal-50 text-teal-600 flex items-center justify-center shrink-0" aria-hidden="true">
@@ -115,7 +118,7 @@ export default function ServicesPage() {
                         </li>
                       ))}
                   </ul>
-                  <div className="flex items-center justify-between px-8 pb-8 pt-4 border-t border-slate-100 gap-4">
+                  <div className="flex items-center justify-between px-6 pb-8 pt-4 border-t border-slate-100 gap-4">
                     <Link href="/free-audit" className="font-bold text-slate-900 text-sm hover:text-royal-blue transition-colors">Starts with a free audit</Link>
                     <Button href={href} variant="outline" className="py-2 px-4 text-xs font-bold shrink-0" id={`services-card-btn-${service.id}`}>
                       Details →
@@ -131,34 +134,38 @@ export default function ServicesPage() {
       <section className="bg-white py-16">
         <div className="max-w-container-max mx-auto px-gutter grid grid-cols-1 lg:grid-cols-2 gap-12 stagger-reveal">
           <div>
-            <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-4">Why the three work better together</h2>
+            <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-4">Why the services work better together</h2>
             <p className="text-slate-600 leading-relaxed mb-4">
-              Ads bring buyers to a page. The page turns them into enquiries. Automation makes sure every enquiry is answered
-              before the buyer moves on to the next project. When one part is missing, the others underperform — which is
-              why we recommend starting with all three and measuring them together on cost per site visit.
+              Ads bring people to a page. The page turns them into orders or enquiries. SEO keeps new visitors arriving without
+              paying for every click, and automation makes sure every enquiry is answered before the customer moves on. When
+              one part is missing, the others underperform, which is why we look at all of them in the free audit and
+              measure them together on orders, bookings or qualified enquiries.
             </p>
             <Link href="/playbooks" className="group inline-flex items-center gap-1 font-bold text-royal-blue hover:underline">
-              See how they fit together in our example playbooks <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" aria-hidden="true" />
+              See how they fit together in our real estate example playbooks <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" aria-hidden="true" />
             </Link>
           </div>
           <div className="bg-slate-50 rounded-2xl border border-slate-100 p-8">
-            <h2 className="text-xl font-bold text-slate-900 mb-4">Who these services are for</h2>
+            <h2 className="text-xl font-bold text-slate-900 mb-4">Who we work with</h2>
             <ul className="flex flex-col gap-4">
               <li>
-                <Link href="/industries/real-estate" className="font-bold text-royal-blue hover:underline">Developers and builders</Link>
-                <p className="text-sm text-slate-600 mt-1">Launches, new phases and unsold inventory, with your CP network included.</p>
+                <Link href="/industries/ecommerce" className="font-bold text-royal-blue hover:underline">E-commerce and D2C brands</Link>
+                <p className="text-sm text-slate-600 mt-1">More orders from your own store, judged on cost per order.</p>
               </li>
               <li>
-                <Link href="/channel-partners" className="font-bold text-royal-blue hover:underline">Channel partners and brokers</Link>
-                <p className="text-sm text-slate-600 mt-1">Exclusive leads for the projects you’re mandated on, and proof of every lead you bring.</p>
+                <Link href="/industries/local-business" className="font-bold text-royal-blue hover:underline">Local businesses and clinics</Link>
+                <p className="text-sm text-slate-600 mt-1">More calls, bookings and WhatsApp enquiries from people nearby.</p>
+              </li>
+              <li>
+                <Link href="/industries/real-estate" className="font-bold text-royal-blue hover:underline">Real estate developers, brokers and CPs</Link>
+                <p className="text-sm text-slate-600 mt-1">Exclusive leads and site visits for launches, inventory and mandated projects.</p>
               </li>
             </ul>
           </div>
         </div>
       </section>
 
-      <LeadSystemCallout />
-      <FaqAccordion customFaqs={servicesHubFaqs} title="Questions about our services" badgeText="FAQ" description="What builders, brokers and channel partners ask before choosing a service." />
+      <FaqAccordion customFaqs={servicesHubFaqs} title="Questions about our services" badgeText="FAQ" description="What e-commerce brands, local businesses and real estate teams ask before choosing a service." />
 
       <CtaBanner />
     </>

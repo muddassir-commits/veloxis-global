@@ -92,9 +92,9 @@ export const pageMeta = {
     path: '/industries/local-business',
   },
   services: {
-    title: 'Real Estate Marketing Services | Veloxis Global',
+    title: 'Digital Marketing Services: Ads, SEO, Websites | Veloxis',
     description:
-      'Three real estate marketing services: project landing pages, Meta and Google ads for property leads, and WhatsApp chatbots that reply to every enquiry.',
+      'Meta and Google ads, websites and landing pages, SEO and local SEO, and WhatsApp automation for e-commerce brands, local businesses and real estate. Free audit.',
     path: '/services',
   },
   developers: {
@@ -116,21 +116,21 @@ export const pageMeta = {
     path: '/industries/real-estate/nri-buyers',
   },
   lucknow: {
-    title: 'Digital Marketing Agency in Lucknow for Real Estate | Veloxis',
+    title: 'Digital Marketing Agency in Lucknow | Veloxis Global',
     description:
-      'Real estate-focused digital marketing agency for Lucknow builders, brokers and CPs: project landing pages, Meta and Google ads, and instant WhatsApp replies.',
+      'Digital marketing agency in Lucknow: Meta and Google ads, websites, SEO and WhatsApp automation for e-commerce, local businesses and real estate. Free audit.',
     path: '/digital-marketing-agency-lucknow',
   },
   kanpur: {
-    title: 'Digital Marketing Agency in Kanpur for Real Estate | Veloxis',
+    title: 'Digital Marketing Agency in Kanpur | Veloxis Global',
     description:
-      'Real estate-focused digital marketing agency for Kanpur builders, brokers and CPs: project landing pages, Meta and Google ads, instant WhatsApp replies.',
+      'Digital marketing agency in Kanpur: Meta and Google ads, websites, SEO and WhatsApp automation for e-commerce, local businesses and real estate. Free audit.',
     path: '/digital-marketing-agency-kanpur',
   },
   noida: {
-    title: 'Real Estate Digital Marketing Agency in Noida | Veloxis',
+    title: 'Digital Marketing Agency in Noida | Veloxis Global',
     description:
-      'Real estate digital marketing agency in Noida for builders, brokers and CPs: project landing pages, Meta and Google ads, and instant WhatsApp replies.',
+      'Digital marketing agency in Noida: Meta and Google ads, websites, SEO and WhatsApp automation for e-commerce, local businesses and real estate. Free audit.',
     path: '/digital-marketing-agency-noida',
   },
   playbooks: {
@@ -170,9 +170,9 @@ export const pageMeta = {
     path: '/guides',
   },
   websiteAudit: {
-    title: 'Free Website Audit Tool (No Sign-up): SEO, Speed, AI Search',
+    title: 'Free Website Audit Tool: SEO, Speed & Mobile Check',
     description:
-      'Free website audit tool, no sign-up: check any page for SEO basics, speed, tracking, lead capture and AI search readiness in under a minute, with fixes to make.',
+      'Audit your website online for free: check any page for SEO, speed, mobile, tracking and AI search readiness in under a minute, with a fix list. No sign-up.',
     path: '/tools/website-audit',
   },
   blog: {
@@ -190,7 +190,7 @@ export const pageMeta = {
   terms: {
     title: 'Terms of Service | Veloxis Global',
     description:
-      'Terms for using the Veloxis Global website and our real estate marketing services, including audits, month-to-month agreements and governing law.',
+      'Terms for using the Veloxis Global website and our marketing services, including audits, month-to-month agreements and governing law.',
     path: '/terms',
   },
 };

@@ -14,15 +14,15 @@ import { SchemaMarkup } from '../../../components/ui/SchemaMarkup';
 import { FaqAccordion } from '../../../components/sections/FaqAccordion';
 import { getServiceSchema } from '../../../lib/schema';
 import { CtaBanner } from '../../../components/sections/CtaBanner';
-import { LeadSystemCallout } from '../../../components/sections/LeadSystemCallout';
 import { ReviewedLine } from '../../../components/ui/ReviewedLine';
 import { WhatsAppFlowSimulator } from '../../../components/services/WhatsAppFlowSimulator';
 import { Target, CheckCircle, AlertTriangle, ArrowRight } from 'lucide-react';
 
 const serviceHeroImages: Record<string, { src: string; alt: string }> = {
-  'high-converting-landing-pages': { src: '/images/sections/service-landing-pages.jpg', alt: 'Real estate project landing page shown on a laptop and phone' },
-  'paid-ads': { src: '/images/sections/service-paid-ads.jpg', alt: 'Property ad campaign dashboard' },
-  'ai-automation': { src: '/images/sections/service-ai-automation.jpg', alt: 'WhatsApp chatbot replying to a property enquiry' },
+  'high-converting-landing-pages': { src: '/images/sections/service-landing-pages.jpg', alt: 'Landing page shown on a laptop and phone' },
+  'paid-ads': { src: '/images/sections/service-paid-ads.jpg', alt: 'Ad campaign dashboard' },
+  seo: { src: '/images/sections/service-paid-ads.jpg', alt: 'Search and ad performance dashboard' },
+  'ai-automation': { src: '/images/sections/service-ai-automation.jpg', alt: 'WhatsApp chatbot replying to an enquiry' },
 };
 
 // People photos per service (Pexels stock). Each pixel size matches its frame ratio:
@@ -42,6 +42,12 @@ const servicePhotos: Record<string, ServicePhotos> = {
     intro: { src: `${P}/ads-team-reviewing-charts.jpg`, alt: 'Marketing team reviewing charts on a laptop at a meeting table' },
     deliverables: { src: `${P}/ads-campaign-planning-table.jpg`, alt: 'Team planning a campaign around a table with laptops, a tablet and ad spend charts' },
     process: { src: `${P}/ads-reports-on-laptops.jpg`, alt: 'Two people working on laptops surrounded by printed performance charts' },
+    sidebar: { src: `${P}/ads-woman-scrolling-phone.jpg`, alt: 'Woman scrolling on her phone while sitting on a sofa', position: '70% center' },
+  },
+  seo: {
+    intro: { src: `${P}/ads-team-reviewing-charts.jpg`, alt: 'Marketing team reviewing charts on a laptop at a meeting table' },
+    deliverables: { src: `${P}/ads-reports-on-laptops.jpg`, alt: 'Two people working on laptops surrounded by printed performance charts' },
+    process: { src: `${P}/ads-campaign-planning-table.jpg`, alt: 'Team planning around a table with laptops, a tablet and charts' },
     sidebar: { src: `${P}/ads-woman-scrolling-phone.jpg`, alt: 'Woman scrolling on her phone while sitting on a sofa', position: '70% center' },
   },
   'ai-automation': {
@@ -80,7 +86,7 @@ export default async function ServicePage({ params }: PageProps) {
   const hero = serviceHeroImages[service.slug] || serviceHeroImages['high-converting-landing-pages'];
   const photos = servicePhotos[service.slug] || servicePhotos['high-converting-landing-pages'];
   const related = service.relatedServices.map(getServiceBySlug).filter(Boolean) as typeof servicesData;
-  const playbook = getPlaybookBySlug(service.relatedPlaybook);
+  const playbook = service.relatedPlaybook ? getPlaybookBySlug(service.relatedPlaybook) : undefined;
   const posts = service.relatedPosts
     .map((slug) => getBlogPost(slug))
     .filter(Boolean) as Post[];
@@ -93,7 +99,7 @@ export default async function ServicePage({ params }: PageProps) {
           description: service.metaDescription,
           path,
           serviceType: service.serviceType,
-          audience: 'Real estate developers, builders, brokers and channel partners',
+          audience: service.audience,
         })}
       />
 
@@ -129,7 +135,7 @@ export default async function ServicePage({ params }: PageProps) {
                   href={`/playbooks/${playbook.slug}`}
                   className="text-[15px] font-bold text-white/85 hover:text-white transition-colors px-5 py-3 border border-white/25 rounded-xl hover:bg-white/10 text-center"
                 >
-                  See an example plan
+                  See a real estate example plan
                 </Link>
               )}
             </div>
@@ -242,8 +248,9 @@ export default async function ServicePage({ params }: PageProps) {
                 ))}
               </ul>
               <div className="mt-6 pt-5 border-t border-white/10 flex flex-col gap-2 text-sm">
-                <Link href="/industries/real-estate" className="text-teal-300 hover:text-white font-semibold">Marketing for developers →</Link>
-                <Link href="/channel-partners" className="text-teal-300 hover:text-white font-semibold">Marketing for channel partners →</Link>
+                <Link href="/industries/ecommerce" className="text-teal-300 hover:text-white font-semibold">E-commerce & D2C →</Link>
+                <Link href="/industries/local-business" className="text-teal-300 hover:text-white font-semibold">Local businesses & clinics →</Link>
+                <Link href="/industries/real-estate" className="text-teal-300 hover:text-white font-semibold">Real estate →</Link>
               </div>
             </div>
 
@@ -251,7 +258,7 @@ export default async function ServicePage({ params }: PageProps) {
               <span className="border-beam" aria-hidden="true" />
               <h2 className="font-bold text-slate-900 mb-2 text-lg">Start with a free audit</h2>
               <p className="text-sm text-slate-600 leading-relaxed">
-                We review your current page, ads and lead follow-up and tells you what to fix first — free, with no obligation.
+                We review your current site, ads and lead follow-up and tell you what to fix first — free, with no obligation.
               </p>
               <p className="text-sm text-slate-500 mt-3">Month-to-month, 30 days’ notice, no lock-in.</p>
               <Link href="/free-audit" className="group inline-flex items-center gap-1 mt-4 text-sm font-bold text-royal-blue hover:underline">
@@ -271,11 +278,30 @@ export default async function ServicePage({ params }: PageProps) {
         </div>
       </section>
 
+      {/* By industry */}
+      <section className="py-16 bg-white border-t border-slate-100">
+        <div className="max-w-container-max mx-auto px-gutter">
+          <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-3">{service.title} by industry</h2>
+          <p className="text-slate-600 mb-8 max-w-2xl">The same service, set up differently for each kind of business we work with.</p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {service.byIndustry.map((b) => (
+              <div key={b.title} className="bg-slate-50 rounded-2xl border border-slate-200 p-6 flex flex-col">
+                <h3 className="font-bold text-slate-900 text-lg mb-2">{b.title}</h3>
+                <p className="text-sm text-slate-600 leading-relaxed flex-grow">{b.desc}</p>
+                <Link href={b.href} className="group inline-flex items-center gap-1 mt-4 text-sm font-bold text-royal-blue hover:underline">
+                  {b.linkLabel} <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" aria-hidden="true" />
+                </Link>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Related services, playbook and guides */}
       <section className="py-16 bg-slate-50 border-t border-slate-100">
         <div className="max-w-container-max mx-auto px-gutter">
           <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-8 section-reveal">Works best together</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 stagger-reveal">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 stagger-reveal">
             {related.map((s) => (
               <Link key={s.slug} href={`/services/${s.slug}`} className="group spotlight bg-white rounded-2xl border border-slate-200 p-6 hover:shadow-lg hover:-translate-y-1 transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]">
                 <span className="text-xs font-bold uppercase tracking-wider text-slate-500">Service</span>
@@ -308,12 +334,11 @@ export default async function ServicePage({ params }: PageProps) {
         </div>
       </section>
 
-      <LeadSystemCallout />
       <FaqAccordion
         customFaqs={service.faqs}
         title={`${service.title}: common questions`}
         badgeText="FAQ"
-        description="What builders, brokers and channel partners usually ask before starting."
+        description="What e-commerce brands, local businesses and real estate teams usually ask before starting."
       />
 
       <CtaBanner />

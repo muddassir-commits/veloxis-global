@@ -81,8 +81,7 @@ const nextConfig = {
       '/d2c': '/industries/ecommerce',
       '/local-business': '/industries/local-business',
 
-      // Legacy services → the three real estate services
-      '/services/seo': '/services',
+      // Legacy services → current services
       '/services/content-marketing': '/services/high-converting-landing-pages',
       '/services/web-design-development': '/services/high-converting-landing-pages',
       '/services/social-media-marketing': '/services/paid-ads',

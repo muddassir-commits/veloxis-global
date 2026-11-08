@@ -47,7 +47,7 @@ export default function ContactPage() {
               Contact Veloxis Global
             </h1>
             <p className="text-base sm:text-body-md text-on-surface-variant leading-relaxed">
-              Tell us about your project or current campaigns. We’ll review your landing page, ads and lead follow-up and
+              Tell us about your business or current campaigns. We’ll review your website or store, ads and lead follow-up and
               come back with what we would change first — free, with no obligation.{' '}
               <Link href="/free-audit" className="font-semibold text-royal-blue hover:underline">See what the audit covers</Link>.
             </p>
@@ -129,7 +129,7 @@ export default function ContactPage() {
               </div>
               <h2 className="font-bold text-lg">Prefer a video call?</h2>
               <p className="text-sm text-slate-300 leading-relaxed max-w-xs">
-                Pick a 30-minute slot to walk through your project and current lead flow with our team.
+                Pick a 30-minute slot to walk through your business and current lead flow with our team.
               </p>
               <Button id="contact-calendly-btn" href={siteData.booking} target="_blank" rel="noopener" variant="white" className="w-full mt-2">
                 Book a call →

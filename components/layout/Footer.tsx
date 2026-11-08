@@ -19,6 +19,7 @@ const footerColumns = [
     links: [
       { label: 'Meta & Google Ads', href: '/services/paid-ads' },
       { label: 'Websites & Landing Pages', href: '/services/high-converting-landing-pages' },
+      { label: 'SEO & Local SEO', href: '/services/seo' },
       { label: 'WhatsApp & AI Automation', href: '/services/ai-automation' },
       { label: 'All Services', href: '/services' },
     ],

@@ -27,8 +27,7 @@ export const servicesMenu: NavbarMenu = {
   items: [
     { title: 'Meta & Google Ads', href: '/services/paid-ads', icon: 'ads', description: 'Campaigns judged on leads and sales, not clicks' },
     { title: 'Websites & Landing Pages', href: '/services/high-converting-landing-pages', icon: 'web', description: 'Fast pages and Shopify stores that turn visits into enquiries' },
-    // No dedicated SEO page yet (/services/seo redirects to /services): point at the services overview.
-    { title: 'SEO & Local SEO', href: '/services', icon: 'seo', description: 'Search, Google Business Profile and Maps visibility' },
+    { title: 'SEO & Local SEO', href: '/services/seo', icon: 'seo', description: 'Search, Google Business Profile and Maps visibility' },
     { title: 'WhatsApp & AI Automation', href: '/services/ai-automation', icon: 'automation', description: 'Instant replies and follow-ups for every enquiry' },
   ],
   all: { title: 'All services', href: '/services' },
