@@ -1,7 +1,7 @@
 import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
-import { Globe, Megaphone, MessageCircle, LineChart, CheckCircle, ArrowRight, Building2, Users } from 'lucide-react';
+import { Globe, Megaphone, MessageCircle, LineChart, CheckCircle, ArrowRight, Building2, ShoppingBag, Store } from 'lucide-react';
 import { Breadcrumb } from '../../components/ui/Breadcrumb';
 import { Button } from '../../components/ui/Button';
 import { WhatsAppLink } from '../../components/ui/WhatsAppLink';
@@ -13,6 +13,7 @@ import { getWebPageSchema } from '../../lib/schema';
 import { constructMetadata, pageMeta } from '../../lib/seo-config';
 import { auditAreas, auditDeliverables, auditSteps, freeAuditFaqs } from '../../data/free-audit';
 import { ReviewedLine } from '../../components/ui/ReviewedLine';
+import { industries } from '../../data/industries';
 
 export const metadata: Metadata = constructMetadata(pageMeta.freeAudit);
 
@@ -24,7 +25,7 @@ export default function FreeAuditPage() {
     <>
       <SchemaMarkup
         schema={getWebPageSchema({
-          name: 'Free real estate marketing audit',
+          name: 'Free marketing audit',
           description: pageMeta.freeAudit.description,
           path: '/free-audit',
         })}
@@ -50,11 +51,11 @@ export default function FreeAuditPage() {
               Free · No obligation
             </span>
             <h1 className="text-4xl sm:text-5xl lg:text-[56px] font-extrabold tracking-tight leading-[1.1] text-white">
-              Free real estate marketing audit
+              Free marketing audit for your business
             </h1>
             <p className="text-lg sm:text-xl text-slate-300 leading-relaxed max-w-2xl">
-              Send us your project or current campaigns. We personally review your landing page, ads and lead
-              follow-up, and tell you what to fix first — whether or not you work with us.
+              Send us your website, store or current campaigns. We personally review your pages, ads and lead
+              follow-up, and tell you what to fix first, whether or not you work with us.
             </p>
             <ReviewedLine className="text-white/60" />
             <div className="mt-2 flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
@@ -88,10 +89,10 @@ export default function FreeAuditPage() {
           <div className="text-center max-w-2xl mx-auto mb-12 section-reveal">
             <span className="text-xs font-bold text-royal-blue uppercase tracking-widest block mb-3">What we review</span>
             <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
-              The full path from ad to site visit
+              The full path from ad to enquiry or order
             </h2>
             <p className="text-slate-500 mt-4 leading-relaxed">
-              Most lost leads aren’t an ads problem or a page problem alone. We look at every step a buyer goes through.
+              Most lost leads aren’t an ads problem or a page problem alone. We look at every step a customer goes through.
             </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 stagger-reveal">
@@ -158,7 +159,7 @@ export default function FreeAuditPage() {
               <span className="border-beam border-beam-light" aria-hidden="true" />
               <h3 className="text-lg font-bold mb-2">Ready when you are</h3>
               <p className="text-sm text-slate-300 leading-relaxed mb-5">
-                Tell us about your project and current lead flow. We reply personally.
+                Tell us about your business and current lead flow. We reply personally.
               </p>
               <Button id="free-audit-steps-btn" href="/contact" variant="white" className="w-full sm:w-auto">
                 Request your free audit →
@@ -172,23 +173,20 @@ export default function FreeAuditPage() {
       <section className="py-16 bg-white">
         <div className="max-w-container-max mx-auto px-gutter">
           <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-8 text-center section-reveal">Who the audit is for</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto stagger-reveal">
-            <Link href="/industries/real-estate" className="group spotlight bg-slate-50 rounded-2xl border border-slate-200 p-7 transition-all duration-500 hover:bg-white hover:shadow-lg hover:-translate-y-1">
-              <Building2 className="w-7 h-7 text-royal-blue mb-4 transition-transform duration-500 group-hover:scale-110 group-hover:-rotate-6" aria-hidden="true" />
-              <h3 className="font-bold text-lg text-slate-900 group-hover:text-royal-blue transition-colors">Developers and builders</h3>
-              <p className="text-sm text-slate-600 leading-relaxed mt-2">Launching a project or phase, or clearing unsold inventory, and not getting enough site visits from the budget.</p>
-              <span className="inline-flex items-center gap-1 mt-4 text-sm font-bold text-royal-blue">
-                Marketing for developers <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" aria-hidden="true" />
-              </span>
-            </Link>
-            <Link href="/channel-partners" className="group spotlight bg-slate-50 rounded-2xl border border-slate-200 p-7 transition-all duration-500 hover:bg-white hover:shadow-lg hover:-translate-y-1">
-              <Users className="w-7 h-7 text-royal-blue mb-4 transition-transform duration-500 group-hover:scale-110 group-hover:-rotate-6" aria-hidden="true" />
-              <h3 className="font-bold text-lg text-slate-900 group-hover:text-royal-blue transition-colors">Channel partners and brokers</h3>
-              <p className="text-sm text-slate-600 leading-relaxed mt-2">Relying on shared portal leads and wanting exclusive enquiries for the projects you’re mandated on.</p>
-              <span className="inline-flex items-center gap-1 mt-4 text-sm font-bold text-royal-blue">
-                Marketing for channel partners <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" aria-hidden="true" />
-              </span>
-            </Link>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto stagger-reveal">
+            {industries.map((ind, i) => {
+              const Icon = [ShoppingBag, Store, Building2][i] ?? Building2;
+              return (
+                <Link key={ind.href} href={ind.href} className="group spotlight bg-slate-50 rounded-2xl border border-slate-200 p-7 transition-all duration-500 hover:bg-white hover:shadow-lg hover:-translate-y-1">
+                  <Icon className="w-7 h-7 text-royal-blue mb-4 transition-transform duration-500 group-hover:scale-110 group-hover:-rotate-6" aria-hidden="true" />
+                  <h3 className="font-bold text-lg text-slate-900 group-hover:text-royal-blue transition-colors">{ind.title}</h3>
+                  <p className="text-sm text-slate-600 leading-relaxed mt-2">{ind.desc}</p>
+                  <span className="inline-flex items-center gap-1 mt-4 text-sm font-bold text-royal-blue">
+                    {ind.cta} <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" aria-hidden="true" />
+                  </span>
+                </Link>
+              );
+            })}
           </div>
         </div>
       </section>

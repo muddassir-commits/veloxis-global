@@ -68,10 +68,28 @@ export function constructMetadata({
 // docs/SEO.md — keep one primary intent per page.
 export const pageMeta = {
   home: {
-    title: 'Real Estate Marketing Agency | Veloxis Global',
+    title: 'Performance Marketing Agency in India | Veloxis Global',
     description:
-      'Real estate digital marketing agency: project landing pages, Meta and Google ads for property leads, and AI WhatsApp automation for builders, brokers and CPs.',
+      'Performance marketing for e-commerce brands, local businesses and real estate: Meta & Google ads, websites, SEO and WhatsApp automation. Free audit.',
     path: '/',
+  },
+  industries: {
+    title: 'Industries: E-commerce, Local & Real Estate | Veloxis Global',
+    description:
+      'Veloxis Global works with e-commerce and D2C brands, local businesses and clinics, and real estate developers and brokers. See how we help each one grow.',
+    path: '/industries',
+  },
+  ecommerce: {
+    title: 'E-commerce Marketing Agency for D2C Brands | Veloxis Global',
+    description:
+      'Meta and Google ads, Shopify store pages that convert, and WhatsApp and email follow-ups for e-commerce and D2C brands. Judged on orders. Free audit.',
+    path: '/industries/ecommerce',
+  },
+  localBusiness: {
+    title: 'Digital Marketing for Local Businesses & Clinics | Veloxis',
+    description:
+      'Websites, local SEO, Google Business Profile and local ads for clinics, dentists, salons and home services in India, the UK and the US. Free website audit.',
+    path: '/industries/local-business',
   },
   services: {
     title: 'Real Estate Marketing Services | Veloxis Global',
@@ -80,9 +98,9 @@ export const pageMeta = {
     path: '/services',
   },
   developers: {
-    title: 'Marketing for Real Estate Developers & Builders | Veloxis',
+    title: 'Real Estate Marketing Agency for Builders | Veloxis Global',
     description:
-      'Launch and inventory marketing for developers: RERA-compliant project pages, Meta and Google campaigns, and WhatsApp follow-up that books site visits.',
+      'Real estate marketing for builders, developers and brokers: RERA-compliant project pages, Meta and Google ads and WhatsApp follow-up that books visits.',
     path: '/industries/real-estate',
   },
   channelPartners: {
@@ -122,9 +140,9 @@ export const pageMeta = {
     path: '/playbooks',
   },
   freeAudit: {
-    title: 'Free Real Estate Marketing Audit | Veloxis Global',
+    title: 'Free Marketing Audit for Your Business | Veloxis Global',
     description:
-      'Free audit of your real estate landing page, Meta and Google ads and WhatsApp lead follow-up. A personal review with the fixes to make first. No obligation.',
+      'Free audit of your website or store, Meta and Google ads and lead follow-up, for e-commerce, local businesses and real estate. Personal review, no obligation.',
     path: '/free-audit',
   },
   leadSystem: {
@@ -140,9 +158,9 @@ export const pageMeta = {
     path: '/about',
   },
   contact: {
-    title: 'Contact Veloxis Global | Real Estate Marketing',
+    title: 'Contact Veloxis Global | Performance Marketing Agency',
     description:
-      'Talk to Veloxis Global about landing pages, property ads or WhatsApp automation. WhatsApp +91 91940 20727, or send the form for a free marketing audit.',
+      'Talk to Veloxis Global about ads, websites, SEO or WhatsApp automation. WhatsApp +91 91940 20727, or send the form for a free marketing audit.',
     path: '/contact',
   },
   guides: {

@@ -5,7 +5,7 @@ export default function manifest(): MetadataRoute.Manifest {
   return {
     name: 'Veloxis Global',
     short_name: 'Veloxis',
-    description: 'Real estate marketing agency in India: project landing pages, Meta and Google ads, WhatsApp automation.',
+    description: 'Performance marketing agency in India for e-commerce, local businesses and real estate: Meta and Google ads, websites, SEO, WhatsApp automation.',
     start_url: '/',
     display: 'browser',
     background_color: '#ffffff',

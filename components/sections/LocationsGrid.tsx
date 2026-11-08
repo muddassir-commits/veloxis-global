@@ -9,25 +9,28 @@ import { MapPin } from 'lucide-react';
 import { SectionLabel } from '../ui/SectionLabel';
 import { ImageFrame } from '../ui/ImageFrame';
 
-const areas: { city: string; desc: string; href?: string }[] = [
+const areas: { city: string; desc: string; href?: string; linkText?: string }[] = [
   {
     city: 'Noida & Greater Noida',
     href: '/digital-marketing-agency-noida',
-    desc: 'New launches along the Noida Expressway, Noida Extension (Greater Noida West) and the Yamuna Expressway corridor towards Jewar.',
+    linkText: 'Digital marketing in Noida',
+    desc: 'Where we are based. Online brands, clinics, local services and property businesses across Noida, Greater Noida and the Expressway.',
   },
   {
     city: 'Delhi NCR',
-    desc: 'Developers and channel partners across Delhi, Gurugram and Ghaziabad, where buyers compare several micro-markets before shortlisting.',
+    desc: 'Businesses across Delhi, Gurugram and Ghaziabad that want more enquiries from Google, Meta and WhatsApp.',
   },
   {
     city: 'Lucknow',
     href: '/digital-marketing-agency-lucknow',
-    desc: 'Residential projects and plotted developments on growth corridors such as Sultanpur Road and Shaheed Path.',
+    linkText: 'Digital marketing in Lucknow',
+    desc: 'Local businesses, growing brands and real estate projects in Lucknow, run remotely with calls whenever you need them.',
   },
   {
     city: 'Kanpur',
     href: '/digital-marketing-agency-kanpur',
-    desc: 'Gated plotted communities and new residential projects for local developers and brokers.',
+    linkText: 'Digital marketing in Kanpur',
+    desc: 'Shops, clinics, manufacturers selling online and property developers in Kanpur.',
   },
 ];
 
@@ -37,11 +40,11 @@ export const LocationsGrid: React.FC = () => (
       <div className="text-center max-w-[700px] mx-auto mb-12 section-reveal">
         <SectionLabel className="text-center">WHERE WE WORK</SectionLabel>
         <h2 className="text-headline-lg-mobile sm:text-headline-lg font-bold text-slate-900 tracking-tight leading-tight mb-4">
-          Real estate marketing across UP and Delhi NCR
+          Cities we serve
         </h2>
         <p className="text-body-md text-on-surface-variant leading-relaxed">
-          We work with developers, brokers and channel partners in these markets, and run campaigns
-          for projects elsewhere in India.
+          Based in Noida, working with businesses across Delhi NCR and Uttar Pradesh. Most work is remote, so we
+          also run accounts for brands elsewhere in India, the UK and the US.
         </p>
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] gap-8 lg:gap-10 items-center">
@@ -62,7 +65,7 @@ export const LocationsGrid: React.FC = () => (
               <p className="text-sm text-slate-600 leading-relaxed">{a.desc}</p>
               {a.href && (
                 <Link href={a.href} className="inline-block mt-3 text-sm font-bold text-royal-blue hover:underline">
-                  Real estate marketing in {a.city} →
+                  {a.linkText ?? `Marketing in ${a.city}`} →
                 </Link>
               )}
             </li>
@@ -70,8 +73,8 @@ export const LocationsGrid: React.FC = () => (
         </ul>
       </div>
       <p className="text-center mt-10 text-sm text-slate-500">
-        Working on a project in one of these markets?{' '}
-        <Link href="/contact" className="font-bold text-royal-blue hover:underline">Ask for a free audit</Link>.
+        In one of these cities, or somewhere else?{' '}
+        <Link href="/free-audit" className="font-bold text-royal-blue hover:underline">Ask for a free audit</Link>.
       </p>
     </div>
   </section>

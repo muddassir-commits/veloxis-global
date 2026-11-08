@@ -1,78 +1,91 @@
 /**
- * HeroSection — Server Component.
- * Full-width real estate hero with background image, overlay, and clean CTA.
- * No client-side dependencies for maximum LCP performance.
+ * HeroSection — Server Component (homepage).
+ * Generic performance marketing hero for the three niches (e-commerce, local businesses, real estate).
+ * No client-side dependencies for maximum LCP performance; the WhatsApp button is a small client island.
  */
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Button } from '../ui/Button';
-import { ArrowRight, CheckCircle } from 'lucide-react';
+import { WhatsAppLink } from '../ui/WhatsAppLink';
+import { WhatsAppIcon } from '../ui/WhatsAppIcon';
+import { CheckCircle } from 'lucide-react';
+import { industries } from '../../data/industries';
 
 export const HeroSection: React.FC = () => {
   return (
-    <section className="relative min-h-[90vh] flex items-center overflow-hidden">
-      {/* Background Image */}
+    <section className="relative min-h-[88vh] flex items-center overflow-hidden">
       <Image
-        src="/images/hero-real-estate.jpg"
+        src="/images/people/blog/geo-analytics-dashboard-laptop.jpg"
         alt=""
         fill
         priority
         fetchPriority="high"
         sizes="100vw"
         className="object-cover object-center hero-kenburns"
-        quality={85}
+        quality={80}
       />
-
-      {/* Dark overlay gradient */}
       <div
-        className="absolute inset-0 bg-gradient-to-r from-[rgba(15,23,42,0.9)] via-[rgba(15,23,42,0.75)] to-[rgba(15,23,42,0.4)]"
+        className="absolute inset-0 bg-gradient-to-r from-[rgba(11,15,25,0.94)] via-[rgba(15,23,42,0.85)] to-[rgba(15,23,42,0.55)]"
         aria-hidden="true"
       />
-
-      {/* Slow-drifting brand glows behind the copy (decorative) */}
       <div className="absolute inset-0 overflow-hidden" aria-hidden="true">
         <div className="aurora-blob -left-32 top-1/4 h-[420px] w-[420px] bg-[rgba(37,99,235,0.35)]" />
         <div className="aurora-blob aurora-blob-delay left-1/3 -bottom-40 h-[360px] w-[360px] bg-[rgba(52,211,153,0.18)]" />
       </div>
 
-      {/* Content */}
-      <div className="max-w-[1280px] mx-auto px-4 md:px-16 w-full relative z-10 py-20">
-        <div className="max-w-[680px] flex flex-col items-start text-left">
+      <div className="max-w-container-max mx-auto px-gutter w-full relative z-10 pt-28 pb-16 lg:pt-32 lg:pb-20">
+        <div className="max-w-[720px] flex flex-col items-start text-left">
+          <span className="inline-flex items-center gap-2 bg-white/10 border border-white/20 px-3 py-1 rounded-full text-xs font-bold text-blue-200 uppercase tracking-wider mb-6 backdrop-blur-sm">
+            Performance marketing agency
+          </span>
 
-          {/* H1 Headline */}
-          <h1 className="text-[36px] md:text-[56px] lg:text-[64px] font-extrabold tracking-[-0.02em] leading-[1.1] text-white mb-6 font-sans">
-            The real estate marketing agency that fills your{' '}
-            <span className="text-emerald-400 hero-underline">site visits</span>
+          <h1 className="text-[34px] sm:text-[48px] lg:text-[60px] font-extrabold tracking-[-0.02em] leading-[1.08] text-white mb-6 font-sans">
+            Performance marketing that brings{' '}
+            <span className="text-emerald-400 hero-underline">leads and sales</span>
           </h1>
 
-          {/* Body Paragraph */}
-          <p className="text-[16px] md:text-[18px] font-normal text-white/75 leading-relaxed max-w-[540px] font-sans mb-8">
-            We build <Link href="/services/high-converting-landing-pages" className="text-white underline decoration-white/40 hover:decoration-emerald-400 hover:text-emerald-400 transition-colors">project landing pages</Link>, run <Link href="/services/paid-ads" className="text-white underline decoration-white/40 hover:decoration-emerald-400 hover:text-emerald-400 transition-colors">Meta &amp; Google ads</Link>, and set up <Link href="/services/ai-automation" className="text-white underline decoration-white/40 hover:decoration-emerald-400 hover:text-emerald-400 transition-colors">AI WhatsApp automation</Link> that replies to every enquiry in seconds — for developers, brokers and channel partners in Noida, Delhi NCR, Lucknow and Kanpur. Measured on site visits, not clicks.
+          <p className="text-[16px] md:text-[18px] text-white/80 leading-relaxed max-w-[600px] mb-6">
+            Veloxis Global runs <Link href="/services/paid-ads" className="text-white underline decoration-white/40 hover:decoration-emerald-400 hover:text-emerald-400 transition-colors">Meta &amp; Google ads</Link>, builds{' '}
+            <Link href="/services/high-converting-landing-pages" className="text-white underline decoration-white/40 hover:decoration-emerald-400 hover:text-emerald-400 transition-colors">websites and landing pages</Link>, improves SEO and sets up{' '}
+            <Link href="/services/ai-automation" className="text-white underline decoration-white/40 hover:decoration-emerald-400 hover:text-emerald-400 transition-colors">WhatsApp automation</Link> for
+            e-commerce brands, local businesses and real estate. Judged on enquiries, orders and bookings, not clicks.
           </p>
 
-          {/* CTA Buttons */}
-          <div className="hero-fade-in flex flex-wrap items-center gap-4 mb-4" style={{ animationDelay: '0.2s' }}>
+          {/* The three niches, as quick links */}
+          <ul className="flex flex-wrap gap-2 mb-8" aria-label="Industries we work with">
+            {industries.map((ind) => (
+              <li key={ind.key}>
+                <Link
+                  href={ind.href}
+                  className="inline-flex items-center min-h-[36px] px-3.5 rounded-full text-[13px] font-semibold text-white/90 bg-white/10 border border-white/15 hover:bg-white/20 hover:border-white/30 transition-colors"
+                >
+                  {ind.title}
+                </Link>
+              </li>
+            ))}
+          </ul>
+
+          <div className="hero-fade-in flex flex-col sm:flex-row sm:flex-wrap items-stretch sm:items-center gap-3 sm:gap-4 w-full sm:w-auto mb-5" style={{ animationDelay: '0.2s' }}>
             <Button
               id="hero-free-audit-btn"
               variant="primary"
               size="lg"
-              href="/contact"
+              href="/free-audit"
               className="text-center shadow-lg shadow-blue-600/25"
             >
-              Get a free marketing audit →
+              Get a free audit →
             </Button>
-            <Link
-              href="/real-estate-lead-system"
-              data-cta=""
-              className="group inline-flex items-center gap-1.5 text-[15px] font-bold text-white/80 hover:text-white transition-all px-4 py-3 border border-white/20 rounded-xl hover:bg-white/10 hover:border-white/40 backdrop-blur-sm"
+            <WhatsAppLink
+              id="hero-whatsapp-btn"
+              placement="hero"
+              className="inline-flex items-center justify-center gap-2 text-[15px] font-bold text-white px-5 py-3.5 border border-white/25 rounded-xl hover:bg-white/10 hover:border-white/40 transition-all backdrop-blur-sm"
             >
-              How the Lead System works
-              <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" aria-hidden="true" />
-            </Link>
+              <WhatsAppIcon className="w-5 h-5 shrink-0" />
+              Chat on WhatsApp
+            </WhatsAppLink>
           </div>
 
-          {/* Self-serve option: the free website audit tool */}
           <p className="hero-fade-in text-sm text-white/70 mb-10" style={{ animationDelay: '0.28s' }}>
             Prefer to check it yourself?{' '}
             <Link
@@ -84,20 +97,13 @@ export const HeroSection: React.FC = () => {
             </Link>
           </p>
 
-          {/* Trust Indicators */}
-          <div className="hero-fade-in flex flex-wrap items-center gap-6 text-sm text-white/60" style={{ animationDelay: '0.35s' }}>
-            <div className="flex items-center gap-1.5">
-              <CheckCircle className="w-4 h-4 text-emerald-400" aria-hidden="true" />
-              <span>Real estate specialists</span>
-            </div>
-            <div className="flex items-center gap-1.5">
-              <CheckCircle className="w-4 h-4 text-emerald-400" aria-hidden="true" />
-              <span>Ad spend stays in your accounts</span>
-            </div>
-            <div className="flex items-center gap-1.5">
-              <CheckCircle className="w-4 h-4 text-emerald-400" aria-hidden="true" />
-              <span>Month-to-month, no lock-in</span>
-            </div>
+          <div className="hero-fade-in flex flex-wrap items-center gap-x-6 gap-y-3 text-sm text-white/70" style={{ animationDelay: '0.35s' }}>
+            {['Google certified team', 'Ad spend stays in your accounts', 'Month-to-month, no lock-in'].map((t) => (
+              <div key={t} className="flex items-center gap-1.5">
+                <CheckCircle className="w-4 h-4 text-emerald-400 shrink-0" aria-hidden="true" />
+                <span>{t}</span>
+              </div>
+            ))}
           </div>
         </div>
       </div>

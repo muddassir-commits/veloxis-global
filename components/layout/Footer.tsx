@@ -17,50 +17,53 @@ const footerColumns = [
     id: 'services',
     title: 'Services',
     links: [
-      { label: 'Real Estate Lead System', href: '/real-estate-lead-system' },
-      { label: 'Landing Pages & Microsites', href: '/services/high-converting-landing-pages' },
       { label: 'Meta & Google Ads', href: '/services/paid-ads' },
+      { label: 'Websites & Landing Pages', href: '/services/high-converting-landing-pages' },
       { label: 'WhatsApp & AI Automation', href: '/services/ai-automation' },
       { label: 'All Services', href: '/services' },
     ],
   },
   {
-    id: 'audiences',
-    title: 'Who We Help',
+    id: 'industries',
+    title: 'Industries',
     links: [
-      { label: 'Developers & Builders', href: '/industries/real-estate' },
-      { label: 'Channel Partners & Brokers', href: '/channel-partners' },
-      { label: 'NRI Buyer Campaigns', href: '/industries/real-estate/nri-buyers' },
-      { label: 'D2C Brands', href: '/d2c' },
-      { label: 'Local Businesses', href: '/local-business' },
-      { label: 'Real Estate Marketing in Noida', href: '/digital-marketing-agency-noida' },
-      { label: 'Real Estate Marketing in Lucknow', href: '/digital-marketing-agency-lucknow' },
-      { label: 'Real Estate Marketing in Kanpur', href: '/digital-marketing-agency-kanpur' },
-      { label: 'Example Playbooks', href: '/playbooks' },
-    ],
-  },
-  {
-    id: 'resources',
-    title: 'Blog & Articles',
-    links: [
-      { label: 'All Blog Posts', href: '/blog' },
-      { label: 'Marketing Guides by Topic', href: '/guides' },
-      { label: 'Free Website Audit Tool', href: '/tools/website-audit' },
-      { label: 'How to Get Real Estate Leads', href: '/blog/how-to-generate-real-estate-leads' },
-      { label: 'Meta Ads for Real Estate', href: '/blog/meta-ads-for-real-estate-india' },
-      { label: 'WhatsApp Lead Follow-Up', href: '/blog/whatsapp-automation-for-real-estate-leads' },
-      { label: 'RERA Number Check', href: '/blog/rera-number-check' },
+      { label: 'E-commerce & D2C', href: '/industries/ecommerce' },
+      { label: 'Local Businesses', href: '/industries/local-business' },
+      { label: 'Real Estate', href: '/industries/real-estate' },
+      { label: 'All Industries', href: '/industries' },
     ],
   },
   {
     id: 'company',
     title: 'Company',
     links: [
-      { label: 'About Veloxis Global', href: '/about' },
-      { label: 'Free Marketing Audit', href: '/free-audit' },
-      { label: 'Contact Us', href: '/contact' },
+      { label: 'About', href: '/about' },
+      { label: 'Contact', href: '/contact' },
+      { label: 'Free Audit', href: '/free-audit' },
+      { label: 'Website Audit Tool', href: '/tools/website-audit' },
+      { label: 'Blog', href: '/blog' },
+      { label: 'Guides', href: '/guides' },
     ],
   },
+  {
+    id: 'legal',
+    title: 'Legal',
+    links: [
+      { label: 'Privacy Policy', href: '/privacy-policy' },
+      { label: 'Terms of Service', href: '/terms' },
+    ],
+  },
+];
+
+// One compact line so the real estate sub-pages and city pages stay linked from every page.
+const moreLinks = [
+  { label: 'Real Estate Lead System', href: '/real-estate-lead-system' },
+  { label: 'Channel Partners', href: '/channel-partners' },
+  { label: 'NRI Buyer Campaigns', href: '/industries/real-estate/nri-buyers' },
+  { label: 'Playbooks', href: '/playbooks' },
+  { label: 'Noida', href: '/digital-marketing-agency-noida' },
+  { label: 'Lucknow', href: '/digital-marketing-agency-lucknow' },
+  { label: 'Kanpur', href: '/digital-marketing-agency-kanpur' },
 ];
 
 export const Footer: React.FC = () => {
@@ -127,11 +130,11 @@ export const Footer: React.FC = () => {
               />
             </Link>
             <p className="text-[15px] sm:text-[16px] text-slate-400 leading-relaxed max-w-lg">
-              A digital marketing agency for real estate, D2C brands and local businesses. We build landing pages and websites, run Meta and Google ads, and set up WhatsApp follow-ups, measured on enquiries and orders.
+              A performance marketing agency for e-commerce brands, local businesses and real estate. Meta and Google ads, websites, SEO and WhatsApp automation, measured on leads and sales.
             </p>
             <div className="flex flex-wrap gap-2">
               <span className="text-xs font-bold tracking-wider uppercase bg-white/5 border border-white/10 px-2.5 py-1 rounded-full text-slate-400">
-                Real estate · D2C · Local
+                E-commerce · Local · Real estate
               </span>
               <span className="text-xs font-bold tracking-wider uppercase bg-white/5 border border-white/10 px-2.5 py-1 rounded-full text-slate-400">
                 Month-to-month
@@ -145,14 +148,14 @@ export const Footer: React.FC = () => {
               <div className="absolute top-0 right-0 w-24 h-24 bg-royal-blue/10 rounded-full blur-2xl"></div>
               <div className="flex flex-col gap-2 max-w-md">
                 <span className="text-xs font-black tracking-widest text-blue-300 uppercase">FREE MARKETING AUDIT</span>
-                <p className="text-lg sm:text-xl font-extrabold text-white">Want more site visits from your ad budget?</p>
+                <p className="text-lg sm:text-xl font-extrabold text-white">Want more leads and sales from your ad budget?</p>
                 <p className="text-xs sm:text-sm text-slate-400 leading-relaxed">
-                  Book a free audit call with our team. We&apos;ll review your pages, ads and lead follow-up and show you what to fix first.
+                  Get a free audit from our team. We&apos;ll review your website, ads and lead follow-up and show you what to fix first.
                 </p>
               </div>
               <div className="shrink-0 w-full sm:w-auto text-center">
                 <Button
-                  href="/contact"
+                  href="/free-audit"
                   variant="primary"
                   className="!rounded-full hover:shadow-lg w-full sm:w-auto text-xs py-3.5 px-6 shrink-0"
                 >
@@ -197,7 +200,7 @@ export const Footer: React.FC = () => {
                   </li>
                 ))}
               </ul>
-              <p className="text-[12px] text-slate-400 mt-3">Service-area business, no walk-in office.</p>
+              <p className="text-[12px] text-slate-400 mt-3">Based in Noida. Remote work across India, the UK and the US. No walk-in office.</p>
             </div>
           </div>
 
@@ -237,15 +240,30 @@ export const Footer: React.FC = () => {
 
         </div>
 
+        {/* Real estate pages and city pages: one compact line */}
+        <nav aria-label="More pages" className="py-6 border-b border-white/5 text-left">
+          <p className="text-[13px] text-slate-400 leading-loose">
+            <span className="text-[12px] tracking-[0.08em] uppercase text-slate-300 font-black mr-3">More</span>
+            {moreLinks.map((l, i) => (
+              <React.Fragment key={l.href}>
+                {i > 0 && <span className="mx-2 text-slate-600" aria-hidden="true">·</span>}
+                <Link href={l.href} className="inline-block py-1 hover:text-white transition-colors">
+                  {l.label}
+                </Link>
+              </React.Fragment>
+            ))}
+          </p>
+        </nav>
+
         {/* Tier 3: Newsletter Signup Horizontal Panel */}
         <div className="py-12 border-b border-white/5">
           <div className="bg-white/5 border border-white/10 rounded-3xl p-6 sm:p-8 flex flex-col lg:flex-row items-center justify-between gap-6 backdrop-blur-md">
 
             {/* Newsletter text details */}
             <div className="text-left flex flex-col gap-1 max-w-xl">
-              <p className="text-base sm:text-lg font-extrabold text-white">Real estate marketing tips, by email</p>
+              <p className="text-base sm:text-lg font-extrabold text-white">Marketing tips, by email</p>
               <p className="text-xs sm:text-sm text-slate-400 leading-normal">
-                Get property lead gen strategies, ad campaign blueprints, and conversion optimization tips for NCR developers.
+                Practical notes on ads, websites, SEO and WhatsApp follow-up for online brands, local businesses and real estate.
               </p>
             </div>
 
@@ -322,14 +340,8 @@ export const Footer: React.FC = () => {
             </div>
           </div>
 
-          {/* Privacy & Sitemap links */}
+          {/* Cookie settings (Privacy and Terms are in the Legal column) */}
           <div className="flex flex-wrap items-center justify-center gap-6">
-            <Link href="/privacy-policy" className="inline-block py-2 -my-2 hover:text-white transition-colors duration-300">
-              Privacy Policy
-            </Link>
-            <Link href="/terms" className="inline-block py-2 -my-2 hover:text-white transition-colors duration-300">
-              Terms of Service
-            </Link>
             <button type="button" onClick={openCookieSettings} className="inline-block py-2 -my-2 hover:text-white transition-colors duration-300">
               Cookie settings
             </button>

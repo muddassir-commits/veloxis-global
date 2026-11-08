@@ -4,33 +4,45 @@ import React, { useState, useEffect, useRef, useSyncExternalStore } from 'react'
 import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
-import { Menu, X, ChevronDown, Zap, Target, Bot, ArrowRight, ShieldCheck } from 'lucide-react';
+import {
+  Menu,
+  X,
+  ChevronDown,
+  Target,
+  LayoutTemplate,
+  Search,
+  Bot,
+  ShoppingBag,
+  Store,
+  Building2,
+  ArrowRight,
+  ShieldCheck,
+} from 'lucide-react';
 import { Button } from '../ui/Button';
-import { servicesGroups, primaryLinks, type NavbarLink } from '../../data/navbar-data';
+import { navMenus, primaryLinks, freeAuditLink, type NavIcon, type NavbarMenu } from '../../data/navbar-data';
 import { WhatsAppIcon } from '../ui/WhatsAppIcon';
 import { WhatsAppLink } from '../ui/WhatsAppLink';
 import { siteData } from '../../data/site';
 
-const serviceIconMap: Record<string, React.ComponentType<{ className?: string }>> = {
-  '/services/high-converting-landing-pages': Zap,
-  '/services/paid-ads': Target,
-  '/services/ai-automation': Bot,
-};
-
-const serviceAccentMap: Record<string, { bg: string; text: string; ring: string }> = {
-  '/services/high-converting-landing-pages': { bg: 'bg-teal-accent/10', text: 'text-teal-accent', ring: 'group-hover:ring-teal-accent/20' },
-  '/services/paid-ads': { bg: 'bg-indigo-accent/10', text: 'text-indigo-accent', ring: 'group-hover:ring-indigo-accent/20' },
-  '/services/ai-automation': { bg: 'bg-sunset-orange/10', text: 'text-sunset-orange', ring: 'group-hover:ring-sunset-orange/20' },
+const icons: Record<NavIcon, React.ComponentType<{ className?: string }>> = {
+  ads: Target,
+  web: LayoutTemplate,
+  seo: Search,
+  automation: Bot,
+  ecommerce: ShoppingBag,
+  local: Store,
+  realestate: Building2,
 };
 
 /**
- * Navbar — 'use client' for scroll, pathname, and menu state.
- * Dropdowns use CSS opacity/transform transitions triggered on hover and click.
- * Mobile drawer uses CSS translateX transition for smooth slide-in.
+ * Navbar — 'use client' for scroll, pathname and menu state.
+ * Desktop: Services and Industries dropdowns (hover on mouse devices, tap on touch), Blog, About, Free Audit.
+ * Mobile: a drawer with the same two menus as accordions, then Blog, About, Contact.
  */
 export const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [servicesOpen, setServicesOpen] = useState(false);
+  const [openMenu, setOpenMenu] = useState<string | null>(null);
+  const [mobileMenu, setMobileMenu] = useState<string | null>(null);
   const [scrolled, setScrolled] = useState(false);
   // Mouse (hover-capable) vs touch device, kept in sync with the media query. False on the server.
   const hasHover = useSyncExternalStore(
@@ -43,85 +55,145 @@ export const Navbar: React.FC = () => {
     () => false,
   );
 
-  // Mobile accordion states
-  const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
-
-
-  // Track expanded mobile service groups
-  const [mobileActiveServiceGroup, setMobileActiveServiceGroup] = useState<number | null>(null);
-
   const pathname = usePathname();
-  const drawerRef = useRef<HTMLDivElement>(null);
-
-  // Refs for click outside detection
-  const servicesRef = useRef<HTMLDivElement>(null);
-
-  // Timeout refs to handle diagonal hover (grace period)
-  const servicesTimeoutRef = useRef<NodeJS.Timeout | null>(null);
-
-  // Helper to clear all timeouts
-  const clearAllHoverTimeouts = () => {
-    if (servicesTimeoutRef.current) clearTimeout(servicesTimeoutRef.current);
+  const navRef = useRef<HTMLElement>(null);
+  const hoverTimeout = useRef<NodeJS.Timeout | null>(null);
+  const clearHover = () => {
+    if (hoverTimeout.current) clearTimeout(hoverTimeout.current);
   };
 
-  // Scroll handler for box shadow on scroll
   useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 10);
-    };
+    const handleScroll = () => setScrolled(window.scrollY > 10);
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Close all menus/drawers on page change (state adjusted during render, as React recommends).
+  // Close all menus on page change (state adjusted during render, as React recommends).
   const [menuPath, setMenuPath] = useState(pathname);
   if (menuPath !== pathname) {
     setMenuPath(pathname);
     setIsOpen(false);
-    setServicesOpen(false);
-    setMobileServicesOpen(false);
-    setMobileActiveServiceGroup(null);
+    setOpenMenu(null);
+    setMobileMenu(null);
   }
 
-  // Prevent scroll when mobile menu is open
+  // No page scroll behind the open drawer; Escape closes menus.
   useEffect(() => {
     document.body.style.overflow = isOpen ? 'hidden' : 'unset';
-    return () => { document.body.style.overflow = 'unset'; };
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
   }, [isOpen]);
 
-  // Clean up timeouts on unmount
   useEffect(() => {
-    return () => clearAllHoverTimeouts();
-  }, []);
-
-  // Click outside to close desktop dropdowns
-  useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
-      if (servicesRef.current && !servicesRef.current.contains(event.target as Node)) {
-        setServicesOpen(false);
-        clearAllHoverTimeouts();
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        setIsOpen(false);
+        setOpenMenu(null);
       }
     };
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);
+    const onClick = (e: MouseEvent) => {
+      if (navRef.current && !navRef.current.contains(e.target as Node)) setOpenMenu(null);
+    };
+    document.addEventListener('keydown', onKey);
+    document.addEventListener('mousedown', onClick);
+    return () => {
+      document.removeEventListener('keydown', onKey);
+      document.removeEventListener('mousedown', onClick);
+      clearHover();
+    };
   }, []);
 
   const isActive = (href: string) => {
     if (!pathname) return false;
-    const normPath = pathname.replace(/\/$/, '') || '/';
-    const normHref = href.replace(/\/$/, '') || '/';
-    if (normHref === '/') return normPath === '/';
-    return normPath === normHref || normPath.startsWith(normHref + '/');
+    const p = pathname.replace(/\/$/, '') || '/';
+    const h = href.replace(/\/$/, '') || '/';
+    if (h === '/') return p === '/';
+    return p === h || p.startsWith(h + '/');
   };
-  // Literal class names here (not in data/), so Tailwind sees and generates them.
-  const desktopShow: Record<NavbarLink['desktop'], string> = {
-    always: 'inline-block',
-    xl: 'hidden xl:inline-block',
-    '2xl': 'hidden 2xl:inline-block',
-    'mobile-only': 'hidden',
+
+  const pill = scrolled ? 'px-2.5 py-1 text-[13px]' : 'px-3.5 py-1.5 text-[14px]';
+  const pillState = (active: boolean) =>
+    active ? 'bg-royal-blue text-white shadow-sm shadow-royal-blue/15' : 'text-slate-700 hover:bg-slate-100/80 hover:text-royal-blue';
+
+  const renderDesktopMenu = (menu: NavbarMenu) => {
+    const open = openMenu === menu.title;
+    const id = `${menu.title.toLowerCase()}-dropdown`;
+    return (
+      <div
+        key={menu.title}
+        className="relative h-full py-4 flex items-center"
+        onMouseEnter={() => {
+          if (hasHover) {
+            clearHover();
+            setOpenMenu(menu.title);
+          }
+        }}
+        onMouseLeave={() => {
+          if (hasHover) hoverTimeout.current = setTimeout(() => setOpenMenu(null), 250);
+        }}
+      >
+        <button
+          type="button"
+          onClick={() => {
+            clearHover();
+            setOpenMenu(open && !hasHover ? null : menu.title);
+          }}
+          aria-expanded={open}
+          aria-controls={id}
+          aria-haspopup="true"
+          className={`flex items-center gap-1 font-sans font-semibold transition-all duration-300 rounded-full whitespace-nowrap ${pill} ${pillState(isActive(menu.activePrefix) || open)}`}
+        >
+          {menu.title}
+          <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${open ? 'rotate-180' : ''}`} aria-hidden="true" />
+        </button>
+
+        <div
+          id={id}
+          role="region"
+          aria-label={`${menu.title} menu`}
+          className={`absolute top-full left-1/2 -translate-x-1/2 w-[560px] bg-white rounded-3xl shadow-2xl border border-slate-100/80 z-[60] mt-2.5 overflow-hidden transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] origin-top before:absolute before:-top-2.5 before:left-0 before:w-full before:h-2.5 before:bg-transparent ${
+            open ? 'opacity-100 scale-100 translate-y-0 pointer-events-auto visible' : 'opacity-0 scale-95 -translate-y-4 pointer-events-none invisible'
+          }`}
+        >
+          <ul className="grid grid-cols-2 gap-2 p-4">
+            {menu.items.map((item) => {
+              const Icon = icons[item.icon];
+              return (
+                <li key={item.title}>
+                  <Link
+                    href={item.href}
+                    className="group flex gap-3 p-3 rounded-2xl hover:bg-slate-50 transition-colors duration-200 h-full"
+                  >
+                    <span className="w-10 h-10 rounded-xl bg-royal-blue/10 text-royal-blue flex items-center justify-center shrink-0 transition-transform duration-200 group-hover:scale-105" aria-hidden="true">
+                      <Icon className="w-5 h-5" />
+                    </span>
+                    <span className="flex flex-col">
+                      <span className="text-[14px] font-extrabold text-slate-900 group-hover:text-royal-blue transition-colors leading-snug">{item.title}</span>
+                      <span className="text-[12px] text-slate-500 leading-relaxed mt-0.5">{item.description}</span>
+                    </span>
+                  </Link>
+                </li>
+              );
+            })}
+          </ul>
+          <div className="bg-slate-50 border-t border-slate-100 px-6 py-3.5 flex items-center justify-between gap-4">
+            <span className="inline-flex items-center gap-1.5 text-[12px] font-semibold text-slate-500">
+              <ShieldCheck className="w-3.5 h-3.5 text-teal-accent shrink-0" aria-hidden="true" />
+              Month-to-month, no lock-in ·{' '}
+              <Link href="/contact" className="text-slate-600 hover:text-royal-blue underline-offset-2 hover:underline">
+                Contact us
+              </Link>
+            </span>
+            <Link href={menu.all.href} className="group inline-flex items-center gap-1.5 text-[13px] font-bold text-royal-blue whitespace-nowrap">
+              {menu.all.title}
+              <ArrowRight className="w-3.5 h-3.5 transition-transform duration-200 group-hover:translate-x-0.5" aria-hidden="true" />
+            </Link>
+          </div>
+        </div>
+      </div>
+    );
   };
-  const linkActive = (link: NavbarLink) =>
-    (isActive(link.href) && !(link.exclude ?? []).some(isActive)) || (link.activeAlso ?? []).some(isActive);
 
   return (
     <>
@@ -133,8 +205,7 @@ export const Navbar: React.FC = () => {
         }`}
       >
         <div className={`w-full flex items-center justify-between h-full transition-all duration-500 ${scrolled ? 'px-3 lg:px-4' : 'max-w-container-max mx-auto px-gutter'}`}>
-          {/* Left: Brand Logo */}
-          <Link href="/" className="flex items-center shrink-0">
+          <Link href="/" className="flex items-center shrink-0" aria-label="Veloxis Global home">
             <Image
               src="/images/logos/logo.webp"
               alt="Veloxis Global"
@@ -145,149 +216,34 @@ export const Navbar: React.FC = () => {
             />
           </Link>
 
-          {/* Center: Desktop Nav Links */}
-          <nav className={`hidden lg:flex items-center h-full transition-all duration-300 ${scrolled ? 'gap-1.5 xl:gap-3.5 lg:gap-2' : 'gap-3 xl:gap-5 lg:gap-4'}`} aria-label="Main navigation">
-
-            {/* 1. Services dropdown (Mega Menu) */}
-            <div
-              ref={servicesRef}
-              className="relative h-full py-4 flex items-center"
-              onMouseEnter={() => {
-                if (hasHover) {
-                  clearAllHoverTimeouts();
-                  setServicesOpen(true);
-                }
-              }}
-              onMouseLeave={() => {
-                if (hasHover) {
-                  servicesTimeoutRef.current = setTimeout(() => {
-                    setServicesOpen(false);
-                  }, 250); // 250ms grace period to allow diagonal mouse movement
-                }
-              }}
-            >
-              <button
-                onClick={(e) => {
-                  e.stopPropagation();
-                  if (!hasHover) {
-                    setServicesOpen(!servicesOpen);
-                  } else {
-                    clearAllHoverTimeouts();
-                    setServicesOpen(true);
-                  }
-                }}
-                aria-expanded={servicesOpen}
-                aria-controls="services-dropdown"
-                aria-haspopup="true"
-                className={`flex items-center gap-1 font-sans font-semibold transition-all duration-300 rounded-full whitespace-nowrap shrink-0 ${
-                  scrolled
-                    ? 'px-2.5 py-1 text-[13px]'
-                    : 'px-3.5 py-1.5 text-[14px]'
-                } ${
-                  isActive('/services') || servicesOpen
-                    ? 'bg-royal-blue text-white shadow-sm shadow-royal-blue/15'
-                    : 'text-slate-700 hover:bg-slate-100/80 hover:text-royal-blue'
-                }`}
-              >
-                Services
-                <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${servicesOpen ? 'rotate-180' : ''}`} aria-hidden="true" />
-              </button>
-
-              {/* Services Mega Dropdown Panel */}
-              <div
-                id="services-dropdown"
-                role="region"
-                aria-label="Services menu"
-                className={`absolute top-full left-1/2 -translate-x-1/2 w-[720px] bg-white/95 backdrop-blur-[20px] rounded-3xl shadow-2xl border border-slate-100/80 z-[60] mt-2.5 overflow-hidden transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] origin-top before:absolute before:-top-2.5 before:left-0 before:w-full before:h-2.5 before:bg-transparent ${
-                  servicesOpen
-                    ? 'opacity-100 scale-100 translate-y-0 pointer-events-auto'
-                    : 'opacity-0 scale-95 -translate-y-4 pointer-events-none'
-                }`}
-              >
-                <div className="p-7 pb-6">
-                  <div className="flex items-baseline justify-between mb-5">
-                    <span className="text-xs font-black tracking-widest uppercase bg-gradient-to-r from-royal-blue to-indigo-accent bg-clip-text text-transparent">
-                      What We Do
-                    </span>
-                    <span className="text-xs font-semibold text-slate-400">Three services. One growth engine.</span>
-                  </div>
-
-                  {/* 3-column service cards */}
-                  <div className="grid grid-cols-3 gap-3">
-                    {servicesGroups.flatMap((group) => group.items).map((item, idx) => {
-                      const ItemIcon = serviceIconMap[item.href] || Zap;
-                      const accent = serviceAccentMap[item.href] || serviceAccentMap['/services/high-converting-landing-pages'];
-                      return (
-                        <Link
-                          key={idx}
-                          href={item.href}
-                          className="group flex flex-col gap-3 p-4 rounded-2xl border border-transparent hover:border-slate-100 hover:bg-slate-50/80 hover:shadow-sm transition-all duration-200"
-                        >
-                          <span className={`w-10 h-10 rounded-xl flex items-center justify-center shrink-0 ring-1 ring-transparent transition-all duration-200 ${accent.bg} ${accent.text} ${accent.ring} group-hover:scale-105`} aria-hidden="true">
-                            <ItemIcon className="w-5 h-5" />
-                          </span>
-                          <div className="flex flex-col">
-                            <span className="text-[13.5px] font-extrabold text-slate-900 group-hover:text-royal-blue transition-colors leading-snug">
-                              {item.title}
-                            </span>
-                            <span className="text-[11.5px] text-slate-500 leading-relaxed mt-1">
-                              {item.description}
-                            </span>
-                          </div>
-                          <span className="inline-flex items-center gap-1 text-xs font-bold text-royal-blue opacity-0 group-hover:opacity-100 -translate-x-1 group-hover:translate-x-0 transition-all duration-200 mt-auto">
-                            Explore <ArrowRight className="w-3 h-3" />
-                          </span>
-                        </Link>
-                      );
-                    })}
-                  </div>
-                </div>
-
-                {/* Bottom trust bar */}
-                <div className="bg-slate-50 border-t border-slate-100 px-7 py-4 flex items-center justify-between">
-                  <span className="inline-flex items-center gap-1.5 text-[12px] font-semibold text-slate-500">
-                    <ShieldCheck className="w-3.5 h-3.5 text-teal-accent shrink-0" />
-                    Real estate specialists · Month-to-month, no lock-in
-                  </span>
-                  <Link
-                    href="/services"
-                    className="group inline-flex items-center gap-1.5 text-[13px] font-bold text-royal-blue"
-                  >
-                    View All Services
-                    <ArrowRight className="w-3.5 h-3.5 transition-transform duration-200 group-hover:translate-x-0.5" />
-                  </Link>
-                </div>
-              </div>
-            </div>
-
-            {/* 2. Audience and content links (data/navbar-data.ts) */}
+          {/* Desktop navigation */}
+          <nav ref={navRef} className="hidden lg:flex items-center h-full gap-2 xl:gap-3" aria-label="Main navigation">
+            {navMenus.map(renderDesktopMenu)}
             {primaryLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className={`font-sans font-semibold transition-all duration-300 rounded-full whitespace-nowrap shrink-0 ${desktopShow[link.desktop]} ${
-                  scrolled
-                    ? 'px-2.5 py-1 text-[13px]'
-                    : 'px-3.5 py-1.5 text-[14px]'
-                } ${
-                  linkActive(link) ? 'bg-royal-blue text-white shadow-sm shadow-royal-blue/15' : 'text-slate-700 hover:bg-slate-100/80 hover:text-royal-blue'
-                }`}
+                className={`font-sans font-semibold transition-all duration-300 rounded-full whitespace-nowrap ${pill} ${pillState(
+                  isActive(link.href) || (link.activeAlso ?? []).some(isActive),
+                )}`}
               >
                 {link.title}
               </Link>
             ))}
           </nav>
 
-          {/* Right: Desktop CTA & WhatsApp */}
-          <div className={`hidden lg:flex items-center shrink-0 transition-all duration-300 ${scrolled ? 'gap-2.5 xl:gap-3.5 lg:gap-3' : 'gap-4 lg:gap-5'}`}>
+          {/* Desktop CTA + WhatsApp */}
+          <div className="hidden lg:flex items-center shrink-0 gap-3">
             <div className="hero-cta-hover !rounded-full shrink-0">
               <Button
-                href="/contact"
+                id="nav-free-audit-btn"
+                href={freeAuditLink.href}
                 variant="primary"
                 size="sm"
-                className={`!rounded-full transition-all duration-300 shrink-0 ${scrolled ? 'px-3.5 py-1.5 text-xs' : 'px-4 py-2 text-xs'}`}
+                cta="nav_free_audit"
+                className={`!rounded-full transition-all duration-300 ${scrolled ? 'px-3.5 py-1.5 text-xs' : 'px-4 py-2 text-xs'}`}
               >
-                Get Free Audit →
+                {freeAuditLink.title} →
               </Button>
             </div>
             <WhatsAppLink
@@ -295,17 +251,16 @@ export const Navbar: React.FC = () => {
               tooltip={`WhatsApp ${siteData.phone}`}
               aria-label={`Chat on WhatsApp ${siteData.phone}`}
               className={`flex items-center justify-center rounded-full bg-[#25D366]/10 ring-1 ring-[#25D366]/25 hover:bg-[#25D366]/20 hover:ring-[#25D366]/50 transition-all duration-300 shrink-0 ${
-                scrolled
-                  ? 'w-8 h-8'
-                  : 'w-10 h-10'
+                scrolled ? 'w-8 h-8' : 'w-10 h-10'
               }`}
             >
               <WhatsAppIcon className={`shrink-0 ${scrolled ? 'w-[18px] h-[18px]' : 'w-5 h-5'}`} />
             </WhatsAppLink>
           </div>
 
-          {/* Mobile: Hamburger Button */}
+          {/* Mobile: hamburger */}
           <button
+            type="button"
             onClick={() => setIsOpen(true)}
             className="lg:hidden w-11 h-11 flex items-center justify-center text-royal-blue hover:bg-slate-50 rounded-md transition-colors"
             aria-label="Open navigation menu"
@@ -317,143 +272,123 @@ export const Navbar: React.FC = () => {
         </div>
       </header>
 
-      {/* Mobile Drawer Overlay */}
-      {/* Backdrop */}
+      {/* Mobile drawer backdrop */}
       <div
         onClick={() => setIsOpen(false)}
-        className={`fixed inset-0 z-[99] bg-slate-900/10 backdrop-blur-sm transition-opacity duration-300 ${
+        className={`fixed inset-0 z-[99] bg-slate-900/20 backdrop-blur-sm transition-opacity duration-300 ${
           isOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
         }`}
         aria-hidden="true"
       />
 
-      {/* Drawer Panel */}
+      {/* Mobile drawer */}
       <div
         id="mobile-drawer"
-        ref={drawerRef}
         role="dialog"
         aria-modal="true"
         aria-label="Navigation menu"
-        className={`fixed top-4 right-4 bottom-4 w-[calc(100%-2rem)] max-w-sm z-[100] bg-white/95 backdrop-blur-[24px] rounded-3xl flex flex-col justify-between overflow-y-auto p-6 shadow-2xl border border-slate-100 transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] ${
+        aria-hidden={!isOpen}
+        inert={!isOpen}
+        className={`fixed top-3 right-3 bottom-3 w-[calc(100%-1.5rem)] max-w-sm z-[100] bg-white rounded-3xl flex flex-col overflow-y-auto overscroll-contain p-5 shadow-2xl border border-slate-100 transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] ${
           isOpen ? 'translate-x-0 opacity-100 scale-100' : 'translate-x-8 opacity-0 scale-95 pointer-events-none'
         }`}
       >
-        {/* Header area in Drawer */}
-        <div>
-          <div className="flex items-center justify-between pb-6 border-b border-slate-100 mb-6">
-            <Image
-              src="/images/logos/logo.webp"
-              alt="Veloxis Global"
-              width={160}
-              height={40}
-              className="h-8 w-auto max-w-[120px] object-contain"
-            />
-
-            <button
-              onClick={() => setIsOpen(false)}
-              className="w-11 h-11 flex items-center justify-center text-slate-900 hover:bg-slate-50 rounded-md transition-colors"
-              aria-label="Close navigation menu"
-            >
-              <X className="w-6 h-6" aria-hidden="true" />
-            </button>
-          </div>
-
-          {/* Mobile Drawer Links Stack */}
-          <nav className="flex flex-col gap-2" aria-label="Mobile navigation">
-
-            {/* 1. Services Accordion */}
-            <div className="flex flex-col border-b border-slate-100 pb-2">
-              <button
-                onClick={() => setMobileServicesOpen(!mobileServicesOpen)}
-                aria-expanded={mobileServicesOpen}
-                aria-controls="mobile-services-list"
-                className="flex items-center justify-between w-full font-bold text-slate-900 text-[16px] py-3 focus:outline-none"
-              >
-                <span>Services</span>
-                <ChevronDown
-                  className={`w-5 h-5 transition-transform duration-200 text-slate-500 ${mobileServicesOpen ? 'rotate-180' : ''}`}
-                  aria-hidden="true"
-                />
-              </button>
-
-              <div
-                id="mobile-services-list"
-                className={`overflow-hidden flex flex-col pl-4 gap-2 mt-1 border-l-2 border-slate-100 transition-all duration-200 ${
-                  mobileServicesOpen ? 'max-h-[800px] opacity-100' : 'max-h-0 opacity-0 pointer-events-none'
-                }`}
-              >
-                {servicesGroups.map((group, groupIdx) => {
-                  const isGroupActive = mobileActiveServiceGroup === groupIdx;
-                  return (
-                    <div key={groupIdx} className="flex flex-col mt-2">
-                      <button
-                        onClick={() => setMobileActiveServiceGroup(isGroupActive ? null : groupIdx)}
-                        className="flex items-center justify-between w-full text-xs font-black uppercase text-slate-400 py-1.5 focus:outline-none"
-                      >
-                        <span>{group.title}</span>
-                        <ChevronDown className={`w-3.5 h-3.5 transition-transform ${isGroupActive ? 'rotate-180 text-royal-blue' : ''}`} />
-                      </button>
-
-                      <div className={`flex flex-col pl-2 border-l border-slate-100 overflow-hidden transition-all duration-200 ${isGroupActive ? 'max-h-[300px] opacity-100 mt-1' : 'max-h-0 opacity-0 pointer-events-none'}`}>
-                        {group.items.map((item, idx) => {
-                          const ItemIcon = serviceIconMap[item.href] || Zap;
-                          return (
-                          <Link
-                            key={idx}
-                            href={item.href}
-                            onClick={() => setIsOpen(false)}
-                            className={`flex items-center gap-2 py-2.5 text-[14px] ${
-                              isActive(item.href) ? 'text-royal-blue font-bold' : 'text-slate-600 font-medium hover:text-royal-blue'
-                            }`}
-                          >
-                            <ItemIcon className="w-3.5 h-3.5 shrink-0" aria-hidden="true" />
-                            <span>{item.title}</span>
-                          </Link>
-                          );
-                        })}
-                      </div>
-                    </div>
-                  );
-                })}
-                <Link
-                  href="/services"
-                  onClick={() => setIsOpen(false)}
-                  className="inline-block py-2 text-xs font-bold text-royal-blue mt-2 hover:underline"
-                >
-                  View All Services →
-                </Link>
-              </div>
-            </div>
-
-            {/* 2. Audience and content links (data/navbar-data.ts) */}
-            {primaryLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                onClick={() => setIsOpen(false)}
-                className={`font-bold text-[16px] py-3 border-b border-slate-100 transition-colors duration-300 ${
-                  linkActive(link) ? 'text-royal-blue font-bold' : 'text-slate-900 hover:text-royal-blue'
-                }`}
-              >
-                {link.mobileTitle}
-              </Link>
-            ))}
-          </nav>
+        <div className="flex items-center justify-between pb-4 border-b border-slate-100 mb-2">
+          <Link href="/" onClick={() => setIsOpen(false)} aria-label="Veloxis Global home">
+            <Image src="/images/logos/logo.webp" alt="Veloxis Global" width={160} height={40} className="h-8 w-auto max-w-[130px] object-contain" />
+          </Link>
+          <button
+            type="button"
+            onClick={() => setIsOpen(false)}
+            className="w-11 h-11 flex items-center justify-center text-slate-900 hover:bg-slate-50 rounded-md transition-colors"
+            aria-label="Close navigation menu"
+          >
+            <X className="w-6 h-6" aria-hidden="true" />
+          </button>
         </div>
 
-        {/* Bottom area with CTA and WhatsApp */}
-        <div className="flex flex-col gap-4 border-t border-slate-100 pt-6 mt-6">
+        <nav className="flex flex-col flex-grow" aria-label="Mobile navigation">
+          {navMenus.map((menu) => {
+            const open = mobileMenu === menu.title;
+            const listId = `mobile-${menu.title.toLowerCase()}-list`;
+            return (
+              <div key={menu.title} className="border-b border-slate-100">
+                <button
+                  type="button"
+                  onClick={() => setMobileMenu(open ? null : menu.title)}
+                  aria-expanded={open}
+                  aria-controls={listId}
+                  className={`flex items-center justify-between w-full min-h-[48px] font-bold text-[16px] ${isActive(menu.activePrefix) ? 'text-royal-blue' : 'text-slate-900'}`}
+                >
+                  <span>{menu.title}</span>
+                  <ChevronDown className={`w-5 h-5 text-slate-500 transition-transform duration-200 ${open ? 'rotate-180' : ''}`} aria-hidden="true" />
+                </button>
+                <ul id={listId} className={`pb-3 flex-col ${open ? 'flex' : 'hidden'}`}>
+                  {menu.items.map((item) => {
+                    const Icon = icons[item.icon];
+                    return (
+                      <li key={item.title}>
+                        <Link
+                          href={item.href}
+                          onClick={() => setIsOpen(false)}
+                          className={`flex items-center gap-3 min-h-[44px] pl-1 text-[15px] ${
+                            isActive(item.href) && item.href !== menu.all.href ? 'text-royal-blue font-bold' : 'text-slate-700 font-medium hover:text-royal-blue'
+                          }`}
+                        >
+                          <span className="w-8 h-8 rounded-lg bg-royal-blue/10 text-royal-blue flex items-center justify-center shrink-0" aria-hidden="true">
+                            <Icon className="w-4 h-4" />
+                          </span>
+                          {item.title}
+                        </Link>
+                      </li>
+                    );
+                  })}
+                  <li>
+                    <Link
+                      href={menu.all.href}
+                      onClick={() => setIsOpen(false)}
+                      className="flex items-center gap-1.5 min-h-[44px] pl-1 text-[14px] font-bold text-royal-blue"
+                    >
+                      {menu.all.title} <ArrowRight className="w-4 h-4" aria-hidden="true" />
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+            );
+          })}
+          {[...primaryLinks, { title: 'Contact', href: '/contact' }].map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              onClick={() => setIsOpen(false)}
+              className={`flex items-center min-h-[48px] font-bold text-[16px] border-b border-slate-100 transition-colors ${
+                isActive(link.href) ? 'text-royal-blue' : 'text-slate-900 hover:text-royal-blue'
+              }`}
+            >
+              {link.title}
+            </Link>
+          ))}
+        </nav>
+
+        <div className="flex flex-col gap-3 pt-5 mt-5">
+          <Button
+            id="menu-free-audit-btn"
+            href={freeAuditLink.href}
+            onClick={() => setIsOpen(false)}
+            variant="primary"
+            cta="menu_free_audit"
+            className="w-full text-center py-3 !rounded-full"
+          >
+            Get a {freeAuditLink.title.toLowerCase()} →
+          </Button>
           <WhatsAppLink
             placement="menu"
             onClick={() => setIsOpen(false)}
-            className="flex items-center justify-center gap-2 font-sans text-[14px] font-bold text-slate-600 hover:text-royal-blue py-3"
+            className="flex items-center justify-center gap-2 min-h-[44px] font-sans text-[14px] font-bold text-slate-600 hover:text-royal-blue"
           >
             <WhatsAppIcon className="w-[18px] h-[18px] shrink-0" />
             <span>WhatsApp {siteData.phone}</span>
           </WhatsAppLink>
-          <Button href="/contact" onClick={() => setIsOpen(false)} variant="primary" className="w-full text-center py-3 !rounded-full">
-            Get Free Audit →
-          </Button>
         </div>
       </div>
     </>

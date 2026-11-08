@@ -10,21 +10,21 @@ import { SectionLabel } from '../ui/SectionLabel';
 const steps = [
   {
     title: 'Free audit',
-    desc: 'We review your project pages, ad accounts, lead sources and how fast enquiries get a reply today.',
+    desc: 'We review your website or store, ad accounts, tracking and how fast enquiries get a reply today.',
     phase: 'Before we start',
     output: 'Audit notes with the first fixes',
     Icon: Search,
   },
   {
-    title: '90-day plan',
-    desc: 'Channels, campaign structure, budget split, pages and WhatsApp flows — agreed with you before anything is built.',
+    title: 'A written plan',
+    desc: 'Channels, campaign structure, budget split, pages and follow-up flows, agreed with you before anything is built.',
     phase: 'Planning',
     output: 'A written plan you sign off',
     Icon: ClipboardList,
   },
   {
     title: 'Build',
-    desc: 'Landing page, tracking, WhatsApp automation and CRM connection, tested with dummy leads from every source.',
+    desc: 'Pages, tracking, WhatsApp automation and CRM connection, tested end to end before any money is spent.',
     phase: 'Set-up',
     output: 'Page, tracking and flows, tested',
     Icon: Wrench,
@@ -38,9 +38,9 @@ const steps = [
   },
   {
     title: 'Optimise weekly',
-    desc: 'Budgets move towards the campaigns producing site visits. You get a plain-language report every week.',
+    desc: 'Budget moves towards what produces leads, orders or bookings. You get a plain-language report every week.',
     phase: 'Every week',
-    output: 'A weekly report on site visits',
+    output: 'A weekly report on results',
     Icon: RefreshCw,
   },
 ];
@@ -57,10 +57,10 @@ export const ProcessTimeline: React.FC = () => {
         <div className="text-center max-w-[700px] mx-auto mb-14 lg:mb-20 section-reveal">
           <SectionLabel className="text-center">HOW WE WORK</SectionLabel>
           <h2 className="text-headline-lg-mobile sm:text-headline-lg font-bold text-slate-900 tracking-tight leading-tight mb-4">
-            From first call to booked site visits in five steps
+            From free audit to measurable results in five steps
           </h2>
           <p className="text-body-lg text-slate-500 max-w-[600px] mx-auto text-center mt-4">
-            The same process for a developer’s launch or a channel partner’s mandate — only the scale changes.
+            The same process for an online store, a clinic or a property launch. Only the channels and the scale change.
           </p>
         </div>
 

@@ -24,7 +24,7 @@ export const FaqAccordion: React.FC<FaqAccordionProps> = ({
   customFaqs,
   title = 'Frequently Asked Questions',
   badgeText = 'QUESTIONS?',
-  description = 'Straight answers about how we run real estate landing pages, ads and WhatsApp automation.',
+  description = 'Straight answers about how we run ads, websites, SEO and WhatsApp automation.',
   withSchema = true,
 }) => {
   const activeFaqs = customFaqs || defaultFaqs;

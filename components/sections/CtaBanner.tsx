@@ -19,10 +19,10 @@ export interface CtaBannerProps {
 }
 
 export const CtaBanner: React.FC<CtaBannerProps> = ({ title, description, showAuditLink = true, whatsappTitle }) => {
-  const displayTitle = title || 'Get a free real estate marketing audit';
+  const displayTitle = title || 'Get a free marketing audit';
   const displayDescription =
     description ||
-    'Send us your project or current campaigns. We’ll review your landing page, ads and lead follow-up and tell you what to fix first — no obligation.';
+    'Send us your website, store or current campaigns. We’ll review your pages, ads and lead follow-up and tell you what to fix first. No obligation.';
 
   return (
     <section className="py-12 bg-white overflow-hidden section-reveal">
@@ -77,7 +77,7 @@ export const CtaBanner: React.FC<CtaBannerProps> = ({ title, description, showAu
           <div className="flex flex-wrap justify-center items-center gap-6 mt-10 text-xs font-bold uppercase tracking-wider text-white">
             <div className="flex items-center gap-1.5">
               <CheckCircle className="w-4 h-4 text-teal-accent" aria-hidden="true" />
-              <span>Real estate specialists</span>
+              <span>Google certified team</span>
             </div>
             <div className="flex items-center gap-1.5">
               <CheckCircle className="w-4 h-4 text-teal-accent" aria-hidden="true" />

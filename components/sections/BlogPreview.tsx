@@ -20,7 +20,7 @@ export const BlogPreview: React.FC = () => {
               INSIGHTS
             </Badge>
             <h2 className="text-3xl sm:text-headline-lg font-bold text-slate-900 tracking-tight leading-tight">
-              Latest Blog & Insights for Builders & Brokers
+              Latest from the blog
             </h2>
           </div>
           <Link

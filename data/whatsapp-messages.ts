@@ -103,6 +103,11 @@ export const PAGE_MESSAGES: Record<string, WaPage> = {
   },
 
   // Industries and audiences
+  '/industries': {
+    type: 'industry',
+    ref: 'industries',
+    message: "I'm looking at the industries you work with and would like a free marketing audit for my business.",
+  },
   '/industries/real-estate': {
     type: 'industry',
     ref: 'ind-realestate',
@@ -118,12 +123,13 @@ export const PAGE_MESSAGES: Record<string, WaPage> = {
     ref: 'cp',
     message: "I'm a channel partner and want more genuine buyer leads for the projects I sell. Can you help?",
   },
-  '/d2c': {
+  // Niche pages moved from /d2c and /local-business on 8 Nov 2026; refs kept so reports line up.
+  '/industries/ecommerce': {
     type: 'industry',
     ref: 'd2c',
-    message: 'I run a D2C brand and would like a free store audit of my ads, store pages and follow-ups.',
+    message: 'I run an online store / D2C brand and would like a free store audit of my ads, store pages and follow-ups.',
   },
-  '/local-business': {
+  '/industries/local-business': {
     type: 'industry',
     ref: 'local',
     message: 'I run a local business and would like a free audit of my website, Google Maps listing and local SEO.',
