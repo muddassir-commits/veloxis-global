@@ -26,7 +26,7 @@ export const Breadcrumb: React.FC<BreadcrumbProps> = ({ items }) => {
       <SchemaMarkup schema={schema} />
       <ol className="flex flex-wrap items-center gap-y-1 min-w-0 max-w-full">
         <li className="inline-flex items-center">
-          <Link href="/" className="inline-flex items-center hover:text-royal-blue transition-colors">
+          <Link href="/" className="inline-flex items-center py-1.5 -my-1.5 hover:text-royal-blue transition-colors">
             <Home className="w-3.5 h-3.5 mr-1" aria-hidden="true" />
             Home
           </Link>
@@ -41,7 +41,7 @@ export const Breadcrumb: React.FC<BreadcrumbProps> = ({ items }) => {
                   {item.name}
                 </span>
               ) : (
-                <Link href={item.href} className="hover:text-royal-blue transition-colors truncate max-w-[150px] sm:max-w-none">
+                <Link href={item.href} className="py-1.5 -my-1.5 hover:text-royal-blue transition-colors truncate max-w-[150px] sm:max-w-none">
                   {item.name}
                 </Link>
               )}

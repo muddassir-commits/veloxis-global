@@ -94,7 +94,7 @@ export default function BlogPostContent({ post, relatedPosts, industry, service 
           <article className="lg:col-span-8 flex flex-col items-start">
             <Link
               href="/blog"
-              className="inline-flex items-center gap-1.5 py-1.5 -my-1.5 text-xs font-bold text-slate-500 hover:text-royal-blue transition-colors mb-6"
+              className="inline-flex items-center gap-1.5 py-2 -my-2 text-xs font-bold text-slate-500 hover:text-royal-blue transition-colors mb-6"
             >
               <ArrowLeft className="w-3.5 h-3.5" />
               Back to Articles
@@ -110,7 +110,7 @@ export default function BlogPostContent({ post, relatedPosts, industry, service 
             <div className="flex flex-wrap items-center gap-4 text-xs font-semibold text-slate-500 mb-8 border-y border-slate-100 py-3.5 w-full">
               <Link
                 href="/about"
-                className="flex items-center gap-1.5 hover:text-royal-blue transition-colors"
+                className="flex items-center gap-1.5 py-1.5 -my-1.5 hover:text-royal-blue transition-colors"
               >
                 <div className="w-6 h-6 rounded-full overflow-hidden bg-slate-100 relative">
                   <Image src={post.authorPhoto} alt="" fill sizes="24px" className="object-cover" />
@@ -128,7 +128,7 @@ export default function BlogPostContent({ post, relatedPosts, industry, service 
               </span>
               <span className="flex items-center gap-1.5">
                 <Tag className="w-3.5 h-3.5" aria-hidden="true" />
-                <Link href="/blog" className="hover:text-royal-blue transition-colors">{post.category}</Link>
+                <Link href="/blog" className="inline-block py-1.5 -my-1.5 hover:text-royal-blue transition-colors">{post.category}</Link>
               </span>
 
               {/* Share actions */}
@@ -139,7 +139,7 @@ export default function BlogPostContent({ post, relatedPosts, industry, service 
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Share on LinkedIn"
-                  className="w-7 h-7 bg-slate-50 hover:bg-royal-blue hover:text-white transition-colors rounded-full flex items-center justify-center text-slate-500"
+                  className="w-9 h-9 bg-slate-50 hover:bg-royal-blue hover:text-white transition-colors rounded-full flex items-center justify-center text-slate-500"
                 >
                   <Linkedin className="w-3.5 h-3.5" />
                 </a>
@@ -151,7 +151,7 @@ export default function BlogPostContent({ post, relatedPosts, industry, service 
                   data-cta-type="share"
                   data-cta-location="share"
                   aria-label="Share on WhatsApp"
-                  className="w-7 h-7 bg-slate-50 hover:bg-teal-600 hover:text-white transition-colors rounded-full flex items-center justify-center text-slate-500"
+                  className="w-9 h-9 bg-slate-50 hover:bg-teal-600 hover:text-white transition-colors rounded-full flex items-center justify-center text-slate-500"
                 >
                   <Share2 className="w-3.5 h-3.5" />
                 </a>
@@ -286,7 +286,7 @@ export default function BlogPostContent({ post, relatedPosts, industry, service 
               {industry !== 'general' && (
                 <Link
                   href={`/blog/industry/${industry}`}
-                  className="inline-flex items-center gap-1 mt-6 text-sm font-bold text-royal-blue hover:underline"
+                  className="inline-flex items-center gap-1 mt-6 py-1.5 text-sm font-bold text-royal-blue hover:underline"
                 >
                   All {niche.name} guides →
                 </Link>

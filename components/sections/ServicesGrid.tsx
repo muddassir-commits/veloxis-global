@@ -1,19 +1,51 @@
 /**
  * ServicesGrid — Server Component.
- * The four services, for every niche (homepage).
+ * Every service, e-commerce first (homepage).
  */
 import React from 'react';
 import Link from 'next/link';
-import { ArrowRight, Check, Target, LayoutTemplate, Search, Bot } from 'lucide-react';
+import { ArrowRight, Check, Target, LayoutTemplate, Search, Bot, ShoppingBag, Store, MousePointerClick, Mail } from 'lucide-react';
 import { SectionLabel } from '../ui/SectionLabel';
 
 const services = [
+  {
+    icon: ShoppingBag,
+    title: 'E-commerce Marketing',
+    href: '/services/ecommerce-marketing',
+    desc: 'One plan across ads, store and repeat orders, run as your outsourced growth team and reported on orders and cost per order.',
+    points: ['Full-funnel growth plan', 'Purchase tracking set up first', 'One weekly report'],
+    accent: 'bg-royal-blue/10 text-royal-blue',
+  },
   {
     icon: Target,
     title: 'Meta & Google Ads',
     href: '/services/paid-ads',
     desc: 'Campaigns on Facebook, Instagram, Google Search, Shopping and YouTube, set up and tracked so you can see which rupee brought which lead or order.',
     points: ['Conversion tracking done right', 'Weekly budget moves to what works', 'Ad accounts stay in your name'],
+    accent: 'bg-indigo-accent/10 text-indigo-accent',
+  },
+  {
+    icon: Store,
+    title: 'Shopify Development',
+    href: '/services/shopify-development',
+    desc: 'New Shopify stores, redesigns and speed fixes, built for phones and for the way Indian buyers pay.',
+    points: ['Store builds and redesigns', 'COD and prepaid setup', 'Apps kept to what you need'],
+    accent: 'bg-teal-accent/10 text-teal-accent',
+  },
+  {
+    icon: MousePointerClick,
+    title: 'Conversion Optimisation',
+    href: '/services/conversion-rate-optimization',
+    desc: 'Find where shoppers drop off, fix product pages and checkout, and test the changes before rolling them out.',
+    points: ['Funnel and session review', 'Product page fixes', 'Tested changes'],
+    accent: 'bg-sunset-orange/10 text-sunset-orange',
+  },
+  {
+    icon: Mail,
+    title: 'Email & WhatsApp Marketing',
+    href: '/services/email-whatsapp-marketing',
+    desc: 'Abandoned cart, order updates and repeat-purchase flows on the two channels Indian shoppers actually read.',
+    points: ['Cart and browse recovery', 'Post-purchase flows', 'Opt-in and consent handled'],
     accent: 'bg-indigo-accent/10 text-indigo-accent',
   },
   {
@@ -27,7 +59,7 @@ const services = [
   {
     icon: Search,
     title: 'SEO & Local SEO',
-    href: '/services',
+    href: '/services/seo',
     desc: 'On-page SEO, service and area pages, and Google Business Profile set-up so people find you on Google Search and Maps.',
     points: ['Google Business Profile & Maps', 'Technical and on-page SEO', 'Pages ready for AI search'],
     accent: 'bg-royal-blue/10 text-royal-blue',
@@ -48,11 +80,11 @@ export const ServicesGrid: React.FC = () => (
       <div className="text-center max-w-[700px] mx-auto mb-14 section-reveal">
         <SectionLabel className="text-center">WHAT WE DO</SectionLabel>
         <h2 className="text-headline-lg-mobile sm:text-headline-lg font-bold text-slate-900 tracking-tight leading-tight">
-          Four services that work as one growth system
+          Everything an online store needs to grow
         </h2>
         <p className="text-body-lg text-slate-500 max-w-[600px] mx-auto text-center mt-4">
-          Ads bring the right people, the page turns them into enquiries or orders, SEO keeps them coming, and automation
-          makes sure nobody waits for a reply.
+          Ads bring the right people, the store turns them into orders, retention brings them back, and SEO and automation
+          keep it all running. Take one service or the whole system.
         </p>
       </div>
 

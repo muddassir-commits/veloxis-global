@@ -1,4 +1,4 @@
-// The three niches Veloxis Global serves (owner, 8 Nov 2026: equal weight, no "main" niche).
+// Industries Veloxis Global serves. E-commerce and D2C lead since 10 Nov 2026 (owner); the others stay live.
 // Used by the homepage industries section, the /industries hub and the niche "latest guides" lists.
 
 export type IndustryKey = 'ecommerce' | 'local-business' | 'real-estate';

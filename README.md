@@ -1,7 +1,7 @@
 # veloxisglobal.com
 
 Website of **Veloxis Global**, a performance marketing agency based in Noida, India (service-area business,
-no street address). Three equal niches: **E-commerce & D2C brands**, **Local businesses & clinics** and
+no street address). E-commerce & D2C leads since 10 Nov 2026; also: **E-commerce & D2C brands**, **Local businesses & clinics** and
 **Real estate**. Services: Meta & Google ads, websites and landing pages (incl. Shopify), SEO, local SEO and
 Google Business Profile, and WhatsApp & AI automation. Month-to-month work, a free audit as the main call to
 action, and the client owns every ad account. Rebranded from real-estate-only on 8 Nov 2026 (PR #67).

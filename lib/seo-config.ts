@@ -68,9 +68,9 @@ export function constructMetadata({
 // docs/SEO.md — keep one primary intent per page.
 export const pageMeta = {
   home: {
-    title: 'Performance Marketing Agency in India | Veloxis Global',
+    title: 'E-commerce & D2C Marketing Agency in India | Veloxis Global',
     description:
-      'Performance marketing for e-commerce brands, local businesses and real estate: Meta & Google ads, websites, SEO and WhatsApp automation. Free audit.',
+      'Performance marketing for e-commerce and D2C brands: Meta and Google ads, Shopify stores, CRO, email and WhatsApp. Judged on orders, not clicks. Free audit.',
     path: '/',
   },
   industries: {
@@ -92,9 +92,9 @@ export const pageMeta = {
     path: '/industries/local-business',
   },
   services: {
-    title: 'Digital Marketing Services: Ads, SEO, Websites | Veloxis',
+    title: 'E-commerce Marketing Services: Ads, Shopify, CRO | Veloxis',
     description:
-      'Meta and Google ads, websites and landing pages, SEO and local SEO, and WhatsApp automation for e-commerce brands, local businesses and real estate. Free audit.',
+      'Meta and Google ads, Shopify development, conversion rate optimisation, email and WhatsApp marketing and SEO for online stores and D2C brands. Free audit.',
     path: '/services',
   },
   developers: {

@@ -1,6 +1,6 @@
 /**
  * HeroSection — Server Component (homepage).
- * Generic performance marketing hero for the three niches (e-commerce, local businesses, real estate).
+ * E-commerce first since 10 Nov 2026. Local businesses and real estate stay available through the quick links.
  * No client-side dependencies for maximum LCP performance; the WhatsApp button is a small client island.
  */
 import React from 'react';
@@ -37,22 +37,22 @@ export const HeroSection: React.FC = () => {
       <div className="max-w-container-max mx-auto px-gutter w-full relative z-10 pt-28 pb-16 lg:pt-32 lg:pb-20">
         <div className="max-w-[720px] flex flex-col items-start text-left">
           <span className="inline-flex items-center gap-2 bg-white/10 border border-white/20 px-3 py-1 rounded-full text-xs font-bold text-blue-200 uppercase tracking-wider mb-6 backdrop-blur-sm">
-            Performance marketing agency
+            E-commerce &amp; D2C growth agency
           </span>
 
           <h1 className="text-[34px] sm:text-[48px] lg:text-[60px] font-extrabold tracking-[-0.02em] leading-[1.08] text-white mb-6 font-sans">
-            Performance marketing that brings{' '}
-            <span className="text-emerald-400 hero-underline">leads and sales</span>
+            More orders from your online store,{' '}
+            <span className="text-emerald-400 hero-underline">at a cost you can track</span>
           </h1>
 
           <p className="text-[16px] md:text-[18px] text-white/80 leading-relaxed max-w-[600px] mb-6">
             Veloxis Global runs <Link href="/services/paid-ads" className="text-white underline decoration-white/40 hover:decoration-emerald-400 hover:text-emerald-400 transition-colors">Meta &amp; Google ads</Link>, builds{' '}
             <Link href="/services/high-converting-landing-pages" className="text-white underline decoration-white/40 hover:decoration-emerald-400 hover:text-emerald-400 transition-colors">websites and landing pages</Link>, improves SEO and sets up{' '}
             <Link href="/services/ai-automation" className="text-white underline decoration-white/40 hover:decoration-emerald-400 hover:text-emerald-400 transition-colors">WhatsApp automation</Link> for
-            e-commerce brands, local businesses and real estate. Judged on enquiries, orders and bookings, not clicks.
+            online stores and D2C brands. We work as your outsourced growth team and report on orders and cost per order, not clicks.
           </p>
 
-          {/* The three niches, as quick links */}
+          {/* Industries, e-commerce first */}
           <ul className="flex flex-wrap gap-2 mb-8" aria-label="Industries we work with">
             {industries.map((ind) => (
               <li key={ind.key}>
@@ -98,7 +98,7 @@ export const HeroSection: React.FC = () => {
           </p>
 
           <div className="hero-fade-in flex flex-wrap items-center gap-x-6 gap-y-3 text-sm text-white/70" style={{ animationDelay: '0.35s' }}>
-            {['Google certified team', 'Ad spend stays in your accounts', 'Month-to-month, no lock-in'].map((t) => (
+            {['Google certified team', 'Your ad accounts, your data', 'Month-to-month, no lock-in'].map((t) => (
               <div key={t} className="flex items-center gap-1.5">
                 <CheckCircle className="w-4 h-4 text-emerald-400 shrink-0" aria-hidden="true" />
                 <span>{t}</span>

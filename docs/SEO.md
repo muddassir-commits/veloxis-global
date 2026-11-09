@@ -2,7 +2,7 @@
 
 How SEO is set up on this site, which page targets which search, and the rules that keep it working.
 
-**Since 8 Nov 2026 (rebrand, PR #67)** Veloxis Global is a multi-niche performance marketing agency with three equal
+**Since 10 Nov 2026 Veloxis Global is e-commerce and D2C first.** Before that (8 Nov 2026, PR #67) it was a multi-niche performance marketing agency with three equal
 niches: e-commerce & D2C, local businesses & clinics, real estate. The homepage, services, city pages and
 `/industries` are generic; the real estate keywords below now belong to the real estate pages and posts only.
 Rows marked "volume not checked" have no researched search volume yet: research them before quoting numbers.

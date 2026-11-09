@@ -2,7 +2,7 @@
 // Logo · Services ▾ · Industries ▾ · Blog · About · [Free Audit]. Real estate sub-pages (Lead System,
 // Channel Partners, NRI, Playbooks, city pages) are linked from /industries/real-estate and the footer.
 
-export type NavIcon = 'ads' | 'web' | 'seo' | 'automation' | 'ecommerce' | 'local' | 'realestate';
+export type NavIcon = 'ads' | 'web' | 'seo' | 'automation' | 'ecommerce' | 'local' | 'realestate' | 'shopify' | 'cro' | 'retention';
 
 export interface NavbarMenuItem {
   title: string;
@@ -25,8 +25,12 @@ export const servicesMenu: NavbarMenu = {
   title: 'Services',
   activePrefix: '/services',
   items: [
-    { title: 'Meta & Google Ads', href: '/services/paid-ads', icon: 'ads', description: 'Campaigns judged on leads and sales, not clicks' },
-    { title: 'Websites & Landing Pages', href: '/services/high-converting-landing-pages', icon: 'web', description: 'Fast pages and Shopify stores that turn visits into enquiries' },
+    { title: 'E-commerce Marketing', href: '/services/ecommerce-marketing', icon: 'ecommerce', description: 'Your outsourced growth team for online stores' },
+    { title: 'Meta & Google Ads', href: '/services/paid-ads', icon: 'ads', description: 'Campaigns judged on orders, not clicks' },
+    { title: 'Shopify Development', href: '/services/shopify-development', icon: 'shopify', description: 'Stores built for phones and Indian buyers' },
+    { title: 'Conversion Optimisation', href: '/services/conversion-rate-optimization', icon: 'cro', description: 'More orders from the traffic you already pay for' },
+    { title: 'Email & WhatsApp Marketing', href: '/services/email-whatsapp-marketing', icon: 'retention', description: 'Cart recovery and repeat orders' },
+    { title: 'Websites & Landing Pages', href: '/services/high-converting-landing-pages', icon: 'web', description: 'Fast pages that turn visits into enquiries' },
     { title: 'SEO & Local SEO', href: '/services/seo', icon: 'seo', description: 'Search, Google Business Profile and Maps visibility' },
     { title: 'WhatsApp & AI Automation', href: '/services/ai-automation', icon: 'automation', description: 'Instant replies and follow-ups for every enquiry' },
   ],

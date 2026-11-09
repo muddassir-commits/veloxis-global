@@ -4,10 +4,10 @@ import { ArrowRight, Check } from 'lucide-react';
 import { ImageFrame } from '../ui/ImageFrame';
 import { industries } from '../../data/industries';
 
-// "Industries we serve": three equal cards (homepage and the /industries hub).
+// "Industries we serve": e-commerce first (homepage and the /industries hub).
 export const IndustriesStrip: React.FC<{ title?: string; intro?: string; headingLevel?: 'h2' | 'h1'; className?: string }> = ({
-  title = 'Three industries, one way of working',
-  intro = 'E-commerce brands, local businesses and real estate sell in different ways. We plan each account around how its customers actually buy, and report on the result that matters for it.',
+  title = 'Built for online stores. Useful for local and real estate too.',
+  intro = 'Most of our focus is e-commerce and D2C. We also work with local businesses and real estate companies, with each plan built around how their customers actually buy.',
   headingLevel = 'h2',
   className = 'bg-white',
 }) => {

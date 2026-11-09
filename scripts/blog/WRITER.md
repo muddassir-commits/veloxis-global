@@ -24,7 +24,7 @@ its date (the "Publish scheduled posts" GitHub Action). Read `docs/BLOG.md` once
    in the open Blog PRs (`gh pr diff <n> | grep '"date"'`): your post must be dated after it.
 2. **Pick the topic.** First topic in `content/blog-queue.json` with `"status": "todo"` whose slug is not
    already a folder in `content/blog/` and not in an open Blog PR (`gh pr list --state open --search "Blog: in:title" --json headRefName`
-   gives branches `blog/<slug>`). Respect the mix rule in the file (three equal niches; the queue is already ordered ecommerce, local, ecommerce, local, real-estate).
+   gives branches `blog/<slug>`). Respect the mix rule in the file (e-commerce first; the queue is ordered two e-commerce topics, then one AI, local or real estate topic; older note: ecommerce, local, ecommerce, local, real-estate).
 3. **Research what ranks (15 minutes max).** WebSearch the `keyword` (and 1–2 close variants). Open the top
    5 organic results (WebFetch). Note for each: headings, questions answered, what's missing, outdated or
    unsourced. Also search the question as a person would ask ChatGPT/Perplexity and note which sources get

@@ -19,6 +19,10 @@ import { WhatsAppFlowSimulator } from '../../../components/services/WhatsAppFlow
 import { Target, CheckCircle, AlertTriangle, ArrowRight } from 'lucide-react';
 
 const serviceHeroImages: Record<string, { src: string; alt: string }> = {
+  'ecommerce-marketing': { src: '/images/people/blog/meta-ads-for-d2c-brands-1.jpg', alt: 'Hands packing a clothing order into a box' },
+  'shopify-development': { src: '/images/people/blog/rt-woman-shopping-online.jpg', alt: 'Woman shopping online' },
+  'conversion-rate-optimization': { src: '/images/people/blog/geo-analytics-dashboard-laptop.jpg', alt: 'Analytics dashboard on a laptop' },
+  'email-whatsapp-marketing': { src: '/images/people/blog/email-woman-phone-coffee.jpg', alt: 'Woman reading a message on her phone' },
   'high-converting-landing-pages': { src: '/images/sections/service-landing-pages.jpg', alt: 'Landing page shown on a laptop and phone' },
   'paid-ads': { src: '/images/sections/service-paid-ads.jpg', alt: 'Ad campaign dashboard' },
   seo: { src: '/images/sections/service-paid-ads.jpg', alt: 'Search and ad performance dashboard' },
@@ -32,6 +36,30 @@ type ServicePhotos = { intro: Photo; deliverables: Photo; process: Photo; sideba
 
 const P = '/images/people/services';
 const servicePhotos: Record<string, ServicePhotos> = {
+  'ecommerce-marketing': {
+    intro: { src: `${P}/ads-team-reviewing-charts.jpg`, alt: 'Marketing team reviewing charts on a laptop at a meeting table' },
+    deliverables: { src: '/images/people/blog/meta-ads-for-d2c-brands-1.jpg', alt: 'Hands packing a clothing order into a box' },
+    process: { src: `${P}/ads-campaign-planning-table.jpg`, alt: 'Team planning a campaign around a table with laptops and charts' },
+    sidebar: { src: '/images/people/blog/rt-woman-shopping-online.jpg', alt: 'Woman shopping online' },
+  },
+  'shopify-development': {
+    intro: { src: '/images/people/blog/rt-woman-shopping-online.jpg', alt: 'Woman shopping online' },
+    deliverables: { src: `${P}/ads-reports-on-laptops.jpg`, alt: 'Two people working on laptops' },
+    process: { src: `${P}/hub-team-reviewing-charts.jpg`, alt: 'Colleagues reviewing printed charts around a laptop' },
+    sidebar: { src: `${P}/ads-woman-scrolling-phone.jpg`, alt: 'Woman scrolling on her phone', position: '70% center' },
+  },
+  'conversion-rate-optimization': {
+    intro: { src: '/images/people/blog/geo-analytics-dashboard-laptop.jpg', alt: 'Analytics dashboard on a laptop' },
+    deliverables: { src: `${P}/ads-reports-on-laptops.jpg`, alt: 'Two people working on laptops surrounded by printed charts' },
+    process: { src: `${P}/ads-team-reviewing-charts.jpg`, alt: 'Marketing team reviewing charts on a laptop' },
+    sidebar: { src: `${P}/ads-woman-scrolling-phone.jpg`, alt: 'Woman scrolling on her phone', position: '70% center' },
+  },
+  'email-whatsapp-marketing': {
+    intro: { src: '/images/people/blog/email-laptop-inbox.jpg', alt: 'An email inbox open on a laptop' },
+    deliverables: { src: `${P}/whatsapp-chatbot-mockup.jpg`, alt: 'Sample WhatsApp chatbot conversation beside an inbox' },
+    process: { src: '/images/people/blog/email-man-laptop-office.jpg', alt: 'Man working on a laptop in an office' },
+    sidebar: { src: '/images/people/blog/email-woman-phone-coffee.jpg', alt: 'Woman reading a message on her phone' },
+  },
   'high-converting-landing-pages': {
     intro: { src: `${P}/real-estate-landing-page-mockup.jpg`, alt: 'Sample real estate project landing page on a laptop and phone, with price, RERA number and site-visit form' },
     deliverables: { src: `${P}/lp-couple-browsing-tablet.jpg`, alt: 'Couple browsing on a tablet together on their sofa', position: 'center 30%' },
@@ -248,9 +276,9 @@ export default async function ServicePage({ params }: PageProps) {
                 ))}
               </ul>
               <div className="mt-6 pt-5 border-t border-white/10 flex flex-col gap-2 text-sm">
-                <Link href="/industries/ecommerce" className="text-teal-300 hover:text-white font-semibold">E-commerce & D2C →</Link>
-                <Link href="/industries/local-business" className="text-teal-300 hover:text-white font-semibold">Local businesses & clinics →</Link>
-                <Link href="/industries/real-estate" className="text-teal-300 hover:text-white font-semibold">Real estate →</Link>
+                <Link href="/industries/ecommerce" className="inline-block py-1.5 text-teal-300 hover:text-white font-semibold">E-commerce & D2C →</Link>
+                <Link href="/industries/local-business" className="inline-block py-1.5 text-teal-300 hover:text-white font-semibold">Local businesses & clinics →</Link>
+                <Link href="/industries/real-estate" className="inline-block py-1.5 text-teal-300 hover:text-white font-semibold">Real estate →</Link>
               </div>
             </div>
 
@@ -261,7 +289,7 @@ export default async function ServicePage({ params }: PageProps) {
                 We review your current site, ads and lead follow-up and tell you what to fix first — free, with no obligation.
               </p>
               <p className="text-sm text-slate-500 mt-3">Month-to-month, 30 days’ notice, no lock-in.</p>
-              <Link href="/free-audit" className="group inline-flex items-center gap-1 mt-4 text-sm font-bold text-royal-blue hover:underline">
+              <Link href="/free-audit" className="group inline-flex items-center gap-1 mt-4 py-1.5 text-sm font-bold text-royal-blue hover:underline">
                 What the audit covers <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" aria-hidden="true" />
               </Link>
             </div>
@@ -288,7 +316,7 @@ export default async function ServicePage({ params }: PageProps) {
               <div key={b.title} className="bg-slate-50 rounded-2xl border border-slate-200 p-6 flex flex-col">
                 <h3 className="font-bold text-slate-900 text-lg mb-2">{b.title}</h3>
                 <p className="text-sm text-slate-600 leading-relaxed flex-grow">{b.desc}</p>
-                <Link href={b.href} className="group inline-flex items-center gap-1 mt-4 text-sm font-bold text-royal-blue hover:underline">
+                <Link href={b.href} className="group inline-flex items-center gap-1 mt-4 py-1.5 text-sm font-bold text-royal-blue hover:underline">
                   {b.linkLabel} <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" aria-hidden="true" />
                 </Link>
               </div>
