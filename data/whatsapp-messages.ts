@@ -420,4 +420,12 @@ export const BLOG_MESSAGES: Record<string, { ref: string; message: string }> = {
     ref: 'blog-wa-api',
     message: 'I read your post on the WhatsApp Business API. Can you help me set it up for my enquiries?',
   },
+  'property-dealer-marketing-ideas': {
+    ref: 'blog-dealer-ideas',
+    message: 'I read your post on property dealer marketing ideas. Can you help me get more enquiries for my listings?',
+  },
+  'whatsapp-abandoned-cart-d2c': {
+    ref: 'blog-wa-cart',
+    message: 'I read your post on WhatsApp abandoned cart messages. Can you help me set up cart reminders for my online store?',
+  },
 };
