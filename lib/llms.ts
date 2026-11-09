@@ -16,7 +16,7 @@ import {
 
 const qa = (list: { question: string; answer: string }[] = []) => list.flatMap((f) => [`Q: ${f.question}`, `A: ${f.answer}`, '']);
 
-const intro = `> ${siteData.definition} It works with three equal niches (e-commerce and D2C brands, local businesses and clinics, real estate) and reports on enquiries, orders, bookings and site visits rather than clicks.`;
+const intro = `> ${siteData.definition} Its main focus is e-commerce and D2C brands, and it also works with local businesses and clinics and real estate companies, and reports on enquiries, orders, bookings and site visits rather than clicks.`;
 
 // Build date: the llms routes are static, so this is when the content was last published.
 const updated = `Last updated: ${new Date().toISOString().slice(0, 10)}`;

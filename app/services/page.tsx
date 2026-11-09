@@ -10,7 +10,7 @@ import { Breadcrumb } from '../../components/ui/Breadcrumb';
 import { SchemaMarkup } from '../../components/ui/SchemaMarkup';
 import { getWebPageSchema } from '../../lib/schema';
 import { servicesData } from '../../data/services-data';
-import { Target, Code, Zap, Search, ArrowRight, Check } from 'lucide-react';
+import { Target, Code, Zap, Search, ShoppingBag, Store, MousePointerClick, Mail, ArrowRight, Check } from 'lucide-react';
 import { CtaBanner } from '../../components/sections/CtaBanner';
 import { FaqAccordion } from '../../components/sections/FaqAccordion';
 import { servicesHubFaqs } from '../../data/page-faqs';
@@ -21,6 +21,22 @@ export const metadata: Metadata = constructMetadata(pageMeta.services);
 // Card images, all 1200x750 to match the 16/10 card frame: sample-design mockups
 // for landing pages and automation, a Pexels photo for ads.
 const serviceImages: Record<string, { src: string; alt: string }> = {
+  'ecommerce-marketing': {
+    src: '/images/people/blog/meta-ads-for-d2c-brands-1.jpg',
+    alt: 'Hands packing a clothing order into a cardboard box next to folded sweaters',
+  },
+  'shopify-development': {
+    src: '/images/people/services/hub-team-reviewing-charts.jpg',
+    alt: 'Four colleagues reviewing printed charts around a laptop',
+  },
+  'conversion-rate-optimization': {
+    src: '/images/people/blog/geo-analytics-dashboard-laptop.jpg',
+    alt: 'An analytics dashboard open on a laptop',
+  },
+  'email-whatsapp-marketing': {
+    src: '/images/people/home/whatsapp-chatbot-mockup.jpg',
+    alt: 'Sample WhatsApp chatbot conversation beside an inbox',
+  },
   'high-converting-landing-pages': {
     src: '/images/people/home/real-estate-landing-page-mockup.jpg',
     alt: 'Sample landing page mockup on a laptop and phone, with price, trust points and an enquiry form',
@@ -39,7 +55,7 @@ const serviceImages: Record<string, { src: string; alt: string }> = {
   },
 };
 
-const iconMap: Record<string, React.ComponentType<{ className?: string }>> = { Target, Code, Zap, Search };
+const iconMap: Record<string, React.ComponentType<{ className?: string }>> = { Target, Code, Zap, Search, ShoppingBag, Store, MousePointerClick, Mail };
 
 const accentColors: Record<string, string> = {
   teal: 'bg-teal-500/10 text-teal-600 border-teal-200/50',
@@ -69,12 +85,12 @@ export default function ServicesPage() {
         <div className="max-w-container-max mx-auto px-gutter">
           <Badge variant="teal" className="mb-4">WHAT WE DO</Badge>
           <h1 className="text-4xl sm:text-headline-lg font-extrabold text-slate-900 tracking-tight mb-4">
-            Digital Marketing Services for Leads and Sales
+            E-commerce Marketing Services for More Orders
           </h1>
           <p className="text-base sm:text-body-md text-on-surface-variant max-w-2xl mx-auto leading-relaxed">
-            Four services that work as one growth engine for e-commerce brands, local businesses and real estate: Meta and
-            Google ads that bring people in, pages that turn visits into enquiries and orders, SEO that gets you found, and
-            WhatsApp automation that answers every enquiry in seconds. Take one, or combine them.
+            One growth system for online stores and D2C brands: Meta and Google ads that bring buyers in, Shopify stores and
+            product pages that convert them, email and WhatsApp that bring them back, and SEO that keeps them coming. Local
+            businesses and real estate companies use the same services. Take one, or combine them.
           </p>
           <ReviewedLine className="text-slate-500 mt-4" />
         </div>

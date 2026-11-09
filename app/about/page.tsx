@@ -20,14 +20,14 @@ const values = [
   { icon: <Target className="w-5 h-5 text-royal-blue" />, title: 'Results, not clicks', desc: 'Every campaign is reported on enquiries, site visits or orders — the numbers your sales team cares about.' },
   { icon: <Eye className="w-5 h-5 text-royal-blue" />, title: 'Your accounts, your data', desc: 'Ads run from your own Google and Meta accounts, and lead data stays in your CRM or sheet.' },
   { icon: <Users className="w-5 h-5 text-royal-blue" />, title: 'No middlemen', desc: 'You work directly with the people planning your campaigns, not a rotating account manager.' },
-  { icon: <MapPin className="w-5 h-5 text-royal-blue" />, title: 'Three industries, not thirty', desc: 'E-commerce brands, local businesses and real estate. We stay in industries we know well instead of taking everyone.' },
+  { icon: <MapPin className="w-5 h-5 text-royal-blue" />, title: 'E-commerce first', desc: 'Most of our work is for online stores and D2C brands. We also take local business and real estate work, not everyone who asks.' },
 ];
 
 const steps = [
-  { title: 'Audit', desc: 'We review your project pages, ad accounts, lead sources and how fast enquiries are answered today.' },
-  { title: 'Plan', desc: 'A 90-day plan covering channels, campaign structure, budget split, pages and WhatsApp flows.' },
-  { title: 'Build', desc: 'Landing page, tracking, WhatsApp automation and CRM connection, tested before launch.' },
-  { title: 'Launch', desc: 'Meta and Google campaigns go live with every enquiry answered on WhatsApp in seconds.' },
+  { title: 'Audit', desc: 'We review your store or website, ad accounts, tracking and how fast customers get a reply today.' },
+  { title: 'Plan', desc: 'A 90-day plan covering channels, campaign structure, budget split, store fixes and retention flows.' },
+  { title: 'Build', desc: 'Store or landing page fixes, purchase tracking and email and WhatsApp flows, tested before launch.' },
+  { title: 'Launch', desc: 'Meta and Google campaigns go live with tracking and follow-ups already in place.' },
   { title: 'Optimise', desc: 'Weekly changes towards the campaigns producing orders, bookings and qualified enquiries, with a plain-language report.' },
 ];
 
@@ -98,7 +98,7 @@ export default function AboutPage() {
             <p>
               The fix isn’t just more leads. It’s a connected system: a page built to convert, ads that bring the right
               people, search visibility that keeps them coming, and follow-up that happens in seconds instead of hours.
-              That is what Veloxis Global builds for e-commerce brands, local businesses and real estate.
+              That is what Veloxis Global builds for online stores and D2C brands.
             </p>
             <div className="border-l-4 border-royal-blue pl-4 py-2 my-2 italic text-slate-900 font-semibold bg-slate-50">
               We don’t just run ads. We build the path from the ad to the sale, and measure every step of it.

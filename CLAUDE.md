@@ -2,10 +2,12 @@
 
 # veloxisglobal.com: guide for anyone editing this repo
 
-Veloxis Global is a **multi-niche performance marketing agency** (Noida, India; service-area business). Three
-equal niches: **E-commerce & D2C**, **Local businesses & clinics**, **Real estate**. Services: Meta & Google ads,
-websites/landing pages (incl. Shopify), SEO + local SEO/Google Business Profile, WhatsApp & AI automation.
-Month-to-month, free audit first, the client owns the ad accounts. Rebrand live since 8 Nov 2026 (PR #67).
+Veloxis Global is an **e-commerce and D2C growth agency** (Noida, India; service-area business). E-commerce leads
+since 10 Nov 2026 (owner: ROI Hunt is the one competitor to follow); **local businesses & clinics** and **real estate**
+stay live as secondary industries. Services: E-commerce marketing, Meta & Google ads, Shopify development, conversion
+optimisation, email & WhatsApp marketing, websites/landing pages, SEO + local SEO, WhatsApp & AI automation.
+Month-to-month, free audit first, the client owns the ad accounts. Follow ROI Hunt's niche, never its unverified
+claims: no "guaranteed growth", client logos, ratings or performance numbers until they are real.
 
 Start with `README.md`: commands, route map, blog pipeline (industry tag, 7 AM publishing, auto-merge of Blog
 PRs), analytics events, cookie default (PR #70), Meta Conversions API (PR #68) and how to add a service or niche

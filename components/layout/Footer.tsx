@@ -17,7 +17,11 @@ const footerColumns = [
     id: 'services',
     title: 'Services',
     links: [
+      { label: 'E-commerce Marketing', href: '/services/ecommerce-marketing' },
       { label: 'Meta & Google Ads', href: '/services/paid-ads' },
+      { label: 'Shopify Development', href: '/services/shopify-development' },
+      { label: 'Conversion Optimisation', href: '/services/conversion-rate-optimization' },
+      { label: 'Email & WhatsApp Marketing', href: '/services/email-whatsapp-marketing' },
       { label: 'Websites & Landing Pages', href: '/services/high-converting-landing-pages' },
       { label: 'SEO & Local SEO', href: '/services/seo' },
       { label: 'WhatsApp & AI Automation', href: '/services/ai-automation' },
@@ -131,7 +135,7 @@ export const Footer: React.FC = () => {
               />
             </Link>
             <p className="text-[15px] sm:text-[16px] text-slate-400 leading-relaxed max-w-lg">
-              A performance marketing agency for e-commerce brands, local businesses and real estate. Meta and Google ads, websites, SEO and WhatsApp automation, measured on leads and sales.
+              An e-commerce and D2C growth agency. Meta and Google ads, Shopify stores, conversion optimisation, email and WhatsApp marketing and SEO, measured on orders.
             </p>
             <div className="flex flex-wrap gap-2">
               <span className="text-xs font-bold tracking-wider uppercase bg-white/5 border border-white/10 px-2.5 py-1 rounded-full text-slate-400">
@@ -149,7 +153,7 @@ export const Footer: React.FC = () => {
               <div className="absolute top-0 right-0 w-24 h-24 bg-royal-blue/10 rounded-full blur-2xl"></div>
               <div className="flex flex-col gap-2 max-w-md">
                 <span className="text-xs font-black tracking-widest text-blue-300 uppercase">FREE MARKETING AUDIT</span>
-                <p className="text-lg sm:text-xl font-extrabold text-white">Want more leads and sales from your ad budget?</p>
+                <p className="text-lg sm:text-xl font-extrabold text-white">Want more orders from your ad budget?</p>
                 <p className="text-xs sm:text-sm text-slate-400 leading-relaxed">
                   Get a free audit from our team. We&apos;ll review your website, ads and lead follow-up and show you what to fix first.
                 </p>
@@ -174,11 +178,11 @@ export const Footer: React.FC = () => {
           {/* Contact + service area (always open) */}
           <div className="md:col-span-2 lg:col-span-4 flex flex-col gap-4 pb-6 md:pb-0 border-b border-white/5 md:border-b-0">
             <span className="text-[12px] tracking-[0.08em] uppercase text-slate-200 font-black">GET IN TOUCH</span>
-            <WhatsAppLink placement="footer" className="text-[15px] text-slate-200 hover:text-white transition-colors flex items-center gap-2.5 w-fit min-h-[28px]">
+            <WhatsAppLink placement="footer" className="text-[15px] text-slate-200 hover:text-white transition-colors flex items-center gap-2.5 w-fit min-h-[32px]">
               <WhatsAppIcon className="w-4 h-4 shrink-0" />
               <span>WhatsApp {siteData.phone}</span>
             </WhatsAppLink>
-            <a href={`mailto:${siteData.email}`} className="text-[15px] text-slate-200 hover:text-white transition-colors flex items-center gap-2.5 w-fit min-h-[28px] break-all">
+            <a href={`mailto:${siteData.email}`} className="text-[15px] text-slate-200 hover:text-white transition-colors flex items-center gap-2.5 w-fit min-h-[32px] break-all">
               <Mail className="w-4 h-4 text-royal-blue shrink-0" aria-hidden="true" />
               <span>{siteData.email}</span>
             </a>
@@ -264,7 +268,7 @@ export const Footer: React.FC = () => {
             <div className="text-left flex flex-col gap-1 max-w-xl">
               <p className="text-base sm:text-lg font-extrabold text-white">Marketing tips, by email</p>
               <p className="text-xs sm:text-sm text-slate-400 leading-normal">
-                Practical notes on ads, websites, SEO and WhatsApp follow-up for online brands, local businesses and real estate.
+                Practical notes on ads, Shopify, conversion and repeat orders for online stores and D2C brands.
               </p>
             </div>
 

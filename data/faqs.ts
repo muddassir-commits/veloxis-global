@@ -9,12 +9,12 @@ export const faqs: FAQItem[] = [
   {
     question: 'What does Veloxis Global do?',
     answer:
-      'Veloxis Global is a performance marketing agency. We run Meta (Facebook and Instagram) and Google ads, build websites, landing pages and Shopify store pages, improve SEO and Google Business Profiles, and set up WhatsApp and AI automation so every enquiry gets a fast reply. The work is judged on leads, orders and bookings, not clicks.',
+      'Veloxis Global is an e-commerce and D2C growth agency. We run Meta (Facebook and Instagram) and Google ads, build and fix Shopify stores, improve conversion rates, set up email and WhatsApp flows for carts and repeat orders, and handle SEO. We report on orders and cost per order.',
   },
   {
-    question: 'Which industries do you work with?',
+    question: 'Which businesses do you work with?',
     answer:
-      'Three: e-commerce and D2C brands, local businesses and clinics (dentists, clinics, salons, home services and similar), and real estate (developers, builders, brokers and channel partners). Each gets a plan built around how its customers actually buy.',
+      'Mainly online stores and D2C brands, from new Shopify stores to brands already spending on ads. We also work with local businesses and clinics, and with real estate developers, brokers and channel partners. Each gets a plan built around how its customers actually buy.',
   },
   {
     question: 'What is performance marketing?',

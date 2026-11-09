@@ -1,8 +1,8 @@
 {
   "about": "Topic backlog for the daily blog writer (scripts/blog/WRITER.md). The writer takes the first topic with status 'todo', researches what ranks now, writes the post, and sets status to 'done' with the slug and date. Keep at least 10 'todo' topics; add new ones at the end with the same fields. Volumes are from our Sep 2026 keyword research (memory keyword-research) where known, otherwise null: never invent one. Competitor URLs are what ranked when the topic was added (5 Nov 2026); re-check them at write time.",
   "rules": [
-    "Mix: three equal niches (e-commerce & D2C, local business & clinics, real estate). Queue order is ecommerce, local, ecommerce, local, real-estate, repeated; keep that order when adding topics.",
-    "Every topic has an industry (ecommerce, local-business or real-estate). The post.json of the finished post must carry the same value.",
+    "Mix: e-commerce and D2C first since 10 Nov 2026. Queue order is two e-commerce topics, then one AI, local or real estate topic; keep that order when adding topics.",
+    "Every topic has an industry (ecommerce, local-business, real-estate or general for AI topics). The post.json of the finished post must carry the same value.",
     "No invented numbers, results, clients or testimonials. Every figure needs a cited source in the post.",
     "Never name the founder. Author is the Veloxis Global team.",
     "No prices for our own services anywhere."
@@ -144,101 +144,345 @@
       "date": "2026-11-10"
     },
     {
-      "slug": "channel-partner-registration",
-      "industry": "real-estate",
-      "keyword": "channel partner registration real estate",
-      "volume": null,
-      "intent": "how-to",
-      "question": "How does a broker register as a channel partner with a developer, and what documents are needed?",
-      "category": "Guides",
-      "competitors": [],
-      "gaps": "Research at write time. Link RERA agent registration and the channel partner explainer.",
-      "internalLinks": [
-        "/blog/channel-partner-in-real-estate",
-        "/blog/rera-registration-for-agents",
-        "/blog/real-estate-broker-commission-india"
-      ],
-      "status": "done",
-      "date": "2026-11-11"
-    },
-    {
-      "slug": "real-estate-google-business-profile",
-      "industry": "real-estate",
-      "keyword": "google business profile for real estate agents",
-      "volume": null,
-      "intent": "how-to",
-      "question": "How should a real estate agent or builder set up a Google Business Profile in India?",
-      "category": "Guides",
-      "competitors": [],
-      "gaps": "Research at write time. Site-office vs service-area profile, project names in the business name (not allowed), RERA number in the description.",
-      "internalLinks": [
-        "/blog/google-business-profile-checklist",
-        "/blog/real-estate-local-seo-ncr",
-        "/blog/real-estate-seo-india"
-      ],
-      "status": "done",
-      "date": "2026-11-12"
-    },
-    {
-      "slug": "meta-ads-for-d2c-brands",
+      "slug": "d2c-brand-launch-checklist",
       "industry": "ecommerce",
-      "keyword": "meta ads for d2c brands",
+      "keyword": "how to launch a d2c brand in india",
       "volume": null,
       "intent": "how-to",
-      "question": "How should a new D2C brand in India structure Meta ads, creatives and tracking?",
+      "question": "What does a D2C brand need in place before its first ad goes live?",
+      "category": "Guides",
+      "competitors": [
+        "https://www.shopaccino.com/blog/the-complete-guide-to-building-a-d2c-brand-in-india",
+        "https://inc42.com/buzz/the-d2c-day-masterclass-demystifying-d2c-marketing",
+        "https://tetr.com/blog/from-concept-to-cart-building-a-successful-d2c-brand-in-india"
+      ],
+      "gaps": "Guides are long on theory. Missing: a pre-launch checklist (GST, legal pages, pixel and CAPI, COD rules, WhatsApp opt-in, returns page, speed).",
+      "internalLinks": [
+        "/d2c",
+        "/blog/meta-ads-for-d2c-brands"
+      ],
+      "status": "todo"
+    },
+    {
+      "slug": "google-ads-for-d2c-brands",
+      "industry": "ecommerce",
+      "keyword": "google shopping ads india",
+      "volume": null,
+      "intent": "how-to",
+      "question": "How does a D2C brand set up Google Shopping and Performance Max in India?",
       "category": "Paid Ads",
       "service": "paid-ads",
-      "competitors": [
-        "https://sociolabs.in/d2c-brands-india-meta-ads-roas/",
-        "https://echai.ventures/d2c/path/profitable-ads",
-        "https://www.imarkinfotech.com/indian-d2c-brands-are-getting-destroyed-on-meta-ads-in-2026-10-reasons-why-and-how-to-fix-it/"
-      ],
-      "gaps": "Ranking pages promise ROAS figures and quote CPMs that conflict. Ours: account structure, Conversions API, creative testing plan, ASCI/Meta policy on claims, no promised results.",
+      "competitors": [],
+      "gaps": "Research at write time. Merchant Center feed, policy, branded vs generic search.",
       "internalLinks": [
         "/d2c",
-        "/blog/meta-ads-for-real-estate-india",
-        "/services/paid-ads"
+        "/blog/google-ads-vs-meta-ads-real-estate-india"
       ],
-      "status": "done",
-      "date": "2026-11-13"
+      "status": "todo"
     },
     {
-      "slug": "real-estate-content-ideas",
-      "industry": "real-estate",
-      "keyword": "real estate content ideas",
+      "slug": "ai-marketing-agency-what-it-does",
+      "industry": "general",
+      "keyword": "ai marketing agency",
       "volume": null,
-      "intent": "informational",
-      "question": "What should a builder or broker post on Instagram, YouTube and WhatsApp every week?",
-      "category": "Growth Tips",
-      "competitors": [],
-      "gaps": "Research at write time. India-specific ideas: construction updates, locality guides, RERA explainers, buyer FAQs.",
-      "internalLinks": [
-        "/blog/real-estate-social-media-marketing",
-        "/blog/instagram-reels-marketing",
-        "/blog/real-estate-video-marketing"
-      ],
-      "status": "done",
-      "date": "2026-11-14"
-    },
-    {
-      "slug": "whatsapp-abandoned-cart-d2c",
-      "industry": "ecommerce",
-      "keyword": "whatsapp abandoned cart",
-      "volume": null,
-      "intent": "how-to",
-      "question": "How should a D2C brand in India set up WhatsApp abandoned-cart messages without spamming?",
+      "intent": "commercial investigation",
+      "question": "What does an AI marketing agency actually do, and how should a business check one?",
       "category": "AI Automation",
       "service": "ai-automation",
-      "competitors": [
-        "https://blog.velocity.in/how-to-use-whatsapp-automation-to-recover-abandoned-carts-in-india/",
-        "https://echai.ventures/d2c/d2c-whatsapp-sms/sell-and-recover-carts-on-whatsapp",
-        "https://clicksbazaar.com/whatsapp-marketing-automation-for-d2c-brands/"
+      "competitors": [],
+      "gaps": "Top results are agencies ranking themselves. Write the buyer's checklist: what AI does, what a human still decides, questions to ask, red flags.",
+      "internalLinks": [
+        "/services/ai-automation",
+        "/services/ecommerce-marketing"
       ],
-      "gaps": "Ranking pages quote conflicting vendor recovery rates (12% to 45%). Ours: opt-in, template rules from Meta's docs, timing as a test plan, message copy, COD confirmation.",
+      "status": "todo"
+    },
+    {
+      "slug": "d2c-customer-retention",
+      "industry": "ecommerce",
+      "keyword": "customer retention strategies for d2c brands",
+      "volume": null,
+      "intent": "how-to",
+      "question": "How does a D2C brand get second and third orders from the same customers?",
+      "category": "Growth Tips",
+      "competitors": [],
+      "gaps": "Research at write time. Email, WhatsApp, reorder reminders, reviews; no unsourced repeat-rate numbers.",
       "internalLinks": [
         "/d2c",
-        "/blog/real-estate-whatsapp-message-templates",
-        "/blog/whatsapp-business-api-for-real-estate"
+        "/blog/whatsapp-abandoned-cart-d2c",
+        "/blog/real-estate-email-marketing"
+      ],
+      "status": "todo"
+    },
+    {
+      "slug": "ugc-ads-for-d2c",
+      "industry": "ecommerce",
+      "keyword": "ugc ads",
+      "volume": null,
+      "intent": "how-to",
+      "question": "How does a D2C brand brief, buy and test user-generated content ads legally?",
+      "category": "Paid Ads",
+      "service": "paid-ads",
+      "competitors": [],
+      "gaps": "Research at write time. ASCI influencer disclosure guidelines, usage rights.",
+      "internalLinks": [
+        "/d2c",
+        "/blog/meta-ads-for-d2c-brands"
+      ],
+      "status": "todo"
+    },
+    {
+      "slug": "whatsapp-ai-chatbot-for-business",
+      "industry": "general",
+      "keyword": "whatsapp chatbot for business",
+      "volume": null,
+      "intent": "commercial investigation",
+      "question": "What should a WhatsApp AI chatbot do for a business, and what should it never do?",
+      "category": "AI Automation",
+      "service": "ai-automation",
+      "competitors": [],
+      "gaps": "Most pages are vendors. Cover consent, opt-in, handover to a human, what Meta allows, and a reply flow for a store.",
+      "internalLinks": [
+        "/services/ai-automation",
+        "/services/ecommerce-marketing"
+      ],
+      "status": "todo"
+    },
+    {
+      "slug": "shopify-store-conversion-checklist",
+      "industry": "ecommerce",
+      "keyword": "shopify conversion rate optimization",
+      "volume": null,
+      "intent": "how-to",
+      "question": "What should a D2C brand fix on its Shopify store before spending more on ads?",
+      "category": "Landing Pages",
+      "service": "high-converting-landing-pages",
+      "competitors": [],
+      "gaps": "Research at write time.",
+      "internalLinks": [
+        "/d2c",
+        "/tools/website-audit"
+      ],
+      "status": "todo"
+    },
+    {
+      "slug": "meta-ads-for-ecommerce-india",
+      "industry": "ecommerce",
+      "keyword": "meta ads for ecommerce",
+      "volume": null,
+      "intent": "informational",
+      "question": "How should an online store in India set up Meta ads that turn spend into orders?",
+      "category": "Paid Ads",
+      "service": "paid-ads",
+      "competitors": [],
+      "gaps": "Research at write time: check the top 5 results for India/US-specific detail they miss.",
+      "internalLinks": [
+        "/industries/ecommerce",
+        "/tools/website-audit"
+      ],
+      "status": "todo"
+    },
+    {
+      "slug": "ai-voice-agents-india",
+      "industry": "general",
+      "keyword": "ai voice agent india",
+      "volume": null,
+      "intent": "commercial investigation",
+      "question": "Where do AI voice agents work for Indian businesses, and where do they fail?",
+      "category": "AI Automation",
+      "service": "ai-automation",
+      "competitors": [],
+      "gaps": "Cover TRAI and DND rules, consent, Hindi quality limits and which calls should stay human. No invented savings numbers.",
+      "internalLinks": [
+        "/services/ai-automation",
+        "/services/ecommerce-marketing"
+      ],
+      "status": "todo"
+    },
+    {
+      "slug": "good-roas-for-ecommerce",
+      "industry": "ecommerce",
+      "keyword": "what is a good roas",
+      "volume": null,
+      "intent": "informational",
+      "question": "What is a good ROAS for an online store, and why is break-even ROAS the number that matters?",
+      "category": "Paid Ads",
+      "service": "paid-ads",
+      "competitors": [],
+      "gaps": "Research at write time: check the top 5 results for India/US-specific detail they miss.",
+      "internalLinks": [
+        "/industries/ecommerce",
+        "/tools/website-audit"
+      ],
+      "status": "todo"
+    },
+    {
+      "slug": "abandoned-cart-email-sequence",
+      "industry": "ecommerce",
+      "keyword": "abandoned cart email sequence",
+      "volume": null,
+      "intent": "informational",
+      "question": "How do you build an abandoned cart email sequence that wins back orders?",
+      "category": "AI Automation",
+      "service": "ai-automation",
+      "competitors": [],
+      "gaps": "Research at write time: check the top 5 results for India/US-specific detail they miss.",
+      "internalLinks": [
+        "/industries/ecommerce",
+        "/tools/website-audit"
+      ],
+      "status": "todo"
+    },
+    {
+      "slug": "ai-automation-small-business",
+      "industry": "general",
+      "keyword": "ai automation for small business",
+      "volume": null,
+      "intent": "informational",
+      "question": "Which business jobs should a small business automate first with AI?",
+      "category": "AI Automation",
+      "service": "ai-automation",
+      "competitors": [],
+      "gaps": "List jobs by effort and risk: missed-call reply, review ask, invoice reminder, cart recovery.",
+      "internalLinks": [
+        "/services/ai-automation",
+        "/services/ecommerce-marketing"
+      ],
+      "status": "todo"
+    },
+    {
+      "slug": "product-page-conversion-rate-optimization",
+      "industry": "ecommerce",
+      "keyword": "product page optimization",
+      "volume": null,
+      "intent": "informational",
+      "question": "What should a product page include to convert ad clicks into orders?",
+      "category": "Landing Pages",
+      "service": "high-converting-landing-pages",
+      "competitors": [],
+      "gaps": "Research at write time: check the top 5 results for India/US-specific detail they miss.",
+      "internalLinks": [
+        "/industries/ecommerce",
+        "/tools/website-audit"
+      ],
+      "status": "todo"
+    },
+    {
+      "slug": "google-shopping-ads-india",
+      "industry": "ecommerce",
+      "keyword": "google shopping ads",
+      "volume": null,
+      "intent": "informational",
+      "question": "How do Google Shopping ads work for Indian online stores, step by step?",
+      "category": "Paid Ads",
+      "service": "paid-ads",
+      "competitors": [],
+      "gaps": "Research at write time: check the top 5 results for India/US-specific detail they miss.",
+      "internalLinks": [
+        "/industries/ecommerce",
+        "/tools/website-audit"
+      ],
+      "status": "todo"
+    },
+    {
+      "slug": "claude-for-marketing",
+      "industry": "general",
+      "keyword": "claude for marketing",
+      "volume": null,
+      "intent": "informational",
+      "question": "How can a small marketing team use Claude for real work?",
+      "category": "AI Automation",
+      "service": "ai-automation",
+      "competitors": [],
+      "gaps": "Show workflows with screenshots: keyword clustering, ad copy variants, reports and reels. Mark every output as a sample.",
+      "internalLinks": [
+        "/services/ai-automation",
+        "/services/ecommerce-marketing"
+      ],
+      "status": "todo"
+    },
+    {
+      "slug": "performance-max-for-ecommerce",
+      "industry": "ecommerce",
+      "keyword": "performance max ecommerce",
+      "volume": null,
+      "intent": "informational",
+      "question": "How should an online store set up and judge Google Performance Max campaigns?",
+      "category": "Paid Ads",
+      "service": "paid-ads",
+      "competitors": [],
+      "gaps": "Research at write time: check the top 5 results for India/US-specific detail they miss.",
+      "internalLinks": [
+        "/industries/ecommerce",
+        "/tools/website-audit"
+      ],
+      "status": "todo"
+    },
+    {
+      "slug": "diwali-sale-campaign-ecommerce",
+      "industry": "ecommerce",
+      "keyword": "diwali sale marketing",
+      "volume": null,
+      "intent": "informational",
+      "question": "How does an online store plan a Diwali sale campaign from teaser to last-day push?",
+      "category": "Growth Tips",
+      "service": "paid-ads",
+      "competitors": [],
+      "gaps": "Research at write time: check the top 5 results for India/US-specific detail they miss.",
+      "internalLinks": [
+        "/industries/ecommerce",
+        "/tools/website-audit"
+      ],
+      "status": "todo"
+    },
+    {
+      "slug": "ai-generated-ads-rules",
+      "industry": "general",
+      "keyword": "ai generated ads",
+      "volume": null,
+      "intent": "informational",
+      "question": "How should a brand use AI-generated ads, and what must be disclosed in India?",
+      "category": "AI Automation",
+      "service": "ai-automation",
+      "competitors": [],
+      "gaps": "Cover India's AI label rules, Meta's AI info label, a test against real creative, and when AI faces hurt trust.",
+      "internalLinks": [
+        "/services/ai-automation",
+        "/services/ecommerce-marketing"
+      ],
+      "status": "todo"
+    },
+    {
+      "slug": "influencer-marketing-for-d2c-india",
+      "industry": "ecommerce",
+      "keyword": "influencer marketing d2c india",
+      "volume": null,
+      "intent": "informational",
+      "question": "How can a D2C brand work with influencers in India without wasting budget?",
+      "category": "Growth Tips",
+      "service": "paid-ads",
+      "competitors": [],
+      "gaps": "Research at write time: check the top 5 results for India/US-specific detail they miss.",
+      "internalLinks": [
+        "/industries/ecommerce",
+        "/tools/website-audit"
+      ],
+      "status": "todo"
+    },
+    {
+      "slug": "reduce-cod-rto-india",
+      "industry": "ecommerce",
+      "keyword": "reduce rto in ecommerce",
+      "volume": null,
+      "intent": "informational",
+      "question": "How do Indian online stores cut COD returns (RTO)?",
+      "category": "Guides",
+      "service": "ai-automation",
+      "competitors": [],
+      "gaps": "Research at write time: check the top 5 results for India/US-specific detail they miss.",
+      "internalLinks": [
+        "/industries/ecommerce",
+        "/tools/website-audit"
       ],
       "status": "todo"
     },
@@ -263,22 +507,36 @@
       "status": "todo"
     },
     {
-      "slug": "d2c-brand-launch-checklist",
+      "slug": "shopify-seo-checklist",
       "industry": "ecommerce",
-      "keyword": "how to launch a d2c brand in india",
+      "keyword": "shopify seo checklist",
       "volume": null,
-      "intent": "how-to",
-      "question": "What does a D2C brand need in place before its first ad goes live?",
+      "intent": "informational",
+      "question": "What is the Shopify SEO checklist that matters for store rankings?",
       "category": "Guides",
-      "competitors": [
-        "https://www.shopaccino.com/blog/the-complete-guide-to-building-a-d2c-brand-in-india",
-        "https://inc42.com/buzz/the-d2c-day-masterclass-demystifying-d2c-marketing",
-        "https://tetr.com/blog/from-concept-to-cart-building-a-successful-d2c-brand-in-india"
-      ],
-      "gaps": "Guides are long on theory. Missing: a pre-launch checklist (GST, legal pages, pixel and CAPI, COD rules, WhatsApp opt-in, returns page, speed).",
+      "service": "high-converting-landing-pages",
+      "competitors": [],
+      "gaps": "Research at write time: check the top 5 results for India/US-specific detail they miss.",
       "internalLinks": [
-        "/d2c",
-        "/blog/meta-ads-for-d2c-brands"
+        "/industries/ecommerce",
+        "/tools/website-audit"
+      ],
+      "status": "todo"
+    },
+    {
+      "slug": "ecommerce-email-marketing-flows",
+      "industry": "ecommerce",
+      "keyword": "ecommerce email flows",
+      "volume": null,
+      "intent": "informational",
+      "question": "Which email flows should every online store set up first?",
+      "category": "AI Automation",
+      "service": "ai-automation",
+      "competitors": [],
+      "gaps": "Research at write time: check the top 5 results for India/US-specific detail they miss.",
+      "internalLinks": [
+        "/industries/ecommerce",
+        "/tools/website-audit"
       ],
       "status": "todo"
     },
@@ -301,37 +559,36 @@
       "status": "todo"
     },
     {
-      "slug": "real-estate-lead-generation-companies",
-      "industry": "real-estate",
-      "keyword": "real estate lead generation companies",
+      "slug": "d2c-landing-page-for-ads",
+      "industry": "ecommerce",
+      "keyword": "d2c landing page",
       "volume": null,
-      "intent": "commercial",
-      "question": "Should a builder buy leads, use a portal or run its own ads, and how do you judge a lead generation company?",
-      "category": "Paid Ads",
-      "service": "paid-ads",
+      "intent": "informational",
+      "question": "When should a D2C brand send ad traffic to a landing page instead of a product page?",
+      "category": "Landing Pages",
+      "service": "high-converting-landing-pages",
       "competitors": [],
-      "gaps": "Research at write time. Neutral questions to ask any vendor (lead ownership, exclusivity, verification, data consent). No ranking of competitors.",
+      "gaps": "Research at write time: check the top 5 results for India/US-specific detail they miss.",
       "internalLinks": [
-        "/blog/how-to-generate-real-estate-leads",
-        "/blog/99acres-vs-magicbricks-property-portals",
-        "/real-estate-lead-system"
+        "/industries/ecommerce",
+        "/tools/website-audit"
       ],
       "status": "todo"
     },
     {
-      "slug": "google-ads-for-d2c-brands",
+      "slug": "meta-conversions-api-shopify",
       "industry": "ecommerce",
-      "keyword": "google shopping ads india",
+      "keyword": "meta conversions api shopify",
       "volume": null,
-      "intent": "how-to",
-      "question": "How does a D2C brand set up Google Shopping and Performance Max in India?",
-      "category": "Paid Ads",
+      "intent": "informational",
+      "question": "How do you set up Meta Conversions API for a Shopify store?",
+      "category": "Guides",
       "service": "paid-ads",
       "competitors": [],
-      "gaps": "Research at write time. Merchant Center feed, policy, branded vs generic search.",
+      "gaps": "Research at write time: check the top 5 results for India/US-specific detail they miss.",
       "internalLinks": [
-        "/d2c",
-        "/blog/google-ads-vs-meta-ads-real-estate-india"
+        "/industries/ecommerce",
+        "/tools/website-audit"
       ],
       "status": "todo"
     },
@@ -353,19 +610,36 @@
       "status": "todo"
     },
     {
-      "slug": "d2c-customer-retention",
+      "slug": "ecommerce-customer-lifetime-value",
       "industry": "ecommerce",
-      "keyword": "customer retention strategies for d2c brands",
+      "keyword": "ecommerce customer lifetime value",
       "volume": null,
-      "intent": "how-to",
-      "question": "How does a D2C brand get second and third orders from the same customers?",
-      "category": "Growth Tips",
+      "intent": "informational",
+      "question": "How does an online store calculate customer lifetime value and use it to set ad budgets?",
+      "category": "Guides",
+      "service": "paid-ads",
       "competitors": [],
-      "gaps": "Research at write time. Email, WhatsApp, reorder reminders, reviews; no unsourced repeat-rate numbers.",
+      "gaps": "Research at write time: check the top 5 results for India/US-specific detail they miss.",
       "internalLinks": [
-        "/d2c",
-        "/blog/whatsapp-abandoned-cart-d2c",
-        "/blog/real-estate-email-marketing"
+        "/industries/ecommerce",
+        "/tools/website-audit"
+      ],
+      "status": "todo"
+    },
+    {
+      "slug": "shopify-vs-woocommerce-india",
+      "industry": "ecommerce",
+      "keyword": "shopify vs woocommerce india",
+      "volume": null,
+      "intent": "informational",
+      "question": "Shopify or WooCommerce: which suits an Indian online store?",
+      "category": "Guides",
+      "service": "high-converting-landing-pages",
+      "competitors": [],
+      "gaps": "Research at write time: check the top 5 results for India/US-specific detail they miss.",
+      "internalLinks": [
+        "/industries/ecommerce",
+        "/tools/website-audit"
       ],
       "status": "todo"
     },
@@ -387,39 +661,6 @@
       "status": "todo"
     },
     {
-      "slug": "real-estate-youtube-marketing",
-      "industry": "real-estate",
-      "keyword": "real estate youtube channel ideas",
-      "volume": null,
-      "intent": "informational",
-      "question": "How can a builder or broker use YouTube to get site visits?",
-      "category": "Growth Tips",
-      "competitors": [],
-      "gaps": "Research at write time.",
-      "internalLinks": [
-        "/blog/real-estate-video-marketing",
-        "/blog/instagram-reels-marketing"
-      ],
-      "status": "todo"
-    },
-    {
-      "slug": "ugc-ads-for-d2c",
-      "industry": "ecommerce",
-      "keyword": "ugc ads",
-      "volume": null,
-      "intent": "how-to",
-      "question": "How does a D2C brand brief, buy and test user-generated content ads legally?",
-      "category": "Paid Ads",
-      "service": "paid-ads",
-      "competitors": [],
-      "gaps": "Research at write time. ASCI influencer disclosure guidelines, usage rights.",
-      "internalLinks": [
-        "/d2c",
-        "/blog/meta-ads-for-d2c-brands"
-      ],
-      "status": "todo"
-    },
-    {
       "slug": "nap-citations-local-seo",
       "industry": "local-business",
       "keyword": "nap citations",
@@ -432,23 +673,6 @@
       "internalLinks": [
         "/local-business",
         "/blog/google-business-profile-checklist"
-      ],
-      "status": "todo"
-    },
-    {
-      "slug": "shopify-store-conversion-checklist",
-      "industry": "ecommerce",
-      "keyword": "shopify conversion rate optimization",
-      "volume": null,
-      "intent": "how-to",
-      "question": "What should a D2C brand fix on its Shopify store before spending more on ads?",
-      "category": "Landing Pages",
-      "service": "high-converting-landing-pages",
-      "competitors": [],
-      "gaps": "Research at write time.",
-      "internalLinks": [
-        "/d2c",
-        "/tools/website-audit"
       ],
       "status": "todo"
     },
@@ -469,39 +693,6 @@
       "status": "todo"
     },
     {
-      "slug": "real-estate-instagram-bio",
-      "industry": "real-estate",
-      "keyword": "real estate instagram bio",
-      "volume": null,
-      "intent": "informational",
-      "question": "What should a real estate agent or builder write in an Instagram bio?",
-      "category": "Growth Tips",
-      "competitors": [],
-      "gaps": "Research at write time. Original examples only (like the slogans post), RERA number placement.",
-      "internalLinks": [
-        "/blog/real-estate-slogans-taglines",
-        "/blog/real-estate-social-media-marketing"
-      ],
-      "status": "todo"
-    },
-    {
-      "slug": "meta-ads-for-ecommerce-india",
-      "industry": "ecommerce",
-      "keyword": "meta ads for ecommerce",
-      "volume": null,
-      "intent": "informational",
-      "question": "How should an online store in India set up Meta ads that turn spend into orders?",
-      "category": "Paid Ads",
-      "service": "paid-ads",
-      "competitors": [],
-      "gaps": "Research at write time: check the top 5 results for India/US-specific detail they miss.",
-      "internalLinks": [
-        "/industries/ecommerce",
-        "/tools/website-audit"
-      ],
-      "status": "todo"
-    },
-    {
       "slug": "dentist-marketing-ideas",
       "industry": "local-business",
       "keyword": "dentist marketing ideas",
@@ -514,23 +705,6 @@
       "gaps": "Research at write time: check the top 5 results for India/US-specific detail they miss.",
       "internalLinks": [
         "/industries/local-business",
-        "/tools/website-audit"
-      ],
-      "status": "todo"
-    },
-    {
-      "slug": "good-roas-for-ecommerce",
-      "industry": "ecommerce",
-      "keyword": "what is a good roas",
-      "volume": null,
-      "intent": "informational",
-      "question": "What is a good ROAS for an online store, and why is break-even ROAS the number that matters?",
-      "category": "Paid Ads",
-      "service": "paid-ads",
-      "competitors": [],
-      "gaps": "Research at write time: check the top 5 results for India/US-specific detail they miss.",
-      "internalLinks": [
-        "/industries/ecommerce",
         "/tools/website-audit"
       ],
       "status": "todo"
@@ -553,40 +727,6 @@
       "status": "todo"
     },
     {
-      "slug": "real-estate-site-visit-conversion",
-      "industry": "real-estate",
-      "keyword": "site visit to booking conversion real estate",
-      "volume": null,
-      "intent": "how-to",
-      "question": "How do sales teams turn more site visits into bookings?",
-      "category": "Growth Tips",
-      "competitors": [],
-      "gaps": "Research at write time. Follow-up after the visit, price sheet, objection handling. No invented conversion rates.",
-      "internalLinks": [
-        "/blog/how-to-book-real-estate-site-visits",
-        "/blog/real-estate-sales-scripts-india",
-        "/blog/real-estate-lead-qualification-questions"
-      ],
-      "status": "todo"
-    },
-    {
-      "slug": "abandoned-cart-email-sequence",
-      "industry": "ecommerce",
-      "keyword": "abandoned cart email sequence",
-      "volume": null,
-      "intent": "informational",
-      "question": "How do you build an abandoned cart email sequence that wins back orders?",
-      "category": "AI Automation",
-      "service": "ai-automation",
-      "competitors": [],
-      "gaps": "Research at write time: check the top 5 results for India/US-specific detail they miss.",
-      "internalLinks": [
-        "/industries/ecommerce",
-        "/tools/website-audit"
-      ],
-      "status": "todo"
-    },
-    {
       "slug": "local-seo-checklist",
       "industry": "local-business",
       "keyword": "local seo checklist",
@@ -599,23 +739,6 @@
       "gaps": "Research at write time: check the top 5 results for India/US-specific detail they miss.",
       "internalLinks": [
         "/industries/local-business",
-        "/tools/website-audit"
-      ],
-      "status": "todo"
-    },
-    {
-      "slug": "product-page-conversion-rate-optimization",
-      "industry": "ecommerce",
-      "keyword": "product page optimization",
-      "volume": null,
-      "intent": "informational",
-      "question": "What should a product page include to convert ad clicks into orders?",
-      "category": "Landing Pages",
-      "service": "high-converting-landing-pages",
-      "competitors": [],
-      "gaps": "Research at write time: check the top 5 results for India/US-specific detail they miss.",
-      "internalLinks": [
-        "/industries/ecommerce",
         "/tools/website-audit"
       ],
       "status": "todo"
@@ -638,40 +761,6 @@
       "status": "todo"
     },
     {
-      "slug": "real-estate-digital-marketing-agency",
-      "industry": "real-estate",
-      "keyword": "real estate marketing agency",
-      "volume": 880,
-      "intent": "commercial",
-      "question": "What should a builder ask before hiring a real estate marketing agency?",
-      "category": "Guides",
-      "competitors": [],
-      "gaps": "Research at write time. Neutral questions: who owns the ad account and leads, reporting, RERA checks. No prices, no claims about us we can't prove.",
-      "internalLinks": [
-        "/real-estate-lead-system",
-        "/blog/real-estate-marketing-plan",
-        "/blog/real-estate-marketing-budget"
-      ],
-      "status": "todo"
-    },
-    {
-      "slug": "google-shopping-ads-india",
-      "industry": "ecommerce",
-      "keyword": "google shopping ads",
-      "volume": null,
-      "intent": "informational",
-      "question": "How do Google Shopping ads work for Indian online stores, step by step?",
-      "category": "Paid Ads",
-      "service": "paid-ads",
-      "competitors": [],
-      "gaps": "Research at write time: check the top 5 results for India/US-specific detail they miss.",
-      "internalLinks": [
-        "/industries/ecommerce",
-        "/tools/website-audit"
-      ],
-      "status": "todo"
-    },
-    {
       "slug": "home-services-lead-generation-us",
       "industry": "local-business",
       "keyword": "home services lead generation",
@@ -684,23 +773,6 @@
       "gaps": "Research at write time: check the top 5 results for India/US-specific detail they miss.",
       "internalLinks": [
         "/industries/local-business",
-        "/tools/website-audit"
-      ],
-      "status": "todo"
-    },
-    {
-      "slug": "performance-max-for-ecommerce",
-      "industry": "ecommerce",
-      "keyword": "performance max ecommerce",
-      "volume": null,
-      "intent": "informational",
-      "question": "How should an online store set up and judge Google Performance Max campaigns?",
-      "category": "Paid Ads",
-      "service": "paid-ads",
-      "competitors": [],
-      "gaps": "Research at write time: check the top 5 results for India/US-specific detail they miss.",
-      "internalLinks": [
-        "/industries/ecommerce",
         "/tools/website-audit"
       ],
       "status": "todo"
@@ -723,39 +795,6 @@
       "status": "todo"
     },
     {
-      "slug": "real-estate-market-report-content",
-      "industry": "real-estate",
-      "keyword": "how to read a property price trend report",
-      "volume": null,
-      "intent": "informational",
-      "question": "Where can buyers and brokers in India find reliable property price data, and how do you read it?",
-      "category": "Guides",
-      "competitors": [],
-      "gaps": "Research at write time. Cite RBI HPI, NHB RESIDEX and state registration data only; no invented trends.",
-      "internalLinks": [
-        "/blog/99acres-vs-magicbricks-property-portals",
-        "/blog/nri-real-estate-marketing"
-      ],
-      "status": "todo"
-    },
-    {
-      "slug": "diwali-sale-campaign-ecommerce",
-      "industry": "ecommerce",
-      "keyword": "diwali sale marketing",
-      "volume": null,
-      "intent": "informational",
-      "question": "How does an online store plan a Diwali sale campaign from teaser to last-day push?",
-      "category": "Growth Tips",
-      "service": "paid-ads",
-      "competitors": [],
-      "gaps": "Research at write time: check the top 5 results for India/US-specific detail they miss.",
-      "internalLinks": [
-        "/industries/ecommerce",
-        "/tools/website-audit"
-      ],
-      "status": "todo"
-    },
-    {
       "slug": "whatsapp-appointment-booking-clinics",
       "industry": "local-business",
       "keyword": "whatsapp appointment booking",
@@ -768,23 +807,6 @@
       "gaps": "Research at write time: check the top 5 results for India/US-specific detail they miss.",
       "internalLinks": [
         "/industries/local-business",
-        "/tools/website-audit"
-      ],
-      "status": "todo"
-    },
-    {
-      "slug": "influencer-marketing-for-d2c-india",
-      "industry": "ecommerce",
-      "keyword": "influencer marketing d2c india",
-      "volume": null,
-      "intent": "informational",
-      "question": "How can a D2C brand work with influencers in India without wasting budget?",
-      "category": "Growth Tips",
-      "service": "paid-ads",
-      "competitors": [],
-      "gaps": "Research at write time: check the top 5 results for India/US-specific detail they miss.",
-      "internalLinks": [
-        "/industries/ecommerce",
         "/tools/website-audit"
       ],
       "status": "todo"
@@ -807,39 +829,6 @@
       "status": "todo"
     },
     {
-      "slug": "real-estate-photography-tips",
-      "industry": "real-estate",
-      "keyword": "real estate photography tips",
-      "volume": null,
-      "intent": "how-to",
-      "question": "How do you shoot property and project photos on a phone that make buyers enquire?",
-      "category": "Growth Tips",
-      "competitors": [],
-      "gaps": "Research at write time. Under-construction sites, sample flats, drone rules (Digital Sky).",
-      "internalLinks": [
-        "/blog/real-estate-video-marketing",
-        "/blog/real-estate-brochure"
-      ],
-      "status": "todo"
-    },
-    {
-      "slug": "reduce-cod-rto-india",
-      "industry": "ecommerce",
-      "keyword": "reduce rto in ecommerce",
-      "volume": null,
-      "intent": "informational",
-      "question": "How do Indian online stores cut COD returns (RTO)?",
-      "category": "Guides",
-      "service": "ai-automation",
-      "competitors": [],
-      "gaps": "Research at write time: check the top 5 results for India/US-specific detail they miss.",
-      "internalLinks": [
-        "/industries/ecommerce",
-        "/tools/website-audit"
-      ],
-      "status": "todo"
-    },
-    {
       "slug": "doctor-website-seo-india",
       "industry": "local-business",
       "keyword": "doctor website seo",
@@ -852,23 +841,6 @@
       "gaps": "Research at write time: check the top 5 results for India/US-specific detail they miss.",
       "internalLinks": [
         "/industries/local-business",
-        "/tools/website-audit"
-      ],
-      "status": "todo"
-    },
-    {
-      "slug": "shopify-seo-checklist",
-      "industry": "ecommerce",
-      "keyword": "shopify seo checklist",
-      "volume": null,
-      "intent": "informational",
-      "question": "What is the Shopify SEO checklist that matters for store rankings?",
-      "category": "Guides",
-      "service": "high-converting-landing-pages",
-      "competitors": [],
-      "gaps": "Research at write time: check the top 5 results for India/US-specific detail they miss.",
-      "internalLinks": [
-        "/industries/ecommerce",
         "/tools/website-audit"
       ],
       "status": "todo"
@@ -891,41 +863,6 @@
       "status": "todo"
     },
     {
-      "slug": "real-estate-ads-copy",
-      "industry": "real-estate",
-      "keyword": "real estate ad copy",
-      "volume": null,
-      "intent": "informational",
-      "question": "How do you write Meta and Google ad copy for a property project that passes RERA and platform rules?",
-      "category": "Paid Ads",
-      "service": "paid-ads",
-      "competitors": [],
-      "gaps": "Research at write time. Meta Special Ad Category for housing outside India, ASCI, RERA number.",
-      "internalLinks": [
-        "/blog/real-estate-ad-examples",
-        "/blog/rera-advertisement-rules",
-        "/blog/meta-ads-for-real-estate-india"
-      ],
-      "status": "todo"
-    },
-    {
-      "slug": "ecommerce-email-marketing-flows",
-      "industry": "ecommerce",
-      "keyword": "ecommerce email flows",
-      "volume": null,
-      "intent": "informational",
-      "question": "Which email flows should every online store set up first?",
-      "category": "AI Automation",
-      "service": "ai-automation",
-      "competitors": [],
-      "gaps": "Research at write time: check the top 5 results for India/US-specific detail they miss.",
-      "internalLinks": [
-        "/industries/ecommerce",
-        "/tools/website-audit"
-      ],
-      "status": "todo"
-    },
-    {
       "slug": "restaurant-marketing-ideas-local",
       "industry": "local-business",
       "keyword": "restaurant marketing ideas",
@@ -938,23 +875,6 @@
       "gaps": "Research at write time: check the top 5 results for India/US-specific detail they miss.",
       "internalLinks": [
         "/industries/local-business",
-        "/tools/website-audit"
-      ],
-      "status": "todo"
-    },
-    {
-      "slug": "d2c-landing-page-for-ads",
-      "industry": "ecommerce",
-      "keyword": "d2c landing page",
-      "volume": null,
-      "intent": "informational",
-      "question": "When should a D2C brand send ad traffic to a landing page instead of a product page?",
-      "category": "Landing Pages",
-      "service": "high-converting-landing-pages",
-      "competitors": [],
-      "gaps": "Research at write time: check the top 5 results for India/US-specific detail they miss.",
-      "internalLinks": [
-        "/industries/ecommerce",
         "/tools/website-audit"
       ],
       "status": "todo"
@@ -977,40 +897,6 @@
       "status": "todo"
     },
     {
-      "slug": "real-estate-crm-fields-and-stages",
-      "industry": "real-estate",
-      "keyword": "real estate sales pipeline stages",
-      "volume": null,
-      "intent": "how-to",
-      "question": "Which stages and fields should a real estate sales pipeline track from enquiry to booking?",
-      "category": "AI Automation",
-      "service": "ai-automation",
-      "competitors": [],
-      "gaps": "Research at write time. Companion to real-estate-crm-india.",
-      "internalLinks": [
-        "/blog/real-estate-crm-india",
-        "/blog/real-estate-lead-management"
-      ],
-      "status": "todo"
-    },
-    {
-      "slug": "meta-conversions-api-shopify",
-      "industry": "ecommerce",
-      "keyword": "meta conversions api shopify",
-      "volume": null,
-      "intent": "informational",
-      "question": "How do you set up Meta Conversions API for a Shopify store?",
-      "category": "Guides",
-      "service": "paid-ads",
-      "competitors": [],
-      "gaps": "Research at write time: check the top 5 results for India/US-specific detail they miss.",
-      "internalLinks": [
-        "/industries/ecommerce",
-        "/tools/website-audit"
-      ],
-      "status": "todo"
-    },
-    {
       "slug": "local-business-facebook-ads",
       "industry": "local-business",
       "keyword": "facebook ads for local business",
@@ -1023,23 +909,6 @@
       "gaps": "Research at write time: check the top 5 results for India/US-specific detail they miss.",
       "internalLinks": [
         "/industries/local-business",
-        "/tools/website-audit"
-      ],
-      "status": "todo"
-    },
-    {
-      "slug": "ecommerce-customer-lifetime-value",
-      "industry": "ecommerce",
-      "keyword": "ecommerce customer lifetime value",
-      "volume": null,
-      "intent": "informational",
-      "question": "How does an online store calculate customer lifetime value and use it to set ad budgets?",
-      "category": "Guides",
-      "service": "paid-ads",
-      "competitors": [],
-      "gaps": "Research at write time: check the top 5 results for India/US-specific detail they miss.",
-      "internalLinks": [
-        "/industries/ecommerce",
         "/tools/website-audit"
       ],
       "status": "todo"
@@ -1062,40 +931,6 @@
       "status": "todo"
     },
     {
-      "slug": "real-estate-festive-campaigns",
-      "industry": "real-estate",
-      "keyword": "real estate offers navratri diwali campaign ideas",
-      "volume": null,
-      "intent": "informational",
-      "question": "How should builders plan festive (Navratri, Diwali, Akshaya Tritiya) property campaigns?",
-      "category": "Growth Tips",
-      "service": "paid-ads",
-      "competitors": [],
-      "gaps": "Research at write time. Offer wording that stays RERA and ASCI compliant.",
-      "internalLinks": [
-        "/blog/pre-launch-real-estate-marketing",
-        "/blog/real-estate-marketing-plan"
-      ],
-      "status": "todo"
-    },
-    {
-      "slug": "shopify-vs-woocommerce-india",
-      "industry": "ecommerce",
-      "keyword": "shopify vs woocommerce india",
-      "volume": null,
-      "intent": "informational",
-      "question": "Shopify or WooCommerce: which suits an Indian online store?",
-      "category": "Guides",
-      "service": "high-converting-landing-pages",
-      "competitors": [],
-      "gaps": "Research at write time: check the top 5 results for India/US-specific detail they miss.",
-      "internalLinks": [
-        "/industries/ecommerce",
-        "/tools/website-audit"
-      ],
-      "status": "todo"
-    },
-    {
       "slug": "physiotherapy-clinic-marketing",
       "industry": "local-business",
       "keyword": "physiotherapy clinic marketing",
@@ -1109,6 +944,174 @@
       "internalLinks": [
         "/industries/local-business",
         "/tools/website-audit"
+      ],
+      "status": "todo"
+    },
+    {
+      "slug": "real-estate-lead-generation-companies",
+      "industry": "real-estate",
+      "keyword": "real estate lead generation companies",
+      "volume": null,
+      "intent": "commercial",
+      "question": "Should a builder buy leads, use a portal or run its own ads, and how do you judge a lead generation company?",
+      "category": "Paid Ads",
+      "service": "paid-ads",
+      "competitors": [],
+      "gaps": "Research at write time. Neutral questions to ask any vendor (lead ownership, exclusivity, verification, data consent). No ranking of competitors.",
+      "internalLinks": [
+        "/blog/how-to-generate-real-estate-leads",
+        "/blog/99acres-vs-magicbricks-property-portals",
+        "/real-estate-lead-system"
+      ],
+      "status": "todo"
+    },
+    {
+      "slug": "real-estate-youtube-marketing",
+      "industry": "real-estate",
+      "keyword": "real estate youtube channel ideas",
+      "volume": null,
+      "intent": "informational",
+      "question": "How can a builder or broker use YouTube to get site visits?",
+      "category": "Growth Tips",
+      "competitors": [],
+      "gaps": "Research at write time.",
+      "internalLinks": [
+        "/blog/real-estate-video-marketing",
+        "/blog/instagram-reels-marketing"
+      ],
+      "status": "todo"
+    },
+    {
+      "slug": "real-estate-instagram-bio",
+      "industry": "real-estate",
+      "keyword": "real estate instagram bio",
+      "volume": null,
+      "intent": "informational",
+      "question": "What should a real estate agent or builder write in an Instagram bio?",
+      "category": "Growth Tips",
+      "competitors": [],
+      "gaps": "Research at write time. Original examples only (like the slogans post), RERA number placement.",
+      "internalLinks": [
+        "/blog/real-estate-slogans-taglines",
+        "/blog/real-estate-social-media-marketing"
+      ],
+      "status": "todo"
+    },
+    {
+      "slug": "real-estate-site-visit-conversion",
+      "industry": "real-estate",
+      "keyword": "site visit to booking conversion real estate",
+      "volume": null,
+      "intent": "how-to",
+      "question": "How do sales teams turn more site visits into bookings?",
+      "category": "Growth Tips",
+      "competitors": [],
+      "gaps": "Research at write time. Follow-up after the visit, price sheet, objection handling. No invented conversion rates.",
+      "internalLinks": [
+        "/blog/how-to-book-real-estate-site-visits",
+        "/blog/real-estate-sales-scripts-india",
+        "/blog/real-estate-lead-qualification-questions"
+      ],
+      "status": "todo"
+    },
+    {
+      "slug": "real-estate-digital-marketing-agency",
+      "industry": "real-estate",
+      "keyword": "real estate marketing agency",
+      "volume": 880,
+      "intent": "commercial",
+      "question": "What should a builder ask before hiring a real estate marketing agency?",
+      "category": "Guides",
+      "competitors": [],
+      "gaps": "Research at write time. Neutral questions: who owns the ad account and leads, reporting, RERA checks. No prices, no claims about us we can't prove.",
+      "internalLinks": [
+        "/real-estate-lead-system",
+        "/blog/real-estate-marketing-plan",
+        "/blog/real-estate-marketing-budget"
+      ],
+      "status": "todo"
+    },
+    {
+      "slug": "real-estate-market-report-content",
+      "industry": "real-estate",
+      "keyword": "how to read a property price trend report",
+      "volume": null,
+      "intent": "informational",
+      "question": "Where can buyers and brokers in India find reliable property price data, and how do you read it?",
+      "category": "Guides",
+      "competitors": [],
+      "gaps": "Research at write time. Cite RBI HPI, NHB RESIDEX and state registration data only; no invented trends.",
+      "internalLinks": [
+        "/blog/99acres-vs-magicbricks-property-portals",
+        "/blog/nri-real-estate-marketing"
+      ],
+      "status": "todo"
+    },
+    {
+      "slug": "real-estate-photography-tips",
+      "industry": "real-estate",
+      "keyword": "real estate photography tips",
+      "volume": null,
+      "intent": "how-to",
+      "question": "How do you shoot property and project photos on a phone that make buyers enquire?",
+      "category": "Growth Tips",
+      "competitors": [],
+      "gaps": "Research at write time. Under-construction sites, sample flats, drone rules (Digital Sky).",
+      "internalLinks": [
+        "/blog/real-estate-video-marketing",
+        "/blog/real-estate-brochure"
+      ],
+      "status": "todo"
+    },
+    {
+      "slug": "real-estate-ads-copy",
+      "industry": "real-estate",
+      "keyword": "real estate ad copy",
+      "volume": null,
+      "intent": "informational",
+      "question": "How do you write Meta and Google ad copy for a property project that passes RERA and platform rules?",
+      "category": "Paid Ads",
+      "service": "paid-ads",
+      "competitors": [],
+      "gaps": "Research at write time. Meta Special Ad Category for housing outside India, ASCI, RERA number.",
+      "internalLinks": [
+        "/blog/real-estate-ad-examples",
+        "/blog/rera-advertisement-rules",
+        "/blog/meta-ads-for-real-estate-india"
+      ],
+      "status": "todo"
+    },
+    {
+      "slug": "real-estate-crm-fields-and-stages",
+      "industry": "real-estate",
+      "keyword": "real estate sales pipeline stages",
+      "volume": null,
+      "intent": "how-to",
+      "question": "Which stages and fields should a real estate sales pipeline track from enquiry to booking?",
+      "category": "AI Automation",
+      "service": "ai-automation",
+      "competitors": [],
+      "gaps": "Research at write time. Companion to real-estate-crm-india.",
+      "internalLinks": [
+        "/blog/real-estate-crm-india",
+        "/blog/real-estate-lead-management"
+      ],
+      "status": "todo"
+    },
+    {
+      "slug": "real-estate-festive-campaigns",
+      "industry": "real-estate",
+      "keyword": "real estate offers navratri diwali campaign ideas",
+      "volume": null,
+      "intent": "informational",
+      "question": "How should builders plan festive (Navratri, Diwali, Akshaya Tritiya) property campaigns?",
+      "category": "Growth Tips",
+      "service": "paid-ads",
+      "competitors": [],
+      "gaps": "Research at write time. Offer wording that stays RERA and ASCI compliant.",
+      "internalLinks": [
+        "/blog/pre-launch-real-estate-marketing",
+        "/blog/real-estate-marketing-plan"
       ],
       "status": "todo"
     },

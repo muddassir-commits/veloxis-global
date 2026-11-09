@@ -15,6 +15,9 @@ import {
   ShoppingBag,
   Store,
   Building2,
+  ShoppingCart,
+  MousePointerClick,
+  Mail,
   ArrowRight,
   ShieldCheck,
 } from 'lucide-react';
@@ -32,6 +35,9 @@ const icons: Record<NavIcon, React.ComponentType<{ className?: string }>> = {
   ecommerce: ShoppingBag,
   local: Store,
   realestate: Building2,
+  shopify: ShoppingCart,
+  cro: MousePointerClick,
+  retention: Mail,
 };
 
 /**

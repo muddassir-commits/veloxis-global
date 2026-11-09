@@ -21,14 +21,14 @@ const faqs = [
       'Three: e-commerce and D2C brands, local businesses and clinics (dentists, clinics, salons, home services and similar), and real estate (developers, builders, brokers and channel partners).',
   },
   {
-    question: 'Why only three industries?',
+    question: 'Why is e-commerce your main focus?',
     answer:
-      'Each one buys differently: shoppers order online, local customers call or book, property buyers visit a site. Staying with three lets us plan ads, pages and follow-up around how those customers actually decide.',
+      'Online stores need ads, the store and repeat orders to work together, and that is the system we build best. We still take local business and real estate work, planned around how those customers call, book or visit.',
   },
   {
     question: 'Are the services different for each industry?',
     answer:
-      'The four services are the same (Meta and Google ads, websites and landing pages, SEO and local SEO, WhatsApp and AI automation). What changes is the result we track and the pages and campaigns we build.',
+      'The core work is the same: ads, pages, SEO and follow-up. Online stores also get Shopify, conversion and retention work. What changes is the result we track and the pages and campaigns we build.',
   },
   {
     question: 'Do you work with businesses outside India?',
@@ -103,7 +103,7 @@ export default function IndustriesPage() {
 
       <IndustriesStrip
         title="Choose your industry"
-        intro="Same four services (ads, websites, SEO and WhatsApp automation), planned around a different result for each: orders, calls and bookings, or site visits."
+        intro="E-commerce and D2C come first. The same core services also work for local businesses and real estate, planned around orders, calls and bookings, or site visits."
       />
 
       <ProcessTimeline />

@@ -84,7 +84,7 @@ export const cities: Record<CityKey, CityData> = {
       areas: audiences.noida.local!.areas,
     },
     faqs: [
-      { question: 'Which digital marketing services do you offer in Noida?', answer: 'Four services that work together: Meta and Google ads management, websites and landing pages, SEO and local SEO (including Google Business Profile), and WhatsApp and AI automation that replies to every enquiry in seconds.' },
+      { question: 'Which digital marketing services do you offer in Noida?', answer: 'Services that work together: e-commerce marketing, Shopify development, Meta and Google ads management, websites and landing pages, SEO and local SEO (including Google Business Profile), and WhatsApp and AI automation that replies to every enquiry in seconds.' },
       { question: 'Are you based in Noida?', answer: 'Yes. Veloxis Global is a team based in Noida. We don’t have a public walk-in office: we work on WhatsApp, email and video calls, and can meet in person in Noida and Greater Noida. Your ads, pages and leads are all set up in accounts you own.' },
       { question: 'What kinds of businesses do you work with in Noida?', answer: 'E-commerce and D2C brands, local businesses and clinics, and real estate developers, builders, brokers and channel partners. We don’t take on every industry, so the plans can be specific.' },
       { question: 'How much does a digital marketing agency in Noida cost?', answer: 'It depends on the services and the size of the business, so we quote after a free audit. There is no lock-in: we work month-to-month with 30 days’ notice. Ad spend is paid by you directly to Google and Meta and is separate from our fee.' },
@@ -127,7 +127,7 @@ export const cities: Record<CityKey, CityData> = {
       areas: audiences.lucknow.local!.areas,
     },
     faqs: [
-      { question: 'Which digital marketing services do you offer in Lucknow?', answer: 'Four services that work together: Meta and Google ads management, websites and landing pages, SEO and local SEO (including Google Business Profile), and WhatsApp and AI automation that replies to every enquiry in seconds.' },
+      { question: 'Which digital marketing services do you offer in Lucknow?', answer: 'Services that work together: e-commerce marketing, Shopify development, Meta and Google ads management, websites and landing pages, SEO and local SEO (including Google Business Profile), and WhatsApp and AI automation that replies to every enquiry in seconds.' },
       { question: 'Do you have an office in Lucknow?', answer: 'No. We are a team based in Noida and work with Lucknow businesses on WhatsApp, email and video calls. Your ads, pages and leads are all set up in accounts you own.' },
       { question: 'What kinds of businesses do you work with in Lucknow?', answer: 'E-commerce and D2C brands, local businesses and clinics, and real estate developers, builders, brokers and channel partners.' },
       { question: 'How do I choose a digital marketing agency in Lucknow?', answer: 'Ask three things: will they report on orders, bookings or qualified enquiries rather than likes and clicks, will the ad accounts and data be in your name, and is there a lock-in. At Veloxis Global you own the accounts, reports are on outcomes, and we work month-to-month with 30 days’ notice.' },
@@ -171,7 +171,7 @@ export const cities: Record<CityKey, CityData> = {
     },
     faqs: [
       { question: 'Are you a Kanpur agency?', answer: 'Veloxis Global has roots in Kanpur. We are based in Noida and work with Kanpur businesses on WhatsApp, email and video calls. We don’t have a public walk-in office.' },
-      { question: 'Which digital marketing services do you offer in Kanpur?', answer: 'Four services that work together: Meta and Google ads management, websites and landing pages, SEO and local SEO (including Google Business Profile), and WhatsApp and AI automation that replies to every enquiry in seconds.' },
+      { question: 'Which digital marketing services do you offer in Kanpur?', answer: 'Services that work together: e-commerce marketing, Shopify development, Meta and Google ads management, websites and landing pages, SEO and local SEO (including Google Business Profile), and WhatsApp and AI automation that replies to every enquiry in seconds.' },
       { question: 'What kinds of businesses do you work with in Kanpur?', answer: 'E-commerce and D2C brands, local businesses and clinics, and real estate developers, builders, brokers and channel partners.' },
       { question: 'Can online marketing work in a word-of-mouth market like Kanpur?', answer: 'Yes, when it is narrow and quick. Ads aimed at the right areas, a page that answers price and trust questions, a complete Google Business Profile and an instant WhatsApp reply add a steady source of new customers next to referrals.' },
       { question: 'Can you help my shop or clinic in Kanpur show up on Google Maps?', answer: 'Yes. We set up and optimise your Google Business Profile, improve your website for local search and help you collect genuine reviews. We can’t promise a ranking, but we fix what is holding you back first.' },
