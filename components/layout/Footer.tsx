@@ -22,6 +22,8 @@ const footerColumns = [
       { label: 'Shopify Development', href: '/services/shopify-development' },
       { label: 'Conversion Optimisation', href: '/services/conversion-rate-optimization' },
       { label: 'Email & WhatsApp Marketing', href: '/services/email-whatsapp-marketing' },
+      { label: 'Amazon Marketing', href: '/services/amazon-marketing' },
+      { label: 'Social Media Marketing', href: '/services/social-media-marketing' },
       { label: 'Websites & Landing Pages', href: '/services/high-converting-landing-pages' },
       { label: 'SEO & Local SEO', href: '/services/seo' },
       { label: 'WhatsApp & AI Automation', href: '/services/ai-automation' },

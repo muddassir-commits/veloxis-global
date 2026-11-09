@@ -5,7 +5,7 @@
 Veloxis Global is an **e-commerce and D2C growth agency** (Noida, India; service-area business). E-commerce leads
 since 10 Nov 2026 (owner: ROI Hunt is the one competitor to follow); **local businesses & clinics** and **real estate**
 stay live as secondary industries. Services: E-commerce marketing, Meta & Google ads, Shopify development, conversion
-optimisation, email & WhatsApp marketing, websites/landing pages, SEO + local SEO, WhatsApp & AI automation.
+optimisation, email & WhatsApp marketing, Amazon marketing, social media marketing, websites/landing pages, SEO + local SEO, WhatsApp & AI automation.
 Month-to-month, free audit first, the client owns the ad accounts. Follow ROI Hunt's niche, never its unverified
 claims: no "guaranteed growth", client logos, ratings or performance numbers until they are real.
 

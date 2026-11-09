@@ -84,7 +84,6 @@ const nextConfig = {
       // Legacy services → current services
       '/services/content-marketing': '/services/high-converting-landing-pages',
       '/services/web-design-development': '/services/high-converting-landing-pages',
-      '/services/social-media-marketing': '/services/paid-ads',
       '/services/paid-advertising-performance-marketing': '/services/paid-ads',
       '/services/google-ads-ppc': '/services/paid-ads',
       '/services/b2b-lead-generation-sales': '/services/paid-ads',
