@@ -1,0 +1,31 @@
+{
+  "title": "How to Launch a D2C Brand in India: The Pre-Launch Checklist",
+  "seoTitle": "How to Launch a D2C Brand in India: Pre-Launch Checklist",
+  "excerpt": "How to launch a D2C brand in India: GST, the pages the E-Commerce Rules require, COD and return policies, pixel tracking and tests before your first ad.",
+  "date": "2026-11-11",
+  "category": "Guides",
+  "industry": "ecommerce",
+  "service": "paid-ads",
+  "image": "/images/people/blog/d2c-brand-launch-checklist-cover.jpg",
+  "imageAlt": "A red tape dispenser resting on a sealed cardboard shipping box, with more flat-packed boxes behind it",
+  "inlineImages": [
+    { "src": "/images/people/blog/d2c-brand-launch-checklist-1.jpg", "alt": "A plain brown paper shopping bag with dark handles on a white background", "beforeHeading": "store-policies", "caption": "Write return, refund and COD terms before the first order ships." },
+    { "src": "/images/people/blog/d2c-brand-launch-checklist-2.jpg", "alt": "An open notebook and pen beside a laptop, a cup of coffee and a leather bag holding a phone and glasses", "beforeHeading": "launch-checklist" }
+  ],
+  "about": [
+    { "name": "Direct-to-consumer", "sameAs": "https://en.wikipedia.org/wiki/Direct-to-consumer" },
+    { "name": "E-commerce", "sameAs": "https://en.wikipedia.org/wiki/E-commerce" },
+    { "name": "Goods and Services Tax (India)", "sameAs": "https://en.wikipedia.org/wiki/Goods_and_Services_Tax_(India)" }
+  ],
+  "faqs": [
+    { "question": "What does a D2C brand need before its first ad goes live?", "answer": "It needs GST and other registrations, a website showing the details the E-Commerce Rules require, written return, refund and COD policies, working Meta Pixel and Conversions API tracking, consent-based email and WhatsApp capture, and a fast mobile store. Test a real order with each payment method before spending on ads." },
+    { "question": "Does a D2C brand selling on its own website need GST registration?", "answer": "Usually yes. A store shipping to customers in other States makes inter-State sales, and Section 24 of the CGST Act requires anyone making inter-State taxable supplies to register whatever their turnover. Marketplace selling has its own rules, so ask a chartered accountant to review both channels together." },
+    { "question": "Do the Consumer Protection (E-Commerce) Rules apply to a brand's own website?", "answer": "Yes. The 2020 Rules cover all models of e-commerce, including inventory models, and a brand selling its own stock online is an inventory e-commerce entity. It must show its legal name, address, customer care and grievance officer details, and clear return, refund, delivery and payment information." },
+    { "question": "What product details must be shown on a D2C product page?", "answer": "Under Rule 6(10) of the Legal Metrology (Packaged Commodities) Rules, show the maker, packer or importer name and address, country of origin, generic name, net quantity, MRP, a best-before date where relevant and size where relevant. Copying everything from your physical label keeps the page and pack consistent." },
+    { "question": "How quickly must a D2C brand respond to customer complaints?", "answer": "Rule 4(5) of the Consumer Protection (E-Commerce) Rules says the grievance officer must acknowledge a complaint within forty-eight hours and resolve it within one month of receipt. Rule 7 also asks inventory sellers to give a ticket number for each complaint so customers can track it." },
+    { "question": "Can a D2C brand add a COD fee at checkout?", "answer": "You can charge a COD fee, but show it early, on the product page and in the cart. The E-Commerce Rules ask for the total price with a breakup of charges, and the 2023 dark patterns guidelines ban drip pricing, which means revealing extra charges late in the purchase." },
+    { "question": "Why use the Meta Conversions API as well as the Pixel?", "answer": "The Conversions API sends purchases from your server, so they are recorded even when the browser blocks the Pixel. Send the same event name and a matching event ID from both, and Meta treats them as one event if received within 48 hours, so purchases are not counted twice." },
+    { "question": "Does a D2C brand need consent to send WhatsApp marketing messages?", "answer": "Yes. Meta's WhatsApp policy says businesses must get opt-in before messaging people, make it clear they are agreeing to messages from that business, and honour requests to stop. An unticked checkbox at checkout or signup that names WhatsApp is a simple way to collect it." },
+    { "question": "How fast should a D2C website be before running ads?", "answer": "Aim for Google's good Core Web Vitals range on mobile: Largest Contentful Paint within 2.5 seconds, Interaction to Next Paint of 200 milliseconds or less and Cumulative Layout Shift of 0.1 or less, measured at the 75th percentile. Test product and collection pages, where ad clicks land." }
+  ]
+}
