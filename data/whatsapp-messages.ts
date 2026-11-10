@@ -420,4 +420,8 @@ export const BLOG_MESSAGES: Record<string, { ref: string; message: string }> = {
     ref: 'blog-dealer-ideas',
     message: 'I read your post on property dealer marketing ideas. Can you help me get more enquiries for my listings?',
   },
+  'd2c-brand-launch-checklist': {
+    ref: 'blog-d2c-launch',
+    message: 'I read your D2C launch checklist. I am launching my online store and want my tracking and ads set up right. Can you help?',
+  },
 };
