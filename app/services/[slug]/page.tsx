@@ -19,6 +19,8 @@ import { WhatsAppFlowSimulator } from '../../../components/services/WhatsAppFlow
 import { Target, CheckCircle, AlertTriangle, ArrowRight } from 'lucide-react';
 
 const serviceHeroImages: Record<string, { src: string; alt: string }> = {
+  'amazon-marketing': { src: '/images/people/blog/meta-ads-for-d2c-brands-1.jpg', alt: 'Hands packing an order into a box' },
+  'social-media-marketing': { src: '/images/people/services/ads-woman-scrolling-phone.jpg', alt: 'Woman scrolling on her phone' },
   'ecommerce-marketing': { src: '/images/people/blog/meta-ads-for-d2c-brands-1.jpg', alt: 'Hands packing a clothing order into a box' },
   'shopify-development': { src: '/images/people/blog/rt-woman-shopping-online.jpg', alt: 'Woman shopping online' },
   'conversion-rate-optimization': { src: '/images/people/blog/geo-analytics-dashboard-laptop.jpg', alt: 'Analytics dashboard on a laptop' },
@@ -36,6 +38,18 @@ type ServicePhotos = { intro: Photo; deliverables: Photo; process: Photo; sideba
 
 const P = '/images/people/services';
 const servicePhotos: Record<string, ServicePhotos> = {
+  'amazon-marketing': {
+    intro: { src: '/images/people/blog/meta-ads-for-d2c-brands-1.jpg', alt: 'Hands packing an order into a box' },
+    deliverables: { src: `${P}/ads-reports-on-laptops.jpg`, alt: 'Two people working on laptops surrounded by printed charts' },
+    process: { src: `${P}/ads-team-reviewing-charts.jpg`, alt: 'Marketing team reviewing charts on a laptop' },
+    sidebar: { src: '/images/people/blog/rt-woman-shopping-online.jpg', alt: 'Woman shopping online' },
+  },
+  'social-media-marketing': {
+    intro: { src: `${P}/ads-woman-scrolling-phone.jpg`, alt: 'Woman scrolling on her phone', position: '70% center' },
+    deliverables: { src: `${P}/ads-campaign-planning-table.jpg`, alt: 'Team planning a campaign around a table' },
+    process: { src: `${P}/hub-team-reviewing-charts.jpg`, alt: 'Colleagues reviewing charts around a laptop' },
+    sidebar: { src: '/images/people/blog/email-woman-phone-coffee.jpg', alt: 'Woman reading her phone' },
+  },
   'ecommerce-marketing': {
     intro: { src: `${P}/ads-team-reviewing-charts.jpg`, alt: 'Marketing team reviewing charts on a laptop at a meeting table' },
     deliverables: { src: '/images/people/blog/meta-ads-for-d2c-brands-1.jpg', alt: 'Hands packing a clothing order into a box' },

@@ -10,7 +10,7 @@ import { Breadcrumb } from '../../components/ui/Breadcrumb';
 import { SchemaMarkup } from '../../components/ui/SchemaMarkup';
 import { getWebPageSchema } from '../../lib/schema';
 import { servicesData } from '../../data/services-data';
-import { Target, Code, Zap, Search, ShoppingBag, Store, MousePointerClick, Mail, ArrowRight, Check } from 'lucide-react';
+import { Target, Code, Zap, Search, ShoppingBag, Store, MousePointerClick, Mail, Package, Share2, ArrowRight, Check } from 'lucide-react';
 import { CtaBanner } from '../../components/sections/CtaBanner';
 import { FaqAccordion } from '../../components/sections/FaqAccordion';
 import { servicesHubFaqs } from '../../data/page-faqs';
@@ -21,6 +21,8 @@ export const metadata: Metadata = constructMetadata(pageMeta.services);
 // Card images, all 1200x750 to match the 16/10 card frame: sample-design mockups
 // for landing pages and automation, a Pexels photo for ads.
 const serviceImages: Record<string, { src: string; alt: string }> = {
+  'amazon-marketing': { src: '/images/people/blog/meta-ads-for-d2c-brands-1.jpg', alt: 'Hands packing an order into a box' },
+  'social-media-marketing': { src: '/images/people/services/ads-woman-scrolling-phone.jpg', alt: 'Woman scrolling on her phone' },
   'ecommerce-marketing': {
     src: '/images/people/blog/meta-ads-for-d2c-brands-1.jpg',
     alt: 'Hands packing a clothing order into a cardboard box next to folded sweaters',
@@ -55,7 +57,7 @@ const serviceImages: Record<string, { src: string; alt: string }> = {
   },
 };
 
-const iconMap: Record<string, React.ComponentType<{ className?: string }>> = { Target, Code, Zap, Search, ShoppingBag, Store, MousePointerClick, Mail };
+const iconMap: Record<string, React.ComponentType<{ className?: string }>> = { Target, Code, Zap, Search, ShoppingBag, Store, MousePointerClick, Mail, Package, Share2 };
 
 const accentColors: Record<string, string> = {
   teal: 'bg-teal-500/10 text-teal-600 border-teal-200/50',

@@ -18,7 +18,7 @@ export const siteData = {
   jurisdiction: "Kanpur, Uttar Pradesh",
   // One definition used everywhere AI tools and search engines read about us (schema, llms.txt, About).
   definition:
-    "Veloxis Global is a Noida-based e-commerce and D2C growth agency. It runs Meta and Google ads, builds Shopify stores and landing pages, improves conversion rates, sets up email and WhatsApp retention, and handles SEO, measured on orders and cost per order rather than clicks. It also works with local businesses and real estate companies.",
+    "Veloxis Global is a Noida-based e-commerce and D2C growth agency. It runs Meta and Google ads, builds Shopify stores and landing pages, runs Amazon and social media marketing, improves conversion rates, sets up email and WhatsApp retention, and handles SEO, measured on orders and cost per order rather than clicks. It also works with local businesses and real estate companies.",
   // Kept apart from any similarly named company in search results.
   disambiguation: "Indian e-commerce and D2C marketing agency. Not related to Veloxis Pharmaceuticals or VXI Global.",
   booking: "https://calendly.com/veloxis-global/30min",

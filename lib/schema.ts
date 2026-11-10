@@ -38,6 +38,8 @@ export const getSiteGraph = () => ({
         'Conversion rate optimization',
         'Email marketing',
         'WhatsApp marketing',
+        'Amazon marketing',
+        'Social media marketing',
         'Local SEO',
         'Google Business Profile',
         'Clinic and dental marketing',

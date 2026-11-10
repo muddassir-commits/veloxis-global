@@ -4,7 +4,7 @@
  */
 import React from 'react';
 import Link from 'next/link';
-import { ArrowRight, Check, Target, LayoutTemplate, Search, Bot, ShoppingBag, Store, MousePointerClick, Mail } from 'lucide-react';
+import { ArrowRight, Check, Target, LayoutTemplate, Search, Bot, ShoppingBag, Store, MousePointerClick, Mail, Package, Share2 } from 'lucide-react';
 import { SectionLabel } from '../ui/SectionLabel';
 
 const services = [
@@ -49,6 +49,22 @@ const services = [
     accent: 'bg-indigo-accent/10 text-indigo-accent',
   },
   {
+    icon: Package,
+    title: 'Amazon Marketing',
+    href: '/services/amazon-marketing',
+    desc: 'Listings and Sponsored Ads run against your margin and stock, so you know which products make money.',
+    points: ['Listing optimisation', 'Sponsored Ads', 'Stock-aware budgets'],
+    accent: 'bg-sunset-orange/10 text-sunset-orange',
+  },
+  {
+    icon: Share2,
+    title: 'Social Media Marketing',
+    href: '/services/social-media-marketing',
+    desc: 'Content plans, Reels and community replies that make your brand familiar and support your sales.',
+    points: ['Monthly content plan', 'Reels and short videos', 'Comments and DMs handled'],
+    accent: 'bg-teal-accent/10 text-teal-accent',
+  },
+  {
     icon: LayoutTemplate,
     title: 'Websites & Landing Pages',
     href: '/services/high-converting-landing-pages',
@@ -88,7 +104,7 @@ export const ServicesGrid: React.FC = () => (
         </p>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 stagger-reveal">
+      <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-5 gap-5 stagger-reveal">
         {services.map(({ icon: Icon, title, href, desc, points, accent }) => (
           <Link
             key={title}

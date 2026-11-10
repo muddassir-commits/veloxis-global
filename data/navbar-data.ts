@@ -2,7 +2,7 @@
 // Logo · Services ▾ · Industries ▾ · Blog · About · [Free Audit]. Real estate sub-pages (Lead System,
 // Channel Partners, NRI, Playbooks, city pages) are linked from /industries/real-estate and the footer.
 
-export type NavIcon = 'ads' | 'web' | 'seo' | 'automation' | 'ecommerce' | 'local' | 'realestate' | 'shopify' | 'cro' | 'retention';
+export type NavIcon = 'ads' | 'web' | 'seo' | 'automation' | 'ecommerce' | 'local' | 'realestate' | 'shopify' | 'cro' | 'retention' | 'amazon' | 'social';
 
 export interface NavbarMenuItem {
   title: string;
@@ -30,6 +30,8 @@ export const servicesMenu: NavbarMenu = {
     { title: 'Shopify Development', href: '/services/shopify-development', icon: 'shopify', description: 'Stores built for phones and Indian buyers' },
     { title: 'Conversion Optimisation', href: '/services/conversion-rate-optimization', icon: 'cro', description: 'More orders from the traffic you already pay for' },
     { title: 'Email & WhatsApp Marketing', href: '/services/email-whatsapp-marketing', icon: 'retention', description: 'Cart recovery and repeat orders' },
+    { title: 'Amazon Marketing', href: '/services/amazon-marketing', icon: 'amazon', description: 'Listings and ads run against your margin' },
+    { title: 'Social Media Marketing', href: '/services/social-media-marketing', icon: 'social', description: 'Content plans, Reels and community replies' },
     { title: 'Websites & Landing Pages', href: '/services/high-converting-landing-pages', icon: 'web', description: 'Fast pages that turn visits into enquiries' },
     { title: 'SEO & Local SEO', href: '/services/seo', icon: 'seo', description: 'Search, Google Business Profile and Maps visibility' },
     { title: 'WhatsApp & AI Automation', href: '/services/ai-automation', icon: 'automation', description: 'Instant replies and follow-ups for every enquiry' },

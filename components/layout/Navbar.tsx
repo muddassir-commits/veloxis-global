@@ -18,6 +18,8 @@ import {
   ShoppingCart,
   MousePointerClick,
   Mail,
+  Package,
+  Share2,
   ArrowRight,
   ShieldCheck,
 } from 'lucide-react';
@@ -38,6 +40,8 @@ const icons: Record<NavIcon, React.ComponentType<{ className?: string }>> = {
   shopify: ShoppingCart,
   cro: MousePointerClick,
   retention: Mail,
+  amazon: Package,
+  social: Share2,
 };
 
 /**
