@@ -1,0 +1,149 @@
+<p><strong>To run Google Shopping ads in India, a D2C brand creates a Google Merchant Center account, verifies its website, adds shipping and return settings, uploads a clean product feed in INR, links Merchant Center to Google Ads, sets up purchase tracking with values, and then launches a Standard Shopping or Performance Max campaign.</strong></p>
+<p>This guide is for founders and marketers of Indian direct-to-consumer brands who sell on their own Shopify, WooCommerce or custom store and want product ads on Google. Most guides that rank for "Google Shopping ads India" still talk about Smart Shopping (which Google retired), quote cost figures with no source, or skip the India-only details. This one walks through the current setup, step by step, with every rule linked to Google's own help pages.</p>
+
+<p><em>General information, not advice on your specific account. Google's rules and product names change often; everything below was checked against Google's help pages on 11 November 2026.</em></p>
+
+<h2 id="what-are-shopping-ads">What are Google Shopping ads, and how do they work in India?</h2>
+<p><strong>Google Shopping ads are product ads that show a photo, title, price and your store name, built from a product feed you upload to Google Merchant Center rather than from keywords you write.</strong> When someone searches for a product, Google matches the search to products in your feed and decides whether to show your listing.</p>
+<p>That last point is what makes Shopping different from normal search ads. You don't pick keywords. Google reads your product titles, descriptions, categories and other attributes, so the quality of your feed decides which searches you can appear for. A badly written feed limits your reach no matter how much budget you set.</p>
+<p>There are three ways your products can appear on Google today:</p>
+<table>
+  <thead><tr><th>Option</th><th>What it is</th><th>Cost</th><th>Best for</th></tr></thead>
+  <tbody>
+    <tr><td>Free listings</td><td>Unpaid product listings on Google surfaces such as Search, the Shopping tab, Images and YouTube</td><td>Free</td><td>Every store with a Merchant Center account; India is a supported country</td></tr>
+    <tr><td>Standard Shopping campaign</td><td>Paid product ads on Google Search and the Shopping tab, with manual or Smart Bidding control</td><td>Pay per click</td><td>Brands that want control over products, bids and search terms</td></tr>
+    <tr><td>Performance Max campaign</td><td>One campaign that uses your feed plus images, videos and text to serve across Search, Shopping, YouTube, Display, Discover, Gmail and Maps</td><td>Pay per click, with Google automating bids and placements</td><td>Brands with reliable conversion tracking and creative assets</td></tr>
+  </tbody>
+</table>
+<p>Google's help page on <a href="https://support.google.com/merchants/answer/13889434" target="_blank" rel="noopener">free listings</a> says new Merchant Center accounts are opted in by default, and that products can appear at no cost on Google Search, Google Maps, Gemini and YouTube. Free listings are not guaranteed placements, but they cost nothing, so there is no reason to leave them off.</p>
+
+<h2 id="shopping-vs-pmax">Should a D2C brand start with Standard Shopping or Performance Max?</h2>
+<p><strong>Start with Standard Shopping if you want to see which searches and products work before handing control to automation; start with Performance Max if your purchase tracking is solid and you have images and videos ready.</strong> Many D2C brands run both: Standard Shopping for control over core products, Performance Max for reach.</p>
+<p>Two changes make older advice unreliable. First, Smart Shopping no longer exists. Google <a href="https://support.google.com/google-ads/answer/11576060" target="_blank" rel="noopener">automatically upgraded Smart Shopping campaigns to Performance Max</a>, and new Smart Shopping campaigns can't be created. Any guide still recommending Smart Shopping is out of date.</p>
+<p>Second, Performance Max no longer wins automatically when both campaign types advertise the same products. Google told advertisers in October 2024 that "normal auction dynamics will now apply", meaning the campaign with the higher Ad Rank serves (<a href="https://www.seroundtable.com/google-ads-pmax-priority-standard-shopping-38265.html" target="_blank" rel="noopener">Search Engine Roundtable</a>). So running both side by side is now a practical setup, not a waste of budget.</p>
+<table>
+  <thead><tr><th>Question</th><th>Standard Shopping</th><th>Performance Max</th></tr></thead>
+  <tbody>
+    <tr><td>Where ads show</td><td>Search results and the Shopping tab</td><td>All Google channels from one campaign</td></tr>
+    <tr><td>What you need</td><td>Merchant Center feed and conversion tracking</td><td>Feed, conversion tracking, plus images, logos, videos and text for asset groups</td></tr>
+    <tr><td>Control over bids</td><td>Manual CPC or Smart Bidding</td><td>Smart Bidding only</td></tr>
+    <tr><td>Search term visibility</td><td>Full search terms report</td><td>Search terms reporting, now available for all Performance Max campaigns</td></tr>
+    <tr><td>Negative keywords</td><td>Campaign and account level</td><td>Campaign-level negatives and negative keyword lists, applied to Search and Shopping inventory</td></tr>
+    <tr><td>Good first choice when</td><td>Tracking is new, the catalogue is small, or you want to learn which products sell</td><td>Tracking is proven and you have creative to feed the other channels</td></tr>
+  </tbody>
+</table>
+<p>The Performance Max controls in that table come from Google's own update, <a href="https://support.google.com/google-ads/answer/16451273" target="_blank" rel="noopener">Unlock more visibility and control in Performance Max</a>. If you are weighing Google against Meta altogether, our comparison of <a href="/blog/google-ads-vs-meta-ads-real-estate-india">Google Ads and Meta ads</a> explains the difference between intent-led and discovery-led ads; it is written for property, but the logic is the same for products.</p>
+
+<h2 id="merchant-center-setup">How do you set up Google Merchant Center for an Indian store?</h2>
+<p><strong>Create the account, add your business details, verify and claim your website, set shipping and return policies, then upload your products.</strong> Google's <a href="https://support.google.com/google-ads/answer/13717096" target="_blank" rel="noopener">Performance Max setup guide</a> lists business information, a verified and claimed website, shipping settings and product information as the parts that must be ready before a campaign can use your products.</p>
+<ol>
+  <li><strong>Create a Merchant Center account</strong> with the Google account your business will keep long term. Use a shared business login, not a freelancer's personal account, so you always own it.</li>
+  <li><strong>Add business information:</strong> legal business name, address and customer service contact. Keep it consistent with the details on your website.</li>
+  <li><strong>Verify and claim your website.</strong> On Shopify, the <a href="https://help.shopify.com/en/manual/online-sales-channels/google" target="_blank" rel="noopener">Google &amp; YouTube app</a> handles this and then syncs your products to Merchant Center automatically. On WooCommerce or a custom store, verify with Google Search Console, a meta tag or Google Analytics.</li>
+  <li><strong>Set shipping costs.</strong> Google's <a href="https://support.google.com/merchants/answer/7052112" target="_blank" rel="noopener">product data specification</a> lists India among the countries where shipping costs are required for Shopping ads and free listings. Set them account-wide in Merchant Center, including free shipping thresholds if you have them.</li>
+  <li><strong>Add your return policy.</strong> In Merchant Center, go to the shipping and returns settings and add a return policy (<a href="https://support.google.com/merchants/answer/14011730" target="_blank" rel="noopener">Google's steps</a>). Make it say the same thing as the return page on your site; mismatches are a common reason for warnings.</li>
+  <li><strong>Upload your products</strong> through the Shopify app, a WooCommerce plugin, a Google Sheet or a scheduled file. Pick one method and stick to it, so two sources don't overwrite each other.</li>
+  <li><strong>Check the diagnostics page</strong> and fix every disapproved product before you spend on ads.</li>
+  <li><strong>Link Merchant Center to Google Ads.</strong> The Merchant Center account can't be changed on a Performance Max campaign once it's created, so link the right one the first time.</li>
+</ol>
+<p>Before any of this, your store itself needs the basics in place: visible contact details, clear policies and working checkout. Our <a href="/blog/d2c-brand-launch-checklist">D2C brand launch checklist</a> covers what Indian law and Google expect your site to show.</p>
+
+<h2 id="product-feed">What makes a good product feed for Shopping ads?</h2>
+<p><strong>A good feed has accurate, specific titles, prices that match your site, clean images, correct product identifiers and labels you can use to group products by margin or season.</strong> Because Shopping has no keywords, the feed is your targeting.</p>
+<table>
+  <thead><tr><th>Attribute</th><th>Google's rule</th><th>What to do as a D2C brand</th></tr></thead>
+  <tbody>
+    <tr><td><code>title</code></td><td>Up to 150 characters</td><td>Lead with what the product is and the words buyers search: brand, product type, key feature, size or colour. Avoid promotional text like "best price".</td></tr>
+    <tr><td><code>description</code></td><td>Up to 5,000 characters</td><td>Describe material, use and fit in plain words. Reuse the strongest lines from your product page.</td></tr>
+    <tr><td><code>image_link</code></td><td>At least 500 x 500 pixels for all product images, enforced from 31 January 2027</td><td>Use a clean main photo on a plain background, no watermarks or promotional overlays.</td></tr>
+    <tr><td><code>price</code></td><td>Number plus currency code, for example <code>15.00 INR</code> in Google's own sample</td><td>Must match the price on the landing page and at checkout. Use <code>sale_price</code> for discounts.</td></tr>
+    <tr><td><code>maximum_retail_price</code></td><td>India only, optional, used in free listings</td><td>Submit your MRP if you show it on the product page; it must match the site.</td></tr>
+    <tr><td><code>brand</code></td><td>Up to 70 characters</td><td>Your brand name, spelled the same way everywhere.</td></tr>
+    <tr><td><code>gtin</code> / <code>mpn</code></td><td>GTIN required where the manufacturer assigned one; MPN if there is no GTIN</td><td>If you make your own products and have no barcode, set <code>identifier_exists</code> to "no" rather than inventing a number.</td></tr>
+    <tr><td><code>google_product_category</code> and <code>product_type</code></td><td>One Google category; your own type path up to 750 characters</td><td>Use <code>product_type</code> to mirror your store's collections, so you can split campaigns by it.</td></tr>
+    <tr><td><code>custom_label_0</code> to <code>custom_label_4</code></td><td>Up to 5 labels, 100 characters each, never shown to shoppers</td><td>Label margin band, bestseller status, season or launch batch. These become your campaign splits later.</td></tr>
+  </tbody>
+</table>
+<p>The limits above come from Google's <a href="https://support.google.com/merchants/answer/7052112" target="_blank" rel="noopener">product data specification</a>, and the MRP attribute from its separate help page on <a href="https://support.google.com/merchants/answer/15972291" target="_blank" rel="noopener">maximum retail price</a>, which says "This attribute is only available in India."</p>
+<p>A practical title formula for most D2C categories is: <em>Brand + product type + key attribute + variant</em>. For example, a title like "[Brand] cotton kurta for women, straight fit, navy, size M" tells Google far more than "Navy Classic". Write titles for how Indian shoppers search, including common Hinglish product words where your buyers use them, but keep them accurate.</p>
+
+<h2 id="tracking">How do you track Shopping sales correctly?</h2>
+<p><strong>Track purchases as a Google Ads conversion with the real order value, add enhanced conversions, and test with a real order before launch.</strong> Smart Bidding and Performance Max optimise toward whatever you tell them is a conversion, so wrong tracking means Google learns the wrong thing.</p>
+<ul>
+  <li><strong>Use one purchase conversion as the primary goal.</strong> Add-to-cart and checkout-start can be tracked as secondary actions, but if they count as primary, Google will chase cheap clicks that never buy.</li>
+  <li><strong>Pass the order value and currency.</strong> Google's help page on <a href="https://support.google.com/google-ads/answer/6268637" target="_blank" rel="noopener">Target ROAS bidding</a> says you need to set values for the conversions you track before you can use it.</li>
+  <li><strong>Turn on enhanced conversions.</strong> Google says enhanced conversions supplement your tags by sending hashed first-party data, such as an email address hashed with SHA256, to improve measurement (<a href="https://support.google.com/google-ads/answer/9888656" target="_blank" rel="noopener">Google Ads Help</a>).</li>
+  <li><strong>Decide how to count cash on delivery.</strong> The tag fires when the order is placed, not when COD is paid. If many COD orders are refused, Google sees sales that never happened. Review refused orders in your reporting and consider uploading adjustments if your setup allows it.</li>
+  <li><strong>Avoid double counting.</strong> If both the Shopify app and a manually added tag send purchases, keep only one as primary.</li>
+</ul>
+<p>Tracking also needs consent handling that matches your privacy notice. Our <a href="/services/conversion-rate-optimization">conversion optimisation</a> work starts with exactly this check, because a store that converts well but tracks badly still loses money on ads.</p>
+
+<h2 id="campaign-setup">How do you launch your first Shopping or Performance Max campaign?</h2>
+<p><strong>In Google Ads, choose the Sales objective, confirm the purchase goal, pick Shopping or Performance Max, select your Merchant Center account and country, then set budget, bidding and the products to include.</strong> The steps below follow Google's own flow.</p>
+<ol>
+  <li><strong>Click Create, then Campaign</strong>, and choose <strong>Sales</strong> as the objective.</li>
+  <li><strong>Confirm conversion goals.</strong> Remove anything that isn't a purchase from the campaign's goals.</li>
+  <li><strong>Pick the campaign type:</strong> Shopping for Standard Shopping, or Performance Max.</li>
+  <li><strong>Select the Merchant Center account</strong> and the country (India) or feed label where you sell.</li>
+  <li><strong>Choose what to advertise.</strong> Start with your proven sellers or a clear category rather than the whole catalogue, using <code>product_type</code> or a custom label.</li>
+  <li><strong>Set bidding.</strong> With little data, Maximise clicks or manual CPC (Standard Shopping) or Maximise conversion value without a target (Performance Max) is a sensible start. Add a ROAS target only once you have enough purchases (see the next section).</li>
+  <li><strong>Set a daily budget you can hold steady</strong> for a few weeks. Frequent large changes reset what the system has learned.</li>
+  <li><strong>For Performance Max, build the asset group:</strong> product images, lifestyle images, your logo, short videos if you have them, headlines and descriptions. Add audience signals such as past buyers or site visitors to guide it.</li>
+  <li><strong>Add brand exclusions and negatives</strong> before launch (next section), then publish.</li>
+</ol>
+<p>Our <a href="/services/paid-ads">Google and Meta ads</a> service follows this order for new accounts, and our <a href="/services/shopify-development">Shopify development</a> team handles the feed and tracking side when the store needs work first.</p>
+
+<h2 id="branded-vs-generic">How do you separate branded and generic searches?</h2>
+<p><strong>Keep searches for your own brand name out of Performance Max with brand exclusions, and cover them with a separate, low-cost branded campaign; use negative keywords to keep generic campaigns focused on new customers.</strong> Otherwise your reports look better than they are, because people who already know you would often have bought anyway.</p>
+<p>Google's help page on <a href="https://support.google.com/google-ads/answer/13729701" target="_blank" rel="noopener">brand settings in Search and Performance Max</a> says brand exclusions let you choose which brands a campaign should not match, and they also catch misspellings and brand searches in other languages. Add your own brand to the exclusion list on your generic Performance Max campaign.</p>
+<p>For Standard Shopping, add your brand name as a negative keyword on the generic campaign and run a second campaign, limited to brand searches, at a lower bid. Then you can see two honest numbers: what new-customer searches cost you, and what branded searches return.</p>
+<p>Also add negatives for searches you don't want: competitor brand names if you prefer not to pay for them, "free", "second hand", "how to make", job searches and products you don't sell. Google now supports campaign-level negative keywords and negative keyword lists in Performance Max (<a href="https://support.google.com/google-ads/answer/16451273" target="_blank" rel="noopener">Google Ads Help</a>), so the same hygiene applies to both campaign types.</p>
+
+<h2 id="optimise">How do you improve Shopping results after launch?</h2>
+<p><strong>Read the search terms every week, improve titles for products that get impressions but few clicks, split products by margin with custom labels, and only add a ROAS target once you have enough conversion data.</strong> Most gains come from the feed and structure, not from bid tweaks.</p>
+<ul>
+  <li><strong>Search terms:</strong> add irrelevant terms as negatives; when a good term appears, check that the matching product title uses those words.</li>
+  <li><strong>Titles and images:</strong> for products with many impressions and few clicks, test a clearer title or a better main image first. Price and photo are what shoppers compare.</li>
+  <li><strong>Margin splits:</strong> put high-margin and low-margin products in different campaigns or listing groups using a custom label, so you can accept a lower return where margin is high and demand more where it is thin.</li>
+  <li><strong>Target ROAS:</strong> Google's guide to <a href="https://support.google.com/google-ads/answer/6309035" target="_blank" rel="noopener">Target ROAS for Shopping campaigns</a> says Shopping campaigns must have at least 15 conversions per Merchant Center ID in the last 30 days. Set the first target close to what the campaign already achieves, then move it in small steps.</li>
+  <li><strong>Out of stock:</strong> keep <code>availability</code> accurate so you don't pay for clicks on products you can't ship. Shopify and most plugins sync this automatically; check that it does.</li>
+  <li><strong>Sale seasons:</strong> for Diwali and other sale periods, update prices and <code>sale_price</code> in the feed before the ads change, and raise budgets in steps rather than all at once.</li>
+  <li><strong>Profit, not just ROAS:</strong> ROAS ignores product cost, shipping, payment fees and returns. Judge campaigns on contribution margin after those costs, which you calculate from your own numbers.</li>
+</ul>
+<p>Shopping ads bring the click; the product page has to close the sale. If people click but don't buy, the fix is often on the page itself: price clarity, delivery dates, COD terms and reviews. Strong <a href="/services/ecommerce-marketing">e-commerce marketing</a> treats the ad, the feed and the page as one system.</p>
+
+<h2 id="common-mistakes">What mistakes do D2C brands make with Google Shopping ads?</h2>
+<p><strong>The most common mistakes are poor product titles, price mismatches between the feed and the site, missing shipping or return settings, counting add-to-carts as conversions, and mixing branded and new-customer results in one campaign.</strong></p>
+<table>
+  <thead><tr><th>Mistake</th><th>What happens</th><th>Fix</th></tr></thead>
+  <tbody>
+    <tr><td>Vague titles like "Classic Tee"</td><td>Google can't match the product to real searches</td><td>Use brand + product type + attribute + variant</td></tr>
+    <tr><td>Feed price differs from site price</td><td>Products get disapproved or warnings appear</td><td>Sync the feed from the store and re-check after every sale</td></tr>
+    <tr><td>No shipping or return settings</td><td>India requires shipping costs; listings are limited</td><td>Set both in Merchant Center before launch</td></tr>
+    <tr><td>Invented barcodes</td><td>Identifier errors and limited performance</td><td>Use real GTINs, or set <code>identifier_exists</code> to "no"</td></tr>
+    <tr><td>Add-to-cart as a primary goal</td><td>Bidding chases browsers, not buyers</td><td>Make purchase the only primary goal</td></tr>
+    <tr><td>Brand searches inside Performance Max</td><td>Reported returns look better than real new-customer returns</td><td>Brand exclusions plus a separate brand campaign</td></tr>
+    <tr><td>Following Smart Shopping advice</td><td>The campaign type no longer exists</td><td>Use Standard Shopping or Performance Max</td></tr>
+    <tr><td>Changing budgets and targets daily</td><td>Bidding never settles</td><td>Change in small steps, then wait</td></tr>
+  </tbody>
+</table>
+<p>None of these need a big budget to fix, which is why it is worth getting the feed and tracking right before you scale spend. For a wider view of how Google fits next to Meta, email and WhatsApp for product brands, see our <a href="/industries/ecommerce">e-commerce and D2C growth page</a>. And if AI answers are part of how buyers discover products in your category, our guide to <a href="/blog/generative-engine-optimization-guide">generative engine optimisation</a> explains how to be cited there too.</p>
+
+<p>If you'd like a second pair of eyes on your Merchant Center feed, tracking and campaign structure before you spend more, ask for a <a href="/free-audit">free audit</a>. We'll tell you what to fix first, and you keep full ownership of your Google Ads and Merchant Center accounts.</p>
+
+<h2 id="sources">Sources</h2>
+<ul>
+  <li><a href="https://support.google.com/merchants/answer/7052112" target="_blank" rel="noopener">Google Merchant Center Help: Product data specification</a></li>
+  <li><a href="https://support.google.com/merchants/answer/15972291" target="_blank" rel="noopener">Google Merchant Center Help: Maximum retail price [maximum_retail_price]</a></li>
+  <li><a href="https://support.google.com/merchants/answer/13889434" target="_blank" rel="noopener">Google Merchant Center Help: Free listings for products</a></li>
+  <li><a href="https://support.google.com/merchants/answer/14011730" target="_blank" rel="noopener">Google Merchant Center Help: Set up your return policies for Shopping ads and free listings</a></li>
+  <li><a href="https://support.google.com/google-ads/answer/13717096" target="_blank" rel="noopener">Google Ads Help: Create a Performance Max campaign with products from Merchant Center</a></li>
+  <li><a href="https://support.google.com/google-ads/answer/11576060" target="_blank" rel="noopener">Google Ads Help: Smart Shopping and Local campaign upgrades to Performance Max</a></li>
+  <li><a href="https://support.google.com/google-ads/answer/16451273" target="_blank" rel="noopener">Google Ads Help: Unlock more visibility and control in Performance Max</a></li>
+  <li><a href="https://support.google.com/google-ads/answer/13729701" target="_blank" rel="noopener">Google Ads Help: Brand settings in Search and Performance Max campaigns</a></li>
+  <li><a href="https://support.google.com/google-ads/answer/6309035" target="_blank" rel="noopener">Google Ads Help: Set up Target ROAS bidding for Shopping campaigns</a></li>
+  <li><a href="https://support.google.com/google-ads/answer/6268637" target="_blank" rel="noopener">Google Ads Help: About Target ROAS bidding</a></li>
+  <li><a href="https://support.google.com/google-ads/answer/9888656" target="_blank" rel="noopener">Google Ads Help: About enhanced conversions</a></li>
+  <li><a href="https://help.shopify.com/en/manual/online-sales-channels/google" target="_blank" rel="noopener">Shopify Help Center: Google &amp; YouTube</a></li>
+  <li><a href="https://www.seroundtable.com/google-ads-pmax-priority-standard-shopping-38265.html" target="_blank" rel="noopener">Search Engine Roundtable: Performance Max won't take priority over Standard Shopping (October 2024)</a></li>
+</ul>
