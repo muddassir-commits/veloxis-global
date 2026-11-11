@@ -1,0 +1,31 @@
+{
+  "title": "Google Shopping Ads in India: Setup Guide for D2C Brands",
+  "seoTitle": "Google Shopping Ads in India: D2C Setup Guide",
+  "excerpt": "Google Shopping ads in India, step by step: Merchant Center, an INR feed, tracking, Standard Shopping vs Performance Max and branded search.",
+  "date": "2026-11-12",
+  "category": "Paid Ads",
+  "industry": "ecommerce",
+  "service": "paid-ads",
+  "image": "/images/people/blog/google-ads-for-d2c-brands-cover.jpg",
+  "imageAlt": "Brown paper shopping bags with rope handles, filled with boxed products, standing on a grey wooden floor",
+  "inlineImages": [
+    { "src": "/images/people/blog/google-ads-for-d2c-brands-1.jpg", "alt": "A rail of jackets and shirts on wooden hangers at a clothing stall, with a blurred street behind", "beforeHeading": "product-feed", "caption": "Your feed is your targeting: every product needs a clear title, price and photo." },
+    { "src": "/images/people/blog/google-ads-for-d2c-brands-2.jpg", "alt": "Top view of a wooden desk with a laptop, a tablet, a cup of black coffee, glasses and a small plant", "beforeHeading": "tracking" }
+  ],
+  "about": [
+    { "name": "Google Shopping", "sameAs": "https://en.wikipedia.org/wiki/Google_Shopping" },
+    { "name": "Google Ads", "sameAs": "https://en.wikipedia.org/wiki/Google_Ads" },
+    { "name": "Direct-to-consumer", "sameAs": "https://en.wikipedia.org/wiki/Direct-to-consumer" }
+  ],
+  "faqs": [
+    { "question": "How do I start Google Shopping ads in India?", "answer": "Create a Google Merchant Center account, add business details, verify your website, set shipping costs and a return policy, and upload a product feed priced in INR. Then link Merchant Center to Google Ads, set up purchase tracking with order values, and launch a Standard Shopping or Performance Max campaign." },
+    { "question": "Are Google Shopping free listings available in India?", "answer": "Yes. India is a supported country for free listings, and Google says new Merchant Center accounts are opted in by default. Free listings can show your products on Google Search, Maps, Gemini and YouTube at no cost, though Google does not guarantee they will be shown." },
+    { "question": "Should a D2C brand use Standard Shopping or Performance Max?", "answer": "Use Standard Shopping when tracking is new or you want to see which searches and products work. Use Performance Max once purchase tracking is reliable and you have images and videos. Since October 2024 the two compete on Ad Rank, so many brands run both together." },
+    { "question": "Is Smart Shopping still available in Google Ads?", "answer": "No. Google automatically upgraded all Smart Shopping campaigns to Performance Max, and new Smart Shopping campaigns can no longer be created. Advice that recommends Smart Shopping is out of date; choose between Standard Shopping and Performance Max instead, and check any old campaign settings carried over." },
+    { "question": "Do I need GTIN barcodes for Google Shopping in India?", "answer": "Only if the manufacturer assigned one. Google requires a GTIN for products that have one, and an MPN where there is no GTIN. If you make your own products without barcodes, set identifier_exists to no rather than inventing a number, which causes identifier errors." },
+    { "question": "What is the MRP attribute in Google Merchant Center?", "answer": "maximum_retail_price is an optional attribute that Google says is only available in India. It is used in free listings and must match the MRP shown on your product and checkout pages. It is separate from price and sale_price, which carry the price you actually charge." },
+    { "question": "Are shipping costs required for Shopping ads in India?", "answer": "Yes. Google's product data specification lists India among the countries where shipping costs are required for Shopping ads and free listings. Set them in Merchant Center's shipping settings, including any free delivery threshold, so the cost shoppers see on Google matches your checkout." },
+    { "question": "When should I use Target ROAS for Shopping campaigns?", "answer": "Once you track purchases with order values and have enough data. Google says Shopping campaigns need at least 15 conversions per Merchant Center ID in the last 30 days for Target ROAS. Set the first target close to the return the campaign already achieves, then adjust in small steps." },
+    { "question": "How do I stop branded searches inflating Performance Max results?", "answer": "Add your own brand to a brand exclusion list on the generic Performance Max campaign, and cover brand searches with a separate low-cost campaign. Brand exclusions also catch misspellings. This shows what new-customer searches really cost you instead of mixing them with people who already know your brand." }
+  ]
+}

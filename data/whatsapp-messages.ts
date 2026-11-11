@@ -424,4 +424,12 @@ export const BLOG_MESSAGES: Record<string, { ref: string; message: string }> = {
     ref: 'blog-d2c-launch',
     message: 'I read your D2C launch checklist. I am launching my online store and want my tracking and ads set up right. Can you help?',
   },
+  'local-seo-for-dentists': {
+    ref: 'blog-dentist-seo',
+    message: 'I read your local SEO guide for dentists. I run a dental clinic and want more patients to find us on Google Maps. Can you help?',
+  },
+  'google-ads-for-d2c-brands': {
+    ref: 'blog-gshop-pmax',
+    message: 'I read your guide on Google Shopping ads. I sell products on my own store and want my Merchant Center feed and Shopping campaigns set up properly. Can you help?',
+  },
 };
