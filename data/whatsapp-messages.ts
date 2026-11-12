@@ -432,4 +432,8 @@ export const BLOG_MESSAGES: Record<string, { ref: string; message: string }> = {
     ref: 'blog-gshop-pmax',
     message: 'I read your guide on Google Shopping ads. I sell products on my own store and want my Merchant Center feed and Shopping campaigns set up properly. Can you help?',
   },
+  'ai-marketing-agency-what-it-does': {
+    ref: 'blog-ai-agency-check',
+    message: 'I read your guide on choosing an AI marketing agency. I want to know where AI would really help my business and where it would not. Can you take a look?',
+  },
 };

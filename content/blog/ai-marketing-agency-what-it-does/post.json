@@ -1,0 +1,30 @@
+{
+  "title": "AI Marketing Agency: What It Does and How to Choose One",
+  "seoTitle": "AI Marketing Agency: What It Does, How to Choose",
+  "excerpt": "What an AI marketing agency really does, what a human must still decide, questions to ask, red flags and India's rules, before you hire one.",
+  "date": "2026-11-13",
+  "category": "AI Automation",
+  "industry": "general",
+  "service": "ai-automation",
+  "image": "/images/people/blog/ai-marketing-agency-what-it-does-cover.jpg",
+  "imageAlt": "A computer monitor on a grey desk showing a dashboard with a large question mark in the centre, beside a desk lamp, pencils, books and a small succulent",
+  "inlineImages": [
+    { "src": "/images/people/blog/ai-marketing-agency-what-it-does-1.jpg", "alt": "Close-up of a dark printed circuit board with fine copper traces running to a central chip", "beforeHeading": "what-humans-decide", "caption": "AI does the repetitive work fast; people still decide what is true and what goes live." },
+    { "src": "/images/people/blog/ai-marketing-agency-what-it-does-2.jpg", "alt": "A blue cup of cappuccino with latte art next to an open, blank lined notebook and a black pen on a wooden table", "beforeHeading": "questions-to-ask" }
+  ],
+  "about": [
+    { "name": "Artificial intelligence in marketing", "sameAs": "https://en.wikipedia.org/wiki/Artificial_intelligence_marketing" },
+    { "name": "Marketing automation", "sameAs": "https://en.wikipedia.org/wiki/Marketing_automation" },
+    { "name": "Digital marketing", "sameAs": "https://en.wikipedia.org/wiki/Digital_marketing" }
+  ],
+  "faqs": [
+    { "question": "What does an AI marketing agency do?", "answer": "It uses AI tools and automation to plan, produce, run and report on marketing: drafting ad copy and creative variations, answering and sorting leads on WhatsApp or chat, analysing campaign data and triggering follow-ups. A good one still has people setting strategy and budgets, checking every output and answering for results." },
+    { "question": "Is an AI marketing agency better than a traditional agency?", "answer": "Not automatically. The channels and goals are the same; AI mainly adds speed and more testing. A well-run AI agency can test more ideas and reply to leads faster, while a badly run one makes mistakes faster. Judge both on strategy, honesty, review process and whether you own the accounts." },
+    { "question": "What should a human still decide when AI is used in marketing?", "answer": "A named person should own the strategy, budgets, offers and brand rules, approve every claim about products, prices or results, handle complaints and unhappy customers, and decide what customer data goes into which tool. AI is good at producing options and spotting patterns, not at knowing what is true about your business." },
+    { "question": "What questions should I ask an AI marketing agency before hiring?", "answer": "Ask which tasks AI does and which a person does, who reviews AI output before it goes live, which tools get your customer data, whether the ad accounts and CRM will be in your name, what will be measured, what happens when AI gets something wrong, and how you can leave." },
+    { "question": "What are the red flags when hiring an AI marketing agency?", "answer": "Guaranteed results, big percentages from unnamed clients, AI used as a buzzword with no clear change, plans to publish hundreds of AI pages a month, ad accounts created in the agency's name, fake AI testimonials or chatbots posing as people, and long lock-ins with unclear exit terms." },
+    { "question": "Does Google penalise AI-written content?", "answer": "Not for being AI-written. Google's Search Central guidance says it rewards helpful, high-quality content however it is produced. But mass-producing pages mainly to manipulate rankings is scaled content abuse under Google's spam policies, whether made by AI, by people or both, and that can hurt rankings." },
+    { "question": "Do AI-generated ads need a label in India?", "answer": "Meta labels ads made or significantly edited with its own generative AI tools and says it detects third-party AI too. ASCI released draft guidelines in 2026 that would require labels for things like virtual influencers and AI product demos, and ban deepfakes and fake testimonials. Check ASCI for the final version." },
+    { "question": "How do I test an AI marketing agency before signing a long contract?", "answer": "Run a short, clearly scoped trial in accounts you own. Pick one job, agree the measure first, such as orders, booked appointments or qualified leads, confirm tracking works, get the review process in writing, read the actual ads and replies, and judge the agency on its reasoning as well as numbers." }
+  ]
+}
