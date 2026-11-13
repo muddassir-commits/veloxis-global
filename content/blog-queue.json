@@ -1135,6 +1135,150 @@
         "/real-estate-lead-system"
       ],
       "status": "todo"
+    },
+    {
+      "slug": "google-ads-for-clinics",
+      "industry": "local-business",
+      "keyword": "google ads for clinics",
+      "volume": null,
+      "intent": "how-to",
+      "question": "How should a clinic or hospital run Google Ads that bring real patient calls, not calls meant for other clinics?",
+      "category": "Paid Ads",
+      "service": "paid-ads",
+      "competitors": [],
+      "gaps": "Research at write time. Cover: blocking other clinics' and doctors' names, Search-only (no Display/partners), 'Presence' location setting, ad schedule = clinic hours, counting only longer calls, ad groups by treatment, Google healthcare ad policy. India + US. No invented numbers.",
+      "internalLinks": [
+        "/industries/local-business",
+        "/services/paid-ads",
+        "/free-audit"
+      ],
+      "status": "todo"
+    },
+    {
+      "slug": "google-ads-negative-keywords",
+      "industry": "local-business",
+      "keyword": "negative keywords google ads",
+      "volume": null,
+      "intent": "how-to",
+      "question": "How do negative keywords work in Google Ads, and which ones should a local business add first?",
+      "category": "Paid Ads",
+      "service": "paid-ads",
+      "competitors": [],
+      "gaps": "Research at write time. Cover: match types for negatives, shared negative lists applied to every campaign (new campaigns do not copy them), competitor-name blocking, reading the search terms report weekly, examples by niche (clinic, salon, gym, home services).",
+      "internalLinks": [
+        "/industries/local-business",
+        "/services/paid-ads",
+        "/free-audit"
+      ],
+      "status": "todo"
+    },
+    {
+      "slug": "google-ads-auto-apply-recommendations",
+      "industry": "local-business",
+      "keyword": "google ads auto apply recommendations",
+      "volume": null,
+      "intent": "how-to",
+      "question": "Should you turn off auto-apply recommendations in Google Ads?",
+      "category": "Paid Ads",
+      "service": "paid-ads",
+      "competitors": [],
+      "gaps": "Research at write time. Cover: what auto-apply can change (new broad keywords, removing negatives, Display expansion, bid targets), where to see its history and Change history, how to turn it off, when some types are safe. Cite Google Ads Help.",
+      "internalLinks": [
+        "/industries/local-business",
+        "/services/paid-ads",
+        "/free-audit"
+      ],
+      "status": "todo"
+    },
+    {
+      "slug": "google-ads-location-targeting-presence-or-interest",
+      "industry": "local-business",
+      "keyword": "google ads location targeting presence vs interest",
+      "volume": null,
+      "intent": "how-to",
+      "question": "What is the difference between 'Presence' and 'Presence or interest' in Google Ads location targeting, and which should a local business use?",
+      "category": "Paid Ads",
+      "service": "paid-ads",
+      "competitors": [],
+      "gaps": "Research at write time. Cover: the default setting, why it brings calls from other cities, radius targeting around a clinic or shop, how to check matched locations. Cite Google Ads Help.",
+      "internalLinks": [
+        "/industries/local-business",
+        "/services/paid-ads",
+        "/free-audit"
+      ],
+      "status": "todo"
+    },
+    {
+      "slug": "google-ads-call-tracking",
+      "industry": "local-business",
+      "keyword": "google ads call tracking",
+      "volume": null,
+      "intent": "how-to",
+      "question": "How do you track phone calls from Google Ads properly for a local business?",
+      "category": "Paid Ads",
+      "service": "paid-ads",
+      "competitors": [],
+      "gaps": "Research at write time. Cover: calls from ads (call assets) vs calls from website (tel: link clicks, website call forwarding), call length setting, count 'one' vs 'every', WhatsApp click tracking, matching ad calls to the business's own call log. Cite Google Ads Help.",
+      "internalLinks": [
+        "/industries/local-business",
+        "/services/paid-ads",
+        "/free-audit"
+      ],
+      "status": "todo"
+    },
+    {
+      "slug": "google-ads-ad-schedule",
+      "industry": "local-business",
+      "keyword": "google ads ad schedule",
+      "volume": null,
+      "intent": "how-to",
+      "question": "How should a local business set an ad schedule in Google Ads?",
+      "category": "Paid Ads",
+      "service": "paid-ads",
+      "competitors": [],
+      "gaps": "Research at write time. Cover: running ads only when someone can answer, reading the day-and-hour report, bid adjustments by hour, time zone of the account.",
+      "internalLinks": [
+        "/industries/local-business",
+        "/services/paid-ads",
+        "/free-audit"
+      ],
+      "status": "todo"
+    },
+    {
+      "slug": "google-ads-search-partners-display-network",
+      "industry": "local-business",
+      "keyword": "google ads search partners vs display network",
+      "volume": null,
+      "intent": "how-to",
+      "question": "Should a local business turn off Search partners and the Display Network in a Search campaign?",
+      "category": "Paid Ads",
+      "service": "paid-ads",
+      "competitors": [],
+      "gaps": "Research at write time. Cover: what each network is, how to see where ads showed (placements report), why lead campaigns often turn them off, how to test them separately. Cite Google Ads Help.",
+      "internalLinks": [
+        "/industries/local-business",
+        "/services/paid-ads",
+        "/free-audit"
+      ],
+      "status": "todo"
+    },
+    {
+      "slug": "google-ads-audit-checklist",
+      "industry": "local-business",
+      "keyword": "google ads audit checklist",
+      "volume": null,
+      "intent": "how-to",
+      "question": "How do you audit a Google Ads account step by step?",
+      "category": "Guides",
+      "service": "paid-ads",
+      "competitors": [],
+      "gaps": "Research at write time. A practical checklist: account settings, auto-apply, conversions, campaign settings (networks, location option, schedule), keywords and match types, search terms and negatives, ads and assets, landing pages, budget pacing, billing. Link to the other Google Ads posts.",
+      "internalLinks": [
+        "/industries/local-business",
+        "/services/paid-ads",
+        "/free-audit"
+      ],
+      "status": "todo"
     }
   ]
 }
