@@ -436,4 +436,8 @@ export const BLOG_MESSAGES: Record<string, { ref: string; message: string }> = {
     ref: 'blog-ai-agency-check',
     message: 'I read your guide on choosing an AI marketing agency. I want to know where AI would really help my business and where it would not. Can you take a look?',
   },
+  'd2c-customer-retention': {
+    ref: 'blog-d2c-repeat',
+    message: 'I read your guide on D2C customer retention. I run an online store and want more customers to order a second time. Can you help me plan it?',
+  },
 };
