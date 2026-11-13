@@ -179,7 +179,8 @@
         "/d2c",
         "/blog/google-ads-vs-meta-ads-real-estate-india"
       ],
-      "status": "todo"
+      "status": "done",
+      "date": "2026-11-12"
     },
     {
       "slug": "ai-marketing-agency-what-it-does",
@@ -196,7 +197,8 @@
         "/services/ai-automation",
         "/services/ecommerce-marketing"
       ],
-      "status": "todo"
+      "status": "done",
+      "date": "2026-11-13"
     },
     {
       "slug": "d2c-customer-retention",

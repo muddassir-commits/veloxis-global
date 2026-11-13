@@ -1,0 +1,30 @@
+{
+  "title": "Customer Retention Strategies for D2C Brands: A Practical Guide",
+  "seoTitle": "Customer Retention Strategies for D2C Brands (India)",
+  "excerpt": "Customer retention strategies for D2C brands: the metrics to track, the first 30 days, WhatsApp and email rules, reorder timing and loyalty.",
+  "date": "2026-11-14",
+  "category": "Growth Tips",
+  "industry": "ecommerce",
+  "image": "/images/people/blog/d2c-customer-retention-cover.jpg",
+  "imageAlt": "Three plain cardboard parcels sealed with brown tape, stacked on a coir doormat outside a dark wooden front door",
+  "inlineImages": [
+    { "src": "/images/people/blog/d2c-customer-retention-1.jpg", "alt": "A small clear glass bottle of golden oil on a white surface, surrounded by white and pale pink flowers", "beforeHeading": "reorder-reminders", "caption": "Consumables have a natural reorder cycle: time reminders to when the product runs out." },
+    { "src": "/images/people/blog/d2c-customer-retention-2.jpg", "alt": "Black and white top view of an open spiral notebook with blank pages and a black pen on a cutting mat", "beforeHeading": "90-day-plan" }
+  ],
+  "about": [
+    { "name": "Customer retention", "sameAs": "https://en.wikipedia.org/wiki/Customer_retention" },
+    { "name": "Customer lifetime value", "sameAs": "https://en.wikipedia.org/wiki/Customer_lifetime_value" },
+    { "name": "Direct-to-consumer", "sameAs": "https://en.wikipedia.org/wiki/Direct-to-consumer" }
+  ],
+  "faqs": [
+    { "question": "What are the best customer retention strategies for D2C brands?", "answer": "The strategies that work best are a planned post-purchase journey, reorder reminders timed to when the product runs out, opted-in WhatsApp and email messages, an easy repeat checkout, fast human support and fair returns, and one simple reward for coming back. Measure all of it with repeat purchase rate by monthly cohort." },
+    { "question": "How do you calculate repeat purchase rate for a D2C store?", "answer": "Take all first-time customers from one month and count how many placed a second order within a fixed window, such as 90 days. Divide that by the number of first-time customers in that month. Use the same window for every cohort, and exclude cancelled and returned orders, especially cash on delivery orders." },
+    { "question": "When should a D2C brand send a reorder reminder?", "answer": "Send it a few days before the customer is likely to run out. Estimate the use-up time from pack size and typical daily use, then check it against the median days to second order for customers who actually reordered. Send one follow-up at most, then move non-buyers back to your regular newsletter." },
+    { "question": "Can I send WhatsApp marketing messages to all my customers?", "answer": "No. WhatsApp's Business Messaging Policy says you may only message people who gave you their number and opted in to receive messages from you, and you must honour every opt-out. Outside the 24-hour customer service window you can only send pre-approved templates. Collect opt-in at checkout with an unticked box." },
+    { "question": "Is email or WhatsApp better for D2C retention?", "answer": "Use both, for different jobs. WhatsApp suits order updates, reorder reminders and replies to questions from opted-in customers. Email suits product education, launches and newsletters. Sending too many promotional WhatsApp messages risks blocks, while email needs domain authentication and easy unsubscribe to stay out of spam folders." },
+    { "question": "Do loyalty programs work for small D2C brands?", "answer": "They can, if they stay simple and affordable. Start with one reward, such as credit on the next order or early access for repeat buyers, priced from your contribution margin. Keep a small random group out of the program for a few months so you can see whether it really increases repeat orders." },
+    { "question": "What consent rules apply to D2C marketing messages in India?", "answer": "Four sets of rules matter: the DPDP Act and DPDP Rules 2025 for personal data and consent notices, WhatsApp's Business Messaging Policy, TRAI's commercial communication regulations for SMS and calls, and the CCPA's dark patterns guidelines for offers and subscriptions. This is general information, not legal advice; check current rules." },
+    { "question": "Are subscriptions a good retention strategy for D2C brands?", "answer": "Subscriptions suit products used at a steady rate, like coffee, pet food or supplements. Make pausing and cancelling easy and visible. India's CCPA guidelines list a subscription trap, making cancellation impossible or complex and lengthy, as a dark pattern, and hard-to-cancel plans also lead to chargebacks and complaints." },
+    { "question": "Why do D2C retention campaigns fail?", "answer": "They usually fail because every message is a discount, messages go to people who never opted in, the brand tracks one store-wide repeat rate instead of cohorts, and reminders arrive at the wrong time. Most of all, no message sequence can fix a product, delivery or support experience that disappointed the customer the first time." }
+  ]
+}
