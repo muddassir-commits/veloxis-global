@@ -1,0 +1,31 @@
+{
+  "title": "UGC Ads for D2C Brands: Brief, Rights, Disclosure and Testing",
+  "seoTitle": "UGC Ads for D2C Brands: A Practical Guide (India)",
+  "excerpt": "UGC ads for D2C brands: how to brief creators, get written usage rights, follow ASCI disclosure rules and test videos without guesswork.",
+  "date": "2026-11-15",
+  "category": "Paid Ads",
+  "service": "paid-ads",
+  "industry": "ecommerce",
+  "image": "/images/people/blog/ugc-ads-for-d2c-cover.jpg",
+  "imageAlt": "A person crouching on a wet street holds a smartphone low to the ground, framing a shot on its camera screen",
+  "inlineImages": [
+    { "src": "/images/people/blog/ugc-ads-for-d2c-1.jpg", "alt": "Top view of a jar of pink clay powder, a bowl of rose petals and a dropper bottle on a white surface", "beforeHeading": "how-to-brief-ugc-creators", "caption": "Brief creators on one buyer question, such as how a product looks and feels in real use." },
+    { "src": "/images/people/blog/ugc-ads-for-d2c-2.jpg", "alt": "An open lined notebook with a fountain pen beside a cup of black coffee on a green saucer on a wooden table", "beforeHeading": "how-to-test-ugc-ads" }
+  ],
+  "about": [
+    { "name": "User-generated content", "sameAs": "https://en.wikipedia.org/wiki/User-generated_content" },
+    { "name": "Influencer marketing", "sameAs": "https://en.wikipedia.org/wiki/Influencer_marketing" },
+    { "name": "Direct-to-consumer", "sameAs": "https://en.wikipedia.org/wiki/Direct-to-consumer" }
+  ],
+  "faqs": [
+    { "question": "What are UGC ads?", "answer": "UGC ads are paid adverts built from videos, photos or reviews made by real customers or paid creators in a natural, phone-shot style. They usually show someone using the product, unboxing it or answering a common doubt, and they run with ad spend behind them on platforms such as Instagram and Facebook." },
+    { "question": "What is the difference between UGC ads and influencer ads?", "answer": "With UGC ads you pay for the content and usually run it from your own brand account, so the creator's follower count matters little. With influencer ads you pay mainly for reach to the influencer's audience. A Meta partnership ad combines both by running an ad from the creator's handle with their permission." },
+    { "question": "Do UGC ads need a disclosure label in India?", "answer": "Yes, when the creator received money, free product or any other benefit. ASCI lists labels such as #Ad, #Sponsored, #Collaboration and #Partnership, and says they must be hard to miss and superimposed on videos without captions. ASCI can issue notices to both the brand and the creator. This is general information, not legal advice." },
+    { "question": "How long must a disclosure label stay on a UGC video?", "answer": "ASCI's FAQs say a label must stay at least 3 seconds on videos up to 15 seconds, at least one third of the length for videos over 15 seconds and under 2 minutes, and throughout the brand mentions for longer videos. Live streams need it at the start and end." },
+    { "question": "Who owns a UGC video that a brand paid for?", "answer": "Usually the creator owns the copyright unless a written agreement transfers or licenses it. Under Section 19 of India's Copyright Act, an assignment must be in writing and signed, and if no period is stated it is deemed to be five years. Always get signed paid-use rights before running ads." },
+    { "question": "What should a UGC creator agreement include?", "answer": "It should name the exact videos and footage, the rights granted such as paid ads, website and email, the duration, the territory, permission to edit and combine footage, partnership ad access, use of the creator's face and voice, confirmation of no unlicensed music, disclosure duties, approved claims and payment terms." },
+    { "question": "How do you brief a UGC creator?", "answer": "Give one buyer question per video, describe the buyer, list the claims they may and may not make, list must-show moments, ask for several hooks and spare product shots, set vertical video specs, state the disclosure label, and agree rights and payment before filming. Leave the wording and delivery to the creator." },
+    { "question": "How do you test UGC ads on Meta?", "answer": "Check that purchase tracking works, then change one thing at a time, usually the hook first, keeping the offer, audience and landing page the same. Use Ads Manager's A/B test for clean comparisons, decide the test length before starting, and judge on purchases and cost per purchase, not early clicks." },
+    { "question": "Can I use a customer's Instagram post in my ads?", "answer": "Only with their written permission for paid advertising. Ask them clearly, keep their reply with the date, and stop if they refuse or later withdraw consent. A repost or tag does not give you the right to put money behind their content, and the original creator still owns the copyright." }
+  ]
+}

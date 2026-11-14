@@ -440,4 +440,8 @@ export const BLOG_MESSAGES: Record<string, { ref: string; message: string }> = {
     ref: 'blog-d2c-repeat',
     message: 'I read your guide on D2C customer retention. I run an online store and want more customers to order a second time. Can you help me plan it?',
   },
+  'ugc-ads-for-d2c': {
+    ref: 'blog-ugc-brief',
+    message: 'I read your guide on UGC ads. I run an online store and want to brief creators and test their videos as ads the right way. Can you help?',
+  },
 };
