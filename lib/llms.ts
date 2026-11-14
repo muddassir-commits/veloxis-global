@@ -16,7 +16,7 @@ import {
 
 const qa = (list: { question: string; answer: string }[] = []) => list.flatMap((f) => [`Q: ${f.question}`, `A: ${f.answer}`, '']);
 
-const intro = `> ${siteData.definition} Its main focus is e-commerce and D2C brands, and it also works with local businesses and clinics and real estate companies, and reports on enquiries, orders, bookings and site visits rather than clicks.`;
+const intro = `> ${siteData.definition} It reports on orders, enquiries, bookings and site visits rather than clicks.`;
 
 // Build date: the llms routes are static, so this is when the content was last published.
 const updated = `Last updated: ${new Date().toISOString().slice(0, 10)}`;
@@ -54,11 +54,12 @@ export function buildLlmsTxt(): string {
     '',
     '## Main pages',
     '',
-    `- [Real Estate Lead System](${SITE_URL}/real-estate-lead-system): ${leadSystemSummary}`,
-    `- [Free marketing audit](${SITE_URL}/free-audit): a free review of a website or store, ads and lead follow-up.`,
-    `- [About Veloxis Global](${SITE_URL}/about)`,
     `- [E-commerce & D2C marketing](${SITE_URL}/industries/ecommerce): Meta and Google ads, store pages and WhatsApp and email follow-ups for online brands.`,
     `- [Marketing for local businesses & clinics](${SITE_URL}/industries/local-business): websites, local SEO, Google Business Profile and local ads for clinics, dentists, salons and home services.`,
+    `- [Real Estate Lead System](${SITE_URL}/real-estate-lead-system): ${leadSystemSummary}`,
+    `- [Free marketing audit](${SITE_URL}/free-audit): a free review of a website or store, ads and lead follow-up.`,
+    `- [Free AI website audit tool](${SITE_URL}/tools/website-audit): checks any page for SEO, speed, mobile, tracking and AI search readiness in under a minute.`,
+    `- [About Veloxis Global](${SITE_URL}/about)`,
     `- [Contact](${SITE_URL}/contact): WhatsApp ${siteData.phone} (messages only, no calls), email ${siteData.email}.`,
     '',
     '## Services',
