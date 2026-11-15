@@ -444,4 +444,8 @@ export const BLOG_MESSAGES: Record<string, { ref: string; message: string }> = {
     ref: 'blog-ugc-brief',
     message: 'I read your guide on UGC ads. I run an online store and want to brief creators and test their videos as ads the right way. Can you help?',
   },
+  'whatsapp-ai-chatbot-for-business': {
+    ref: 'blog-wa-bot-rules',
+    message: 'I read your guide on WhatsApp chatbots. I want a bot that answers customer questions and hands over to my team. Can you help me set it up?',
+  },
 };

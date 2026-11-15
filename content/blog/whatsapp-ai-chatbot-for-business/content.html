@@ -1,0 +1,179 @@
+<p><strong>A WhatsApp AI chatbot for business should answer common questions, share order or booking status, collect lead details and hand the chat to a person when it gets stuck. It should never pose as a general-purpose AI assistant, message people who haven't opted in, ask for card numbers, give medical or legal advice, or hide the way to a human.</strong></p>
+<p>This guide is for online stores, clinics, local service businesses and real estate teams in India that get more WhatsApp messages than they can answer by hand. Most pages that rank for this topic are written by chatbot vendors selling their own builder. They explain features well but say little about what Meta's current terms allow, how consent works under India's data protection law, or exactly when a bot should step aside. This guide covers all of that: what the bot should and shouldn't do, the rules, a reply flow for a store, setup steps and how to measure it, with official sources linked.</p>
+
+<h2 id="what-is-a-whatsapp-ai-chatbot">What is a WhatsApp AI chatbot for business?</h2>
+<p><strong>It is software connected to your business WhatsApp number that reads incoming messages and replies automatically, using buttons, fixed menus, an AI language model or a mix of these.</strong> It sits in front of your team, not in place of it.</p>
+<p>There are three common kinds:</p>
+<ul>
+  <li><strong>Rule-based (menu) bots</strong> offer buttons or numbered options: "Track my order", "Book a visit", "Talk to us". They are predictable and easy to check, but they can't handle a question you didn't plan for.</li>
+  <li><strong>AI bots</strong> use a language model to understand free-text questions and write answers from your own approved content, such as your FAQ, return policy or project brochure. They handle messy, real-world wording far better, but they need firm limits so they don't make things up.</li>
+  <li><strong>Hybrid bots</strong> use buttons for anything that touches money, orders or bookings, and AI for open questions. For most small and mid-sized businesses this is the safest choice, because the risky steps stay fixed while the bot still understands people who type instead of tapping.</li>
+</ul>
+<p>Whichever kind you pick, the bot should do a narrow job well. A store bot answers questions about that store. A clinic bot books and reschedules appointments. A real estate bot qualifies enquiries for one project. That narrow scope matters for quality, and since 2026 it also matters for Meta's rules, covered below.</p>
+
+<h2 id="app-vs-api">Do you need the WhatsApp Business API for a chatbot?</h2>
+<p><strong>Yes, for a real chatbot. The free WhatsApp Business app offers greeting and away messages and quick replies, but automated, two-way conversations connected to your store, calendar or CRM run on the WhatsApp Business Platform (the API), usually through a provider.</strong></p>
+<p>Meta lets businesses reach the platform directly through its Cloud API or through a <a href="https://developers.facebook.com/docs/whatsapp/solution-providers" target="_blank" rel="noopener">Business Solution Provider</a>, which supplies the inbox, the bot builder and the integrations. Most small businesses use a provider because they also need a shared inbox for the team.</p>
+<table>
+  <thead>
+    <tr><th>Question</th><th>WhatsApp Business app</th><th>WhatsApp Business Platform (API)</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Best for</td><td>A single owner or a small team replying by hand</td><td>Teams that need automation, integrations and several agents on one number</td></tr>
+    <tr><td>Automation</td><td>Greeting, away messages and quick replies</td><td>Full chatbot flows, AI replies, triggers from your store or CRM</td></tr>
+    <tr><td>Messages outside the 24-hour window</td><td>Not built for templated, opted-in campaigns</td><td>Pre-approved template messages only</td></tr>
+    <tr><td>Integrations</td><td>Limited</td><td>Shopify or other store, booking system, CRM, helpdesk</td></tr>
+    <tr><td>Cost</td><td>Free app</td><td>Meta's per-message charges plus your provider's fees; check <a href="https://developers.facebook.com/docs/whatsapp/pricing" target="_blank" rel="noopener">Meta's pricing page</a> for current rates</td></tr>
+  </tbody>
+</table>
+<p>If you run a real estate team, our guide to the <a href="/blog/whatsapp-business-api-for-real-estate">WhatsApp Business API for real estate</a> walks through the same decision for property enquiries.</p>
+
+<h2 id="meta-ai-rules">Are AI chatbots allowed on WhatsApp in 2026?</h2>
+<p><strong>Yes, if the AI serves your own customers for your own business. Meta's terms ban providers of general-purpose AI assistants from using the WhatsApp Business Platform to offer those assistants, but a business using AI to answer its customers is not affected.</strong></p>
+<p>Section 4.7 of the <a href="https://www.facebook.com/legal/Meta-Terms-for-WhatsApp-Business-Platform" target="_blank" rel="noopener">Meta Terms for WhatsApp Business Platform</a>, headed "AI Providers", says providers and developers of AI or machine learning technologies are "strictly prohibited" from using the platform, directly or indirectly, to provide, offer or sell those technologies. The same section lets you hire an AI company as your solution provider. <a href="https://techcrunch.com/2025/10/18/whatssapp-changes-its-terms-to-bar-general-purpose-chatbots-from-its-platform/" target="_blank" rel="noopener">TechCrunch reported</a> that the change took effect on 15 January 2026 and that Meta said it "doesn't affect businesses that are using AI to serve customers on WhatsApp", giving a travel company's customer-service bot as an example.</p>
+<p>In practice, that means three things for your bot:</p>
+<ul>
+  <li><strong>Keep it on your business.</strong> A store bot that answers sizing, delivery and return questions is fine. A bot that will chat about anything, write essays or act as a free AI assistant is the kind of product the terms target, and it also exposes you to off-brand answers.</li>
+  <li><strong>Don't let WhatsApp chats train AI models.</strong> Section 4.7 also says you may not allow WhatsApp Business Platform data to be used to create, develop, train or improve machine learning or AI systems. Ask your provider in writing whether your chats are used to train its models or any third-party model, and choose settings that keep them out.</li>
+  <li><strong>Don't build profiles from chats.</strong> Section 4.1(a) of the same terms restricts using platform data to track, build or augment profiles on individual WhatsApp users.</li>
+</ul>
+<p><em>This is general information, not legal advice. Rules checked on 15 November 2026 against the terms page (last modified 23 September 2026); check the current version before you launch.</em></p>
+
+<h2 id="what-it-should-do">What should a WhatsApp AI chatbot do for a business?</h2>
+<p><strong>It should handle the repetitive, low-risk conversations your team answers every day, collect the details a person needs to finish the job, and pass the chat on cleanly.</strong> Anything that needs judgement, money decisions or sensitive information belongs with a person.</p>
+<p>The tasks differ by industry. Here is a practical split:</p>
+<table>
+  <thead>
+    <tr><th>Business type</th><th>Good jobs for the bot</th><th>Keep with a person</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Online store or D2C brand</td><td>Order status, delivery areas, return and exchange policy, size guides, product questions from your catalogue, cash on delivery confirmation</td><td>Refund disputes, damaged-product claims, bulk or wholesale orders, complaints, anything about payments failing</td></tr>
+    <tr><td>Clinic</td><td>Timings already published, location, booking, rescheduling and cancelling, what to bring, reminder confirmation</td><td>Any symptom, diagnosis, medicine or treatment question, reports, emergencies</td></tr>
+    <tr><td>Local service business</td><td>Service area, what is included in each service, booking a slot, sending a form for photos or details</td><td>Quotes for unusual jobs, complaints, rework requests</td></tr>
+    <tr><td>Real estate project</td><td>Project basics from the approved brochure, RERA number, site visit booking, budget and configuration questions to qualify the lead</td><td>Negotiation, payment plans, legal or loan questions, anything about allotment or possession</td></tr>
+  </tbody>
+</table>
+<p>For a store, the most useful single job is usually order status, because "Where is my order?" is the question people ask most and it has a factual answer in your store system. For a clinic, it is booking and rescheduling. For real estate, it is answering the first questions fast and booking a site visit; our guide to <a href="/blog/real-estate-chatbot">real estate chatbots</a> covers that flow in detail.</p>
+<p>A good bot also does four quiet jobs that vendors rarely mention:</p>
+<ul>
+  <li><strong>Says it is automated.</strong> Open with a line such as "You're chatting with our automated assistant. Type 'agent' any time to reach our team." People forgive a bot; they don't forgive being misled.</li>
+  <li><strong>Answers only from approved content.</strong> Give the AI your FAQ, policies and catalogue, and instruct it to say "I'll check with the team" when the answer isn't there.</li>
+  <li><strong>Captures context for the human.</strong> Name, order number or project, and the question, so your team doesn't ask again.</li>
+  <li><strong>Records opt-ins and opt-outs</strong> in your system, so marketing never goes to someone who said no.</li>
+</ul>
+
+<h2 id="what-it-should-never-do">What should a WhatsApp chatbot never do?</h2>
+<p><strong>It should never message people who haven't opted in, ask for full card or ID numbers, invent answers, give medical, legal or financial advice, block the path to a human, or ignore a request to stop.</strong> Several of these are written rules, not just good manners.</p>
+<ol>
+  <li><strong>Never message without opt-in.</strong> Meta's <a href="https://developers.facebook.com/documentation/business-messaging/whatsapp/messages/send-messages" target="_blank" rel="noopener">developer documentation</a> says you can only send messages to WhatsApp users who have opted in to receiving messages from you, whether or not a conversation window is open.</li>
+  <li><strong>Never ask for sensitive identifiers.</strong> The <a href="https://whatsappbusiness.com/policy/" target="_blank" rel="noopener">WhatsApp Business Messaging Policy</a> says not to share or ask people to share full payment card numbers, financial account numbers, personal ID card numbers or other sensitive identifiers. Send a secure payment link from your payment gateway instead.</li>
+  <li><strong>Never trap people with the bot.</strong> The same policy requires "prompt, clear, and direct escalation paths" when you use automation, such as transfer to a human agent, a phone number, email or a web support form.</li>
+  <li><strong>Never ignore "stop".</strong> The policy says you must respect all requests, on or off WhatsApp, to block, discontinue or opt out of your messages.</li>
+  <li><strong>Never guess.</strong> If the answer isn't in your approved content, the bot hands over. A wrong delivery date, refund rule or price causes more harm than a short wait.</li>
+  <li><strong>Never give professional advice.</strong> A clinic bot must not suggest medicines or interpret symptoms; it should give the clinic's contact route and tell people to seek emergency care for urgent problems. A real estate bot must not give legal or loan advice.</li>
+  <li><strong>Never act as a general assistant.</strong> Off-topic requests ("write my homework", "what's the news") get a polite redirect back to what the business can help with. This also keeps you clear of the Section 4.7 issue above.</li>
+  <li><strong>Never send free-form messages after the window closes.</strong> Outside the 24-hour customer service window you can only send pre-approved templates, covered next.</li>
+</ol>
+
+<h2 id="opt-in-consent">How do you get opt-in and stay within India's consent rules?</h2>
+<p><strong>Ask clearly, record it, and make leaving easy. Meta requires an opt-in that names your business and says the person will receive messages from you, and India's DPDP Act requires consent that is free, specific, informed and given by a clear action.</strong></p>
+<p>Meta's <a href="https://developers.facebook.com/docs/whatsapp/overview/getting-opt-in" target="_blank" rel="noopener">opt-in guidance</a> says businesses must clearly state that a person is opting in to receive communication, and must clearly state the business name. A website form, a checkout page or a WhatsApp conversation the person starts can all be valid methods. The Messaging Policy adds that you are responsible for choosing the opt-in method, and recommends separate opt-in for different message categories, so someone can accept order updates without accepting offers.</p>
+<p>India's <a href="https://www.indiacode.nic.in/handle/123456789/2158" target="_blank" rel="noopener">Digital Personal Data Protection Act, 2023</a> says consent must be free, specific, informed, unconditional and unambiguous, given with a clear affirmative action, and that people can withdraw it as easily as they gave it. The government notified the DPDP Rules in November 2025, according to a <a href="https://www.pib.gov.in/PressReleasePage.aspx?PRID=2190014" target="_blank" rel="noopener">Press Information Bureau release</a>, which sets out the notice and consent details businesses must follow as the Rules come into force in phases.</p>
+<p>A practical setup:</p>
+<ul>
+  <li><strong>At checkout or on your enquiry form:</strong> an unticked box reading, for example, "Send me order updates on WhatsApp from [Business name]", and a separate unticked box for offers.</li>
+  <li><strong>In the chat:</strong> when someone messages you first, the bot can answer them; before adding them to any marketing list, it asks with a clear yes or no button.</li>
+  <li><strong>In every marketing template:</strong> a "Stop offers" button or a line on how to opt out.</li>
+  <li><strong>In your records:</strong> the date, source and wording of each opt-in, and the date of any opt-out.</li>
+</ul>
+<p><em>General information, not legal advice. Checked on 15 November 2026; ask a lawyer about your own case.</em></p>
+
+<h2 id="human-handover">When should a WhatsApp chatbot hand over to a human?</h2>
+<p><strong>Immediately when the person asks for one, and automatically when the bot can't answer from approved content, the person is upset, money or health is involved, or the same question has failed twice.</strong> A good handover passes the full chat history so nobody repeats themselves.</p>
+<table>
+  <thead>
+    <tr><th>Trigger</th><th>Example</th><th>What the bot does</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Asks for a person</td><td>"agent", "human", "call me", "baat karni hai"</td><td>Transfers at once; no extra questions</td></tr>
+    <tr><td>No approved answer</td><td>A product question not in the catalogue</td><td>Says the team will reply, collects the detail, transfers</td></tr>
+    <tr><td>Frustration</td><td>Repeated messages, angry words, "useless bot"</td><td>Apologises once and transfers</td></tr>
+    <tr><td>Money or a dispute</td><td>Refund not received, double charge, damaged item</td><td>Collects order number and photos, transfers to support</td></tr>
+    <tr><td>Health or safety</td><td>Symptoms, pain, a reaction to a product</td><td>Gives the clinic or support contact route and urgent-care advice, transfers</td></tr>
+    <tr><td>High-intent lead</td><td>Wants a site visit today, asks for a bulk order</td><td>Books or collects details and alerts the right person</td></tr>
+  </tbody>
+</table>
+<p>Two details make handover work. First, publish your support hours inside the chat, so a message at night says when a person will reply instead of leaving silence. Second, make sure a real person watches the shared inbox; a handover to nobody is worse than no bot. Remember that a reply sent by your team after the 24-hour window has closed must be an approved template, so aim to answer handed-over chats within the same day.</p>
+
+<h2 id="store-reply-flow">What does a good WhatsApp chatbot flow look like for an online store?</h2>
+<p><strong>A good store flow greets the customer, shows a short menu, answers order and policy questions from live data, and offers a person at every step.</strong> Here is a simple version you can adapt:</p>
+<ol>
+  <li><strong>Greeting:</strong> "Hi, you're chatting with [Store]'s automated assistant. How can we help?" with buttons: Track my order, Returns and exchanges, Product question, Talk to our team.</li>
+  <li><strong>Track my order:</strong> the bot asks for the order number (or matches the phone number), pulls the status from your store or shipping system and replies with the current stage and tracking link.</li>
+  <li><strong>Returns and exchanges:</strong> the bot gives the policy in two or three lines, links the full policy page and offers to start a request. Damaged or wrong items go straight to a person with photos attached.</li>
+  <li><strong>Product question:</strong> the AI answers from the catalogue and size guide only. If the answer isn't there, it says so and hands over.</li>
+  <li><strong>Cash on delivery confirmation:</strong> after a COD order, an approved utility template asks the customer to confirm or cancel with one tap, which helps your team avoid shipping orders nobody wants.</li>
+  <li><strong>Talk to our team:</strong> transfer with the chat history and order number, plus a line saying when the team usually replies.</li>
+  <li><strong>Close:</strong> "Anything else?" with buttons, then a polite end. No marketing offer unless the customer has opted in to offers.</li>
+</ol>
+<p>Order updates and reminders sent outside the 24-hour window must use approved templates; Meta's <a href="https://developers.facebook.com/docs/whatsapp/message-templates/guidelines" target="_blank" rel="noopener">template guidelines</a> explain the categories and what gets rejected. Our guide to <a href="/blog/d2c-customer-retention">customer retention for D2C brands</a> shows how the same opted-in channel supports reorder reminders after the first purchase, and our <a href="/industries/ecommerce">e-commerce marketing page</a> shows how we connect WhatsApp to the rest of a store's growth plan.</p>
+
+<h2 id="how-to-set-up">How do you set up a WhatsApp AI chatbot, step by step?</h2>
+<p><strong>Pick the jobs, write the approved content, choose a provider, connect your systems, build a narrow flow, test it with your own team and launch to a small share of chats first.</strong> The writing and testing take longer than the technical setup.</p>
+<ol>
+  <li><strong>List your top questions.</strong> Export a few weeks of chats and emails and group them. Start with the handful that come up most and have factual answers.</li>
+  <li><strong>Write the approved answers.</strong> Policies, timings, delivery areas, catalogue facts. The AI answers only from this, so it must be accurate and current.</li>
+  <li><strong>Choose a provider.</strong> Check the points in the table below before you sign.</li>
+  <li><strong>Set up the number and display name.</strong> Decide whether to use a new number or connect the number you already use in the WhatsApp Business app, following your provider's steps, and verify your business with Meta.</li>
+  <li><strong>Connect your systems.</strong> Store or order system for tracking, calendar for bookings, CRM for leads.</li>
+  <li><strong>Build the flow.</strong> Buttons for money, orders and bookings; AI for open questions; handover at every step.</li>
+  <li><strong>Write and submit templates</strong> for order updates, reminders and any opted-in offers.</li>
+  <li><strong>Test hard.</strong> Have your team try rude messages, Hinglish, typos, off-topic requests and attempts to get the bot to promise a refund. Fix what breaks.</li>
+  <li><strong>Launch gradually</strong> and read real conversations every day for the first few weeks.</li>
+</ol>
+<table>
+  <thead>
+    <tr><th>Check before choosing a provider</th><th>Why it matters</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Is it listed as a Meta Business Solution Provider or does it use the official Cloud API?</td><td>Unofficial tools that automate the consumer app risk your number being banned</td></tr>
+    <tr><td>Can the AI be limited to your own content?</td><td>Stops made-up answers and off-topic chat</td></tr>
+    <tr><td>Are your chats used to train any AI model?</td><td>Section 4.7 of Meta's terms forbids letting platform data train AI systems</td></tr>
+    <tr><td>Does it have a shared inbox with handover and chat history?</td><td>Handover is required in practice and by policy</td></tr>
+    <tr><td>Does it store opt-in and opt-out records?</td><td>You need proof of consent and must honour opt-outs</td></tr>
+    <tr><td>Do you own the number, templates and data if you leave?</td><td>Avoids being locked in</td></tr>
+    <tr><td>Are Meta's message charges shown separately from the provider's fee?</td><td>Makes costs clear and comparable</td></tr>
+  </tbody>
+</table>
+<p>If you'd rather not build this yourself, our <a href="/services/ai-automation">WhatsApp and AI automation service</a> sets up the bot, the handover and the integrations, and our <a href="/services/email-whatsapp-marketing">email and WhatsApp marketing service</a> handles opted-in templates and campaigns. You keep ownership of the number and the account.</p>
+
+<h2 id="measure">How do you know if your WhatsApp chatbot is working?</h2>
+<p><strong>Read real conversations every week and track a few measures: how many chats the bot resolves without a person, how fast handed-over chats get a reply, opt-out and block signals, and the business result the bot exists for, such as tracked orders, bookings or site visits.</strong></p>
+<ul>
+  <li><strong>Resolution without handover:</strong> the share of chats the bot finishes on its own. Read a sample to make sure "resolved" means the person actually got what they needed.</li>
+  <li><strong>Handover reply time:</strong> how long people wait for a human after the bot transfers them.</li>
+  <li><strong>Drop-off points:</strong> where people stop replying in the flow; that step usually needs clearer wording or fewer questions.</li>
+  <li><strong>Opt-outs and blocks:</strong> a rise after a campaign means the messages weren't wanted. Your provider and WhatsApp Manager show quality signals for your number.</li>
+  <li><strong>Business outcome:</strong> bookings made, site visits booked, COD orders confirmed, repeat orders from reminders. Tie these to your analytics so you can see the bot's effect, not just its chat volume.</li>
+</ul>
+<p>Avoid judging the bot by message volume alone. A bot that sends lots of messages but annoys people will show it in opt-outs and complaints before it shows in sales.</p>
+
+<h2 id="choosing-the-right-scope">Which businesses should wait before adding a chatbot?</h2>
+<p><strong>If you get only a few messages a day and one person answers them well, the free WhatsApp Business app with quick replies is usually enough.</strong> A chatbot pays off when the volume of repeat questions is taking your team away from sales or care, or when people message outside working hours and wait until morning.</p>
+<p>It also makes sense to fix the basics first. If your website doesn't answer delivery, returns or timing questions clearly, the bot will get the same questions over and over; publish clear answers on the site and reuse them in the bot. Clinics and local businesses should make sure their Google Business Profile shows accurate details too; our guide to <a href="/blog/local-seo-for-dentists">local SEO for dentists</a> covers that for clinics, and our <a href="/industries/local-business">local business page</a> shows how WhatsApp fits a clinic's enquiry flow. For a wider view of where AI helps a marketing team and where it doesn't, see <a href="/blog/ai-marketing-agency-what-it-does">what an AI marketing agency actually does</a>, or browse how we work with stores, clinics and real estate teams on our <a href="/industries">industries page</a>.</p>
+
+<h2 id="sources">Sources</h2>
+<ul>
+  <li><a href="https://www.facebook.com/legal/Meta-Terms-for-WhatsApp-Business-Platform" target="_blank" rel="noopener">Meta Terms for WhatsApp Business Platform (Sections 4.1 and 4.7, last modified 23 September 2026)</a></li>
+  <li><a href="https://whatsappbusiness.com/policy/" target="_blank" rel="noopener">WhatsApp Business Messaging Policy (last updated 23 September 2026)</a></li>
+  <li><a href="https://developers.facebook.com/docs/whatsapp/overview/getting-opt-in" target="_blank" rel="noopener">Meta for Developers: WhatsApp Business Platform, getting opt-in</a></li>
+  <li><a href="https://developers.facebook.com/documentation/business-messaging/whatsapp/messages/send-messages" target="_blank" rel="noopener">Meta for Developers: WhatsApp Business Platform, send messages and the customer service window</a></li>
+  <li><a href="https://developers.facebook.com/docs/whatsapp/message-templates/guidelines" target="_blank" rel="noopener">Meta for Developers: WhatsApp message template guidelines</a></li>
+  <li><a href="https://developers.facebook.com/docs/whatsapp/solution-providers" target="_blank" rel="noopener">Meta for Developers: WhatsApp Business Solution Providers</a></li>
+  <li><a href="https://developers.facebook.com/docs/whatsapp/pricing" target="_blank" rel="noopener">Meta for Developers: WhatsApp Business Platform pricing</a></li>
+  <li><a href="https://techcrunch.com/2025/10/18/whatssapp-changes-its-terms-to-bar-general-purpose-chatbots-from-its-platform/" target="_blank" rel="noopener">TechCrunch: WhatsApp changes its terms to bar general-purpose chatbots from its platform (October 2025)</a></li>
+  <li><a href="https://www.indiacode.nic.in/handle/123456789/2158" target="_blank" rel="noopener">India Code: The Digital Personal Data Protection Act, 2023</a></li>
+  <li><a href="https://www.pib.gov.in/PressReleasePage.aspx?PRID=2190014" target="_blank" rel="noopener">PIB: Government notifies DPDP Rules to empower citizens and protect privacy (November 2025)</a></li>
+</ul>
+
+<p>Not sure what your WhatsApp setup should automate first? <a href="/free-audit">Ask for a free audit</a> and we'll look at your enquiry flow, opt-in and handover, and suggest where a chatbot would help and where a person should stay in charge.</p>
