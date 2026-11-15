@@ -1,0 +1,31 @@
+{
+  "title": "WhatsApp Chatbot for Business: What AI Should and Shouldn't Do",
+  "seoTitle": "WhatsApp Chatbot for Business: Rules, Uses, Setup",
+  "excerpt": "WhatsApp chatbot for business: what an AI bot should handle, what Meta now bans, opt-in under India's DPDP Act, handover rules and a store flow.",
+  "date": "2026-11-16",
+  "category": "AI Automation",
+  "service": "ai-automation",
+  "industry": "general",
+  "image": "/images/people/blog/whatsapp-ai-chatbot-for-business-cover.jpg",
+  "imageAlt": "Top view of a white smartphone with a dark screen beside a cup of black coffee, a pen, two blank cards and a blank sheet of paper on a wooden table",
+  "inlineImages": [
+    { "src": "/images/people/blog/whatsapp-ai-chatbot-for-business-1.jpg", "alt": "Close-up of a tall stack of flat corrugated cardboard sheets, showing their wavy inner layers", "beforeHeading": "store-reply-flow", "caption": "For an online store, \"Where is my order?\" is usually the first job worth automating." },
+    { "src": "/images/people/blog/whatsapp-ai-chatbot-for-business-2.jpg", "alt": "Top view of a tidy white desk with a laptop, an open spiral notebook with binder clips, a small cup of coffee, a teapot and white flowers", "beforeHeading": "how-to-set-up" }
+  ],
+  "about": [
+    { "name": "Chatbot", "sameAs": "https://en.wikipedia.org/wiki/Chatbot" },
+    { "name": "WhatsApp", "sameAs": "https://en.wikipedia.org/wiki/WhatsApp" },
+    { "name": "Digital Personal Data Protection Act, 2023", "sameAs": "https://en.wikipedia.org/wiki/Digital_Personal_Data_Protection_Act,_2023" }
+  ],
+  "faqs": [
+    { "question": "What is a WhatsApp chatbot for business?", "answer": "It is software connected to a business WhatsApp number that replies to customers automatically, using buttons, menus, an AI language model or a mix. It answers common questions, shares order or booking status, collects lead details and hands the conversation to a person when it can't help. Real chatbots run on the WhatsApp Business Platform, not the free app." },
+    { "question": "Are AI chatbots allowed on WhatsApp Business in 2026?", "answer": "Yes, when the AI serves your own customers. Section 4.7 of Meta's WhatsApp Business Platform terms bars AI providers from using the platform to offer their AI technologies, which targets general-purpose assistants. Meta said the change, effective 15 January 2026, doesn't affect businesses using AI to serve customers, such as a customer-service bot." },
+    { "question": "Do I need the WhatsApp Business API for a chatbot?", "answer": "Yes, for a real chatbot. The free WhatsApp Business app offers greeting and away messages and quick replies only. Automated two-way conversations linked to your store, booking calendar or CRM need the WhatsApp Business Platform, accessed through Meta's Cloud API or a Business Solution Provider that adds an inbox, bot builder and integrations." },
+    { "question": "What should a WhatsApp chatbot never do?", "answer": "It should never message people who haven't opted in, ask for full card, bank account or ID numbers, invent answers, give medical, legal or financial advice, hide the way to a human or ignore a request to stop. WhatsApp's Business Messaging Policy and Meta's developer documentation set several of these as rules, not just good practice." },
+    { "question": "When should a WhatsApp chatbot hand over to a human?", "answer": "At once when the customer asks for a person, and automatically when the bot has no approved answer, the customer seems upset, money or health is involved, or the same question has failed twice. Pass the full chat history with the handover, and tell the customer when your team usually replies so nobody waits in silence." },
+    { "question": "How do I get WhatsApp opt-in from customers in India?", "answer": "Use a clear, unticked checkbox or button that names your business and says the person will get WhatsApp messages from you, with separate consent for offers. Record the date, source and wording. India's DPDP Act requires consent that is free, specific, informed and unambiguous, and withdrawal must be as easy as giving consent." },
+    { "question": "Can a WhatsApp chatbot send messages after 24 hours?", "answer": "Only pre-approved template messages. Meta's documentation says a 24-hour customer service window opens when a customer messages you, and free-form replies are allowed only inside it. After it closes, you must use approved templates, and only to people who opted in to hear from your business." },
+    { "question": "What is the best first use of a WhatsApp chatbot for an online store?", "answer": "Order status is usually the best start, because customers ask it often and the answer is a fact in your store or shipping system. After that, add returns and exchange policy answers, product questions from your catalogue and cash on delivery confirmation, with a button to reach your team at every step." },
+    { "question": "Can a clinic use a WhatsApp chatbot?", "answer": "Yes, for booking, rescheduling, cancelling, location and what to bring. A clinic bot must not interpret symptoms or suggest medicines; health questions should go to the clinic's staff, with advice to seek urgent care for emergencies. Patients must have opted in, and health details should be collected only where truly needed." }
+  ]
+}
