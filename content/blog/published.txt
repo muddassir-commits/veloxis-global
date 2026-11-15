@@ -48,6 +48,7 @@ real-estate-whatsapp-message-templates
 rera-advertisement-rules
 rera-number-check
 rera-registration-for-agents
+ugc-ads-for-d2c
 what-is-eoi-in-real-estate
 whatsapp-automation-for-real-estate-leads
 whatsapp-business-api-for-real-estate
