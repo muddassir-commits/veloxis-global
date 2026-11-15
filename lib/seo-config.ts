@@ -170,7 +170,7 @@ export const pageMeta = {
     path: '/guides',
   },
   websiteAudit: {
-    title: 'Free Website Audit Tool: SEO, Speed & Mobile Check',
+    title: 'Free AI Website Audit Tool: SEO, Speed & AI Search Check',
     description:
       'Audit your website online for free: check any page for SEO, speed, mobile, tracking and AI search readiness in under a minute, with a fix list. No sign-up.',
     path: '/tools/website-audit',
