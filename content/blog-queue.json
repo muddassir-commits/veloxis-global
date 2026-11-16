@@ -5,7 +5,8 @@
     "Every topic has an industry (ecommerce, local-business, real-estate or general for AI topics). The post.json of the finished post must carry the same value.",
     "No invented numbers, results, clients or testimonials. Every figure needs a cited source in the post.",
     "Never name the founder. Author is the Veloxis Global team.",
-    "No prices for our own services anywhere."
+    "No prices for our own services anywhere.",
+    "Meta ads series (added 16 Nov 2026): 9 Meta ads topics are spread through the queue, about one in every five posts, so Meta posts never run back to back. They count as e-commerce. Each ends with the BrightROAS free Meta ads health check (https://brightroas.veloxisglobal.com/check), stating only true facts about it."
   ],
   "topics": [
     {
@@ -269,23 +270,6 @@
       "status": "todo"
     },
     {
-      "slug": "meta-ads-for-ecommerce-india",
-      "industry": "ecommerce",
-      "keyword": "meta ads for ecommerce",
-      "volume": null,
-      "intent": "informational",
-      "question": "How should an online store in India set up Meta ads that turn spend into orders?",
-      "category": "Paid Ads",
-      "service": "paid-ads",
-      "competitors": [],
-      "gaps": "Research at write time: check the top 5 results for India/US-specific detail they miss.",
-      "internalLinks": [
-        "/industries/ecommerce",
-        "/tools/website-audit"
-      ],
-      "status": "todo"
-    },
-    {
       "slug": "ai-voice-agents-india",
       "industry": "general",
       "keyword": "ai voice agent india",
@@ -301,6 +285,41 @@
         "/services/ecommerce-marketing"
       ],
       "status": "todo"
+    },
+    {
+      "slug": "meta-ads-learning-limited",
+      "industry": "ecommerce",
+      "keyword": "learning limited meta ads",
+      "secondaryKeywords": [
+        "learning phase facebook ads",
+        "how to exit learning limited",
+        "meta ads stuck in learning"
+      ],
+      "volume": null,
+      "intent": "informational",
+      "question": "What does 'Learning limited' mean on Meta ads and how do I fix it?",
+      "aeoQuestions": [
+        "What does learning limited mean on Facebook ads?",
+        "How many conversions do you need to exit the learning phase?",
+        "Should I worry if an ad set is learning limited but profitable?",
+        "Does editing an ad reset the learning phase?"
+      ],
+      "category": "Paid Ads",
+      "service": "paid-ads",
+      "competitors": [
+        "https://www.cometly.com/post/facebook-ads-learning-phase-stuck",
+        "https://adnova.ai/blogs/learning-limited-facebook-ads",
+        "https://lebesgue.io/facebook-ads/facebook-ads-learning-phase-what-you-need-to-know-2024-update"
+      ],
+      "gaps": "Top results are vendor blogs quoting '50 conversions a week' without Meta's page; few explain when learning limited is fine (profitable ad sets); none cover Indian D2C budgets or COD. Cite Meta help for the learning phase and significant edits.",
+      "internalLinks": [
+        "/industries/ecommerce",
+        "/services/paid-ads",
+        "/free-audit",
+        "https://brightroas.veloxisglobal.com/check"
+      ],
+      "status": "todo",
+      "note": "Meta ads series (16 Nov 2026): end with the BrightROAS free Meta ads health check CTA, true facts only (copy the wording used in content/blog/meta-ads-not-spending)."
     },
     {
       "slug": "good-roas-for-ecommerce",
@@ -328,6 +347,23 @@
       "question": "How do you build an abandoned cart email sequence that wins back orders?",
       "category": "AI Automation",
       "service": "ai-automation",
+      "competitors": [],
+      "gaps": "Research at write time: check the top 5 results for India/US-specific detail they miss.",
+      "internalLinks": [
+        "/industries/ecommerce",
+        "/tools/website-audit"
+      ],
+      "status": "todo"
+    },
+    {
+      "slug": "meta-ads-for-ecommerce-india",
+      "industry": "ecommerce",
+      "keyword": "meta ads for ecommerce",
+      "volume": null,
+      "intent": "informational",
+      "question": "How should an online store in India set up Meta ads that turn spend into orders?",
+      "category": "Paid Ads",
+      "service": "paid-ads",
       "competitors": [],
       "gaps": "Research at write time: check the top 5 results for India/US-specific detail they miss.",
       "internalLinks": [
@@ -369,6 +405,41 @@
         "/tools/website-audit"
       ],
       "status": "todo"
+    },
+    {
+      "slug": "meta-ads-creative-fatigue",
+      "industry": "ecommerce",
+      "keyword": "creative fatigue meta ads",
+      "secondaryKeywords": [
+        "ad fatigue facebook",
+        "facebook ads frequency too high",
+        "how often to refresh facebook ad creatives"
+      ],
+      "volume": null,
+      "intent": "informational",
+      "question": "How do I know my Meta ad creatives are tired, and what do I do about it?",
+      "aeoQuestions": [
+        "What is creative fatigue on Facebook ads?",
+        "What frequency is too high on Meta ads?",
+        "How often should I refresh Facebook ad creatives?",
+        "What does 'creative limited' mean in Ads Manager?"
+      ],
+      "category": "Paid Ads",
+      "service": "paid-ads",
+      "competitors": [
+        "https://megadigital.ai/en/blog/facebook-ad-fatigue",
+        "https://madgicx.com/ad-fatigue-facebook/",
+        "https://inbeat.agency/blog/facebook-creative-fatigue"
+      ],
+      "gaps": "Frequency thresholds in top results conflict (2.5 to 6) and are unsourced; few use Meta's own 'creative fatigue' and 'creative limited' delivery statuses. Add a read-together check (frequency + CTR + cost per result) and a UGC refresh plan (link /blog/ugc-ads-for-d2c).",
+      "internalLinks": [
+        "/industries/ecommerce",
+        "/services/paid-ads",
+        "/free-audit",
+        "https://brightroas.veloxisglobal.com/check"
+      ],
+      "status": "todo",
+      "note": "Meta ads series (16 Nov 2026): end with the BrightROAS free Meta ads health check CTA, true facts only (copy the wording used in content/blog/meta-ads-not-spending)."
     },
     {
       "slug": "google-shopping-ads-india",
@@ -437,6 +508,41 @@
         "/tools/website-audit"
       ],
       "status": "todo"
+    },
+    {
+      "slug": "meta-ads-audit-checklist",
+      "industry": "ecommerce",
+      "keyword": "meta ads audit checklist",
+      "secondaryKeywords": [
+        "facebook ads audit",
+        "how to audit a meta ad account",
+        "meta ads account audit template"
+      ],
+      "volume": null,
+      "intent": "informational",
+      "question": "How do I audit a Meta ad account step by step?",
+      "aeoQuestions": [
+        "How do you audit a Facebook ad account?",
+        "What should a Meta ads audit include?",
+        "How often should you audit Meta ads?",
+        "What is the first thing to check in a Meta ads audit?"
+      ],
+      "category": "Paid Ads",
+      "service": "paid-ads",
+      "competitors": [
+        "https://www.flighted.co/blog/the-complete-meta-ads-audit-checklist-for-marketers",
+        "https://adadvisor.ai/blog/meta-ads-audit-checklist",
+        "https://www.trackingplan.com/blog/instagram-ads-audit"
+      ],
+      "gaps": "Most checklists are vendor-made with unsourced benchmark numbers. Order the audit tracking-first (pixel, Conversions API, dedup), then account health, structure, creatives, delivery, landing page; one big checklist table; India specifics (COD, RTO).",
+      "internalLinks": [
+        "/industries/ecommerce",
+        "/services/paid-ads",
+        "/free-audit",
+        "https://brightroas.veloxisglobal.com/check"
+      ],
+      "status": "todo",
+      "note": "Meta ads series (16 Nov 2026): end with the BrightROAS free Meta ads health check CTA, true facts only (copy the wording used in content/blog/meta-ads-not-spending)."
     },
     {
       "slug": "ai-generated-ads-rules",
@@ -510,6 +616,41 @@
       "status": "todo"
     },
     {
+      "slug": "meta-ad-rejected-fix",
+      "industry": "ecommerce",
+      "keyword": "meta ad rejected",
+      "secondaryKeywords": [
+        "facebook ad disapproved",
+        "request review meta ad",
+        "why was my facebook ad rejected"
+      ],
+      "volume": null,
+      "intent": "informational",
+      "question": "Why was my Meta ad rejected and how do I get it approved?",
+      "aeoQuestions": [
+        "How do I request a review of a rejected Meta ad?",
+        "How long does Meta ad review take?",
+        "Can I edit a rejected Facebook ad?",
+        "Why do health and supplement ads get rejected on Meta?"
+      ],
+      "category": "Paid Ads",
+      "service": "paid-ads",
+      "competitors": [
+        "https://megadigital.ai/en/blog/facebook-ads-rejected/",
+        "https://bir.ch/blog/facebook-ads-rejected",
+        "https://transparency.meta.com/policies/ad-standards/"
+      ],
+      "gaps": "Top results rarely cite Meta's Advertising Standards per category. Add D2C triggers (supplements, before/after, personal attributes, claims), an edit-vs-request-review table and the Account Quality path. Add the 'general information, not legal advice' line.",
+      "internalLinks": [
+        "/industries/ecommerce",
+        "/services/paid-ads",
+        "/free-audit",
+        "https://brightroas.veloxisglobal.com/check"
+      ],
+      "status": "todo",
+      "note": "Meta ads series (16 Nov 2026): end with the BrightROAS free Meta ads health check CTA, true facts only (copy the wording used in content/blog/meta-ads-not-spending)."
+    },
+    {
       "slug": "shopify-seo-checklist",
       "industry": "ecommerce",
       "keyword": "shopify seo checklist",
@@ -560,6 +701,41 @@
         "/blog/google-business-profile-checklist"
       ],
       "status": "todo"
+    },
+    {
+      "slug": "scale-meta-ads-budget",
+      "industry": "ecommerce",
+      "keyword": "how to scale meta ads",
+      "secondaryKeywords": [
+        "increase facebook ads budget without resetting learning",
+        "vertical vs horizontal scaling facebook ads",
+        "scale advantage+ sales campaign"
+      ],
+      "volume": null,
+      "intent": "informational",
+      "question": "How do I raise my Meta ads budget without breaking results?",
+      "aeoQuestions": [
+        "How much should I increase my Facebook ad budget at a time?",
+        "Does increasing budget reset the learning phase?",
+        "What is horizontal vs vertical scaling?",
+        "When should I not scale a Meta campaign?"
+      ],
+      "category": "Paid Ads",
+      "service": "paid-ads",
+      "competitors": [
+        "https://www.jonloomer.com/slow-burn-a-strategy-for-scaling-facebook-ads/",
+        "https://www.relevantaudience.com/facebook-ads/how-to-scale-facebook-ads/",
+        "https://cropink.com/how-to-scale-facebook-ads"
+      ],
+      "gaps": "The '20% rule' is repeated without a Meta source: label it guidance and cite Meta's significant-edit page. Add when NOT to scale (tracking gaps, stock, RTO), festive-season timing in India, and what to watch for 7 days after.",
+      "internalLinks": [
+        "/industries/ecommerce",
+        "/services/paid-ads",
+        "/free-audit",
+        "https://brightroas.veloxisglobal.com/check"
+      ],
+      "status": "todo",
+      "note": "Meta ads series (16 Nov 2026): end with the BrightROAS free Meta ads health check CTA, true facts only (copy the wording used in content/blog/meta-ads-not-spending)."
     },
     {
       "slug": "d2c-landing-page-for-ads",
@@ -647,6 +823,41 @@
       "status": "todo"
     },
     {
+      "slug": "meta-ads-metrics-ecommerce",
+      "industry": "ecommerce",
+      "keyword": "meta ads metrics",
+      "secondaryKeywords": [
+        "facebook ads kpis ecommerce",
+        "what is a good ctr on facebook ads",
+        "mer vs roas"
+      ],
+      "volume": null,
+      "intent": "informational",
+      "question": "Which Meta ads metrics should an online store actually watch?",
+      "aeoQuestions": [
+        "What are the most important Meta ads metrics for ecommerce?",
+        "What is a good CTR for Facebook ads?",
+        "What is MER and how is it different from ROAS?",
+        "What is hook rate on Meta video ads?"
+      ],
+      "category": "Paid Ads",
+      "service": "paid-ads",
+      "competitors": [
+        "https://enhencer.com/blog/key-kpis-for-meta-ads-success-in-e-commerce",
+        "https://www.flighted.co/blog/the-most-important-meta-ads-meterics-to-track",
+        "https://searchengineland.com/meta-ads-advanced-kpis-track-success-446811"
+      ],
+      "gaps": "Competitors quote vendor benchmark averages. Use Meta's metric definitions, a funnel-stage table, and how to read metrics together to find whether the problem is creative, landing page or audience; India: judge delivered revenue after RTO.",
+      "internalLinks": [
+        "/industries/ecommerce",
+        "/services/paid-ads",
+        "/free-audit",
+        "https://brightroas.veloxisglobal.com/check"
+      ],
+      "status": "todo",
+      "note": "Meta ads series (16 Nov 2026): end with the BrightROAS free Meta ads health check CTA, true facts only (copy the wording used in content/blog/meta-ads-not-spending)."
+    },
+    {
       "slug": "local-business-whatsapp-marketing",
       "industry": "local-business",
       "keyword": "whatsapp marketing for small business",
@@ -711,6 +922,41 @@
         "/tools/website-audit"
       ],
       "status": "todo"
+    },
+    {
+      "slug": "meta-ad-account-restricted",
+      "industry": "ecommerce",
+      "keyword": "meta ad account restricted",
+      "secondaryKeywords": [
+        "facebook ad account disabled",
+        "ad account restricted how to fix",
+        "meta business account restricted appeal"
+      ],
+      "volume": null,
+      "intent": "informational",
+      "question": "My Meta ad account is restricted. What do I do now?",
+      "aeoQuestions": [
+        "Why is my Meta ad account restricted?",
+        "How do I appeal a disabled Facebook ad account?",
+        "Should I create a new ad account if mine is restricted?",
+        "How do I protect my Meta ad account from being disabled?"
+      ],
+      "category": "Paid Ads",
+      "service": "paid-ads",
+      "competitors": [
+        "https://megadigital.ai/en/blog/facebook-ad-account-restricted/",
+        "https://www.leadsie.com/blog/recover-disabled-facebook-ad-account",
+        "https://hawky.ai/blog/facebook-ad-account-restricted"
+      ],
+      "gaps": "Explain the layers (ad account, business portfolio, profile, Page) from Meta's help pages, the Account Quality / Business Support Home path, why a new account counts as circumvention, and prevention (2FA, two admins, payment hygiene). Add the 'general information, not legal advice' line. BrightROAS does not fix restrictions.",
+      "internalLinks": [
+        "/industries/ecommerce",
+        "/services/paid-ads",
+        "/free-audit",
+        "https://brightroas.veloxisglobal.com/check"
+      ],
+      "status": "todo",
+      "note": "Meta ads series (16 Nov 2026): end with the BrightROAS free Meta ads health check CTA, true facts only (copy the wording used in content/blog/meta-ads-not-spending)."
     },
     {
       "slug": "clinic-google-business-profile",
@@ -781,6 +1027,41 @@
       "status": "todo"
     },
     {
+      "slug": "meta-ads-cost-per-purchase-rising",
+      "industry": "ecommerce",
+      "keyword": "facebook ads cost per purchase increasing",
+      "secondaryKeywords": [
+        "meta ads cost per result going up",
+        "why is my facebook cpm so high",
+        "facebook ads getting expensive"
+      ],
+      "volume": null,
+      "intent": "informational",
+      "question": "Why is my Meta ads cost per purchase going up, and what should I check first?",
+      "aeoQuestions": [
+        "Why is my Facebook cost per purchase increasing?",
+        "Why are Facebook CPMs higher in the festive season in India?",
+        "Does scaling budget raise cost per purchase?",
+        "How do I tell if the problem is the ad or the website?"
+      ],
+      "category": "Paid Ads",
+      "service": "paid-ads",
+      "competitors": [
+        "https://leadenforce.com/blog/why-your-cost-per-purchase-fluctuates-without-clear-reason",
+        "https://www.k6agency.com/breakdown-effect/",
+        "https://adkit.so/resources/troubleshooting/facebook-ads-high-cpm"
+      ],
+      "gaps": "No top result gives a check order. Build a decision table (CPM up vs CTR down vs conversion rate down); cite Meta's breakdown effect help page; festive-season auction pressure in India (cite); COD/RTO effect on the true cost.",
+      "internalLinks": [
+        "/industries/ecommerce",
+        "/services/paid-ads",
+        "/free-audit",
+        "https://brightroas.veloxisglobal.com/check"
+      ],
+      "status": "todo",
+      "note": "Meta ads series (16 Nov 2026): end with the BrightROAS free Meta ads health check CTA, true facts only (copy the wording used in content/blog/meta-ads-not-spending)."
+    },
+    {
       "slug": "respond-to-google-reviews",
       "industry": "local-business",
       "keyword": "how to respond to google reviews",
@@ -847,6 +1128,41 @@
         "/tools/website-audit"
       ],
       "status": "todo"
+    },
+    {
+      "slug": "meta-advantage-plus-sales-campaigns",
+      "industry": "ecommerce",
+      "keyword": "advantage+ sales campaigns",
+      "secondaryKeywords": [
+        "advantage+ shopping campaigns",
+        "advantage plus shopping vs manual",
+        "advantage+ sales existing customer budget"
+      ],
+      "volume": null,
+      "intent": "informational",
+      "question": "What are Meta Advantage+ sales campaigns and should an Indian D2C brand use them?",
+      "aeoQuestions": [
+        "What replaced Advantage+ shopping campaigns?",
+        "What is the difference between Advantage+ sales and manual campaigns?",
+        "How do I limit spend on existing customers in Advantage+?",
+        "When should a small store not use Advantage+?"
+      ],
+      "category": "Paid Ads",
+      "service": "paid-ads",
+      "competitors": [
+        "https://www.jonloomer.com/qvt/advantage-sales-replaces-advantage-shopping/",
+        "https://www.customerlabs.com/blog/advantage-sales-vs-advantage-shopping-campaigns-the-differences/",
+        "https://bir.ch/blog/advantage-plus-sales-campaigns-guide"
+      ],
+      "gaps": "Advantage+ shopping was folded into Advantage+ sales: verify the current state on Meta's help and Marketing API pages at write time and state the date checked. Cover setup, existing-customer handling, creative inputs, judging it against a manual campaign, small Indian D2C budgets.",
+      "internalLinks": [
+        "/industries/ecommerce",
+        "/services/paid-ads",
+        "/free-audit",
+        "https://brightroas.veloxisglobal.com/check"
+      ],
+      "status": "todo",
+      "note": "Meta ads series (16 Nov 2026): end with the BrightROAS free Meta ads health check CTA, true facts only (copy the wording used in content/blog/meta-ads-not-spending)."
     },
     {
       "slug": "gym-marketing-ideas",

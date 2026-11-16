@@ -452,4 +452,16 @@ export const BLOG_MESSAGES: Record<string, { ref: string; message: string }> = {
     ref: 'blog-shopify-preads',
     message: 'I read your Shopify checklist before running ads. I run an online store and want my tracking, product pages and checkout checked before I spend more. Can you help?',
   },
+  'meta-ads-not-spending': {
+    ref: 'blog-meta-not-spending',
+    message: 'I read your guide on Meta ads not spending. My ads show active but are hardly spending. Can you help me find what is blocking them?',
+  },
+  'meta-ads-client-reporting': {
+    ref: 'blog-meta-client-report',
+    message: 'I read your guide on Meta ads client reports. I run Meta ads for a few clients and want clearer reports they trust. Can you help me set this up?',
+  },
+  'meta-ads-shopify-sales-mismatch': {
+    ref: 'blog-meta-shopify-gap',
+    message: 'I read your guide on Meta and Shopify numbers. My Ads Manager sales and my Shopify orders never match. Can you help me find which numbers to trust?',
+  },
 };
