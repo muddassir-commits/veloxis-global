@@ -1,0 +1,31 @@
+{
+  "title": "Shopify Conversion Rate Optimization: Fix These Before Ads",
+  "seoTitle": "Shopify Conversion Rate Optimization Checklist (India)",
+  "excerpt": "Shopify conversion rate optimization for Indian D2C brands: tracking, mobile speed, product pages, COD, UPI and legal details to fix before ads.",
+  "date": "2026-11-17",
+  "category": "Landing Pages",
+  "industry": "ecommerce",
+  "service": "high-converting-landing-pages",
+  "image": "/images/people/blog/shopify-store-conversion-checklist-cover.jpg",
+  "imageAlt": "An open laptop on a wooden desk beside a small toy shopping cart filled with gift boxes tied with coloured ribbons",
+  "inlineImages": [
+    { "src": "/images/people/blog/shopify-store-conversion-checklist-1.jpg", "alt": "A person holding a payment card in one hand while typing on a laptop keyboard", "beforeHeading": "cart-and-checkout", "caption": "Most checkout drop-offs come from surprises: extra costs, missing payment methods or a forced account." },
+    { "src": "/images/people/blog/shopify-store-conversion-checklist-2.jpg", "alt": "An empty brown cardboard shipping box with its flaps open on a white background", "beforeHeading": "indian-payments-cod" }
+  ],
+  "about": [
+    { "name": "Conversion rate optimization", "sameAs": "https://en.wikipedia.org/wiki/Conversion_rate_optimization" },
+    { "name": "Shopify", "sameAs": "https://en.wikipedia.org/wiki/Shopify" },
+    { "name": "Direct-to-consumer", "sameAs": "https://en.wikipedia.org/wiki/Direct-to-consumer" }
+  ],
+  "faqs": [
+    { "question": "What should I fix on my Shopify store before running ads?", "answer": "Fix five things first: purchase tracking that records every order once with the right value, fast mobile pages, product pages that answer buyers' questions, a total price and delivery date shown before checkout, and payment options Indian shoppers use, including UPI and cash on delivery with clear rules." },
+    { "question": "How does Shopify calculate conversion rate?", "answer": "Shopify measures conversion rate as the percentage of online store sessions (visits) that resulted in a sale. Its analytics also show the share of sessions that added an item to the cart and the share that reached checkout, so you can see which step of the funnel loses the most visitors." },
+    { "question": "How fast should a Shopify store load on mobile?", "answer": "Aim for Google's 'good' Core Web Vitals for real visitors: Largest Contentful Paint within 2.5 seconds, Interaction to Next Paint of 200 milliseconds or less, and Cumulative Layout Shift of 0.1 or less. Shopify's web performance dashboard shows all three using real visitor data from the past 30 days." },
+    { "question": "Why do shoppers abandon the cart on Shopify stores?", "answer": "The most common reason in Baymard Institute's survey is extra costs such as shipping, tax or fees appearing too late, followed by slow delivery, not trusting the site with card details and being asked to create an account. Show costs and delivery dates early and keep checkout short." },
+    { "question": "Should an Indian Shopify store offer cash on delivery?", "answer": "Usually yes, but with rules. Offer COD as a manual payment method for the pincodes and order values you can handle, show any COD fee before checkout, confirm COD orders by WhatsApp or SMS before shipping, and judge it by delivered revenue rather than orders placed." },
+    { "question": "Do I need the Meta Conversions API on Shopify?", "answer": "It is strongly worth setting up. The Conversions API sends purchases from your server, so fewer are lost to browser blocking. If the Pixel and the API both send a purchase, Meta needs matching event names and IDs to count it once. Shopify's Facebook and Instagram channel can set both up." },
+    { "question": "What legal details must an Indian D2C website show?", "answer": "Under the Consumer Protection (E-Commerce) Rules, 2020, a store selling its own stock must show its legal name and address, customer care and grievance officer details, the total price with a breakup of charges, and return, refund, delivery and payment terms, plus key product details such as country of origin." },
+    { "question": "Do I need a CRO app to improve Shopify conversion?", "answer": "Not to start. Most early gains come from fixing tracking, speed, product page content, price clarity and payment options, which need settings and theme changes rather than apps. Extra apps can slow the store, so add one only when it solves a problem your funnel data shows." },
+    { "question": "How do I know if a change improved my Shopify conversion rate?", "answer": "Record your added-to-cart, reached-checkout and conversion rates by device before the change, then compare the same weeks of traffic afterwards. Change one major thing at a time, and check that traffic sources stayed similar, because a shift in ad audience can move the numbers on its own." }
+  ]
+}
