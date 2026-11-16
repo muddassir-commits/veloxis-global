@@ -1,0 +1,76 @@
+{
+  "title": "Meta Ads Not Spending? Every Cause and Fix, in Check Order",
+  "seoTitle": "Meta Ads Not Spending? Causes and Fixes in Check Order",
+  "excerpt": "Meta ads not spending? Check payments, spending limits, delivery status, budget, bid caps and overlap in this order, with Meta's own help pages.",
+  "date": "2026-11-18",
+  "category": "Paid Ads",
+  "industry": "ecommerce",
+  "service": "paid-ads",
+  "image": "/images/people/blog/meta-ads-not-spending-cover.jpg",
+  "imageAlt": "A white ceramic piggy bank standing on a light wooden floor",
+  "inlineImages": [
+    {
+      "src": "/images/people/blog/meta-ads-not-spending-1.jpg",
+      "alt": "A black and white photo of a magnifying glass lying on an open spiral notebook",
+      "beforeHeading": "check-order",
+      "caption": "Check from the top down: account, campaign, ad set, then each ad."
+    },
+    {
+      "src": "/images/people/blog/meta-ads-not-spending-2.jpg",
+      "alt": "Two hands holding open an empty brown leather wallet against a dark grey background",
+      "beforeHeading": "payment-and-account-limits"
+    }
+  ],
+  "about": [
+    {
+      "name": "Facebook",
+      "sameAs": "https://en.wikipedia.org/wiki/Facebook"
+    },
+    {
+      "name": "Online advertising",
+      "sameAs": "https://en.wikipedia.org/wiki/Online_advertising"
+    },
+    {
+      "name": "Direct-to-consumer",
+      "sameAs": "https://en.wikipedia.org/wiki/Direct-to-consumer"
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Why are my Meta ads active but not spending?",
+      "answer": "Usually because something above or below the active campaign is blocking it: a failed payment, an ad account spending limit (Meta still shows ads as active when it is reached), an ad set or ad that is off, rejected or in review, an expired schedule, or a bid cap, budget or audience that keeps your ads out of auctions."
+    },
+    {
+      "question": "How long does a new Meta ad take to start spending?",
+      "answer": "Meta says most ads are reviewed within 24 hours, though some take longer, and its troubleshooting guides say you may need to wait up to 24 hours to see delivery. An ad that has passed review but not started yet shows Preparing. If nothing delivers after 48 hours, Meta suggests deleting and recreating the ad."
+    },
+    {
+      "question": "Why is my Meta ad spending less than the daily budget?",
+      "answer": "A daily budget is an average across the week, so Meta may spend up to 75% more on good days and less on others. Persistent under-spend usually comes from a budget too small for the optimisation event, a tight bid cap or cost per result goal, a narrow audience, or overlapping ad sets."
+    },
+    {
+      "question": "What is the daily spending limit set by Meta?",
+      "answer": "It is the most Meta lets your ad account spend per day, based on your advertising and payment history. When you reach it, ads pause until the limit resets at midnight in your ad account's time zone. It usually rises automatically as you build history, follow the policies and spend close to it."
+    },
+    {
+      "question": "How big should my daily budget be for Meta to spend it properly?",
+      "answer": "Meta's rule of thumb is a daily budget of at least 10 times the average cost of your optimisation event, and at least 5 times your cost per result goal if you use one. If that is too much, Meta suggests optimising for an event higher up the funnel, such as landing page views or add to cart."
+    },
+    {
+      "question": "Can a bid cap stop my Meta ads from spending?",
+      "answer": "Yes. A bid cap or cost per result goal set below what the auction currently requires means Meta skips auctions it can't win within your limit, so spend stays low. Meta suggests raising or removing the cap, or choosing a more frequent optimisation event. Test it on a duplicate ad set first."
+    },
+    {
+      "question": "Does audience overlap stop Meta ads from delivering?",
+      "answer": "It can. When several of your ads enter the same auction, Meta only lets the one with the highest total value compete, so overlapping ad sets can fail to spend their budgets or exit learning. Meta suggests combining similar ad sets or turning off the weakest overlapping ones and moving their budget."
+    },
+    {
+      "question": "Why did my Meta campaign suddenly stop spending after running well?",
+      "answer": "Check the activity history for edits just before the drop, such as frequent pauses, late-night budget changes or a longer schedule. Then look for Creative fatigue or Creative limited in the Delivery column, audience saturation, a failed payment, a reached spending limit, and a bid cap that is no longer competitive."
+    },
+    {
+      "question": "Is there a quick way to check a Meta ad account for delivery problems?",
+      "answer": "Yes. The free BrightROAS Meta ads health check reads an Ads Manager CSV export in your browser in about 2 minutes, with no sign-up, and gives a score out of 100 plus problems such as creative fatigue, flagged ads, learning-limited ad sets, stalled campaigns and cost overruns."
+    }
+  ]
+}

@@ -1,0 +1,140 @@
+<p><strong>Meta Ads and Shopify sales don't match because they count different things. Meta credits an order to an ad if someone clicked or saw it within the attribution window, may model some conversions it can't observe, and records the order when it's placed. Shopify counts each real order once, credits only channels the buyer clicked, and knows which COD parcels were cancelled or returned.</strong></p>
+<p>This guide is for founders and marketers of Indian D2C and e-commerce brands, and the small agencies that run their ads, who open Ads Manager and Shopify side by side and see two different answers. It explains each cause of the gap (attribution windows, view-through credit, modelled conversions, Pixel and Conversions API duplicates, cash on delivery and RTO, time zones and currency), shows how Meta and GA4 differ too, and ends with a step-by-step way to reconcile the numbers and judge ads by the marketing efficiency ratio (MER) instead.</p>
+<p><em>Platform settings change often. Everything below was checked against Meta, Shopify and Google help and developer pages on 16 November 2026.</em></p>
+
+<h2 id="why-numbers-differ">Why don't Meta Ads and Shopify sales match?</h2>
+<p><strong>Because each tool answers a different question.</strong> Shopify answers "how many orders did my store take, and which channel was the last one the buyer clicked?" Meta answers "how many purchases happened after someone interacted with my ads, within the window I chose?" Both can be correct at the same time and still show different totals.</p>
+<p>Shopify's own <a href="https://help.shopify.com/en/manual/reports-and-analytics/discrepancies" target="_blank" rel="noopener">analytics discrepancies page</a> says it plainly: "It's unlikely that identical tracking mechanisms are being used by each of the services", and different reporting time zones add further gaps. So the aim is not to make the numbers identical. The aim is to know why they differ, check that the gap is stable, and make spending decisions on a number you trust.</p>
+<p>Most of the gap comes from a handful of causes. The table shows how the three tools you probably use count the same sale.</p>
+<table>
+  <thead><tr><th>Question</th><th>Meta Ads Manager</th><th>Shopify</th><th>GA4</th></tr></thead>
+  <tbody>
+    <tr><td>What is counted</td><td>Purchase events sent by the Pixel and Conversions API, matched to people who interacted with an ad</td><td>Actual orders in your store</td><td>Purchase events from your site tag, linked to sessions</td></tr>
+    <tr><td>Who gets credit</td><td>Meta, if the buyer clicked, engaged with or viewed an ad within the window</td><td>A click-based model in its marketing reports, such as last click or last non-direct click</td><td>The reporting attribution model you choose, such as data-driven or last click</td></tr>
+    <tr><td>Can a view (no click) count?</td><td>Yes, with view-through attribution</td><td>No</td><td>No; GA4 only sees visits to your site</td></tr>
+    <tr><td>Estimated (modelled) results?</td><td>Yes, for some metrics and windows</td><td>No, orders are real records</td><td>It can model some data, depending on consent settings</td></tr>
+    <tr><td>Cancelled COD and RTO orders</td><td>Still counted as the original purchase</td><td>Visible as cancellations and refunds</td><td>Still counted unless you send refund events</td></tr>
+  </tbody>
+</table>
+<p>The sections below take each cause in turn, with the check you can run for it.</p>
+
+<h2 id="attribution-windows">How do attribution windows change what Meta counts?</h2>
+<p><strong>An attribution window is the number of days after an ad click or view in which Meta will credit a purchase to that ad, and a longer window means more purchases credited to Meta.</strong> Shopify uses its own rules, so the two can never agree exactly.</p>
+<p>In Meta's Insights API, the <code>default</code> attribution option "means <code>["7d_click","1d_view"]</code>", according to the <a href="https://developers.facebook.com/docs/marketing-api/reference/ad-account/insights/" target="_blank" rel="noopener">Ad Account Insights reference</a>: a purchase within seven days of clicking an ad, or within one day of seeing one. Meta first set this default for website conversions in January 2021, in its <a href="https://developers.facebook.com/blog/post/2021/01/19/actions-partners-mobile-web-advertisers/" target="_blank" rel="noopener">developer update on Apple's App Tracking Transparency prompt</a>. Meta has kept adjusting the setting since. <a href="https://www.jonloomer.com/meta-ads-attribution-2026/" target="_blank" rel="noopener">Jon Loomer's 2026 guide</a>, an independent Meta ads specialist, reports that in March 2026 Meta started counting only link clicks as click-through, and that a 1-day "engage-through" window (likes, comments, shares, saves and engaged video views) replaced engaged-view. Check what your own ad sets use: in Ads Manager, open an ad set, and the attribution setting sits in the conversion section.</p>
+<p>Shopify works differently. Its marketing reports give credit to the channel behind the order using click-based models, such as last non-direct click: the last channel the buyer clicked before buying, ignoring visits where they typed your address directly. An ad that was only seen never gets credit in Shopify. A shopper who saw your Instagram reel, later searched your brand on Google and bought is a Meta purchase in Ads Manager and a Google (or direct) order in Shopify.</p>
+<p>Three effects follow from this:</p>
+<ul>
+  <li><strong>Meta can claim sales that Shopify gives to another channel.</strong> If Google, email and Meta all touched the buyer, each ad platform may count the sale. Add up "purchases" across platforms and you can get more sales than your store took.</li>
+  <li><strong>Recent days keep growing in Meta.</strong> A click today can become a purchase up to a week later, and that purchase is still credited to the click. Compare complete weeks, not yesterday.</li>
+  <li><strong>Changing the window changes the history.</strong> Comparing a 7-day click period with a 1-day click period is comparing two different measurements, not a performance change.</li>
+</ul>
+<p>To see how much of Meta's number depends on the window, use <strong>Compare attribution settings</strong> in the Ads Manager columns menu and add 1-day click and 7-day click columns beside your normal results. The difference between them shows how much credit comes from slower or indirect buyers.</p>
+
+<h2 id="view-through-modelled">What are view-through and modelled conversions?</h2>
+<p><strong>A view-through conversion is a purchase from someone who saw your ad but didn't click it, and a modelled conversion is one Meta estimates because it can't observe it directly.</strong> Shopify has neither, so both push Meta's count above what Shopify credits to Meta.</p>
+<p><strong>View-through.</strong> With a 1-day view window, a person who scrolled past your ad and bought later that day, perhaps by typing your store address, counts as a Meta purchase. Some of those people would have bought anyway, for example loyal customers who were going to reorder. Others genuinely bought because of the ad. Meta can't tell you which, and neither can Shopify. That's why it helps to look at click-only results next to the default and treat the view-through share as a softer number. Brands that retarget past buyers heavily usually see more view-through credit, because those people were already likely to buy (our <a href="/blog/real-estate-retargeting-ads">retargeting guide</a> covers how to keep audiences separate, using real estate examples).</p>
+<p><strong>Modelled conversions.</strong> When Apple's App Tracking Transparency prompt arrived, Meta said that "Statistical modeling will be used for certain attribution windows and/or metrics" to account for people it can no longer track, in the same <a href="https://developers.facebook.com/blog/post/2021/01/19/actions-partners-mobile-web-advertisers/" target="_blank" rel="noopener">January 2021 developer update</a>. Meta does not publish how many of your results are modelled. Treat modelled results as an estimate that works well across large numbers of conversions and less well for a small ad set with a handful of purchases.</p>
+<p>Neither of these is a reason to distrust Meta completely. Meta's optimisation runs on the same signals, and Shopify's last-click view hides the role of ads that start a buying journey. The point is to know which part of the gap they explain.</p>
+
+<h2 id="pixel-capi-dedup">Is your Pixel or Conversions API counting orders twice?</h2>
+<p><strong>If Meta shows noticeably more purchases than your store took, even on a 1-day click view, check for double counting first.</strong> The usual cause is the Pixel and the Conversions API both sending a purchase that Meta can't match, or two apps sending the same Pixel event.</p>
+<p>Sending purchases from both the browser (Pixel) and your server (Conversions API) is good practice, because server events are less affected by ad blockers and browser limits. But Meta has to recognise them as the same order. <a href="https://developers.facebook.com/docs/marketing-api/conversions-api/deduplicate-pixel-and-server-events" target="_blank" rel="noopener">Meta's deduplication guide</a> says the Pixel's <code>eventID</code> must match the Conversions API's <code>event_id</code>, and the event names must match too. Duplicates are removed when they arrive within 48 hours of the first event with that ID.</p>
+<p>On Shopify, the simplest setup is the Facebook &amp; Instagram app with customer data sharing switched on. <a href="https://help.shopify.com/en/manual/promoting-marketing/analyze-marketing/meta-data-sharing" target="_blank" rel="noopener">Shopify's Facebook data sharing page</a> describes three levels (Standard, Enhanced and Maximum); Maximum uses the Conversions API as well as the Pixel. Problems usually start when a second app, a theme snippet or a Google Tag Manager tag sends its own purchase event on top.</p>
+<ol>
+  <li><strong>List every source of purchase events.</strong> In Events Manager, open your dataset (Pixel), select the Purchase event and see which integrations send it. Then check your Shopify apps, theme code and Tag Manager for extra Meta tags.</li>
+  <li><strong>Keep one browser source and one server source.</strong> Remove old apps and manual snippets once the Facebook &amp; Instagram app is sending both.</li>
+  <li><strong>Check that both carry the same event ID.</strong> Events Manager's diagnostics flag purchase events that aren't being deduplicated.</li>
+  <li><strong>Place a test order and count it.</strong> One order should show as one purchase with the right value. Meta's <a href="https://developers.facebook.com/docs/meta-pixel/reference" target="_blank" rel="noopener">Pixel reference</a> lists <code>currency</code> and <code>value</code> as required for the Purchase event, so check both.</li>
+</ol>
+<p>The opposite problem, Meta showing far fewer purchases than Shopify credits to Facebook and Instagram traffic, usually means the server events aren't arriving or can't be matched to people. Fix that before cutting budgets, because Meta's delivery learns from the purchases it receives. Our <a href="/blog/d2c-brand-launch-checklist">D2C launch checklist</a> covers the full tracking setup for a new store.</p>
+
+<h2 id="cod-rto-india">How do COD orders and RTO distort Meta's numbers in India?</h2>
+<p><strong>Meta records a purchase the moment a COD order is placed, but some COD parcels are refused or returned to origin (RTO), so Meta's revenue is higher than the money you actually collect.</strong> Shopify shows those cancellations and refunds; Meta never hears about them unless you build something extra.</p>
+<p>For Indian D2C brands this is often the biggest single gap, and none of the US-written guides deal with it. A COD order fires the same Purchase event as a prepaid UPI or card order. If the customer later refuses the parcel, Shopify records the cancellation, but the purchase already sits in Ads Manager with its full value. The result:</p>
+<ul>
+  <li><strong>Meta's ROAS looks better than your real return</strong>, by however much of your COD revenue doesn't get delivered.</li>
+  <li><strong>Campaigns that attract impulse COD buyers look like winners.</strong> An ad that brings many orders that never get delivered can beat an ad that brings fewer, prepaid orders in Ads Manager while losing you money after shipping both ways.</li>
+  <li><strong>Meta learns to find more people who place orders</strong>, not necessarily people who accept the parcel, because that's the signal it receives.</li>
+</ul>
+<p>What to do about it:</p>
+<ul>
+  <li><strong>Report delivered revenue, not placed revenue.</strong> In Shopify, track net sales after cancellations and returns, and split it by payment method (COD versus prepaid) in your weekly sheet.</li>
+  <li><strong>Calculate a delivered ROAS by campaign</strong> using order tags or UTM parameters: take the orders from each campaign that were actually delivered and paid, and divide by spend.</li>
+  <li><strong>Confirm COD orders before shipping</strong> (by WhatsApp or SMS, with the customer's consent), and consider nudges to prepaid such as a COD fee shown clearly before checkout. Fewer refused parcels narrows the gap at the source.</li>
+  <li><strong>Be careful with "optimise for purchase value" on COD-heavy stores.</strong> The values Meta learns from include orders that later fail.</li>
+</ul>
+<p>Our guide on <a href="/blog/d2c-customer-retention">D2C customer retention</a> covers the post-purchase messages that help COD buyers accept their parcels.</p>
+
+<h2 id="time-zones-currency">Do time zones, currency and dates cause the gap?</h2>
+<p><strong>Yes, and they're the easiest causes to fix: if your ad account and your store use different time zones or currencies, daily numbers will never line up.</strong> Check these before anything else, because they take minutes.</p>
+<ul>
+  <li><strong>Time zone.</strong> Shopify's <a href="https://help.shopify.com/en/manual/reports-and-analytics/discrepancies" target="_blank" rel="noopener">discrepancies page</a> lists different reporting time zones as a cause of gaps. If your Meta ad account was created on US Pacific time and your store runs on India Standard Time, an order at 10 AM IST lands on the previous day in Meta. Check the ad account time zone in Ads Manager's account settings and the store time zone in Shopify's general settings.</li>
+  <li><strong>Currency.</strong> If the ad account is in US dollars and the store sells in rupees, every ROAS number depends on the exchange rate and on the Pixel sending the right <code>currency</code> code with each purchase. A purchase sent as "USD" with a rupee amount inflates value hugely, and a missing currency causes errors. Check a test order's value and currency in Events Manager.</li>
+  <li><strong>Which date a sale belongs to.</strong> Meta said in its <a href="https://developers.facebook.com/blog/post/2021/01/19/actions-partners-mobile-web-advertisers/" target="_blank" rel="noopener">2021 update</a> that offsite conversions "will be reported based on the time the conversions occur". But reports pulled through the API or third-party dashboards can use a different setting: the <a href="https://developers.facebook.com/docs/marketing-api/reference/ad-account/insights/" target="_blank" rel="noopener">Insights API</a> has an <code>action_report_time</code> option where "impression" puts a purchase on the day the ad was seen and "conversion" puts it on the day it happened. If your dashboard and Ads Manager disagree for the same days, this setting is a likely reason.</li>
+  <li><strong>Gross versus net.</strong> Meta reports the value sent with the purchase event, which may include shipping and tax depending on your setup. Shopify reports gross sales, discounts, returns, net sales and total sales separately. Compare the same definition.</li>
+</ul>
+
+<h2 id="meta-vs-ga4">Why do Meta and GA4 show different results?</h2>
+<p><strong>GA4 only sees visits to your website and credits sales by its own attribution model, so it never counts view-through purchases and often gives Meta less credit than Ads Manager does.</strong> A gap between Meta and GA4 is normal; a gap that suddenly changes is worth checking.</p>
+<p>GA4 offers three reporting attribution models, data-driven, paid and organic last click, and Google paid channels last click, according to <a href="https://support.google.com/analytics/answer/10596866" target="_blank" rel="noopener">Google's attribution help page</a>. Its <a href="https://support.google.com/analytics/answer/10597962" target="_blank" rel="noopener">attribution settings</a> use a default lookback window of 90 days for most key events (30 days for first visits). The same help page notes that under data-driven attribution, conversions can be reattributed for up to seven days after they happen, so recent GA4 numbers move too.</p>
+<p>The common reasons Meta and GA4 disagree:</p>
+<ul>
+  <li><strong>Different windows and models</strong>, as above. GA4 can credit a sale to a Google search that came after a Meta click; Meta credits itself.</li>
+  <li><strong>Missing or messy UTM tags.</strong> Without consistent <code>utm_source</code> and <code>utm_medium</code> on your Meta ads, GA4 files Instagram and Facebook visits under referral or "unassigned". Add the same URL parameters at ad level for every campaign.</li>
+  <li><strong>In-app browsers and consent.</strong> Many Meta clicks open inside the Instagram or Facebook app browser, and cookie banners or blockers can stop the GA4 tag from recording the session. Shopify's discrepancies page notes that Google "can only count visitors with JavaScript and cookies activated".</li>
+  <li><strong>Cross-device journeys.</strong> Someone who taps an ad on their phone and buys on a laptop is hard for GA4 to join up without sign-in data, while Meta may still match the purchase to the person.</li>
+</ul>
+<p>If you also run Google Ads, expect a third number again. Our guide to <a href="/blog/google-ads-for-d2c-brands">Google Ads for D2C brands</a> covers its conversion setup.</p>
+
+<h2 id="how-to-reconcile">How do you reconcile Meta Ads and Shopify numbers?</h2>
+<p><strong>Fix the setup errors first, then compare like with like over complete weeks, then track the gap as a ratio instead of trying to close it.</strong> These steps take an afternoon and are worth repeating every month.</p>
+<ol>
+  <li><strong>Align time zone and currency.</strong> Note your ad account's time zone and currency and your store's. If they differ, convert one side in your reports, or plan a new ad account set up correctly.</li>
+  <li><strong>Audit purchase events.</strong> Place a test order with UPI or card and, separately, with COD. Each should appear once in Shopify and once in Events Manager with the correct value and currency, with the Pixel and Conversions API deduplicated.</li>
+  <li><strong>Choose a fixed comparison period.</strong> Use a complete week (or month) that ended at least seven days ago, so Meta's click window has closed.</li>
+  <li><strong>Pull three Meta numbers</strong> for that period: purchases and purchase value on your default setting, on 7-day click only and on 1-day click only (via Compare attribution settings).</li>
+  <li><strong>Pull three Shopify numbers</strong> for the same dates: total orders, orders credited to Facebook and Instagram in the marketing reports, and net sales after cancellations and returns, split by COD and prepaid.</li>
+  <li><strong>Compare and explain.</strong> If Meta's 1-day click purchases exceed Shopify's total orders, you have a tracking problem (duplicates or wrong values). If Meta's default is higher than Shopify's Meta-credited orders but its click-only figure is close, the gap is mostly attribution and view-through. If revenue differs more than order counts, look at COD failures, discounts, shipping and currency.</li>
+  <li><strong>Record the ratio.</strong> Write down Meta-reported purchases divided by Shopify-credited orders for the period. A stable ratio means you can read Ads Manager trends with confidence; a sudden jump means something in tracking changed.</li>
+  <li><strong>Make budget decisions on store revenue</strong> using MER (below), and use Ads Manager to compare campaigns and ads with each other.</li>
+</ol>
+<p>Here is how to read the result of step 6:</p>
+<table>
+  <thead><tr><th>What you see</th><th>Most likely cause</th><th>What to do</th></tr></thead>
+  <tbody>
+    <tr><td>Meta purchases higher than Shopify's total orders</td><td>Duplicate events or two apps sending purchases</td><td>Remove extra tags; check event IDs match</td></tr>
+    <tr><td>Meta default much higher, click-only close to Shopify's Meta orders</td><td>View-through and cross-channel credit</td><td>Normal; watch click-only numbers alongside default</td></tr>
+    <tr><td>Order counts close, revenue far apart</td><td>Currency, tax and shipping in value, or COD cancellations</td><td>Fix value and currency; report delivered revenue</td></tr>
+    <tr><td>Daily numbers off, weekly totals close</td><td>Time zone or reporting date differences</td><td>Compare weeks; align time zones</td></tr>
+    <tr><td>Meta far lower than Shopify's Meta-credited orders</td><td>Server events missing or poorly matched</td><td>Check Conversions API status and data sharing level</td></tr>
+  </tbody>
+</table>
+<p>If you'd rather have people do this with you, our <a href="/services/paid-ads">Meta and Google ads service</a> starts with exactly this kind of tracking check.</p>
+
+<h2 id="mer">What is MER and why should you use it?</h2>
+<p><strong>MER (marketing efficiency ratio) is your total store revenue divided by your total ad spend across every channel for the same period.</strong> It doesn't depend on any platform's attribution, so it can't be inflated by double counting or view-through credit.</p>
+<p>The formula is simple: MER = total revenue ÷ total marketing spend. For an Indian D2C brand, use net delivered revenue from Shopify (after cancellations, RTO and refunds) and the total spend on Meta, Google and any other paid channel for the same dates. Some brands also calculate a new-customer version using only first-time buyers' revenue, which shows whether ads are bringing in new people or mostly reaching existing customers.</p>
+<table>
+  <thead><tr><th>Measure</th><th>What it tells you</th><th>Where it misleads</th><th>Use it for</th></tr></thead>
+  <tbody>
+    <tr><td>Meta ROAS (Ads Manager)</td><td>Which campaigns, ad sets and ads Meta credits with sales</td><td>Includes view-through, modelled and undelivered COD sales</td><td>Comparing ads and campaigns inside Meta</td></tr>
+    <tr><td>Shopify last-click revenue by channel</td><td>Which channel brought the final click</td><td>Undervalues ads that start the journey</td><td>Seeing how search, email and direct close sales</td></tr>
+    <tr><td>MER (store revenue ÷ total spend)</td><td>Whether total marketing is paying back</td><td>Can't say which channel caused the result</td><td>Overall budget decisions and scaling</td></tr>
+  </tbody>
+</table>
+<p>The practical way to combine them: set a target MER that works for your margins and delivery costs, use it to decide whether to raise or cut total spend, and use Ads Manager to decide where inside Meta the money goes. When you increase Meta spend and MER holds steady while revenue grows, the extra spend is likely working, whatever any single dashboard claims. Testing new creative is part of that, and our guide to <a href="/blog/ugc-ads-for-d2c">UGC ads for D2C brands</a> covers it.</p>
+<p>Before you start reconciling, it also helps to know your campaigns are healthy, because a stalled or limited ad set makes every number noisier. You can run the free <a href="https://brightroas.veloxisglobal.com/check" target="_blank" rel="noopener">Meta ads health check by BrightROAS</a>, our Meta ads dashboard. It's free, takes about two minutes and needs no sign-up: export a CSV from Ads Manager (Reports → Export → CSV, with Breakdown set to Day and Level set to Ad, covering the last 14 to 30 days), upload it, and you get a health score out of 100 plus the problems it finds, such as creative fatigue, ads Meta has flagged, learning-limited ad sets, stalled campaigns and cost overruns. The file is read in your browser and never uploaded. BrightROAS is not affiliated with Meta.</p>
+<p>If you run a Shopify or D2C brand and want a second pair of eyes on your tracking and ads, see how we work with <a href="/industries/ecommerce">e-commerce and D2C brands</a>, or ask for a <a href="/free-audit">free audit</a> and we'll go through your Pixel, Conversions API setup and reporting with you. Wider growth work sits under our <a href="/services/ecommerce-marketing">e-commerce marketing</a> service.</p>
+
+<h2 id="sources">Sources</h2>
+<ul>
+  <li><a href="https://help.shopify.com/en/manual/reports-and-analytics/discrepancies" target="_blank" rel="noopener">Shopify Help Center: Analytics discrepancies</a></li>
+  <li><a href="https://help.shopify.com/en/manual/promoting-marketing/analyze-marketing/meta-data-sharing" target="_blank" rel="noopener">Shopify Help Center: Facebook data sharing</a></li>
+  <li><a href="https://developers.facebook.com/docs/marketing-api/reference/ad-account/insights/" target="_blank" rel="noopener">Meta for Developers: Ad Account Insights reference (attribution windows and report time)</a></li>
+  <li><a href="https://developers.facebook.com/blog/post/2021/01/19/actions-partners-mobile-web-advertisers/" target="_blank" rel="noopener">Meta for Developers: Actions for partners and mobile web advertisers (January 2021)</a></li>
+  <li><a href="https://developers.facebook.com/docs/marketing-api/conversions-api/deduplicate-pixel-and-server-events" target="_blank" rel="noopener">Meta for Developers: Handling duplicate Pixel and Conversions API events</a></li>
+  <li><a href="https://developers.facebook.com/docs/meta-pixel/reference" target="_blank" rel="noopener">Meta for Developers: Meta Pixel reference (standard events)</a></li>
+  <li><a href="https://www.jonloomer.com/meta-ads-attribution-2026/" target="_blank" rel="noopener">Jon Loomer: How Meta Ads attribution works in 2026</a></li>
+  <li><a href="https://support.google.com/analytics/answer/10596866" target="_blank" rel="noopener">Google Analytics Help: Get started with attribution</a></li>
+  <li><a href="https://support.google.com/analytics/answer/10597962" target="_blank" rel="noopener">Google Analytics Help: Select attribution settings</a></li>
+</ul>

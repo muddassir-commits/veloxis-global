@@ -1,0 +1,76 @@
+{
+  "title": "Facebook Ads Report for Clients: What to Include (+ Template)",
+  "seoTitle": "Facebook Ads Report for Clients: Template and Tips",
+  "excerpt": "How to build a Facebook ads report for clients: what to include, a one-page template, attribution caveats, tools and change logs that build trust.",
+  "date": "2026-11-19",
+  "category": "Paid Ads",
+  "industry": "general",
+  "service": "paid-ads",
+  "image": "/images/people/blog/meta-ads-client-reporting-cover.jpg",
+  "imageAlt": "A hand pointing at a printed sheet of colourful bar and line charts lying on a light wooden table",
+  "inlineImages": [
+    {
+      "src": "/images/people/blog/meta-ads-client-reporting-2.jpg",
+      "alt": "A brass compass resting on an old printed map beside a coil of rope",
+      "beforeHeading": "attribution-caveats",
+      "caption": "Meta, the store and the CRM each count conversions their own way, so show both numbers side by side."
+    },
+    {
+      "src": "/images/people/blog/meta-ads-client-reporting-1.jpg",
+      "alt": "A man in a blue shirt writing notes on a small sheet of paper beside an open laptop",
+      "beforeHeading": "approvals-and-change-logs"
+    }
+  ],
+  "about": [
+    {
+      "name": "Facebook advertising",
+      "sameAs": "https://en.wikipedia.org/wiki/Facebook_advertising"
+    },
+    {
+      "name": "Attribution (marketing)",
+      "sameAs": "https://en.wikipedia.org/wiki/Attribution_(marketing)"
+    },
+    {
+      "name": "Dashboard (business)",
+      "sameAs": "https://en.wikipedia.org/wiki/Dashboard_(business)"
+    }
+  ],
+  "faqs": [
+    {
+      "question": "What should a Facebook ads report for clients include?",
+      "answer": "Include a short summary, the business result (purchases, revenue or leads against target), spend against budget, the few Meta metrics that explain the result, best and worst ads, a dated list of changes and problems Meta flagged, and next steps with the decisions you need from the client."
+    },
+    {
+      "question": "How often should I send Meta ads reports to clients?",
+      "answer": "A short weekly update and a fuller monthly report work for most accounts. Weekly catches problems early without reacting to daily noise; monthly gives enough data to judge creative, audiences and offers. Clients who want daily numbers can get read-only access or a live dashboard instead of daily written reports."
+    },
+    {
+      "question": "Why do Meta ads results not match Shopify or Google Analytics?",
+      "answer": "Each tool counts differently. Ads Manager shows conversions Meta attributes to people who saw or clicked an ad within the attribution setting, dated by the ad interaction, while a store records every order on the day it happened. Duplicate Pixel installs and Meta's 2026 attribution changes can widen the gap further."
+    },
+    {
+      "question": "What changed in Meta's attribution in 2026?",
+      "answer": "In March 2026 Meta announced that click-through attribution for website and in-store conversions would count only link clicks. Conversions after shares, saves and other non-link clicks move into engage-through attribution, the new name for engaged-view, and the video engaged-view threshold drops from 10 to 5 seconds. Billing does not change."
+    },
+    {
+      "question": "Can I schedule Meta ads reports to email clients automatically?",
+      "answer": "Yes. Meta's Ads Reporting lets you set a recurring report that is emailed to you or others on a schedule. Meta notes this works for single-account reports, not cross-account reports, and people opening shared report links need access to the ad account, so exporting a file is the option for others."
+    },
+    {
+      "question": "Can I build a Meta ads reporting dashboard in Looker Studio?",
+      "answer": "Yes, but Meta data needs a connector. Google's documentation lists Facebook Ads among the non-Google sources reached through connectors built by third-party developers, so check each connector's pricing, data limits and support before relying on it for client reports."
+    },
+    {
+      "question": "What problems should a Meta ads client report flag?",
+      "answer": "Flag ads Meta rejected or limited, learning-limited ad sets, signs of creative fatigue such as rising frequency with falling click-through rate, campaigns that are active but barely spending, and ad sets spending over pace or above the target cost per result. Say what you did about each."
+    },
+    {
+      "question": "How do change logs build trust with ad clients?",
+      "answer": "A change log records each change with its date, reason and who approved it, so the client sees exactly what was done and why. Ads Manager's activity history shows what changed and who changed it, but not the reason or the client's approval, so keep your own log too."
+    },
+    {
+      "question": "Is there a free way to check a Meta ads account for problems before reporting?",
+      "answer": "Yes. The free BrightROAS Meta ads health check reads an Ads Manager CSV export at ad level with a daily breakdown and gives a health score out of 100 with problems such as creative fatigue, flagged ads and stalled campaigns. It needs no sign-up and the file stays in your browser."
+    }
+  ]
+}
