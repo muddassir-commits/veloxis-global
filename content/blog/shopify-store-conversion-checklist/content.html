@@ -1,0 +1,162 @@
+<p><strong>Before a D2C brand spends more on ads, its Shopify store should pass five checks: purchases are tracked correctly, mobile pages load fast, product pages answer the buyer's questions, the full price and delivery date are clear before checkout, and payment works the way Indian shoppers pay, including UPI and cash on delivery.</strong></p>
+<p>This checklist is for founders and marketers of Indian direct-to-consumer brands who run their store on Shopify and are about to raise their Meta or Google budget. Most "Shopify conversion rate optimization" guides that rank today are written for US stores, quote conversion lifts with no source and are often written by app makers selling the fix. This one is ordered by what to fix first, covers the India-specific gaps (COD, pincode delivery dates, legal disclosures, WhatsApp), and links every rule and figure to its source.</p>
+
+<p><em>General information, not legal advice. Platform features and Indian e-commerce rules change; everything below was checked against official pages on 16 November 2026.</em></p>
+
+<h2 id="why-fix-store-before-ads">Why fix your Shopify store before spending more on ads?</h2>
+<p><strong>Because ads only buy visits; the store decides how many of those visits become orders.</strong> If a page loads slowly, hides the delivery charge or doesn't offer the payment method a shopper wants, more budget simply buys more people who leave.</p>
+<p>There is a second, less obvious reason. Ad platforms learn from the purchases you report back to them. When the store converts poorly or tracking is broken, Meta and Google have fewer real purchases to learn from, so they find buyers less efficiently. Google even scores the page itself: landing page experience, described as "how relevant and useful your landing page is to people who click your ad", is one of the three parts of <a href="https://support.google.com/google-ads/answer/6167118" target="_blank" rel="noopener">Google Ads Quality Score</a>.</p>
+<p>So the order of work is simple: make sure you can measure, then remove the reasons people leave, then scale spend. If you are still setting up the basics of a new store, start with our <a href="/blog/d2c-brand-launch-checklist">D2C launch checklist</a> and come back to this one before your first real ad budget.</p>
+
+<h2 id="measure-conversion-rate">How do you find where your Shopify store loses buyers?</h2>
+<p><strong>Look at the funnel in Shopify Analytics, step by step, and fix the step with the biggest drop first.</strong> One overall conversion rate tells you something is wrong; the funnel tells you where.</p>
+<p>Shopify's analytics data defines each step in sessions (visits). According to <a href="https://shopify.dev/docs/api/shopifyql/latest/schemas/sessions_and_behavior/sessions" target="_blank" rel="noopener">Shopify's ShopifyQL reference</a>, the conversion rate is the "percentage of online store visits (sessions) that resulted in a sale", and the added-to-cart rate is the share of visits where a visitor added at least one item to the cart. The funnel looks like this:</p>
+<table>
+  <thead><tr><th>Funnel step</th><th>What Shopify counts</th><th>A big drop here usually means</th><th>Where to look first</th></tr></thead>
+  <tbody>
+    <tr><td>Sessions → added to cart</td><td>Visits where an item was added to the cart</td><td>The product page doesn't convince, or the ad promised something the page doesn't show</td><td>Product page, ad-to-page match, speed</td></tr>
+    <tr><td>Added to cart → reached checkout</td><td>Visits in which the checkout page was reached</td><td>Surprise costs in the cart, no delivery date, a cluttered cart or discount hunting</td><td>Cart, shipping messages, coupon field</td></tr>
+    <tr><td>Reached checkout → completed</td><td>Visits in which a purchase was completed</td><td>Missing payment method, forced account, failed OTP or payment, trust worries</td><td>Checkout settings, payment provider, COD rules</td></tr>
+  </tbody>
+</table>
+<p>Split every step by device and by traffic source. Paid social traffic arriving on phones often behaves very differently from returning visitors on desktop, and an average hides that. Compare your store with its own past weeks rather than chasing an industry "benchmark": most benchmark figures quoted online have no published method, and your product, price and traffic mix matter more.</p>
+<p>Numbers tell you where; people tell you why. Add session recordings or heatmaps for a few weeks, read your site-search terms, and ask your support team (or your WhatsApp inbox) what customers ask before they buy. The questions people ask in chat are usually the gaps on your product page.</p>
+
+<h2 id="tracking">Is your purchase tracking ready for paid ads?</h2>
+<p><strong>Your tracking is ready when every real order shows up once, with the right value, in Shopify, GA4, Meta and Google Ads.</strong> Fix this first. Every later change is judged by these numbers, and the ad platforms optimise towards them.</p>
+<ol>
+  <li><strong>Connect the official channels.</strong> Use Shopify's Facebook &amp; Instagram channel for the Meta Pixel and Conversions API, and the <a href="https://help.shopify.com/en/manual/online-sales-channels/google" target="_blank" rel="noopener">Google &amp; YouTube channel</a> for Merchant Center and Google Ads conversion tracking. Avoid stacking a second app that sends the same events.</li>
+  <li><strong>Send purchases from the server too.</strong> Meta's Conversions API sends events from your server, so they are less affected by browser blocking. When both the Pixel and the API send a purchase, <a href="https://developers.facebook.com/docs/marketing-api/conversions-api/deduplicate-pixel-and-server-events" target="_blank" rel="noopener">Meta's deduplication guide</a> says the event names and IDs must match so the order is counted once.</li>
+  <li><strong>Place a real test order</strong> (pay with UPI and, separately, choose COD if you offer it), then check that it appears once in each tool with the right order value and currency.</li>
+  <li><strong>Decide how COD orders count.</strong> A COD order is a purchase event when it is placed, but some of those parcels will be refused at the door. Track delivered COD orders separately in your own reports so you don't scale campaigns on orders that never pay.</li>
+  <li><strong>Check consent.</strong> If you show a cookie banner, make sure it doesn't silently block purchase tags for everyone who ignores it.</li>
+</ol>
+<p>For the ad side of this setup, see our guides to <a href="/blog/google-ads-for-d2c-brands">Google Shopping ads for D2C brands</a> and our <a href="/services/paid-ads">Meta and Google ads service</a>.</p>
+
+<h2 id="mobile-speed">How fast should a Shopify store load on mobile?</h2>
+<p><strong>Aim for "good" on all three Core Web Vitals for real mobile visitors: the main content visible within 2.5 seconds, a response to taps within 200 milliseconds, and almost no layout jumping.</strong> These are Google's published thresholds, and Shopify shows the same three metrics in your admin.</p>
+<table>
+  <thead><tr><th>Metric</th><th>What it measures</th><th>Good</th><th>Poor</th></tr></thead>
+  <tbody>
+    <tr><td>Largest Contentful Paint (LCP)</td><td>How long the main image or text block takes to appear</td><td>2.5 seconds or less</td><td>Over 4 seconds</td></tr>
+    <tr><td>Interaction to Next Paint (INP)</td><td>How quickly the page reacts to a tap, such as choosing a size</td><td>200 ms or less</td><td>Over 500 ms</td></tr>
+    <tr><td>Cumulative Layout Shift (CLS)</td><td>How much the layout jumps while loading</td><td>0.1 or less</td><td>0.25 or more</td></tr>
+  </tbody>
+</table>
+<p>Thresholds from <a href="https://web.dev/articles/vitals" target="_blank" rel="noopener">web.dev: Web Vitals</a>, which says to measure them at the 75th percentile of page loads, and the <a href="https://help.shopify.com/en/manual/online-store/web-performance/web-performance-dashboard" target="_blank" rel="noopener">Shopify web performance dashboard</a>, which ranks each metric as good, moderate or poor using real visitor data from the past 30 days.</p>
+<p>The usual causes on Shopify stores are easy to find:</p>
+<ul>
+  <li><strong>Apps you no longer use.</strong> Uninstalling an app doesn't always remove the code it added to your theme. Check the theme for leftover snippets.</li>
+  <li><strong>Huge hero images and auto-playing sliders</strong> on the homepage and collection pages. One clear image usually beats a carousel nobody waits for.</li>
+  <li><strong>Pop-ups and chat widgets that load first.</strong> Delay them until the page is usable, and never cover the add-to-cart button on a phone.</li>
+  <li><strong>Several tracking tags doing the same job.</strong> Duplicate pixels slow the page and double-count events.</li>
+</ul>
+<p>Test the pages your ads actually send people to, on a mid-range Android phone on mobile data, not just the homepage on office Wi-Fi. <a href="https://pagespeed.web.dev/" target="_blank" rel="noopener">PageSpeed Insights</a> shows both lab results and real-user data where Google has enough of it.</p>
+
+<h2 id="product-page">What should every product page show?</h2>
+<p><strong>A product page should answer, without scrolling far, what it is, who it's for, what it costs in total, when it will arrive and what happens if it doesn't suit.</strong> Ad traffic often lands straight on a product page, so it has to do the job of the homepage too.</p>
+<ul>
+  <li><strong>Photos that answer questions:</strong> scale (in a hand or on a person), texture, what's in the box, and the label for food, cosmetics and supplements. Add a short video if the product is easier to understand moving.</li>
+  <li><strong>A clear title and the first two lines of description</strong> stating the main benefit in plain words, matching the promise in your ad.</li>
+  <li><strong>Variant choice that can't go wrong:</strong> visible size or shade swatches, a size guide in the page (not a PDF), and sold-out variants clearly marked.</li>
+  <li><strong>The add-to-cart button visible on a phone</strong> without hunting; a sticky button helps on long pages.</li>
+  <li><strong>Delivery and returns next to the button:</strong> an estimated delivery date by pincode, the return or exchange rule in one line, and whether COD is available.</li>
+  <li><strong>Real reviews only.</strong> Show genuine customer reviews, including critical ones. Never seed fake ones; misleading reviews and false urgency fall under the Central Consumer Protection Authority's <a href="https://en.vikaspedia.in/viewcontent/social-welfare/social-awareness/consumer-education/the-guidelines-for-prevention-and-regulation-of-dark-patterns-2023" target="_blank" rel="noopener">Guidelines for Prevention and Regulation of Dark Patterns, 2023</a>.</li>
+  <li><strong>Answers to the questions your support team hears most,</strong> in a short FAQ on the page. This also helps the page show up in Google and AI answers.</li>
+  <li><strong>The legal product details</strong> that would be on the pack, such as MRP, net quantity and country of origin (see the section on legal disclosures below).</li>
+</ul>
+<p>If the page you advertise has to work harder than a normal product page, for example a launch or a bundle, a dedicated <a href="/services/high-converting-landing-pages">landing page</a> built for that one offer is often the cleaner fix.</p>
+
+<h2 id="cart-and-checkout">Why do shoppers abandon the cart and checkout?</h2>
+<p><strong>The most common reason is cost that appears too late: shipping, tax or fees the shopper didn't expect.</strong> In <a href="https://baymard.com/lists/cart-abandonment-rate" target="_blank" rel="noopener">Baymard Institute's survey of reasons for checkout abandonment</a> (US shoppers, excluding those "just browsing"), the top answers were:</p>
+<table>
+  <thead><tr><th>Reason given by shoppers (Baymard)</th><th>Share</th><th>Shopify fix to check</th></tr></thead>
+  <tbody>
+    <tr><td>Extra costs too high (shipping, tax, fees)</td><td>40%</td><td>Show shipping rules and any free-delivery threshold on the product page and cart; no new fees at checkout</td></tr>
+    <tr><td>Delivery was too slow</td><td>20%</td><td>Show an estimated delivery date by pincode before checkout</td></tr>
+    <tr><td>Didn't trust the site with card details</td><td>19%</td><td>Known payment options, clear contact details, real policies linked in the footer</td></tr>
+    <tr><td>Site wanted me to create an account</td><td>18%</td><td>Let people check out without creating a password</td></tr>
+    <tr><td>Too long or complicated checkout</td><td>17%</td><td>Remove extra steps and apps that add fields</td></tr>
+    <tr><td>Website had errors or crashed</td><td>17%</td><td>Test checkout on Android and iPhone after every app or theme change</td></tr>
+    <tr><td>Returns policy wasn't satisfactory</td><td>13%</td><td>A plain-English return or exchange rule, linked near the button</td></tr>
+  </tbody>
+</table>
+<p>The same Baymard page reports an average documented cart abandonment rate of 70.22%, the average of 50 studies. Indian shoppers were not part of that survey, so use it as a guide to the kinds of reasons people leave, not as Indian figures. Check which of them apply to your store with your own funnel data and customer questions.</p>
+<p>Practical Shopify checks for this step:</p>
+<ul>
+  <li><strong>Accounts:</strong> check that your settings don't force shoppers to sign in before paying. Where you do use accounts, Shopify's <a href="https://help.shopify.com/en/manual/checkout-settings/customer-accounts" target="_blank" rel="noopener">customer accounts</a> support passwordless sign-in with a one-time code instead of a password.</li>
+  <li><strong>Discount field:</strong> a prominent empty coupon box sends people off to search for codes. Apply offers automatically where you can.</li>
+  <li><strong>Shipping:</strong> one simple rule ("free above a set order value" or a flat fee) explained in the cart beats a fee that only appears after the address.</li>
+  <li><strong>Error messages:</strong> place a test order with a wrong pincode or phone number and read what the shopper sees.</li>
+</ul>
+
+<h2 id="indian-payments-cod">How should a Shopify store handle UPI, COD and Indian payments?</h2>
+<p><strong>Offer the ways Indian shoppers already pay, UPI first, cards and net banking next, and cash on delivery with clear rules, then watch how each method performs.</strong> Baymard's list above shows "not enough payment methods" as a reason people leave, and in India the missing method is usually UPI or COD.</p>
+<ol>
+  <li><strong>Pick a payment provider that supports UPI well on mobile,</strong> including UPI apps opening directly on the phone. Shopify lists the gateways available to your store under Settings, Payments; see <a href="https://help.shopify.com/en/manual/payments/third-party-providers" target="_blank" rel="noopener">Shopify's guide to third-party payment providers</a>.</li>
+  <li><strong>Turn on COD deliberately.</strong> Shopify treats cash on delivery as a manual payment method. Per <a href="https://help.shopify.com/en/manual/payments/manual-payments" target="_blank" rel="noopener">Shopify's manual payments guide</a>, COD orders are marked unpaid until you collect payment and mark them paid.</li>
+  <li><strong>Set COD rules you can explain:</strong> which pincodes, up to what order value, and any COD fee shown on the product page and in the cart (not added as a surprise at checkout).</li>
+  <li><strong>Confirm COD orders before you ship,</strong> for example with a WhatsApp or SMS confirmation message, and cancel unconfirmed orders. This reduces parcels refused at the door.</li>
+  <li><strong>Nudge, don't force, prepaid.</strong> A small prepaid benefit shown honestly on the page is fine; hiding COD or adding fees at the last step is the kind of drip pricing the dark patterns guidelines prohibit.</li>
+  <li><strong>Compare methods by delivered revenue,</strong> not just orders placed, so you know what COD really costs you.</li>
+</ol>
+<p>WhatsApp can carry several of these jobs: COD confirmation, order updates and abandoned-cart reminders. Those messages need the customer's opt-in; see <a href="https://developers.facebook.com/docs/whatsapp/overview/getting-opt-in" target="_blank" rel="noopener">Meta's guide to WhatsApp opt-in</a>, and our guide to <a href="/blog/whatsapp-ai-chatbot-for-business">WhatsApp chatbots that hand over to a human</a>.</p>
+
+<h2 id="trust-and-legal">What legal details and trust signals must an Indian store show?</h2>
+<p><strong>An Indian D2C store must show who sells the product, how to complain, the full price with its breakup, and its return, refund, delivery and payment terms.</strong> These are legal requirements, and they also happen to be the details that make a first-time buyer trust a brand they found through an ad.</p>
+<p>The <a href="https://taxguru.in/wp-content/uploads/2020/07/Consumer-Protection-E-Commerce-Rules-2020.pdf" target="_blank" rel="noopener">Consumer Protection (E-Commerce) Rules, 2020</a> cover inventory sellers, which includes a brand selling its own stock on its own Shopify store. Among other things, they require:</p>
+<ul>
+  <li>Legal name, address, customer care contact and a grievance officer's name, designation and contact details.</li>
+  <li>The total price in a single figure, with a breakup of all charges such as delivery charges and taxes.</li>
+  <li>Return, refund, exchange, warranty, delivery and payment information, so the buyer can decide before buying.</li>
+  <li>Country of origin and other product details that matter to the decision.</li>
+</ul>
+<p>Two newer changes matter for D2C stores. The Legal Metrology (Packaged Commodities) Amendment Rules, 2026 require e-commerce entities selling imported products to let shoppers search and filter listings by country of origin, from 1 July 2026, per <a href="https://www.scconline.com/blog/post/2026/02/21/legal-metrology-packaged-commodities-amendment-rules-2026-explained/" target="_blank" rel="noopener">SCC Online's summary</a>. And the Consumer Protection (E-Commerce) (Amendment) Rules, 2026, notified in September 2026, add obligations on grievances, price reductions, dark patterns and seller disclosures from 1 January 2027, per <a href="https://www.scconline.com/blog/post/2026/09/14/consumer-protection-e-commerce-amendment-rules-2026-explained/" target="_blank" rel="noopener">SCC Online's explainer</a>. Ask your legal adviser which parts apply to your store.</p>
+<p>On Shopify, most of this lives in three places: the footer (policies, contact and grievance officer), the product template (MRP, net quantity, origin, delivery and returns lines) and the cart (price breakup). Fixing those once covers every product.</p>
+
+<h2 id="ad-to-page-match">Does your store match what your ads promise?</h2>
+<p><strong>Every ad should land on a page that shows the same product, offer and price the ad showed, in the first screen.</strong> A shopper who clicked a reel about a combo pack and lands on the homepage has to search again, and many won't.</p>
+<ul>
+  <li>Send product ads to the product page, collection ads to a filtered collection, and offer ads to a page where the offer is already applied or clearly explained.</li>
+  <li>Use the same words and visuals as the ad near the top of the page, so the visitor knows they're in the right place.</li>
+  <li>Check that the price on the page matches the ad and your Google Merchant Center feed. A mismatch confuses buyers and can lead to product disapprovals in Merchant Center.</li>
+  <li>If you run creator videos, put the same style of real-use content on the product page. Our guide to <a href="/blog/ugc-ads-for-d2c">UGC ads for D2C brands</a> covers briefing creators.</li>
+</ul>
+<p>Once first orders come through, a store that captures email and WhatsApp opt-ins at checkout can bring those buyers back without paying for the click again; our <a href="/blog/d2c-customer-retention">D2C customer retention guide</a> covers what to send.</p>
+
+<h2 id="checklist">The Shopify pre-ads checklist, in order</h2>
+<p><strong>Work top to bottom: each step makes the next one measurable.</strong> Tick each item on the pages your ads will actually use.</p>
+<ol>
+  <li><strong>Tracking:</strong> a real UPI order and a COD order each appear once, with the right value, in Shopify, GA4, Meta and Google Ads.</li>
+  <li><strong>Funnel baseline:</strong> note your current added-to-cart, reached-checkout and conversion rates by device, so you can tell whether changes worked.</li>
+  <li><strong>Mobile speed:</strong> the advertised pages show "good" or close to it for LCP, INP and CLS; unused apps and duplicate tags removed.</li>
+  <li><strong>Product page:</strong> clear photos with scale, benefit-first copy, foolproof variants, visible add-to-cart, delivery date, returns line, real reviews, short FAQ.</li>
+  <li><strong>Price clarity:</strong> shipping rules, COD fee (if any) and total price visible before checkout; no new charges at the last step.</li>
+  <li><strong>Checkout:</strong> no forced password, auto-applied offers, tested error messages on Android and iPhone.</li>
+  <li><strong>Payments:</strong> UPI that opens the phone's UPI app, cards and net banking, COD with stated limits and a confirmation step.</li>
+  <li><strong>Legal and trust:</strong> grievance officer, contact details, policies, price breakup and product declarations in place.</li>
+  <li><strong>Ad-to-page match:</strong> every ad points to the page that shows its product, offer and price.</li>
+  <li><strong>Follow-up:</strong> email and WhatsApp opt-ins captured with consent, abandoned-cart and order-update messages switched on.</li>
+</ol>
+<p>Then raise budget in steps and watch the funnel, not only the ad dashboard. If added-to-cart falls when spend rises, the new audience needs a different page or offer; if checkout completion falls, look at payments and delivery.</p>
+<p>Not sure which of these your store fails? Run our free <a href="/tools/website-audit">website audit tool</a>, see how we work with <a href="/industries/ecommerce">e-commerce and D2C brands</a>, or ask for a <a href="/free-audit">free audit</a> and we'll go through your store, tracking and ads with you. If the fixes are bigger than a checklist, our <a href="/services/conversion-rate-optimization">conversion optimisation</a> and <a href="/services/shopify-development">Shopify development</a> work covers them.</p>
+
+<h2 id="sources">Sources</h2>
+<ul>
+  <li><a href="https://support.google.com/google-ads/answer/6167118" target="_blank" rel="noopener">Google Ads Help: About Quality Score</a></li>
+  <li><a href="https://shopify.dev/docs/api/shopifyql/latest/schemas/sessions_and_behavior/sessions" target="_blank" rel="noopener">Shopify Developers: ShopifyQL sessions schema (conversion and funnel definitions)</a></li>
+  <li><a href="https://help.shopify.com/en/manual/online-sales-channels/google" target="_blank" rel="noopener">Shopify Help Center: Google &amp; YouTube</a></li>
+  <li><a href="https://developers.facebook.com/docs/marketing-api/conversions-api/deduplicate-pixel-and-server-events" target="_blank" rel="noopener">Meta for Developers: Handling duplicate Pixel and Conversions API events</a></li>
+  <li><a href="https://web.dev/articles/vitals" target="_blank" rel="noopener">web.dev: Web Vitals</a></li>
+  <li><a href="https://help.shopify.com/en/manual/online-store/web-performance/web-performance-dashboard" target="_blank" rel="noopener">Shopify Help Center: Web performance dashboard</a></li>
+  <li><a href="https://pagespeed.web.dev/" target="_blank" rel="noopener">Google PageSpeed Insights</a></li>
+  <li><a href="https://baymard.com/lists/cart-abandonment-rate" target="_blank" rel="noopener">Baymard Institute: Cart abandonment rate statistics</a></li>
+  <li><a href="https://help.shopify.com/en/manual/checkout-settings/customer-accounts" target="_blank" rel="noopener">Shopify Help Center: Customer accounts</a></li>
+  <li><a href="https://help.shopify.com/en/manual/payments/third-party-providers" target="_blank" rel="noopener">Shopify Help Center: Third-party payment providers</a></li>
+  <li><a href="https://help.shopify.com/en/manual/payments/manual-payments" target="_blank" rel="noopener">Shopify Help Center: Manual payment methods (including cash on delivery)</a></li>
+  <li><a href="https://developers.facebook.com/docs/whatsapp/overview/getting-opt-in" target="_blank" rel="noopener">Meta for Developers: Get opt-in for WhatsApp</a></li>
+  <li><a href="https://taxguru.in/wp-content/uploads/2020/07/Consumer-Protection-E-Commerce-Rules-2020.pdf" target="_blank" rel="noopener">Consumer Protection (E-Commerce) Rules, 2020 (Gazette notification, copy hosted by TaxGuru)</a></li>
+  <li><a href="https://en.vikaspedia.in/viewcontent/social-welfare/social-awareness/consumer-education/the-guidelines-for-prevention-and-regulation-of-dark-patterns-2023" target="_blank" rel="noopener">Vikaspedia: The Guidelines for Prevention and Regulation of Dark Patterns, 2023</a></li>
+  <li><a href="https://www.scconline.com/blog/post/2026/02/21/legal-metrology-packaged-commodities-amendment-rules-2026-explained/" target="_blank" rel="noopener">SCC Online: Legal Metrology (Packaged Commodities) Amendment Rules, 2026 explained</a></li>
+  <li><a href="https://www.scconline.com/blog/post/2026/09/14/consumer-protection-e-commerce-amendment-rules-2026-explained/" target="_blank" rel="noopener">SCC Online: Consumer Protection (E-Commerce) Amendment Rules, 2026 explained</a></li>
+</ul>

@@ -448,4 +448,8 @@ export const BLOG_MESSAGES: Record<string, { ref: string; message: string }> = {
     ref: 'blog-wa-bot-rules',
     message: 'I read your guide on WhatsApp chatbots. I want a bot that answers customer questions and hands over to my team. Can you help me set it up?',
   },
+  'shopify-store-conversion-checklist': {
+    ref: 'blog-shopify-preads',
+    message: 'I read your Shopify checklist before running ads. I run an online store and want my tracking, product pages and checkout checked before I spend more. Can you help?',
+  },
 };
