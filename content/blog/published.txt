@@ -48,6 +48,7 @@ real-estate-whatsapp-message-templates
 rera-advertisement-rules
 rera-number-check
 rera-registration-for-agents
+shopify-store-conversion-checklist
 ugc-ads-for-d2c
 what-is-eoi-in-real-estate
 whatsapp-ai-chatbot-for-business
