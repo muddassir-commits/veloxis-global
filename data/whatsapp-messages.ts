@@ -452,6 +452,10 @@ export const BLOG_MESSAGES: Record<string, { ref: string; message: string }> = {
     ref: 'blog-shopify-preads',
     message: 'I read your Shopify checklist before running ads. I run an online store and want my tracking, product pages and checkout checked before I spend more. Can you help?',
   },
+  'ai-voice-agents-india': {
+    ref: 'blog-ai-voice-calls',
+    message: 'I read your guide on AI voice agents. I miss calls from customers and want to know if an AI calling assistant fits my business. Can you help?',
+  },
   'meta-ads-not-spending': {
     ref: 'blog-meta-not-spending',
     message: 'I read your guide on Meta ads not spending. My ads show active but are hardly spending. Can you help me find what is blocking them?',

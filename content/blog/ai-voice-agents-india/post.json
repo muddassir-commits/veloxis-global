@@ -1,0 +1,31 @@
+{
+  "title": "AI Voice Agents in India: Where They Work and Where They Fail",
+  "seoTitle": "AI Voice Agent India: Uses, Limits and TRAI Rules",
+  "excerpt": "AI voice agent India guide: which calls to automate, where Hindi and regional speech fails, TRAI's 2026 A2P call rules and DPDP consent.",
+  "date": "2026-11-21",
+  "category": "AI Automation",
+  "service": "ai-automation",
+  "industry": "general",
+  "image": "/images/people/blog/ai-voice-agents-india-cover.jpg",
+  "imageAlt": "Black and white close-up of an old black rotary dial telephone with its handset resting on top",
+  "inlineImages": [
+    { "src": "/images/people/blog/ai-voice-agents-india-1.jpg", "alt": "Red and black over-ear headphones on a dark blue background with a glowing blue sound wave between the ear cups", "beforeHeading": "hindi-and-regional-languages", "caption": "Test speech recognition on your own callers' languages, on real phone lines." },
+    { "src": "/images/people/blog/ai-voice-agents-india-2.jpg", "alt": "Top view of a dark wooden desk with a black smartphone, a silver pen, a black notebook and the corner of a laptop", "beforeHeading": "how-to-set-up-an-ai-voice-agent" }
+  ],
+  "about": [
+    { "name": "Voice user interface", "sameAs": "https://en.wikipedia.org/wiki/Voice_user_interface" },
+    { "name": "Telecom Regulatory Authority of India", "sameAs": "https://en.wikipedia.org/wiki/Telecom_Regulatory_Authority_of_India" },
+    { "name": "Digital Personal Data Protection Act, 2023", "sameAs": "https://en.wikipedia.org/wiki/Digital_Personal_Data_Protection_Act,_2023" }
+  ],
+  "faqs": [
+    { "question": "What is an AI voice agent?", "answer": "An AI voice agent is software that answers or makes phone calls, understands natural speech, replies in a synthetic voice and takes simple actions such as booking a slot or updating a lead. It links telephony, speech recognition, a language model with your rules and text-to-speech. Unlike an IVR menu, callers speak normally instead of pressing keys." },
+    { "question": "Which calls should an Indian business automate with an AI voice agent?", "answer": "Start with narrow, expected calls: missed and after-hours inbound calls, order or cash-on-delivery confirmation, appointment reminders and reschedules, simple status questions and first-round lead questions. These have a clear goal, a short script and a fact your system can look up, and a person can easily fix any mistake afterwards." },
+    { "question": "Where do AI voice agents fail?", "answer": "They fail on complaints, refund disputes and angry callers, on medical, legal or loan questions, on long sales conversations, and when they are allowed to answer anything and invent facts. They also struggle with some regional languages on noisy phone lines, and cold outbound calling without consent breaks TRAI rules." },
+    { "question": "Are AI calling agents legal in India?", "answer": "Yes, when used within the rules. TRAI's September 2026 amendment treats software-initiated calls as A2P calls: the business must declare them to its telecom provider with the caller IDs it will use, or they count as spam. Promotional calls use the 140 series and service calls the 1600 series. Recorded calls also fall under the DPDP Act." },
+    { "question": "What is an A2P call under TRAI rules?", "answer": "TRAI defines Application-to-Person calls as voice calls initiated by an application, software system or automated platform without direct human dialling, including autodialling, robo-calls and pre-recorded or artificial voices. Since its 18 September 2026 amendment, every entity making such calls must pre-declare them to its telecom provider, or they are treated as unsolicited commercial communication." },
+    { "question": "Do AI voice agents work in Hindi and regional languages?", "answer": "Mostly well in Hindi and Indian English, less so in several other languages. The April 2026 Voice of India benchmark, tested on real telephone speech, found best Hindi error rates under 5%, while South Indian languages ran two to four times higher than Hindi across most systems. Test on your own callers' recordings." },
+    { "question": "Do I need consent to record AI voice calls in India?", "answer": "Recorded calls hold personal data, so the DPDP Act and its 2025 Rules apply. Give a clear notice of what you collect and why, use it only for that purpose, keep it secure, and honour withdrawal, correction and deletion requests. A simple opening line saying the call is automated and recorded is a sensible start." },
+    { "question": "When should an AI voice agent hand over to a human?", "answer": "Immediately when the caller asks for a person, and automatically after two failed attempts to understand, on complaints, refunds, medical, legal or money questions, when a caller sounds distressed, and when a high-value lead is ready to talk. Pass the summary and collected details so the customer never repeats themselves." },
+    { "question": "Is a voice agent better than a WhatsApp chatbot?", "answer": "Neither is better in general. A WhatsApp chatbot suits customers who already message you and keeps a written record of every reply. A voice agent suits people who still call, missed-call capture and quick confirmations. Many businesses use both: the call handles the spoken part and WhatsApp carries links, confirmations and documents." }
+  ]
+}

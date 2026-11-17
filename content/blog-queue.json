@@ -216,7 +216,8 @@
         "/blog/whatsapp-abandoned-cart-d2c",
         "/blog/real-estate-email-marketing"
       ],
-      "status": "todo"
+      "status": "done",
+      "date": "2026-11-14"
     },
     {
       "slug": "ugc-ads-for-d2c",
@@ -233,7 +234,8 @@
         "/d2c",
         "/blog/meta-ads-for-d2c-brands"
       ],
-      "status": "todo"
+      "status": "done",
+      "date": "2026-11-15"
     },
     {
       "slug": "whatsapp-ai-chatbot-for-business",
@@ -250,7 +252,8 @@
         "/services/ai-automation",
         "/services/ecommerce-marketing"
       ],
-      "status": "todo"
+      "status": "done",
+      "date": "2026-11-16"
     },
     {
       "slug": "shopify-store-conversion-checklist",
@@ -267,7 +270,8 @@
         "/d2c",
         "/tools/website-audit"
       ],
-      "status": "todo"
+      "status": "done",
+      "date": "2026-11-17"
     },
     {
       "slug": "ai-voice-agents-india",
