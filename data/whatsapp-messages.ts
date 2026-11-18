@@ -468,4 +468,8 @@ export const BLOG_MESSAGES: Record<string, { ref: string; message: string }> = {
     ref: 'blog-meta-shopify-gap',
     message: 'I read your guide on Meta and Shopify numbers. My Ads Manager sales and my Shopify orders never match. Can you help me find which numbers to trust?',
   },
+  'meta-ads-learning-limited': {
+    ref: 'blog-meta-learning-ltd',
+    message: 'I read your guide on learning limited in Meta ads. Many of my ad sets show learning limited. Can you help me fix the account structure?',
+  },
 };

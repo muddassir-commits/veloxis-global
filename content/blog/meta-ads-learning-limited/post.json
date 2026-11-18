@@ -1,0 +1,76 @@
+{
+  "title": "Learning Limited on Meta Ads: What It Means and How to Fix It",
+  "seoTitle": "Learning Limited on Meta Ads: Meaning and Fixes",
+  "excerpt": "Learning limited on Meta ads? What the status means, the 6 causes Meta lists, how to fix it, and when to leave a profitable ad set alone.",
+  "date": "2026-11-22",
+  "category": "Paid Ads",
+  "industry": "ecommerce",
+  "service": "paid-ads",
+  "image": "/images/people/blog/meta-ads-learning-limited-cover.jpg",
+  "imageAlt": "An empty black chalkboard with faint smudges of wiped chalk",
+  "inlineImages": [
+    {
+      "src": "/images/people/blog/meta-ads-learning-limited-1.jpg",
+      "alt": "An antique brass compass lying on an old printed map",
+      "beforeHeading": "why-learning-limited",
+      "caption": "Find the cause first: audience, budget, bid control, overlap, event or ad volume."
+    },
+    {
+      "src": "/images/people/blog/meta-ads-learning-limited-2.jpg",
+      "alt": "A black graduation cap with a tassel resting on a stack of old hardback books",
+      "beforeHeading": "learning-limited-but-profitable"
+    }
+  ],
+  "about": [
+    {
+      "name": "Facebook",
+      "sameAs": "https://en.wikipedia.org/wiki/Facebook"
+    },
+    {
+      "name": "Online advertising",
+      "sameAs": "https://en.wikipedia.org/wiki/Online_advertising"
+    },
+    {
+      "name": "Direct-to-consumer",
+      "sameAs": "https://en.wikipedia.org/wiki/Direct-to-consumer"
+    }
+  ],
+  "faqs": [
+    {
+      "question": "What does learning limited mean on Facebook ads?",
+      "answer": "It means Meta predicts the ad set won't get around 50 optimisation events in the week after its last significant edit, so it can't finish the learning phase and delivery stays less stable. The ads still run and spend. It is a warning about data volume, not an error or a policy problem."
+    },
+    {
+      "question": "How many conversions do you need to exit the learning phase?",
+      "answer": "Meta's benchmark is around 50 optimisation events in the week after the ad set's last significant edit. It counts only the event you optimise for, such as purchases, and it is counted per ad set, not per campaign or account. A significant edit restarts the count from zero."
+    },
+    {
+      "question": "Should I worry if an ad set is learning limited but profitable?",
+      "answer": "Not automatically. If the ad set hits your target cost per purchase or return on ad spend and results are steady, leave it running and avoid edits made only to clear the label. Act when costs are above target, results swing widely, or most of your budget sits in learning-limited ad sets."
+    },
+    {
+      "question": "Does editing an ad reset the learning phase?",
+      "answer": "A significant edit does. Meta counts pausing an ad set and changing its optimisation event, audience or creative as significant. Budget and bid strategy changes may also count, depending on how large they are. Small adjustments usually don't restart learning, so batch your changes and make them in one sitting."
+    },
+    {
+      "question": "Is it true you shouldn't change a Meta budget by more than 20%?",
+      "answer": "It is a popular habit, not a published Meta rule. Meta's help pages say a budget change may be a significant edit depending on its magnitude, without giving a fixed percentage. The useful lesson is to make fewer, planned budget changes rather than daily nudges, and to avoid large changes late in the day."
+    },
+    {
+      "question": "How do I get out of learning limited on Meta ads?",
+      "answer": "Hover over the status to see Meta's reason, confirm purchases are tracked, then combine similar ad sets, loosen a tight bid cap or cost goal, widen the audience, raise the budget if it can't reach about 50 events a week, or optimise for a more frequent event. Make the changes together, then wait a week."
+    },
+    {
+      "question": "What budget do I need to exit the learning phase on Meta?",
+      "answer": "Roughly 50 times your cost per optimisation event per week. Meta's rule of thumb is a daily budget of at least 10 times the average cost of that event, and at least 5 times your cost per result goal if you set one. Use your own cost per result from Ads Manager to do the sum."
+    },
+    {
+      "question": "Should a small store optimise for add to cart instead of purchase?",
+      "answer": "It can help an ad set exit learning, because add to cart happens more often than purchase. The trade-off is that Meta then finds people who add to cart, not necessarily buyers. Watch real orders closely and switch back to purchase optimisation once your budget can support enough purchases."
+    },
+    {
+      "question": "Is there a quick way to find learning-limited ad sets in an account?",
+      "answer": "Yes. Filter the Delivery column in Ads Manager for Learning limited, or run the free BrightROAS Meta ads health check: it reads an Ads Manager CSV export in your browser in about 2 minutes, with no sign-up, and flags learning-limited ad sets, creative fatigue, flagged ads, stalled campaigns and cost overruns."
+    }
+  ]
+}
