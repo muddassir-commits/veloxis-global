@@ -1,0 +1,76 @@
+{
+  "title": "What Is a Good ROAS? Break-Even ROAS for Online Stores",
+  "seoTitle": "What Is a Good ROAS? Break-Even ROAS for Stores",
+  "excerpt": "What is a good ROAS for an online store? Work out your break-even ROAS with GST, COD and RTO costs, set a target, and compare ROAS with MER and POAS.",
+  "date": "2026-11-23",
+  "category": "Paid Ads",
+  "industry": "ecommerce",
+  "service": "paid-ads",
+  "image": "/images/people/blog/good-roas-for-ecommerce-cover.jpg",
+  "imageAlt": "Three stacks of coins of rising height on a wooden surface, each with a small green plant growing from the top",
+  "inlineImages": [
+    {
+      "src": "/images/people/blog/good-roas-for-ecommerce-1.jpg",
+      "alt": "Rows of empty open cardboard boxes stacked on top of each other",
+      "beforeHeading": "costs-to-include-india",
+      "caption": "Packaging, shipping and parcels that come back all come out of every order before ads are paid for."
+    },
+    {
+      "src": "/images/people/blog/good-roas-for-ecommerce-2.jpg",
+      "alt": "A brass balance scale on dark velvet with coins in one pan and weights in the other",
+      "beforeHeading": "roas-vs-mer-poas"
+    }
+  ],
+  "about": [
+    {
+      "name": "Return on advertising spend",
+      "sameAs": "https://en.wikipedia.org/wiki/Return_on_advertising_spend"
+    },
+    {
+      "name": "Contribution margin",
+      "sameAs": "https://en.wikipedia.org/wiki/Contribution_margin"
+    },
+    {
+      "name": "E-commerce",
+      "sameAs": "https://en.wikipedia.org/wiki/E-commerce"
+    }
+  ],
+  "faqs": [
+    {
+      "question": "What is a good ROAS for e-commerce?",
+      "answer": "A good ROAS is any ROAS above your break-even ROAS, the point where an ad-driven order covers its product, shipping, payment, discount and return costs plus the ad itself. Because margins differ so much between stores, there is no single good number; work out your own break-even first and set your target above it."
+    },
+    {
+      "question": "How do I calculate break-even ROAS?",
+      "answer": "Divide 1 by your margin per order, written as a decimal. Margin is order value minus product cost, packaging, shipping, payment or COD charges, discounts and an allowance for returns, divided by order value. If you keep 40% of each order, your break-even ROAS is 1 divided by 0.40, which is 2.5."
+    },
+    {
+      "question": "Is a ROAS of 2 good?",
+      "answer": "It depends on your margin. A ROAS of 2 is exactly break-even for a store that keeps 50% of each order after variable costs, profitable for a store keeping more than that, and a loss for a store keeping less. For a new-customer campaign with strong repeat purchases, break-even on the first order can still be acceptable."
+    },
+    {
+      "question": "What is the difference between ROAS and MER?",
+      "answer": "ROAS divides the revenue an ad platform attributes to its ads by the spend on that platform, so it is useful for comparing campaigns. MER, the marketing efficiency ratio, divides your total store revenue by total marketing spend. MER needs no attribution and shows whether marketing as a whole pays off, but not which campaign works."
+    },
+    {
+      "question": "Should GST be included when calculating ROAS?",
+      "answer": "No. GST collected on an order is not revenue you keep. Shopify's total sales figure includes taxes and shipping, while net sales does not. If your Pixel or Google tag sends order values that include tax, platform ROAS looks higher than your real return, so send the value without tax or adjust your break-even sum."
+    },
+    {
+      "question": "How do cash on delivery and RTO affect ROAS?",
+      "answer": "Ad platforms usually count a purchase when the order is placed, not when cash is collected. If a COD parcel is refused and returned to origin, the platform still shows the sale while you pay shipping both ways. Add an allowance for RTO to your break-even calculation and work to reduce refusals, for example by confirming COD orders."
+    },
+    {
+      "question": "Why is my Meta ROAS higher than my Shopify sales suggest?",
+      "answer": "Meta counts conversions it attributes to its ads within its click and view windows, may date them to the ad interaction, and may receive order values that include tax and shipping. Google can claim the same order too. Use Meta ROAS to compare campaigns and your store's own revenue and MER to judge the business."
+    },
+    {
+      "question": "What target ROAS should I set in Google Ads?",
+      "answer": "Start near the ROAS the campaign already achieves, as long as that is above break-even, then adjust in small steps. Google says a target set too high may limit the traffic your ads get, and suggests lowering it gradually for more conversion volume. Make sure conversion values are accurate before switching to Target ROAS."
+    },
+    {
+      "question": "What is POAS and is it better than ROAS?",
+      "answer": "POAS, profit on ad spend, divides the profit from ad-driven orders by ad spend instead of revenue. It shows whether ads actually make money, product by product, which ROAS cannot. It is harder to set up because product costs must be matched with ad data, so many stores track ROAS against break-even as a simpler step."
+    }
+  ]
+}
