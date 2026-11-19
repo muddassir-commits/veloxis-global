@@ -1,0 +1,155 @@
+<p><strong>A good ROAS is any return on ad spend above your break-even ROAS, which is 1 divided by your margin per order after product, shipping, payment, discount and return costs. A store keeping half of each order breaks even at 2; one keeping a quarter needs 4. There is no single good number for every store.</strong></p>
+<p>This guide is for e-commerce and D2C founders, in-house marketers and small agencies running Meta or Google ads for an online store, especially in India. Most articles that rank for "what is a good ROAS" open with a benchmark table: "3x is good", "4x is healthy", an average by industry. Few say where those numbers come from, what attribution setting they used or whether they include tax and shipping. We take a different route: how to work out your own break-even ROAS, which costs Indian stores usually forget (GST, cash on delivery, return to origin), how to set a target, how ROAS compares with MER and POAS, and how to use ROAS bidding on Google and Meta without starving your campaigns.</p>
+<p><em>Platform settings and help pages change often. The Google, Meta and Shopify guidance below was checked on 19 November 2026.</em></p>
+
+<h2 id="what-is-roas">What is ROAS and how do you calculate it?</h2>
+<p><strong>ROAS (return on ad spend) is the revenue your ads bring in divided by what you spent on those ads.</strong> If ads cost 1 rupee and bring in 4 rupees of sales, your ROAS is 4, often written 4x, 4:1 or 400%.</p>
+<p>The formula is simple:</p>
+<p><code>ROAS = revenue from ads ÷ ad spend</code></p>
+<p>Google describes it the same way in its help page on <a href="https://support.google.com/google-ads/answer/6268637?hl=en" target="_blank" rel="noopener">Target ROAS bidding</a>: your target ROAS is the average conversion value, such as revenue, you want for each unit of currency you spend on ads. Google's example is 5 in sales for every 1 spent, which it writes as a target ROAS of 500%. The ratio and the percentage mean the same thing; Google Ads uses percentages and Meta Ads Manager shows a plain number such as 3.25.</p>
+<p>Two words in that formula hide most of the problems:</p>
+<ul>
+  <li><strong>"Revenue"</strong> is whatever conversion value your store sends to the ad platform. It may include GST and shipping, and it counts the order when it is placed, before any return or refused cash-on-delivery parcel.</li>
+  <li><strong>"From ads"</strong> means the sales the platform attributes to its ads under its own attribution rules. Meta and Google can both claim the same order.</li>
+</ul>
+<p>So ROAS is a useful efficiency number, but it measures revenue, not profit. Whether a ROAS is "good" depends on how much of that revenue you keep.</p>
+
+<h2 id="what-is-a-good-roas">What is a good ROAS for an online store?</h2>
+<p><strong>A good ROAS is one that leaves profit after every cost of the order and the ad spend, so it starts at your break-even ROAS and goes up from there.</strong> A beauty brand with high margins can be profitable at a ROAS that would lose money for an electronics reseller with thin margins.</p>
+<p>That is why the benchmark tables in the top-ranking articles disagree with each other. Some quote one figure as "typical", others a different median, and most of them come from tool vendors' own customer data, mixed currencies, different attribution windows and different definitions of revenue. A benchmark from a US apparel brand selling prepaid orders tells you very little about an Indian store where a large share of orders are cash on delivery.</p>
+<p>Use this rough guide instead of an industry average:</p>
+<table>
+  <thead><tr><th>Your ROAS compared with break-even</th><th>What it means</th><th>Usual decision</th></tr></thead>
+  <tbody>
+    <tr><td>Below break-even</td><td>Each order loses money once ads are paid for</td><td>Fix the offer, landing page or targeting, or cut spend, unless repeat purchases clearly make up for it</td></tr>
+    <tr><td>Around break-even</td><td>You buy customers at roughly no profit on the first order</td><td>Fine for new-customer campaigns if customers come back; not fine for retargeting</td></tr>
+    <tr><td>Comfortably above break-even</td><td>Each order pays for its ad and leaves profit</td><td>This is a good ROAS for your store; test scaling the budget</td></tr>
+    <tr><td>Very far above break-even, on a small budget</td><td>Often retargeting people who would have bought anyway</td><td>Check how much is truly new revenue before celebrating</td></tr>
+  </tbody>
+</table>
+<p>The last row surprises people. A very high ROAS on a small retargeting or brand-search campaign usually means the campaign is showing ads to people already on their way to buy. It looks great in Ads Manager but may add little real revenue. A lower ROAS on a campaign that finds new customers can be worth more to the business.</p>
+
+<h2 id="break-even-roas">How do you calculate break-even ROAS?</h2>
+<p><strong>Break-even ROAS = 1 ÷ your margin per order, written as a decimal.</strong> If you keep 40% of each order's value after costs, your break-even ROAS is 1 ÷ 0.40 = 2.5. Below 2.5 you lose money on each ad-driven order; above it you make money.</p>
+<p>Shopify's guide to <a href="https://www.shopify.com/my/blog/break-even-roas-calculator" target="_blank" rel="noopener">break-even ROAS</a> uses this formula, with margin calculated as revenue minus variable costs, divided by revenue. Its list of variable costs includes the cost of goods, shipping and packaging, payment processing fees and pick-and-pack costs. Fixed costs such as rent and salaries stay out of this sum.</p>
+<p>The arithmetic for common margins looks like this (simple maths, not benchmarks):</p>
+<table>
+  <thead><tr><th>Margin you keep per order</th><th>Break-even ROAS</th><th>What 1 rupee of ads must bring in</th></tr></thead>
+  <tbody>
+    <tr><td>70%</td><td>1.43</td><td>About 1.43 rupees of sales</td></tr>
+    <tr><td>60%</td><td>1.67</td><td>About 1.67 rupees</td></tr>
+    <tr><td>50%</td><td>2.00</td><td>2 rupees</td></tr>
+    <tr><td>40%</td><td>2.50</td><td>2.50 rupees</td></tr>
+    <tr><td>30%</td><td>3.33</td><td>About 3.33 rupees</td></tr>
+    <tr><td>25%</td><td>4.00</td><td>4 rupees</td></tr>
+    <tr><td>20%</td><td>5.00</td><td>5 rupees</td></tr>
+  </tbody>
+</table>
+<p>Notice how fast the number climbs as margin falls. Going from a 50% to a 25% margin doubles the ROAS you need just to stand still. This is why a store with low margins can feel stuck even with a ROAS that sounds healthy.</p>
+<p>The most common mistake is using product <em>gross</em> margin only (selling price minus product cost). That gives a break-even ROAS that is too low, because shipping, payment fees, discounts and returns also come out of every order. The next section shows the costs to include.</p>
+
+<h2 id="costs-to-include-india">Which costs should Indian stores include in break-even ROAS?</h2>
+<p><strong>Include every cost that grows with each order: product cost, packaging, shipping, payment gateway or cash-on-delivery charges, discounts, and an allowance for returns and parcels that come back undelivered. Take GST out of revenue first.</strong> These are the costs that turn a "profitable" ROAS into a loss.</p>
+<table>
+  <thead><tr><th>Cost</th><th>Why it matters</th><th>Where to find it</th></tr></thead>
+  <tbody>
+    <tr><td>GST collected</td><td>Tax collected on an order is not your money, but it may be inside the order value your store reports</td><td>Your store's tax settings and your accountant</td></tr>
+    <tr><td>Product cost (COGS)</td><td>The biggest cost for most stores</td><td>Supplier invoices or manufacturing cost per unit</td></tr>
+    <tr><td>Packaging and pick-and-pack</td><td>Boxes, fillers, labour or warehouse fees per order</td><td>Warehouse or 3PL invoices</td></tr>
+    <tr><td>Forward shipping</td><td>Often paid by you even when "free shipping" is offered</td><td>Courier or shipping aggregator invoices</td></tr>
+    <tr><td>Payment gateway and COD charges</td><td>Card, UPI and wallet fees, plus courier fees for collecting cash</td><td>Gateway settlement reports and courier invoices</td></tr>
+    <tr><td>Discounts and coupons</td><td>A coupon lowers what you actually collect</td><td>Store discount reports</td></tr>
+    <tr><td>Returns, refunds and RTO</td><td>Refused cash-on-delivery parcels (return to origin) cost shipping both ways and earn nothing</td><td>Courier RTO reports and your returns log</td></tr>
+  </tbody>
+</table>
+<p>Two of these trip up Indian stores in particular.</p>
+<p><strong>GST in the order value.</strong> Shopify's <a href="https://help.shopify.com/manual/reports-and-analytics/shopify-reports/report-types/order-sales" target="_blank" rel="noopener">sales report definitions</a> show the gap clearly: <em>net sales</em> is gross sales minus discounts and returns, while <em>total sales</em> also adds taxes, duties, shipping charges and fees. If your ad platform receives order totals that include tax and shipping, the ROAS it shows is higher than the ROAS on the money you keep. Check what value your Pixel or tag sends, and either send the value without tax or account for the difference in your break-even sum.</p>
+<p><strong>Cash on delivery and RTO.</strong> A purchase event usually fires when the order is placed, not when cash is collected. If a COD parcel is refused at the door, the ad platform still counts the sale, while you pay shipping out and back. Add an allowance for this based on your own RTO history, by product or campaign if you can.</p>
+<h3 id="worked-example">A worked example (made-up numbers for illustration)</h3>
+<p>The figures below are an example only, not a benchmark or a client result. Imagine an order worth ₹1,000 after removing GST:</p>
+<ul>
+  <li>Product cost: ₹350</li>
+  <li>Packaging and shipping: ₹80</li>
+  <li>Payment gateway or COD charges: ₹30</li>
+  <li>Allowance for returns and RTO: ₹60</li>
+</ul>
+<p>The order leaves ₹480, a 48% margin, so break-even ROAS is 1 ÷ 0.48 ≈ 2.08. If you had used product cost alone, you would have had a 65% margin and a break-even ROAS of about 1.54, and you would have been losing money on every order sold at a ROAS between 1.54 and 2.08 without knowing it.</p>
+
+<h2 id="set-target-roas">How do you set a target ROAS for your store?</h2>
+<p><strong>Start from break-even, decide how much profit each order must leave after ads, and work out the ROAS that delivers it; then set different targets for new-customer and retargeting campaigns.</strong> Your target is a business decision, not a platform setting.</p>
+<ol>
+  <li><strong>Work out your contribution per order.</strong> Use the costs in the table above and your real average order value. In the example, that is ₹480 from a ₹1,000 order.</li>
+  <li><strong>Decide the profit you want per order after ads.</strong> Say you want ₹100 per order to go toward fixed costs and profit (again, an example).</li>
+  <li><strong>Find the ad cost you can afford per order.</strong> ₹480 minus ₹100 leaves ₹380 for ads.</li>
+  <li><strong>Turn that into a ROAS.</strong> ₹1,000 ÷ ₹380 ≈ 2.63. That is your target ROAS for this example.</li>
+  <li><strong>Adjust by campaign type.</strong> Campaigns that find new customers can run nearer break-even if those customers buy again. Retargeting and brand campaigns should beat the target by a wide margin, because many of those buyers were coming anyway.</li>
+  <li><strong>Check the target against volume.</strong> A higher target means fewer auctions you can win. If spend stalls, you may need to accept a lower ROAS or improve the store so each click is worth more.</li>
+  <li><strong>Review it every month</strong>, and whenever product costs, shipping rates, discounts or your RTO rate change.</li>
+</ol>
+<p>Repeat purchases change the picture. If customers usually come back and buy again, the first order does not have to carry the whole cost of acquiring them. Google lets you build this into bidding: its <a href="https://support.google.com/google-ads/answer/12080169" target="_blank" rel="noopener">customer lifecycle goals</a> include a <a href="https://support.google.com/google-ads/answer/14008174?hl=en" target="_blank" rel="noopener">new customer acquisition goal</a> that can bid higher for new customers than for existing ones, or bid only for new customers. Only use a lower first-order target if you have real repeat-purchase data; hope is not a retention plan. Our guide to <a href="/blog/d2c-customer-retention">D2C customer retention</a> covers how to build that repeat revenue.</p>
+
+<h2 id="roas-vs-mer-poas">ROAS vs MER vs POAS vs ROI: which should you track?</h2>
+<p><strong>Track ROAS to compare campaigns inside one platform, MER to judge total marketing efficiency against your real store revenue, and POAS or contribution profit to know whether ads actually make money.</strong> No single metric does all three jobs.</p>
+<table>
+  <thead><tr><th>Metric</th><th>Formula</th><th>Best for</th><th>Weakness</th></tr></thead>
+  <tbody>
+    <tr><td>ROAS</td><td>Platform-attributed revenue ÷ ad spend</td><td>Comparing campaigns, ad sets and ads in one platform</td><td>Uses the platform's attribution; ignores costs</td></tr>
+    <tr><td>Break-even ROAS</td><td>1 ÷ margin per order</td><td>Knowing the minimum ROAS that avoids a loss</td><td>Only as good as your cost data</td></tr>
+    <tr><td>MER (marketing efficiency ratio)</td><td>Total store revenue ÷ total marketing spend</td><td>Seeing whether all marketing together pays off; no attribution needed</td><td>Can't tell which channel or campaign works</td></tr>
+    <tr><td>POAS (profit on ad spend)</td><td>Profit from ad-driven orders ÷ ad spend</td><td>Knowing whether ads make money, product by product</td><td>Needs product costs sent to or matched with ad data</td></tr>
+    <tr><td>ROI</td><td>(Profit − investment) ÷ investment</td><td>Whole-business decisions</td><td>Too broad for daily ad decisions</td></tr>
+    <tr><td>CAC (customer acquisition cost)</td><td>Marketing spend ÷ new customers</td><td>Comparing with how much a customer is worth over time</td><td>Needs a clean count of new customers</td></tr>
+  </tbody>
+</table>
+<p>A practical routine for a growing store: check platform ROAS weekly to steer campaigns, check MER monthly against your store's own revenue report, and compare both with break-even. If platform ROAS looks great but MER is falling, the platforms are probably taking credit for sales that would have happened anyway.</p>
+
+<h2 id="platform-roas-vs-real">Why is the ROAS in Meta or Google different from your real ROAS?</h2>
+<p><strong>Each platform counts the sales it believes its ads caused, under its own attribution settings, using the order value your store sends, so platform ROAS rarely matches the revenue in your store's back end.</strong> The difference is normal; the size of it is what you should watch.</p>
+<p>The main reasons:</p>
+<ul>
+  <li><strong>Attribution windows.</strong> Meta reports conversions within a window after someone clicked or viewed an ad; the <a href="https://developers.facebook.com/docs/marketing-api/reference/ad-account/insights/" target="_blank" rel="noopener">Meta Ad Account Insights reference</a> lists the click and view windows available. Google Analytics uses its own <a href="https://support.google.com/analytics/answer/10596866" target="_blank" rel="noopener">attribution models</a>. One order can be credited to both Meta and Google.</li>
+  <li><strong>Timing.</strong> Platforms may date a conversion to the day of the ad interaction, while your store dates it to the day of the order.</li>
+  <li><strong>Order value.</strong> As above, the value sent may include GST and shipping, and does not fall when an order is returned or refused.</li>
+  <li><strong>Tracking gaps.</strong> Blocked cookies, missing events or duplicate events push the number down or up.</li>
+</ul>
+<p>The fix is not to choose one "true" number. Agree which number you use for which decision: platform ROAS to compare campaigns, store revenue and MER to judge the business. If you report ads to a founder or client, show both side by side with a one-line explanation. Our guide to <a href="/blog/meta-ads-client-reporting">Facebook ads reports for clients</a> shows a simple way to do this.</p>
+
+<h2 id="roas-bidding">Should you use target ROAS bidding on Google or a ROAS goal on Meta?</h2>
+<p><strong>Use ROAS bidding once conversion tracking sends accurate order values and the campaign already gets steady purchases; set the target near what the campaign achieves today, not at your dream number, then adjust slowly.</strong> A target set too high usually cuts spend rather than raising profit.</p>
+<p><strong>Google Ads.</strong> Google's <a href="https://support.google.com/google-ads/answer/6268637?hl=en" target="_blank" rel="noopener">Target ROAS help page</a> explains that the system predicts future conversions and their values from the conversion values you report, then sets bids to get as much conversion value as possible while aiming for your target. It warns that a target set too high may limit the traffic your ads get, and suggests gradually lowering the target if you want more conversion volume. So value tracking must be right first; if your conversion value includes tax, the ROAS Google is chasing is inflated too. Our guide to <a href="/blog/google-ads-for-d2c-brands">Google ads for D2C brands</a> covers campaign setup.</p>
+<p><strong>Meta.</strong> Meta's equivalent is the ROAS goal, called minimum ROAS in Meta's <a href="https://developers.facebook.com/docs/marketing-api/bidding/overview/bid-strategy" target="_blank" rel="noopener">bid strategy documentation</a>. It is a bidding option for value optimisation, so the ad set must optimise for purchase value and the account must be eligible for value optimisation. Meta notes that setting the minimum too high may lead to under-delivery. A tight ROAS goal can also keep an ad set stuck in the <a href="https://www.facebook.com/business/help/112167992830700" target="_blank" rel="noopener">learning phase</a>, because it limits the number of purchases the ad set can win. If your ads show as active but barely spend after you add a ROAS goal, read our guide on <a href="/blog/meta-ads-not-spending">Meta ads not spending</a>.</p>
+<p>A sensible sequence for most stores:</p>
+<ol>
+  <li>Run the campaign on purchase value or highest volume until it has a stable history of purchases.</li>
+  <li>Note the ROAS it achieves over the last few weeks and compare it with your break-even.</li>
+  <li>If it is above break-even, set the ROAS target close to the current level, not far above it.</li>
+  <li>Raise or lower the target in small steps, and give each change time before judging it.</li>
+  <li>Watch spend and new-customer numbers as well as ROAS, so a rising ROAS doesn't hide a shrinking business.</li>
+</ol>
+
+<h2 id="improve-roas">How can you improve ROAS without hurting growth?</h2>
+<p><strong>Raise what each visitor is worth and cut wasted spend: improve the product page and checkout, lift average order value, reduce RTO, refresh creative, and stop paying for sales you would get anyway.</strong> Cutting budget alone often raises ROAS while shrinking revenue.</p>
+<ul>
+  <li><strong>Fix the store before the ads.</strong> A faster page, clearer product photos, visible delivery dates and an easy checkout raise conversion rate, which raises ROAS on the same spend. Our <a href="/blog/shopify-store-conversion-checklist">Shopify store conversion checklist</a> lists what to check, and the free <a href="/tools/website-audit">website audit tool</a> flags speed and SEO issues for you.</li>
+  <li><strong>Lift average order value.</strong> Bundles, "frequently bought together" offers and a free-shipping threshold set above your current average order raise revenue per order while your costs per order rise more slowly.</li>
+  <li><strong>Reduce RTO.</strong> Confirm COD orders on WhatsApp before dispatch, offer a small reason to prepay, and flag pin codes or products with repeated refusals. Every refused parcel you avoid improves your real ROAS even if platform ROAS doesn't move.</li>
+  <li><strong>Refresh creative on a schedule.</strong> Tired ads cost more per result. Plan new creative in batches rather than one ad at a time.</li>
+  <li><strong>Separate new and returning customers.</strong> Judge prospecting campaigns on new-customer cost and retargeting on incremental sales, not on the same ROAS target.</li>
+  <li><strong>Push margin, not just revenue.</strong> Give more budget to products with higher margins; a lower ROAS on a high-margin product can earn more than a higher ROAS on a low-margin one.</li>
+</ul>
+<p>To spot the problems quickly in your Meta account, the free <a href="https://brightroas.veloxisglobal.com/check" target="_blank" rel="noopener">BrightROAS Meta ads health check</a> reads an Ads Manager CSV export (ad level, broken down by day) and lists issues such as creative fatigue, flagged ads and stalled campaigns. It needs no sign-up and the file is read in your browser. BrightROAS is an independent tool and is not affiliated with Meta.</p>
+<p>If you'd like help putting this into practice, our <a href="/services/paid-ads">Meta and Google ads service</a> sets ROAS targets from your real margins, our <a href="/services/conversion-rate-optimization">conversion rate optimisation</a> work makes each click worth more, and our <a href="/services/ecommerce-marketing">e-commerce marketing</a> team ties ads, email and WhatsApp together. See how we work with <a href="/industries/ecommerce">e-commerce and D2C brands</a>.</p>
+<p>Not sure what your break-even ROAS is, or whether your platform numbers can be trusted? Ask for a <a href="/free-audit">free audit</a> and we'll work through your costs, tracking and campaigns with you, then tell you what we would fix first.</p>
+
+<h2 id="sources">Sources</h2>
+<ul>
+  <li><a href="https://support.google.com/google-ads/answer/6268637?hl=en" target="_blank" rel="noopener">Google Ads Help: About Target ROAS bidding</a></li>
+  <li><a href="https://support.google.com/google-ads/answer/12080169" target="_blank" rel="noopener">Google Ads Help: About customer lifecycle goals</a></li>
+  <li><a href="https://support.google.com/google-ads/answer/14008174?hl=en" target="_blank" rel="noopener">Google Ads Help: New customer acquisition goal</a></li>
+  <li><a href="https://support.google.com/analytics/answer/10596866" target="_blank" rel="noopener">Google Analytics Help: Get started with attribution</a></li>
+  <li><a href="https://developers.facebook.com/docs/marketing-api/bidding/overview/bid-strategy" target="_blank" rel="noopener">Meta for Developers: Bid strategy (minimum ROAS)</a></li>
+  <li><a href="https://developers.facebook.com/docs/marketing-api/reference/ad-account/insights/" target="_blank" rel="noopener">Meta for Developers: Ad Account Insights reference (attribution windows)</a></li>
+  <li><a href="https://www.facebook.com/business/help/112167992830700" target="_blank" rel="noopener">Meta Business Help Center: About the learning phase</a></li>
+  <li><a href="https://help.shopify.com/manual/reports-and-analytics/shopify-reports/report-types/order-sales" target="_blank" rel="noopener">Shopify Help Center: Sales reports (gross, net and total sales)</a></li>
+  <li><a href="https://www.shopify.com/my/blog/break-even-roas-calculator" target="_blank" rel="noopener">Shopify: Break-even ROAS calculator and formula</a></li>
+</ul>

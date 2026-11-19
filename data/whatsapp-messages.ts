@@ -472,4 +472,8 @@ export const BLOG_MESSAGES: Record<string, { ref: string; message: string }> = {
     ref: 'blog-meta-learning-ltd',
     message: 'I read your guide on learning limited in Meta ads. Many of my ad sets show learning limited. Can you help me fix the account structure?',
   },
+  'good-roas-for-ecommerce': {
+    ref: 'blog-good-roas',
+    message: 'I read your guide on what a good ROAS is. I run ads for my online store and want to know my break-even ROAS and a sensible target. Can you help?',
+  },
 };
