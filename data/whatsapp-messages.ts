@@ -476,4 +476,8 @@ export const BLOG_MESSAGES: Record<string, { ref: string; message: string }> = {
     ref: 'blog-good-roas',
     message: 'I read your guide on what a good ROAS is. I run ads for my online store and want to know my break-even ROAS and a sensible target. Can you help?',
   },
+  'abandoned-cart-email-sequence': {
+    ref: 'blog-abandoned-cart-seq',
+    message: 'I read your guide on abandoned cart email sequences. Many shoppers leave my online store at the cart or checkout. Can you help me set up email and WhatsApp reminders?',
+  },
 };

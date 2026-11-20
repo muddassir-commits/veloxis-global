@@ -1,0 +1,76 @@
+{
+  "title": "Abandoned Cart Email Sequence: Timing, Copy and WhatsApp",
+  "seoTitle": "Abandoned Cart Email Sequence: Timing and Copy",
+  "excerpt": "Build an abandoned cart email sequence that wins back orders: how many emails, when to send, what to write, discounts, WhatsApp and India's consent rules.",
+  "date": "2026-11-24",
+  "category": "AI Automation",
+  "industry": "ecommerce",
+  "service": "ai-automation",
+  "image": "/images/people/blog/abandoned-cart-email-sequence-cover.jpg",
+  "imageAlt": "Close-up of a white laptop keyboard with a green shopping cart symbol printed on one key",
+  "inlineImages": [
+    {
+      "src": "/images/people/blog/abandoned-cart-email-sequence-1.jpg",
+      "alt": "Hands typing on a laptop seen from above, with phone, chat, envelope, location and at-sign icons above it",
+      "beforeHeading": "what-to-write-in-each-email",
+      "caption": "Each message in the sequence should do one job: remind, reassure or nudge."
+    },
+    {
+      "src": "/images/people/blog/abandoned-cart-email-sequence-2.jpg",
+      "alt": "A hand with red nail polish holding a smartphone at a cafe table beside a white coffee cup",
+      "beforeHeading": "add-whatsapp-and-sms"
+    }
+  ],
+  "about": [
+    {
+      "name": "Shopping cart abandonment",
+      "sameAs": "https://en.wikipedia.org/wiki/Shopping_cart_abandonment"
+    },
+    {
+      "name": "Email marketing",
+      "sameAs": "https://en.wikipedia.org/wiki/Email_marketing"
+    },
+    {
+      "name": "E-commerce",
+      "sameAs": "https://en.wikipedia.org/wiki/E-commerce"
+    }
+  ],
+  "faqs": [
+    {
+      "question": "What is an abandoned cart email sequence?",
+      "answer": "It is a short series of automated emails sent to a known shopper who added products to their cart or started checkout and then left without paying. Each email shows the items and links straight back to the saved cart. It only reaches shoppers who are logged in or have shared their email, so anonymous visitors need other tactics."
+    },
+    {
+      "question": "How many emails should an abandoned cart sequence have?",
+      "answer": "Two or three is a sound starting point. Klaviyo recommends two to three abandoned cart messages. A reminder, a reassurance email and an optional last nudge cover most needs. Longer sequences raise the risk of unsubscribes and spam complaints, so add a fourth email only if your own results show it recovers orders profitably."
+    },
+    {
+      "question": "When should I send the first abandoned cart email?",
+      "answer": "Within a few hours of the shopper leaving. Klaviyo suggests sending the first message two to four hours after someone starts checkout, and the second 20 to 48 hours later. Shopify treats a checkout as abandoned after it stays incomplete for ten minutes. Treat these as starting points and test the timing for your products."
+    },
+    {
+      "question": "Should I offer a discount in abandoned cart emails?",
+      "answer": "Not in the first email and not automatically for everyone. Coupons in every reminder teach regular customers to abandon on purpose and cost margin on orders that would have happened anyway. If you use an incentive, put it in the last email, limit it to first-time buyers or larger carts, and make it single-use with a real expiry."
+    },
+    {
+      "question": "What is the difference between abandoned cart and abandoned checkout?",
+      "answer": "An abandoned cart means the shopper added items but never started checkout. An abandoned checkout means they began checkout and entered contact details but did not pay, which shows stronger intent. Shopify and Klaviyo treat them as separate flows, and it is best to run both with a filter so one shopper never gets two flows."
+    },
+    {
+      "question": "Why is Shopify not sending abandoned checkout emails?",
+      "answer": "Common reasons are that the shopper gave a phone number instead of an email, the products are out of stock, the shopper is not subscribed to marketing and the automation sends only to subscribers, or the order went through a third-party checkout. Shopify's recovery works only for the Online Store and Buy Button sales channels."
+    },
+    {
+      "question": "Can I send abandoned cart reminders on WhatsApp?",
+      "answer": "Yes, if the shopper opted in to WhatsApp messages from you. WhatsApp's policy requires opt-in and honouring opt-outs. Outside the 24-hour customer service window you must use an approved template, and Meta classifies cart reminders as marketing templates. Send one WhatsApp reminder at most and answer replies quickly rather than chasing."
+    },
+    {
+      "question": "Do abandoned cart emails need consent in India?",
+      "answer": "Treat them as marketing and get clear consent. The DPDP Act, 2023 requires consent for a specified purpose that is as easy to withdraw as to give, and the DPDP Rules, 2025 were notified in November 2025. Say at checkout that you may send reminders and include a working unsubscribe link. This is general information, not legal advice."
+    },
+    {
+      "question": "How do I measure if my abandoned cart sequence works?",
+      "answer": "Track recovered orders, clicks, unsubscribes, spam complaints and discount cost for each email, and for COD orders count only delivered and paid ones. To see true extra sales, hold out a small random group who get no reminders and compare their purchase rate with shoppers who receive the sequence."
+    }
+  ]
+}
