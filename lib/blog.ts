@@ -27,7 +27,19 @@ const BADGE_COLORS: Record<Category, 'teal' | 'orange' | 'indigo' | 'blue'> = {
 };
 
 const AUTHOR = { name: 'Veloxis Global Team', photo: '/images/logos/logo-square.png' };
-const SERVICES = ['high-converting-landing-pages', 'paid-ads', 'ai-automation'] as const;
+// Every /services/<slug> page (data/services-data.ts). A post's `service` picks the service box under the article.
+const SERVICES = [
+  'ecommerce-marketing',
+  'shopify-development',
+  'conversion-rate-optimization',
+  'email-whatsapp-marketing',
+  'amazon-marketing',
+  'social-media-marketing',
+  'paid-ads',
+  'high-converting-landing-pages',
+  'seo',
+  'ai-automation',
+] as const;
 /** Niche a post belongs to (optional). Niche pages list posts by this; posts without it are matched by slug words. */
 export const INDUSTRIES = ['ecommerce', 'local-business', 'real-estate'] as const;
 

@@ -215,7 +215,7 @@ export default function BlogPostContent({ post, relatedPosts, industry, service 
                 <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-5">
                   <div className="flex-1">
                     <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/10 text-emerald-400 text-xs font-bold tracking-wider uppercase w-fit border border-emerald-500/20 mb-3">
-                      Dedicated Real Estate Service
+                      {industry === 'real-estate' ? 'Dedicated Real Estate Service' : 'Related service'}
                     </span>
                     <h3 className="text-xl sm:text-2xl font-extrabold text-white tracking-tight leading-snug">
                       Looking for expert execution on {service.title}?
@@ -283,14 +283,12 @@ export default function BlogPostContent({ post, relatedPosts, industry, service 
                   </Link>
                 ))}
               </div>
-              {industry !== 'general' && (
-                <Link
-                  href={`/blog/industry/${industry}`}
-                  className="inline-flex items-center gap-1 mt-6 py-1.5 text-sm font-bold text-royal-blue hover:underline"
-                >
-                  All {niche.name} guides →
-                </Link>
-              )}
+              <Link
+                href={`/blog/industry/${industry}`}
+                className="inline-flex items-center gap-1 mt-6 py-1.5 text-sm font-bold text-royal-blue hover:underline"
+              >
+                All {niche.name} guides →
+              </Link>
             </div>
           </article>
 

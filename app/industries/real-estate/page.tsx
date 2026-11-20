@@ -98,6 +98,14 @@ export default function RealEstatePage() {
                     </Link>
                   ))}
                 </p>
+                <p className="mt-4 text-sm text-slate-600 leading-relaxed">
+                  Running ads already? Our{' '}
+                  <Link href="/services/paid-ads" className="font-bold text-royal-blue hover:underline">Meta and Google ads for property projects</Link>{' '}
+                  pair with{' '}
+                  <Link href="/services/ai-automation" className="font-bold text-royal-blue hover:underline">instant WhatsApp replies and AI follow-up</Link>, and{' '}
+                  <Link href="/services/social-media-marketing" className="font-bold text-royal-blue hover:underline">social media marketing with project Reels</Link>{' '}
+                  keeps the project in front of buyers between launches.
+                </p>
               </div>
             </section>
             <LeadSystemCallout className="bg-slate-50" />
