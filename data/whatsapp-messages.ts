@@ -1,6 +1,6 @@
 // Pre-filled WhatsApp messages, one per page, in one place.
 //
-// Every WhatsApp button on the site opens wa.me/919194020727 with a message that matches the page the
+// Every WhatsApp chat button on the site opens wa.me/918115512895 (the Veloxis AI desk) with a message that matches the page the
 // visitor is on, followed by a short reference code, for example:
 //   "Hi Veloxis Global, I read your guide on EOI in real estate. ... (ref: blog-eoi/sticky)"
 // The part before "/" says which page (ref below), the part after it says which button (placement).
@@ -14,8 +14,12 @@
 //
 // This file has no runtime imports, so scripts/blog/check.mjs can read it with plain Node.
 
-/** The only WhatsApp number used on the site (+91 91940 20727). Never the old 88876 number. */
-export const WHATSAPP_NUMBER = '919194020727';
+/**
+ * Number the click-to-chat buttons open: +91 81155 12895, the Veloxis AI desk (WhatsApp Cloud API).
+ * It is never displayed. The number shown in the footer, contact page, schema and NAP stays
+ * +91 91940 20727 (data/site.ts). Never the old 88876 number.
+ */
+export const WHATSAPP_NUMBER = '918115512895';
 
 /** Where on the page a WhatsApp button sits. Also used in the ref code and the data-cta-location attribute. */
 export type WaPlacement =
