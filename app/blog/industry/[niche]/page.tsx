@@ -8,6 +8,7 @@ import { getWebPageSchema } from '../../../../lib/schema';
 import { getPostsByIndustry, toCard, POST_INDUSTRIES, type PostIndustry } from '../../../../lib/blog';
 import { BLOG_NICHES } from '../../../../data/blog-niches';
 import { constructMetadata } from '../../../../lib/seo-config';
+import { siteData } from '../../../../data/site';
 import BlogContent from '../../BlogContent';
 import { FaqAccordion } from '../../../../components/sections/FaqAccordion';
 import { blogIndexFaqs } from '../../../../data/page-faqs';
@@ -27,28 +28,28 @@ export function generateStaticParams() {
 
 const PAGES: Record<PostIndustry, { title: string; description: string; h1: string; intro: string }> = {
   ecommerce: {
-    title: 'E-commerce & D2C Marketing Guides | Veloxis Global',
-    description: 'Guides for online stores and D2C brands: Meta and Google ads, store pages that convert, WhatsApp and email follow-up, measured on orders.',
+    title: 'E-commerce Marketing Blog: D2C, Shopify & Meta Ads Guides',
+    description: 'Step-by-step e-commerce marketing guides for D2C and Shopify brands in India: Meta and Google ads, ROAS, store conversion, abandoned carts and retention.',
     h1: 'E-commerce and D2C marketing guides',
-    intro: 'Meta and Google ads, store pages and follow-ups for online stores and D2C brands, written by the Veloxis Global team.',
+    intro: 'How-to guides for online stores and D2C brands: setting up and fixing Meta and Google ads, working out a good ROAS, making Shopify pages convert, and bringing buyers back with email and WhatsApp. Every guide gives real steps and cites its sources.',
   },
   'local-business': {
-    title: 'Local Business & Clinic Marketing Guides | Veloxis Global',
-    description: 'Guides for clinics, dentists and local businesses: Google Business Profile, local SEO, reviews and local ads that bring calls and bookings.',
+    title: 'Local Business Marketing Guides: Google Maps & Local SEO',
+    description: 'Step-by-step guides for clinics, dentists and local businesses: Google Business Profile, local SEO, reviews and local ads that bring calls and bookings.',
     h1: 'Local business and clinic marketing guides',
-    intro: 'Google Business Profile, local SEO and local ads for clinics and local businesses, written by the Veloxis Global team.',
+    intro: "How-to guides for clinics, dentists and other local businesses: setting up a Google Business Profile that follows Google's rules, ranking on Google Maps, getting reviews the right way, and turning searches into calls and bookings.",
   },
   'real-estate': {
-    title: 'Real Estate Marketing Guides for Builders & Brokers | Veloxis',
-    description: 'Guides for builders, brokers and channel partners: Meta and Google ads, project landing pages, WhatsApp follow-up, RERA rules, EOI and CP programmes.',
+    title: 'Real Estate Marketing Blog: Ads, Leads & RERA Guides',
+    description: 'Real estate marketing guides for builders, brokers and channel partners in India: Meta and Google ads, lead generation, WhatsApp follow-up and RERA rules.',
     h1: 'Real estate marketing guides for builders, brokers and CPs',
-    intro: 'Meta and Google ads for property, project landing pages, WhatsApp follow-up, EOI and channel partner programmes, written by the Veloxis Global team.',
+    intro: 'How-to guides for builders, brokers and channel partners in India: Meta and Google ads for property, project landing pages, WhatsApp follow-up, booking site visits, EOI and CP programmes, and the RERA rules every ad must follow.',
   },
   general: {
-    title: 'Digital Marketing Guides: Ads, SEO & AI | Veloxis Global',
-    description: 'Cross-industry marketing guides: Instagram Reels, AI search (GEO) and other tactics that work for any business running paid or organic marketing.',
-    h1: 'General marketing guides',
-    intro: 'Marketing guides that apply to any business, written by the Veloxis Global team.',
+    title: 'AI Marketing & Automation Guides: GEO, Chatbots, Voice AI',
+    description: 'Guides on AI in marketing for any business: getting cited by ChatGPT and AI search (GEO), WhatsApp chatbots, AI voice agents, AI agencies and ad reporting.',
+    h1: 'AI and marketing guides for any business',
+    intro: 'Guides that apply to any business: how AI search tools such as ChatGPT pick their sources, what a WhatsApp chatbot or AI voice agent should and should not do, how to judge an AI marketing agency, and how to report on ads.',
   },
 };
 
@@ -72,6 +73,21 @@ export default async function BlogIndustryPage({ params }: Params) {
   return (
     <>
       <SchemaMarkup schema={getWebPageSchema({ type: 'CollectionPage', name: page.h1, description: page.description, path })} />
+      {posts.length > 0 && (
+        <SchemaMarkup
+          schema={{
+            '@context': 'https://schema.org',
+            '@type': 'ItemList',
+            name: page.h1,
+            itemListElement: posts.map((p, i) => ({
+              '@type': 'ListItem',
+              position: i + 1,
+              url: `${siteData.url}/blog/${p.slug}`,
+              name: p.title,
+            })),
+          }}
+        />
+      )}
       <section className="bg-slate-50 pt-16 lg:pt-[72px] border-b border-slate-100">
         <div className="max-w-container-max mx-auto px-gutter">
           <Breadcrumb items={[{ name: 'Blog', href: '/blog' }, { name: info.name, href: path }]} />
