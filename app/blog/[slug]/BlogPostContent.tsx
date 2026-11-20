@@ -249,7 +249,7 @@ export default function BlogPostContent({ post, relatedPosts, industry, service 
                   <p className="text-lg font-extrabold text-slate-900">{post.author}</p>
                 </Link>
                 <p className="text-xs sm:text-sm text-slate-500 leading-relaxed">
-                  The Veloxis Global team writes and updates every guide on this blog. We are a Noida-based digital marketing agency working on landing pages, Meta and Google ads and WhatsApp follow-up, mainly for real estate.
+                  The Veloxis Global team writes and updates every guide on this blog. We are a Noida-based e-commerce and D2C growth agency working on Meta and Google ads, Shopify stores, landing pages, SEO and WhatsApp automation. We also work with local businesses, clinics and real estate.
                 </p>
                 <div className="flex flex-wrap gap-x-4 gap-y-2 mt-2">
                   <a href="https://www.google.com/preferences/source?q=veloxisglobal.com" target="_blank" rel="noopener noreferrer" className="text-xs font-bold text-royal-blue flex items-center gap-1 py-1.5 -my-1.5">
