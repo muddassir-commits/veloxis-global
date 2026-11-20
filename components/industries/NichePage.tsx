@@ -35,6 +35,8 @@ export interface NichePageData {
   servicesHeading: string;
   servicesIntro: string;
   services: { icon: LucideIcon; title: string; desc: string; href: string; linkLabel: string }[];
+  /** Optional line of more service links under the cards: lead-in text plus links. */
+  moreServices?: { lead: string; links: { href: string; label: string }[] };
   checks?: { label: string; heading: string; intro: string; items: { title: string; desc: string }[]; after?: React.ReactNode };
   steps: { title: string; desc: string }[];
   fit: string[];
@@ -149,7 +151,19 @@ export const NichePage: React.FC<{ data: NichePageData }> = ({ data: d }) => (
             </div>
           ))}
         </div>
-        <p className="text-center mt-10 text-sm text-slate-600">
+        {d.moreServices && (
+          <p className="text-center mt-10 text-sm text-slate-600 leading-relaxed">
+            {d.moreServices.lead}{' '}
+            {d.moreServices.links.map((l, i) => (
+              <React.Fragment key={l.href}>
+                {i > 0 && (i === d.moreServices!.links.length - 1 ? ' and ' : ', ')}
+                <Link href={l.href} className="font-bold text-royal-blue hover:underline">{l.label}</Link>
+              </React.Fragment>
+            ))}
+            .
+          </p>
+        )}
+        <p className={`text-center ${d.moreServices ? 'mt-4' : 'mt-10'} text-sm text-slate-600`}>
           Want to check your own site first? Try our{' '}
           <Link href="/tools/website-audit" className="font-bold text-royal-blue hover:underline">free website audit tool</Link>.
         </p>

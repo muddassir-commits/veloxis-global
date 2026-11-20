@@ -115,8 +115,8 @@ export const servicesData: ServiceData[] = [
       { title: 'Local businesses & clinics', desc: 'Selling locally rather than shipping? Local SEO and local ads usually fit better.', href: LOCAL, linkLabel: 'Local business marketing' },
       { title: 'Real estate', desc: 'Property sells on enquiries and site visits, so it has its own plan.', href: RE, linkLabel: 'Real estate marketing' },
     ],
-    relatedServices: ['paid-ads', 'shopify-development', 'email-whatsapp-marketing'],
-    relatedPosts: [],
+    relatedServices: ['paid-ads', 'shopify-development', 'email-whatsapp-marketing', 'social-media-marketing'],
+    relatedPosts: ['d2c-brand-launch-checklist', 'meta-ads-shopify-sales-mismatch', 'd2c-customer-retention', 'google-ads-for-d2c-brands'],
     cta: 'Get a free audit of your store',
     faqs: [
       { question: 'What is e-commerce marketing?', answer: 'Everything that brings shoppers to an online store, gets them to buy and brings them back: ads, store conversion, email, WhatsApp and SEO.' },
@@ -185,7 +185,7 @@ export const servicesData: ServiceData[] = [
       { title: 'Real estate', desc: 'Property projects need landing pages, not stores.', href: RE, linkLabel: 'Real estate marketing' },
     ],
     relatedServices: ['conversion-rate-optimization', 'ecommerce-marketing', 'paid-ads'],
-    relatedPosts: [],
+    relatedPosts: ['shopify-store-conversion-checklist', 'd2c-brand-launch-checklist', 'meta-ads-shopify-sales-mismatch'],
     cta: 'Get a free review of your store',
     faqs: [
       { question: 'Do you build new Shopify stores?', answer: 'Yes. We set up the theme, products, collections, payments, shipping, policies and tracking.' },
@@ -254,7 +254,7 @@ export const servicesData: ServiceData[] = [
       { title: 'Real estate', desc: 'The same method applied to project pages and enquiries.', href: RE, linkLabel: 'Real estate marketing' },
     ],
     relatedServices: ['shopify-development', 'ecommerce-marketing', 'paid-ads'],
-    relatedPosts: [],
+    relatedPosts: ['shopify-store-conversion-checklist', 'good-roas-for-ecommerce', 'real-estate-landing-page-conversion-hacks'],
     cta: 'Get a free conversion review',
     faqs: [
       { question: 'What is conversion rate optimization?', answer: 'Finding out why visitors do not buy and improving the pages, offer and checkout so more of them do.' },
@@ -322,7 +322,7 @@ export const servicesData: ServiceData[] = [
       { title: 'Real estate', desc: 'Instant lead replies and site visit reminders.', href: '/services/ai-automation', linkLabel: 'WhatsApp & AI automation' },
     ],
     relatedServices: ['ai-automation', 'ecommerce-marketing', 'conversion-rate-optimization'],
-    relatedPosts: [],
+    relatedPosts: ['abandoned-cart-email-sequence', 'd2c-customer-retention', 'whatsapp-ai-chatbot-for-business', 'real-estate-email-marketing'],
     cta: 'Get a free retention audit',
     faqs: [
       { question: 'Is email still worth it if my customers use WhatsApp?', answer: 'Usually yes. Email costs less per message and suits longer content, while WhatsApp is better for timely reminders. Most stores do best with both.' },
@@ -390,7 +390,7 @@ export const servicesData: ServiceData[] = [
       { title: 'Real estate', desc: 'Property does not sell on Amazon. See our real estate services.', href: RE, linkLabel: 'Real estate marketing' },
     ],
     relatedServices: ['ecommerce-marketing', 'paid-ads', 'conversion-rate-optimization'],
-    relatedPosts: [],
+    relatedPosts: ['good-roas-for-ecommerce', 'd2c-brand-launch-checklist'],
     cta: 'Get a free Amazon account review',
     faqs: [
       { question: 'Which Amazon ad types do you manage?', answer: 'Sponsored Products, Sponsored Brands and Sponsored Display, depending on your brand registration and products.' },
@@ -457,8 +457,8 @@ export const servicesData: ServiceData[] = [
       { title: 'Local businesses & clinics', desc: 'Local content and review-led posts, within advertising rules.', href: LOCAL, linkLabel: 'Local business marketing' },
       { title: 'Real estate', desc: 'Project walkthroughs and buyer education.', href: RE, linkLabel: 'Real estate marketing' },
     ],
-    relatedServices: ['paid-ads', 'ecommerce-marketing', 'email-whatsapp-marketing'],
-    relatedPosts: [],
+    relatedServices: ['paid-ads', 'ecommerce-marketing', 'email-whatsapp-marketing', 'ai-automation'],
+    relatedPosts: ['instagram-reels-marketing', 'ugc-ads-for-d2c', 'real-estate-social-media-marketing', 'real-estate-video-marketing'],
     cta: 'Get a free social media review',
     faqs: [
       { question: 'Which platforms do you work on?', answer: 'Mainly Instagram and Facebook, with YouTube Shorts and LinkedIn where they suit your audience.' },
@@ -578,9 +578,10 @@ export const servicesData: ServiceData[] = [
     relatedServices: ['high-converting-landing-pages', 'ai-automation', 'seo'],
     relatedPlaybook: 'new-launch-meta-google-ads-plan',
     relatedPosts: [
+      'meta-ads-not-spending',
+      'google-ads-for-d2c-brands',
+      'meta-ads-shopify-sales-mismatch',
       'google-ads-vs-meta-ads-real-estate-india',
-      'meta-ads-for-real-estate-india',
-      'google-ads-for-real-estate-india',
     ],
     cta: 'Get a free ads audit',
     faqs: [
@@ -735,7 +736,7 @@ export const servicesData: ServiceData[] = [
     ],
     relatedServices: ['paid-ads', 'seo', 'ai-automation'],
     relatedPlaybook: 'project-landing-page-blueprint',
-    relatedPosts: ['real-estate-landing-page', 'real-estate-landing-page-conversion-hacks'],
+    relatedPosts: ['shopify-store-conversion-checklist', 'real-estate-landing-page', 'real-estate-landing-page-conversion-hacks', 'real-estate-website-examples'],
     cta: 'Get a free website review',
     faqs: [
       {
@@ -1032,7 +1033,7 @@ export const servicesData: ServiceData[] = [
     ],
     relatedServices: ['paid-ads', 'high-converting-landing-pages', 'seo'],
     relatedPlaybook: 'whatsapp-lead-response-flow',
-    relatedPosts: ['whatsapp-automation-for-real-estate-leads', 'whatsapp-business-api-for-real-estate', 'real-estate-chatbot', 'ai-for-real-estate-india'],
+    relatedPosts: ['whatsapp-ai-chatbot-for-business', 'ai-voice-agents-india', 'whatsapp-automation-for-real-estate-leads', 'ai-marketing-agency-what-it-does'],
     cta: 'Get a free lead-flow audit',
     faqs: [
       {

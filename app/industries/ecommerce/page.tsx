@@ -100,8 +100,8 @@ export default function EcommercePage() {
         icon: Search,
         title: 'Tracking & SEO',
         desc: 'Meta pixel, Conversions API and GA4 set up properly, plus product and collection pages that can rank on Google.',
-        href: '/services',
-        linkLabel: 'All services',
+        href: '/services/seo',
+        linkLabel: 'SEO & Local SEO',
       },
       {
         icon: MessageCircle,
@@ -111,6 +111,16 @@ export default function EcommercePage() {
         linkLabel: 'WhatsApp & AI Automation',
       },
     ],
+    moreServices: {
+      lead: 'Also for online stores:',
+      links: [
+        { href: '/services/social-media-marketing', label: 'social media marketing and Reels' },
+        { href: '/services/shopify-development', label: 'Shopify development' },
+        { href: '/services/conversion-rate-optimization', label: 'conversion optimisation' },
+        { href: '/services/email-whatsapp-marketing', label: 'email and WhatsApp marketing' },
+        { href: '/services/amazon-marketing', label: 'Amazon marketing' },
+      ],
+    },
     checks: {
       label: 'The free store audit',
       heading: 'What we look at first in an online store',

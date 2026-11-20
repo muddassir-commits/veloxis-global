@@ -81,8 +81,8 @@ const data: NichePageData = {
       icon: Star,
       title: 'Google Business Profile & local SEO',
       desc: 'Profile set up or cleaned up, categories, photos and posts, service and area pages, and a simple way to ask happy customers for reviews.',
-      href: '/services',
-      linkLabel: 'All services',
+      href: '/services/seo',
+      linkLabel: 'SEO & Local SEO',
     },
     {
       icon: Globe,
@@ -106,6 +106,13 @@ const data: NichePageData = {
       linkLabel: 'WhatsApp & AI Automation',
     },
   ],
+  moreServices: {
+    lead: 'Also for clinics and local businesses:',
+    links: [
+      { href: '/services/social-media-marketing', label: 'social media marketing for your page and Reels' },
+      { href: '/services', label: 'all our services' },
+    ],
+  },
   steps: [
     { title: 'Free website audit', desc: 'Send your website or Google profile. We check speed, mobile layout, search visibility and how easy it is to contact you.' },
     { title: 'A fixed quote', desc: 'You get a written list of what we would build or fix first and one fixed price. No long contract.' },

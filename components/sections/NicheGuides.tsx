@@ -10,6 +10,7 @@ import { ArrowRight } from 'lucide-react';
 import { getPostsForIndustry } from '../../lib/blog';
 import { getIndustry, type IndustryKey } from '../../data/industries';
 import { SectionLabel } from '../ui/SectionLabel';
+import { BLOG_NICHES } from '../../data/blog-niches';
 
 export const NicheGuides: React.FC<{ industry: IndustryKey; title: string; className?: string }> = ({ industry, title, className = 'bg-slate-50' }) => {
   const posts = getPostsForIndustry(industry, getIndustry(industry).slugKeywords, 3);
@@ -23,8 +24,8 @@ export const NicheGuides: React.FC<{ industry: IndustryKey; title: string; class
             <SectionLabel>GUIDES</SectionLabel>
             <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">{title}</h2>
           </div>
-          <Link href="/blog" className="group inline-flex items-center gap-1.5 font-bold text-sm text-royal-blue self-start shrink-0">
-            All articles <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" aria-hidden="true" />
+          <Link href={`/blog/industry/${industry}`} className="group inline-flex items-center gap-1.5 font-bold text-sm text-royal-blue self-start shrink-0">
+            All {BLOG_NICHES[industry].name} guides <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" aria-hidden="true" />
           </Link>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 stagger-reveal">
