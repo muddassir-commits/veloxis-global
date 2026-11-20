@@ -33,7 +33,7 @@ export const BLOG_NICHES: Record<PostIndustry, BlogNicheInfo> = {
   },
   'local-business': {
     key: 'local-business',
-    name: 'Local Business',
+    name: 'Local Business & Clinics',
     href: '/industries/local-business',
     inlineCta: { title: 'Own a clinic or local business? See how we bring in more calls and bookings.', link: 'See local business marketing' },
     endCta: {
@@ -59,7 +59,7 @@ export const BLOG_NICHES: Record<PostIndustry, BlogNicheInfo> = {
   },
   general: {
     key: 'general',
-    name: 'Marketing',
+    name: 'AI & Marketing',
     href: '/industries',
     inlineCta: { title: 'Not sure where to start? See the businesses we run performance marketing for.', link: 'See who we work with' },
     endCta: {
@@ -68,14 +68,14 @@ export const BLOG_NICHES: Record<PostIndustry, BlogNicheInfo> = {
       link: 'See the industries we work with',
     },
     barText: 'See the industries we run performance marketing for',
-    moreTitle: 'Related guides',
+    moreTitle: 'More AI and marketing guides',
   },
 };
 
 export const BLOG_TABS: { key: PostIndustry | 'all'; label: string; href: string }[] = [
   { key: 'all', label: 'All', href: '/blog' },
   { key: 'ecommerce', label: 'E-commerce', href: '/blog/industry/ecommerce' },
-  { key: 'local-business', label: 'Local Business', href: '/blog/industry/local-business' },
+  { key: 'local-business', label: 'Local & Clinics', href: '/blog/industry/local-business' },
   { key: 'real-estate', label: 'Real Estate', href: '/blog/industry/real-estate' },
-  { key: 'general', label: 'Marketing', href: '/blog/industry/general' },
+  { key: 'general', label: 'AI & Marketing', href: '/blog/industry/general' },
 ];

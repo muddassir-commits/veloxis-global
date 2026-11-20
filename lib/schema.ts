@@ -128,6 +128,7 @@ export const getArticleSchema = ({
   datePublished,
   dateModified,
   about,
+  section,
 }: {
   title: string;
   description: string;
@@ -136,6 +137,8 @@ export const getArticleSchema = ({
   datePublished: string;
   dateModified?: string;
   about?: { name: string; sameAs: string }[];
+  /** Topic area for answer engines, e.g. "E-commerce & D2C" */
+  section?: string;
 }) => ({
   '@context': 'https://schema.org',
   '@type': 'BlogPosting',
@@ -154,6 +157,7 @@ export const getArticleSchema = ({
   datePublished,
   dateModified: dateModified || datePublished,
   inLanguage: 'en-IN',
+  ...(section ? { articleSection: section } : {}),
   author: { '@type': 'Organization', '@id': ORG_ID, name: siteData.name, url: `${BASE}/about` },
   publisher: { '@id': ORG_ID },
   ...(about?.length ? { about: about.map((a) => ({ '@type': 'Thing', name: a.name, sameAs: a.sameAs })) } : {}),

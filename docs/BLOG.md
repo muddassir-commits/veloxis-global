@@ -4,7 +4,7 @@ Every post is a folder in `content/blog/<slug>/` (the slug is the URL: `/blog/<s
 
 | File | What it holds |
 |---|---|
-| `post.json` | title, SEO title, excerpt, **date** (`YYYY-MM-DD`), optional `updated`, category, `industry` (ecommerce, local-business, real-estate or general; missing = general), related service, cover image, inline images, 7–9 FAQs |
+| `post.json` | title, SEO title, excerpt, **date** (`YYYY-MM-DD`), optional `updated`, category, `industry` (ecommerce, local-business, real-estate or general = AI and cross-industry marketing; missing = general), related service, cover image, inline images, 7–9 FAQs |
 | `content.html` | the article body; every `<h2 id="...">` becomes a table-of-contents entry |
 
 Categories: `Guides`, `Landing Pages`, `Paid Ads`, `AI Automation`, `Growth Tips`.
@@ -51,7 +51,7 @@ and Article/FAQ schema all read from `content/blog` automatically.
 ## Automatic writing and publishing (since 5 Nov 2026; 7 AM + auto-merge since 8 Nov)
 
 - **Publishing** runs in GitHub's cloud: `.github/workflows/daily-rebuild.yml` ("Publish scheduled posts", **07:01 IST**, backup 08:30 IST) runs `scripts/blog/publish-due.mjs`, adds posts dated today to `content/blog/published.txt` and commits, so Vercel deploys them at about 7:00 AM IST. It opens a GitHub issue "Blog queue running low" when fewer than 3 posts are scheduled ahead. Optional secret `VERCEL_DEPLOY_HOOK_URL` also triggers a deploy.
-- **Writing:** a scheduled Claude cloud agent follows `scripts/blog/WRITER.md`: next topic from `content/blog-queue.json` (three niches, roughly 40% e-commerce, 35% local, 25% real estate), research of what ranks, one post, checks, a "Blog: <title>" PR from a `blog/<slug>` branch. Posts are dated ahead, so merged PRs publish one per day.
+- **Writing:** a scheduled Claude cloud agent follows `scripts/blog/WRITER.md`: next topic from `content/blog-queue.json` (e-commerce first: two e-commerce topics, then one AI, local or real estate topic; practical how-to guides, tutorials and checklists only; title rules in WRITER.md step 4), research of what ranks, one post a day, checks, a "Blog: <title>" PR from a `blog/<slug>` branch. Posts are dated ahead, so merged PRs publish one per day.
 - **Auto-merge:** `.github/workflows/auto-merge-blog.yml` merges a Blog PR by itself (squash) when its title starts with "Blog:", its branch with `blog/`, it only touches blog files (`content/blog/`, the queue, blog images, `scripts/images/pixabay-used/`, `data/whatsapp-messages.ts`) and `blog:check`, `tsc` and `lint` pass. It runs on every PR update and in a 05:30 IST sweep. Anything else stays open with a comment for the owner. A merged post still waits for its date.
 - **Refreshing:** a weekly agent follows `scripts/blog/REFRESH.md` using `node scripts/seo/gsc-refresh.mjs` (Search Console: high impressions, low CTR, position 8–20).
 - Helpers: `node scripts/blog/queue-status.mjs` (what's scheduled, next free date), `node scripts/images/fetch-pixabay.mjs` (unique photos), and `npm run blog:check` now fails if a live post links to a post that isn't live yet.

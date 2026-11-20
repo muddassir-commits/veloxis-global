@@ -13,7 +13,9 @@ ours, never push to main, never merge).
    What do AI answers (ChatGPT/Perplexity style) say and cite for the question?
 4. Improve, in this order, only what helps:
    - `seoTitle` (≤ 60 chars) and `excerpt` (120–155 chars): lead with the words people actually search (from
-     the query list), promise the answer. This is the biggest lever for click rate.
+     the query list), promise the answer. This is the biggest lever for click rate. Follow the title and
+     excerpt rules in `scripts/blog/WRITER.md` step 4. Every post got new titles on 20 Nov 2026 (PR "Blog
+     titles, categories and writer rules"): don't change a title again until it has 3-4 weeks of data.
    - First paragraph: a 40–60 word direct answer to the main query, starting with `<p><strong>`.
    - Add a missing section or H2 for a real query the post doesn't answer; make H2s match the question.
    - FAQs: 7–9, replace weak ones with real queries from step 2; answers 40–60 words.

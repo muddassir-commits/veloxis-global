@@ -6,7 +6,13 @@
     "No invented numbers, results, clients or testimonials. Every figure needs a cited source in the post.",
     "Never name the founder. Author is the Veloxis Global team.",
     "No prices for our own services anywhere.",
-    "Meta ads series (added 16 Nov 2026): 9 Meta ads topics are spread through the queue, about one in every five posts, so Meta posts never run back to back. They count as e-commerce. Each ends with the BrightROAS free Meta ads health check (https://brightroas.veloxisglobal.com/check), stating only true facts about it."
+    "Meta ads series (added 16 Nov 2026): 9 Meta ads topics are spread through the queue, about one in every five posts, so Meta posts never run back to back. They count as e-commerce. Each ends with the BrightROAS free Meta ads health check (https://brightroas.veloxisglobal.com/check), stating only true facts about it.",
+    "Format (owner, 20 Nov 2026): every post is a practical how-to guide, tutorial, step-by-step setup, checklist or fix-it guide for a problem people search for right now. The reader must be able to do the task after reading: numbered steps, exact settings or menu paths, copy-ready templates or scripts, and a checklist or table. No opinion pieces, news, trend round-ups, listicles without steps, or posts about Veloxis itself.",
+    "Pick in-demand topics: the keyword must show real demand (Google autocomplete, People Also Ask, Search Console queries, or a cited volume). Prefer questions with a clear task: how to set up, how to fix, how to choose, how to calculate, checklist for.",
+    "Title rules (owner, 20 Nov 2026): seoTitle 60 characters or fewer with the main search keyword in the first 3-5 words; state the benefit or the outcome (fix, set up, checklist, template, step by step); a number only when the post really has that many items (e.g. 9 fixes, 12 ideas); the year only when the post covers rules or settings checked that year; plain words, no hype (no ultimate, secret, hacks, guaranteed). The H1 title may be up to 70 characters.",
+    "Description rules: the excerpt is 120-155 characters, starts with or contains the main keyword early, says exactly what the reader will be able to do or learn, and names 3-5 specific things the post covers. No numbers that are not in the post.",
+    "One post per day: the writer writes ONE post per run and dates it on the next free day. Never write or schedule several posts at once and never give two posts the same date.",
+    "Status values: todo (write next), done (folder exists; set date), parked (skip until the writeFrom date, then set it back to todo)."
   ],
   "topics": [
     {
@@ -323,8 +329,9 @@
         "/free-audit",
         "https://brightroas.veloxisglobal.com/check"
       ],
-      "status": "todo",
-      "note": "Meta ads series (16 Nov 2026): end with the BrightROAS free Meta ads health check CTA, true facts only (copy the wording used in content/blog/meta-ads-not-spending)."
+      "status": "done",
+      "note": "Meta ads series (16 Nov 2026): end with the BrightROAS free Meta ads health check CTA, true facts only (copy the wording used in content/blog/meta-ads-not-spending).",
+      "date": "2026-11-22"
     },
     {
       "slug": "good-roas-for-ecommerce",
@@ -341,7 +348,8 @@
         "/industries/ecommerce",
         "/tools/website-audit"
       ],
-      "status": "todo"
+      "status": "done",
+      "date": "2026-11-23"
     },
     {
       "slug": "abandoned-cart-email-sequence",
@@ -358,7 +366,8 @@
         "/industries/ecommerce",
         "/tools/website-audit"
       ],
-      "status": "todo"
+      "status": "done",
+      "date": "2026-11-24"
     },
     {
       "slug": "meta-ads-for-ecommerce-india",
@@ -512,7 +521,9 @@
         "/industries/ecommerce",
         "/tools/website-audit"
       ],
-      "status": "todo"
+      "status": "parked",
+      "writeFrom": "2027-08-15",
+      "parkedReason": "Seasonal: Diwali 2026 has passed. Write it from mid-August 2027 so it is live and indexed about 6 weeks before Diwali 2027."
     },
     {
       "slug": "meta-ads-audit-checklist",
@@ -1437,7 +1448,9 @@
         "/blog/pre-launch-real-estate-marketing",
         "/blog/real-estate-marketing-plan"
       ],
-      "status": "todo"
+      "status": "parked",
+      "writeFrom": "2027-02-15",
+      "parkedReason": "Seasonal: the 2026 Navratri and Diwali season has passed. Write it from mid-February 2027, ahead of Akshaya Tritiya and the next festive season."
     },
     {
       "slug": "real-estate-lead-response-time",

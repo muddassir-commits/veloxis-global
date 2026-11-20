@@ -71,6 +71,7 @@ export default async function SingleBlogPostPage({ params }: Params) {
           datePublished: post.isoDate,
           dateModified: post.modifiedIso,
           about: post.about,
+          section: niche.name,
         })}
       />
 
