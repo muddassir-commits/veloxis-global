@@ -460,6 +460,10 @@ export const BLOG_MESSAGES: Record<string, { ref: string; message: string }> = {
     ref: 'blog-ai-voice-calls',
     message: 'I read your guide on AI voice agents. I miss calls from customers and want to know if an AI calling assistant fits my business. Can you help?',
   },
+  'ai-automation-small-business': {
+    ref: 'blog-ai-first-tasks',
+    message: 'I read your guide on AI automation for small business. I want to automate replies, reminders and review requests without losing the personal touch. Can you help me pick where to start?',
+  },
   'meta-ads-not-spending': {
     ref: 'blog-meta-not-spending',
     message: 'I read your guide on Meta ads not spending. My ads show active but are hardly spending. Can you help me find what is blocking them?',
