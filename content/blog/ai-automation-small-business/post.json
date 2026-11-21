@@ -1,0 +1,31 @@
+{
+  "title": "AI Automation for Small Business: What to Automate First and How",
+  "seoTitle": "AI Automation for Small Business: What to Automate First",
+  "excerpt": "AI automation for small business: score jobs by effort and risk, then set up missed-call replies, review requests, payment reminders and cart recovery.",
+  "date": "2026-11-25",
+  "category": "AI Automation",
+  "service": "ai-automation",
+  "industry": "general",
+  "image": "/images/people/blog/ai-automation-small-business-cover.jpg",
+  "imageAlt": "Black and white close-up of large and small metal gears meshing inside an old machine",
+  "inlineImages": [
+    { "src": "/images/people/blog/ai-automation-small-business-1.jpg", "alt": "Hands typing on a laptop at a blue round table beside an open handwritten notebook, a white coffee cup and a vase of cream roses", "beforeHeading": "missed-call-and-enquiry-reply", "caption": "Write the reply and the steps down before you build anything." },
+    { "src": "/images/people/blog/ai-automation-small-business-2.jpg", "alt": "A smartphone and an open blank notebook with a silver pen on a white desk, with three small potted succulents behind", "beforeHeading": "what-not-to-automate" }
+  ],
+  "about": [
+    { "name": "Business process automation", "sameAs": "https://en.wikipedia.org/wiki/Business_process_automation" },
+    { "name": "Small business", "sameAs": "https://en.wikipedia.org/wiki/Small_business" },
+    { "name": "Digital Personal Data Protection Act, 2023", "sameAs": "https://en.wikipedia.org/wiki/Digital_Personal_Data_Protection_Act,_2023" }
+  ],
+  "faqs": [
+    { "question": "What should a small business automate first with AI?", "answer": "Start with a job that repeats daily or weekly, follows the same steps and is cheap to get wrong: a reply to missed calls and after-hours enquiries, review requests after a sale, invoice and payment reminders, or abandoned cart messages for online stores. Keep refunds, complaints and medical or legal questions with a person." },
+    { "question": "How do I decide which tasks to automate?", "answer": "List the tasks your team repeats each week and score each from 1 to 3 for setup effort and for risk if it goes wrong. Automate low-risk jobs first, and among those the low-effort ones. Skip jobs that happen rarely, have unclear steps or need judgment that a person cannot quickly check." },
+    { "question": "Is AI automation the same as normal automation?", "answer": "Not quite. Triggers and sends, such as a missed call starting a message or an overdue invoice starting a reminder, are plain rules that tools have handled for years. AI adds value in the language parts: drafting replies, summarising long messages, tagging enquiries by intent and suggesting review replies that a person approves." },
+    { "question": "Can I automate Google review requests?", "answer": "Yes, as long as you send the same request to every customer and offer nothing in return. Google's policy bans selectively soliciting positive reviews and discouraging negative ones, and its help page calls incentives for reviews strictly prohibited. Trigger the request after delivery, a completed visit or a closed job." },
+    { "question": "Do I need consent to send automated WhatsApp messages?", "answer": "Yes. Meta requires businesses to get opt-in before messaging people on the WhatsApp Business Platform, and the opt-in must clearly say the person will get messages and name your business. After a customer's last message, free-form replies are allowed for 24 hours; after that only approved templates can be sent." },
+    { "question": "What should a small business never automate with AI?", "answer": "Do not let AI decide refunds, discounts or pricing exceptions, answer medical, legal, loan or property-title questions, handle angry customers, or make hiring decisions. Use AI to summarise these cases for a person. Also never message people who have not agreed to hear from you, and review all AI-written messages before they go out." },
+    { "question": "How long does it take to set up a first AI automation?", "answer": "Plan for about a month when you include testing and review: one week to choose the job and write the steps, one week to build and test it on your own phone and email, one week of close checking with real customers, and one week to compare against your notes and decide what to automate next." },
+    { "question": "Is it safe to paste customer data into AI tools?", "answer": "Be careful. The US Small Business Administration advises against feeding sensitive or proprietary data into AI tools, and India's DPDP Act requires you to protect personal data and use it only for the stated purpose. Avoid pasting customer lists, health details, ID numbers or bank details into free chat tools." },
+    { "question": "Which AI automations work best for online stores?", "answer": "Abandoned checkout emails, order and delivery updates, review requests after delivery, and repeat-order reminders. On Shopify, abandoned checkout emails are switched on under Apps, Messaging, Automations. AI helps write subject lines and copy variants, but it should never invent stock levels or false urgency, which India's dark pattern guidelines prohibit." }
+  ]
+}
