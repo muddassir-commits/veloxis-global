@@ -1,0 +1,173 @@
+<p><strong>To run Meta ads for an e-commerce store, first connect the Meta Pixel and Conversions API so every order reaches Meta once, sync your product catalog, then launch one Sales campaign optimised for purchases, with prospecting and existing-customer ad sets. Judge it on delivered orders, not only on Ads Manager.</strong></p>
+<p>This guide is for founders and in-house marketers of Indian online stores and D2C brands, on Shopify or another platform, who want to set up Facebook and Instagram ads that turn spend into real orders. It walks through the setup in the order it should be done: the account checklist, tracking, the catalog, the campaign structure, a click-by-click first campaign, ad creative, budget and the learning phase, cash on delivery, and a weekly routine for reading results and scaling.</p>
+<p>Most guides that rank for this keyword were written for US stores and many still describe Advantage+ shopping campaigns as they worked before Meta replaced them. Few mention what changes in India: cash on delivery, parcels that come back, and order values that include GST. We cover those, with each step tied to Meta's or Shopify's own documentation.</p>
+<p><em>Ads Manager menus change often and can differ between accounts. The Meta and Shopify guidance below was checked on 22 November 2026.</em></p>
+
+<h2 id="setup-checklist">What do you need before running Meta ads for an online store?</h2>
+<p><strong>You need a business portfolio, an ad account in rupees and India's time zone, a payment method, your Facebook Page and Instagram account connected, a working Pixel with the Conversions API, and a product catalog.</strong> Skipping any of these is the most common reason a new store's first campaign struggles.</p>
+<p>Use this table as your setup checklist. Tick each row before you spend anything.</p>
+<table>
+  <thead>
+    <tr><th>Item</th><th>Where to set it up</th><th>What "done" looks like</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Business portfolio</td><td>Meta Business Suite, Settings</td><td>Your company owns the Page, Instagram account, ad account, Pixel and catalog, not a personal profile</td></tr>
+    <tr><td>Ad account</td><td>Business settings, Accounts, Ad accounts</td><td>Currency INR and time zone Asia/Kolkata, so ad spend and order dates line up with your store reports</td></tr>
+    <tr><td>Billing details</td><td>Billing and payments, Payment settings</td><td>Business name, address and GSTIN (if registered) match your GST records; payment method added</td></tr>
+    <tr><td>Page and Instagram</td><td>Business settings, Accounts</td><td>Both assigned to the portfolio so ads can run on both</td></tr>
+    <tr><td>Pixel and Conversions API</td><td>Events Manager, or your store platform's Meta app</td><td>PageView, ViewContent, AddToCart, InitiateCheckout and Purchase all firing, each order counted once</td></tr>
+    <tr><td>Product catalog</td><td>Commerce Manager, or synced from your store</td><td>Every product in stock has a title, price, image and working link</td></tr>
+    <tr><td>People who can act</td><td>Business settings, Users</td><td>At least two admins from your company, and the ad account owned by your business, not by an agency</td></tr>
+  </tbody>
+</table>
+<p>The last row matters more than it looks. If an agency or freelancer creates the ad account in their own portfolio, your data and history go with them when they leave. Ask for partner access to your assets instead. That is how we work too: the store keeps ownership of every account.</p>
+
+<h2 id="pixel-and-conversions-api">How do you set up the Meta Pixel and Conversions API on Shopify?</h2>
+<p><strong>On Shopify, install the Facebook &amp; Instagram app, connect your business portfolio, ad account and Pixel, then set customer data sharing to Enhanced or Maximum so purchases are sent by the Conversions API as well as the browser Pixel.</strong> Meta uses these events to decide who sees your ads, so they come before any campaign.</p>
+<p>The Pixel runs in the shopper's browser, so ad blockers and browser privacy settings can stop it. The <a href="https://developers.facebook.com/docs/marketing-api/conversions-api" target="_blank" rel="noopener">Conversions API</a> sends the same events from your server or store platform to Meta. Using both gives Meta a fuller picture of what happens after the click.</p>
+<p>Steps for Shopify, following the <a href="https://help.shopify.com/en/manual/online-sales-channels/facebook-instagram-by-meta" target="_blank" rel="noopener">Shopify Help Center</a>:</p>
+<ol>
+  <li>Install the Facebook &amp; Instagram sales channel from the Shopify App Store and log in with the Facebook account that is an admin of your business portfolio.</li>
+  <li>Connect your business portfolio, Facebook Page, Instagram account, ad account and Pixel. Pick the existing Pixel if you already have one, so you keep its history.</li>
+  <li>Go to <strong>Sales channels &gt; Facebook &amp; Instagram &gt; Settings &gt; Data sharing settings</strong>, check that customer data sharing is on, and choose a level. Shopify describes Standard as Pixel only, while <a href="https://help.shopify.com/en/manual/promoting-marketing/analyze-marketing/meta-data-sharing" target="_blank" rel="noopener">Enhanced and Maximum</a> add the Conversions API, which ad blockers can't stop.</li>
+  <li>Remove any old Pixel code pasted into your theme or added by another app. Two sources sending the same Purchase without a shared ID is a classic cause of double-counted sales.</li>
+  <li>Place a real test order (a low-priced product you then cancel and refund), and check in Events Manager that the Purchase event arrives from both the browser and the server.</li>
+</ol>
+<p>Meta treats a browser event and a server event as the same order when both carry the same event name and event ID and arrive within 48 hours of the first one, according to its guide to <a href="https://developers.facebook.com/docs/marketing-api/conversions-api/deduplicate-pixel-and-server-events" target="_blank" rel="noopener">deduplicating Pixel and server events</a>. Shopify's app handles the event ID for you. If you built tracking by hand on WooCommerce or a custom store, make sure your developer sends the same ID from both sides.</p>
+<p>Two settings are worth checking while you are in there. First, the purchase value: if it includes GST and shipping, Ads Manager's revenue and ROAS will look higher than what you keep. Second, the currency: send INR from an INR store. Our guide on <a href="/blog/meta-ads-shopify-sales-mismatch">why Meta and Shopify sales don't match</a> goes deeper into both.</p>
+
+<h2 id="product-catalog">How do you connect your product catalog to Meta?</h2>
+<p><strong>Let your store platform sync the catalog to Meta automatically, then check in Commerce Manager that products, prices, stock and images match your store.</strong> A <a href="https://www.facebook.com/business/help/890714097648074" target="_blank" rel="noopener">catalog</a> is what lets Meta show each person the products they viewed or are likely to want.</p>
+<p>The Shopify app syncs products for you. On other platforms, use the platform's official Meta integration or a scheduled data feed (a CSV or XML file at a URL that Meta fetches on a schedule). Then run through this catalog check:</p>
+<ul>
+  <li><strong>Titles</strong> say what the product is ("Cotton kurta set, mustard"), not internal codes.</li>
+  <li><strong>Images</strong> are clean, well lit and show the product clearly; add lifestyle images as extra images.</li>
+  <li><strong>Price and sale price</strong> match the product page exactly. Mismatches lead to rejected items and confused shoppers.</li>
+  <li><strong>Availability</strong> updates when stock runs out, so you don't pay to advertise sold-out items.</li>
+  <li><strong>Product IDs</strong> in the catalog match the content IDs your Pixel sends on ViewContent and AddToCart. If they don't, Meta can't link a view to a product and catalog ads lose their main strength.</li>
+  <li><strong>Product sets</strong> group items you want to push, such as best sellers, a new collection or high-margin products.</li>
+</ul>
+
+<h2 id="campaign-structure">Which campaign structure should a new e-commerce store use?</h2>
+<p><strong>Start with one Sales campaign optimised for purchases, using campaign budget, broad audience targeting and automatic placements, and split it into a new-customer ad set and an existing-customer ad set.</strong> One campaign concentrates your data, which a new store with few orders needs.</p>
+<p>Meta has replaced Advantage+ shopping campaigns with <a href="https://developers.facebook.com/docs/marketing-api/advantage-campaigns" target="_blank" rel="noopener">Advantage+ sales campaigns</a>. Meta's developer documentation says a sales campaign counts as Advantage+ when three settings are on: the budget is set at campaign level, at least one ad set uses Advantage+ audience, and no placements are excluded. Turn any of them off and you have a manual campaign with more control.</p>
+<p>The same documentation says the old "existing customer budget cap" is not available in new Advantage+ campaigns. Meta's suggested replacement is two ad sets with the same creative: one targeting your existing customers through a custom audience, and one excluding that audience. That gives you a clean read on how many orders come from genuinely new buyers.</p>
+<table>
+  <thead>
+    <tr><th>Option</th><th>How it works</th><th>Good for</th><th>Watch out for</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Advantage+ sales campaign</td><td>Campaign budget, Advantage+ audience, all placements; Meta finds buyers</td><td>Stores with reliable purchase tracking and a few strong creatives</td><td>Can spend heavily on past buyers and visitors who might have bought anyway</td></tr>
+    <tr><td>Manual sales campaign, two ad sets</td><td>New customers (existing buyers excluded) and existing customers, same creative</td><td>Stores that want to see new-customer results separately</td><td>Needs customer lists kept up to date</td></tr>
+    <tr><td>Catalog (product) ads</td><td>Sales campaign using your catalog as the ad source</td><td>Stores with many products; showing viewed or similar items</td><td>Only as good as your catalog and Pixel product IDs</td></tr>
+    <tr><td>Many small ad sets by interest</td><td>One ad set per interest or age group</td><td>Rarely right for a new store</td><td>Splits data so ad sets struggle to leave the learning phase</td></tr>
+  </tbody>
+</table>
+<p>To build the existing-customer audience, upload a customer list or create a custom audience of purchasers from your Pixel. Keep the list updated, for example by syncing customers from your store each month.</p>
+
+<h2 id="first-campaign-steps">How do you create your first Meta sales campaign, step by step?</h2>
+<p><strong>In Ads Manager, click Create, choose the Sales objective, pick your Pixel and the Purchase event, set a campaign budget, keep targeting broad within India, leave placements automatic, then add three to five ads.</strong> Here is the full sequence.</p>
+<ol>
+  <li><strong>Create the campaign.</strong> In Ads Manager, click <strong>+ Create</strong> and choose <strong>Sales</strong>. If Ads Manager asks whether you want an Advantage+ or manual setup, pick Advantage+ for a single broad campaign or manual if you want the two-ad-set split described above.</li>
+  <li><strong>Name it clearly.</strong> For example "Sales | Purchase | All products | Nov 2026". Clear names make reports readable later.</li>
+  <li><strong>Set the budget at campaign level</strong> (Advantage+ campaign budget) as a daily budget you can keep running for at least a week without changes.</li>
+  <li><strong>Choose the conversion location and event.</strong> Website, your Pixel, and <strong>Purchase</strong>. Don't optimise for Add to cart unless you truly can't get purchases recorded.</li>
+  <li><strong>Set the audience.</strong> Location India (or the states and cities you actually deliver to), Advantage+ audience on. Add an audience suggestion if you like, such as your past buyers, but don't stack narrow interests.</li>
+  <li><strong>Exclude existing customers</strong> in the new-customer ad set if you are using the two-ad-set setup, and target them in the second ad set.</li>
+  <li><strong>Leave placements on Advantage+ placements</strong> so ads can run across Facebook, Instagram feeds, Stories and Reels.</li>
+  <li><strong>Add three to five ads</strong> with different hooks and formats (see the next section). Use your website URL with UTM parameters so Google Analytics also sees the traffic.</li>
+  <li><strong>Check the summary</strong>: correct Pixel, Purchase event, INR budget, right Page and Instagram account, product links that open on mobile.</li>
+  <li><strong>Publish and wait.</strong> Ads go into review first. If nothing spends after review, our guide on <a href="/blog/meta-ads-not-spending">Meta ads not spending</a> lists the causes in the order to check them.</li>
+</ol>
+
+<h2 id="ecommerce-ad-creative">What kind of ads work best for e-commerce on Meta?</h2>
+<p><strong>Ads that show the product being used, explain one clear reason to buy in the first seconds, and match the landing page usually beat polished brand videos.</strong> With broad targeting, the creative does much of the targeting work: who stops to watch tells Meta who to show the ad to next.</p>
+<table>
+  <thead>
+    <tr><th>Format</th><th>Best use</th><th>Tips</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Short vertical video</td><td>Showing the product in use, unboxing, before-and-after of a task</td><td>Hook in the opening frames, captions on, product visible early</td></tr>
+    <tr><td>Creator or customer video (UGC)</td><td>Trust and real use</td><td>Get written permission to use it in ads and follow ASCI disclosure rules</td></tr>
+    <tr><td>Carousel</td><td>Several colours, sizes or a collection</td><td>One product per card, each linking to its own page</td></tr>
+    <tr><td>Catalog ad</td><td>Showing viewed or similar products automatically</td><td>Depends on clean catalog images and titles</td></tr>
+    <tr><td>Static image</td><td>A clear offer, a single hero product, festive sales</td><td>Little text, one message, product large</td></tr>
+  </tbody>
+</table>
+<p>Two guardrails keep ads approved. Meta's <a href="https://transparency.meta.com/policies/ad-standards/" target="_blank" rel="noopener">Advertising Standards</a> restrict health and wellness claims, weight-loss and cosmetic products, and ads that assert or imply personal attributes ("Struggling with acne?"). Rewrite those as product benefits instead. Second, if you pay creators, Indian disclosure rules apply; our guide to <a href="/blog/ugc-ads-for-d2c">UGC ads for D2C brands</a> covers permissions and disclosures.</p>
+<p>For ideas, search your category in the <a href="https://www.facebook.com/ads/library/" target="_blank" rel="noopener">Meta Ad Library</a> to see which ads competitors keep running. Ads that stay live for months are often the ones paying for themselves. Learn the angle, then make your own version.</p>
+
+<h2 id="budget-and-learning">How much budget do Meta ads need, and how long should you wait?</h2>
+<p><strong>Budget enough for the ad set to get close to Meta's guideline of about 50 optimisation events in the week after launch, and wait at least that week before judging or editing.</strong> Meta explains this in its help page on the <a href="https://www.facebook.com/business/help/112167992830700" target="_blank" rel="noopener">learning phase</a>.</p>
+<p>A simple way to size a starting budget, without guessing benchmarks:</p>
+<ol>
+  <li>Work out the most you can pay for one order: your margin per order in rupees, after product, packaging, shipping, payment fees, discounts and an allowance for returns. Use your own numbers, not industry averages.</li>
+  <li>Multiply it by the number of purchases you hope to get in a week, then divide by seven for a daily budget.</li>
+  <li>If the result is more than you can spend, keep one campaign with fewer ad sets rather than spreading a small budget thin, and accept that it may show "Learning limited" for a while.</li>
+</ol>
+<p><em>Example only, not a benchmark:</em> if you can afford 600 rupees per purchase and want 20 purchases a week, that is 12,000 rupees a week, or roughly 1,700 rupees a day.</p>
+<p>During that first week, avoid significant edits such as changing the budget sharply, the targeting or the optimisation event, because they restart learning. If ad sets stay stuck, our guide on <a href="/blog/meta-ads-learning-limited">Learning limited</a> explains each fix.</p>
+
+<h2 id="cod-and-rto-india">How do cash on delivery and RTO affect Meta ads in India?</h2>
+<p><strong>Meta counts a purchase when the order is placed, so cash-on-delivery orders that are later refused still look like sales in Ads Manager. Judge campaigns on delivered, paid orders, and reduce refusals before you scale.</strong> No Meta setting fixes this for you.</p>
+<p>When a COD parcel is refused and returns to origin (RTO), you pay shipping both ways, but your Pixel already told Meta the sale happened. Meta may then look for more people like those buyers. Practical steps:</p>
+<ul>
+  <li><strong>Confirm COD orders</strong> on WhatsApp or by a call before dispatch, and cancel the ones that don't confirm.</li>
+  <li><strong>Nudge prepaid checkout</strong> with a clear reason, such as faster dispatch, and show the payment options early.</li>
+  <li><strong>Track RTO by campaign.</strong> Tag orders with UTM source and campaign, then compare delivered orders, not placed orders, campaign by campaign.</li>
+  <li><strong>Look at pin codes.</strong> If refusals cluster in certain areas, you can exclude locations you can't serve well.</li>
+  <li><strong>Send value without GST</strong> if your setup allows, or adjust your target for it, so ROAS reflects money you keep.</li>
+</ul>
+<p>A fast, clear product page also cuts doubtful orders. Our <a href="/blog/shopify-store-conversion-checklist">Shopify store conversion checklist</a> covers trust signals, delivery dates and checkout, and you can run your store through our free <a href="/tools/website-audit">website audit tool</a> for speed and basic SEO.</p>
+
+<h2 id="measure-and-scale">How do you read results and scale Meta ads for e-commerce?</h2>
+<p><strong>Each week, compare cost per purchase and ROAS in Ads Manager with orders, delivered revenue and total ad spend from your store, then scale what holds up in both views by raising budgets gradually.</strong> Ads Manager shows what Meta attributes to its ads; your store shows what the business actually earned.</p>
+<table>
+  <thead>
+    <tr><th>Metric</th><th>Where to find it</th><th>What it tells you</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Cost per purchase</td><td>Ads Manager</td><td>What each attributed order costs; compare with what you can afford</td></tr>
+    <tr><td>Purchase ROAS</td><td>Ads Manager</td><td>Attributed revenue per rupee spent; best for comparing campaigns and ads</td></tr>
+    <tr><td>Click-through rate and hook rate</td><td>Ads Manager (add columns)</td><td>Whether the creative stops people; low values point to the ad, not the audience</td></tr>
+    <tr><td>Add to cart vs purchases</td><td>Ads Manager and store reports</td><td>Many carts but few purchases points to price, shipping or checkout problems</td></tr>
+    <tr><td>Total revenue divided by total ad spend</td><td>Your store and ad accounts</td><td>Whether all paid marketing together pays off, without attribution arguments</td></tr>
+    <tr><td>RTO and cancellation rate by campaign</td><td>Store and courier reports</td><td>Which campaigns bring orders that don't turn into cash</td></tr>
+  </tbody>
+</table>
+<p>A weekly routine that keeps the account healthy:</p>
+<ol>
+  <li>Check Events Manager for any drop in Purchase events or a warning about event quality.</li>
+  <li>Pause ads that spent well beyond your affordable cost per purchase without a sale, once the ad set is out of learning.</li>
+  <li>Add two or three new ads to the winning ad set, based on the hooks and products that worked.</li>
+  <li>Raise the budget of a campaign that is profitable in both views in modest steps, then give it a few days before the next change.</li>
+  <li>Refresh the existing-customer audience and exclusion lists.</li>
+  <li>Write down what changed and why, so next week's results can be read in context.</li>
+</ol>
+<p>If you manage ads for several brands, our guide on <a href="/blog/meta-ads-client-reporting">Meta ads client reporting</a> shows how to turn these numbers into a report people trust.</p>
+
+<h2 id="common-mistakes">What are the most common Meta ads mistakes online stores make?</h2>
+<p><strong>The most common mistakes are launching before tracking works, splitting a small budget across many ad sets, editing campaigns daily, and judging results only by Ads Manager ROAS.</strong> Each one is cheap to avoid and expensive to learn the hard way.</p>
+<ul>
+  <li><strong>Tracking last.</strong> Without reliable Purchase events, Meta optimises for the wrong people. Test with a real order first.</li>
+  <li><strong>Optimising for clicks or landing page views</strong> when you want sales. Meta delivers what you ask for.</li>
+  <li><strong>Too many ad sets.</strong> Each one needs its own data to learn; a new store rarely has enough for many.</li>
+  <li><strong>Boosting posts</strong> from Instagram instead of running Sales campaigns in Ads Manager.</li>
+  <li><strong>Ignoring the landing page.</strong> Ads can't fix slow pages, unclear delivery dates or a confusing checkout.</li>
+  <li><strong>Not counting COD refusals,</strong> so a campaign that looks profitable in Ads Manager loses money.</li>
+  <li><strong>Letting someone else own the ad account,</strong> which puts your ad history at risk.</li>
+</ul>
+<p>If you'd like a second pair of eyes before you spend, we run Meta and Google <a href="/services/paid-ads">paid ads</a> for online stores, set up tracking and Shopify through our <a href="/services/shopify-development">Shopify development</a> work, and fix product pages with <a href="/services/conversion-rate-optimization">conversion optimisation</a>. See how we work with <a href="/industries/ecommerce">e-commerce and D2C brands</a>, or ask for a <a href="/free-audit">free audit</a> of your ad account and store.</p>
+
+<h2 id="sources">Sources</h2>
+<ul>
+  <li><a href="https://developers.facebook.com/docs/marketing-api/advantage-campaigns" target="_blank" rel="noopener">Meta for Developers: Advantage+ campaign experience for sales, app and leads</a></li>
+  <li><a href="https://developers.facebook.com/docs/marketing-api/conversions-api" target="_blank" rel="noopener">Meta for Developers: Conversions API</a></li>
+  <li><a href="https://developers.facebook.com/docs/marketing-api/conversions-api/deduplicate-pixel-and-server-events" target="_blank" rel="noopener">Meta for Developers: Handling duplicate Pixel and Conversions API events</a></li>
+  <li><a href="https://www.facebook.com/business/help/112167992830700" target="_blank" rel="noopener">Meta Business Help Center: About the learning phase</a></li>
+  <li><a href="https://www.facebook.com/business/help/890714097648074" target="_blank" rel="noopener">Meta Business Help Center: About catalogs for products and services</a></li>
+  <li><a href="https://transparency.meta.com/policies/ad-standards/" target="_blank" rel="noopener">Meta Transparency Center: Advertising Standards</a></li>
+  <li><a href="https://www.facebook.com/ads/library/" target="_blank" rel="noopener">Meta Ad Library</a></li>
+  <li><a href="https://help.shopify.com/en/manual/online-sales-channels/facebook-instagram-by-meta" target="_blank" rel="noopener">Shopify Help Center: Facebook &amp; Instagram by Meta</a></li>
+  <li><a href="https://help.shopify.com/en/manual/promoting-marketing/analyze-marketing/meta-data-sharing" target="_blank" rel="noopener">Shopify Help Center: Facebook data sharing</a></li>
+</ul>
