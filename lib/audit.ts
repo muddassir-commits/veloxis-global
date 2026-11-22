@@ -386,6 +386,21 @@ export async function runAudit(input: string): Promise<AuditResult> {
     detail: hasLlms ? 'llms.txt found.' : 'No llms.txt. It is optional: Google has said it does not use it, and other AI tools are still experimenting.',
   });
 
+  // ---- Online store pages (Shopify, WooCommerce and similar) ----
+  const isShopify = /cdn\.shopify\.com|Shopify\.theme|myshopify\.com/i.test(html);
+  const isWoo = /woocommerce/i.test(html);
+  const looksLikeStore = isShopify || isWoo || /add[-_ ]to[-_ ]cart/i.test(html);
+  if (looksLikeStore) {
+    const hasProduct = ld.types.has('Product') || ld.types.has('ProductGroup');
+    add({
+      id: 'store-product-schema', category: 'ai', label: 'Product structured data (online store)', weight: 1,
+      status: hasProduct ? 'pass' : 'warn',
+      detail: `${isShopify ? 'Shopify store detected. ' : isWoo ? 'WooCommerce store detected. ' : 'Online store detected. '}${hasProduct ? 'Product schema found on this page.' : 'No Product schema on this page. On a product page this is a gap; on the homepage or a collection page it is normal.'}`,
+      fix: 'On product pages, add Product JSON-LD with name, image, price, currency and availability. Most Shopify themes include it; check that an app or theme edit has not removed it. It helps Google Shopping results and AI shopping answers show the product correctly.',
+      priority: 2,
+    });
+  }
+
   // ---- SEO basics ----
   const indexBlocked = /noindex/.test(robotsMeta + xRobots);
   add({
