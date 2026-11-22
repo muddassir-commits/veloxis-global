@@ -18,6 +18,21 @@ const whatWeCheck = [
   { title: 'Tracking', desc: 'Google Analytics 4, Tag Manager, Meta Pixel and Google Ads tags, so you know which source brings enquiries.' },
   { title: 'Speed and mobile', desc: 'Server response time, page weight, render-blocking scripts, lazy-loaded images and the mobile viewport tag.' },
   { title: 'Trust', desc: 'Privacy policy and links to your real social profiles.' },
+  { title: 'Online store pages', desc: 'On Shopify, WooCommerce and other store pages: whether the platform is detected and whether product pages carry Product structured data for Google Shopping and AI shopping answers.' },
+];
+
+const aiChecks = [
+  { title: 'Can AI crawlers get in?', desc: 'Reads your robots.txt for GPTBot, OAI-SearchBot, ClaudeBot, PerplexityBot and Google-Extended. A blocked crawler cannot read, and so cannot quote, your page.' },
+  { title: 'Is the text there without JavaScript?', desc: 'Many AI crawlers do not run JavaScript. The tool measures how much readable text the raw HTML holds, so you know whether a page built only in the browser looks empty to them.' },
+  { title: 'Does it say who you are?', desc: 'Looks for Organization or LocalBusiness structured data and sameAs links to your profiles, which help AI tools match your brand to one business.' },
+  { title: 'Can it be quoted?', desc: 'Checks for question-style headings, FAQ structured data and snippet limits such as nosnippet, which decide whether Google AI Overviews and answer engines can lift a passage.' },
+];
+
+const storeTips = [
+  { title: 'Audit the page your ads send people to', desc: 'For most stores that is a product or collection page, not the homepage. Run the audit on that exact address first.' },
+  { title: 'Check the Meta Pixel and Google tag on product pages', desc: 'If ad tracking shows as missing on a product page, Meta and Google cannot see add-to-carts or purchases from it, and the ads optimise blind.' },
+  { title: 'Watch page weight on mobile', desc: 'Store themes with many apps get heavy. A large HTML size or many render-blocking scripts usually means slow product pages on mobile data.' },
+  { title: 'Give buyers a quick way to ask', desc: 'A WhatsApp chat link or a clear contact option on product pages helps buyers who have one question before they order.' },
 ];
 
 const howTo = [
@@ -32,6 +47,8 @@ const faqs = [
   { question: 'How do I audit my website online for free?', answer: 'Paste the address of a page into the tool above and press the audit button. In under a minute you get a score and a list of fixes for SEO, speed, mobile, tracking, lead capture and AI search readiness. There is no sign-up and no email needed.' },
   { question: 'What is an SEO audit, and does this tool do one?', answer: 'An SEO audit checks whether search engines can find, read and understand your pages. This tool runs the technical and on-page part for one page: indexing, HTTPS, title, meta description, headings, canonical tag, sitemap, robots.txt, image alt text, mobile viewport and internal links. A full SEO audit also looks at keywords, competitors and links from other websites, which takes a person and more time.' },
   { question: 'Is this an AI website audit tool?', answer: 'It checks how ready your page is for AI search: whether ChatGPT, Perplexity, Gemini and Google’s AI Overviews can read and quote it, including AI crawler access, text available without JavaScript, business schema and question-style headings. The checks are rule-based, so the same page gets the same result each time.' },
+  { question: 'Can I audit my Shopify store for free?', answer: 'Yes. Paste the address of your store homepage, a collection page or a product page. The tool detects Shopify and WooCommerce stores and, on top of the normal checks, looks for Product structured data. Start with the product page your ads send people to.' },
+  { question: 'Is this website audit tool useful for businesses in India?', answer: 'Yes. It checks the things Indian buyers use most, such as a WhatsApp click-to-chat link, mobile page weight and the Meta Pixel and Google tags behind ads, alongside the standard SEO and AI search checks. It works the same for any country.' },
   { question: 'Can I audit any website, including a competitor’s?', answer: 'Yes. Any public web page can be checked, whether it is your own site, a client’s or a competitor’s. Comparing your page with a competitor’s is a quick way to see which basics you are missing.' },
   { question: 'Does it check speed and mobile friendliness?', answer: 'It does a quick server-side speed check (response time, page weight, render-blocking scripts, lazy-loaded images) and checks the mobile viewport tag. For detailed speed fixes, also run Google PageSpeed Insights, which loads the page in a browser.' },
   { question: 'Does a high score mean I will rank first on Google or in ChatGPT?', answer: 'No. The score shows whether the basics are in place. Rankings also depend on your content, your competitors, reviews and links from other websites, which a one-page check cannot measure.' },
@@ -72,7 +89,7 @@ export default function WebsiteAuditPage() {
             Free tool · No sign-up
           </span>
           <h1 className="mt-4 text-4xl sm:text-headline-lg font-extrabold text-slate-900 tracking-tight">
-            Free Website Audit Tool: Check SEO, Speed and Mobile
+            Free AI Website Audit Tool: SEO, Speed and AI Search Check
           </h1>
           <p className="mt-4 text-base sm:text-lg text-slate-600 leading-relaxed">
             Audit your website online for free. Enter any web page, whether it is a store, a clinic site, a service business or a
@@ -105,6 +122,48 @@ export default function WebsiteAuditPage() {
             Want a person to go through it with you? See our <Link href="/services/seo" className="text-royal-blue font-semibold underline">SEO and local SEO service</Link> or
             ask for a <Link href="/free-audit" className="text-royal-blue font-semibold underline">free marketing audit</Link>.
           </p>
+          <h2 className="mt-16 text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">What the AI search check looks at</h2>
+          <p className="mt-4 text-slate-600 leading-relaxed">
+            ChatGPT, Perplexity, Gemini and Google&rsquo;s AI Overviews can only recommend a page they can read and quote. The AI
+            part of this audit checks four things on the page you enter.
+          </p>
+          <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-6">
+            {aiChecks.map((w) => (
+              <div key={w.title} className="rounded-2xl border border-slate-200 bg-white p-6">
+                <h3 className="font-bold text-slate-900">{w.title}</h3>
+                <p className="text-sm text-slate-600 mt-2 leading-relaxed">{w.desc}</p>
+              </div>
+            ))}
+          </div>
+          <p className="mt-4 text-sm text-slate-600">
+            The checks are rule-based, not a guess by an AI model, so the same page gives the same result every time. More on
+            this in the <Link href="/blog/generative-engine-optimization-guide" className="text-royal-blue font-semibold underline">GEO guide</Link>.
+          </p>
+
+          <h2 className="mt-16 text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">Free Shopify and e-commerce website audit</h2>
+          <p className="mt-4 text-slate-600 leading-relaxed">
+            The tool works on Shopify, WooCommerce and other online stores in India and abroad. When it finds a store, it also
+            checks product pages for Product structured data. For a D2C brand, four things matter most:
+          </p>
+          <ol className="mt-6 flex flex-col gap-4">
+            {storeTips.map((step, i) => (
+              <li key={step.title} className="flex gap-4 rounded-2xl border border-slate-200 bg-white p-5">
+                <span className="w-8 h-8 rounded-full bg-emerald-600 text-white text-sm font-bold flex items-center justify-center shrink-0" aria-hidden="true">
+                  {i + 1}
+                </span>
+                <div>
+                  <h3 className="font-bold text-slate-900">{step.title}</h3>
+                  <p className="text-sm text-slate-600 mt-1 leading-relaxed">{step.desc}</p>
+                </div>
+              </li>
+            ))}
+          </ol>
+          <p className="mt-4 text-sm text-slate-600">
+            Running a store? See how we work with <Link href="/industries/ecommerce" className="text-royal-blue font-semibold underline">e-commerce and D2C brands</Link>,
+            our <Link href="/services/shopify-development" className="text-royal-blue font-semibold underline">Shopify development</Link> and{' '}
+            <Link href="/services/conversion-rate-optimization" className="text-royal-blue font-semibold underline">conversion optimisation</Link> services.
+          </p>
+
           <h2 className="mt-16 text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">How to use the free website audit</h2>
           <ol className="mt-8 flex flex-col gap-4">
             {howTo.map((step, i) => (
