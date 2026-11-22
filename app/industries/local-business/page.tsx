@@ -40,7 +40,7 @@ const faqs = [
   {
     question: 'Do you have case studies for local businesses?',
     answer:
-      'Not yet published. We would rather show you a free audit of your own website and profile than claim results we cannot show.',
+      'Yes. Our case studies page has clinic Google Ads clean-ups and a gym WhatsApp system, with real screenshots and numbers (client names hidden): see /case-studies.',
   },
 ];
 

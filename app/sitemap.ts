@@ -4,6 +4,7 @@ import { MetadataRoute } from 'next';
 import { getAllPosts } from '../lib/blog';
 import { servicesData } from '../data/services-data';
 import { playbooks } from '../data/playbooks';
+import { caseStudies } from '../data/case-studies';
 import { SITE_URL, CONTENT_REVIEWED } from '../lib/seo-config';
 
 // Only canonical, indexable URLs. Google ignores priority/changefreq, so lastModified
@@ -57,6 +58,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/digital-marketing-agency-kanpur',
     '/digital-marketing-agency-noida',
     '/playbooks',
+    '/case-studies',
     '/free-audit',
     '/real-estate-lead-system',
     '/about',
@@ -86,11 +88,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
     images: [p.image, ...p.sections.flatMap((sec) => (sec.image ? [sec.image.src] : []))].map(abs),
   }));
 
+  const casePages = caseStudies.map((c) => ({
+    url: `${SITE_URL}/case-studies/${c.slug}`,
+    lastModified: new Date(c.updated),
+    images: [c.cover.src, ...c.shots.map((s) => s.src)].map(abs),
+  }));
+
   const posts = getAllPosts().map((post) => ({
     url: `${SITE_URL}/blog/${post.slug}`,
     lastModified: new Date(post.modifiedIso),
     images: [post.image, ...(post.inlineImages ?? []).map((i) => i.src)].map(abs),
   }));
 
-  return [...staticRoutes, ...blogNiches, ...services, ...playbookPages, ...posts];
+  return [...staticRoutes, ...blogNiches, ...services, ...playbookPages, ...casePages, ...posts];
 }

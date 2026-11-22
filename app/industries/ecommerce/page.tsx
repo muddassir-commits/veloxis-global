@@ -32,7 +32,7 @@ const faqs = [
   {
     question: 'Do you have e-commerce case studies?',
     answer:
-      'Not yet published. We would rather show you a free audit of your own store than claim results we cannot show.',
+      'Our case studies so far are in apps, clinics and local businesses, with real screenshots and numbers: see /case-studies. For your store we start with a free audit, so you see what we would fix before paying anything.',
   },
   {
     question: 'What do you need for the free audit?',

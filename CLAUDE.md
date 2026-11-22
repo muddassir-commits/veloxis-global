@@ -27,5 +27,8 @@ page. Then `docs/SEO.md` (keyword map and SEO rules) and `docs/BLOG.md` (post fo
 - No prices, no street address, no working hours, no self-rated review schema.
 - NAP: Veloxis Global · +91 91940 20727 (WhatsApp messages only, no calls) · info@veloxisglobal.com ·
   https://www.veloxisglobal.com. Never +91 88876 20727.
-- Header stays: Services, Industries, Blog, About, Free Audit.
+- Header stays: Services, Industries, Case Studies, Blog, About, Free Audit.
+- Case studies (`data/case-studies.ts`, owner decision 22 Nov 2026): real numbers from real account screens only,
+  no client/brand/app/person named, screenshots keep the numbers and cover names, IDs and logins. Work without
+  results yet is marked `in-progress`; never fill it with invented numbers.
 - Public repo: no client or lead data, no employer material, no secrets (env vars live in Vercel).

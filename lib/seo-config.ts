@@ -139,6 +139,12 @@ export const pageMeta = {
       'Example real estate marketing plans: campaign structure, keyword groups, bidding, landing page blueprints and WhatsApp lead flows you can inspect.',
     path: '/playbooks',
   },
+  caseStudies: {
+    title: 'Case Studies: Google Ads, Meta Ads, SEO & Automation Results',
+    description:
+      'Real case studies with screenshots: clinic Google Ads clean-ups, app-install campaigns, SEO indexing fixes and WhatsApp automation. Client names hidden, numbers shown.',
+    path: '/case-studies',
+  },
   freeAudit: {
     title: 'Free Marketing Audit for Your Business | Veloxis Global',
     description:
