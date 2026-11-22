@@ -1,0 +1,76 @@
+{
+  "title": "Meta Ads for E-commerce: Step-by-Step Setup for Indian Online Stores",
+  "seoTitle": "Meta Ads for E-commerce: Step-by-Step Setup Guide",
+  "excerpt": "Set up Meta ads for e-commerce step by step: Pixel and Conversions API, product catalog, campaign structure, budget, and COD and RTO for Indian stores.",
+  "date": "2026-11-26",
+  "category": "Paid Ads",
+  "industry": "ecommerce",
+  "service": "paid-ads",
+  "image": "/images/people/blog/meta-ads-for-ecommerce-india-cover.jpg",
+  "imageAlt": "Overhead view of a clothing store with a rack of shirts on wooden hangers, folded jeans and tops on a white table, and a patterned jacket on a mannequin",
+  "inlineImages": [
+    {
+      "src": "/images/people/blog/meta-ads-for-ecommerce-india-1.jpg",
+      "alt": "A plain brown kraft paper shopping bag with paper handles on a white background",
+      "beforeHeading": "cod-and-rto-india",
+      "caption": "An order placed is not yet money earned: judge Meta campaigns on delivered, paid orders."
+    },
+    {
+      "src": "/images/people/blog/meta-ads-for-ecommerce-india-2.jpg",
+      "alt": "A laptop on a white desk showing a line chart and a pie chart, with a smartphone beside it",
+      "beforeHeading": "measure-and-scale"
+    }
+  ],
+  "about": [
+    {
+      "name": "Meta Platforms",
+      "sameAs": "https://en.wikipedia.org/wiki/Meta_Platforms"
+    },
+    {
+      "name": "Online advertising",
+      "sameAs": "https://en.wikipedia.org/wiki/Online_advertising"
+    },
+    {
+      "name": "E-commerce",
+      "sameAs": "https://en.wikipedia.org/wiki/E-commerce"
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Are Meta ads good for e-commerce?",
+      "answer": "Yes, for most online stores Meta ads are a strong way to reach new buyers, because Facebook and Instagram let you show products to people who have never searched for them. They work best when purchase tracking is reliable, the catalog is clean, the creative shows the product in use and the landing page loads fast and builds trust."
+    },
+    {
+      "question": "Which campaign objective should an online store use on Meta?",
+      "answer": "Use the Sales objective and optimise for the Purchase event from your Pixel. Objectives such as Traffic or Engagement find people who click or like, not people who buy. Only optimise for Add to cart or Initiate checkout as a temporary step if purchases are not being recorded, and fix the tracking as soon as you can."
+    },
+    {
+      "question": "What replaced Advantage+ shopping campaigns?",
+      "answer": "Meta replaced Advantage+ shopping campaigns with Advantage+ sales campaigns. Meta's developer documentation says a sales campaign counts as Advantage+ when the budget is set at campaign level, Advantage+ audience is on and no placements are excluded. The old existing customer budget cap is not available in new Advantage+ campaigns."
+    },
+    {
+      "question": "Do I need the Conversions API if I already have the Meta Pixel?",
+      "answer": "It is strongly recommended. The Pixel runs in the browser, where ad blockers and privacy settings can stop it. The Conversions API sends events from your server or store platform, so more orders reach Meta. On Shopify, choosing the Enhanced or Maximum data sharing level in the Facebook and Instagram app turns it on."
+    },
+    {
+      "question": "How do I stop Meta counting the same order twice?",
+      "answer": "Send the same event name and event ID from the Pixel and the Conversions API. Meta treats events with matching name and ID received within 48 hours as one order and discards the duplicate. Also remove old Pixel code from your theme or other apps, so only one Pixel setup sends each purchase."
+    },
+    {
+      "question": "How much should a new store spend on Meta ads?",
+      "answer": "There is no fixed amount. Work out the most you can pay for one order from your margin, multiply it by the purchases you want in a week and divide by seven for a daily budget. Meta's learning phase works best near 50 optimisation events a week, so concentrate a small budget in one campaign."
+    },
+    {
+      "question": "How long should I wait before judging a Meta ads campaign?",
+      "answer": "Wait at least a week after launch or after any significant edit before judging it. During the learning phase Meta is still testing who to show ads to, so cost per purchase is usually unstable. Changing budget, targeting or the optimisation event sharply during that week restarts learning and delays a fair read."
+    },
+    {
+      "question": "How does cash on delivery affect Meta ads results in India?",
+      "answer": "Meta counts a purchase when the order is placed, so COD orders later refused at the door still appear as sales in Ads Manager. Confirm COD orders before dispatch, encourage prepaid payment, and compare campaigns on delivered and paid orders from your store and courier reports, not only on Ads Manager results."
+    },
+    {
+      "question": "Should I use catalog ads or video ads for my store?",
+      "answer": "Use both. Catalog ads automatically show people the products they viewed or similar items, which suits stores with many products. Short vertical videos showing the product in use explain why to buy and help reach new people. Start with a few strong videos in your sales campaign and add catalog ads once your catalog is clean."
+    }
+  ]
+}
