@@ -40,6 +40,7 @@ const facts = `## Key facts
 - Services: Meta (Facebook & Instagram) & Google ads; websites, landing pages & Shopify stores; SEO, local SEO & Google Business Profile; WhatsApp, AI chatbot & CRM automation
 - Team: Google certified (Google Ads Search, Google Ads Apps, Google Analytics)
 - Terms: month-to-month with 30 days' notice; ad spend is paid directly to Google and Meta by the client
+- Case studies (/case-studies) show real accounts with screenshots and numbers; client names are not shared
 - Playbooks on this site are example plans for hypothetical projects, not client case studies
 - ${siteData.disambiguation}
 - Original research (1–2 Oct 2026): of 749 real estate business websites checked in 26 cities across Uttar Pradesh, Delhi NCR and nearby states, 56% had no ad or analytics tracking of any kind, 60% had no WhatsApp click-to-chat link, 47% had no form on the homepage and 35% had neither (${SITE_URL}/blog/real-estate-landing-page-conversion-hacks#what-sites-miss)`;

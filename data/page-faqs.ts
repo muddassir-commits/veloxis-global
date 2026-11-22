@@ -35,7 +35,7 @@ export const playbooksHubFaqs: PageFaq[] = [
   { question: 'Where do the numbers come from?', answer: 'Search volumes come from Google Ads data for India via DataForSEO (September 2026). Budget splits and timelines are planning assumptions and are marked as such.' },
   { question: 'Can I use a playbook for my own project?', answer: 'Yes. They are written to be useful on their own. If you want it adapted to your project, locality and budget, that is what the free audit is for.' },
   { question: 'Which playbook should I read first?', answer: 'Developers planning a launch should start with the Meta and Google ads plan. If your problem is slow follow-up, read the WhatsApp lead-response flow. Channel partners should start with the lead registration playbook.' },
-  { question: 'Do you publish real results?', answer: 'We will publish real case studies only with client permission and verifiable numbers. Until then, playbooks show how we work.' },
+  { question: 'Do you publish real results?', answer: 'Yes. Real case studies, with screenshots and numbers from the ad accounts and client names hidden, are on the Case Studies page (/case-studies). Playbooks are separate: they show how we would plan a project.' },
   { question: 'How is a playbook different from a blog post?', answer: 'Blog posts explain a topic, like what an EOI is. Playbooks are working plans with structures, tables and settings you could hand to a team.' },
 ];
 
@@ -56,7 +56,7 @@ export const aboutFaqs: PageFaq[] = [
   { question: 'Who will work on my account?', answer: 'Our core team plans and oversees every account directly, working with a small network of landing page developers, ad specialists and automation engineers chosen for each project.' },
   { question: 'What makes you different from a general digital marketing agency?', answer: 'We focus on e-commerce and D2C first, offer a few connected services rather than everything, and report on enquiries, site visits and orders instead of clicks and impressions.' },
   { question: 'Can I see how you would plan my project before hiring you?', answer: 'Yes. Our playbooks show how we plan launches, landing pages, lead follow-up and channel partner registration, and the free marketing audit reviews your own pages, ads and follow-up with the changes we would make.' },
-  { question: 'Do you publish client case studies?', answer: 'Not yet. We will publish case studies only with the client’s permission and results we can verify. Until then, the playbooks and a free audit of your own marketing are the honest way to judge how we work.' },
+  { question: 'Do you publish client case studies?', answer: 'Yes. The Case Studies page (/case-studies) has real accounts with screenshots and numbers, client names hidden. A free audit of your own marketing is the next step to see what we would do for you.' },
   { question: 'How do I start working with Veloxis Global?', answer: `Ask for the free marketing audit through the contact form, on WhatsApp (${siteData.phone}) or by email (${siteData.email}). We review your pages, ads and follow-up, tell you what we would change first, and send a written proposal only if working together makes sense.` },
 ];
 

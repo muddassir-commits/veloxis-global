@@ -1,5 +1,5 @@
 // Header menus (components/layout/Navbar.tsx). Kept deliberately small (owner, 8 Nov 2026):
-// Logo · Services ▾ · Industries ▾ · Blog · About · [Free Audit]. Real estate sub-pages (Lead System,
+// Logo · Services ▾ · Industries ▾ · Case Studies · Blog · About · [Free Audit] (Case Studies added 22 Nov 2026). Real estate sub-pages (Lead System,
 // Channel Partners, NRI, Playbooks, city pages) are linked from /industries/real-estate and the footer.
 
 export type NavIcon = 'ads' | 'web' | 'seo' | 'automation' | 'ecommerce' | 'local' | 'realestate' | 'shopify' | 'cro' | 'retention' | 'amazon' | 'social';
@@ -54,6 +54,7 @@ export const navMenus: NavbarMenu[] = [servicesMenu, industriesMenu];
 
 /** Plain links after the two menus, in order. */
 export const primaryLinks: { title: string; href: string; activeAlso?: string[] }[] = [
+  { title: 'Case Studies', href: '/case-studies' },
   { title: 'Blog', href: '/blog', activeAlso: ['/guides'] },
   { title: 'About', href: '/about' },
 ];
