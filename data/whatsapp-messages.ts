@@ -492,4 +492,8 @@ export const BLOG_MESSAGES: Record<string, { ref: string; message: string }> = {
     ref: 'blog-abandoned-cart-seq',
     message: 'I read your guide on abandoned cart email sequences. Many shoppers leave my online store at the cart or checkout. Can you help me set up email and WhatsApp reminders?',
   },
+  'product-page-conversion-rate-optimization': {
+    ref: 'blog-product-page-cro',
+    message: 'I read your guide on product page optimization. People click my ads and land on my product pages but leave without buying. Can you look at my product pages?',
+  },
 };

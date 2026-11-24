@@ -1,0 +1,76 @@
+{
+  "title": "Product Page Optimization: How to Turn Ad Clicks Into Orders",
+  "seoTitle": "Product Page Optimization: Step-by-Step Checklist",
+  "excerpt": "Product page optimization, step by step: what to show first, photos, descriptions, price, delivery, COD and returns, reviews, speed and a checklist.",
+  "date": "2026-11-27",
+  "category": "Landing Pages",
+  "industry": "ecommerce",
+  "service": "high-converting-landing-pages",
+  "image": "/images/people/blog/product-page-conversion-rate-optimization-cover.jpg",
+  "imageAlt": "A small product photography studio with two softbox lights on stands, a camera on a tripod and a vase of red and yellow flowers on a white curved backdrop",
+  "inlineImages": [
+    {
+      "src": "/images/people/blog/product-page-conversion-rate-optimization-2.jpg",
+      "alt": "Two hands each holding a smartphone, one with a white screen and one with a black screen, against a white background",
+      "beforeHeading": "above-the-fold",
+      "caption": "Most ad clicks land on a phone: check the first screen of your product page on a real one."
+    },
+    {
+      "src": "/images/people/blog/product-page-conversion-rate-optimization-1.jpg",
+      "alt": "Five lipsticks in black cases lying in a row on a white surface, each a different shade of red and pink",
+      "beforeHeading": "product-images"
+    }
+  ],
+  "about": [
+    {
+      "name": "Online shopping",
+      "sameAs": "https://en.wikipedia.org/wiki/Online_shopping"
+    },
+    {
+      "name": "Conversion rate optimization",
+      "sameAs": "https://en.wikipedia.org/wiki/Conversion_rate_optimization"
+    },
+    {
+      "name": "E-commerce",
+      "sameAs": "https://en.wikipedia.org/wiki/E-commerce"
+    }
+  ],
+  "faqs": [
+    {
+      "question": "What is product page optimization?",
+      "answer": "Product page optimization is improving each product page so more visitors buy. It covers photos, the description, variant selection, price and delivery information, reviews, page speed and search markup. The aim is to answer every question a shopper would ask before they leave, on a fast page that matches the ad or search result they clicked."
+    },
+    {
+      "question": "What should be above the fold on a product page?",
+      "answer": "On a phone, the first screen should show the main product photo, the product name with its main benefit, the price, the star rating if you have real reviews, and the add-to-cart button or a clear path to it. Keep pop-ups, cookie banners and chat bubbles from covering any of these on first load."
+    },
+    {
+      "question": "How many product photos should a product page have?",
+      "answer": "There is no fixed number, but enough to answer every visual question: a front view on a plain background, an in-scale shot, the product on a person or in use, a texture close-up, what comes in the box and the label. Baymard found many sites miss in-scale and on-person images, which shoppers use to judge size."
+    },
+    {
+      "question": "How do I write a product description that converts?",
+      "answer": "Start with one line saying what the product does and who it is for, in the words your best ad uses. Add three to five benefit bullet points, short how-to-use steps, a specifications table and a short FAQ built from real customer questions. Keep claims honest and avoid health claims you cannot prove."
+    },
+    {
+      "question": "Should I show delivery dates and COD on the product page?",
+      "answer": "Yes. Show an estimated delivery date by pincode, whether cash on delivery is available and any extra COD charge close to the buy button. Hidden costs and unclear delivery are common reasons shoppers abandon later. Indian e-commerce rules also require delivery, payment and return information to be shown to buyers."
+    },
+    {
+      "question": "What changes for Indian product pages from January 2027?",
+      "answer": "The Consumer Protection (E-Commerce) (Amendment) Rules, 2026 come into force on 1 January 2027. Discounted products must show a prior price, meaning the lowest price in the preceding 30 days, next to the reduced price. The rules also spell out more product information, such as return shipping costs and payment modes. Check details with your legal adviser."
+    },
+    {
+      "question": "Are countdown timers and low-stock messages allowed?",
+      "answer": "Only when they are true. India's Guidelines for Prevention and Regulation of Dark Patterns, 2023 treat false urgency, such as a fake low-stock message, as a dark pattern. A genuine sale end date or a real stock count is fine. Fake timers that reset, invented stock counts and pre-added items in the cart are not."
+    },
+    {
+      "question": "Does page speed affect product page conversions?",
+      "answer": "Yes, a slow page loses shoppers before they see the product, especially on mobile data. Aim for Google's good Core Web Vitals range: Largest Contentful Paint within 2.5 seconds, Interaction to Next Paint of 200 milliseconds or less and Cumulative Layout Shift of 0.1 or less. Compress images and remove unused apps first."
+    },
+    {
+      "question": "How do I know if a product page change worked?",
+      "answer": "Change one thing at a time on a page with steady traffic, then compare add-to-cart rate, conversion rate and orders over the same days of the week with ad spend roughly steady. Also watch returns, COD refusals and average order value, so a change that adds orders does not add unhappy customers."
+    }
+  ]
+}
