@@ -1,0 +1,153 @@
+<p><strong>Creative fatigue on Meta ads means people have seen the same image or video so often that it stops working: cost per result rises while click-through rate falls. Confirm it by reading frequency, CTR and cost per result together over time, then add a materially different new ad to the ad set instead of editing or pausing the old one.</strong></p>
+<p>This guide is for Indian D2C and e-commerce founders, in-house marketers and small agencies who see "Creative fatigue" or "Creative limited" in the Delivery column of Meta Ads Manager, or who simply watch a winning ad get more expensive every week. Most articles that rank for this keyword give a "magic" frequency number that changes from one blog to the next, and none of them say where it comes from. This one sticks to what Meta's own help pages and research say, shows you a check you can run in ten minutes, and gives you a refresh plan a small team can keep up with.</p>
+<p><em>Ads Manager labels and Meta's guidance change often. Everything below was checked against Meta's Business Help Center and developer documentation on 25 November 2026.</em></p>
+
+<h2 id="what-is-creative-fatigue">What is creative fatigue on Facebook and Instagram ads?</h2>
+<p><strong>Creative fatigue is the drop in results that happens when the same people see the same ad creative again and again.</strong> Each repeat view is a little less likely to earn a click or a purchase, so Meta has to spend more to get each result.</p>
+<p>Meta's developer documentation for the <a href="https://developers.facebook.com/documentation/ads-commerce/marketing-api/ads-webhooks/creative-fatigue" target="_blank" rel="noopener">creative fatigue webhook</a> describes it plainly: fatigue rises as an audience sees the same creative repeatedly, which shows up as falling click-through rate and rising cost per action. The same page suggests watching frequency and CTR day by day to see the shape of the decline, and cost per action to see how much more expensive the ad is getting.</p>
+<p>Meta's own analysts have measured the effect. In a May 2023 article, <a href="https://medium.com/@AnalyticsAtMeta/creative-fatigue-how-advertisers-can-improve-performance-by-managing-repeated-exposures-e76a0ea1084d" target="_blank" rel="noopener">Analytics at Meta</a> reported that at 4 repeated exposures the associated likelihood of a conversion drops by about 45%. The key word is <em>repeated</em>: the decline is tied to how many times a person has seen the creative, not to how many days the ad has been live.</p>
+<p>People often say "ad fatigue" and "creative fatigue" as if they were the same thing. In practice, ad fatigue is the wider idea (people tune out your brand's ads in general), while creative fatigue is about one specific image or video wearing out. That difference matters for the fix: a tired creative needs a new creative, not a new campaign.</p>
+
+<h2 id="creative-limited-vs-creative-fatigue">What do "Creative limited" and "Creative fatigue" mean in Ads Manager?</h2>
+<p><strong>They are two delivery statuses Meta shows when it believes an ad set's audience has seen the same ad too many times. "Creative limited" is the early warning; "Creative fatigue" is the stronger one.</strong></p>
+<p>Meta explains both in its help page <a href="https://www.facebook.com/business/help/1346816142327858" target="_blank" rel="noopener">About creative fatigue recommendations in Meta Ads Manager</a>. The difference is how far your cost per result has climbed compared with your past ads:</p>
+<table>
+  <thead>
+    <tr><th>Status in the Delivery column</th><th>When Meta shows it</th><th>What to do</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Creative limited</td><td>Cost per result is higher than your past ads, but less than twice as much</td><td>Plan and build a new, different creative this week</td></tr>
+    <tr><td>Creative fatigue</td><td>Cost per result is at least twice as much as your past ads</td><td>Launch a materially different creative now</td></tr>
+  </tbody>
+</table>
+<p>Three details from Meta's page change how you should read these labels:</p>
+<ul>
+  <li><strong>It counts exposures across campaigns.</strong> Meta considers recent exposures of the ad's image or video from your Page, including those from other campaigns. If the same video runs in a prospecting and a retargeting campaign, both count.</li>
+  <li><strong>It only appears for ad sets with one creative.</strong> Meta lists a few exceptions, such as Advantage+ catalogue ads and dynamic creative. If your ad sets hold several ads or use flexible formats, you will often see no label at all, even when an ad is clearly tired.</li>
+  <li><strong>Meta's advice is to add, not replace.</strong> It recommends creating a new ad with an image or video that is materially different from the original, and notes that keeping the original ad active instead of pausing it may maximise results.</li>
+</ul>
+<p>Meta's guide to <a href="https://www.facebook.com/business/help/650774041651557" target="_blank" rel="noopener">delivery status in Ads Manager</a> lists these labels alongside others such as "Learning" and "Learning limited". Don't mix them up: <a href="/blog/meta-ads-learning-limited">learning limited</a> is about too few optimisation events, while creative fatigue is about too many repeat views.</p>
+
+<h2 id="how-to-check-creative-fatigue">How do I check for creative fatigue in Ads Manager, step by step?</h2>
+<p><strong>Look at frequency, CTR and cost per result for each ad, day by day, over the last 14 to 30 days. Fatigue is the pattern where frequency climbs while CTR falls and cost per result rises at the same time.</strong> One metric alone is not enough.</p>
+<ol>
+  <li><strong>Open Ads Manager and go to the Ads tab</strong> (not Campaigns or Ad sets). Fatigue belongs to a creative, so judge it at ad level.</li>
+  <li><strong>Set the date range</strong> to the last 14 or 30 days, long enough to see a trend.</li>
+  <li><strong>Customise columns:</strong> Columns, then Customise columns. Add Delivery, Amount spent, Impressions, Reach, Frequency, CTR (link click-through rate), CPM (cost per 1,000 impressions), Results and Cost per result. For a store, Purchases, Cost per purchase and Purchase ROAS are the results that matter.</li>
+  <li><strong>Add a time breakdown:</strong> Breakdown, then By time, then Day (or Week for small accounts). Now each ad shows a row per day, so you can see direction, not just totals.</li>
+  <li><strong>Read the Delivery column first.</strong> If you see "Creative limited" or "Creative fatigue", hover over it for Meta's note.</li>
+  <li><strong>Check the three-signal pattern</strong> with the table in the next section.</li>
+  <li><strong>Rule out other causes</strong> before you blame the creative (see "Is it really creative fatigue?" below).</li>
+  <li><strong>Save the view.</strong> Columns, then Save as preset, and name it "Fatigue check" so next week's check takes a minute.</li>
+</ol>
+<p>Small budgets make daily numbers jumpy. If an ad gets only a few purchases a week, compare week-on-week totals instead of single days, and lean more on CTR, which moves with far less data than purchases do.</p>
+
+<h2 id="read-the-signals-together">Which metrics show creative fatigue, and how do I read them together?</h2>
+<p><strong>Read frequency, CTR, CPM and cost per result as a set.</strong> Each one can move for reasons that have nothing to do with fatigue, so the combination is what tells you the creative is tired.</p>
+<table>
+  <thead>
+    <tr><th>Frequency</th><th>Link CTR</th><th>CPM</th><th>Cost per result</th><th>Most likely meaning</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Rising</td><td>Falling</td><td>Flat or rising</td><td>Rising</td><td>Creative fatigue: refresh the creative</td></tr>
+    <tr><td>Flat</td><td>Flat</td><td>Rising</td><td>Rising</td><td>Auction got more expensive (festive season, more competitors): not fatigue</td></tr>
+    <tr><td>Rising</td><td>Flat</td><td>Flat</td><td>Flat</td><td>People see it more but still respond: leave it running</td></tr>
+    <tr><td>Flat</td><td>Flat</td><td>Flat</td><td>Rising</td><td>The problem is after the click: product page, price, stock or tracking</td></tr>
+    <tr><td>Rising fast</td><td>Falling</td><td>Rising</td><td>Rising</td><td>Audience too small for the budget: widen it as well as refreshing</td></tr>
+  </tbody>
+</table>
+<p><strong>What about a "too high" frequency number?</strong> Meta does not publish a frequency limit that means fatigue, and the thresholds quoted across top-ranking blogs disagree with each other and rarely cite anything. Frequency is simply impressions divided by reach, so it depends on your audience size, budget and how long the ad has run. Use it as a direction (is it climbing week after week?) rather than a cut-off, and let CTR and cost per result tell you whether the repeat views are hurting.</p>
+<p>Also check the ad's relevance diagnostics (quality, engagement rate and conversion rate ranking) in the ad-level columns. A ranking that slips from average to below average over a few weeks, while the ad itself hasn't changed, supports a fatigue diagnosis.</p>
+
+<h2 id="is-it-really-fatigue">Is it really creative fatigue, or something else?</h2>
+<p><strong>Rule out the five common look-alikes before you spend money on new creative.</strong> A falling ROAS has many causes, and new creative fixes only one of them.</p>
+<table>
+  <thead>
+    <tr><th>Look-alike</th><th>How to tell</th><th>Fix instead</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Seasonal auction costs</td><td>CPM jumps across all ads at once, CTR holds</td><td>Accept it or shift budget; don't kill a good ad</td></tr>
+    <tr><td>Tracking break</td><td>Ads Manager purchases drop but Shopify orders don't</td><td>Check Pixel and Conversions API (see <a href="/blog/meta-ads-shopify-sales-mismatch">why Meta and Shopify numbers don't match</a>)</td></tr>
+    <tr><td>Website or offer problem</td><td>CTR steady, add-to-cart or purchase rate falls</td><td>Fix the product page, price, stock or delivery promise</td></tr>
+    <tr><td>Delivery moved to new audiences</td><td>Results dip after a budget or targeting change, frequency not rising</td><td>Give it a week before judging</td></tr>
+    <tr><td>Delivery problem</td><td>Spend itself is falling, not just results</td><td>See <a href="/blog/meta-ads-not-spending">Meta ads not spending</a></td></tr>
+  </tbody>
+</table>
+<p>If the ad passes all five checks and still shows rising frequency with falling CTR, it is tired. Move on to the refresh.</p>
+
+<h2 id="how-to-fix-creative-fatigue">How do I fix creative fatigue on Meta ads?</h2>
+<p><strong>Add a new, materially different creative to the same ad set, keep the original running, and let Meta shift spend between them.</strong> Then widen the audience or placements if they are restricted. Avoid small edits to the tired ad itself.</p>
+<ol>
+  <li><strong>Make a brief for a genuinely different creative.</strong> Meta's <a href="https://www.facebook.com/business/m/small-business/creative-differentiation" target="_blank" rel="noopener">creative diversification guide</a> warns that when ads look too similar, its system may not recognise them as different and may deliver them to the same people. A new colour or a new headline on the same video is not a new creative. Change at least one of: the format (static, video, carousel), the person or setting on screen, the opening hook, or the angle (problem, demo, review, comparison, offer).</li>
+  <li><strong>Add the new ad to the existing ad set.</strong> Duplicate the tired ad, swap in the new image or video, and publish. This keeps the ad set's history.</li>
+  <li><strong>Keep the original ad on.</strong> Meta's help page notes that keeping your original ad active instead of pausing it may maximise results. Meta will move spend to whichever ad performs better.</li>
+  <li><strong>Batch your changes.</strong> Meta's page <a href="https://www.facebook.com/business/help/112167992830700" target="_blank" rel="noopener">About the learning phase</a> lists creative changes among the significant edits that can restart learning. Add two or three new ads in one sitting rather than one a day.</li>
+  <li><strong>Loosen restrictions that speed up fatigue.</strong> A narrow audience or a single placement means the same people see the ad more often. Where results allow, use broader targeting and Advantage+ placements.</li>
+  <li><strong>Try Advantage+ creative enhancements.</strong> Meta's diversification guide points to tools such as image expansion, image generation and adding animation to create variations from what you have. Review every enhanced version before it runs, because the output must still be accurate to your product.</li>
+  <li><strong>Give it a week, then judge.</strong> Compare cost per purchase and CTR for the new ad against the old one over 7 days before you pause anything.</li>
+</ol>
+<blockquote>Don't edit the text or image of a tired ad in place. You lose the clean comparison, and you may restart learning without getting a creative that Meta treats as new.</blockquote>
+
+<h2 id="refresh-plan">How often should I refresh Facebook ad creatives?</h2>
+<p><strong>Refresh when the data says the creative is tired, not on a fixed calendar.</strong> Meta's research ties fatigue to repeat exposures, so an ad with a large audience and a small budget can last for months, while the same ad shown to a small retargeting audience can tire within days.</p>
+<p>What a small team can do is keep a steady pipeline so a fresh creative is ready before you need it. A simple weekly rhythm:</p>
+<table>
+  <thead>
+    <tr><th>Day</th><th>Task</th><th>Output</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Monday</td><td>Run the "Fatigue check" saved view; note ads with rising frequency and falling CTR</td><td>A list of ads to replace</td></tr>
+    <tr><td>Tuesday</td><td>Write briefs for new angles based on your best ad's message</td><td>Two or three creative briefs</td></tr>
+    <tr><td>Wednesday to Thursday</td><td>Shoot or collect creatives: product demos, customer UGC, short explainer videos, static comparisons</td><td>New images and videos</td></tr>
+    <tr><td>Friday</td><td>Add the new ads to the ad sets that need them, all at once</td><td>Fresh ads live, originals still running</td></tr>
+    <tr><td>Next Friday</td><td>Compare new vs old ads over 7 days</td><td>Keep winners, pause clear losers</td></tr>
+  </tbody>
+</table>
+<p>User-generated content is one of the cheapest ways to keep this pipeline full, because each new creator brings a new face, setting and way of speaking. Our guide to <a href="/blog/ugc-ads-for-d2c">UGC ads for D2C brands</a> covers briefs, permissions and how to test them.</p>
+
+<h2 id="prevent-creative-fatigue">How do I prevent creative fatigue before it starts?</h2>
+<p><strong>Give Meta several genuinely different ads per ad set from day one, and keep audiences and placements broad enough that the same people don't see the same ad over and over.</strong> Prevention is mostly about variety and reach.</p>
+<ul>
+  <li><strong>Launch with different concepts, not just versions.</strong> Three different angles beat ten versions of one idea, because Meta may treat similar ads as the same ad. Ads consultant <a href="https://www.jonloomer.com/creative-fatigue-meta-ads/" target="_blank" rel="noopener">Jon Loomer</a> lists restricted audiences, restricted placements and too few ads per ad set among the main causes of fatigue.</li>
+  <li><strong>Mix formats.</strong> Have at least one static image, one short video and one carousel or catalogue ad per product line where you can.</li>
+  <li><strong>Separate prospecting from retargeting creative.</strong> Meta counts exposures across your Page's campaigns, so reusing the exact same video in every campaign speeds up fatigue.</li>
+  <li><strong>Watch small audiences closely.</strong> Retargeting and small local audiences tire fastest. Rotate their creatives more often or cap the budget.</li>
+  <li><strong>Plan festive creative early.</strong> Sale periods push more spend through the same audiences. Build extra creatives before the sale, not during it.</li>
+  <li><strong>Keep a creative log.</strong> Note each ad's angle, format, launch date and when it tired. Over time you'll learn which angles last longest for your products.</li>
+</ul>
+
+<h2 id="creative-fatigue-checklist">Creative fatigue checklist</h2>
+<p><strong>Use this checklist once a week for every active ad that spends meaningful budget.</strong></p>
+<table>
+  <thead>
+    <tr><th>Check</th><th>Where</th><th>Done?</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Delivery column shows Creative limited or Creative fatigue?</td><td>Ads Manager, Ads tab</td><td>☐</td></tr>
+    <tr><td>Frequency rising week on week?</td><td>Fatigue check view, Breakdown by week</td><td>☐</td></tr>
+    <tr><td>Link CTR falling at the same time?</td><td>Same view</td><td>☐</td></tr>
+    <tr><td>Cost per purchase rising while CPM is flat?</td><td>Same view</td><td>☐</td></tr>
+    <tr><td>Relevance rankings slipping?</td><td>Ad-level columns</td><td>☐</td></tr>
+    <tr><td>Tracking, website, stock and offer ruled out?</td><td>Shopify orders, Events Manager, product page</td><td>☐</td></tr>
+    <tr><td>New, materially different creative added (original kept on)?</td><td>Same ad set</td><td>☐</td></tr>
+    <tr><td>Changes batched in one sitting?</td><td>Ad set activity history</td><td>☐</td></tr>
+    <tr><td>Result reviewed after 7 days?</td><td>Fatigue check view</td><td>☐</td></tr>
+  </tbody>
+</table>
+<p>Not sure if a weak ad is tired or if the real problem is your target? Our guide to <a href="/blog/good-roas-for-ecommerce">what a good ROAS is for e-commerce</a> shows how to work out the break-even number to judge every ad against, and our <a href="/blog/meta-ads-client-reporting">Facebook ads report for clients</a> shows how to explain a creative refresh in a weekly report.</p>
+
+<h2 id="faster-check">Is there a faster way to find tired ads across an account?</h2>
+<p><strong>Yes. Save the Ads Manager view above, or run an automated check on an export.</strong> Going ad by ad is slow once an account has dozens of ads.</p>
+<p>For a quick first pass, try the free <a href="https://brightroas.veloxisglobal.com/check" target="_blank" rel="noopener">BrightROAS Meta ads health check</a>, our Meta ads dashboard. It takes about 2 minutes and needs no sign-up: in Ads Manager go to Reports, then Export, choose CSV with Breakdown set to Day and Level set to Ad for the last 14 to 30 days, and upload the file. You get a health score out of 100 and a list of the problems it found, including creative fatigue, flagged ads, learning-limited ad sets, stalled campaigns and cost overruns. The file is read in your browser and never uploaded. It is not affiliated with Meta and doesn't replace your own judgement on the look-alikes above.</p>
+<p>If you run an online store and want a second pair of eyes on your creative pipeline, tracking and account structure, see how we approach <a href="/industries/ecommerce">e-commerce marketing</a>, our <a href="/services/paid-ads">Meta and Google ads management</a> and <a href="/services/social-media-marketing">social media marketing</a>, or ask for a <a href="/free-audit">free audit</a> of your ad account.</p>
+
+<h2 id="sources">Sources</h2>
+<ul>
+  <li><a href="https://www.facebook.com/business/help/1346816142327858" target="_blank" rel="noopener">Meta Business Help Center: About creative fatigue recommendations in Meta Ads Manager</a></li>
+  <li><a href="https://developers.facebook.com/documentation/ads-commerce/marketing-api/ads-webhooks/creative-fatigue" target="_blank" rel="noopener">Meta for Developers: Creative fatigue webhook (Marketing API)</a></li>
+  <li><a href="https://medium.com/@AnalyticsAtMeta/creative-fatigue-how-advertisers-can-improve-performance-by-managing-repeated-exposures-e76a0ea1084d" target="_blank" rel="noopener">Analytics at Meta: Creative fatigue, how advertisers can improve performance by managing repeated exposures (May 2023)</a></li>
+  <li><a href="https://www.facebook.com/business/m/small-business/creative-differentiation" target="_blank" rel="noopener">Meta for Business: Creative diversification</a></li>
+  <li><a href="https://www.facebook.com/business/help/650774041651557" target="_blank" rel="noopener">Meta Business Help Center: View campaign, ad set or ad delivery status in Meta Ads Manager</a></li>
+  <li><a href="https://www.facebook.com/business/help/112167992830700" target="_blank" rel="noopener">Meta Business Help Center: About the learning phase</a></li>
+  <li><a href="https://www.jonloomer.com/creative-fatigue-meta-ads/" target="_blank" rel="noopener">Jon Loomer Digital: Creative fatigue, what it is and how to prevent it</a></li>
+</ul>

@@ -1,0 +1,76 @@
+{
+  "title": "Creative Fatigue on Meta Ads: How to Spot It and Fix It",
+  "seoTitle": "Creative Fatigue on Meta Ads: How to Spot It and Fix It",
+  "excerpt": "Creative fatigue on Meta ads? Read the Creative limited and fatigue statuses, check frequency, CTR and cost together, rule out look-alikes and refresh.",
+  "date": "2026-11-28",
+  "category": "Paid Ads",
+  "industry": "ecommerce",
+  "service": "paid-ads",
+  "image": "/images/people/blog/meta-ads-creative-fatigue-cover.jpg",
+  "imageAlt": "A wilted orange rose drooping on its stem against a grey background",
+  "inlineImages": [
+    {
+      "src": "/images/people/blog/meta-ads-creative-fatigue-1.jpg",
+      "alt": "A paintbrush spreading purple, pink and orange watercolour paint on paper",
+      "beforeHeading": "how-to-fix-creative-fatigue",
+      "caption": "The fix is a materially different creative, not a new headline on the same video."
+    },
+    {
+      "src": "/images/people/blog/meta-ads-creative-fatigue-2.jpg",
+      "alt": "An hourglass with pink sand running through it in front of a blurred gold clock",
+      "beforeHeading": "refresh-plan"
+    }
+  ],
+  "about": [
+    {
+      "name": "Facebook",
+      "sameAs": "https://en.wikipedia.org/wiki/Facebook"
+    },
+    {
+      "name": "Online advertising",
+      "sameAs": "https://en.wikipedia.org/wiki/Online_advertising"
+    },
+    {
+      "name": "Frequency (marketing)",
+      "sameAs": "https://en.wikipedia.org/wiki/Frequency_(marketing)"
+    }
+  ],
+  "faqs": [
+    {
+      "question": "What is creative fatigue on Facebook ads?",
+      "answer": "Creative fatigue is the drop in results that happens when the same people see the same image or video again and again. Each repeat view is less likely to earn a click or purchase, so click-through rate falls and cost per result rises. It is fixed with a new, materially different creative, not with a new campaign."
+    },
+    {
+      "question": "What does Creative limited mean in Meta Ads Manager?",
+      "answer": "It is an early-warning delivery status. Meta shows it when it believes an ad set's audience has seen the same ad too many times and cost per result is higher than your past ads, but less than twice as much. It is a signal to build a new, different creative soon, before the ad reaches Creative fatigue."
+    },
+    {
+      "question": "What is the difference between Creative limited and Creative fatigue?",
+      "answer": "Both mean the audience has seen the ad too often. Creative limited appears when cost per result is above your past ads but under double. Creative fatigue appears when cost per result is at least twice your past ads. Meta only shows these labels for ad sets with one creative, with a few exceptions."
+    },
+    {
+      "question": "What frequency is too high on Meta ads?",
+      "answer": "Meta does not publish a frequency limit that means fatigue, and the numbers quoted online disagree. Frequency depends on audience size, budget and time live. Treat it as a direction: if frequency climbs week after week while CTR falls and cost per purchase rises, the creative is tired. Rising frequency alone is not a problem."
+    },
+    {
+      "question": "How often should I refresh Facebook ad creatives?",
+      "answer": "Refresh when the data shows fatigue, not on a fixed calendar. Meta's research ties fatigue to repeat exposures, so a large audience on a small budget can run one ad for months, while a small retargeting audience can tire it within days. Keep a weekly pipeline so a fresh creative is always ready."
+    },
+    {
+      "question": "Should I pause a fatigued ad?",
+      "answer": "Not straight away. Meta's help page recommends adding a new ad with a materially different image or video and notes that keeping the original active instead of pausing it may maximise results. Let both run, compare them over about a week, then pause the original only if the new ad clearly beats it."
+    },
+    {
+      "question": "Does adding a new ad reset the learning phase?",
+      "answer": "It can. Meta lists creative changes among the significant edits that can restart an ad set's learning phase. That is why it pays to batch your refresh: add two or three new ads in one sitting instead of one a day, then leave the ad set alone long enough to judge the results."
+    },
+    {
+      "question": "Is a drop in ROAS always creative fatigue?",
+      "answer": "No. Rising auction costs in festive seasons, broken tracking, a weaker product page or offer, stock problems and delivery changes all lower ROAS too. Fatigue shows a specific pattern: frequency rising, CTR falling and cost per result rising on the same ad. Rule out the look-alikes before you spend on new creative."
+    },
+    {
+      "question": "Is there a quick way to find fatigued ads in an account?",
+      "answer": "Yes. Save an Ads Manager view with frequency, CTR and cost per result broken down by day, or run the free BrightROAS Meta ads health check: it reads an Ads Manager CSV export in your browser in about 2 minutes, with no sign-up, and flags creative fatigue, flagged ads, learning-limited ad sets, stalled campaigns and cost overruns."
+    }
+  ]
+}
