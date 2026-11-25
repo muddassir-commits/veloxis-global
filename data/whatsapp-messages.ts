@@ -484,6 +484,10 @@ export const BLOG_MESSAGES: Record<string, { ref: string; message: string }> = {
     ref: 'blog-good-roas',
     message: 'I read your guide on what a good ROAS is. I run ads for my online store and want to know my break-even ROAS and a sensible target. Can you help?',
   },
+  'meta-ads-creative-fatigue': {
+    ref: 'blog-meta-creative-tired',
+    message: 'I read your guide on creative fatigue in Meta ads. My best ads keep getting more expensive. Can you help me plan fresh creatives for my store?',
+  },
   'meta-ads-for-ecommerce-india': {
     ref: 'blog-meta-ecom-setup',
     message: 'I read your guide on Meta ads for e-commerce. I want to set up Facebook and Instagram ads for my online store the right way. Can you help me check tracking and campaign setup?',
