@@ -1,0 +1,184 @@
+<p><strong>Google Shopping ads show your product's photo, title, price and store name at the top of Google results. To run them in India, create a Merchant Center account, verify your website, upload a product feed with GST-inclusive INR prices, add shipping and return policies, link Google Ads, set up purchase tracking, then launch a Shopping or Performance Max campaign.</strong></p>
+<p>This guide is for Indian online store owners, D2C founders and small marketing teams who want their products to appear in the Shopping tab and the product boxes on Google Search. Most guides that rank for "google shopping ads" are written for the US: prices in dollars, no word on GST, old screenshots, and campaign types that no longer exist. This one walks through the setup in the order Google itself recommends, with the India-specific settings that cause most disapprovals, a feed checklist you can copy, and a plan for the first weeks after launch.</p>
+<p><em>Google's menus and rules change often. Every requirement below was checked against Google Merchant Center Help, Google Ads Help and Shopify Help on 26 November 2026.</em></p>
+
+<h2 id="what-are-google-shopping-ads">What are Google Shopping ads and how do they work?</h2>
+<p><strong>Google Shopping ads are product ads built from your product data, not from text you write.</strong> You send Google a list of products (the feed) through Merchant Center. When someone searches for something you sell, Google picks the matching product and shows its image, title, price and your store name, and you pay when the shopper clicks.</p>
+<p>That last point is the big difference from text search ads. You do not choose keywords for Shopping ads. Google reads your feed and your product pages to decide which searches a product is relevant for, which is why the quality of your titles and descriptions matters more than any bid. Google's <a href="https://support.google.com/google-ads/answer/13975266?hl=en" target="_blank" rel="noopener">onboarding guide for Shopping ads</a> lists the full path in eight steps: create a Merchant Center account, verify your store's website, upload product data, create a Google Ads account, link the two, set up conversion tracking, create a campaign, then manage and optimise it. The sections below follow that order.</p>
+<p>Shopping ads are only one way to appear. Merchant Center can also show your products in <a href="https://support.google.com/merchants/answer/13889434?hl=en" target="_blank" rel="noopener">free listings</a> across Search, Images, Lens, YouTube and the Shopping tab. Free listings need the same feed, so the setup work below pays off twice.</p>
+
+<h2 id="before-you-start">What do you need before you start?</h2>
+<p><strong>You need a working online store that meets Google's Shopping policies, a product list with clean data, and admin access to your domain.</strong> Google reviews your website as well as your products, so fix the store first. Google's page on <a href="https://support.google.com/merchants/answer/6363310?hl=en" target="_blank" rel="noopener">online store requirements</a> asks for these things on your site:</p>
+<ul>
+  <li><strong>Contact details</strong> that are easy to find: a contact form, email address, phone number or business social profile.</li>
+  <li><strong>A return and refund policy</strong> that is easy to find. If you do not accept returns, the page must say so clearly.</li>
+  <li><strong>A secure checkout</strong> on an SSL-protected page, with at least one conventional payment method, where a shopper can add items to the cart and complete the order.</li>
+  <li><strong>Clear costs and conditions</strong> before and after purchase: shipping charges, cash-on-delivery fees and any other cost the buyer will pay.</li>
+</ul>
+<p>Use this table as a pre-flight check. Every row is something Google looks at during review.</p>
+<table>
+  <thead>
+    <tr><th>Check</th><th>Where to look</th><th>Why it matters</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Contact page with email or phone</td><td>Footer and contact page</td><td>Missing contact details can get the whole account limited</td></tr>
+    <tr><td>Return and refund policy page</td><td>Footer link, product page link</td><td>Google requires it to be easy to find, even if returns are not accepted</td></tr>
+    <tr><td>HTTPS on every page, checkout works</td><td>Place a test order</td><td>Shoppers must be able to buy; broken checkout means disapproval</td></tr>
+    <tr><td>Shipping and COD charges shown before payment</td><td>Cart and checkout</td><td>Hidden costs break the disclosure rule</td></tr>
+    <tr><td>Product page price matches feed price</td><td>Compare a few products</td><td>A price mismatch gets the product disapproved</td></tr>
+    <tr><td>Products in stock on the site</td><td>Product pages</td><td>Availability in the feed must match the page</td></tr>
+  </tbody>
+</table>
+<p>If your store has never been checked for these basics, our <a href="/blog/shopify-store-conversion-checklist">Shopify store conversion checklist</a> covers most of them, and the free <a href="/tools/website-audit">website audit tool</a> flags broken pages and missing HTTPS.</p>
+
+<h2 id="set-up-merchant-center">How do you set up Google Merchant Center for an Indian store?</h2>
+<p><strong>Create a Merchant Center account with the same Google account you will use for Google Ads, add your business details, then verify and claim your website.</strong> Verification proves you own the domain; without it, products cannot be approved.</p>
+<ol>
+  <li>Go to Merchant Center and sign in with the business Google account (not a personal one you might lose).</li>
+  <li>Enter your business name exactly as it appears on your website, choose India as your business country and add your website URL.</li>
+  <li>Verify the website. The easiest routes are through Google Search Console, Google Analytics or Google Tag Manager if you already use them on the same domain, or by adding the HTML tag Merchant Center gives you to your site's head.</li>
+  <li>On Shopify, the Google &amp; YouTube app can do the claim for you. <a href="https://help.shopify.com/en/manual/online-sales-channels/google/getting-setup/connect" target="_blank" rel="noopener">Shopify Help</a> notes that your store's domain is claimed automatically unless it is already associated with a different Google account.</li>
+  <li>Add a shipping policy and a return policy (see the next two sections) before you upload products, so the first review does not fail on missing policies.</li>
+</ol>
+<p>Merchant Center also lets you create a Performance Max campaign straight from its own interface. Google's onboarding page says anyone who already uses Merchant Center but not Google Ads can start there, but every campaign made that way is Performance Max. If you want a Standard Shopping campaign, create it inside Google Ads instead.</p>
+
+<h2 id="product-feed-india">How do you create a product feed that gets approved in India?</h2>
+<p><strong>Send every product with the required attributes, write the price in INR with GST included, and make the title, price and availability match your product page exactly.</strong> Google's <a href="https://support.google.com/merchants/answer/7052112?hl=en" target="_blank" rel="noopener">product data specification</a> is the rulebook; the table below covers the attributes that matter most for an Indian store.</p>
+<table>
+  <thead>
+    <tr><th>Attribute</th><th>Required?</th><th>What Google says</th><th>India tip</th></tr>
+  </thead>
+  <tbody>
+    <tr><td><code>id</code></td><td>Yes</td><td>Unique per product, up to 50 characters; use the SKU where possible</td><td>Never change IDs later: performance history is tied to them</td></tr>
+    <tr><td><code>title</code></td><td>Yes</td><td>Up to 150 characters, must match the landing page</td><td>Brand + product type + key detail (size, colour, material), in the words shoppers search</td></tr>
+    <tr><td><code>description</code></td><td>Yes</td><td>Up to 5,000 characters, plain text</td><td>Describe the product, not your offers or shipping</td></tr>
+    <tr><td><code>link</code></td><td>Yes</td><td>Landing page on your verified domain</td><td>Link the exact variant page, not the home page</td></tr>
+    <tr><td><code>image_link</code></td><td>Yes</td><td>Main product image; minimum 500 x 500 pixels enforced from 31 January 2027</td><td>Clean background, no promotional text or watermarks</td></tr>
+    <tr><td><code>availability</code></td><td>Yes</td><td><code>in_stock</code>, <code>out_of_stock</code>, <code>preorder</code> or <code>backorder</code></td><td>Sync stock daily if you sell fast-moving items</td></tr>
+    <tr><td><code>price</code></td><td>Yes</td><td>Number plus currency code; outside the US and Canada, include VAT or GST</td><td>Write it as <code>1299.00 INR</code> with GST included</td></tr>
+    <tr><td><code>maximum_retail_price</code></td><td>Optional, India only</td><td>MRP, must match landing page and checkout</td><td>Add it if your product page shows an MRP above the selling price</td></tr>
+    <tr><td><code>brand</code></td><td>Yes for new products</td><td>Up to 70 characters</td><td>Use your own brand name for private-label products</td></tr>
+    <tr><td><code>gtin</code> / <code>mpn</code></td><td>Depends</td><td>Submit a GTIN only if you are sure it is correct; MPN if there is no GTIN</td><td>Resold branded goods usually have a barcode GTIN; use it</td></tr>
+    <tr><td><code>item_group_id</code>, <code>color</code>, <code>size</code></td><td>For variants and apparel</td><td>Groups variants of one product</td><td>Each size or colour is its own item with its own ID</td></tr>
+  </tbody>
+</table>
+<p>The price used in the table (1299.00 INR) is only an example of the format. Two rules catch Indian stores more than any others. First, the price must include GST: the specification says taxes are left out only in the US and Canada. Second, the feed price must match what the shopper sees on the page and at checkout. If you run a sale, update the feed at the same time or use the <code>sale_price</code> attribute.</p>
+<p>There are three ways to get products in:</p>
+<ul>
+  <li><strong>Shopify:</strong> the Google &amp; YouTube app syncs products automatically. Google's <a href="https://support.google.com/merchants/answer/13693394?hl=en" target="_blank" rel="noopener">product sync guide</a> recommends automatic sync, and shows a product as "Limited" when some data is missing.</li>
+  <li><strong>WooCommerce and other platforms:</strong> use the platform's Google integration or a feed plugin that outputs the attributes above.</li>
+  <li><strong>Small catalogues:</strong> a Google Sheet uploaded as a feed works and is easy to fix by hand.</li>
+</ul>
+<p>Google also asks for fresh product data at least every 30 days, according to its <a href="https://support.google.com/google-ads/answer/6275312?hl=en" target="_blank" rel="noopener">requirements for Shopping ads</a>. An automatic daily sync handles that for you.</p>
+
+<h2 id="shipping-and-returns">How do you set shipping and returns in Merchant Center?</h2>
+<p><strong>Open Shipping and returns under Products &amp; store in Merchant Center, add a shipping policy for India with your handling time, delivery time and cost, then add your return policy.</strong> Google's <a href="https://support.google.com/merchants/answer/6069284?hl=en" target="_blank" rel="noopener">shipping settings guide</a> warns that products may be disapproved if no shipping service matches the product's currency, so an INR policy for India is essential.</p>
+<ol>
+  <li>In Merchant Center, go to <strong>Products &amp; store</strong> &gt; <strong>Shipping and returns</strong> &gt; <strong>Shipping policies</strong> &gt; <strong>Add shipping policy</strong>.</li>
+  <li>Choose India as the country and "All products" unless some items ship differently (bulky goods, for example).</li>
+  <li>Set the delivery time manually: an order cut-off time, handling time (days to pack and dispatch) and transit time (days in transit). Be honest; promising faster delivery than you manage leads to complaints and policy trouble.</li>
+  <li>Set the cost: free shipping, a flat rate, or free above an order value. It must match what your checkout charges.</li>
+  <li>Add a return policy in the Returns tab with the return window and who pays return shipping, matching your website policy.</li>
+</ol>
+<p>Google allows up to 20 shipping policies per country, so you can make separate ones for heavy items or for metro and non-metro delivery times if your courier rates differ.</p>
+
+<h2 id="link-and-track">How do you link Google Ads and set up conversion tracking?</h2>
+<p><strong>Link your Google Ads account inside Merchant Center, then make sure purchases are tracked before you spend anything.</strong> Google's onboarding guide is direct about why: "If conversion tracking is not active, Google Ads may limit your campaign spend." Without purchase data, automated bidding also has nothing to learn from.</p>
+<ol>
+  <li>In Merchant Center, open the settings for linked apps and services and link your Google Ads account (or create one there). Accept the request in Google Ads under the linked accounts settings.</li>
+  <li>Set up a Purchase conversion. On Shopify, the Google &amp; YouTube app can create and send it for you. On other platforms, install the Google tag and send the purchase event with order value and currency.</li>
+  <li>Place a test order and confirm the conversion appears in Google Ads (it can take a few hours).</li>
+  <li>Check that the conversion value is the order value, not a fixed number, so ROAS bidding works later.</li>
+</ol>
+<p>Google says there is no waiting period after linking, but products can take a few hours to a few days to appear in Google Ads while they are crawled and indexed. If you run Meta ads too, expect the two platforms to report different purchase numbers; our guide on <a href="/blog/meta-ads-shopify-sales-mismatch">why Meta and Shopify sales don't match</a> explains how attribution windows cause this, and the same logic applies to Google.</p>
+
+<h2 id="create-shopping-campaign">How do you create a Google Shopping campaign step by step?</h2>
+<p><strong>In Google Ads, click the plus button, choose New campaign, pick Sales, select Shopping as the campaign type, choose your Merchant Center account and set budget, bidding and locations.</strong> These are the steps from Google's <a href="https://support.google.com/google-ads/answer/3455481?hl=en" target="_blank" rel="noopener">Create a Shopping campaign</a> page:</p>
+<ol>
+  <li>Click <strong>+</strong> &gt; <strong>New campaign</strong>, and choose <strong>Sales</strong> as the objective.</li>
+  <li>Select <strong>Shopping</strong> as the campaign type. (Performance Max is offered here too; see the next section.)</li>
+  <li>Choose your Merchant Center account. You cannot change it after the campaign is created.</li>
+  <li>Name the campaign clearly, for example "Shopping | India | All products".</li>
+  <li>Set a daily budget you can afford to run for several weeks without changes.</li>
+  <li>Choose bidding. With no conversion history yet, many advertisers start with Maximise clicks or Manual CPC to collect data, then move to a target ROAS once purchases come in.</li>
+  <li>Leave <strong>Campaign priority</strong> alone unless the same products run in more than one Shopping campaign; it decides which campaign's budget is used when they overlap.</li>
+  <li>Set locations to India (or only the states and cities you deliver to). Under networks, decide whether to keep Google search partners.</li>
+  <li>Name the ad group. The ads are created automatically from your Merchant Center data, so there is nothing to write.</li>
+  <li>Review and click <strong>Publish campaign</strong>.</li>
+</ol>
+<p>Google reviews new campaigns for policy compliance, which takes 1 to 2 days according to its onboarding guide. One more setting to check: Google's help page says local inventory ads will soon run by default in Shopping campaigns. If you also have physical stores and want separate online and store budgets, review your inventory filters.</p>
+
+<h2 id="standard-vs-performance-max">Should you use Standard Shopping or Performance Max?</h2>
+<p><strong>Use Performance Max if you want Google to find buyers across all its channels with little day-to-day work; use Standard Shopping if you want control over search terms, negative keywords and bids by product.</strong> Many stores run both: Performance Max for the full catalogue, Standard Shopping to test or protect specific products.</p>
+<table>
+  <thead>
+    <tr><th>Question</th><th>Standard Shopping</th><th>Performance Max</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Where ads show</td><td>Google Search, Shopping tab and search partners</td><td>All Google inventory: Search, Shopping, YouTube, Display, Gmail, Discover, Maps</td></tr>
+    <tr><td>Negative keywords</td><td>At campaign level</td><td>At account level (per Google's onboarding guide)</td></tr>
+    <tr><td>Search terms</td><td>Full search terms report</td><td>Fewer controls; Google decides more</td></tr>
+    <tr><td>Bids by product group</td><td>Yes, with manual CPC</td><td>No; Google bids automatically</td></tr>
+    <tr><td>Creative needed</td><td>None beyond the feed</td><td>Feed plus images, videos and text for other channels</td></tr>
+    <tr><td>Best for</td><td>Learning what sells, tight budgets, control</td><td>Scaling once tracking and the feed are solid</td></tr>
+  </tbody>
+</table>
+<p>Google's onboarding guide calls Performance Max the best way to maximise online sales and confirms that both campaign types can target the same products; when they overlap, Ad Rank decides which one serves. Whichever you pick, give it time: Google notes campaigns may need up to 2 weeks to learn, and performance may move around during that period. We cover the Performance Max side in more depth in our guide to <a href="/blog/google-ads-for-d2c-brands">Google Ads for D2C brands</a>.</p>
+
+<h2 id="optimise-after-launch">How do you optimise Shopping ads after launch?</h2>
+<p><strong>Fix disapprovals first, then improve product titles, then split products by margin so your budget goes to items that make money.</strong> Bids and budgets come last, because a weak feed cannot be fixed with a higher bid.</p>
+<ol>
+  <li><strong>Week 1: clear disapprovals.</strong> Open Products &gt; Needs attention in Merchant Center, and product diagnostics in Google Ads. Fix price mismatches, missing images and missing shipping first.</li>
+  <li><strong>Week 2: rewrite titles for your top sellers.</strong> Put the words shoppers use first: product type, brand, then the attribute they filter by (size, colour, material, pack size).</li>
+  <li><strong>Week 3: split product groups.</strong> In Standard Shopping, subdivide the "All products" group by product type, brand or a <code>custom_label</code> such as "high margin", as described in Google's <a href="https://support.google.com/google-ads/answer/6275317?hl=en" target="_blank" rel="noopener">product groups guide</a>. Give high-margin groups higher bids.</li>
+  <li><strong>Week 4: add negative keywords.</strong> Read the search terms report and exclude searches that will never buy, such as "free", "job" or competitor product names you do not sell.</li>
+  <li><strong>Ongoing: judge on profit, not clicks.</strong> Work out your break-even ROAS before raising budgets; our guide on <a href="/blog/good-roas-for-ecommerce">what a good ROAS is for e-commerce</a> shows the calculation.</li>
+</ol>
+<p>Make changes in small steps. Google's own advice is to change campaigns gradually so bidding and learning are not disrupted.</p>
+
+<h2 id="common-problems">Why are my Google Shopping ads not showing?</h2>
+<p><strong>Usually because products are disapproved, the campaign is still under review, the account is suspended for a policy issue, or the budget and bids are too low to win auctions.</strong> Work through this table in order.</p>
+<table>
+  <thead>
+    <tr><th>Symptom</th><th>Likely cause</th><th>Fix</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>No products in Google Ads</td><td>Accounts not linked, or products still being indexed</td><td>Check the link in Merchant Center; wait a few days after linking</td></tr>
+    <tr><td>Products disapproved: price mismatch</td><td>Feed price differs from page, or GST left out</td><td>Sync feed with the site; include GST in the price</td></tr>
+    <tr><td>Products disapproved: shipping</td><td>No shipping policy for India in INR</td><td>Add an India shipping policy in Shipping and returns</td></tr>
+    <tr><td>Whole account limited or suspended</td><td>Missing contact details, return policy or a misrepresentation flag</td><td>Fix the website issues, then request a review in Merchant Center</td></tr>
+    <tr><td>Campaign eligible but no impressions</td><td>Low bids or budget, or campaign still in review</td><td>Wait for review; raise bids on key product groups</td></tr>
+    <tr><td>Spend is limited</td><td>No active conversion tracking</td><td>Set up and test the purchase conversion</td></tr>
+  </tbody>
+</table>
+<p>If clicks come in but sales do not, the problem is usually on the product page, not in Google. Our guide to <a href="/blog/meta-ads-for-ecommerce-india">Meta ads for e-commerce in India</a> covers the same tracking and landing page checks from the Meta side, and they apply to Google traffic too.</p>
+
+<h2 id="setup-checklist">Google Shopping ads setup checklist</h2>
+<p><strong>Use this list to check your setup in the order Google expects it.</strong> Tick every line before you raise the budget.</p>
+<ul>
+  <li>Website has contact details, return policy, secure checkout and clear shipping and COD costs.</li>
+  <li>Merchant Center account created with India as the business country; website verified and claimed.</li>
+  <li>Shipping policy for India in INR with honest handling and transit times; return policy added.</li>
+  <li>Feed has id, title, description, link, image_link, availability, price (INR, GST included) and brand for every product.</li>
+  <li>GTIN added for branded products that have one; variants grouped with item_group_id.</li>
+  <li>No disapproved products among your best sellers.</li>
+  <li>Google Ads linked; purchase conversion tested with a real order value.</li>
+  <li>Campaign created (Standard Shopping or Performance Max) with India as the location and a budget you can hold steady for a few weeks.</li>
+  <li>Free listings switched on in Merchant Center.</li>
+  <li>A weekly routine: check disapprovals, search terms and ROAS by product group.</li>
+</ul>
+<p>If you would rather have someone check this for you, see how we approach <a href="/industries/ecommerce">e-commerce marketing</a>, our <a href="/services/paid-ads">Google and Meta ads management</a> and <a href="/services/shopify-development">Shopify development</a>, or ask for a <a href="/free-audit">free audit</a> of your store and ad account.</p>
+
+<h2 id="sources">Sources</h2>
+<ul>
+  <li><a href="https://support.google.com/google-ads/answer/13975266?hl=en" target="_blank" rel="noopener">Google Ads Help: Onboarding guide for Shopping ads</a></li>
+  <li><a href="https://support.google.com/google-ads/answer/3455481?hl=en" target="_blank" rel="noopener">Google Ads Help: Create a Shopping campaign</a></li>
+  <li><a href="https://support.google.com/google-ads/answer/6275312?hl=en" target="_blank" rel="noopener">Google Ads Help: Requirements for Shopping ads</a></li>
+  <li><a href="https://support.google.com/google-ads/answer/6275317?hl=en" target="_blank" rel="noopener">Google Ads Help: Manage a Shopping campaign with product groups</a></li>
+  <li><a href="https://support.google.com/merchants/answer/7052112?hl=en" target="_blank" rel="noopener">Google Merchant Center Help: Product data specification</a></li>
+  <li><a href="https://support.google.com/merchants/answer/6069284?hl=en" target="_blank" rel="noopener">Google Merchant Center Help: Set up shipping</a></li>
+  <li><a href="https://support.google.com/merchants/answer/6363310?hl=en" target="_blank" rel="noopener">Google Merchant Center Help: Online store requirements</a></li>
+  <li><a href="https://support.google.com/merchants/answer/13889434?hl=en" target="_blank" rel="noopener">Google Merchant Center Help: Free listings for products</a></li>
+  <li><a href="https://support.google.com/merchants/answer/13693394?hl=en" target="_blank" rel="noopener">Google Merchant Center Help: Syncing your products (Google &amp; YouTube app on Shopify)</a></li>
+  <li><a href="https://help.shopify.com/en/manual/online-sales-channels/google/getting-setup/connect" target="_blank" rel="noopener">Shopify Help: Set up the Google &amp; YouTube channel</a></li>
+</ul>
