@@ -500,4 +500,8 @@ export const BLOG_MESSAGES: Record<string, { ref: string; message: string }> = {
     ref: 'blog-product-page-cro',
     message: 'I read your guide on product page optimization. People click my ads and land on my product pages but leave without buying. Can you look at my product pages?',
   },
+  'google-shopping-ads-india': {
+    ref: 'blog-google-shopping-in',
+    message: 'I read your guide on Google Shopping ads. I want my online store products to show on Google Shopping. Can you help me set up Merchant Center and the campaign?',
+  },
 };

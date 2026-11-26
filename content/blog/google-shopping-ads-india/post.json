@@ -1,0 +1,76 @@
+{
+  "title": "Google Shopping Ads in India: Step-by-Step Setup for Online Stores",
+  "seoTitle": "Google Shopping Ads in India: Step-by-Step Setup Guide",
+  "excerpt": "Set up Google Shopping ads in India: Merchant Center, a feed with GST-inclusive INR prices, shipping and returns, tracking, and Shopping vs Performance Max",
+  "date": "2026-11-29",
+  "category": "Paid Ads",
+  "industry": "ecommerce",
+  "service": "paid-ads",
+  "image": "/images/people/blog/google-shopping-ads-india-cover.jpg",
+  "imageAlt": "A miniature shopping trolley full of small white boxes on a wooden desk in front of an open laptop and colourful shopping bags",
+  "inlineImages": [
+    {
+      "src": "/images/people/blog/google-shopping-ads-india-1.jpg",
+      "alt": "A white and black handheld barcode scanner on a plain white background",
+      "beforeHeading": "product-feed-india",
+      "caption": "Clean product data, including a correct GTIN where one exists, decides which searches your products show for."
+    },
+    {
+      "src": "/images/people/blog/google-shopping-ads-india-2.jpg",
+      "alt": "A small shopping trolley holding green and red paper shopping bags on a laptop keyboard",
+      "beforeHeading": "create-shopping-campaign"
+    }
+  ],
+  "about": [
+    {
+      "name": "Google Shopping",
+      "sameAs": "https://en.wikipedia.org/wiki/Google_Shopping"
+    },
+    {
+      "name": "Google Ads",
+      "sameAs": "https://en.wikipedia.org/wiki/Google_Ads"
+    },
+    {
+      "name": "E-commerce",
+      "sameAs": "https://en.wikipedia.org/wiki/E-commerce"
+    }
+  ],
+  "faqs": [
+    {
+      "question": "How do Google Shopping ads work?",
+      "answer": "Google Shopping ads are built from your product feed in Merchant Center, not from ad text you write. When someone searches for something you sell, Google matches it to a product and shows its image, title, price and store name. You do not pick keywords; Google reads your feed and product pages, and you pay per click."
+    },
+    {
+      "question": "Are Google Shopping ads available in India?",
+      "answer": "Yes. Indian stores can create a Merchant Center account with India as the business country, upload products priced in INR and run Shopping or Performance Max campaigns targeting India. The same feed can also show products for free in free listings across Search, Images, YouTube and the Shopping tab."
+    },
+    {
+      "question": "Should the price in my Google feed include GST?",
+      "answer": "Yes. Google's product data specification says taxes are left out of the price only in the US and Canada; everywhere else, including India, the price must include VAT or GST. The feed price must also match the price on your product page and at checkout, or the product can be disapproved."
+    },
+    {
+      "question": "What is the difference between Google Shopping and Performance Max?",
+      "answer": "Standard Shopping shows product ads on Google Search, the Shopping tab and search partners, with campaign-level negative keywords and bids by product group. Performance Max uses the same feed but runs across all Google channels with automated bidding and less manual control. Many stores use Performance Max to scale and Standard Shopping for control."
+    },
+    {
+      "question": "Can I run Google Shopping ads from Shopify?",
+      "answer": "Yes. Install the Google & YouTube app in Shopify, connect your Google account and Merchant Center, and the app syncs your products automatically and can claim your domain. Google recommends automatic sync. Check the app for products marked Limited, which means some product data is missing or has errors."
+    },
+    {
+      "question": "Why are my Google Shopping ads not showing?",
+      "answer": "The usual causes are disapproved products, a campaign still under policy review, an account limited for website issues such as missing contact details or return policy, or bids and budget too low to win auctions. Check Merchant Center's Needs attention list and product diagnostics in Google Ads first."
+    },
+    {
+      "question": "How long does it take for Google Shopping ads to start?",
+      "answer": "Google says new campaigns take 1 to 2 days to be reviewed for policy compliance. After linking Merchant Center and Google Ads, products can take a few hours to a few days to appear. Campaigns may then need up to 2 weeks to learn, so judge results after that period, not on day one."
+    },
+    {
+      "question": "Do I need conversion tracking for Shopping ads?",
+      "answer": "Yes. Google's onboarding guide warns that if conversion tracking is not active, Google Ads may limit your campaign spend. Set up a Purchase conversion that sends the real order value, test it with an order, and only then raise budgets or switch to ROAS-based bidding."
+    },
+    {
+      "question": "What should a good Google Shopping product title include?",
+      "answer": "Start with the words shoppers search: the product type and brand, then the attribute they filter by, such as size, colour, material or pack size. Titles can be up to 150 characters and must match the product page. Leave out offers, shipping messages and capital-letter promotional text."
+    }
+  ]
+}
