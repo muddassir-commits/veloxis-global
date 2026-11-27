@@ -1,0 +1,31 @@
+{
+  "title": "Claude for Marketing: Setup, Prompt Template and 4 Workflows",
+  "seoTitle": "Claude for Marketing: Setup, Prompts and 4 Workflows",
+  "excerpt": "How to use Claude for marketing: set up a brand Project, use a copy-ready prompt template, and run ad copy, keyword, report and reel script workflows.",
+  "date": "2026-11-30",
+  "category": "AI Automation",
+  "service": "ai-automation",
+  "industry": "general",
+  "image": "/images/people/blog/claude-for-marketing-cover.jpg",
+  "imageAlt": "A hand holding a black marker over a blank spiral notepad on a dark wooden desk, next to a cup of black coffee and a white envelope",
+  "inlineImages": [
+    { "src": "/images/people/blog/claude-for-marketing-1.jpg", "alt": "Rows of bright orange, green, pink and blue sticky notes with handwritten notes covering a wall, mostly out of focus", "beforeHeading": "claude-marketing-prompt-template", "caption": "Sort ideas by angle before you ask for copy." },
+    { "src": "/images/people/blog/claude-for-marketing-2.jpg", "alt": "Close-up of a hand writing with a black pen in a small open notebook on a wooden table, with a tablet, a glass and a white cup blurred behind", "beforeHeading": "check-claude-output-before-publishing" }
+  ],
+  "about": [
+    { "name": "Claude (language model)", "sameAs": "https://en.wikipedia.org/wiki/Claude_(language_model)" },
+    { "name": "Content marketing", "sameAs": "https://en.wikipedia.org/wiki/Content_marketing" },
+    { "name": "Prompt engineering", "sameAs": "https://en.wikipedia.org/wiki/Prompt_engineering" }
+  ],
+  "faqs": [
+    { "question": "How can a small marketing team use Claude?", "answer": "Set up one Claude Project per brand with your brand notes, audience and rules as knowledge files, then use it for repeatable jobs: ad copy variants, keyword grouping, weekly report summaries, content briefs and reel scripts. A person still checks every fact and claim and makes the final call before anything goes live." },
+    { "question": "Is Claude free to use for marketing?", "answer": "Claude has a free plan, and Claude's help pages say Projects, artifacts and skills are available on all plans, including free. Free accounts are capped at five projects, and project sharing with teammates needs a Team or Enterprise plan. Check current plan limits in your own account, because features change often." },
+    { "question": "What is a Claude Project and why use one for marketing?", "answer": "A Project is a workspace with its own chats, instructions and uploaded knowledge files. For marketing it means every chat already knows your brand, customers, voice and banned claims, so you stop pasting the same brief and get less generic output. Keep one Project per brand or client so rules never mix." },
+    { "question": "What is the best prompt format for marketing tasks in Claude?", "answer": "Include four parts: the goal the output must achieve, the context Claude can't guess such as audience, offer and channel, the exact task with how many versions, and the format with length limits. Ask it to end with a list of claims that need proof. Anthropic's prompting guide recommends clear, direct instructions with context." },
+    { "question": "Can Claude write Google and Meta ad copy?", "answer": "Yes. Paste your offer and the platform limits, ask for variants grouped by angle, and have Claude count characters. Google responsive search ad headlines allow up to 30 characters and descriptions up to 90, per Google Ads Help. Remove any claim you can't prove, then load the copy into your ad account yourself." },
+    { "question": "Can Claude do keyword research?", "answer": "Claude can group and organise keywords, but it does not know real search volumes. Export queries from Google Search Console or a keyword tool, paste them in, and ask it to cluster them by intent and map each group to a page. Tell it not to add volumes or keywords that are not in your list." },
+    { "question": "Does Claude make mistakes in marketing content?", "answer": "Yes, it can state wrong facts confidently. Anthropic's own documentation says its techniques reduce made-up answers but do not remove them, and that critical information should be validated. Ask Claude to quote the line from your brief behind each claim, delete what has no support, and check numbers against your accounts." },
+    { "question": "Is it safe to put customer data into Claude?", "answer": "Be careful. Check your privacy setting first: on consumer plans you choose whether chats help improve Anthropic's models. India's DPDP Act also sets duties on how personal data is used. Paste summaries and exported numbers, not customer lists, phone numbers, health details or ID numbers." },
+    { "question": "What marketing work should not be handed to Claude?", "answer": "Keep budget and bid decisions, final approval of copy, legal wording such as RERA disclosures and medical claims, replies to angry customers, and anything that needs a real number. Never let it write testimonials, reviews or case studies, which must come from real customers, and never use benchmarks it produces without a cited source." }
+  ]
+}
