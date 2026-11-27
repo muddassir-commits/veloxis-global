@@ -1,0 +1,155 @@
+<p><strong>To use Claude for marketing, set up one Project per brand with your brand notes, audience and rules as knowledge files, then run repeatable workflows in it: ad copy variants, keyword clustering, weekly report summaries and reel scripts. Give every prompt a goal, context and output format, and check every fact and claim before it goes live.</strong></p>
+<p>This guide is for small marketing teams, e-commerce and D2C founders, clinic and local business owners, and real estate marketers who have opened Claude, typed "write me an ad" and got something generic back. Most pages that rank for "Claude for marketing" are feature tours or prompt lists, and several quote time-saved or open-rate figures with no source. Here you get the setup steps, a copy-ready prompt template, four workflows with exact inputs and outputs, a checking routine for Indian advertising and data rules, and a short list of jobs to keep with a person. Every output example in this post is a sample we wrote to show the format, not a result from a real account. Claude's help pages were checked on 27 November 2026; features move fast, so confirm anything plan-specific in your own account.</p>
+
+<h2 id="what-can-claude-do-for-marketing">What can Claude do for a marketing team?</h2>
+<p><strong>Claude is best at the language and analysis parts of marketing: drafting copy variants, turning raw notes and exports into structured plans, summarising reports and rewriting content for different channels.</strong> It does not run your ads, post to Instagram or know your sales numbers unless you give it the data. Five features matter for marketing work, and it helps to know which one does what before you start.</p>
+<table>
+  <thead>
+    <tr><th>Feature</th><th>What it does</th><th>Marketing use</th><th>Availability (per Claude's help pages)</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Chat</td><td>One conversation with Claude</td><td>Quick one-off drafts and questions</td><td>All plans</td></tr>
+    <tr><td>Projects</td><td>A workspace with its own chats, instructions and knowledge files</td><td>One per brand or client, so every chat starts with your brand notes</td><td>All plans; free accounts are capped at five projects; sharing only on Team and Enterprise (<a href="https://support.claude.com/en/articles/9517075-what-are-projects">Claude Help Center: What are projects</a>)</td></tr>
+    <tr><td>Artifacts</td><td>Documents, pages, diagrams, dashboards and small tools that open beside the chat</td><td>Content calendars, briefs, landing page drafts, report dashboards</td><td>All plans; needs "Code execution and file creation" switched on under Settings, Capabilities (<a href="https://support.claude.com/en/articles/9487310-what-are-artifacts-and-how-do-i-use-them">Claude Help Center: Artifacts</a>)</td></tr>
+    <tr><td>Skills</td><td>Folders of instructions and resources Claude loads when a task needs them</td><td>A saved "brand voice" or "ad copy checker" routine you don't retype</td><td>All plans; needs code execution on (<a href="https://support.claude.com/en/articles/12512176-what-are-skills">Claude Help Center: What are skills</a>)</td></tr>
+    <tr><td>Connectors</td><td>Links to apps such as Google Drive so Claude can read files and take actions you approve</td><td>Reading briefs and reports from Drive instead of pasting them</td><td>Depends on plan and admin settings (<a href="https://support.claude.com/en/articles/11176164-use-connectors-to-extend-claude-s-capabilities">Claude Help Center: Connectors</a>)</td></tr>
+  </tbody>
+</table>
+<p>If you only use one feature, use Projects. The single biggest reason marketing output from any AI tool reads generic is missing context: the tool doesn't know who you sell to, what you can legally claim or how you sound. A Project fixes that once instead of in every prompt.</p>
+
+<h2 id="how-to-set-up-claude-for-marketing">How do you set up Claude for marketing, step by step?</h2>
+<p><strong>Create one Project per brand, add a short brand file and your rules as knowledge, write project instructions that set the role and the checks, then test it with one real task before using it daily.</strong> The whole setup takes one sitting if you already know your brand basics.</p>
+<ol>
+  <li><strong>Check your privacy setting first.</strong> On consumer plans (Free, Pro, Max), Anthropic lets you choose whether your chats are used to improve its models, and you can change that choice at any time in Settings, Privacy (<a href="https://www.anthropic.com/news/updates-to-our-consumer-terms">Anthropic: Updates to consumer terms</a>). Decide this before you add any business files.</li>
+  <li><strong>Turn on the capabilities you need.</strong> Go to Settings, Capabilities and switch on code execution and file creation, which artifacts and skills both rely on. On Team and Enterprise plans an owner controls this under Organization settings.</li>
+  <li><strong>Create the Project.</strong> Click Projects, then create a new project and name it after the brand, for example "Brand A – marketing". Keep separate brands in separate projects so their rules never mix.</li>
+  <li><strong>Write a one-page brand file</strong> and upload it as knowledge (template below). Add your current offer sheet, your product or service list, two or three pieces of past copy you liked, and any compliance notes (RERA number rules for property ads, medical claim limits for clinics, return policy for a store).</li>
+  <li><strong>Paste project instructions</strong> (template below) so every chat starts with the same role and checks.</li>
+  <li><strong>Run one test task</strong> you already know the answer to, such as rewriting last month's best ad. If the result misses your tone, fix the brand file, not the prompt.</li>
+</ol>
+<h3 id="brand-file-template">Brand file template (copy and fill in)</h3>
+<blockquote>
+<p><strong>Brand:</strong> [name] sells [what] to [who] in [where].<br>
+<strong>Customers:</strong> [2–3 short buyer descriptions: who they are, what they worry about, what makes them buy].<br>
+<strong>Offer:</strong> [products or services, what makes them different, delivery or service area].<br>
+<strong>Voice:</strong> [3 words, e.g. plain, warm, direct]. We say: [phrases]. We never say: [phrases].<br>
+<strong>Claims we can prove:</strong> [only facts you have evidence for].<br>
+<strong>Claims we must never make:</strong> [e.g. "guaranteed results", "best in city", cure claims, fake urgency].<br>
+<strong>Legal notes:</strong> [RERA number on every property ad, no before/after photos for clinics, etc.].</p>
+</blockquote>
+<h3 id="project-instructions-template">Project instructions template</h3>
+<blockquote>
+<p>You are a senior marketer for the brand described in the knowledge files. Use only facts from those files or from what I paste in the chat. If a fact, number or claim is not in them, say "not in the brief" instead of guessing. Write in plain Indian English unless I ask for Hindi or Hinglish. For every piece of copy, list any claim that needs proof at the end under "Check before publishing".</p>
+</blockquote>
+<p>That last line matters. Anthropic's own guidance says that letting Claude admit it doesn't know, and restricting it to the documents you give it, are among the basic ways to reduce made-up facts (<a href="https://platform.claude.com/docs/en/test-and-evaluate/strengthen-guardrails/reduce-hallucinations">Claude Docs: Reduce hallucinations</a>).</p>
+
+<h2 id="claude-marketing-prompt-template">What prompt format gets useful marketing output from Claude?</h2>
+<p><strong>Give Claude four things in every prompt: the goal, the context it can't guess, the exact task, and the output format with limits.</strong> Anthropic's prompting guide recommends being clear and direct, giving context and examples, and structuring long inputs with tags so Claude can tell your instructions apart from your data (<a href="https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices">Claude Docs: Prompting best practices</a>).</p>
+<table>
+  <thead>
+    <tr><th>Part</th><th>What to write</th><th>Weak version</th><th>Strong version</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Goal</td><td>What the output must achieve</td><td>"Write an ad"</td><td>"Get first-time buyers to order the trial pack"</td></tr>
+    <tr><td>Context</td><td>Audience, offer, channel, what worked before</td><td>(none)</td><td>"Women 25–40 in metro cities, buying online for the first time; COD available"</td></tr>
+    <tr><td>Task</td><td>The exact job and how many versions</td><td>"Make it catchy"</td><td>"Write 6 primary texts, each with a different angle"</td></tr>
+    <tr><td>Format</td><td>Length, layout, what to flag</td><td>(none)</td><td>"Table: angle, text, claim to check. Under [your limit] characters each."</td></tr>
+  </tbody>
+</table>
+<p>The audience and length in the "strong" column are placeholders: replace them with your own. Copy-ready version:</p>
+<blockquote>
+<p>Goal: [what this must achieve].<br>
+Context: &lt;brief&gt;[paste audience, offer, channel, past winners]&lt;/brief&gt;<br>
+Task: [exact job], give [number] versions, each with a different angle.<br>
+Format: [table or list], [length limit], then a "Check before publishing" list of every claim that needs proof.</p>
+</blockquote>
+
+<h2 id="ad-copy-variants-with-claude">How do you write ad copy variants with Claude?</h2>
+<p><strong>Paste your offer and the platform's limits, ask for variants grouped by angle, then have Claude check its own copy against the limits and your banned-claims list before you pick.</strong> Angles matter more than wording: ten versions of the same idea test nothing.</p>
+<ol>
+  <li>Open your brand Project and paste the offer, landing page text and any past ad that performed well.</li>
+  <li>Give the platform limits. For Google responsive search ads, headlines can be up to 30 characters and descriptions up to 90; you can add up to 15 headlines and 4 descriptions (<a href="https://support.google.com/google-ads/answer/7684791">Google Ads Help: About responsive search ads</a>).</li>
+  <li>Ask for variants by angle: problem, outcome, objection (price, trust, delivery), proof you actually have, and offer.</li>
+  <li>Ask Claude to count characters and flag any line over the limit, then to list every claim that needs evidence.</li>
+  <li>Delete anything you can't prove, then load the rest into your ad account yourself.</li>
+</ol>
+<p><em>Sample prompt (illustration only):</em></p>
+<blockquote>
+<p>Using the brief in this project, write 15 Google responsive search ad headlines (max 30 characters each) and 4 descriptions (max 90 characters each) for our trial pack. Group headlines by angle: problem, outcome, objection, offer. Show the character count next to each line and mark any over the limit. Do not use "best", "No. 1" or "guaranteed". End with a list of claims that need proof.</p>
+</blockquote>
+<p>For Meta ads, ask for primary texts and headlines by angle in the same way, then rotate new angles in when results slow. If you sell online, our <a href="/services/paid-ads">Meta and Google ads service</a> page explains how we set up angle tests, and the <a href="/blog/good-roas-for-ecommerce">guide to a good ROAS for e-commerce</a> shows how to judge them.</p>
+<p>Real estate marketers can use the same flow for project ads, but keep the RERA registration details from your brand file in every draft and check them yourself before publishing. A clinic or local business should add "no cure, no guaranteed outcome, no before/after claims" to the banned list.</p>
+
+<h2 id="keyword-clustering-with-claude">How do you cluster keywords and plan content with Claude?</h2>
+<p><strong>Export real queries from Google Search Console or your keyword tool, paste them in, and ask Claude to group them by search intent and suggest one page or post per group.</strong> Claude organises the list well; it does not know search volumes, so never let it invent them.</p>
+<ol>
+  <li>In Search Console, open Performance, Search results, select the Queries tab and export the list. Add terms from Google autocomplete and "People also ask" for your main topics.</li>
+  <li>Paste the list inside <code>&lt;keywords&gt;</code> tags and ask: "Group these by intent (learn, compare, buy, local). For each group give a page title, the main keyword, and which existing page on our site it belongs to, or 'new page'. Do not add volumes or keywords that are not in the list."</li>
+  <li>Ask for the output as a table artifact so you can download it and sort it.</li>
+  <li>Check each group against your site: two groups that point to the same page should usually become one.</li>
+  <li>Turn the "new page" rows into briefs: question headings, the direct answer, the facts you need to source.</li>
+</ol>
+<p>This is also where answer engines come in. Pages that open with a direct answer and use question headings are easier for AI search tools to quote; our <a href="/blog/generative-engine-optimization-guide">guide to generative engine optimisation</a> walks through that format step by step.</p>
+
+<h2 id="marketing-reports-with-claude">How do you turn ad and sales reports into a weekly summary?</h2>
+<p><strong>Export the week's data as CSV, upload it to the Project chat, and ask Claude for a short summary that compares this week with last week, names the biggest changes and asks you questions about anything it can't explain.</strong> You stay the analyst; Claude does the reading and first draft.</p>
+<ol>
+  <li>Export campaign-level data from Meta Ads Manager or Google Ads for two periods with the same columns: spend, impressions, clicks, purchases or leads, and conversion value.</li>
+  <li>Upload both files and ask: "Compare week A with week B. Show changes in a table. List the three biggest changes and possible reasons, marked as guesses. Ask me what you need to know to explain them."</li>
+  <li>Ask for a simple dashboard artifact if you want to share the view with your team.</li>
+  <li>Check two or three numbers in the summary against the ad account before you send it. If one is wrong, ask Claude to show the rows it used.</li>
+</ol>
+<p>If your store's ad numbers and Shopify numbers never match, fix tracking first; no summary can explain data that is wrong at the source. A free <a href="/tools/website-audit">website audit</a> is a quick way to spot missing tags.</p>
+
+<h2 id="reel-scripts-with-claude">How do you write reel and video scripts with Claude?</h2>
+<p><strong>Give Claude the product, the one point the video must land and the length, and ask for a script split into hook, body and call to action with what is shown on screen for each line.</strong> Short videos need a single idea, so ask for several separate scripts rather than one that tries to say everything.</p>
+<ol>
+  <li>List customer questions from your WhatsApp inbox, reviews or sales calls; these make the best hooks.</li>
+  <li>Ask: "Write 5 reel scripts, each answering one question below. Format: hook (first line spoken), 3–4 body lines, call to action, and on-screen visual for each line. Plain spoken Hinglish."</li>
+  <li>Ask Claude to cut each script by a third. First drafts of spoken scripts often run long.</li>
+  <li>Record a rough version on your phone and read it aloud before filming properly.</li>
+</ol>
+<p>For a local business or clinic, the same method works for "how it works" and "what to expect at your first visit" videos. For a property project, use site walk-through scripts built from the brochure facts in your brand file.</p>
+
+<h2 id="check-claude-output-before-publishing">How do you check Claude's output before it goes live?</h2>
+<p><strong>Treat every draft as unverified: check facts and numbers against your sources, remove claims you can't prove, and confirm you haven't pasted personal data you shouldn't have.</strong> Anthropic itself notes that its hallucination techniques reduce errors but do not remove them, and says to validate critical information (<a href="https://platform.claude.com/docs/en/test-and-evaluate/strengthen-guardrails/reduce-hallucinations">Claude Docs: Reduce hallucinations</a>).</p>
+<table>
+  <thead>
+    <tr><th>Check</th><th>Why</th><th>How</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Every fact and number</td><td>Claude can state wrong facts confidently</td><td>Ask it to quote the line from your brief that supports each claim; delete what has no quote</td></tr>
+    <tr><td>Advertising claims</td><td>The ASCI Code requires claims to be truthful and capable of substantiation (<a href="https://www.ascionline.in/the-asci-code/">ASCI: The ASCI Code</a>)</td><td>Remove "best", "No. 1", "guaranteed" and health or income claims you can't back with evidence</td></tr>
+    <tr><td>Customer data</td><td>India's DPDP Act sets duties on how personal data is used and protected (<a href="https://www.indiacode.nic.in/handle/123456789/2158">India Code: DPDP Act, 2023</a>)</td><td>Paste summaries, not customer lists, phone numbers or health details</td></tr>
+    <tr><td>Platform limits</td><td>Copy over the limit gets cut or rejected</td><td>Ask Claude to count characters, then check in the ad preview</td></tr>
+    <tr><td>Brand voice</td><td>Drafts drift toward generic phrasing</td><td>Read aloud; replace any line you wouldn't say to a customer</td></tr>
+  </tbody>
+</table>
+<p><em>General information, not legal advice. Rules and help pages checked on 27 November 2026.</em></p>
+
+<h2 id="what-not-to-use-claude-for">What should you not hand over to Claude?</h2>
+<p><strong>Keep decisions, final approval and anything that needs a real number or a real person with your team.</strong> Claude is a fast drafter and organiser, not a source of truth about your market or your results.</p>
+<ul>
+  <li><strong>Search volumes, benchmarks and competitor numbers.</strong> Get them from a keyword tool, your ad account or a cited study.</li>
+  <li><strong>Testimonials, reviews and case studies.</strong> Never let it write these; they must come from real customers.</li>
+  <li><strong>Budget and bid decisions.</strong> Use it to explain options, then decide with your own data.</li>
+  <li><strong>Legal wording.</strong> RERA disclosures, medical claims and refund terms should be checked by someone who knows the rules.</li>
+  <li><strong>Replies to angry customers.</strong> A draft is fine; sending it unreviewed is not.</li>
+</ul>
+<p>If you want this kind of workflow built into your daily operations, with WhatsApp replies, reminders and reports running on their own, our <a href="/blog/ai-automation-small-business">guide to AI automation for small business</a> shows what to automate first, and the <a href="/services/ai-automation">AI automation service</a> page explains how we set it up. If you are deciding whether to do this in-house or with outside help, read <a href="/blog/ai-marketing-agency-what-it-does">what an AI marketing agency actually does</a>. Online stores can also see how this fits into our wider <a href="/services/ecommerce-marketing">e-commerce marketing service</a>, and every niche we work in is listed on the <a href="/industries">industries page</a>.</p>
+
+<h2 id="sources">Sources</h2>
+<ul>
+  <li><a href="https://support.claude.com/en/articles/9517075-what-are-projects">Claude Help Center: What are projects?</a></li>
+  <li><a href="https://support.claude.com/en/articles/9487310-what-are-artifacts-and-how-do-i-use-them">Claude Help Center: What are artifacts and how do I use them?</a></li>
+  <li><a href="https://support.claude.com/en/articles/12512176-what-are-skills">Claude Help Center: What are skills?</a></li>
+  <li><a href="https://support.claude.com/en/articles/11176164-use-connectors-to-extend-claude-s-capabilities">Claude Help Center: Use connectors to extend Claude's capabilities</a></li>
+  <li><a href="https://www.anthropic.com/news/updates-to-our-consumer-terms">Anthropic: Updates to our consumer terms and privacy policy</a></li>
+  <li><a href="https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices">Claude Docs: Prompting best practices</a></li>
+  <li><a href="https://platform.claude.com/docs/en/test-and-evaluate/strengthen-guardrails/reduce-hallucinations">Claude Docs: Reduce hallucinations</a></li>
+  <li><a href="https://support.google.com/google-ads/answer/7684791">Google Ads Help: About responsive search ads</a></li>
+  <li><a href="https://www.ascionline.in/the-asci-code/">Advertising Standards Council of India: The ASCI Code</a></li>
+  <li><a href="https://www.indiacode.nic.in/handle/123456789/2158">India Code: The Digital Personal Data Protection Act, 2023</a></li>
+</ul>
+
+<p>Want a second pair of eyes on how your marketing runs today before you add AI to it? <a href="/free-audit">Ask for a free audit</a> and we'll point out which jobs are worth handing to tools like Claude and which should stay with your team.</p>

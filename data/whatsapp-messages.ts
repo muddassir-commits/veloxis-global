@@ -504,4 +504,8 @@ export const BLOG_MESSAGES: Record<string, { ref: string; message: string }> = {
     ref: 'blog-google-shopping-in',
     message: 'I read your guide on Google Shopping ads. I want my online store products to show on Google Shopping. Can you help me set up Merchant Center and the campaign?',
   },
+  'claude-for-marketing': {
+    ref: 'blog-claude-mktg',
+    message: 'I read your guide on using Claude for marketing. I want to set up AI for our ad copy, content and reports without losing our brand voice. Can you help?',
+  },
 };
