@@ -1,0 +1,194 @@
+<p><strong>To set up Performance Max for an online store, fix purchase tracking with real order values first, connect a clean Merchant Center feed, then launch one campaign on Maximize conversion value with full creative assets and brand exclusions. Leave it alone for at least six weeks, then judge it on new customers and profit, not reported ROAS alone.</strong></p>
+<p>This guide is for founders and marketers of Indian online stores and D2C brands, on Shopify or any other platform, who already sell online and want Google's Performance Max to bring in orders without wasting budget. It covers what you need before launch, the setup step by step, how to structure asset groups and listing groups, which bidding to start with, how to keep the campaign from claiming sales you would have got anyway, how to judge results, and what to do about cash on delivery and returns. A checklist you can copy sits at the end.</p>
+<p>Most guides that rank for this keyword are written by software vendors, quote numbers with no source, and skip the parts that hurt Indian stores most: COD orders that never get paid for, small catalogues with few conversions, and the fact that some listing group options are not available in India. Every figure below links to Google's own documentation, which we checked on 28 November 2026. Menu names change often, so if a label differs in your account, look for the closest match.</p>
+
+<h2 id="what-is-performance-max">What is Performance Max and how does it work for an online store?</h2>
+<p><strong>Performance Max is a Google Ads campaign type that uses one budget and one set of inputs to show ads across Google's channels, picking the placement, audience and bid for each auction itself.</strong> For a store with a Merchant Center feed, that means your products can appear as Shopping ads in Search and the Shopping tab, and your images, videos and text can run on YouTube, Display, Gmail, Discover and Maps from the same campaign.</p>
+<p>You do not choose keywords or placements. You give Google four things, and it does the rest:</p>
+<ul>
+  <li><strong>A goal:</strong> purchases, with the value of each order.</li>
+  <li><strong>Products:</strong> your Merchant Center feed, filtered by listing groups.</li>
+  <li><strong>Creative:</strong> headlines, descriptions, images, logos and videos, grouped into asset groups.</li>
+  <li><strong>Signals:</strong> optional hints such as customer lists and search themes that tell Google who to look for first.</li>
+</ul>
+<p>Because the system optimises towards whatever you feed it, weak inputs give weak results at scale. A wrong purchase value teaches it to chase the wrong orders; a feed full of errors keeps your best products out of the auction. That is why most of this guide is about the work before you press launch.</p>
+<p>Google has also made Performance Max far less of a black box than it was. In April 2025 it <a href="https://blog.google/products/ads-commerce/channel-performance-reporting-coming-to-performance-max/" target="_blank" rel="noopener">announced channel performance reporting, full search terms reporting and asset-level cost and click data</a>, and its help page on <a href="https://support.google.com/google-ads/answer/16451273" target="_blank" rel="noopener">visibility and control in Performance Max</a> lists campaign-level negative keywords and up to 50 search themes per asset group. Older advice that says "you can't see or control anything" is out of date.</p>
+<p>If you are still choosing between Standard Shopping and Performance Max, read our guide to <a href="/blog/google-ads-for-d2c-brands">Google Ads for D2C brands</a> first. This post assumes you have decided to run Performance Max and want to do it properly.</p>
+
+<h2 id="before-you-start">What do you need before you launch Performance Max?</h2>
+<p><strong>You need working purchase tracking that sends the real order value, an approved Merchant Center feed linked to Google Ads, a break-even ROAS for your products, and a full set of creative assets.</strong> Skip any of these and the campaign learns from bad data.</p>
+<table>
+  <thead>
+    <tr><th>What</th><th>Why it matters</th><th>How to check</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Purchase conversion with dynamic value</td><td>Google's <a href="https://support.google.com/google-ads/answer/11546049?hl=en" target="_blank" rel="noopener">retailer best practices</a> strongly recommend transaction-specific values for stores with varied prices</td><td>Place a test order; the conversion in Google Ads should show that order's value, not a fixed number</td></tr>
+    <tr><td>Enhanced conversions</td><td>Recommended in the same guide to improve measurement</td><td>Open the purchase conversion action in Goals and check its enhanced conversions setting</td></tr>
+    <tr><td>One primary purchase goal</td><td>Two primary purchase actions (for example the Google tag and a GA4 import) can double-count orders</td><td>In the Goals conversions summary, only one purchase action is marked Primary</td></tr>
+    <tr><td>Merchant Center feed with no major errors</td><td>Disapproved products cannot serve; Google's <a href="https://support.google.com/google-ads/answer/13776350?hl=en" target="_blank" rel="noopener">feed optimisation tips</a> say to resolve product issues and keep price and availability current</td><td>Merchant Center → Products → look for products that need attention</td></tr>
+    <tr><td>Merchant Center linked to Google Ads</td><td>Without the link, the campaign has no products to show</td><td>Linked accounts in Google Ads (or Data manager) show Merchant Center as linked</td></tr>
+    <tr><td>Break-even ROAS</td><td>You need it to judge results and to set a target later</td><td>Work it out with the formula below</td></tr>
+    <tr><td>Creative assets ready</td><td>Missing videos or images mean Google fills the gaps itself</td><td>Use the spec table in the asset groups section</td></tr>
+    <tr><td>Customer list (optional)</td><td>Google's guide calls Customer Match lists the most valuable audience signal</td><td>Export buyers from your store with consent; upload in Audience manager</td></tr>
+  </tbody>
+</table>
+<h3>How to work out your break-even ROAS</h3>
+<p>Break-even ROAS is the revenue you need from each rupee of ad spend just to cover your costs. The formula is: <strong>selling price ÷ (selling price − product cost − shipping − payment fees − expected cost of returns)</strong>.</p>
+<p><em>Made-up example, not a benchmark:</em> a product sells for ₹1,000. After product cost, shipping, payment gateway fees and an allowance for returns you keep ₹400. Break-even ROAS is 1,000 ÷ 400 = 2.5. Any reported ROAS below 2.5 on that product loses money before you count overheads. Our guide on <a href="/blog/good-roas-for-ecommerce">what a good ROAS is for e-commerce</a> walks through this in more detail, including how to treat repeat purchases.</p>
+
+<h2 id="set-up-campaign">How do you set up a Performance Max campaign for e-commerce step by step?</h2>
+<p><strong>Create a new campaign with the Sales objective, choose Performance Max, attach your Merchant Center feed, set Maximize conversion value, then build one asset group with full creative and the right listing groups.</strong> The steps below follow Google's <a href="https://support.google.com/google-ads/answer/10724896?hl=en" target="_blank" rel="noopener">create a Performance Max campaign</a> guide.</p>
+<ol>
+  <li><strong>Start the campaign.</strong> In Google Ads, go to Campaigns, click the plus button, then New campaign. Choose the <em>Sales</em> objective. If Performance Max does not appear, Google says to pick <em>Create a campaign without a goal's guidance</em> to see every campaign type.</li>
+  <li><strong>Pick the conversion goal.</strong> Keep only your purchase goal for this campaign. Remove add-to-cart, page views and other soft actions from the campaign's goals, or Google will optimise towards them.</li>
+  <li><strong>Choose Performance Max and attach the feed.</strong> Select your Merchant Center account and the feed (country: India) so products can serve.</li>
+  <li><strong>Name the campaign clearly,</strong> for example <code>PMax | IN | All products | Value</code>, so reports stay readable later.</li>
+  <li><strong>Set bidding.</strong> Choose <em>Conversion value</em> as the focus (Maximize conversion value). Leave the target ROAS box empty at launch; the bidding section below explains when to add one.</li>
+  <li><strong>Set customer acquisition.</strong> Decide whether to bid higher for new customers. The brand and new customer section below covers the two modes.</li>
+  <li><strong>Set locations and languages.</strong> Target India (or the states and cities you deliver to). Under location options, choose people <em>in</em> or regularly in your locations, so you do not pay for clicks from places you cannot ship to.</li>
+  <li><strong>Open More settings.</strong> Add brand exclusions here (see below) and check that final URL expansion is on, which Google recommends in its <a href="https://support.google.com/google-ads/answer/11546049?hl=en" target="_blank" rel="noopener">retailer guide</a>. If you have pages that should never get ad traffic, such as the blog, careers or policy pages, add them as URL exclusions.</li>
+  <li><strong>Build the first asset group.</strong> Add the listing groups, creative, audience signal and search themes described in the next section.</li>
+  <li><strong>Set the daily budget.</strong> Pick an amount you can hold steady for at least six weeks. A budget you will cut after three days wastes the learning time.</li>
+  <li><strong>Review and publish.</strong> Google says ads are reviewed in about 1 to 2 days, and new campaigns can take 24 to 48 hours before data appears.</li>
+</ol>
+
+<h2 id="asset-groups">How should you structure asset groups and listing groups?</h2>
+<p><strong>Start with one campaign and one to three asset groups split by product category, each with its own creative and listing groups, and add custom labels to your feed so you can group bestsellers or high-margin products without hundreds of listing groups.</strong> Google's <a href="https://support.google.com/google-ads/answer/11546049?hl=en" target="_blank" rel="noopener">retailer guide</a> advises consolidating campaigns where you can, because the system works best with a single budget, and splitting only for different countries, budgets, ROAS targets or distinct product groups.</p>
+<h3>Listing groups: decide which products each asset group can show</h3>
+<p>Listing groups filter your feed. Google's <a href="https://support.google.com/google-ads/answer/11596074?hl=en" target="_blank" rel="noopener">listing groups help page</a> gives these limits and paths:</p>
+<ul>
+  <li>Path: Campaigns → select the Performance Max campaign → Asset groups → Listing groups. Click the pencil icon to edit; click the green circle and choose <em>Exclude</em> to keep products out.</li>
+  <li>Each asset group can have up to 1,000 listing groups, product types can be subdivided up to 5 times, and you can create up to 5 custom labels in your product data.</li>
+  <li>Subdividing by Google's product category is only available in a short list of countries that does not include India. Indian stores should split by <strong>product type</strong>, <strong>brand</strong> or <strong>custom labels</strong> instead.</li>
+</ul>
+<p>Practical custom labels for an Indian store: <code>custom_label_0</code> = margin band (high, medium, low), <code>custom_label_1</code> = bestseller or not, <code>custom_label_2</code> = season (winter, festive, wedding), <code>custom_label_3</code> = price band. On Shopify, most feed apps let you set these from product tags. Exclude products that are out of stock, sell below break-even after ad costs, or ship with a high return rate.</p>
+<h3>Creative: give Google every format</h3>
+<p>Google's <a href="https://support.google.com/google-ads/answer/17091269?hl=en" target="_blank" rel="noopener">Performance Max specs page</a> sets out what each asset group can hold:</p>
+<table>
+  <thead>
+    <tr><th>Asset</th><th>Limit</th><th>Allowed / recommended</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Headlines</td><td>30 characters; at least one of 15 or fewer</td><td>3 to 15; 11 or more recommended</td></tr>
+    <tr><td>Long headlines</td><td>90 characters</td><td>1 to 5; 2 or more recommended</td></tr>
+    <tr><td>Descriptions</td><td>90 characters</td><td>2 to 5; 4 or more recommended</td></tr>
+    <tr><td>Business name</td><td>25 characters; must match your domain or verified business name</td><td>1</td></tr>
+    <tr><td>Landscape images (1.91:1)</td><td>1200 × 628 recommended</td><td>Up to 20; 4 or more recommended</td></tr>
+    <tr><td>Square images (1:1)</td><td>1200 × 1200 recommended</td><td>Up to 20; 4 or more recommended</td></tr>
+    <tr><td>Portrait images (4:5)</td><td>960 × 1200 recommended</td><td>Optional; up to 20</td></tr>
+    <tr><td>Square logo (1:1)</td><td>1200 × 1200 recommended</td><td>At least 1, up to 5</td></tr>
+    <tr><td>Videos</td><td>10 seconds or longer; 16:9, 1:1 and 9:16</td><td>Optional; up to 15; one of each orientation recommended</td></tr>
+  </tbody>
+</table>
+<p>If you upload no video, Google may auto-generate one from your images. The specs page says to upload your own videos in all three orientations to avoid auto-generated videos and reach Excellent Ad Strength. A simple phone video of the product in use, cut to vertical, square and landscape, is enough to start. Google's <a href="https://support.google.com/google-ads/answer/11546049?hl=en" target="_blank" rel="noopener">retailer guide</a> reports that advertisers who added at least one video saw an average 12% increase in total conversions; treat that as Google's own figure, not a promise.</p>
+<p>Write headlines that say what Indian shoppers check first: delivery time, COD availability, return window, sizes, and the problem the product solves. Keep prices out of headlines unless you will update them every time the price changes.</p>
+<h3>Audience signals and search themes</h3>
+<p>Audience signals are optional hints, not targeting limits; Google can and will show ads to people outside them. Add your customer list and website visitors as the signal. Google's setup guide recommends remarketing lists with more than 100 active users in the last 30 days. Add search themes (up to 50 per asset group) only for searches your products answer that Google might not link to your site on its own, such as a regional name for a product.</p>
+
+<h2 id="bidding-and-budget">Which bidding strategy and budget should you start with?</h2>
+<p><strong>Start on Maximize conversion value with no target, let the campaign gather a steady run of purchases, then add a target ROAS near your break-even figure and raise it in small steps.</strong> Google's <a href="https://support.google.com/google-ads/answer/11546049?hl=en" target="_blank" rel="noopener">retailer guide</a> says to set a ROAS target based on profit, taking cost of goods sold and customer lifetime value into account.</p>
+<ol>
+  <li><strong>Launch without a target.</strong> A tight target ROAS on a new campaign can stop it spending. Google's <a href="https://support.google.com/google-ads/answer/10724896?hl=en" target="_blank" rel="noopener">setup guide</a> warns against overly restrictive Target CPA or Target ROAS settings.</li>
+  <li><strong>Wait out learning.</strong> The same guide says Smart Bidding needs about 1 to 2 weeks to learn, sometimes up to 6.</li>
+  <li><strong>Add a target.</strong> Once results settle, set target ROAS a little below what the campaign is already achieving, so it does not choke delivery, and no lower than you can afford.</li>
+  <li><strong>Move in small steps.</strong> Change the target or budget in modest steps and leave a full week or more between changes; large swings restart learning.</li>
+  <li><strong>Plan sales in advance.</strong> For a short sale under 7 days where you expect conversion rates to jump by more than 30%, Google's <a href="https://support.google.com/google-ads/answer/13776350?hl=en" target="_blank" rel="noopener">feed optimisation tips</a> recommend a seasonality adjustment. For longer promotions, adjust the ROAS target instead.</li>
+</ol>
+<p>On budget, there is no official minimum. The rule that matters is consistency: pick a daily budget you can hold for the full learning window. If you cannot fund one campaign properly, do not split the money into several small ones. Google also lets you use conversion value rules to weight orders by margin or customer value, which is a cleaner way to favour profitable sales than splitting campaigns.</p>
+
+<h2 id="brand-and-new-customers">How do you stop Performance Max from taking credit for brand searches and repeat buyers?</h2>
+<p><strong>Add brand exclusions so Performance Max does not bid on your own brand name in Search, and turn on the new customer acquisition goal so it puts more weight on first-time buyers.</strong> Without these, a campaign can look profitable mainly because it is collecting orders from people who were already searching for you.</p>
+<h3>Brand exclusions</h3>
+<p>Google's <a href="https://support.google.com/google-ads/answer/14505308?hl=en" target="_blank" rel="noopener">brand exclusions help page</a> gives the path: Campaigns → Settings → choose the campaign → Other settings → Brand exclusions, then pick or create a brand list. For a new campaign, it is under More settings → Brand exclusions. In Performance Max, brand exclusions apply to both Search and Shopping ads, and there is an option to let Shopping ads keep serving on excluded brand terms. Many stores keep a separate, low-cost Search campaign for brand terms so they can see brand demand on its own.</p>
+<h3>Negative keywords</h3>
+<p>Performance Max now supports campaign-level negative keywords and shared negative keyword lists, which apply to Search and Shopping inventory, according to Google's <a href="https://support.google.com/google-ads/answer/16451273" target="_blank" rel="noopener">visibility and control page</a>. Add terms you never want to pay for, such as "free", "second hand", "job" or competitor names you do not sell. Use the <a href="https://support.google.com/google-ads/answer/16327396" target="_blank" rel="noopener">search terms report</a> to find more, but do not cut every term that has not converted yet; give it time.</p>
+<h3>New customer acquisition</h3>
+<p>Google's page on <a href="https://support.google.com/google-ads/answer/12080169" target="_blank" rel="noopener">customer lifecycle goals</a> describes two modes, set in the campaign's settings under Customer acquisition:</p>
+<table>
+  <thead>
+    <tr><th>Mode</th><th>What it does</th><th>Use it when</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>New Customer Value</td><td>Bids higher for new customers but still reaches existing ones; needs a purchase goal and value-based bidding</td><td>You want growth without giving up repeat orders</td></tr>
+    <tr><td>New Customer Only</td><td>Bids only for new customers</td><td>You have a separate budget just for acquisition</td></tr>
+  </tbody>
+</table>
+<p>Upload your customer list so Google can recognise existing buyers. For value mode, Google recommends setting the extra value so that it plus a typical first order roughly equals what a new customer is worth over their lifetime. Google's 2026 update note also lists the ability to <a href="https://business.google.com/us/accelerate/resources/articles/new-performance-max-steering-and-reporting-updates-coming-in-2026/" target="_blank" rel="noopener">exclude specific customer lists from Performance Max</a>, useful if you want acquisition spend to skip past buyers completely.</p>
+
+<h2 id="judge-results">How do you judge Performance Max results, and how long should you wait?</h2>
+<p><strong>Give a new campaign at least six weeks before deciding, then judge it on profit and new customers against your store's own order data, not on the ROAS figure inside Google Ads alone.</strong> Google's <a href="https://support.google.com/google-ads/answer/13776350?hl=en" target="_blank" rel="noopener">feed optimisation tips</a> recommend running new campaigns for at least 6 weeks so the system has time to gather data.</p>
+<p>Use these reports, all listed in Google's <a href="https://support.google.com/google-ads/answer/16279166" target="_blank" rel="noopener">evaluate Performance Max results</a> page:</p>
+<ul>
+  <li><strong>Channel performance:</strong> how much spend and value comes from Search, Shopping, YouTube, Display and the rest. A campaign that spends heavily on Display with little value is worth a creative and feed check.</li>
+  <li><strong>Search terms:</strong> what people searched before clicking; a quick way to spot brand terms slipping through and irrelevant searches to block.</li>
+  <li><strong>Asset and asset group reports:</strong> which images, videos and headlines get spend and conversions. Replace the weakest assets, not the whole group.</li>
+  <li><strong>Product and listing group performance:</strong> which products sell and which only spend. Move non-sellers to a separate listing group or exclude them.</li>
+  <li><strong>Customer acquisition reporting:</strong> how many conversions came from new versus returning customers.</li>
+</ul>
+<p>Then compare with reality once a week: total store revenue from your Shopify or store admin, new customers, and blended spend across all channels. If Performance Max "grows" while total store sales stay flat, it is likely taking credit for orders you would have got anyway. Our <a href="/blog/shopify-store-conversion-checklist">Shopify store conversion checklist</a> helps when traffic is fine but the store is not converting it.</p>
+<h3>Why is my Performance Max campaign not spending or not converting?</h3>
+<table>
+  <thead>
+    <tr><th>Symptom</th><th>Likely cause</th><th>What to check</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Very little spend</td><td>Target ROAS set too high, or few approved products</td><td>Remove or lower the target; check Merchant Center for disapprovals</td></tr>
+    <tr><td>Spend but no sales recorded</td><td>Broken purchase tracking</td><td>Place a test order; check the conversion action status in Goals</td></tr>
+    <tr><td>High ROAS, flat store sales</td><td>Brand and repeat-buyer orders being counted</td><td>Brand exclusions, new customer goal, compare with store data</td></tr>
+    <tr><td>Most spend on a few products</td><td>Normal; the system backs what sells</td><td>Split other products into their own asset group only if they matter to you</td></tr>
+    <tr><td>Ads not approved</td><td>Policy or business name mismatch</td><td>Business name must match your domain or verified business name</td></tr>
+  </tbody>
+</table>
+
+<h2 id="cod-and-rto">How do you handle cash on delivery and returns (RTO) in Performance Max?</h2>
+<p><strong>Your purchase tag fires when a COD order is placed, not when it is paid, so cancelled and returned orders inflate reported value. Fix it by uploading conversion adjustments that retract or restate those orders, so Google learns from orders that were actually paid.</strong> This is the step most guides written for US stores leave out, and it matters for any Indian store with a large share of COD.</p>
+<p>Google's <a href="https://support.google.com/google-ads/answer/7686280?hl=en" target="_blank" rel="noopener">conversion adjustments help page</a> explains the method:</p>
+<ol>
+  <li><strong>Send the order ID with every purchase conversion.</strong> Adjustments match on order ID, so your purchase tag must pass it (most Shopify and WooCommerce integrations can).</li>
+  <li><strong>Export cancelled, RTO and refunded orders</strong> from your store or shipping panel each week.</li>
+  <li><strong>Fill Google's adjustments template</strong> (in Data manager or the Uploads page) with Order ID, Conversion Name, Adjustment Time, Adjustment Type (retraction for a cancelled order, restatement for a partial refund) and the adjusted value.</li>
+  <li><strong>Upload on a schedule.</strong> Google says adjustments work best at least 24 hours after the original conversion, restatements and retractions within 7 days of the conversion are used by automated bidding, and adjustments can be made within 54 days overall. A twice-weekly upload catches most cancellations inside the 7-day window.</li>
+</ol>
+<p>If you cannot upload adjustments yet, at least lower your ROAS expectations to reflect your real RTO rate, and exclude products or pincodes with very high return rates from the feed or shipping settings. Offering a small prepaid discount at checkout also moves orders away from COD; our <a href="/blog/product-page-conversion-rate-optimization">product page optimization guide</a> covers how to show payment options clearly.</p>
+
+<h2 id="checklist">Performance Max setup and weekly checklist</h2>
+<p><strong>Use this checklist before launch and every week after it.</strong> Copy it into a sheet and tick it off.</p>
+<table>
+  <thead>
+    <tr><th>When</th><th>Task</th><th>Done</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Before launch</td><td>Test order shows the correct value and order ID in Google Ads</td><td>☐</td></tr>
+    <tr><td>Before launch</td><td>Only one primary purchase conversion action</td><td>☐</td></tr>
+    <tr><td>Before launch</td><td>Merchant Center feed linked, major product issues fixed</td><td>☐</td></tr>
+    <tr><td>Before launch</td><td>Custom labels for margin, bestseller and season added to the feed</td><td>☐</td></tr>
+    <tr><td>Before launch</td><td>Break-even ROAS worked out per product group</td><td>☐</td></tr>
+    <tr><td>Before launch</td><td>Full asset set, including your own videos in three orientations</td><td>☐</td></tr>
+    <tr><td>Before launch</td><td>Brand exclusions and URL exclusions set</td><td>☐</td></tr>
+    <tr><td>Before launch</td><td>Customer list uploaded; customer acquisition mode chosen</td><td>☐</td></tr>
+    <tr><td>Weekly</td><td>Upload cancelled, RTO and refunded orders as conversion adjustments</td><td>☐</td></tr>
+    <tr><td>Weekly</td><td>Check search terms; add negatives for clearly irrelevant searches</td><td>☐</td></tr>
+    <tr><td>Weekly</td><td>Check channel and product reports for spend with no value</td><td>☐</td></tr>
+    <tr><td>Weekly</td><td>Compare Google Ads value with store revenue and new customers</td><td>☐</td></tr>
+    <tr><td>Monthly</td><td>Replace the weakest images, videos and headlines</td><td>☐</td></tr>
+    <tr><td>Monthly</td><td>Review target ROAS against break-even; change in small steps</td><td>☐</td></tr>
+  </tbody>
+</table>
+<p>If you would like a second pair of eyes, we set up and run <a href="/services/paid-ads">Google and Meta ads</a> as part of our <a href="/services/ecommerce-marketing">e-commerce marketing</a> work, and fix the store pages the traffic lands on through <a href="/services/conversion-rate-optimization">conversion optimisation</a>. See how we work with <a href="/industries/ecommerce">e-commerce and D2C brands</a>, run your site through our free <a href="/tools/website-audit">website audit tool</a>, or ask for a <a href="/free-audit">free audit</a> of your ad account and store.</p>
+
+<h2 id="sources">Sources</h2>
+<ul>
+  <li><a href="https://support.google.com/google-ads/answer/11546049?hl=en" target="_blank" rel="noopener">Google Ads Help: Retailer best practices for AI-powered Performance Max campaigns</a></li>
+  <li><a href="https://support.google.com/google-ads/answer/13776350?hl=en" target="_blank" rel="noopener">Google Ads Help: Optimization tips for Performance Max campaigns with a Google Merchant Center feed</a></li>
+  <li><a href="https://support.google.com/google-ads/answer/10724896?hl=en" target="_blank" rel="noopener">Google Ads Help: Create a Performance Max campaign</a></li>
+  <li><a href="https://support.google.com/google-ads/answer/17091269?hl=en" target="_blank" rel="noopener">Google Ads Help: Performance Max campaigns specs and format requirements</a></li>
+  <li><a href="https://support.google.com/google-ads/answer/11596074?hl=en" target="_blank" rel="noopener">Google Ads Help: Manage a Performance Max campaign with listing groups</a></li>
+  <li><a href="https://support.google.com/google-ads/answer/14505308?hl=en" target="_blank" rel="noopener">Google Ads Help: Apply brand exclusions to Performance Max or Search campaigns</a></li>
+  <li><a href="https://support.google.com/google-ads/answer/16451273" target="_blank" rel="noopener">Google Ads Help: Unlock more visibility and control in Performance Max</a></li>
+  <li><a href="https://support.google.com/google-ads/answer/16327396" target="_blank" rel="noopener">Google Ads Help: About the search terms report in Performance Max</a></li>
+  <li><a href="https://support.google.com/google-ads/answer/16279166" target="_blank" rel="noopener">Google Ads Help: Evaluate Performance Max results</a></li>
+  <li><a href="https://support.google.com/google-ads/answer/12080169" target="_blank" rel="noopener">Google Ads Help: About customer lifecycle goals</a></li>
+  <li><a href="https://support.google.com/google-ads/answer/7686280?hl=en" target="_blank" rel="noopener">Google Ads Help: About conversion adjustments</a></li>
+  <li><a href="https://blog.google/products/ads-commerce/channel-performance-reporting-coming-to-performance-max/" target="_blank" rel="noopener">Google blog: Channel performance reporting is coming to Performance Max (30 April 2025)</a></li>
+  <li><a href="https://business.google.com/us/accelerate/resources/articles/new-performance-max-steering-and-reporting-updates-coming-in-2026/" target="_blank" rel="noopener">Google Business: New Performance Max steering and reporting updates coming in 2026</a></li>
+</ul>

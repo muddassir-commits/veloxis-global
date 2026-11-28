@@ -504,6 +504,10 @@ export const BLOG_MESSAGES: Record<string, { ref: string; message: string }> = {
     ref: 'blog-google-shopping-in',
     message: 'I read your guide on Google Shopping ads. I want my online store products to show on Google Shopping. Can you help me set up Merchant Center and the campaign?',
   },
+  'performance-max-for-ecommerce': {
+    ref: 'blog-pmax-ecom-setup',
+    message: 'I read your guide on Performance Max for e-commerce. I want to run Performance Max for my online store without wasting budget. Can you check my setup?',
+  },
   'claude-for-marketing': {
     ref: 'blog-claude-mktg',
     message: 'I read your guide on using Claude for marketing. I want to set up AI for our ad copy, content and reports without losing our brand voice. Can you help?',

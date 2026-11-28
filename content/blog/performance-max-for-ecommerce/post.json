@@ -1,0 +1,76 @@
+{
+  "title": "Performance Max for E-commerce: Step-by-Step Setup for Online Stores",
+  "seoTitle": "Performance Max for E-commerce: Setup and Checklist",
+  "excerpt": "Set up Performance Max for e-commerce: tracking and feed, asset and listing groups, bidding, brand exclusions, new customers, COD returns and a checklist.",
+  "date": "2026-12-01",
+  "category": "Paid Ads",
+  "industry": "ecommerce",
+  "service": "paid-ads",
+  "image": "/images/people/blog/performance-max-for-ecommerce-cover.jpg",
+  "imageAlt": "A small metal shopping trolley on a computer keyboard in front of a blurred monitor showing product tiles",
+  "inlineImages": [
+    {
+      "src": "/images/people/blog/performance-max-for-ecommerce-2.jpg",
+      "alt": "Sharpened colour pencils in many shades standing in a black mesh pencil holder",
+      "beforeHeading": "asset-groups",
+      "caption": "Give each asset group the full range of formats: headlines, images in three shapes, logos and your own videos."
+    },
+    {
+      "src": "/images/people/blog/performance-max-for-ecommerce-1.jpg",
+      "alt": "Close-up of the interlocking metal gears and springs inside an old watch movement",
+      "beforeHeading": "bidding-and-budget"
+    }
+  ],
+  "about": [
+    {
+      "name": "Google Ads",
+      "sameAs": "https://en.wikipedia.org/wiki/Google_Ads"
+    },
+    {
+      "name": "Google Shopping",
+      "sameAs": "https://en.wikipedia.org/wiki/Google_Shopping"
+    },
+    {
+      "name": "E-commerce",
+      "sameAs": "https://en.wikipedia.org/wiki/E-commerce"
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Performance Max good for e-commerce?",
+      "answer": "It can be, if the inputs are right. Performance Max uses your purchase data, product feed and creative to find buyers across Google's channels from one budget. It works well for stores with accurate order-value tracking and a clean Merchant Center feed, and poorly when tracking is broken or brand searches inflate the results."
+    },
+    {
+      "question": "How long should I wait before judging a Performance Max campaign?",
+      "answer": "Google recommends running new Performance Max campaigns for at least six weeks so the system has time to gather data, and says Smart Bidding usually needs one to two weeks to learn, sometimes up to six. Avoid big budget or target changes in that window, then judge on profit and new customers."
+    },
+    {
+      "question": "Should I start Performance Max with a target ROAS?",
+      "answer": "Usually not. Start on Maximize conversion value with no target so the campaign can spend and learn, because Google warns that overly restrictive targets can limit delivery. Once results are steady, add a target ROAS slightly below what the campaign is achieving and no lower than your break-even ROAS, then raise it in small steps."
+    },
+    {
+      "question": "How do I stop Performance Max from bidding on my brand name?",
+      "answer": "Add a brand list under Brand exclusions in the campaign's settings, found under Other settings for an existing campaign or More settings for a new one. In Performance Max, brand exclusions apply to Search and Shopping ads. Many stores run brand terms in a separate Search campaign so brand demand stays visible."
+    },
+    {
+      "question": "How many asset groups should an online store use in Performance Max?",
+      "answer": "Start small: one campaign with one to three asset groups split by product category, each with its own creative and listing groups. Google advises consolidating where possible because the system works best with one budget. Split into separate campaigns only for different countries, budgets, ROAS targets or distinct product groups."
+    },
+    {
+      "question": "Can I use Google product categories in listing groups in India?",
+      "answer": "No. Google's listing groups help page says subdividing by product category is only available in a short list of countries, and India is not one of them. Indian stores should split listing groups by product type, brand or custom labels such as margin band, bestseller status or season instead."
+    },
+    {
+      "question": "Do I need videos for Performance Max?",
+      "answer": "Videos are optional, but if you upload none, Google may auto-generate them from your images. Google's specs page recommends uploading your own videos of at least ten seconds in horizontal, square and vertical formats to avoid auto-generated videos and reach Excellent Ad Strength. A simple product-in-use clip is enough to start."
+    },
+    {
+      "question": "How do COD returns affect Performance Max?",
+      "answer": "The purchase tag fires when a cash-on-delivery order is placed, so cancelled and returned orders still count as sales and inflate reported value. Upload conversion adjustments with the order ID to retract or restate those orders. Google uses retractions and restatements made within seven days of the conversion for automated bidding."
+    },
+    {
+      "question": "Can Performance Max focus only on new customers?",
+      "answer": "Yes. The customer acquisition setting has two modes: New Customer Value, which bids higher for new customers but still reaches existing ones, and New Customer Only, which bids only for new customers. Upload a customer list so Google can recognise existing buyers, and judge results against new customers in your store data."
+    }
+  ]
+}
